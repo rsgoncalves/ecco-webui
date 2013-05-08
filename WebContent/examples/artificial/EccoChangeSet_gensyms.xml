@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="root" uuid="5cd184a6-691c-4867-9356-131f50e64af2-gs">
+   <Additions id="adds" size="7">
+      <Effectual id="effadds" size="2">
+         <Strengthening id="st" size="0"/>
+         <StrengtheningWithNewTerms id="stnt" size="0"/>
+         <NewDescription id="newdesc" size="0"/>
+         <PureAddition id="padd" size="1">
+            <Change id="1">
+               <Axiom>A9 SubClassOf B1</Axiom>
+            </Change>
+         </PureAddition>
+         <PureAdditionWithNewTerms id="paddnt" size="1">
+            <Change id="2">
+               <Axiom>A6 SubClassOf B1 or (prop2 some A8)</Axiom>
+               <New_Terms>prop2</New_Terms>
+            </Change>
+         </PureAdditionWithNewTerms>
+         <NewModifiedDefinition id="stequiv" size="0"/>
+         <NewModifiedDefinitionWithNewTerms id="stequivnt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffadds" size="5">
+         <AddedRedundancy id="ared" size="0"/>
+         <AddedRewrite id="arws" size="1">
+            <AddedCompleteRewrite id="arw" size="1">
+               <Change id="3">
+                  <Axiom>A5 SubClassOf A4 and A2</Axiom>
+                  <Source>
+                     <Axiom>A5 SubClassOf A2</Axiom>
+                     <Axiom>A5 SubClassOf A4</Axiom>
+                  </Source>
+               </Change>
+            </AddedCompleteRewrite>
+            <AddedPartialRewrite id="aprw" size="0"/>
+         </AddedRewrite>
+         <AddedProspectiveRedundancy id="apred" size="5">
+            <AddedReshuffleProspectiveRedundancy id="aavred" size="4">
+               <Change id="4">
+                  <Axiom>A9 SubClassOf B1 or A8</Axiom>
+                  <Source>
+                     <Axiom>A9 SubClassOf A8</Axiom>
+                  </Source>
+               </Change>
+               <Change id="5">
+                  <Axiom>A7 SubClassOf A6 or A4</Axiom>
+                  <Source>
+                     <Axiom>A7 EquivalentTo A6</Axiom>
+                  </Source>
+               </Change>
+               <Change id="6">
+                  <Axiom>A6 SubClassOf A7</Axiom>
+                  <Source>
+                     <Axiom>A7 EquivalentTo A6</Axiom>
+                  </Source>
+               </Change>
+               <Change id="7">
+                  <Axiom>A7 SubClassOf A6</Axiom>
+                  <Source>
+                     <Axiom>A7 EquivalentTo A6</Axiom>
+                  </Source>
+               </Change>
+            </AddedReshuffleProspectiveRedundancy>
+            <AddedNewProspectiveRedundancy id="anpred" size="2">
+               <AddedNovelProspectiveRedundancy id="weak" size="1">
+                  <Change id="5">
+                     <Axiom>A7 SubClassOf A6 or A4</Axiom>
+                     <Source>
+                        <Axiom>A7 SubClassOf A5</Axiom>
+                        <Axiom>A5 SubClassOf A4</Axiom>
+                     </Source>
+                     <Source>
+                        <Axiom>A7 SubClassOf A5</Axiom>
+                        <Axiom>A5 SubClassOf A4 and A2 and A1</Axiom>
+                     </Source>
+                  </Change>
+               </AddedNovelProspectiveRedundancy>
+               <AddedPseudoNovelProspectiveRedundancy id="apseudopred" size="1">
+                  <Change id="3">
+                     <Axiom>A5 SubClassOf A4 and A2</Axiom>
+                     <Source>
+                        <Axiom>A5 SubClassOf A4 and A2 and A1</Axiom>
+                     </Source>
+                  </Change>
+               </AddedPseudoNovelProspectiveRedundancy>
+            </AddedNewProspectiveRedundancy>
+         </AddedProspectiveRedundancy>
+      </Ineffectual>
+   </Additions>
+   <Removals id="rems" size="6">
+      <Effectual id="effrems" size="2">
+         <Weakening id="wk" size="0"/>
+         <WeakeningWithRetiredTerms id="wkrt" size="1">
+            <Change id="8">
+               <Axiom>A5 SubClassOf A4 and A2 and A1</Axiom>
+               <Source>
+                  <Axiom>A5 SubClassOf A4 and A2</Axiom>
+               </Source>
+               <Retired_Terms>A1</Retired_Terms>
+            </Change>
+         </WeakeningWithRetiredTerms>
+         <RetiredDescription id="retdesc" size="0"/>
+         <PureRemoval id="prem" size="1">
+            <Change id="9">
+               <Axiom>A7 SubClassOf A5</Axiom>
+            </Change>
+         </PureRemoval>
+         <PureRemovalWithRetiredTerms id="premrt" size="0"/>
+         <RetiredModifiedDefinition id="wkequiv" size="0"/>
+         <RetiredModifiedDefinitionWithRetiredTerms id="wkequivrt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffrems" size="4">
+         <RemovedRedundancy id="rred" size="0"/>
+         <RemovedRewrite id="rrws" size="1">
+            <RemovedCompleteRewrite id="rrw" size="1">
+               <Change id="10">
+                  <Axiom>A7 EquivalentTo A6</Axiom>
+                  <Source>
+                     <Axiom>A7 SubClassOf A6</Axiom>
+                     <Axiom>A6 SubClassOf A7</Axiom>
+                  </Source>
+               </Change>
+            </RemovedCompleteRewrite>
+            <RemovedPartialRewrite id="rprw" size="0"/>
+         </RemovedRewrite>
+         <RemovedProspectiveRedundancy id="rpred" size="3">
+            <RemovedReshuffleProspectiveRedundancy id="ravred" size="3">
+               <Change id="11">
+                  <Axiom>A5 SubClassOf A2</Axiom>
+                  <Source>
+                     <Axiom>A5 SubClassOf A4 and A2</Axiom>
+                  </Source>
+               </Change>
+               <Change id="12">
+                  <Axiom>A5 SubClassOf A4</Axiom>
+                  <Source>
+                     <Axiom>A5 SubClassOf A4 and A2</Axiom>
+                  </Source>
+               </Change>
+               <Change id="13">
+                  <Axiom>A9 SubClassOf A8</Axiom>
+                  <Source>
+                     <Axiom shared="true">B1 SubClassOf A8</Axiom>
+                     <Axiom>A9 SubClassOf B1 or A8</Axiom>
+                  </Source>
+               </Change>
+            </RemovedReshuffleProspectiveRedundancy>
+            <RemovedNewProspectiveRedundancy id="rnpred" size="1">
+               <RemovedNovelProspectiveRedundancy id="strength" size="1">
+                  <Change id="13">
+                     <Axiom>A9 SubClassOf A8</Axiom>
+                     <Source>
+                        <Axiom>A9 SubClassOf B1</Axiom>
+                        <Axiom shared="true">B1 SubClassOf A8</Axiom>
+                     </Source>
+                  </Change>
+               </RemovedNovelProspectiveRedundancy>
+               <RemovedPseudoNovelProspectiveRedundancy id="rpseudopred" size="0"/>
+            </RemovedNewProspectiveRedundancy>
+         </RemovedProspectiveRedundancy>
+      </Ineffectual>
+   </Removals>
+</root>

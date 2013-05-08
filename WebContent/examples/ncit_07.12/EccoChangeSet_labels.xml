@@ -1,0 +1,2752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="root" uuid="d69b81df-df36-4dcf-b6f8-e1c7bca32854-lbl">
+   <Additions id="adds" size="550">
+      <Effectual id="effadds" size="543">
+         <Strengthening id="st" size="0"/>
+         <StrengtheningWithNewTerms id="stnt" size="0"/>
+         <NewDescription id="newdesc" size="421">
+            <Change id="1">
+               <Axiom>Autologous Follicular Lymphoma-Derived Idiotype Vaccine SubClassOf Antineoplastic Vaccine</Axiom>
+               <New_Terms>Autologous Follicular Lymphoma-Derived Idiotype Vaccine</New_Terms>
+            </Change>
+            <Change id="2">
+               <Axiom>12 Lead Placement Standard SubClassOf Lead Placement</Axiom>
+               <New_Terms>12 Lead Placement Standard, Lead Placement</New_Terms>
+            </Change>
+            <Change id="3">
+               <Axiom>Low QRS Voltage SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Low QRS Voltage</New_Terms>
+            </Change>
+            <Change id="4">
+               <Axiom>Ligne SubClassOf Unit of Length</Axiom>
+               <New_Terms>Ligne</New_Terms>
+            </Change>
+            <Change id="5">
+               <Axiom>Mile SubClassOf Unit of Length</Axiom>
+               <New_Terms>Mile</New_Terms>
+            </Change>
+            <Change id="6">
+               <Axiom>HLA-DP Antigen SubClassOf Gene_Product_Has_Structural_Domain_Or_Motif some Transmembrane Domain</Axiom>
+               <New_Terms>HLA-DP Antigen</New_Terms>
+            </Change>
+            <Change id="7">
+               <Axiom>Incomplete Bundle Branch Block SubClassOf Heart Block</Axiom>
+               <New_Terms>Incomplete Bundle Branch Block</New_Terms>
+            </Change>
+            <Change id="8">
+               <Axiom>HLA-Bw6 Antigen SubClassOf Gene_Product_Has_Organism_Source some Human</Axiom>
+               <New_Terms>HLA-Bw6 Antigen</New_Terms>
+            </Change>
+            <Change id="9">
+               <Axiom>Certified Nurse Practitioner SubClassOf Nurse Practitioner</Axiom>
+               <New_Terms>Certified Nurse Practitioner</New_Terms>
+            </Change>
+            <Change id="10">
+               <Axiom>Lead Placement Frank SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement, Lead Placement Frank</New_Terms>
+            </Change>
+            <Change id="11">
+               <Axiom>Advanced Oncology Certified Nurse Practitioner SubClassOf Nurse Practitioner</Axiom>
+               <New_Terms>Advanced Oncology Certified Nurse Practitioner</New_Terms>
+            </Change>
+            <Change id="12">
+               <Axiom>T Wave Inversion SubClassOf T Wave Abnormality</Axiom>
+               <New_Terms>T Wave Abnormality, T Wave Inversion</New_Terms>
+            </Change>
+            <Change id="13">
+               <Axiom>Clinical Trial SubClassOf Clinical Study</Axiom>
+               <New_Terms>Clinical Trial</New_Terms>
+            </Change>
+            <Change id="14">
+               <Axiom>Advanced Oncology Certified Nurse Specialist SubClassOf Advanced Practice Nurse</Axiom>
+               <New_Terms>Advanced Oncology Certified Nurse Specialist</New_Terms>
+            </Change>
+            <Change id="15">
+               <Axiom>QTcF Prolongation Greater Than 500 msec SubClassOf EKG Normal Axis Deviation</Axiom>
+               <New_Terms>QTcF Prolongation Greater Than 500 msec</New_Terms>
+            </Change>
+            <Change id="16">
+               <Axiom>HLA-DP Antigen SubClassOf Gene_Product_Has_Organism_Source some Human</Axiom>
+               <New_Terms>HLA-DP Antigen</New_Terms>
+            </Change>
+            <Change id="17">
+               <Axiom>Microgram per Day SubClassOf Unit of Mass Flow Rate</Axiom>
+               <New_Terms>Microgram per Day</New_Terms>
+            </Change>
+            <Change id="18">
+               <Axiom>Lead Placement Bipolar Uncorrected XYZ SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement, Lead Placement Bipolar Uncorrected XYZ</New_Terms>
+            </Change>
+            <Change id="19">
+               <Axiom>Oncology Certified Nurse SubClassOf Oncology Nurse</Axiom>
+               <New_Terms>Oncology Certified Nurse</New_Terms>
+            </Change>
+            <Change id="20">
+               <Axiom>MUC16 wt Allele SubClassOf MUC16 Gene</Axiom>
+               <New_Terms>MUC16 wt Allele, MUC16 Gene</New_Terms>
+            </Change>
+            <Change id="21">
+               <Axiom>STON1 wt Allele SubClassOf STON1 Gene</Axiom>
+               <New_Terms>STON1 wt Allele, STON1 Gene</New_Terms>
+            </Change>
+            <Change id="22">
+               <Axiom>HLA-Matched Donor Mononuclear Cell-Enriched Leukocytes Apocell SubClassOf Biological Agent</Axiom>
+               <New_Terms>HLA-Matched Donor Mononuclear Cell-Enriched Leukocytes Apocell</New_Terms>
+            </Change>
+            <Change id="23">
+               <Axiom>Prosthetics Intervention SubClassOf Supportive Care</Axiom>
+               <New_Terms>Prosthetics Intervention</New_Terms>
+            </Change>
+            <Change id="24">
+               <Axiom>Herpes Zoster SubClassOf Viral Infection</Axiom>
+               <New_Terms>Herpes Zoster</New_Terms>
+            </Change>
+            <Change id="25">
+               <Axiom>Poor R Wave Progression SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Poor R Wave Progression</New_Terms>
+            </Change>
+            <Change id="26">
+               <Axiom>Billion Organisms per Milligram SubClassOf Organism-Based Unit</Axiom>
+               <New_Terms>Billion Organisms per Milligram, Organism-Based Unit</New_Terms>
+            </Change>
+            <Change id="27">
+               <Axiom>Microcurie per Liter SubClassOf Radioactivity Concentration Unit</Axiom>
+               <New_Terms>Microcurie per Liter</New_Terms>
+            </Change>
+            <Change id="28">
+               <Axiom>Hand Unit of Length SubClassOf Unit of Length</Axiom>
+               <New_Terms>Hand Unit of Length</New_Terms>
+            </Change>
+            <Change id="29">
+               <Axiom>Thousand Organisms per Gram SubClassOf Organism-Based Unit</Axiom>
+               <New_Terms>Thousand Organisms per Gram, Organism-Based Unit</New_Terms>
+            </Change>
+            <Change id="30">
+               <Axiom>Tamibarotene SubClassOf Retinoic Acid Agent</Axiom>
+               <New_Terms>Tamibarotene</New_Terms>
+            </Change>
+            <Change id="31">
+               <Axiom>Golgi Phosphoprotein 2 SubClassOf Gene_Product_Encoded_By_Gene some GOLM1 Gene</Axiom>
+               <New_Terms>Golgi Phosphoprotein 2, GOLM1 Gene</New_Terms>
+            </Change>
+            <Change id="32">
+               <Axiom>HLA-DR52 Antigen SubClassOf Gene_Product_Has_Organism_Source some Human</Axiom>
+               <New_Terms>HLA-DR52 Antigen</New_Terms>
+            </Change>
+            <Change id="33">
+               <Axiom>Zeptometer SubClassOf Unit of Length</Axiom>
+               <New_Terms>Zeptometer</New_Terms>
+            </Change>
+            <Change id="34">
+               <Axiom>ST Segment Abnormality SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>ST Segment Abnormality</New_Terms>
+            </Change>
+            <Change id="35">
+               <Axiom>Magnesium Valproate SubClassOf Histone Deacetylase Inhibitor</Axiom>
+               <New_Terms>Magnesium Valproate</New_Terms>
+            </Change>
+            <Change id="36">
+               <Axiom>Certified Pediatric Nurse SubClassOf Advanced Practice Nurse</Axiom>
+               <New_Terms>Certified Pediatric Nurse</New_Terms>
+            </Change>
+            <Change id="37">
+               <Axiom>Stonin-1 SubClassOf Transport Protein</Axiom>
+               <New_Terms>Stonin-1</New_Terms>
+            </Change>
+            <Change id="38">
+               <Axiom>Echinoderm Microtubule- Associated Protein-Like 4 SubClassOf Cytoskeletal Protein</Axiom>
+               <New_Terms>Echinoderm Microtubule- Associated Protein-Like 4</New_Terms>
+            </Change>
+            <Change id="39">
+               <Axiom>Certified Medical Assistant SubClassOf Medical Assistant</Axiom>
+               <New_Terms>Certified Medical Assistant</New_Terms>
+            </Change>
+            <Change id="40">
+               <Axiom>Mile British SubClassOf Mile Unit of Distance</Axiom>
+               <New_Terms>Mile Unit of Distance, Mile British</New_Terms>
+            </Change>
+            <Change id="41">
+               <Axiom>Pied SubClassOf Unit of Length</Axiom>
+               <New_Terms>Pied</New_Terms>
+            </Change>
+            <Change id="42">
+               <Axiom>Instance Unique Identifier SubClassOf Unique Identifier</Axiom>
+               <New_Terms>Instance Unique Identifier</New_Terms>
+            </Change>
+            <Change id="43">
+               <Axiom>HLA-DP Antigen SubClassOf Gene_Product_Has_Chemical_Classification some Transmembrane Protein</Axiom>
+               <New_Terms>HLA-DP Antigen</New_Terms>
+            </Change>
+            <Change id="44">
+               <Axiom>Point Name SubClassOf Unit of Length</Axiom>
+               <New_Terms>Point Name</New_Terms>
+            </Change>
+            <Change id="45">
+               <Axiom>Study Investigator Role SubClassOf Role</Axiom>
+               <New_Terms>Study Investigator Role</New_Terms>
+            </Change>
+            <Change id="46">
+               <Axiom>ASPSCR1 wt Allele SubClassOf Gene_In_Chromosomal_Location some 17q25</Axiom>
+               <New_Terms>ASPSCR1 wt Allele</New_Terms>
+            </Change>
+            <Change id="47">
+               <Axiom>U Waves SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>U Waves</New_Terms>
+            </Change>
+            <Change id="48">
+               <Axiom>HLA-DP Antigen SubClassOf MHC Class II Protein</Axiom>
+               <New_Terms>HLA-DP Antigen</New_Terms>
+            </Change>
+            <Change id="49">
+               <Axiom>QTci Individually Corrected SubClassOf EKG Concept</Axiom>
+               <New_Terms>QTci Individually Corrected</New_Terms>
+            </Change>
+            <Change id="50">
+               <Axiom>Curie per Milliliter SubClassOf Radioactivity Concentration Unit</Axiom>
+               <New_Terms>Curie per Milliliter</New_Terms>
+            </Change>
+            <Change id="51">
+               <Axiom>Discussion SubClassOf Communication</Axiom>
+               <New_Terms>Discussion</New_Terms>
+            </Change>
+            <Change id="52">
+               <Axiom>Dose Regimen SubClassOf Treatment Regimen</Axiom>
+               <New_Terms>Dose Regimen</New_Terms>
+            </Change>
+            <Change id="53">
+               <Axiom>Polo-like kinase 1 Inhibitor ON 01910.Na SubClassOf Chemical_Or_Drug_Has_Physiologic_Effect some Signal Transduction Inhibition</Axiom>
+               <New_Terms>Polo-like kinase 1 Inhibitor ON 01910.Na</New_Terms>
+            </Change>
+            <Change id="54">
+               <Axiom>12 Lead Placement Cabrera SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement, 12 Lead Placement Cabrera</New_Terms>
+            </Change>
+            <Change id="55">
+               <Axiom>Lateral Wall Myocardial Infarction SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Lateral Wall Myocardial Infarction</New_Terms>
+            </Change>
+            <Change id="56">
+               <Axiom>Associate of Science SubClassOf Associates Degree</Axiom>
+               <New_Terms>Associate of Science, Associates Degree</New_Terms>
+            </Change>
+            <Change id="57">
+               <Axiom>Advanced Practice Nurse Practitioner SubClassOf Nurse Practitioner</Axiom>
+               <New_Terms>Advanced Practice Nurse Practitioner</New_Terms>
+            </Change>
+            <Change id="58">
+               <Axiom>Associate of Business Administration SubClassOf Associates Degree</Axiom>
+               <New_Terms>Associate of Business Administration, Associates Degree</New_Terms>
+            </Change>
+            <Change id="59">
+               <Axiom>12 Lead Placement Standard And CC5-CM5-ML SubClassOf Lead Placement</Axiom>
+               <New_Terms>12 Lead Placement Standard And CC5-CM5-ML, Lead Placement</New_Terms>
+            </Change>
+            <Change id="60">
+               <Axiom>Positive Selection SubClassOf Laboratory Procedure</Axiom>
+               <New_Terms>Positive Selection</New_Terms>
+            </Change>
+            <Change id="61">
+               <Axiom>12 Lead Placement Standard Extended Right SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement, 12 Lead Placement Standard Extended Right</New_Terms>
+            </Change>
+            <Change id="62">
+               <Axiom>HLA-DRB3 Gene SubClassOf Gene_Plays_Role_In_Process some Antigen Presentation</Axiom>
+               <New_Terms>HLA-DRB3 Gene</New_Terms>
+            </Change>
+            <Change id="63">
+               <Axiom>Survey Yard SubClassOf Unit of Length</Axiom>
+               <New_Terms>Survey Yard</New_Terms>
+            </Change>
+            <Change id="64">
+               <Axiom>Mil SubClassOf Unit of Length</Axiom>
+               <New_Terms>Mil</New_Terms>
+            </Change>
+            <Change id="65">
+               <Axiom>Plaque Forming Unit per Milliliter SubClassOf Plaque Forming Unit</Axiom>
+               <New_Terms>Plaque Forming Unit per Milliliter</New_Terms>
+            </Change>
+            <Change id="66">
+               <Axiom>Childhood Grade I Meningioma EquivalentTo Childhood Meningioma and Grade I Meningioma</Axiom>
+               <New_Terms>Childhood Grade I Meningioma</New_Terms>
+            </Change>
+            <Change id="67">
+               <Axiom>ST Depression SubClassOf ST Segment Abnormality</Axiom>
+               <New_Terms>ST Segment Abnormality, ST Depression</New_Terms>
+            </Change>
+            <Change id="68">
+               <Axiom>HLA-DRB5 Gene SubClassOf MHC Class II Gene</Axiom>
+               <New_Terms>HLA-DRB5 Gene</New_Terms>
+            </Change>
+            <Change id="69">
+               <Axiom>Million Organisms per Milliliter SubClassOf Organism-Based Unit</Axiom>
+               <New_Terms>Million Organisms per Milliliter, Organism-Based Unit</New_Terms>
+            </Change>
+            <Change id="70">
+               <Axiom>Microgram per Minute SubClassOf Dose Calculation Unit</Axiom>
+               <New_Terms>Microgram per Minute</New_Terms>
+            </Change>
+            <Change id="71">
+               <Axiom>HLA-DQA1 Gene SubClassOf MHC Class II Gene</Axiom>
+               <New_Terms>HLA-DQA1 Gene</New_Terms>
+            </Change>
+            <Change id="72">
+               <Axiom>Sinoatrial Node Exit Block SubClassOf Exit Block</Axiom>
+               <New_Terms>Sinoatrial Node Exit Block</New_Terms>
+            </Change>
+            <Change id="73">
+               <Axiom>Multifocal Atrial Tachycardia SubClassOf Supraventricular Tachycardia</Axiom>
+               <New_Terms>Multifocal Atrial Tachycardia</New_Terms>
+            </Change>
+            <Change id="74">
+               <Axiom>Left Ventricular Hypertrophy SubClassOf Ventricular Hypertrophy</Axiom>
+               <New_Terms>Ventricular Hypertrophy, Left Ventricular Hypertrophy</New_Terms>
+            </Change>
+            <Change id="75">
+               <Axiom>Poline-Rich Protein PRCC SubClassOf Gene_Product_Encoded_By_Gene some PRCC Gene</Axiom>
+               <New_Terms>PRCC Gene, Poline-Rich Protein PRCC</New_Terms>
+            </Change>
+            <Change id="76">
+               <Axiom>Organism-Based Unit SubClassOf Unit of Biological Entity</Axiom>
+               <New_Terms>Organism-Based Unit</New_Terms>
+            </Change>
+            <Change id="77">
+               <Axiom>Lead Placement Pseudo Orthogonal XYZ SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement, Lead Placement Pseudo Orthogonal XYZ</New_Terms>
+            </Change>
+            <Change id="78">
+               <Axiom>Certified Emergency Nurse SubClassOf Advanced Practice Nurse</Axiom>
+               <New_Terms>Certified Emergency Nurse</New_Terms>
+            </Change>
+            <Change id="79">
+               <Axiom>Assessment of Therapy Complications SubClassOf Supportive Care</Axiom>
+               <New_Terms>Assessment of Therapy Complications</New_Terms>
+            </Change>
+            <Change id="80">
+               <Axiom>Mesh SubClassOf Unit of Length</Axiom>
+               <New_Terms>Mesh</New_Terms>
+            </Change>
+            <Change id="81">
+               <Axiom>12 Lead Placement Mason Likar Modified SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement, 12 Lead Placement Mason Likar Modified</New_Terms>
+            </Change>
+            <Change id="82">
+               <Axiom>Attometer SubClassOf Unit of Length</Axiom>
+               <New_Terms>Attometer</New_Terms>
+            </Change>
+            <Change id="83">
+               <Axiom>Nautical Mile SubClassOf Mile Unit of Distance</Axiom>
+               <New_Terms>Mile Unit of Distance, Nautical Mile</New_Terms>
+            </Change>
+            <Change id="84">
+               <Axiom>Non-Sustained Ventricular Tachycardia SubClassOf Ventricular Tachycardia</Axiom>
+               <New_Terms>Non-Sustained Ventricular Tachycardia</New_Terms>
+            </Change>
+            <Change id="85">
+               <Axiom>Pica SubClassOf Unit of Length</Axiom>
+               <New_Terms>Pica</New_Terms>
+            </Change>
+            <Change id="86">
+               <Axiom>CDISC SDTM ECG Test Name Terminology SubClassOf CDISC SDTM Terminology</Axiom>
+               <New_Terms>CDISC SDTM ECG Test Name Terminology</New_Terms>
+            </Change>
+            <Change id="87">
+               <Axiom>CDISC SDTM ECG Test Terminology by Code SubClassOf CDISC SDTM Terminology</Axiom>
+               <New_Terms>CDISC SDTM ECG Test Terminology by Code</New_Terms>
+            </Change>
+            <Change id="88">
+               <Axiom>Thousand Organisms per Milliliter SubClassOf Organism-Based Unit</Axiom>
+               <New_Terms>Thousand Organisms per Milliliter, Organism-Based Unit</New_Terms>
+            </Change>
+            <Change id="89">
+               <Axiom>HLA-DPA1 wt Allele SubClassOf Gene_Plays_Role_In_Process some Antigen Presentation</Axiom>
+               <New_Terms>HLA-DPA1 wt Allele</New_Terms>
+            </Change>
+            <Change id="90">
+               <Axiom>Polo-like kinase 1 Inhibitor ON 01910.Na SubClassOf Chemical_Or_Drug_Has_Physiologic_Effect some Enzyme Inhibition</Axiom>
+               <New_Terms>Polo-like kinase 1 Inhibitor ON 01910.Na</New_Terms>
+            </Change>
+            <Change id="91">
+               <Axiom>Notched T-Waves SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Notched T-Waves</New_Terms>
+            </Change>
+            <Change id="92">
+               <Axiom>Trigeminy SubClassOf Arrhythmia</Axiom>
+               <New_Terms>Trigeminy</New_Terms>
+            </Change>
+            <Change id="93">
+               <Axiom>Idiopathic Right Bundle Branch Block SubClassOf Ventricular Tachycardia</Axiom>
+               <New_Terms>Idiopathic Right Bundle Branch Block</New_Terms>
+            </Change>
+            <Change id="94">
+               <Axiom>HLA-Bw6 Antigen SubClassOf Gene_Product_Has_Biochemical_Function some MHC Class I Protein</Axiom>
+               <New_Terms>HLA-Bw6 Antigen</New_Terms>
+            </Change>
+            <Change id="95">
+               <Axiom>HLA-DR53 Antigen SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Antigen Presentation</Axiom>
+               <New_Terms>HLA-DR53 Antigen</New_Terms>
+            </Change>
+            <Change id="96">
+               <Axiom>Clinical Trials, Therapy SubClassOf Retired Concept</Axiom>
+               <New_Terms>Clinical Trials, Therapy</New_Terms>
+            </Change>
+            <Change id="97">
+               <Axiom>Curie per Liter SubClassOf Radioactivity Concentration Unit</Axiom>
+               <New_Terms>Curie per Liter</New_Terms>
+            </Change>
+            <Change id="98">
+               <Axiom>Enhancer of Filamentation 1 SubClassOf Adaptor Signaling Protein</Axiom>
+               <New_Terms>Enhancer of Filamentation 1</New_Terms>
+            </Change>
+            <Change id="99">
+               <Axiom>Anterior Wall Myocardial Infarction SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Anterior Wall Myocardial Infarction</New_Terms>
+            </Change>
+            <Change id="100">
+               <Axiom>Bundle Branch Re-Entrant Ventricular Tachycardia SubClassOf Ventricular Tachycardia</Axiom>
+               <New_Terms>Bundle Branch Re-Entrant Ventricular Tachycardia</New_Terms>
+            </Change>
+            <Change id="101">
+               <Axiom>Certified Clinical Research Associate SubClassOf Clinical Research Associate</Axiom>
+               <New_Terms>Certified Clinical Research Associate</New_Terms>
+            </Change>
+            <Change id="102">
+               <Axiom>Screening Questionnaire Administration SubClassOf Disease Screening</Axiom>
+               <New_Terms>Screening Questionnaire Administration</New_Terms>
+            </Change>
+            <Change id="103">
+               <Axiom>Videocapsule Endoscopy SubClassOf Diagnostic Endoscopic Procedure</Axiom>
+               <New_Terms>Videocapsule Endoscopy</New_Terms>
+            </Change>
+            <Change id="104">
+               <Axiom>NEDD9 Gene SubClassOf Adaptor Signaling Protein Gene</Axiom>
+               <New_Terms>NEDD9 Gene</New_Terms>
+            </Change>
+            <Change id="105">
+               <Axiom>HNF1B wt Allele SubClassOf HNF1B Gene</Axiom>
+               <New_Terms>HNF1B wt Allele, HNF1B Gene</New_Terms>
+            </Change>
+            <Change id="106">
+               <Axiom>Progressive Care Certified Nurse SubClassOf Advanced Practice Nurse</Axiom>
+               <New_Terms>Progressive Care Certified Nurse</New_Terms>
+            </Change>
+            <Change id="107">
+               <Axiom>Survey Foot SubClassOf Foot Unit of Length</Axiom>
+               <New_Terms>Survey Foot, Foot Unit of Length</New_Terms>
+            </Change>
+            <Change id="108">
+               <Axiom>Adult Grade II Meningioma EquivalentTo Adult Meningioma and Grade II Meningioma</Axiom>
+               <New_Terms>Adult Grade II Meningioma</New_Terms>
+            </Change>
+            <Change id="109">
+               <Axiom>Secretarial Certificate SubClassOf Certificate</Axiom>
+               <New_Terms>Secretarial Certificate</New_Terms>
+            </Change>
+            <Change id="110">
+               <Axiom>Cycle per Minute SubClassOf Unit of Frequency</Axiom>
+               <New_Terms>Cycle per Minute</New_Terms>
+            </Change>
+            <Change id="111">
+               <Axiom>Mucin-16 SubClassOf Gene_Product_Encoded_By_Gene some MUC16 Gene</Axiom>
+               <New_Terms>MUC16 Gene, Mucin-16</New_Terms>
+            </Change>
+            <Change id="112">
+               <Axiom>Printers Pica SubClassOf Unit of Length</Axiom>
+               <New_Terms>Printers Pica</New_Terms>
+            </Change>
+            <Change id="113">
+               <Axiom>Brugada Syndrome SubClassOf Ventricular Arrhythmia</Axiom>
+               <New_Terms>Brugada Syndrome</New_Terms>
+            </Change>
+            <Change id="114">
+               <Axiom>Light-Year SubClassOf Unit of Length</Axiom>
+               <New_Terms>Light-Year</New_Terms>
+            </Change>
+            <Change id="115">
+               <Axiom>Pouce SubClassOf Unit of Length</Axiom>
+               <New_Terms>Pouce</New_Terms>
+            </Change>
+            <Change id="116">
+               <Axiom>Mile Unit of Distance SubClassOf Unit of Length</Axiom>
+               <New_Terms>Mile Unit of Distance</New_Terms>
+            </Change>
+            <Change id="117">
+               <Axiom>Megabecquerel per Microliter SubClassOf Radioactivity Concentration Unit</Axiom>
+               <New_Terms>Megabecquerel per Microliter</New_Terms>
+            </Change>
+            <Change id="118">
+               <Axiom>Ventricular Tachycardia Storm SubClassOf Ventricular Tachycardia</Axiom>
+               <New_Terms>Ventricular Tachycardia Storm</New_Terms>
+            </Change>
+            <Change id="119">
+               <Axiom>Billion Organisms SubClassOf Organism-Based Unit</Axiom>
+               <New_Terms>Billion Organisms, Organism-Based Unit</New_Terms>
+            </Change>
+            <Change id="120">
+               <Axiom>International Unit per Kilogram per Hour SubClassOf Dose Calculation Unit</Axiom>
+               <New_Terms>International Unit per Kilogram per Hour</New_Terms>
+            </Change>
+            <Change id="121">
+               <Axiom>Document Detailed Description SubClassOf Document</Axiom>
+               <New_Terms>Document Detailed Description</New_Terms>
+            </Change>
+            <Change id="122">
+               <Axiom>Acute Inferior Wall Myocardial Infarction SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Acute Inferior Wall Myocardial Infarction</New_Terms>
+            </Change>
+            <Change id="123">
+               <Axiom>GOLM1 wt Allele SubClassOf GOLM1 Gene</Axiom>
+               <New_Terms>GOLM1 Gene, GOLM1 wt Allele</New_Terms>
+            </Change>
+            <Change id="124">
+               <Axiom>HLA-DR52 Antigen SubClassOf MHC Class II Protein</Axiom>
+               <New_Terms>HLA-DR52 Antigen</New_Terms>
+            </Change>
+            <Change id="125">
+               <Axiom>Bachelor of Arts SubClassOf Academic Degree</Axiom>
+               <New_Terms>Bachelor of Arts</New_Terms>
+            </Change>
+            <Change id="126">
+               <Axiom>Bachelor of Engineering SubClassOf Academic Degree</Axiom>
+               <New_Terms>Bachelor of Engineering</New_Terms>
+            </Change>
+            <Change id="127">
+               <Axiom>Certified Midwife SubClassOf Medical Occupation</Axiom>
+               <New_Terms>Certified Midwife</New_Terms>
+            </Change>
+            <Change id="128">
+               <Axiom>Pre-Procedure Preparation SubClassOf Therapeutic Procedure</Axiom>
+               <New_Terms>Pre-Procedure Preparation</New_Terms>
+            </Change>
+            <Change id="129">
+               <Axiom>Lead Placement Standard Intercostal Space Higher SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement, Lead Placement Standard Intercostal Space Higher</New_Terms>
+            </Change>
+            <Change id="130">
+               <Axiom>Document Summary Description Synopsis SubClassOf Document</Axiom>
+               <New_Terms>Document Summary Description Synopsis</New_Terms>
+            </Change>
+            <Change id="131">
+               <Axiom>12 Lead Placement 1 Lead Missing SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement, 12 Lead Placement 1 Lead Missing</New_Terms>
+            </Change>
+            <Change id="132">
+               <Axiom>Study Protocol Confidentiality Status SubClassOf Status</Axiom>
+               <New_Terms>Study Protocol Confidentiality Status</New_Terms>
+            </Change>
+            <Change id="133">
+               <Axiom>Intra-Atrial Conduction Delay SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Intra-Atrial Conduction Delay</New_Terms>
+            </Change>
+            <Change id="134">
+               <Axiom>Regulatory Application Document Subtype SubClassOf Document Subtype</Axiom>
+               <New_Terms>Regulatory Application Document Subtype</New_Terms>
+            </Change>
+            <Change id="135">
+               <Axiom>Q Axis Right Axis Deviation SubClassOf EKG Normal Axis Deviation</Axiom>
+               <New_Terms>Q Axis Right Axis Deviation</New_Terms>
+            </Change>
+            <Change id="136">
+               <Axiom>HLA-DQA1 Gene SubClassOf Gene_Plays_Role_In_Process some Antigen Presentation</Axiom>
+               <New_Terms>HLA-DQA1 Gene</New_Terms>
+            </Change>
+            <Change id="137">
+               <Axiom>HLA-DR53 Antigen SubClassOf Gene_Product_Encoded_By_Gene some HLA-DRB4 Gene</Axiom>
+               <New_Terms>HLA-DR53 Antigen, HLA-DRB4 Gene</New_Terms>
+            </Change>
+            <Change id="138">
+               <Axiom>Bachelor of Business Administration SubClassOf Academic Degree</Axiom>
+               <New_Terms>Bachelor of Business Administration</New_Terms>
+            </Change>
+            <Change id="139">
+               <Axiom>Bachelor of Theology SubClassOf Academic Degree</Axiom>
+               <New_Terms>Bachelor of Theology</New_Terms>
+            </Change>
+            <Change id="140">
+               <Axiom>Microvolt SubClassOf Unit of Electric Potential</Axiom>
+               <New_Terms>Microvolt</New_Terms>
+            </Change>
+            <Change id="141">
+               <Axiom>Bifascicular Block SubClassOf Heart Block</Axiom>
+               <New_Terms>Bifascicular Block</New_Terms>
+            </Change>
+            <Change id="142">
+               <Axiom>PRCC wt Allele SubClassOf PRCC Gene</Axiom>
+               <New_Terms>PRCC wt Allele, PRCC Gene</New_Terms>
+            </Change>
+            <Change id="143">
+               <Axiom>Certified Nurse Specialist SubClassOf Advanced Practice Nurse</Axiom>
+               <New_Terms>Certified Nurse Specialist</New_Terms>
+            </Change>
+            <Change id="144">
+               <Axiom>Becquerel per Microliter SubClassOf Radioactivity Concentration Unit</Axiom>
+               <New_Terms>Becquerel per Microliter</New_Terms>
+            </Change>
+            <Change id="145">
+               <Axiom>Every Five Days SubClassOf Schedule Frequency</Axiom>
+               <New_Terms>Every Five Days</New_Terms>
+            </Change>
+            <Change id="146">
+               <Axiom>Salirasib SubClassOf Signal Transduction Inhibitor</Axiom>
+               <New_Terms>Salirasib</New_Terms>
+            </Change>
+            <Change id="147">
+               <Axiom>Million Organisms per Gram SubClassOf Organism-Based Unit</Axiom>
+               <New_Terms>Million Organisms per Gram, Organism-Based Unit</New_Terms>
+            </Change>
+            <Change id="148">
+               <Axiom>J Point Elevation SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>J Point Elevation</New_Terms>
+            </Change>
+            <Change id="149">
+               <Axiom>Kilo United States Pharmacopoeia Unit SubClassOf Potency Unit</Axiom>
+               <New_Terms>Kilo United States Pharmacopoeia Unit</New_Terms>
+            </Change>
+            <Change id="150">
+               <Axiom>Screening Questionnaire Administration SubClassOf Questionnaire Administration</Axiom>
+               <New_Terms>Screening Questionnaire Administration</New_Terms>
+            </Change>
+            <Change id="151">
+               <Axiom>Plaque Forming Unit per Dose SubClassOf Plaque Forming Unit</Axiom>
+               <New_Terms>Plaque Forming Unit per Dose</New_Terms>
+            </Change>
+            <Change id="152">
+               <Axiom>Lead Placement Cube SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement Cube, Lead Placement</New_Terms>
+            </Change>
+            <Change id="153">
+               <Axiom>Echinoderm Microtubule- Associated Protein-Like 4 SubClassOf Gene_Product_Encoded_By_Gene some EML4 Gene</Axiom>
+               <New_Terms>Echinoderm Microtubule- Associated Protein-Like 4, EML4 Gene</New_Terms>
+            </Change>
+            <Change id="154">
+               <Axiom>HLA-DRB5 Gene SubClassOf Gene_Plays_Role_In_Process some Antigen Presentation</Axiom>
+               <New_Terms>HLA-DRB5 Gene</New_Terms>
+            </Change>
+            <Change id="155">
+               <Axiom>Poline-Rich Protein PRCC SubClassOf Transcription Regulatory Protein</Axiom>
+               <New_Terms>Poline-Rich Protein PRCC</New_Terms>
+            </Change>
+            <Change id="156">
+               <Axiom>Billion Organisms per Gram SubClassOf Organism-Based Unit</Axiom>
+               <New_Terms>Billion Organisms per Gram, Organism-Based Unit</New_Terms>
+            </Change>
+            <Change id="157">
+               <Axiom>HLA Typing SubClassOf Laboratory Procedure</Axiom>
+               <New_Terms>HLA Typing</New_Terms>
+            </Change>
+            <Change id="158">
+               <Axiom>Yoctometer SubClassOf Unit of Length</Axiom>
+               <New_Terms>Yoctometer</New_Terms>
+            </Change>
+            <Change id="159">
+               <Axiom>Polo-like kinase 1 Inhibitor ON 01910.Na SubClassOf Chemical_Or_Drug_Has_Physiologic_Effect some Inhibition of Cell Proliferation</Axiom>
+               <New_Terms>Polo-like kinase 1 Inhibitor ON 01910.Na</New_Terms>
+            </Change>
+            <Change id="160">
+               <Axiom>Adenosine-Sensitive Ventricular Tachycardia SubClassOf Ventricular Tachycardia</Axiom>
+               <New_Terms>Adenosine-Sensitive Ventricular Tachycardia</New_Terms>
+            </Change>
+            <Change id="161">
+               <Axiom>Lean Body Mass SubClassOf Personal Attribute</Axiom>
+               <New_Terms>Lean Body Mass</New_Terms>
+            </Change>
+            <Change id="162">
+               <Axiom>Bel SubClassOf Unit of Sound Intensity</Axiom>
+               <New_Terms>Bel, Unit of Sound Intensity</New_Terms>
+            </Change>
+            <Change id="163">
+               <Axiom>Stenting SubClassOf Supportive Care</Axiom>
+               <New_Terms>Stenting</New_Terms>
+            </Change>
+            <Change id="164">
+               <Axiom>GOLM1 Gene SubClassOf Trafficking Protein Gene</Axiom>
+               <New_Terms>GOLM1 Gene</New_Terms>
+            </Change>
+            <Change id="165">
+               <Axiom>Natural IFN-alpha OPC-18 SubClassOf Recombinant Interferon Alfa</Axiom>
+               <New_Terms>Natural IFN-alpha OPC-18</New_Terms>
+            </Change>
+            <Change id="166">
+               <Axiom>Twice Per Month SubClassOf Schedule Frequency</Axiom>
+               <New_Terms>Twice Per Month</New_Terms>
+            </Change>
+            <Change id="167">
+               <Axiom>Acute Anterior Wall Myocardial Infarction SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Acute Anterior Wall Myocardial Infarction</New_Terms>
+            </Change>
+            <Change id="168">
+               <Axiom>Childhood Grade II Meningioma EquivalentTo Childhood Meningioma and Grade II Meningioma</Axiom>
+               <New_Terms>Childhood Grade II Meningioma</New_Terms>
+            </Change>
+            <Change id="169">
+               <Axiom>QTcB Prolongation Greater Than 500 msec SubClassOf EKG Normal Axis Deviation</Axiom>
+               <New_Terms>QTcB Prolongation Greater Than 500 msec</New_Terms>
+            </Change>
+            <Change id="170">
+               <Axiom>Certified Adult Nurse Practitioner SubClassOf Nurse Practitioner</Axiom>
+               <New_Terms>Certified Adult Nurse Practitioner</New_Terms>
+            </Change>
+            <Change id="171">
+               <Axiom>International Foot SubClassOf Foot Unit of Length</Axiom>
+               <New_Terms>International Foot, Foot Unit of Length</New_Terms>
+            </Change>
+            <Change id="172">
+               <Axiom>Document Summary Description SubClassOf Document</Axiom>
+               <New_Terms>Document Summary Description</New_Terms>
+            </Change>
+            <Change id="173">
+               <Axiom>Rod British SubClassOf Unit of Length</Axiom>
+               <New_Terms>Rod British</New_Terms>
+            </Change>
+            <Change id="174">
+               <Axiom>Hepatocyte Nuclear Factor 1-Beta SubClassOf Gene_Product_Encoded_By_Gene some HNF1B Gene</Axiom>
+               <New_Terms>Hepatocyte Nuclear Factor 1-Beta, HNF1B Gene</New_Terms>
+            </Change>
+            <Change id="175">
+               <Axiom>P-pulmonale SubClassOf EKG Finding Atrial Enlargement</Axiom>
+               <New_Terms>EKG Finding Atrial Enlargement, P-pulmonale</New_Terms>
+            </Change>
+            <Change id="176">
+               <Axiom>T Wave Peaked SubClassOf T Wave Abnormality</Axiom>
+               <New_Terms>T Wave Peaked, T Wave Abnormality</New_Terms>
+            </Change>
+            <Change id="177">
+               <Axiom>HLA-DR52 Antigen SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Antigen Presentation</Axiom>
+               <New_Terms>HLA-DR52 Antigen</New_Terms>
+            </Change>
+            <Change id="178">
+               <Axiom>STON1 Gene SubClassOf Transport Protein Gene</Axiom>
+               <New_Terms>STON1 Gene</New_Terms>
+            </Change>
+            <Change id="179">
+               <Axiom>Animal Model SubClassOf in vivo Model</Axiom>
+               <New_Terms>Animal Model</New_Terms>
+            </Change>
+            <Change id="180">
+               <Axiom>Bachelor of Fine Arts SubClassOf Academic Degree</Axiom>
+               <New_Terms>Bachelor of Fine Arts</New_Terms>
+            </Change>
+            <Change id="181">
+               <Axiom>Milligram per Kilogram per Minute SubClassOf Dose Calculation Unit</Axiom>
+               <New_Terms>Milligram per Kilogram per Minute</New_Terms>
+            </Change>
+            <Change id="182">
+               <Axiom>Ectopic Supraventricular Rhythm SubClassOf Supraventricular Arrhythmia</Axiom>
+               <New_Terms>Ectopic Supraventricular Rhythm</New_Terms>
+            </Change>
+            <Change id="183">
+               <Axiom>PRCC Gene SubClassOf Transcription Regulation Gene</Axiom>
+               <New_Terms>PRCC Gene</New_Terms>
+            </Change>
+            <Change id="184">
+               <Axiom>NEDD9 wt Allele SubClassOf NEDD9 Gene</Axiom>
+               <New_Terms>NEDD9 wt Allele, NEDD9 Gene</New_Terms>
+            </Change>
+            <Change id="185">
+               <Axiom>Survey Mil SubClassOf Unit of Length</Axiom>
+               <New_Terms>Survey Mil</New_Terms>
+            </Change>
+            <Change id="186">
+               <Axiom>Bel SubClassOf Miscellaneous Unit</Axiom>
+               <New_Terms>Bel</New_Terms>
+            </Change>
+            <Change id="187">
+               <Axiom>Angstrom SubClassOf Unit of Length</Axiom>
+               <New_Terms>Angstrom</New_Terms>
+            </Change>
+            <Change id="188">
+               <Axiom>Printers Point SubClassOf Unit of Length</Axiom>
+               <New_Terms>Printers Point</New_Terms>
+            </Change>
+            <Change id="189">
+               <Axiom>Gerontological Nurse Practitioner SubClassOf Nurse Practitioner</Axiom>
+               <New_Terms>Gerontological Nurse Practitioner</New_Terms>
+            </Change>
+            <Change id="190">
+               <Axiom>Registered Medical Assistant SubClassOf Medical Assistant</Axiom>
+               <New_Terms>Registered Medical Assistant</New_Terms>
+            </Change>
+            <Change id="191">
+               <Axiom>12 Lead Placement Non-Standard SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement, 12 Lead Placement Non-Standard</New_Terms>
+            </Change>
+            <Change id="192">
+               <Axiom>Post Script Point SubClassOf Unit of Length</Axiom>
+               <New_Terms>Post Script Point</New_Terms>
+            </Change>
+            <Change id="193">
+               <Axiom>Certified Nurse Assistant SubClassOf Medical Assistant</Axiom>
+               <New_Terms>Certified Nurse Assistant</New_Terms>
+            </Change>
+            <Change id="194">
+               <Axiom>Nautical Mile British SubClassOf Mile Unit of Distance</Axiom>
+               <New_Terms>Mile Unit of Distance, Nautical Mile British</New_Terms>
+            </Change>
+            <Change id="195">
+               <Axiom>Recombinant Adenovirus-Interferon SCH 721015 SubClassOf Gene Transfer or Gene Delivery Agent</Axiom>
+               <New_Terms>Recombinant Adenovirus-Interferon SCH 721015</New_Terms>
+            </Change>
+            <Change id="196">
+               <Axiom>Formoterol Fumarate/Roxithromycin SubClassOf Anticachexia Agent</Axiom>
+               <New_Terms>Formoterol Fumarate/Roxithromycin</New_Terms>
+            </Change>
+            <Change id="197">
+               <Axiom>HLA-DPA1 Gene SubClassOf MHC Class II Gene</Axiom>
+               <New_Terms>HLA-DPA1 Gene</New_Terms>
+            </Change>
+            <Change id="198">
+               <Axiom>STON1 wt Allele SubClassOf Gene_In_Chromosomal_Location some 2p16.3</Axiom>
+               <New_Terms>STON1 wt Allele</New_Terms>
+            </Change>
+            <Change id="199">
+               <Axiom>HLA-DPA1 Gene SubClassOf Gene_Plays_Role_In_Process some Antigen Presentation</Axiom>
+               <New_Terms>HLA-DPA1 Gene</New_Terms>
+            </Change>
+            <Change id="200">
+               <Axiom>EML4 wt Allele SubClassOf EML4 Gene</Axiom>
+               <New_Terms>EML4 wt Allele, EML4 Gene</New_Terms>
+            </Change>
+            <Change id="201">
+               <Axiom>Bachelor of Science SubClassOf Academic Degree</Axiom>
+               <New_Terms>Bachelor of Science</New_Terms>
+            </Change>
+            <Change id="202">
+               <Axiom>P-mitrale SubClassOf EKG Finding Atrial Enlargement</Axiom>
+               <New_Terms>P-mitrale, EKG Finding Atrial Enlargement</New_Terms>
+            </Change>
+            <Change id="203">
+               <Axiom>HLA-Bw6 Antigen SubClassOf MHC Class I Protein</Axiom>
+               <New_Terms>HLA-Bw6 Antigen</New_Terms>
+            </Change>
+            <Change id="204">
+               <Axiom>Anti-CD19-DM4 Conjugate SubClassOf Immunotoxin</Axiom>
+               <New_Terms>Anti-CD19-DM4 Conjugate</New_Terms>
+            </Change>
+            <Change id="205">
+               <Axiom>ST Elevation SubClassOf ST Segment Abnormality</Axiom>
+               <New_Terms>ST Elevation, ST Segment Abnormality</New_Terms>
+            </Change>
+            <Change id="206">
+               <Axiom>Vectorcardiograph Uncorrected SubClassOf EKG Concept</Axiom>
+               <New_Terms>Vectorcardiograph Uncorrected</New_Terms>
+            </Change>
+            <Change id="207">
+               <Axiom>Astronomic Unit SubClassOf Unit of Length</Axiom>
+               <New_Terms>Astronomic Unit</New_Terms>
+            </Change>
+            <Change id="208">
+               <Axiom>Original Text SubClassOf Text</Axiom>
+               <New_Terms>Original Text</New_Terms>
+            </Change>
+            <Change id="209">
+               <Axiom>Atrioventricular Dissociation SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Atrioventricular Dissociation</New_Terms>
+            </Change>
+            <Change id="210">
+               <Axiom>Fagerstrom Test for Nicotine Dependence SubClassOf Clinical Assessment Tool</Axiom>
+               <New_Terms>Fagerstrom Test for Nicotine Dependence</New_Terms>
+            </Change>
+            <Change id="211">
+               <Axiom>Hepatocyte Nuclear Factor 1-Beta SubClassOf Transcription Factor</Axiom>
+               <New_Terms>Hepatocyte Nuclear Factor 1-Beta</New_Terms>
+            </Change>
+            <Change id="212">
+               <Axiom>Nebule Dosing Unit SubClassOf Potency Unit</Axiom>
+               <New_Terms>Nebule Dosing Unit</New_Terms>
+            </Change>
+            <Change id="213">
+               <Axiom>Adult Spinal Cord Neoplasm EquivalentTo Adult Central Nervous System Neoplasm and Spinal Cord Neoplasm</Axiom>
+               <New_Terms>Adult Spinal Cord Neoplasm</New_Terms>
+            </Change>
+            <Change id="214">
+               <Axiom>MUC16 wt Allele SubClassOf Gene_In_Chromosomal_Location some 19q13.2</Axiom>
+               <New_Terms>MUC16 wt Allele</New_Terms>
+            </Change>
+            <Change id="215">
+               <Axiom>Registered Dietitian SubClassOf Dietitian</Axiom>
+               <New_Terms>Registered Dietitian</New_Terms>
+            </Change>
+            <Change id="216">
+               <Axiom>Adult Pilocytic Astrocytoma EquivalentTo Adult Astrocytic Tumor and Pilocytic Astrocytoma</Axiom>
+               <New_Terms>Adult Pilocytic Astrocytoma</New_Terms>
+            </Change>
+            <Change id="217">
+               <Axiom>Anti-PD-1 Monoclonal Antibody CT-011 SubClassOf Monoclonal Antibody</Axiom>
+               <New_Terms>Anti-PD-1 Monoclonal Antibody CT-011</New_Terms>
+            </Change>
+            <Change id="218">
+               <Axiom>Bachelor of Science in Law SubClassOf Academic Degree</Axiom>
+               <New_Terms>Bachelor of Science in Law</New_Terms>
+            </Change>
+            <Change id="219">
+               <Axiom>Link for Gunters Chain USA SubClassOf Unit of Length</Axiom>
+               <New_Terms>Link for Gunters Chain USA</New_Terms>
+            </Change>
+            <Change id="220">
+               <Axiom>Lead Placement Bicycle SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement Bicycle, Lead Placement</New_Terms>
+            </Change>
+            <Change id="221">
+               <Axiom>Non Q Wave Myocardial Infarction SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Non Q Wave Myocardial Infarction</New_Terms>
+            </Change>
+            <Change id="222">
+               <Axiom>Associate of Engineering SubClassOf Associates Degree</Axiom>
+               <New_Terms>Associate of Engineering, Associates Degree</New_Terms>
+            </Change>
+            <Change id="223">
+               <Axiom>HLA-DQA1 wt Allele SubClassOf Gene_In_Chromosomal_Location some 6p21.3</Axiom>
+               <New_Terms>HLA-DQA1 wt Allele</New_Terms>
+            </Change>
+            <Change id="224">
+               <Axiom>Human Herpesvirus 3 SubClassOf Herpesvirus</Axiom>
+               <New_Terms>Human Herpesvirus 3</New_Terms>
+            </Change>
+            <Change id="225">
+               <Axiom>HLA-DRB3 wt Allele EquivalentTo HLA-DRB3 Gene and (Gene_Found_In_Organism some Human) and (Gene_In_Chromosomal_Location some 6p21.3)</Axiom>
+               <New_Terms>HLA-DRB3 wt Allele, HLA-DRB3 Gene</New_Terms>
+            </Change>
+            <Change id="226">
+               <Axiom>Cellular Physiologic Testing SubClassOf Physiologic Testing</Axiom>
+               <New_Terms>Cellular Physiologic Testing</New_Terms>
+            </Change>
+            <Change id="227">
+               <Axiom>HLA-DP Antigen SubClassOf Gene_Product_Has_Associated_Anatomy some Plasma Membrane</Axiom>
+               <New_Terms>HLA-DP Antigen</New_Terms>
+            </Change>
+            <Change id="228">
+               <Axiom>EKG Finding Atrial Enlargement SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>EKG Finding Atrial Enlargement</New_Terms>
+            </Change>
+            <Change id="229">
+               <Axiom>Aurora Kinase/VEGFR2 Inhibitor CYC116 SubClassOf Protein Kinase Inhibitor</Axiom>
+               <New_Terms>Aurora Kinase/VEGFR2 Inhibitor CYC116</New_Terms>
+            </Change>
+            <Change id="230">
+               <Axiom>Million Organisms per Milligram SubClassOf Organism-Based Unit</Axiom>
+               <New_Terms>Million Organisms per Milligram, Organism-Based Unit</New_Terms>
+            </Change>
+            <Change id="231">
+               <Axiom>Certified Clinical Research Professional SubClassOf Research Personnel</Axiom>
+               <New_Terms>Certified Clinical Research Professional</New_Terms>
+            </Change>
+            <Change id="232">
+               <Axiom>Cannabis-Based Oromucosal Spray GW-1000-02 SubClassOf Analgesic Preparation</Axiom>
+               <New_Terms>Cannabis-Based Oromucosal Spray GW-1000-02</New_Terms>
+            </Change>
+            <Change id="233">
+               <Axiom>Thousand Organisms SubClassOf Organism-Based Unit</Axiom>
+               <New_Terms>Thousand Organisms, Organism-Based Unit</New_Terms>
+            </Change>
+            <Change id="234">
+               <Axiom>Fingertip Unit SubClassOf Potency Unit</Axiom>
+               <New_Terms>Fingertip Unit</New_Terms>
+            </Change>
+            <Change id="235">
+               <Axiom>Q Axis Left Axis Deviation SubClassOf EKG Normal Axis Deviation</Axiom>
+               <New_Terms>Q Axis Left Axis Deviation</New_Terms>
+            </Change>
+            <Change id="236">
+               <Axiom>Polo-like kinase 1 Inhibitor ON 01910.Na SubClassOf Serine Threonine Kinase Inhibitor</Axiom>
+               <New_Terms>Polo-like kinase 1 Inhibitor ON 01910.Na</New_Terms>
+            </Change>
+            <Change id="237">
+               <Axiom>Pace SubClassOf Unit of Length</Axiom>
+               <New_Terms>Pace</New_Terms>
+            </Change>
+            <Change id="238">
+               <Axiom>Dornase Alfa Inhalation Solution SubClassOf Biological Agent</Axiom>
+               <New_Terms>Dornase Alfa Inhalation Solution</New_Terms>
+            </Change>
+            <Change id="239">
+               <Axiom>Family Nurse Practitioner SubClassOf Nurse Practitioner</Axiom>
+               <New_Terms>Family Nurse Practitioner</New_Terms>
+            </Change>
+            <Change id="240">
+               <Axiom>Charriere SubClassOf Unit of Length</Axiom>
+               <New_Terms>Charriere</New_Terms>
+            </Change>
+            <Change id="241">
+               <Axiom>Incomplete Right Bundle Branch Block SubClassOf Incomplete Bundle Branch Block</Axiom>
+               <New_Terms>Incomplete Right Bundle Branch Block, Incomplete Bundle Branch Block</New_Terms>
+            </Change>
+            <Change id="242">
+               <Axiom>Fertility Preservation SubClassOf Therapeutic Procedure</Axiom>
+               <New_Terms>Fertility Preservation</New_Terms>
+            </Change>
+            <Change id="243">
+               <Axiom>Intermittent SubClassOf Instruction Imperative</Axiom>
+               <New_Terms>Intermittent</New_Terms>
+            </Change>
+            <Change id="244">
+               <Axiom>Line Unit of Length SubClassOf Unit of Length</Axiom>
+               <New_Terms>Line Unit of Length</New_Terms>
+            </Change>
+            <Change id="245">
+               <Axiom>Foot British SubClassOf Foot Unit of Length</Axiom>
+               <New_Terms>Foot British, Foot Unit of Length</New_Terms>
+            </Change>
+            <Change id="246">
+               <Axiom>HLA-DR51 Antigen SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Antigen Presentation</Axiom>
+               <New_Terms>HLA-DR51 Antigen</New_Terms>
+            </Change>
+            <Change id="247">
+               <Axiom>Link for Ramsden's Chain SubClassOf Unit of Length</Axiom>
+               <New_Terms>Link for Ramsden's Chain</New_Terms>
+            </Change>
+            <Change id="248">
+               <Axiom>100 International Units per Milliliter SubClassOf Arbitrary Unit of Substance Concentration</Axiom>
+               <New_Terms>100 International Units per Milliliter</New_Terms>
+            </Change>
+            <Change id="249">
+               <Axiom>Fathom US SubClassOf Unit of Length</Axiom>
+               <New_Terms>Fathom US</New_Terms>
+            </Change>
+            <Change id="250">
+               <Axiom>CDISC SDTM ECG Finding Terminology SubClassOf CDISC SDTM Terminology</Axiom>
+               <New_Terms>CDISC SDTM ECG Finding Terminology</New_Terms>
+            </Change>
+            <Change id="251">
+               <Axiom>Bachelor of Education SubClassOf Academic Degree</Axiom>
+               <New_Terms>Bachelor of Education</New_Terms>
+            </Change>
+            <Change id="252">
+               <Axiom>Allogeneic B7.1/HLA-A1 Transfected Tumor Cell Vaccine SubClassOf Allogenic Tumor Cell Vaccine</Axiom>
+               <New_Terms>Allogeneic B7.1/HLA-A1 Transfected Tumor Cell Vaccine</New_Terms>
+            </Change>
+            <Change id="253">
+               <Axiom>Microgram per Kilogram per Minute SubClassOf Dose Calculation Unit</Axiom>
+               <New_Terms>Microgram per Kilogram per Minute</New_Terms>
+            </Change>
+            <Change id="254">
+               <Axiom>Gunter's Chain British SubClassOf Unit of Length</Axiom>
+               <New_Terms>Gunter's Chain British</New_Terms>
+            </Change>
+            <Change id="255">
+               <Axiom>Golgi Phosphoprotein 2 SubClassOf Transport Protein</Axiom>
+               <New_Terms>Golgi Phosphoprotein 2</New_Terms>
+            </Change>
+            <Change id="256">
+               <Axiom>Ectopic Ventricular Rhythm SubClassOf Ventricular Arrhythmia</Axiom>
+               <New_Terms>Ectopic Ventricular Rhythm</New_Terms>
+            </Change>
+            <Change id="257">
+               <Axiom>Kilometer per Hour SubClassOf Unit of Linear Velocity</Axiom>
+               <New_Terms>Kilometer per Hour</New_Terms>
+            </Change>
+            <Change id="258">
+               <Axiom>Adult Subependymal Giant Cell Astrocytoma EquivalentTo Adult Astrocytic Tumor and Subependymal Giant Cell Astrocytoma</Axiom>
+               <New_Terms>Adult Subependymal Giant Cell Astrocytoma</New_Terms>
+            </Change>
+            <Change id="259">
+               <Axiom>HLA-DR51 Antigen SubClassOf Gene_Product_Encoded_By_Gene some HLA-DRB5 Gene</Axiom>
+               <New_Terms>HLA-DR51 Antigen, HLA-DRB5 Gene</New_Terms>
+            </Change>
+            <Change id="260">
+               <Axiom>Transmission SubClassOf Action</Axiom>
+               <New_Terms>Transmission</New_Terms>
+            </Change>
+            <Change id="261">
+               <Axiom>Licensed Clinical Social Worker SubClassOf Social Worker</Axiom>
+               <New_Terms>Licensed Clinical Social Worker</New_Terms>
+            </Change>
+            <Change id="262">
+               <Axiom>Kilobecquerel per Microliter SubClassOf Radioactivity Concentration Unit</Axiom>
+               <New_Terms>Kilobecquerel per Microliter</New_Terms>
+            </Change>
+            <Change id="263">
+               <Axiom>Gram per Square Centimeter SubClassOf Unit of Spread Rate of Substance by Mass</Axiom>
+               <New_Terms>Gram per Square Centimeter</New_Terms>
+            </Change>
+            <Change id="264">
+               <Axiom>Anti-CCL2 Human Monoclonal Antibody CNTO 888 SubClassOf Chemical_Or_Drug_Has_Mechanism_Of_Action some Antigen Binding</Axiom>
+               <New_Terms>Anti-CCL2 Human Monoclonal Antibody CNTO 888</New_Terms>
+            </Change>
+            <Change id="265">
+               <Axiom>Tether Containing UBX Domain For GLUT4 SubClassOf Regulatory Protein</Axiom>
+               <New_Terms>Tether Containing UBX Domain For GLUT4</New_Terms>
+            </Change>
+            <Change id="266">
+               <Axiom>HLA-DP Antigen SubClassOf Gene_Product_Has_Chemical_Classification some Glycoprotein</Axiom>
+               <New_Terms>HLA-DP Antigen</New_Terms>
+            </Change>
+            <Change id="267">
+               <Axiom>MUC16 Gene SubClassOf Antigen Gene</Axiom>
+               <New_Terms>MUC16 Gene</New_Terms>
+            </Change>
+            <Change id="268">
+               <Axiom>HLA-DP Antigen SubClassOf Gene_Product_Has_Structural_Domain_Or_Motif some Extracellular Domain</Axiom>
+               <New_Terms>HLA-DP Antigen</New_Terms>
+            </Change>
+            <Change id="269">
+               <Axiom>Anti-TRAIL Receptor 2 Monoclonal Antibody AMG 655 SubClassOf Monoclonal Antibody</Axiom>
+               <New_Terms>Anti-TRAIL Receptor 2 Monoclonal Antibody AMG 655</New_Terms>
+            </Change>
+            <Change id="270">
+               <Axiom>Pace Unit of Measure SubClassOf Unit of Length</Axiom>
+               <New_Terms>Pace Unit of Measure</New_Terms>
+            </Change>
+            <Change id="271">
+               <Axiom>Established SubClassOf General Qualifier</Axiom>
+               <New_Terms>Established</New_Terms>
+            </Change>
+            <Change id="272">
+               <Axiom>Verapamil-Sensitive Ventricular Tachycardia SubClassOf Ventricular Tachycardia</Axiom>
+               <New_Terms>Verapamil-Sensitive Ventricular Tachycardia</New_Terms>
+            </Change>
+            <Change id="273">
+               <Axiom>Certified Registered Nurse SubClassOf Registered Nurse</Axiom>
+               <New_Terms>Certified Registered Nurse</New_Terms>
+            </Change>
+            <Change id="274">
+               <Axiom>Enhancer of Filamentation 1 SubClassOf Gene_Product_Encoded_By_Gene some NEDD9 Gene</Axiom>
+               <New_Terms>Enhancer of Filamentation 1, NEDD9 Gene</New_Terms>
+            </Change>
+            <Change id="275">
+               <Axiom>Advanced Oncology Certified Nurse SubClassOf Advanced Practice Nurse</Axiom>
+               <New_Terms>Advanced Oncology Certified Nurse</New_Terms>
+            </Change>
+            <Change id="276">
+               <Axiom>CDISC SDTM Frequency Terminology SubClassOf CDISC SDTM Terminology</Axiom>
+               <New_Terms>CDISC SDTM Frequency Terminology</New_Terms>
+            </Change>
+            <Change id="277">
+               <Axiom>Associate of Applied Science SubClassOf Associates Degree</Axiom>
+               <New_Terms>Associate of Applied Science, Associates Degree</New_Terms>
+            </Change>
+            <Change id="278">
+               <Axiom>Right Ventricular Outflow Tract Tachycardia SubClassOf Arrhythmia</Axiom>
+               <New_Terms>Right Ventricular Outflow Tract Tachycardia</New_Terms>
+            </Change>
+            <Change id="279">
+               <Axiom>High-Selenium Brassica juncea SubClassOf Dietary Supplement</Axiom>
+               <New_Terms>High-Selenium Brassica juncea</New_Terms>
+            </Change>
+            <Change id="280">
+               <Axiom>Myeloperoxidase SubClassOf Oxidoreductase</Axiom>
+               <New_Terms>Myeloperoxidase</New_Terms>
+            </Change>
+            <Change id="281">
+               <Axiom>HLA-DRB4 Gene SubClassOf Gene_Plays_Role_In_Process some Antigen Presentation</Axiom>
+               <New_Terms>HLA-DRB4 Gene</New_Terms>
+            </Change>
+            <Change id="282">
+               <Axiom>HLA-DPA1 wt Allele SubClassOf HLA-DPA1 Gene</Axiom>
+               <New_Terms>HLA-DPA1 wt Allele, HLA-DPA1 Gene</New_Terms>
+            </Change>
+            <Change id="283">
+               <Axiom>Adult Grade I Meningioma EquivalentTo Adult Meningioma and Grade I Meningioma</Axiom>
+               <New_Terms>Adult Grade I Meningioma</New_Terms>
+            </Change>
+            <Change id="284">
+               <Axiom>Becquerel per Liter SubClassOf Radioactivity Concentration Unit</Axiom>
+               <New_Terms>Becquerel per Liter</New_Terms>
+            </Change>
+            <Change id="285">
+               <Axiom>HLA-DPA1 wt Allele SubClassOf Gene_In_Chromosomal_Location some 6p21.3</Axiom>
+               <New_Terms>HLA-DPA1 wt Allele</New_Terms>
+            </Change>
+            <Change id="286">
+               <Axiom>HNF1B Gene SubClassOf Transcription Factor Gene</Axiom>
+               <New_Terms>HNF1B Gene</New_Terms>
+            </Change>
+            <Change id="287">
+               <Axiom>Bound SubClassOf Conceptual Entity</Axiom>
+               <New_Terms>Bound</New_Terms>
+            </Change>
+            <Change id="288">
+               <Axiom>HLA-DR51 Antigen SubClassOf MHC Class II Protein</Axiom>
+               <New_Terms>HLA-DR51 Antigen</New_Terms>
+            </Change>
+            <Change id="289">
+               <Axiom>Certified Vascular Nurse SubClassOf Advanced Practice Nurse</Axiom>
+               <New_Terms>Certified Vascular Nurse</New_Terms>
+            </Change>
+            <Change id="290">
+               <Axiom>Certified Clinical Nurse Specialist SubClassOf Clinical Nurse Specialist</Axiom>
+               <New_Terms>Certified Clinical Nurse Specialist</New_Terms>
+            </Change>
+            <Change id="291">
+               <Axiom>HLA-DR52 Antigen SubClassOf Gene_Product_Encoded_By_Gene some HLA-DRB3 Gene</Axiom>
+               <New_Terms>HLA-DR52 Antigen, HLA-DRB3 Gene</New_Terms>
+            </Change>
+            <Change id="292">
+               <Axiom>Intracellular Fluorescence Polarization Analysis SubClassOf Cellular Physiologic Testing</Axiom>
+               <New_Terms>Intracellular Fluorescence Polarization Analysis, Cellular Physiologic Testing</New_Terms>
+            </Change>
+            <Change id="293">
+               <Axiom>Lead Protocol Agent Indicator SubClassOf Indicator</Axiom>
+               <New_Terms>Lead Protocol Agent Indicator</New_Terms>
+            </Change>
+            <Change id="294">
+               <Axiom>HLA-Bw4 Antigen SubClassOf Gene_Product_Has_Organism_Source some Human</Axiom>
+               <New_Terms>HLA-Bw4 Antigen</New_Terms>
+            </Change>
+            <Change id="295">
+               <Axiom>Family Practice Nurse Practitioner SubClassOf Nurse Practitioner</Axiom>
+               <New_Terms>Family Practice Nurse Practitioner</New_Terms>
+            </Change>
+            <Change id="296">
+               <Axiom>12 Lead Placement Standard And CC5-CM5-CH5 SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement, 12 Lead Placement Standard And CC5-CM5-CH5</New_Terms>
+            </Change>
+            <Change id="297">
+               <Axiom>Anti-CCL2 Human Monoclonal Antibody CNTO 888 SubClassOf Monoclonal Antibody</Axiom>
+               <New_Terms>Anti-CCL2 Human Monoclonal Antibody CNTO 888</New_Terms>
+            </Change>
+            <Change id="298">
+               <Axiom>HLA-DQA1 wt Allele SubClassOf Gene_Plays_Role_In_Process some Antigen Presentation</Axiom>
+               <New_Terms>HLA-DQA1 wt Allele</New_Terms>
+            </Change>
+            <Change id="299">
+               <Axiom>HLA-DR53 Antigen SubClassOf Gene_Product_Has_Organism_Source some Human</Axiom>
+               <New_Terms>HLA-DR53 Antigen</New_Terms>
+            </Change>
+            <Change id="300">
+               <Axiom>HLA-Bw4 Antigen SubClassOf Gene_Product_Has_Biochemical_Function some MHC Class I Protein</Axiom>
+               <New_Terms>HLA-Bw4 Antigen</New_Terms>
+            </Change>
+            <Change id="301">
+               <Axiom>2:1 Atrioventricular Block SubClassOf Atrioventricular Block</Axiom>
+               <New_Terms>2:1 Atrioventricular Block</New_Terms>
+            </Change>
+            <Change id="302">
+               <Axiom>HLA-DRB5 wt Allele EquivalentTo HLA-DRB5 Gene and (Gene_Found_In_Organism some Human) and (Gene_In_Chromosomal_Location some 6p21.3)</Axiom>
+               <New_Terms>HLA-DRB5 Gene, HLA-DRB5 wt Allele</New_Terms>
+            </Change>
+            <Change id="303">
+               <Axiom>Million Organisms SubClassOf Organism-Based Unit</Axiom>
+               <New_Terms>Million Organisms, Organism-Based Unit</New_Terms>
+            </Change>
+            <Change id="304">
+               <Axiom>Lead Placement McFee-Parungao SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement McFee-Parungao, Lead Placement</New_Terms>
+            </Change>
+            <Change id="305">
+               <Axiom>Short QT Syndrome SubClassOf Non-Neoplastic Heart Disorder</Axiom>
+               <New_Terms>Short QT Syndrome</New_Terms>
+            </Change>
+            <Change id="306">
+               <Axiom>HLA-DR53 Antigen SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Immune Response</Axiom>
+               <New_Terms>HLA-DR53 Antigen</New_Terms>
+            </Change>
+            <Change id="307">
+               <Axiom>Posterior Wall Myocardial Infarction SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Posterior Wall Myocardial Infarction</New_Terms>
+            </Change>
+            <Change id="308">
+               <Axiom>IGF-1R Inhibitor OSI-906 SubClassOf Tyrosine Kinase Inhibitor</Axiom>
+               <New_Terms>IGF-1R Inhibitor OSI-906</New_Terms>
+            </Change>
+            <Change id="309">
+               <Axiom>Tyrosine Kinase Inhibitor OSI-930 SubClassOf Tyrosine Kinase Inhibitor</Axiom>
+               <New_Terms>Tyrosine Kinase Inhibitor OSI-930</New_Terms>
+            </Change>
+            <Change id="310">
+               <Axiom>Partial Pressure of Oxygen Measurement SubClassOf Arterial Blood Gas Measurement</Axiom>
+               <New_Terms>Partial Pressure of Oxygen Measurement, Arterial Blood Gas Measurement</New_Terms>
+            </Change>
+            <Change id="311">
+               <Axiom>HLA-DRB4 Gene SubClassOf MHC Class II Gene</Axiom>
+               <New_Terms>HLA-DRB4 Gene</New_Terms>
+            </Change>
+            <Change id="312">
+               <Axiom>T Waves Biphasic SubClassOf T Wave Abnormality</Axiom>
+               <New_Terms>T Waves Biphasic, T Wave Abnormality</New_Terms>
+            </Change>
+            <Change id="313">
+               <Axiom>Certified Nurse Practitioner SubClassOf Nurse Practitioner</Axiom>
+               <New_Terms>Certified Nurse Practitioner</New_Terms>
+            </Change>
+            <Change id="314">
+               <Axiom>HLA-Bw6 Antigen SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Immune Response</Axiom>
+               <New_Terms>HLA-Bw6 Antigen</New_Terms>
+            </Change>
+            <Change id="315">
+               <Axiom>Lesion SubClassOf Finding</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="316">
+               <Axiom>Fascicular Tachycardia SubClassOf Ventricular Tachycardia</Axiom>
+               <New_Terms>Fascicular Tachycardia</New_Terms>
+            </Change>
+            <Change id="317">
+               <Axiom>ASPSCR1 Gene SubClassOf Regulatory Gene</Axiom>
+               <New_Terms>ASPSCR1 Gene</New_Terms>
+            </Change>
+            <Change id="318">
+               <Axiom>HLA-DP Antigen SubClassOf Gene_Product_Has_Structural_Domain_Or_Motif some Cytoplasmic Tail</Axiom>
+               <New_Terms>HLA-DP Antigen</New_Terms>
+            </Change>
+            <Change id="319">
+               <Axiom>Furlong SubClassOf Unit of Length</Axiom>
+               <New_Terms>Furlong</New_Terms>
+            </Change>
+            <Change id="320">
+               <Axiom>Associates Degree SubClassOf Academic Degree</Axiom>
+               <New_Terms>Associates Degree</New_Terms>
+            </Change>
+            <Change id="321">
+               <Axiom>End Date of Clinical Study Site Participation in Study SubClassOf Date</Axiom>
+               <New_Terms>End Date of Clinical Study Site Participation in Study</New_Terms>
+            </Change>
+            <Change id="322">
+               <Axiom>PVA Microporous Hydrospheres/Doxorubicin Hydrochloride SubClassOf Doxorubicin Preparation</Axiom>
+               <New_Terms>PVA Microporous Hydrospheres/Doxorubicin Hydrochloride</New_Terms>
+            </Change>
+            <Change id="323">
+               <Axiom>Rod US SubClassOf Unit of Length</Axiom>
+               <New_Terms>Rod US</New_Terms>
+            </Change>
+            <Change id="324">
+               <Axiom>Wide QRS Tachycardia SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Wide QRS Tachycardia</New_Terms>
+            </Change>
+            <Change id="325">
+               <Axiom>Bachelor of Social Work SubClassOf Academic Degree</Axiom>
+               <New_Terms>Bachelor of Social Work</New_Terms>
+            </Change>
+            <Change id="326">
+               <Axiom>Investigational New Drug Indicator SubClassOf Indicator</Axiom>
+               <New_Terms>Investigational New Drug Indicator</New_Terms>
+            </Change>
+            <Change id="327">
+               <Axiom>Apoptosis Inducer GCS-100 SubClassOf Antineoplastic Agent</Axiom>
+               <New_Terms>Apoptosis Inducer GCS-100</New_Terms>
+            </Change>
+            <Change id="328">
+               <Axiom>Certified Transport Registered Nurse SubClassOf Advanced Practice Nurse</Axiom>
+               <New_Terms>Certified Transport Registered Nurse</New_Terms>
+            </Change>
+            <Change id="329">
+               <Axiom>Junctional Rhythm SubClassOf Supraventricular Arrhythmia</Axiom>
+               <New_Terms>Junctional Rhythm</New_Terms>
+            </Change>
+            <Change id="330">
+               <Axiom>CDISC SDTM Body Position Terminology SubClassOf CDISC SDTM Terminology</Axiom>
+               <New_Terms>CDISC SDTM Body Position Terminology</New_Terms>
+            </Change>
+            <Change id="331">
+               <Axiom>Certified Physician Assistant SubClassOf Medical Occupation</Axiom>
+               <New_Terms>Certified Physician Assistant</New_Terms>
+            </Change>
+            <Change id="332">
+               <Axiom>HLA-DP Antigen SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Antigen Presentation</Axiom>
+               <New_Terms>HLA-DP Antigen</New_Terms>
+            </Change>
+            <Change id="333">
+               <Axiom>Kilometer SubClassOf Unit of Length</Axiom>
+               <New_Terms>Kilometer</New_Terms>
+            </Change>
+            <Change id="334">
+               <Axiom>Yard British SubClassOf Unit of Length</Axiom>
+               <New_Terms>Yard British</New_Terms>
+            </Change>
+            <Change id="335">
+               <Axiom>Certified Flight Registered Nurse SubClassOf Advanced Practice Nurse</Axiom>
+               <New_Terms>Certified Flight Registered Nurse</New_Terms>
+            </Change>
+            <Change id="336">
+               <Axiom>Registered Nurse Practitioner SubClassOf Nurse Practitioner</Axiom>
+               <New_Terms>Registered Nurse Practitioner</New_Terms>
+            </Change>
+            <Change id="337">
+               <Axiom>Diploma SubClassOf Document</Axiom>
+               <New_Terms>Diploma</New_Terms>
+            </Change>
+            <Change id="338">
+               <Axiom>12 Lead Placement Chest SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement, 12 Lead Placement Chest</New_Terms>
+            </Change>
+            <Change id="339">
+               <Axiom>Foot Unit of Length SubClassOf Unit of Length</Axiom>
+               <New_Terms>Foot Unit of Length</New_Terms>
+            </Change>
+            <Change id="340">
+               <Axiom>12 Lead Placement Mason Likar SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement, 12 Lead Placement Mason Likar</New_Terms>
+            </Change>
+            <Change id="341">
+               <Axiom>HLA-Bw4 Antigen SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Antigen Presentation</Axiom>
+               <New_Terms>HLA-Bw4 Antigen</New_Terms>
+            </Change>
+            <Change id="342">
+               <Axiom>Gunter's Chain USA SubClassOf Unit of Length</Axiom>
+               <New_Terms>Gunter's Chain USA</New_Terms>
+            </Change>
+            <Change id="343">
+               <Axiom>Regulatory Application Sponsor SubClassOf Sponsor</Axiom>
+               <New_Terms>Regulatory Application Sponsor</New_Terms>
+            </Change>
+            <Change id="344">
+               <Axiom>Curie per Microliter SubClassOf Radioactivity Concentration Unit</Axiom>
+               <New_Terms>Curie per Microliter</New_Terms>
+            </Change>
+            <Change id="345">
+               <Axiom>12 Lead Placement Standard Extended Left SubClassOf Lead Placement</Axiom>
+               <New_Terms>12 Lead Placement Standard Extended Left, Lead Placement</New_Terms>
+            </Change>
+            <Change id="346">
+               <Axiom>Bachelor of Science in Nursing SubClassOf Academic Degree</Axiom>
+               <New_Terms>Bachelor of Science in Nursing</New_Terms>
+            </Change>
+            <Change id="347">
+               <Axiom>Anticardiolipin IgG Antibody SubClassOf Pathologic Ab-Ig Protein</Axiom>
+               <New_Terms>Anticardiolipin IgG Antibody</New_Terms>
+            </Change>
+            <Change id="348">
+               <Axiom>Stonin-1 SubClassOf Gene_Product_Encoded_By_Gene some STON1 Gene</Axiom>
+               <New_Terms>STON1 Gene, Stonin-1</New_Terms>
+            </Change>
+            <Change id="349">
+               <Axiom>HLA-Bw4 Antigen SubClassOf MHC Class I Protein</Axiom>
+               <New_Terms>HLA-Bw4 Antigen</New_Terms>
+            </Change>
+            <Change id="350">
+               <Axiom>Survey Mile SubClassOf Unit of Length</Axiom>
+               <New_Terms>Survey Mile</New_Terms>
+            </Change>
+            <Change id="351">
+               <Axiom>Scheduled Study Activity Date and Time SubClassOf Date and Time</Axiom>
+               <New_Terms>Scheduled Study Activity Date and Time</New_Terms>
+            </Change>
+            <Change id="352">
+               <Axiom>Junctional Bradycardia SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Junctional Bradycardia</New_Terms>
+            </Change>
+            <Change id="353">
+               <Axiom>HLA-DR51 Antigen SubClassOf Gene_Product_Has_Organism_Source some Human</Axiom>
+               <New_Terms>HLA-DR51 Antigen</New_Terms>
+            </Change>
+            <Change id="354">
+               <Axiom>Electrical Alternans SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Electrical Alternans</New_Terms>
+            </Change>
+            <Change id="355">
+               <Axiom>Ventricular Hypertrophy SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Ventricular Hypertrophy</New_Terms>
+            </Change>
+            <Change id="356">
+               <Axiom>Vectorcardiograph Corrected SubClassOf EKG Concept</Axiom>
+               <New_Terms>Vectorcardiograph Corrected</New_Terms>
+            </Change>
+            <Change id="357">
+               <Axiom>Federal Information Processing Standards SubClassOf Document</Axiom>
+               <New_Terms>Federal Information Processing Standards</New_Terms>
+            </Change>
+            <Change id="358">
+               <Axiom>Polo-like kinase 1 Inhibitor ON 01910.Na SubClassOf Chemical_Or_Drug_Affects_Gene_Product some Polo-Like Kinase</Axiom>
+               <New_Terms>Polo-like kinase 1 Inhibitor ON 01910.Na</New_Terms>
+            </Change>
+            <Change id="359">
+               <Axiom>HLA-Bw4 Antigen SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Immune Response</Axiom>
+               <New_Terms>HLA-Bw4 Antigen</New_Terms>
+            </Change>
+            <Change id="360">
+               <Axiom>HLA-DP Antigen SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Immune Response</Axiom>
+               <New_Terms>HLA-DP Antigen</New_Terms>
+            </Change>
+            <Change id="361">
+               <Axiom>ST Elevation Pericarditis SubClassOf ST Segment Abnormality</Axiom>
+               <New_Terms>ST Elevation Pericarditis, ST Segment Abnormality</New_Terms>
+            </Change>
+            <Change id="362">
+               <Axiom>Parsec SubClassOf Unit of Length</Axiom>
+               <New_Terms>Parsec</New_Terms>
+            </Change>
+            <Change id="363">
+               <Axiom>Inferior Wall Myocardial Infarction SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Inferior Wall Myocardial Infarction</New_Terms>
+            </Change>
+            <Change id="364">
+               <Axiom>Type of Observation Result Relationship SubClassOf Type</Axiom>
+               <New_Terms>Type of Observation Result Relationship</New_Terms>
+            </Change>
+            <Change id="365">
+               <Axiom>HLA-Bw6 Antigen SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Antigen Presentation</Axiom>
+               <New_Terms>HLA-Bw6 Antigen</New_Terms>
+            </Change>
+            <Change id="366">
+               <Axiom>Acute Care Nurse Practitioner SubClassOf Nurse Practitioner</Axiom>
+               <New_Terms>Acute Care Nurse Practitioner</New_Terms>
+            </Change>
+            <Change id="367">
+               <Axiom>Incomplete Left Bundle Branch Block SubClassOf Incomplete Bundle Branch Block</Axiom>
+               <New_Terms>Incomplete Bundle Branch Block, Incomplete Left Bundle Branch Block</New_Terms>
+            </Change>
+            <Change id="368">
+               <Axiom>HLA-DR53 Antigen SubClassOf MHC Class II Protein</Axiom>
+               <New_Terms>HLA-DR53 Antigen</New_Terms>
+            </Change>
+            <Change id="369">
+               <Axiom>Link for Gunter's Chain British SubClassOf Unit of Length</Axiom>
+               <New_Terms>Link for Gunter's Chain British</New_Terms>
+            </Change>
+            <Change id="370">
+               <Axiom>HLA-DR51 Antigen SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Immune Response</Axiom>
+               <New_Terms>HLA-DR51 Antigen</New_Terms>
+            </Change>
+            <Change id="371">
+               <Axiom>PVA Microporous Hydrospheres SubClassOf Drug Vehicle</Axiom>
+               <New_Terms>PVA Microporous Hydrospheres</New_Terms>
+            </Change>
+            <Change id="372">
+               <Axiom>Every Two Weeks SubClassOf Schedule Frequency</Axiom>
+               <New_Terms>Every Two Weeks</New_Terms>
+            </Change>
+            <Change id="373">
+               <Axiom>Didot SubClassOf Unit of Length</Axiom>
+               <New_Terms>Didot</New_Terms>
+            </Change>
+            <Change id="374">
+               <Axiom>Arterial Blood Gas Measurement SubClassOf Hematologic Technique</Axiom>
+               <New_Terms>Arterial Blood Gas Measurement</New_Terms>
+            </Change>
+            <Change id="375">
+               <Axiom>HLA-DR52 Antigen SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Immune Response</Axiom>
+               <New_Terms>HLA-DR52 Antigen</New_Terms>
+            </Change>
+            <Change id="376">
+               <Axiom>[18F]-labeled Substance P Antagonist Receptor Quantifier SubClassOf Radioconjugate</Axiom>
+               <New_Terms>[18F]-labeled Substance P Antagonist Receptor Quantifier</New_Terms>
+            </Change>
+            <Change id="377">
+               <Axiom>Magnesium Valproate SubClassOf Anticonvulsant Agent</Axiom>
+               <New_Terms>Magnesium Valproate</New_Terms>
+            </Change>
+            <Change id="378">
+               <Axiom>Non-Specific ST-T Changes SubClassOf ST Segment Abnormality</Axiom>
+               <New_Terms>ST Segment Abnormality, Non-Specific ST-T Changes</New_Terms>
+            </Change>
+            <Change id="379">
+               <Axiom>Oral Microencapsulated Diindolylmethane SubClassOf Antineoplastic Agent</Axiom>
+               <New_Terms>Oral Microencapsulated Diindolylmethane</New_Terms>
+            </Change>
+            <Change id="380">
+               <Axiom>Sachet Dosing Unit SubClassOf Potency Unit</Axiom>
+               <New_Terms>Sachet Dosing Unit</New_Terms>
+            </Change>
+            <Change id="381">
+               <Axiom>Acute Posterior Wall Myocardial Infarction SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Acute Posterior Wall Myocardial Infarction</New_Terms>
+            </Change>
+            <Change id="382">
+               <Axiom>Unit of Sound Intensity SubClassOf Unit by Category</Axiom>
+               <New_Terms>Unit of Sound Intensity</New_Terms>
+            </Change>
+            <Change id="383">
+               <Axiom>CDISC SDTM ECG Test Method Terminology SubClassOf CDISC SDTM Terminology</Axiom>
+               <New_Terms>CDISC SDTM ECG Test Method Terminology</New_Terms>
+            </Change>
+            <Change id="384">
+               <Axiom>HLA-DQA1 wt Allele SubClassOf HLA-DQA1 Gene</Axiom>
+               <New_Terms>HLA-DQA1 wt Allele, HLA-DQA1 Gene</New_Terms>
+            </Change>
+            <Change id="385">
+               <Axiom>Registered Pharmacist SubClassOf Pharmacist</Axiom>
+               <New_Terms>Registered Pharmacist</New_Terms>
+            </Change>
+            <Change id="386">
+               <Axiom>Bigeminy SubClassOf Arrhythmia</Axiom>
+               <New_Terms>Bigeminy</New_Terms>
+            </Change>
+            <Change id="387">
+               <Axiom>Acute Lateral Wall Myocardial Infarction SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Acute Lateral Wall Myocardial Infarction</New_Terms>
+            </Change>
+            <Change id="388">
+               <Axiom>Sustained Ventricular Tachycardia SubClassOf Ventricular Tachycardia</Axiom>
+               <New_Terms>Sustained Ventricular Tachycardia</New_Terms>
+            </Change>
+            <Change id="389">
+               <Axiom>Certification in Critical Care Nursing SubClassOf Certification</Axiom>
+               <New_Terms>Certification in Critical Care Nursing</New_Terms>
+            </Change>
+            <Change id="390">
+               <Axiom>T Wave Abnormality SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>T Wave Abnormality</New_Terms>
+            </Change>
+            <Change id="391">
+               <Axiom>Mucin-16 SubClassOf Mucin</Axiom>
+               <New_Terms>Mucin-16</New_Terms>
+            </Change>
+            <Change id="392">
+               <Axiom>ASPSCR1 wt Allele SubClassOf ASPSCR1 Gene</Axiom>
+               <New_Terms>ASPSCR1 wt Allele, ASPSCR1 Gene</New_Terms>
+            </Change>
+            <Change id="393">
+               <Axiom>Certified Pediatric Oncology Nurse SubClassOf Advanced Practice Nurse</Axiom>
+               <New_Terms>Certified Pediatric Oncology Nurse</New_Terms>
+            </Change>
+            <Change id="394">
+               <Axiom>Adult Grade III Meningioma EquivalentTo Adult Meningioma and Grade III Meningioma</Axiom>
+               <New_Terms>Adult Grade III Meningioma</New_Terms>
+            </Change>
+            <Change id="395">
+               <Axiom>Type of Clinical Study Document Relationship SubClassOf Type</Axiom>
+               <New_Terms>Type of Clinical Study Document Relationship</New_Terms>
+            </Change>
+            <Change id="396">
+               <Axiom>Becquerel per Milliliter SubClassOf Radioactivity Concentration Unit</Axiom>
+               <New_Terms>Becquerel per Milliliter</New_Terms>
+            </Change>
+            <Change id="397">
+               <Axiom>Gram per Square Centimeter SubClassOf Dose Calculation Unit</Axiom>
+               <New_Terms>Gram per Square Centimeter</New_Terms>
+            </Change>
+            <Change id="398">
+               <Axiom>Monoclonal Antibody MK4721 SubClassOf Monoclonal Antibody</Axiom>
+               <New_Terms>Monoclonal Antibody MK4721</New_Terms>
+            </Change>
+            <Change id="399">
+               <Axiom>12 Lead Placement Unspecified SubClassOf Lead Placement</Axiom>
+               <New_Terms>12 Lead Placement Unspecified, Lead Placement</New_Terms>
+            </Change>
+            <Change id="400">
+               <Axiom>Ramsden's Chain SubClassOf Unit of Length</Axiom>
+               <New_Terms>Ramsden's Chain</New_Terms>
+            </Change>
+            <Change id="401">
+               <Axiom>Tether Containing UBX Domain For GLUT4 SubClassOf Gene_Product_Encoded_By_Gene some ASPSCR1 Gene</Axiom>
+               <New_Terms>Tether Containing UBX Domain For GLUT4, ASPSCR1 Gene</New_Terms>
+            </Change>
+            <Change id="402">
+               <Axiom>Fathom British SubClassOf Unit of Length</Axiom>
+               <New_Terms>Fathom British</New_Terms>
+            </Change>
+            <Change id="403">
+               <Axiom>Microgram per Day SubClassOf Dose Calculation Unit</Axiom>
+               <New_Terms>Microgram per Day</New_Terms>
+            </Change>
+            <Change id="404">
+               <Axiom>EML4 Gene SubClassOf Cytoskeletal Gene</Axiom>
+               <New_Terms>EML4 Gene</New_Terms>
+            </Change>
+            <Change id="405">
+               <Axiom>T Waves Flat SubClassOf T Wave Abnormality</Axiom>
+               <New_Terms>T Wave Abnormality, T Waves Flat</New_Terms>
+            </Change>
+            <Change id="406">
+               <Axiom>Prolonged QT Interval SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Prolonged QT Interval</New_Terms>
+            </Change>
+            <Change id="407">
+               <Axiom>Microgram per Minute SubClassOf Unit of Mass Flow Rate</Axiom>
+               <New_Terms>Microgram per Minute</New_Terms>
+            </Change>
+            <Change id="408">
+               <Axiom>Billion Organisms per Milliliter SubClassOf Organism-Based Unit</Axiom>
+               <New_Terms>Billion Organisms per Milliliter, Organism-Based Unit</New_Terms>
+            </Change>
+            <Change id="409">
+               <Axiom>HLA-DRB3 Gene SubClassOf MHC Class II Gene</Axiom>
+               <New_Terms>HLA-DRB3 Gene</New_Terms>
+            </Change>
+            <Change id="410">
+               <Axiom>Childhood Grade III Meningioma EquivalentTo Childhood Meningioma and Grade III Meningioma</Axiom>
+               <New_Terms>Childhood Grade III Meningioma</New_Terms>
+            </Change>
+            <Change id="411">
+               <Axiom>Lead Placement EASI Dower Transformation SubClassOf Lead Placement</Axiom>
+               <New_Terms>Lead Placement EASI Dower Transformation, Lead Placement</New_Terms>
+            </Change>
+            <Change id="412">
+               <Axiom>Certified Clinical Research Coordinator SubClassOf Clinical Coordinator</Axiom>
+               <New_Terms>Certified Clinical Research Coordinator</New_Terms>
+            </Change>
+            <Change id="413">
+               <Axiom>Millicurie per Liter SubClassOf Radioactivity Concentration Unit</Axiom>
+               <New_Terms>Millicurie per Liter</New_Terms>
+            </Change>
+            <Change id="414">
+               <Axiom>Lead Placement SubClassOf EKG Concept</Axiom>
+               <New_Terms>Lead Placement</New_Terms>
+            </Change>
+            <Change id="415">
+               <Axiom>HLA-DRB4 wt Allele EquivalentTo HLA-DRB4 Gene and (Gene_Found_In_Organism some Human) and (Gene_In_Chromosomal_Location some 6p21.3)</Axiom>
+               <New_Terms>HLA-DRB4 wt Allele, HLA-DRB4 Gene</New_Terms>
+            </Change>
+            <Change id="416">
+               <Axiom>Adult Nurse Practitioner SubClassOf Nurse Practitioner</Axiom>
+               <New_Terms>Adult Nurse Practitioner</New_Terms>
+            </Change>
+            <Change id="417">
+               <Axiom>Septal Myocardial Infarction SubClassOf Electrocardiographic Finding</Axiom>
+               <New_Terms>Septal Myocardial Infarction</New_Terms>
+            </Change>
+            <Change id="418">
+               <Axiom>Certified Family Nurse Practitioner SubClassOf Nurse Practitioner</Axiom>
+               <New_Terms>Certified Family Nurse Practitioner</New_Terms>
+            </Change>
+            <Change id="419">
+               <Axiom>Right Ventricular Hypertrophy SubClassOf Ventricular Hypertrophy</Axiom>
+               <New_Terms>Right Ventricular Hypertrophy, Ventricular Hypertrophy</New_Terms>
+            </Change>
+            <Change id="420">
+               <Axiom>Cicero SubClassOf Unit of Length</Axiom>
+               <New_Terms>Cicero</New_Terms>
+            </Change>
+            <Change id="421">
+               <Axiom>EML4 wt Allele SubClassOf Gene_In_Chromosomal_Location some 2p22-p21</Axiom>
+               <New_Terms>EML4 wt Allele</New_Terms>
+            </Change>
+         </NewDescription>
+         <PureAddition id="padd" size="62">
+            <Change id="422">
+               <Axiom>Bone Scan SubClassOf Radionuclide Imaging</Axiom>
+            </Change>
+            <Change id="423">
+               <Axiom>Ventilation Perfusion Scanning SubClassOf Radionuclide Imaging</Axiom>
+            </Change>
+            <Change id="424">
+               <Axiom>HLA-DQB1 wt Allele SubClassOf Gene_In_Chromosomal_Location some 6p21.3</Axiom>
+            </Change>
+            <Change id="425">
+               <Axiom>I-131 Uptake Test SubClassOf Radionuclide Imaging</Axiom>
+            </Change>
+            <Change id="426">
+               <Axiom>Indium Scan SubClassOf Radionuclide Imaging</Axiom>
+            </Change>
+            <Change id="427">
+               <Axiom>Whole-Body Scintigraphy SubClassOf Radionuclide Imaging</Axiom>
+            </Change>
+            <Change id="428">
+               <Axiom>Diagnostic Radiology SubClassOf Retired Concept</Axiom>
+            </Change>
+            <Change id="429">
+               <Axiom>Fluorescence Activated Cell Sorting SubClassOf Cell Sorting</Axiom>
+            </Change>
+            <Change id="430">
+               <Axiom>Sufficient Quantity SubClassOf Retired Concept</Axiom>
+            </Change>
+            <Change id="431">
+               <Axiom>Title SubClassOf Name</Axiom>
+            </Change>
+            <Change id="432">
+               <Axiom>Fluoroscopy SubClassOf Radiography</Axiom>
+            </Change>
+            <Change id="433">
+               <Axiom>Infection Prophylaxis and Management SubClassOf Supportive Care</Axiom>
+            </Change>
+            <Change id="434">
+               <Axiom>Recombinant Viral Vaccine Therapy SubClassOf Biological Therapy</Axiom>
+            </Change>
+            <Change id="435">
+               <Axiom>Sestamibi Scan SubClassOf Radionuclide Imaging</Axiom>
+            </Change>
+            <Change id="436">
+               <Axiom>Hemicellulose SubClassOf Dietary Polysaccharide</Axiom>
+            </Change>
+            <Change id="437">
+               <Axiom>Drug Extravasation Therapy SubClassOf Supportive Care</Axiom>
+            </Change>
+            <Change id="438">
+               <Axiom>Inguinal Lymphadenectomy SubClassOf Regional Lymph Node Dissection</Axiom>
+            </Change>
+            <Change id="439">
+               <Axiom>Sitting SubClassOf Body Position</Axiom>
+            </Change>
+            <Change id="440">
+               <Axiom>Gallium Scan SubClassOf Radionuclide Imaging</Axiom>
+            </Change>
+            <Change id="441">
+               <Axiom>Unadjusted Mortality Rate SubClassOf Death Rate</Axiom>
+            </Change>
+            <Change id="442">
+               <Axiom>Cholangiography SubClassOf Radiography</Axiom>
+            </Change>
+            <Change id="443">
+               <Axiom>HLA Class I Histocompatibility Antigen, Cw-1 Alpha Chain Protein SubClassOf MHC Class I Protein</Axiom>
+            </Change>
+            <Change id="444">
+               <Axiom>ERBB2IP wt Allele EquivalentTo ERBB2IP Gene and (Gene_Found_In_Organism some Human) and (Gene_Has_Physical_Location some 5: 65258140-65412100) and (Gene_In_Chromosomal_Location some 5q12.3)</Axiom>
+            </Change>
+            <Change id="445">
+               <Axiom>Immunoscintigraphy SubClassOf Radionuclide Imaging</Axiom>
+            </Change>
+            <Change id="446">
+               <Axiom>Milligram per 24 Hours SubClassOf Dose Calculation Unit</Axiom>
+            </Change>
+            <Change id="447">
+               <Axiom>Lung Perfusion Scan SubClassOf Radionuclide Imaging</Axiom>
+            </Change>
+            <Change id="448">
+               <Axiom>Additional X Chromosome SubClassOf Retired Concept</Axiom>
+            </Change>
+            <Change id="449">
+               <Axiom>Inch Unit of Length SubClassOf Unit of Length</Axiom>
+            </Change>
+            <Change id="450">
+               <Axiom>Intravenous Pyelography SubClassOf Radiography</Axiom>
+            </Change>
+            <Change id="451">
+               <Axiom>Negative Selection SubClassOf Laboratory Procedure</Axiom>
+            </Change>
+            <Change id="452">
+               <Axiom>Age-Adjusted Mortality Rate SubClassOf Death Rate</Axiom>
+            </Change>
+            <Change id="453">
+               <Axiom>Standardized Mortality Ratio SubClassOf Death Rate</Axiom>
+            </Change>
+            <Change id="454">
+               <Axiom>Connective Tissue Growth Factor Protein SubClassOf Gene_Product_Encoded_By_Gene some CTGF Gene</Axiom>
+            </Change>
+            <Change id="455">
+               <Axiom>Certificate of Confidentiality SubClassOf Certificate</Axiom>
+            </Change>
+            <Change id="456">
+               <Axiom>Starch SubClassOf Dietary Polysaccharide</Axiom>
+            </Change>
+            <Change id="457">
+               <Axiom>Cell Sorting SubClassOf Laboratory Procedure</Axiom>
+            </Change>
+            <Change id="458">
+               <Axiom>Gum SubClassOf Dietary Polysaccharide</Axiom>
+            </Change>
+            <Change id="459">
+               <Axiom>Quantity Sufficient SubClassOf General Qualifier</Axiom>
+            </Change>
+            <Change id="460">
+               <Axiom>Inositol 1,4,5-Trisphosphate SubClassOf Dietary Phosphatidylinositol</Axiom>
+            </Change>
+            <Change id="461">
+               <Axiom>Angioimmunoblastic T-Cell Lymphoma EquivalentTo Aggressive Non-Hodgkin Lymphoma and Mature T-Cell and NK-Cell Non-Hodgkin Lymphoma and (Disease_May_Have_Abnormal_Cell some Neoplastic Medium-Sized T-Lymphocyte) and (Disease_May_Have_Abnormal_Cell some Neoplastic T-Immunoblast) and (Disease_May_Have_Abnormal_Cell some Neoplastic T-Lymphocyte with Clear Cytoplasm) and (Disease_May_Have_Abnormal_Cell some Reed-Sternberg-Like Cell) and (Disease_May_Have_Associated_Disease some Epstein-Barr Virus Infection) and (Disease_May_Have_Cytogenetic_Abnormality some Gain of Chromosome X) and (Disease_May_Have_Cytogenetic_Abnormality some Trisomy 3) and (Disease_May_Have_Cytogenetic_Abnormality some Trisomy 5) and (Disease_May_Have_Finding some Hepatomegaly) and (Disease_May_Have_Finding some Lymphadenopathy) and (Disease_May_Have_Finding some Skin Rash) and (Disease_May_Have_Finding some Splenomegaly) and (Disease_May_Have_Molecular_Abnormality some Clonal Immunoglobulin Gene Rearrangement) and (Disease_May_Have_Molecular_Abnormality some Clonal T-Cell Receptor Beta Chain Gene Rearrangement) and (Disease_May_Have_Molecular_Abnormality some Clonal T-Cell Receptor Gamma Chain Gene Rearrangement) and (Disease_Has_Abnormal_Cell only Neoplastic Small to Medium-Sized T-Lymphocyte) and (Disease_Has_Finding only Polymorphic Cellular Infiltrate) and (Disease_Has_Finding only Proliferation of Follicular Dendritic Cells Present) and (Disease_Has_Finding only Proliferation of High Endothelial Venules Present) and (Disease_Has_Normal_Cell_Origin only CD4-Positive T-Lymphocyte)</Axiom>
+            </Change>
+            <Change id="462">
+               <Axiom>Risk-Adjusted Mortality Rate SubClassOf Death Rate</Axiom>
+            </Change>
+            <Change id="463">
+               <Axiom>Myelography SubClassOf Radiography</Axiom>
+            </Change>
+            <Change id="464">
+               <Axiom>Anticardiolipin IgM Antibody SubClassOf Pathologic Ab-Ig Protein</Axiom>
+            </Change>
+            <Change id="465">
+               <Axiom>SKI wt Allele SubClassOf Retired Concept</Axiom>
+            </Change>
+            <Change id="466">
+               <Axiom>Bacteriolytic Therapy SubClassOf Biological Therapy</Axiom>
+            </Change>
+            <Change id="467">
+               <Axiom>Connective Tissue Growth Factor Protein SubClassOf Growth Factor</Axiom>
+            </Change>
+            <Change id="468">
+               <Axiom>Chromosomal Inversion SubClassOf Chromosomal Rearrangement</Axiom>
+            </Change>
+            <Change id="469">
+               <Axiom>Anticoagulation Therapy SubClassOf Supportive Care</Axiom>
+            </Change>
+            <Change id="470">
+               <Axiom>Engraftment SubClassOf Cell Viability Process</Axiom>
+            </Change>
+            <Change id="471">
+               <Axiom>Xeroradiography SubClassOf Radiography</Axiom>
+            </Change>
+            <Change id="472">
+               <Axiom>Hypercalcemia Therapy SubClassOf Supportive Care</Axiom>
+            </Change>
+            <Change id="473">
+               <Axiom>International Unit per Kilogram SubClassOf Arbitrary Unit of Substance Content</Axiom>
+            </Change>
+            <Change id="474">
+               <Axiom>Hydration Therapy SubClassOf Physiological Support</Axiom>
+            </Change>
+            <Change id="475">
+               <Axiom>Phosphatidylinositol 4,5-bisphosphate SubClassOf Dietary Phosphatidylinositol</Axiom>
+            </Change>
+            <Change id="476">
+               <Axiom>Mortality Rate SubClassOf Retired Concept</Axiom>
+            </Change>
+            <Change id="477">
+               <Axiom>Radionuclide Ventriculogram Scan SubClassOf Radionuclide Imaging</Axiom>
+            </Change>
+            <Change id="478">
+               <Axiom>Radionuclide Scanning SubClassOf Retired Concept</Axiom>
+            </Change>
+            <Change id="479">
+               <Axiom>Nephrotomography SubClassOf Radiography</Axiom>
+            </Change>
+            <Change id="480">
+               <Axiom>Adrenal Scintigraphy SubClassOf Radionuclide Imaging</Axiom>
+            </Change>
+            <Change id="481">
+               <Axiom>Lymphoepithelioid Cell Variant Peripheral T-Cell Lymphoma EquivalentTo Unspecified Peripheral T-Cell Lymphoma and (Disease_May_Have_Abnormal_Cell some Neoplastic Medium-Sized T-Lymphocyte) and (Disease_May_Have_Cytogenetic_Abnormality some Gain of Chromosome X) and (Disease_May_Have_Cytogenetic_Abnormality some Trisomy 3) and (Disease_May_Have_Finding some Diffuse Pattern) and (Disease_May_Have_Finding some Interfollicular Pattern) and (Disease_Has_Abnormal_Cell only Neoplastic Small T-Lymphocyte) and (Disease_Has_Finding only Granuloma)</Axiom>
+            </Change>
+            <Change id="482">
+               <Axiom>Female Prepuce SubClassOf Anatomic_Structure_Is_Physical_Part_Of some Clitoris</Axiom>
+            </Change>
+            <Change id="483">
+               <Axiom>Lesion with Diameter Greater than 10mm SubClassOf Lesion with Diameter of 4mm or More</Axiom>
+            </Change>
+         </PureAddition>
+         <PureAdditionWithNewTerms id="paddnt" size="58">
+            <Change id="484">
+               <Axiom>Juvenile Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="485">
+               <Axiom>Primary Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="486">
+               <Axiom>Biliary Stenting SubClassOf Stenting</Axiom>
+               <New_Terms>Stenting</New_Terms>
+            </Change>
+            <Change id="487">
+               <Axiom>Metastatic Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="488">
+               <Axiom>Clinical Study by Design SubClassOf Clinical Trial</Axiom>
+               <New_Terms>Clinical Trial</New_Terms>
+            </Change>
+            <Change id="489">
+               <Axiom>Clinical Study by Phase SubClassOf Clinical Trial</Axiom>
+               <New_Terms>Clinical Trial</New_Terms>
+            </Change>
+            <Change id="490">
+               <Axiom>Adult Papillary Meningioma EquivalentTo Adult Grade III Meningioma and Papillary Meningioma</Axiom>
+               <New_Terms>Adult Grade III Meningioma</New_Terms>
+            </Change>
+            <Change id="491">
+               <Axiom>Rubbery Skin Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="492">
+               <Axiom>Lesion by Grade SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="493">
+               <Axiom>Extraosseous Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="494">
+               <Axiom>Diffuse Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="495">
+               <Axiom>Dorsal Skinfold Window Chamber Model SubClassOf Animal Model</Axiom>
+               <New_Terms>Animal Model</New_Terms>
+            </Change>
+            <Change id="496">
+               <Axiom>Transgenic Model SubClassOf Animal Model</Axiom>
+               <New_Terms>Animal Model</New_Terms>
+            </Change>
+            <Change id="497">
+               <Axiom>Clinical Study by Targeted Disease or Condition SubClassOf Clinical Trial</Axiom>
+               <New_Terms>Clinical Trial</New_Terms>
+            </Change>
+            <Change id="498">
+               <Axiom>Adjuvant Study SubClassOf Clinical Trial</Axiom>
+               <New_Terms>Clinical Trial</New_Terms>
+            </Change>
+            <Change id="499">
+               <Axiom>Adult Anaplastic (Malignant) Meningioma EquivalentTo Adult Grade III Meningioma and Anaplastic (Malignant) Meningioma</Axiom>
+               <New_Terms>Adult Grade III Meningioma</New_Terms>
+            </Change>
+            <Change id="500">
+               <Axiom>Bowel Preparation SubClassOf Pre-Procedure Preparation</Axiom>
+               <New_Terms>Pre-Procedure Preparation</New_Terms>
+            </Change>
+            <Change id="501">
+               <Axiom>Intraosseous Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="502">
+               <Axiom>Aberrant Crypt Focus SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="503">
+               <Axiom>Non-Measurable Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="504">
+               <Axiom>Anesthesia Procedure SubClassOf Pre-Procedure Preparation</Axiom>
+               <New_Terms>Pre-Procedure Preparation</New_Terms>
+            </Change>
+            <Change id="505">
+               <Axiom>Adulthood Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="506">
+               <Axiom>Secondary Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="507">
+               <Axiom>Hereditary Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="508">
+               <Axiom>Multi-Institutional Clinical Trial SubClassOf Clinical Trial</Axiom>
+               <New_Terms>Clinical Trial</New_Terms>
+            </Change>
+            <Change id="509">
+               <Axiom>Animal Model of Disease SubClassOf Animal Model</Axiom>
+               <New_Terms>Animal Model</New_Terms>
+            </Change>
+            <Change id="510">
+               <Axiom>Acquired Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="511">
+               <Axiom>Deep Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="512">
+               <Axiom>Nodular Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="513">
+               <Axiom>Synchronous Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="514">
+               <Axiom>Clinical Trial, Other SubClassOf Clinical Trial</Axiom>
+               <New_Terms>Clinical Trial</New_Terms>
+            </Change>
+            <Change id="515">
+               <Axiom>Olfactory Learning SubClassOf Animal Model</Axiom>
+               <New_Terms>Animal Model</New_Terms>
+            </Change>
+            <Change id="516">
+               <Axiom>Intraocular Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="517">
+               <Axiom>Sessile Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="518">
+               <Axiom>Composite Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="519">
+               <Axiom>Affected Area SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="520">
+               <Axiom>Congenital Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="521">
+               <Axiom>Localized Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="522">
+               <Axiom>Visible Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="523">
+               <Axiom>Bone Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="524">
+               <Axiom>Small Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="525">
+               <Axiom>Adult Atypical Meningioma EquivalentTo Adult Grade II Meningioma and Atypical Meningioma</Axiom>
+               <New_Terms>Adult Grade II Meningioma</New_Terms>
+            </Change>
+            <Change id="526">
+               <Axiom>Trial Indication Type SubClassOf Clinical Trial</Axiom>
+               <New_Terms>Clinical Trial</New_Terms>
+            </Change>
+            <Change id="527">
+               <Axiom>Locally Aggressive Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="528">
+               <Axiom>Metasynchronous Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="529">
+               <Axiom>Lesion by Focality SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="530">
+               <Axiom>Xenograft Model SubClassOf Animal Model</Axiom>
+               <New_Terms>Animal Model</New_Terms>
+            </Change>
+            <Change id="531">
+               <Axiom>Rarely Metastasizing Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="532">
+               <Axiom>Non-Rodent Model SubClassOf Animal Model</Axiom>
+               <New_Terms>Animal Model</New_Terms>
+            </Change>
+            <Change id="533">
+               <Axiom>Lesion by Morphology SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="534">
+               <Axiom>Iatrogenic Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="535">
+               <Axiom>Lesion by Stage SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="536">
+               <Axiom>Lesion in Target Point SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="537">
+               <Axiom>Cystic Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="538">
+               <Axiom>Childhood Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="539">
+               <Axiom>Vaccine Clinical Trial SubClassOf Clinical Trial</Axiom>
+               <New_Terms>Clinical Trial</New_Terms>
+            </Change>
+            <Change id="540">
+               <Axiom>Rare Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+            <Change id="541">
+               <Axiom>Non-Hereditary Lesion SubClassOf Lesion</Axiom>
+               <New_Terms>Lesion</New_Terms>
+            </Change>
+         </PureAdditionWithNewTerms>
+         <NewModifiedDefinition id="stequiv" size="1">
+            <Change id="542">
+               <Axiom>Perillyl Alcohol EquivalentTo Farnesyl Transferase Inhibitor and Terpene and (Chemical_Or_Drug_Affects_Gene_Product some Farnesyl Protein Transferase) and (Chemical_Or_Drug_Affects_Gene_Product some Geranylgeranyl Transferase) and (Chemical_Or_Drug_Has_Mechanism_Of_Action some Enzyme Inhibition) and (Chemical_Or_Drug_Has_Physiologic_Effect some Cell Differentiation Induction) and (Chemical_Or_Drug_Has_Physiologic_Effect some Farnesylation Inhibition) and (Chemical_Or_Drug_Has_Physiologic_Effect some G1 Arrest) and (Chemical_Or_Drug_Has_Physiologic_Effect some Isoprenylation Inhibition)</Axiom>
+               <Source>
+                  <Axiom>Perillyl Alcohol EquivalentTo Farnesyl Transferase Inhibitor and Terpene and Terpene Compound and (Chemical_Or_Drug_Affects_Gene_Product some Farnesyl Protein Transferase) and (Chemical_Or_Drug_Affects_Gene_Product some Geranylgeranyl Transferase) and (Chemical_Or_Drug_Has_Mechanism_Of_Action some Enzyme Inhibition) and (Chemical_Or_Drug_Has_Physiologic_Effect some Cell Differentiation Induction) and (Chemical_Or_Drug_Has_Physiologic_Effect some Farnesylation Inhibition) and (Chemical_Or_Drug_Has_Physiologic_Effect some G1 Arrest) and (Chemical_Or_Drug_Has_Physiologic_Effect some Isoprenylation Inhibition)</Axiom>
+               </Source>
+            </Change>
+         </NewModifiedDefinition>
+         <NewModifiedDefinitionWithNewTerms id="stequivnt" size="1">
+            <Change id="543">
+               <Axiom>Adult Spinal Cord Ependymoma EquivalentTo Adult Ependymoma and Adult Spinal Cord Neoplasm and Spinal Cord Ependymoma and (Disease_Has_Normal_Tissue_Origin only Remnants of the Central Canal of the Spinal Cord)</Axiom>
+               <Source>
+                  <Axiom>Adult Spinal Cord Ependymoma EquivalentTo Adult Ependymoma and Spinal Cord Ependymoma and (Disease_Has_Normal_Tissue_Origin only Remnants of the Central Canal of the Spinal Cord)</Axiom>
+               </Source>
+               <New_Terms>Adult Spinal Cord Neoplasm</New_Terms>
+            </Change>
+         </NewModifiedDefinitionWithNewTerms>
+      </Effectual>
+      <Ineffectual id="ineffadds" size="7">
+         <AddedRedundancy id="ared" size="0"/>
+         <AddedRewrite id="arws" size="0">
+            <AddedCompleteRewrite id="arw" size="0"/>
+            <AddedPartialRewrite id="aprw" size="0"/>
+         </AddedRewrite>
+         <AddedProspectiveRedundancy id="apred" size="7">
+            <AddedReshuffleProspectiveRedundancy id="aavred" size="0"/>
+            <AddedNewProspectiveRedundancy id="anpred" size="7">
+               <AddedNovelProspectiveRedundancy id="weak" size="7">
+                  <Change id="544">
+                     <Axiom>Contributing_Source Range: {"CDISC"^^string , "COH"^^string , "CTCAE"^^string , "FDA"^^string , "HL7"^^string , "ICH"^^string , "UCUM"^^string}</Axiom>
+                     <Source>
+                        <Axiom>Contributing_Source Range: {"CDISC"^^string , "CTCAE"^^string , "FDA"^^string , "HL7"^^string , "ICH"^^string , "UCUM"^^string}</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="545">
+                     <Axiom>Electric Field Therapy SubClassOf Therapeutic Procedure</Axiom>
+                     <Source>
+                        <Axiom shared="true">Cancer Treatment SubClassOf Therapeutic Procedure</Axiom>
+                        <Axiom>Electric Field Therapy SubClassOf Cancer Treatment</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="546">
+                     <Axiom>Chronic Lymphoblastic Lymphoma SubClassOf Hematopoietic and Lymphoid Neoplasm (Antiquated)</Axiom>
+                     <Source>
+                        <Axiom>Chronic Lymphoblastic Lymphoma SubClassOf Leukemia (Antiquated)</Axiom>
+                        <Axiom shared="true">Leukemia (Antiquated) SubClassOf Hematopoietic and Lymphoid Neoplasm (Antiquated)</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="547">
+                     <Axiom>Magnetic Bead Separation SubClassOf Research Technique</Axiom>
+                     <Source>
+                        <Axiom>Magnetic Bead Separation SubClassOf Cell Sorting</Axiom>
+                        <Axiom>Cell Sorting SubClassOf Research Technique</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="548">
+                     <Axiom>Potential Study Subject SubClassOf Human Study Subject</Axiom>
+                     <Source>
+                        <Axiom shared="true">Clinical Trial Subject SubClassOf Human Study Subject</Axiom>
+                        <Axiom>Potential Study Subject SubClassOf Clinical Trial Subject</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="549">
+                     <Axiom>Neuropathy SubClassOf Peripheral Nervous System Disorder</Axiom>
+                     <Source>
+                        <Axiom shared="true">Non-Neoplastic Peripheral Nervous System Disorder SubClassOf Peripheral Nervous System Disorder</Axiom>
+                        <Axiom>Neuropathy SubClassOf Non-Neoplastic Peripheral Nervous System Disorder</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="550">
+                     <Axiom>Intratumoral Therapy SubClassOf Therapeutic Procedure</Axiom>
+                     <Source>
+                        <Axiom shared="true">Regional Chemotherapy SubClassOf Chemotherapy</Axiom>
+                        <Axiom>Intratumoral Therapy SubClassOf Regional Chemotherapy</Axiom>
+                        <Axiom shared="true">Chemotherapy SubClassOf Therapeutic Procedure</Axiom>
+                     </Source>
+                     <Source>
+                        <Axiom shared="true">Regional Chemotherapy SubClassOf Local Therapy</Axiom>
+                        <Axiom shared="true">Local Therapy SubClassOf Therapeutic Procedure</Axiom>
+                        <Axiom>Intratumoral Therapy SubClassOf Regional Chemotherapy</Axiom>
+                     </Source>
+                  </Change>
+               </AddedNovelProspectiveRedundancy>
+               <AddedPseudoNovelProspectiveRedundancy id="apseudopred" size="0"/>
+            </AddedNewProspectiveRedundancy>
+         </AddedProspectiveRedundancy>
+      </Ineffectual>
+   </Additions>
+   <Removals id="rems" size="130">
+      <Effectual id="effrems" size="101">
+         <Weakening id="wk" size="1">
+            <Change id="551">
+               <Axiom>Contributing_Source Range: {"CDISC"^^string , "CTCAE"^^string , "FDA"^^string , "HL7"^^string , "ICH"^^string , "UCUM"^^string}</Axiom>
+               <Source>
+                  <Axiom>Contributing_Source Range: {"CDISC"^^string , "COH"^^string , "CTCAE"^^string , "FDA"^^string , "HL7"^^string , "ICH"^^string , "UCUM"^^string}</Axiom>
+               </Source>
+            </Change>
+         </Weakening>
+         <WeakeningWithRetiredTerms id="wkrt" size="0"/>
+         <RetiredDescription id="retdesc" size="0"/>
+         <PureRemoval id="prem" size="99">
+            <Change id="552">
+               <Axiom>Immunoscintigraphy SubClassOf Radionuclide Scanning</Axiom>
+            </Change>
+            <Change id="553">
+               <Axiom>Lesion by Grade SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="554">
+               <Axiom>Sessile Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="555">
+               <Axiom>Radionuclide Scanning SubClassOf Diagnostic Imaging</Axiom>
+            </Change>
+            <Change id="556">
+               <Axiom>Female Prepuce SubClassOf Anatomic_Structure_Is_Physical_Part_Of some Vulva</Axiom>
+            </Change>
+            <Change id="557">
+               <Axiom>Conjugated Linoleic Acid SubClassOf Immunostimulant</Axiom>
+            </Change>
+            <Change id="558">
+               <Axiom>Congenital Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="559">
+               <Axiom>Diagnostic Radiology SubClassOf Diagnostic Imaging</Axiom>
+            </Change>
+            <Change id="560">
+               <Axiom>Nodular Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="561">
+               <Axiom>Pyridoxine SubClassOf Miscellaneous Chemoprotective Agent</Axiom>
+            </Change>
+            <Change id="562">
+               <Axiom>Magnetic Bead Separation SubClassOf Cell Sorting</Axiom>
+            </Change>
+            <Change id="563">
+               <Axiom>Intraocular Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="564">
+               <Axiom>SKI wt Allele EquivalentTo SKI Gene and (Gene_Found_In_Organism some Human) and (Gene_In_Chromosomal_Location some 1q22-q24)</Axiom>
+            </Change>
+            <Change id="565">
+               <Axiom>Lesion by Focality SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="566">
+               <Axiom>Lesion by Morphology SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="567">
+               <Axiom>Potential Study Subject SubClassOf Clinical Trial Subject</Axiom>
+            </Change>
+            <Change id="568">
+               <Axiom>Primary Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="569">
+               <Axiom>Localized Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="570">
+               <Axiom>Unadjusted Mortality Rate SubClassOf Mortality Rate</Axiom>
+            </Change>
+            <Change id="571">
+               <Axiom>International Unit per Kilogram SubClassOf Unit of Arbitrary Substance Concentration</Axiom>
+            </Change>
+            <Change id="572">
+               <Axiom>Mortality Rate SubClassOf Population-Based Statistic</Axiom>
+            </Change>
+            <Change id="573">
+               <Axiom>Synchronous Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="574">
+               <Axiom>Angioimmunoblastic T-Cell Lymphoma EquivalentTo Aggressive Non-Hodgkin Lymphoma and Mature T-Cell and NK-Cell Non-Hodgkin Lymphoma and (Disease_May_Have_Abnormal_Cell some Neoplastic Medium-Sized T-Lymphocyte) and (Disease_May_Have_Abnormal_Cell some Neoplastic T-Immunoblast) and (Disease_May_Have_Abnormal_Cell some Neoplastic T-Lymphocyte with Clear Cytoplasm) and (Disease_May_Have_Abnormal_Cell some Reed-Sternberg-Like Cell) and (Disease_May_Have_Associated_Disease some Epstein-Barr Virus Infection) and (Disease_May_Have_Cytogenetic_Abnormality some Additional X Chromosome) and (Disease_May_Have_Cytogenetic_Abnormality some Trisomy 3) and (Disease_May_Have_Cytogenetic_Abnormality some Trisomy 5) and (Disease_May_Have_Finding some Hepatomegaly) and (Disease_May_Have_Finding some Lymphadenopathy) and (Disease_May_Have_Finding some Skin Rash) and (Disease_May_Have_Finding some Splenomegaly) and (Disease_May_Have_Molecular_Abnormality some Clonal Immunoglobulin Gene Rearrangement) and (Disease_May_Have_Molecular_Abnormality some Clonal T-Cell Receptor Beta Chain Gene Rearrangement) and (Disease_May_Have_Molecular_Abnormality some Clonal T-Cell Receptor Gamma Chain Gene Rearrangement) and (Disease_Has_Abnormal_Cell only Neoplastic Small to Medium-Sized T-Lymphocyte) and (Disease_Has_Finding only Polymorphic Cellular Infiltrate) and (Disease_Has_Finding only Proliferation of Follicular Dendritic Cells Present) and (Disease_Has_Finding only Proliferation of High Endothelial Venules Present) and (Disease_Has_Normal_Cell_Origin only CD4-Positive T-Lymphocyte)</Axiom>
+            </Change>
+            <Change id="575">
+               <Axiom>Chronic Lymphoblastic Lymphoma SubClassOf Leukemia (Antiquated)</Axiom>
+            </Change>
+            <Change id="576">
+               <Axiom>Rubbery Skin Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="577">
+               <Axiom>Iatrogenic Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="578">
+               <Axiom>Risk-Adjusted Mortality Rate SubClassOf Mortality Rate</Axiom>
+            </Change>
+            <Change id="579">
+               <Axiom>Rarely Metastasizing Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="580">
+               <Axiom>Lesion by Stage SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="581">
+               <Axiom>Juvenile Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="582">
+               <Axiom>Dorsal Skinfold Window Chamber Model SubClassOf Animal Model of Disease</Axiom>
+            </Change>
+            <Change id="583">
+               <Axiom>Secondary Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="584">
+               <Axiom>Intraosseous Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="585">
+               <Axiom>Xeroradiography SubClassOf Diagnostic Radiology</Axiom>
+            </Change>
+            <Change id="586">
+               <Axiom>Gum SubClassOf Polysaccharide</Axiom>
+            </Change>
+            <Change id="587">
+               <Axiom>Lung Perfusion Scan SubClassOf Radionuclide Scanning</Axiom>
+            </Change>
+            <Change id="588">
+               <Axiom>Nephrotomography SubClassOf Diagnostic Radiology</Axiom>
+            </Change>
+            <Change id="589">
+               <Axiom>Myelography SubClassOf Diagnostic Radiology</Axiom>
+            </Change>
+            <Change id="590">
+               <Axiom>Cell Sorting SubClassOf Research Technique</Axiom>
+            </Change>
+            <Change id="591">
+               <Axiom>Sestamibi Scan SubClassOf Radionuclide Scanning</Axiom>
+            </Change>
+            <Change id="592">
+               <Axiom>Non-Hereditary Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="593">
+               <Axiom>Extraosseous Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="594">
+               <Axiom>Non-Rodent Model SubClassOf Animal Model of Disease</Axiom>
+            </Change>
+            <Change id="595">
+               <Axiom>Ventilation Perfusion Scanning SubClassOf Radionuclide Scanning</Axiom>
+            </Change>
+            <Change id="596">
+               <Axiom>Childhood Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="597">
+               <Axiom>Acquired Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="598">
+               <Axiom>Starch SubClassOf Polysaccharide</Axiom>
+            </Change>
+            <Change id="599">
+               <Axiom>Fluoroscopy SubClassOf Diagnostic Radiology</Axiom>
+            </Change>
+            <Change id="600">
+               <Axiom>Bone Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="601">
+               <Axiom>Diffuse Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="602">
+               <Axiom>Neuropathy SubClassOf Non-Neoplastic Peripheral Nervous System Disorder</Axiom>
+            </Change>
+            <Change id="603">
+               <Axiom>Pharmacogenetic Test SubClassOf Biomarker Analysis</Axiom>
+            </Change>
+            <Change id="604">
+               <Axiom>Prepuce SubClassOf Anatomic_Structure_Is_Physical_Part_Of some Penis</Axiom>
+            </Change>
+            <Change id="605">
+               <Axiom>Locally Aggressive Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="606">
+               <Axiom>Affected Area SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="607">
+               <Axiom>Lymphoepithelioid Cell Variant Peripheral T-Cell Lymphoma EquivalentTo Unspecified Peripheral T-Cell Lymphoma and (Disease_May_Have_Abnormal_Cell some Neoplastic Medium-Sized T-Lymphocyte) and (Disease_May_Have_Cytogenetic_Abnormality some Additional X Chromosome) and (Disease_May_Have_Cytogenetic_Abnormality some Trisomy 3) and (Disease_May_Have_Finding some Diffuse Pattern) and (Disease_May_Have_Finding some Interfollicular Pattern) and (Disease_Has_Abnormal_Cell only Neoplastic Small T-Lymphocyte) and (Disease_Has_Finding only Granuloma)</Axiom>
+            </Change>
+            <Change id="608">
+               <Axiom>ERBB2IP wt Allele EquivalentTo ERBB2IP Gene and (Gene_Found_In_Organism some Human) and (Gene_Has_Physical_Location some 5: 65258140-65412100) and (Gene_In_Chromosomal_Location some 5q12.2)</Axiom>
+            </Change>
+            <Change id="609">
+               <Axiom>Hereditary Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="610">
+               <Axiom>Intravenous Pyelography SubClassOf Diagnostic Radiology</Axiom>
+            </Change>
+            <Change id="611">
+               <Axiom>Radionuclide Ventriculogram Scan SubClassOf Radionuclide Scanning</Axiom>
+            </Change>
+            <Change id="612">
+               <Axiom>I-131 Uptake Test SubClassOf Radionuclide Scanning</Axiom>
+            </Change>
+            <Change id="613">
+               <Axiom>Anticardiolipin IgM Antibody SubClassOf IgM</Axiom>
+            </Change>
+            <Change id="614">
+               <Axiom>Age-Adjusted Mortality Rate SubClassOf Mortality Rate</Axiom>
+            </Change>
+            <Change id="615">
+               <Axiom>Indium Scan SubClassOf Radionuclide Scanning</Axiom>
+            </Change>
+            <Change id="616">
+               <Axiom>Sufficient Quantity SubClassOf General Qualifier</Axiom>
+            </Change>
+            <Change id="617">
+               <Axiom>Electric Field Therapy SubClassOf Cancer Treatment</Axiom>
+            </Change>
+            <Change id="618">
+               <Axiom>Lesion in Target Point SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="619">
+               <Axiom>Cholangiography SubClassOf Diagnostic Radiology</Axiom>
+            </Change>
+            <Change id="620">
+               <Axiom>Sitting SubClassOf Action</Axiom>
+            </Change>
+            <Change id="621">
+               <Axiom>Inositol 1,4,5-Trisphosphate SubClassOf Phosphatidylinositol</Axiom>
+            </Change>
+            <Change id="622">
+               <Axiom>Clodronic Acid SubClassOf Malignancy-Associated Hypercalcemia Inhibitor</Axiom>
+            </Change>
+            <Change id="623">
+               <Axiom>Fluorescence Activated Cell Sorting SubClassOf Flow Cytometry</Axiom>
+            </Change>
+            <Change id="624">
+               <Axiom>Standardized Mortality Ratio SubClassOf Mortality Rate</Axiom>
+            </Change>
+            <Change id="625">
+               <Axiom>Whole-Body Scintigraphy SubClassOf Radionuclide Scanning</Axiom>
+            </Change>
+            <Change id="626">
+               <Axiom>Transgenic Model SubClassOf Animal Model of Disease</Axiom>
+            </Change>
+            <Change id="627">
+               <Axiom>Hemicellulose SubClassOf Polysaccharide</Axiom>
+            </Change>
+            <Change id="628">
+               <Axiom>Pharmacogenomic Test SubClassOf Biomarker Analysis</Axiom>
+            </Change>
+            <Change id="629">
+               <Axiom>Small Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="630">
+               <Axiom>Engraftment SubClassOf Conceptual Entity</Axiom>
+            </Change>
+            <Change id="631">
+               <Axiom>Cystic Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="632">
+               <Axiom>Gallium Scan SubClassOf Radionuclide Scanning</Axiom>
+            </Change>
+            <Change id="633">
+               <Axiom>Composite Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="634">
+               <Axiom>Aberrant Crypt Focus SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="635">
+               <Axiom>Bone Scan SubClassOf Radionuclide Scanning</Axiom>
+            </Change>
+            <Change id="636">
+               <Axiom>Metastatic Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="637">
+               <Axiom>Additional X Chromosome SubClassOf Numerical Chromosomal Abnormality</Axiom>
+            </Change>
+            <Change id="638">
+               <Axiom>Adulthood Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="639">
+               <Axiom>Olfactory Learning SubClassOf Animal Model of Disease</Axiom>
+            </Change>
+            <Change id="640">
+               <Axiom>Title SubClassOf Document</Axiom>
+            </Change>
+            <Change id="641">
+               <Axiom>Conjugated Linoleic Acid SubClassOf Fatty Acid</Axiom>
+            </Change>
+            <Change id="642">
+               <Axiom>Phosphatidylinositol 4,5-bisphosphate SubClassOf Phosphatidylinositol</Axiom>
+            </Change>
+            <Change id="643">
+               <Axiom>Negative Selection SubClassOf Conceptual Entity</Axiom>
+            </Change>
+            <Change id="644">
+               <Axiom>Metasynchronous Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="645">
+               <Axiom>Deep Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="646">
+               <Axiom>Rare Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+            <Change id="647">
+               <Axiom>Intratumoral Therapy SubClassOf Regional Chemotherapy</Axiom>
+            </Change>
+            <Change id="648">
+               <Axiom>Adrenal Scintigraphy SubClassOf Radionuclide Scanning</Axiom>
+            </Change>
+            <Change id="649">
+               <Axiom>Clinical Study Sponsor SubClassOf Clinical Study Site by Role in Study</Axiom>
+            </Change>
+            <Change id="650">
+               <Axiom>Non-Measurable Lesion SubClassOf Visible Lesion</Axiom>
+            </Change>
+         </PureRemoval>
+         <PureRemovalWithRetiredTerms id="premrt" size="0"/>
+         <RetiredModifiedDefinition id="wkequiv" size="1">
+            <Change id="651">
+               <Axiom>Perillyl Alcohol EquivalentTo Farnesyl Transferase Inhibitor and Terpene and Terpene Compound and (Chemical_Or_Drug_Affects_Gene_Product some Farnesyl Protein Transferase) and (Chemical_Or_Drug_Affects_Gene_Product some Geranylgeranyl Transferase) and (Chemical_Or_Drug_Has_Mechanism_Of_Action some Enzyme Inhibition) and (Chemical_Or_Drug_Has_Physiologic_Effect some Cell Differentiation Induction) and (Chemical_Or_Drug_Has_Physiologic_Effect some Farnesylation Inhibition) and (Chemical_Or_Drug_Has_Physiologic_Effect some G1 Arrest) and (Chemical_Or_Drug_Has_Physiologic_Effect some Isoprenylation Inhibition)</Axiom>
+               <Source>
+                  <Axiom>Perillyl Alcohol EquivalentTo Farnesyl Transferase Inhibitor and Terpene and (Chemical_Or_Drug_Affects_Gene_Product some Farnesyl Protein Transferase) and (Chemical_Or_Drug_Affects_Gene_Product some Geranylgeranyl Transferase) and (Chemical_Or_Drug_Has_Mechanism_Of_Action some Enzyme Inhibition) and (Chemical_Or_Drug_Has_Physiologic_Effect some Cell Differentiation Induction) and (Chemical_Or_Drug_Has_Physiologic_Effect some Farnesylation Inhibition) and (Chemical_Or_Drug_Has_Physiologic_Effect some G1 Arrest) and (Chemical_Or_Drug_Has_Physiologic_Effect some Isoprenylation Inhibition)</Axiom>
+               </Source>
+            </Change>
+         </RetiredModifiedDefinition>
+         <RetiredModifiedDefinitionWithRetiredTerms id="wkequivrt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffrems" size="29">
+         <RemovedRedundancy id="rred" size="0"/>
+         <RemovedRewrite id="rrws" size="0">
+            <RemovedCompleteRewrite id="rrw" size="0"/>
+            <RemovedPartialRewrite id="rprw" size="0"/>
+         </RemovedRewrite>
+         <RemovedProspectiveRedundancy id="rpred" size="29">
+            <RemovedReshuffleProspectiveRedundancy id="ravred" size="0"/>
+            <RemovedNewProspectiveRedundancy id="rnpred" size="29">
+               <RemovedNovelProspectiveRedundancy id="strength" size="29">
+                  <Change id="652">
+                     <Axiom>Infection Prophylaxis and Management SubClassOf Therapeutic Procedure</Axiom>
+                     <Source>
+                        <Axiom shared="true">Supportive Care SubClassOf Therapeutic Procedure</Axiom>
+                        <Axiom>Infection Prophylaxis and Management SubClassOf Supportive Care</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="653">
+                     <Axiom>Clinical Trial, Other SubClassOf Clinical Study</Axiom>
+                     <Source>
+                        <Axiom>Clinical Trial, Other SubClassOf Clinical Trial</Axiom>
+                        <Axiom>Clinical Trial SubClassOf Clinical Study</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="654">
+                     <Axiom>Hydration Therapy SubClassOf Therapeutic Procedure</Axiom>
+                     <Source>
+                        <Axiom shared="true">Supportive Care SubClassOf Therapeutic Procedure</Axiom>
+                        <Axiom>Hydration Therapy SubClassOf Physiological Support</Axiom>
+                        <Axiom shared="true">Physiological Support SubClassOf Supportive Care</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="655">
+                     <Axiom>Trial Indication Type SubClassOf Clinical Study</Axiom>
+                     <Source>
+                        <Axiom>Trial Indication Type SubClassOf Clinical Trial</Axiom>
+                        <Axiom>Clinical Trial SubClassOf Clinical Study</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="656">
+                     <Axiom>Visible Lesion SubClassOf Finding</Axiom>
+                     <Source>
+                        <Axiom>Lesion SubClassOf Finding</Axiom>
+                        <Axiom>Visible Lesion SubClassOf Lesion</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="657">
+                     <Axiom>Bacteriolytic Therapy SubClassOf Therapeutic Procedure</Axiom>
+                     <Source>
+                        <Axiom shared="true">Biological Therapy SubClassOf Therapeutic Procedure</Axiom>
+                        <Axiom>Bacteriolytic Therapy SubClassOf Biological Therapy</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="658">
+                     <Axiom>Adult Papillary Meningioma EquivalentTo Adult Meningioma and Papillary Meningioma</Axiom>
+                     <Source>
+                        <Axiom>Adult Papillary Meningioma EquivalentTo Adult Grade III Meningioma and Papillary Meningioma</Axiom>
+                        <Axiom shared="true">Papillary Meningioma EquivalentTo Grade III Meningioma and (Disease_Has_Finding only Perivascular Arrangement of Tumor Cells) and (Disease_Has_Finding only Pseudopapillary Pattern)</Axiom>
+                        <Axiom>Adult Grade III Meningioma EquivalentTo Adult Meningioma and Grade III Meningioma</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="659">
+                     <Axiom>Anesthesia Procedure SubClassOf Therapeutic Procedure</Axiom>
+                     <Source>
+                        <Axiom>Anesthesia Procedure SubClassOf Pre-Procedure Preparation</Axiom>
+                        <Axiom>Pre-Procedure Preparation SubClassOf Therapeutic Procedure</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="660">
+                     <Axiom>Bowel Preparation SubClassOf Therapeutic Procedure</Axiom>
+                     <Source>
+                        <Axiom>Bowel Preparation SubClassOf Pre-Procedure Preparation</Axiom>
+                        <Axiom>Pre-Procedure Preparation SubClassOf Therapeutic Procedure</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="661">
+                     <Axiom>Adjuvant Study SubClassOf Clinical Study</Axiom>
+                     <Source>
+                        <Axiom>Adjuvant Study SubClassOf Clinical Trial</Axiom>
+                        <Axiom>Clinical Trial SubClassOf Clinical Study</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="662">
+                     <Axiom>Adult Anaplastic (Malignant) Meningioma EquivalentTo Adult Meningioma and Anaplastic (Malignant) Meningioma</Axiom>
+                     <Source>
+                        <Axiom>Adult Grade III Meningioma EquivalentTo Adult Meningioma and Grade III Meningioma</Axiom>
+                        <Axiom shared="true">Anaplastic (Malignant) Meningioma EquivalentTo Anaplastic Malignant Neoplasm and Grade III Meningioma and Malignant Neoplasm of the Meninges and (Disease_May_Have_Finding some High Mitotic Activity) and (Disease_Has_Finding only Malignant Cellular Infiltrate)</Axiom>
+                        <Axiom>Adult Anaplastic (Malignant) Meningioma EquivalentTo Adult Grade III Meningioma and Anaplastic (Malignant) Meningioma</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="663">
+                     <Axiom>HLA Class I Histocompatibility Antigen, Cw-1 Alpha Chain Protein SubClassOf Immunoprotein</Axiom>
+                     <Source>
+                        <Axiom>HLA Class I Histocompatibility Antigen, Cw-1 Alpha Chain Protein SubClassOf MHC Class I Protein</Axiom>
+                        <Axiom shared="true">MHC Class I Protein SubClassOf Immunoprotein</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="664">
+                     <Axiom>Hypercalcemia Therapy SubClassOf Therapeutic Procedure</Axiom>
+                     <Source>
+                        <Axiom>Hypercalcemia Therapy SubClassOf Supportive Care</Axiom>
+                        <Axiom shared="true">Supportive Care SubClassOf Therapeutic Procedure</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="665">
+                     <Axiom>Chromosomal Inversion SubClassOf Structural Chromosomal Abnormality</Axiom>
+                     <Source>
+                        <Axiom>Chromosomal Inversion SubClassOf Chromosomal Rearrangement</Axiom>
+                        <Axiom shared="true">Chromosomal Rearrangement SubClassOf Structural Chromosomal Abnormality</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="666">
+                     <Axiom>Lesion with Diameter Greater than 10mm SubClassOf Visible Lesion</Axiom>
+                     <Source>
+                        <Axiom shared="true">Lesion with Diameter of 4mm or More SubClassOf Visible Lesion</Axiom>
+                        <Axiom>Lesion with Diameter Greater than 10mm SubClassOf Lesion with Diameter of 4mm or More</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="667">
+                     <Axiom>Recombinant Viral Vaccine Therapy SubClassOf Therapeutic Procedure</Axiom>
+                     <Source>
+                        <Axiom>Recombinant Viral Vaccine Therapy SubClassOf Biological Therapy</Axiom>
+                        <Axiom shared="true">Biological Therapy SubClassOf Therapeutic Procedure</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="668">
+                     <Axiom>Anticoagulation Therapy SubClassOf Therapeutic Procedure</Axiom>
+                     <Source>
+                        <Axiom shared="true">Supportive Care SubClassOf Therapeutic Procedure</Axiom>
+                        <Axiom>Anticoagulation Therapy SubClassOf Supportive Care</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="669">
+                     <Axiom>Clinical Study by Phase SubClassOf Clinical Study</Axiom>
+                     <Source>
+                        <Axiom>Clinical Study by Phase SubClassOf Clinical Trial</Axiom>
+                        <Axiom>Clinical Trial SubClassOf Clinical Study</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="670">
+                     <Axiom>Clinical Study by Design SubClassOf Clinical Study</Axiom>
+                     <Source>
+                        <Axiom>Clinical Study by Design SubClassOf Clinical Trial</Axiom>
+                        <Axiom>Clinical Trial SubClassOf Clinical Study</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="671">
+                     <Axiom>Clinical Study by Targeted Disease or Condition SubClassOf Clinical Study</Axiom>
+                     <Source>
+                        <Axiom>Clinical Study by Targeted Disease or Condition SubClassOf Clinical Trial</Axiom>
+                        <Axiom>Clinical Trial SubClassOf Clinical Study</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="672">
+                     <Axiom>Adult Atypical Meningioma EquivalentTo Adult Meningioma and Atypical Meningioma</Axiom>
+                     <Source>
+                        <Axiom>Adult Atypical Meningioma EquivalentTo Adult Grade II Meningioma and Atypical Meningioma</Axiom>
+                        <Axiom>Adult Grade II Meningioma EquivalentTo Adult Meningioma and Grade II Meningioma</Axiom>
+                        <Axiom shared="true">Atypical Meningioma EquivalentTo Grade II Meningioma and (Disease_May_Have_Abnormal_Cell some Small Meningothelial Cell) and (Disease_May_Have_Finding some Geographic Necrosis) and (Disease_May_Have_Finding some High Mitotic Activity) and (Disease_May_Have_Finding some Increased Cellularity Present) and (Disease_May_Have_Finding some Sheet-Like Growth Pattern)</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="673">
+                     <Axiom>Inch Unit of Length SubClassOf Unit by Category</Axiom>
+                     <Source>
+                        <Axiom shared="true">Unit of Length SubClassOf Unit by Category</Axiom>
+                        <Axiom>Inch Unit of Length SubClassOf Unit of Length</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="674">
+                     <Axiom>Certificate of Confidentiality SubClassOf Document</Axiom>
+                     <Source>
+                        <Axiom shared="true">Certificate SubClassOf Document</Axiom>
+                        <Axiom>Certificate of Confidentiality SubClassOf Certificate</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="675">
+                     <Axiom>Vaccine Clinical Trial SubClassOf Clinical Study</Axiom>
+                     <Source>
+                        <Axiom>Clinical Trial SubClassOf Clinical Study</Axiom>
+                        <Axiom>Vaccine Clinical Trial SubClassOf Clinical Trial</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="676">
+                     <Axiom>Animal Model of Disease SubClassOf in vivo Model</Axiom>
+                     <Source>
+                        <Axiom>Animal Model SubClassOf in vivo Model</Axiom>
+                        <Axiom>Animal Model of Disease SubClassOf Animal Model</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="677">
+                     <Axiom>Inguinal Lymphadenectomy SubClassOf Lymphadenectomy</Axiom>
+                     <Source>
+                        <Axiom shared="true">Regional Lymph Node Dissection SubClassOf Lymphadenectomy</Axiom>
+                        <Axiom>Inguinal Lymphadenectomy SubClassOf Regional Lymph Node Dissection</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="678">
+                     <Axiom>Connective Tissue Growth Factor Protein SubClassOf Protein, Organized by Function</Axiom>
+                     <Source>
+                        <Axiom>Connective Tissue Growth Factor Protein SubClassOf Growth Factor</Axiom>
+                        <Axiom shared="true">Growth Factor SubClassOf Protein, Organized by Function</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="679">
+                     <Axiom>Drug Extravasation Therapy SubClassOf Therapeutic Procedure</Axiom>
+                     <Source>
+                        <Axiom shared="true">Supportive Care SubClassOf Therapeutic Procedure</Axiom>
+                        <Axiom>Drug Extravasation Therapy SubClassOf Supportive Care</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="680">
+                     <Axiom>Adult Spinal Cord Ependymoma EquivalentTo Adult Ependymoma and Spinal Cord Ependymoma and (Disease_Has_Normal_Tissue_Origin only Remnants of the Central Canal of the Spinal Cord)</Axiom>
+                     <Source>
+                        <Axiom shared="true">Spinal Cord Ependymoma EquivalentTo Ependymoma and Spinal Cord Glial Neoplasm and (Disease_May_Have_Finding some Ependymal Rosette Formation) and (Disease_May_Have_Finding some Motor Manifestations) and (Disease_May_Have_Finding some Perivascular Pseudorosette Formation) and (Disease_May_Have_Finding some Sensory Manifestations) and (Disease_Has_Normal_Tissue_Origin only Remnants of the Central Canal of the Spinal Cord) and (Disease_Has_Primary_Anatomic_Site only Spinal Cord)</Axiom>
+                        <Axiom>Adult Spinal Cord Ependymoma EquivalentTo Adult Ependymoma and Adult Spinal Cord Neoplasm and Spinal Cord Ependymoma and (Disease_Has_Normal_Tissue_Origin only Remnants of the Central Canal of the Spinal Cord)</Axiom>
+                        <Axiom shared="true">Adult Ependymal Tumor EquivalentTo Adult Central Nervous System Neoplasm and Ependymal Tumor</Axiom>
+                        <Axiom>Adult Spinal Cord Neoplasm EquivalentTo Adult Central Nervous System Neoplasm and Spinal Cord Neoplasm</Axiom>
+                        <Axiom shared="true">Spinal Cord Glial Neoplasm EquivalentTo Neuroglial Tumor and Spinal Cord Neoplasm and (Disease_Has_Primary_Anatomic_Site only Spinal Cord)</Axiom>
+                        <Axiom shared="true">Adult Ependymoma EquivalentTo Adult Ependymal Tumor and Ependymoma and (Disease_May_Have_Finding some Ependymal Rosette Formation) and (Disease_May_Have_Finding some Perivascular Pseudorosette Formation)</Axiom>
+                     </Source>
+                  </Change>
+               </RemovedNovelProspectiveRedundancy>
+               <RemovedPseudoNovelProspectiveRedundancy id="rpseudopred" size="0"/>
+            </RemovedNewProspectiveRedundancy>
+         </RemovedProspectiveRedundancy>
+      </Ineffectual>
+   </Removals>
+</root>

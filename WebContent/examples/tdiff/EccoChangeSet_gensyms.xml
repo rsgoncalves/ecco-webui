@@ -1,0 +1,1244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="root" uuid="865cd841-559b-4495-bec7-c291b76ec234-gs">
+   <Additions id="adds" size="226">
+      <Effectual id="effadds" size="226">
+         <Strengthening id="st" size="0"/>
+         <StrengtheningWithNewTerms id="stnt" size="0"/>
+         <NewDescription id="newdesc" size="226">
+            <Change id="1">
+               <Axiom>D7 SubClassOf R7</Axiom>
+               <New_Terms>R7, D7</New_Terms>
+            </Change>
+            <Change id="2">
+               <Axiom>U3 SubClassOf prop28 some Q2</Axiom>
+               <New_Terms>Q2, U3, prop28</New_Terms>
+            </Change>
+            <Change id="3">
+               <Axiom>U9 SubClassOf G4</Axiom>
+               <New_Terms>G4, U9</New_Terms>
+            </Change>
+            <Change id="4">
+               <Axiom>S5 EquivalentTo (T1 or U8) and (prop35 min 2 J9)</Axiom>
+               <New_Terms>S5, prop35, J9, U8, T1</New_Terms>
+            </Change>
+            <Change id="5">
+               <Axiom>R2 SubClassOf J9</Axiom>
+               <New_Terms>J9, R2</New_Terms>
+            </Change>
+            <Change id="6">
+               <Axiom>T4 SubClassOf L8</Axiom>
+               <New_Terms>T4, L8</New_Terms>
+            </Change>
+            <Change id="7">
+               <Axiom>R3 SubClassOf U8</Axiom>
+               <New_Terms>R3, U8</New_Terms>
+            </Change>
+            <Change id="8">
+               <Axiom>C5 SubClassOf O2</Axiom>
+               <New_Terms>O2, C5</New_Terms>
+            </Change>
+            <Change id="9">
+               <Axiom>Q4 SubClassOf prop33 only A2</Axiom>
+               <New_Terms>Q4, A2, prop33</New_Terms>
+            </Change>
+            <Change id="10">
+               <Axiom>R5 SubClassOf U2</Axiom>
+               <New_Terms>U2, R5</New_Terms>
+            </Change>
+            <Change id="11">
+               <Axiom>U2 SubClassOf H3</Axiom>
+               <New_Terms>U2, H3</New_Terms>
+            </Change>
+            <Change id="12">
+               <Axiom>O8 SubClassOf prop33 only T3</Axiom>
+               <New_Terms>T3, O8, prop33</New_Terms>
+            </Change>
+            <Change id="13">
+               <Axiom>D2 SubClassOf R2</Axiom>
+               <New_Terms>D2, R2</New_Terms>
+            </Change>
+            <Change id="14">
+               <Axiom>L1 SubClassOf O1</Axiom>
+               <New_Terms>L1, O1</New_Terms>
+            </Change>
+            <Change id="15">
+               <Axiom>prop33 Range L8</Axiom>
+               <New_Terms>L8, prop33</New_Terms>
+            </Change>
+            <Change id="16">
+               <Axiom>T6 SubClassOf prop28 only R4</Axiom>
+               <New_Terms>T6, prop28, R4</New_Terms>
+            </Change>
+            <Change id="17">
+               <Axiom>Q9 SubClassOf P6</Axiom>
+               <New_Terms>Q9, P6</New_Terms>
+            </Change>
+            <Change id="18">
+               <Axiom>O6 SubClassOf prop33 some L8</Axiom>
+               <New_Terms>L8, O6, prop33</New_Terms>
+            </Change>
+            <Change id="19">
+               <Axiom>J9 DisjointWith L8</Axiom>
+               <New_Terms>J9, L8</New_Terms>
+            </Change>
+            <Change id="20">
+               <Axiom>prop34 Domain O7</Axiom>
+               <New_Terms>O7, prop34</New_Terms>
+            </Change>
+            <Change id="21">
+               <Axiom>W1 SubClassOf prop28 only F6</Axiom>
+               <New_Terms>prop28, W1, F6</New_Terms>
+            </Change>
+            <Change id="22">
+               <Axiom>Q3 SubClassOf prop28 only N3</Axiom>
+               <New_Terms>Q3, prop28, N3</New_Terms>
+            </Change>
+            <Change id="23">
+               <Axiom>Q5 SubClassOf N7</Axiom>
+               <New_Terms>N7, Q5</New_Terms>
+            </Change>
+            <Change id="24">
+               <Axiom>Q9 SubClassOf prop35 only S8</Axiom>
+               <New_Terms>prop35, Q9, S8</New_Terms>
+            </Change>
+            <Change id="25">
+               <Axiom>T7 SubClassOf I4</Axiom>
+               <New_Terms>T7, I4</New_Terms>
+            </Change>
+            <Change id="26">
+               <Axiom>N9 SubClassOf E6</Axiom>
+               <New_Terms>E6, N9</New_Terms>
+            </Change>
+            <Change id="27">
+               <Axiom>F1 SubClassOf prop10 only I5</Axiom>
+               <New_Terms>I5, F1, prop10</New_Terms>
+            </Change>
+            <Change id="28">
+               <Axiom>O6 SubClassOf H3</Axiom>
+               <New_Terms>H3, O6</New_Terms>
+            </Change>
+            <Change id="29">
+               <Axiom>N7 SubClassOf U3</Axiom>
+               <New_Terms>U3, N7</New_Terms>
+            </Change>
+            <Change id="30">
+               <Axiom>F8 SubClassOf T6</Axiom>
+               <New_Terms>F8, T6</New_Terms>
+            </Change>
+            <Change id="31">
+               <Axiom>U3 SubClassOf M2</Axiom>
+               <New_Terms>U3, M2</New_Terms>
+            </Change>
+            <Change id="32">
+               <Axiom>J7 SubClassOf J4</Axiom>
+               <New_Terms>J7, J4</New_Terms>
+            </Change>
+            <Change id="33">
+               <Axiom>B2 SubClassOf T6</Axiom>
+               <New_Terms>T6, B2</New_Terms>
+            </Change>
+            <Change id="34">
+               <Axiom>I4 SubClassOf O6</Axiom>
+               <New_Terms>I4, O6</New_Terms>
+            </Change>
+            <Change id="35">
+               <Axiom>L9 SubClassOf J7</Axiom>
+               <New_Terms>J7, L9</New_Terms>
+            </Change>
+            <Change id="36">
+               <Axiom>K9 SubClassOf prop35 some L9</Axiom>
+               <New_Terms>K9, prop35, L9</New_Terms>
+            </Change>
+            <Change id="37">
+               <Axiom>prop28 InverseOf prop26</Axiom>
+               <New_Terms>prop26, prop28</New_Terms>
+            </Change>
+            <Change id="38">
+               <Axiom>P5 SubClassOf M3</Axiom>
+               <New_Terms>M3, P5</New_Terms>
+            </Change>
+            <Change id="39">
+               <Axiom>B2 SubClassOf prop28 only V4</Axiom>
+               <New_Terms>prop28, B2, V4</New_Terms>
+            </Change>
+            <Change id="40">
+               <Axiom>S3 SubClassOf Q5</Axiom>
+               <New_Terms>S3, Q5</New_Terms>
+            </Change>
+            <Change id="41">
+               <Axiom>J3 SubClassOf U5</Axiom>
+               <New_Terms>U5, J3</New_Terms>
+            </Change>
+            <Change id="42">
+               <Axiom>F8 SubClassOf prop28 only V4</Axiom>
+               <New_Terms>F8, prop28, V4</New_Terms>
+            </Change>
+            <Change id="43">
+               <Axiom>M5 SubClassOf L8</Axiom>
+               <New_Terms>M5, L8</New_Terms>
+            </Change>
+            <Change id="44">
+               <Axiom>C6 SubClassOf prop10 only F3</Axiom>
+               <New_Terms>F3, C6, prop10</New_Terms>
+            </Change>
+            <Change id="45">
+               <Axiom>T6 SubClassOf prop21 only H5</Axiom>
+               <New_Terms>prop21, T6, H5</New_Terms>
+            </Change>
+            <Change id="46">
+               <Axiom>prop33 Domain O6</Axiom>
+               <New_Terms>O6, prop33</New_Terms>
+            </Change>
+            <Change id="47">
+               <Axiom>V8 SubClassOf N3</Axiom>
+               <New_Terms>V8, N3</New_Terms>
+            </Change>
+            <Change id="48">
+               <Axiom>V1 SubClassOf G4</Axiom>
+               <New_Terms>G4, V1</New_Terms>
+            </Change>
+            <Change id="49">
+               <Axiom>T1 DisjointWith U8</Axiom>
+               <New_Terms>U8, T1</New_Terms>
+            </Change>
+            <Change id="50">
+               <Axiom>S6 SubClassOf U8</Axiom>
+               <New_Terms>S6, U8</New_Terms>
+            </Change>
+            <Change id="51">
+               <Axiom>S2 SubClassOf prop28 some L9</Axiom>
+               <New_Terms>prop28, L9, S2</New_Terms>
+            </Change>
+            <Change id="52">
+               <Axiom>J6 SubClassOf N5</Axiom>
+               <New_Terms>J6, N5</New_Terms>
+            </Change>
+            <Change id="53">
+               <Axiom>prop10 InverseOf prop35</Axiom>
+               <New_Terms>prop35, prop10</New_Terms>
+            </Change>
+            <Change id="54">
+               <Axiom>C6 SubClassOf J3</Axiom>
+               <New_Terms>C6, J3</New_Terms>
+            </Change>
+            <Change id="55">
+               <Axiom>T1 SubClassOf J1</Axiom>
+               <New_Terms>J1, T1</New_Terms>
+            </Change>
+            <Change id="56">
+               <Axiom>Q1 SubClassOf M6</Axiom>
+               <New_Terms>Q1, M6</New_Terms>
+            </Change>
+            <Change id="57">
+               <Axiom>B1 SubClassOf M6</Axiom>
+               <New_Terms>M6, B1</New_Terms>
+            </Change>
+            <Change id="58">
+               <Axiom>F1 SubClassOf J4</Axiom>
+               <New_Terms>J4, F1</New_Terms>
+            </Change>
+            <Change id="59">
+               <Axiom>U6 SubClassOf prop35 only N3</Axiom>
+               <New_Terms>prop35, U6, N3</New_Terms>
+            </Change>
+            <Change id="60">
+               <Axiom>B5 SubClassOf W1</Axiom>
+               <New_Terms>W1, B5</New_Terms>
+            </Change>
+            <Change id="61">
+               <Axiom>M8 SubClassOf S2</Axiom>
+               <New_Terms>M8, S2</New_Terms>
+            </Change>
+            <Change id="62">
+               <Axiom>C1 SubClassOf L8</Axiom>
+               <New_Terms>C1, L8</New_Terms>
+            </Change>
+            <Change id="63">
+               <Axiom>Q4 SubClassOf prop28 only 
+(F7 or V8)</Axiom>
+               <New_Terms>V8, prop28, Q4, F7</New_Terms>
+            </Change>
+            <Change id="64">
+               <Axiom>F7 DisjointWith F6</Axiom>
+               <New_Terms>F6, F7</New_Terms>
+            </Change>
+            <Change id="65">
+               <Axiom>L8 SubClassOf M7</Axiom>
+               <New_Terms>M7, L8</New_Terms>
+            </Change>
+            <Change id="66">
+               <Axiom>R1 SubClassOf J3</Axiom>
+               <New_Terms>R1, J3</New_Terms>
+            </Change>
+            <Change id="67">
+               <Axiom>W1 SubClassOf Q3</Axiom>
+               <New_Terms>Q3, W1</New_Terms>
+            </Change>
+            <Change id="68">
+               <Axiom>H5 SubClassOf prop10 some P6</Axiom>
+               <New_Terms>prop10, P6, H5</New_Terms>
+            </Change>
+            <Change id="69">
+               <Axiom>A9 SubClassOf F8</Axiom>
+               <New_Terms>F8, A9</New_Terms>
+            </Change>
+            <Change id="70">
+               <Axiom>G8 SubClassOf M2</Axiom>
+               <New_Terms>G8, M2</New_Terms>
+            </Change>
+            <Change id="71">
+               <Axiom>N2 SubClassOf prop35 only D9</Axiom>
+               <New_Terms>prop35, N2, D9</New_Terms>
+            </Change>
+            <Change id="72">
+               <Axiom>R9 SubClassOf T1</Axiom>
+               <New_Terms>R9, T1</New_Terms>
+            </Change>
+            <Change id="73">
+               <Axiom>U6 SubClassOf T1</Axiom>
+               <New_Terms>U6, T1</New_Terms>
+            </Change>
+            <Change id="74">
+               <Axiom>A2 SubClassOf I2</Axiom>
+               <New_Terms>I2, A2</New_Terms>
+            </Change>
+            <Change id="75">
+               <Axiom>K2 SubClassOf L8</Axiom>
+               <New_Terms>K2, L8</New_Terms>
+            </Change>
+            <Change id="76">
+               <Axiom>F9 SubClassOf U8</Axiom>
+               <New_Terms>F9, U8</New_Terms>
+            </Change>
+            <Change id="77">
+               <Axiom>I5 SubClassOf U8</Axiom>
+               <New_Terms>I5, U8</New_Terms>
+            </Change>
+            <Change id="78">
+               <Axiom>M6 SubClassOf K2</Axiom>
+               <New_Terms>M6, K2</New_Terms>
+            </Change>
+            <Change id="79">
+               <Axiom>J9 SubClassOf prop10 only J1</Axiom>
+               <New_Terms>J9, J1, prop10</New_Terms>
+            </Change>
+            <Change id="80">
+               <Axiom>M3 SubClassOf U3</Axiom>
+               <New_Terms>M3, U3</New_Terms>
+            </Change>
+            <Change id="81">
+               <Axiom>I4 EquivalentTo O6 and (prop28 some R2) and (prop3 some U2)</Axiom>
+               <New_Terms>U2, prop28, R2, prop3, I4, O6</New_Terms>
+            </Change>
+            <Change id="82">
+               <Axiom>S2 SubClassOf M2</Axiom>
+               <New_Terms>M2, S2</New_Terms>
+            </Change>
+            <Change id="83">
+               <Axiom>P6 SubClassOf U8</Axiom>
+               <New_Terms>P6, U8</New_Terms>
+            </Change>
+            <Change id="84">
+               <Axiom>T6 SubClassOf Q3</Axiom>
+               <New_Terms>T6, Q3</New_Terms>
+            </Change>
+            <Change id="85">
+               <Axiom>R4 DisjointWith F6</Axiom>
+               <New_Terms>R4, F6</New_Terms>
+            </Change>
+            <Change id="86">
+               <Axiom>Q3 SubClassOf O1</Axiom>
+               <New_Terms>O1, Q3</New_Terms>
+            </Change>
+            <Change id="87">
+               <Axiom>D9 SubClassOf H5</Axiom>
+               <New_Terms>H5, D9</New_Terms>
+            </Change>
+            <Change id="88">
+               <Axiom>U3 SubClassOf not (prop28 some L9)</Axiom>
+               <New_Terms>U3, prop28, L9</New_Terms>
+            </Change>
+            <Change id="89">
+               <Axiom>B7 SubClassOf O2</Axiom>
+               <New_Terms>B7, O2</New_Terms>
+            </Change>
+            <Change id="90">
+               <Axiom>J7 SubClassOf prop10 only I5</Axiom>
+               <New_Terms>J7, I5, prop10</New_Terms>
+            </Change>
+            <Change id="91">
+               <Axiom>D4 SubClassOf Q3</Axiom>
+               <New_Terms>D4, Q3</New_Terms>
+            </Change>
+            <Change id="92">
+               <Axiom>J4 SubClassOf R2</Axiom>
+               <New_Terms>J4, R2</New_Terms>
+            </Change>
+            <Change id="93">
+               <Axiom>L1 SubClassOf prop33 some L5</Axiom>
+               <New_Terms>L1, L5, prop33</New_Terms>
+            </Change>
+            <Change id="94">
+               <Axiom>B3 SubClassOf J2</Axiom>
+               <New_Terms>B3, J2</New_Terms>
+            </Change>
+            <Change id="95">
+               <Axiom>Q2 SubClassOf prop26 only M2</Axiom>
+               <New_Terms>prop26, Q2, M2</New_Terms>
+            </Change>
+            <Change id="96">
+               <Axiom>B4 SubClassOf K2</Axiom>
+               <New_Terms>K2, B4</New_Terms>
+            </Change>
+            <Change id="97">
+               <Axiom>V4 SubClassOf D2</Axiom>
+               <New_Terms>D2, V4</New_Terms>
+            </Change>
+            <Change id="98">
+               <Axiom>F5 SubClassOf J3</Axiom>
+               <New_Terms>F5, J3</New_Terms>
+            </Change>
+            <Change id="99">
+               <Axiom>O1 EquivalentTo O6 and (prop25 some J1) and (prop28 some J9)</Axiom>
+               <New_Terms>prop25, O1, J9, J1, prop28, O6</New_Terms>
+            </Change>
+            <Change id="100">
+               <Axiom>M7 SubClassOf prop27 some H3</Axiom>
+               <New_Terms>prop27, H3, M7</New_Terms>
+            </Change>
+            <Change id="101">
+               <Axiom>J8 SubClassOf U4</Axiom>
+               <New_Terms>J8, U4</New_Terms>
+            </Change>
+            <Change id="102">
+               <Axiom>G4 SubClassOf E5</Axiom>
+               <New_Terms>G4, E5</New_Terms>
+            </Change>
+            <Change id="103">
+               <Axiom>K6 SubClassOf L8</Axiom>
+               <New_Terms>K6, L8</New_Terms>
+            </Change>
+            <Change id="104">
+               <Axiom>D7 DisjointWith H3</Axiom>
+               <New_Terms>H3, D7</New_Terms>
+            </Change>
+            <Change id="105">
+               <Axiom>O6 DisjointWith O7</Axiom>
+               <New_Terms>O7, O6</New_Terms>
+            </Change>
+            <Change id="106">
+               <Axiom>H5 SubClassOf D2</Axiom>
+               <New_Terms>D2, H5</New_Terms>
+            </Change>
+            <Change id="107">
+               <Axiom>F1 SubClassOf prop26 only L1</Axiom>
+               <New_Terms>prop26, F1, L1</New_Terms>
+            </Change>
+            <Change id="108">
+               <Axiom>E2 SubClassOf O8</Axiom>
+               <New_Terms>E2, O8</New_Terms>
+            </Change>
+            <Change id="109">
+               <Axiom>W1 SubClassOf prop33 only S4</Axiom>
+               <New_Terms>S4, W1, prop33</New_Terms>
+            </Change>
+            <Change id="110">
+               <Axiom>O9 SubClassOf U8</Axiom>
+               <New_Terms>O9, U8</New_Terms>
+            </Change>
+            <Change id="111">
+               <Axiom>B6 SubClassOf O1</Axiom>
+               <New_Terms>O1, B6</New_Terms>
+            </Change>
+            <Change id="112">
+               <Axiom>F2 SubClassOf F8</Axiom>
+               <New_Terms>F2, F8</New_Terms>
+            </Change>
+            <Change id="113">
+               <Axiom>P2 SubClassOf B2</Axiom>
+               <New_Terms>P2, B2</New_Terms>
+            </Change>
+            <Change id="114">
+               <Axiom>K3 SubClassOf K2</Axiom>
+               <New_Terms>K2, K3</New_Terms>
+            </Change>
+            <Change id="115">
+               <Axiom>I8 SubClassOf E5</Axiom>
+               <New_Terms>I8, E5</New_Terms>
+            </Change>
+            <Change id="116">
+               <Axiom>G7 SubClassOf I5</Axiom>
+               <New_Terms>I5, G7</New_Terms>
+            </Change>
+            <Change id="117">
+               <Axiom>D1 SubClassOf U8</Axiom>
+               <New_Terms>D1, U8</New_Terms>
+            </Change>
+            <Change id="118">
+               <Axiom>A3 SubClassOf B4</Axiom>
+               <New_Terms>A3, B4</New_Terms>
+            </Change>
+            <Change id="119">
+               <Axiom>N3 SubClassOf J9</Axiom>
+               <New_Terms>J9, N3</New_Terms>
+            </Change>
+            <Change id="120">
+               <Axiom>E8 SubClassOf prop15 min 1 G1</Axiom>
+               <New_Terms>prop15, G1, E8</New_Terms>
+            </Change>
+            <Change id="121">
+               <Axiom>S8 SubClassOf H5</Axiom>
+               <New_Terms>S8, H5</New_Terms>
+            </Change>
+            <Change id="122">
+               <Axiom>S1 SubClassOf M3</Axiom>
+               <New_Terms>M3, S1</New_Terms>
+            </Change>
+            <Change id="123">
+               <Axiom>K4 SubClassOf Q5</Axiom>
+               <New_Terms>K4, Q5</New_Terms>
+            </Change>
+            <Change id="124">
+               <Axiom>G8 SubClassOf prop33 some K1</Axiom>
+               <New_Terms>K1, G8, prop33</New_Terms>
+            </Change>
+            <Change id="125">
+               <Axiom>E8 SubClassOf G8</Axiom>
+               <New_Terms>G8, E8</New_Terms>
+            </Change>
+            <Change id="126">
+               <Axiom>O8 SubClassOf Q3</Axiom>
+               <New_Terms>Q3, O8</New_Terms>
+            </Change>
+            <Change id="127">
+               <Axiom>prop13 Range O2</Axiom>
+               <New_Terms>O2, prop13</New_Terms>
+            </Change>
+            <Change id="128">
+               <Axiom>Q7 SubClassOf D2</Axiom>
+               <New_Terms>Q7, D2</New_Terms>
+            </Change>
+            <Change id="129">
+               <Axiom>K9 SubClassOf I5</Axiom>
+               <New_Terms>K9, I5</New_Terms>
+            </Change>
+            <Change id="130">
+               <Axiom>T5 SubClassOf prop35 only Q2</Axiom>
+               <New_Terms>prop35, T5, Q2</New_Terms>
+            </Change>
+            <Change id="131">
+               <Axiom>T5 SubClassOf I5</Axiom>
+               <New_Terms>I5, T5</New_Terms>
+            </Change>
+            <Change id="132">
+               <Axiom>F8 SubClassOf prop25 only F9</Axiom>
+               <New_Terms>prop25, F8, F9</New_Terms>
+            </Change>
+            <Change id="133">
+               <Axiom>H3 SubClassOf R7</Axiom>
+               <New_Terms>H3, R7</New_Terms>
+            </Change>
+            <Change id="134">
+               <Axiom>L6 SubClassOf prop33 some 
+(A3 or G5 or C4)</Axiom>
+               <New_Terms>C4, G5, L6, A3, prop33</New_Terms>
+            </Change>
+            <Change id="135">
+               <Axiom>S4 SubClassOf I2</Axiom>
+               <New_Terms>S4, I2</New_Terms>
+            </Change>
+            <Change id="136">
+               <Axiom>M2 SubClassOf prop28 only J7</Axiom>
+               <New_Terms>J7, prop28, M2</New_Terms>
+            </Change>
+            <Change id="137">
+               <Axiom>F8 SubClassOf prop21 only J5</Axiom>
+               <New_Terms>J5, prop21, F8</New_Terms>
+            </Change>
+            <Change id="138">
+               <Axiom>P8 SubClassOf F8</Axiom>
+               <New_Terms>F8, P8</New_Terms>
+            </Change>
+            <Change id="139">
+               <Axiom>F3 SubClassOf T1</Axiom>
+               <New_Terms>F3, T1</New_Terms>
+            </Change>
+            <Change id="140">
+               <Axiom>D3 SubClassOf J8</Axiom>
+               <New_Terms>J8, D3</New_Terms>
+            </Change>
+            <Change id="141">
+               <Axiom>Q3 SubClassOf prop33 only I2</Axiom>
+               <New_Terms>Q3, I2, prop33</New_Terms>
+            </Change>
+            <Change id="142">
+               <Axiom>F7 DisjointWith V8</Axiom>
+               <New_Terms>V8, F7</New_Terms>
+            </Change>
+            <Change id="143">
+               <Axiom>U4 SubClassOf U8</Axiom>
+               <New_Terms>U4, U8</New_Terms>
+            </Change>
+            <Change id="144">
+               <Axiom>N2 SubClassOf P6</Axiom>
+               <New_Terms>P6, N2</New_Terms>
+            </Change>
+            <Change id="145">
+               <Axiom>U3 DisjointWith S2</Axiom>
+               <New_Terms>U3, S2</New_Terms>
+            </Change>
+            <Change id="146">
+               <Axiom>J1 EquivalentTo prop35 some J9</Axiom>
+               <New_Terms>prop35, J9, J1</New_Terms>
+            </Change>
+            <Change id="147">
+               <Axiom>T8 DisjointWith M7</Axiom>
+               <New_Terms>M7, T8</New_Terms>
+            </Change>
+            <Change id="148">
+               <Axiom>G2 SubClassOf J5</Axiom>
+               <New_Terms>J5, G2</New_Terms>
+            </Change>
+            <Change id="149">
+               <Axiom>F1 SubClassOf prop26 only L6</Axiom>
+               <New_Terms>prop26, F1, L6</New_Terms>
+            </Change>
+            <Change id="150">
+               <Axiom>U2 SubClassOf prop2 only O7</Axiom>
+               <New_Terms>O7, U2, prop2</New_Terms>
+            </Change>
+            <Change id="151">
+               <Axiom>T3 DisjointWith E2</Axiom>
+               <New_Terms>T3, E2</New_Terms>
+            </Change>
+            <Change id="152">
+               <Axiom>I2 SubClassOf L8</Axiom>
+               <New_Terms>I2, L8</New_Terms>
+            </Change>
+            <Change id="153">
+               <Axiom>Q2 SubClassOf J7</Axiom>
+               <New_Terms>J7, Q2</New_Terms>
+            </Change>
+            <Change id="154">
+               <Axiom>R7 DisjointWith T8</Axiom>
+               <New_Terms>R7, T8</New_Terms>
+            </Change>
+            <Change id="155">
+               <Axiom>O7 SubClassOf H3</Axiom>
+               <New_Terms>O7, H3</New_Terms>
+            </Change>
+            <Change id="156">
+               <Axiom>S5 SubClassOf J1</Axiom>
+               <New_Terms>S5, J1</New_Terms>
+            </Change>
+            <Change id="157">
+               <Axiom>N6 SubClassOf V4</Axiom>
+               <New_Terms>N6, V4</New_Terms>
+            </Change>
+            <Change id="158">
+               <Axiom>T3 DisjointWith A2</Axiom>
+               <New_Terms>T3, A2</New_Terms>
+            </Change>
+            <Change id="159">
+               <Axiom>K9 SubClassOf prop35 some Q2</Axiom>
+               <New_Terms>K9, prop35, Q2</New_Terms>
+            </Change>
+            <Change id="160">
+               <Axiom>V8 DisjointWith F6</Axiom>
+               <New_Terms>V8, F6</New_Terms>
+            </Change>
+            <Change id="161">
+               <Axiom>N8 SubClassOf J3</Axiom>
+               <New_Terms>N8, J3</New_Terms>
+            </Change>
+            <Change id="162">
+               <Axiom>G3 SubClassOf O8</Axiom>
+               <New_Terms>G3, O8</New_Terms>
+            </Change>
+            <Change id="163">
+               <Axiom>O1 SubClassOf O6</Axiom>
+               <New_Terms>O1, O6</New_Terms>
+            </Change>
+            <Change id="164">
+               <Axiom>B6 SubClassOf prop33 some K3</Axiom>
+               <New_Terms>B6, prop33, K3</New_Terms>
+            </Change>
+            <Change id="165">
+               <Axiom>K1 SubClassOf L8</Axiom>
+               <New_Terms>K1, L8</New_Terms>
+            </Change>
+            <Change id="166">
+               <Axiom>H2 SubClassOf I5</Axiom>
+               <New_Terms>I5, H2</New_Terms>
+            </Change>
+            <Change id="167">
+               <Axiom>Q4 SubClassOf K7</Axiom>
+               <New_Terms>Q4, K7</New_Terms>
+            </Change>
+            <Change id="168">
+               <Axiom>F7 DisjointWith R4</Axiom>
+               <New_Terms>R4, F7</New_Terms>
+            </Change>
+            <Change id="169">
+               <Axiom>A1 SubClassOf U2</Axiom>
+               <New_Terms>U2, A1</New_Terms>
+            </Change>
+            <Change id="170">
+               <Axiom>G5 SubClassOf B4</Axiom>
+               <New_Terms>G5, B4</New_Terms>
+            </Change>
+            <Change id="171">
+               <Axiom>U5 SubClassOf J9</Axiom>
+               <New_Terms>J9, U5</New_Terms>
+            </Change>
+            <Change id="172">
+               <Axiom>prop2 SubPropertyOf prop16</Axiom>
+               <New_Terms>prop16, prop2</New_Terms>
+            </Change>
+            <Change id="173">
+               <Axiom>E5 SubClassOf U5</Axiom>
+               <New_Terms>E5, U5</New_Terms>
+            </Change>
+            <Change id="174">
+               <Axiom>G1 SubClassOf O2</Axiom>
+               <New_Terms>O2, G1</New_Terms>
+            </Change>
+            <Change id="175">
+               <Axiom> Transitive: prop16</Axiom>
+               <New_Terms>prop16</New_Terms>
+            </Change>
+            <Change id="176">
+               <Axiom>prop15 InverseOf prop18</Axiom>
+               <New_Terms>prop15, prop18</New_Terms>
+            </Change>
+            <Change id="177">
+               <Axiom>O3 SubClassOf V4</Axiom>
+               <New_Terms>O3, V4</New_Terms>
+            </Change>
+            <Change id="178">
+               <Axiom>R8 SubClassOf E6</Axiom>
+               <New_Terms>E6, R8</New_Terms>
+            </Change>
+            <Change id="179">
+               <Axiom>J5 SubClassOf D2</Axiom>
+               <New_Terms>J5, D2</New_Terms>
+            </Change>
+            <Change id="180">
+               <Axiom>J2 SubClassOf K2</Axiom>
+               <New_Terms>K2, J2</New_Terms>
+            </Change>
+            <Change id="181">
+               <Axiom>D2 SubClassOf prop2 only N3</Axiom>
+               <New_Terms>prop2, D2, N3</New_Terms>
+            </Change>
+            <Change id="182">
+               <Axiom>F3 SubClassOf prop35 only V1</Axiom>
+               <New_Terms>F3, prop35, V1</New_Terms>
+            </Change>
+            <Change id="183">
+               <Axiom> Asymmetric: prop27</Axiom>
+               <New_Terms>prop27</New_Terms>
+            </Change>
+            <Change id="184">
+               <Axiom>C4 SubClassOf B4</Axiom>
+               <New_Terms>C4, B4</New_Terms>
+            </Change>
+            <Change id="185">
+               <Axiom>U8 SubClassOf J1</Axiom>
+               <New_Terms>J1, U8</New_Terms>
+            </Change>
+            <Change id="186">
+               <Axiom>Q5 SubClassOf M3</Axiom>
+               <New_Terms>M3, Q5</New_Terms>
+            </Change>
+            <Change id="187">
+               <Axiom>K7 SubClassOf Q3</Axiom>
+               <New_Terms>Q3, K7</New_Terms>
+            </Change>
+            <Change id="188">
+               <Axiom>N5 SubClassOf U4</Axiom>
+               <New_Terms>N5, U4</New_Terms>
+            </Change>
+            <Change id="189">
+               <Axiom>Q4 SubClassOf D4</Axiom>
+               <New_Terms>D4, Q4</New_Terms>
+            </Change>
+            <Change id="190">
+               <Axiom>T3 SubClassOf I2</Axiom>
+               <New_Terms>T3, I2</New_Terms>
+            </Change>
+            <Change id="191">
+               <Axiom>K4 SubClassOf prop15 some G1</Axiom>
+               <New_Terms>prop15, K4, G1</New_Terms>
+            </Change>
+            <Change id="192">
+               <Axiom>P6 DisjointWith F9</Axiom>
+               <New_Terms>F9, P6</New_Terms>
+            </Change>
+            <Change id="193">
+               <Axiom>prop15 SubPropertyOf prop13</Axiom>
+               <New_Terms>prop15, prop13</New_Terms>
+            </Change>
+            <Change id="194">
+               <Axiom>E6 SubClassOf U4</Axiom>
+               <New_Terms>U4, E6</New_Terms>
+            </Change>
+            <Change id="195">
+               <Axiom>J2 DisjointWith M6</Axiom>
+               <New_Terms>M6, J2</New_Terms>
+            </Change>
+            <Change id="196">
+               <Axiom>O7 SubClassOf prop34 only O6</Axiom>
+               <New_Terms>O7, prop34, O6</New_Terms>
+            </Change>
+            <Change id="197">
+               <Axiom>E9 SubClassOf N5</Axiom>
+               <New_Terms>E9, N5</New_Terms>
+            </Change>
+            <Change id="198">
+               <Axiom>I3 SubClassOf I4</Axiom>
+               <New_Terms>I3, I4</New_Terms>
+            </Change>
+            <Change id="199">
+               <Axiom>I1 SubClassOf J2</Axiom>
+               <New_Terms>I1, J2</New_Terms>
+            </Change>
+            <Change id="200">
+               <Axiom>R5 SubClassOf prop29 only V4</Axiom>
+               <New_Terms>R5, prop29, V4</New_Terms>
+            </Change>
+            <Change id="201">
+               <Axiom>T6 SubClassOf prop33 only S4</Axiom>
+               <New_Terms>S4, T6, prop33</New_Terms>
+            </Change>
+            <Change id="202">
+               <Axiom>J9 SubClassOf M7</Axiom>
+               <New_Terms>J9, M7</New_Terms>
+            </Change>
+            <Change id="203">
+               <Axiom>T2 SubClassOf O1</Axiom>
+               <New_Terms>T2, O1</New_Terms>
+            </Change>
+            <Change id="204">
+               <Axiom>L5 SubClassOf M6</Axiom>
+               <New_Terms>M6, L5</New_Terms>
+            </Change>
+            <Change id="205">
+               <Axiom>H9 SubClassOf I5</Axiom>
+               <New_Terms>I5, H9</New_Terms>
+            </Change>
+            <Change id="206">
+               <Axiom>R4 DisjointWith V8</Axiom>
+               <New_Terms>V8, R4</New_Terms>
+            </Change>
+            <Change id="207">
+               <Axiom>prop18 Domain G1</Axiom>
+               <New_Terms>G1, prop18</New_Terms>
+            </Change>
+            <Change id="208">
+               <Axiom>O2 SubClassOf D7</Axiom>
+               <New_Terms>O2, D7</New_Terms>
+            </Change>
+            <Change id="209">
+               <Axiom>Q2 DisjointWith L9</Axiom>
+               <New_Terms>Q2, L9</New_Terms>
+            </Change>
+            <Change id="210">
+               <Axiom>C3 SubClassOf M3</Axiom>
+               <New_Terms>M3, C3</New_Terms>
+            </Change>
+            <Change id="211">
+               <Axiom>R7 DisjointWith M7</Axiom>
+               <New_Terms>M7, R7</New_Terms>
+            </Change>
+            <Change id="212">
+               <Axiom>U1 SubClassOf N5</Axiom>
+               <New_Terms>N5, U1</New_Terms>
+            </Change>
+            <Change id="213">
+               <Axiom> Transitive: prop2</Axiom>
+               <New_Terms>prop2</New_Terms>
+            </Change>
+            <Change id="214">
+               <Axiom>J7 SubClassOf prop10 only E6</Axiom>
+               <New_Terms>J7, prop10, E6</New_Terms>
+            </Change>
+            <Change id="215">
+               <Axiom>M2 SubClassOf O1</Axiom>
+               <New_Terms>O1, M2</New_Terms>
+            </Change>
+            <Change id="216">
+               <Axiom>C6 SubClassOf prop10 only U6</Axiom>
+               <New_Terms>C6, prop10, U6</New_Terms>
+            </Change>
+            <Change id="217">
+               <Axiom>F6 SubClassOf N3</Axiom>
+               <New_Terms>F6, N3</New_Terms>
+            </Change>
+            <Change id="218">
+               <Axiom>O6 SubClassOf prop13 min 1 O2</Axiom>
+               <New_Terms>O2, O6, prop13</New_Terms>
+            </Change>
+            <Change id="219">
+               <Axiom>L6 SubClassOf O1</Axiom>
+               <New_Terms>O1, L6</New_Terms>
+            </Change>
+            <Change id="220">
+               <Axiom>R4 SubClassOf N3</Axiom>
+               <New_Terms>R4, N3</New_Terms>
+            </Change>
+            <Change id="221">
+               <Axiom>prop34 Range O6</Axiom>
+               <New_Terms>prop34, O6</New_Terms>
+            </Change>
+            <Change id="222">
+               <Axiom>O8 SubClassOf prop28 only V8</Axiom>
+               <New_Terms>V8, prop28, O8</New_Terms>
+            </Change>
+            <Change id="223">
+               <Axiom>J9 SubClassOf prop26 only O6</Axiom>
+               <New_Terms>prop26, J9, O6</New_Terms>
+            </Change>
+            <Change id="224">
+               <Axiom> Reflexive: prop16</Axiom>
+               <New_Terms>prop16</New_Terms>
+            </Change>
+            <Change id="225">
+               <Axiom>F7 SubClassOf N3</Axiom>
+               <New_Terms>N3, F7</New_Terms>
+            </Change>
+            <Change id="226">
+               <Axiom>M4 SubClassOf I5</Axiom>
+               <New_Terms>I5, M4</New_Terms>
+            </Change>
+         </NewDescription>
+         <PureAddition id="padd" size="0"/>
+         <PureAdditionWithNewTerms id="paddnt" size="0"/>
+         <NewModifiedDefinition id="stequiv" size="0"/>
+         <NewModifiedDefinitionWithNewTerms id="stequivnt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffadds" size="0">
+         <AddedRedundancy id="ared" size="0"/>
+         <AddedRewrite id="arws" size="0">
+            <AddedCompleteRewrite id="arw" size="0"/>
+            <AddedPartialRewrite id="aprw" size="0"/>
+         </AddedRewrite>
+         <AddedProspectiveRedundancy id="apred" size="0">
+            <AddedReshuffleProspectiveRedundancy id="aavred" size="0"/>
+            <AddedNewProspectiveRedundancy id="anpred" size="0">
+               <AddedNovelProspectiveRedundancy id="weak" size="0"/>
+               <AddedPseudoNovelProspectiveRedundancy id="apseudopred" size="0"/>
+            </AddedNewProspectiveRedundancy>
+         </AddedProspectiveRedundancy>
+      </Ineffectual>
+   </Additions>
+   <Removals id="rems" size="70">
+      <Effectual id="effrems" size="70">
+         <Weakening id="wk" size="0"/>
+         <WeakeningWithRetiredTerms id="wkrt" size="0"/>
+         <RetiredDescription id="retdesc" size="70">
+            <Change id="227">
+               <Axiom>B9 EquivalentTo prop31 some 
+(V6 or (prop4 some V6))</Axiom>
+               <Retired_Terms>V6, prop4, B9, prop31</Retired_Terms>
+            </Change>
+            <Change id="228">
+               <Axiom>P9 EquivalentTo C9 and (prop23 some P4)</Axiom>
+               <Retired_Terms>P9, C9, prop23, P4</Retired_Terms>
+            </Change>
+            <Change id="229">
+               <Axiom>A5 EquivalentTo C9 and (prop23 some L3)</Axiom>
+               <Retired_Terms>L3, C9, prop23, A5</Retired_Terms>
+            </Change>
+            <Change id="230">
+               <Axiom>prop23 Range L3</Axiom>
+               <Retired_Terms>L3, prop23</Retired_Terms>
+            </Change>
+            <Change id="231">
+               <Axiom>V6 SubClassOf D6</Axiom>
+               <Retired_Terms>V6, D6</Retired_Terms>
+            </Change>
+            <Change id="232">
+               <Axiom>M9 DisjointWith O5</Axiom>
+               <Retired_Terms>M9, O5</Retired_Terms>
+            </Change>
+            <Change id="233">
+               <Axiom>prop17 Domain L3</Axiom>
+               <Retired_Terms>L3, prop17</Retired_Terms>
+            </Change>
+            <Change id="234">
+               <Axiom>D8 SubClassOf M9 or O5</Axiom>
+               <Retired_Terms>M9, D8, O5</Retired_Terms>
+            </Change>
+            <Change id="235">
+               <Axiom>I9 SubClassOf prop5 only O5</Axiom>
+               <Retired_Terms>prop5, I9, O5</Retired_Terms>
+            </Change>
+            <Change id="236">
+               <Axiom>T9 SubClassOf M1</Axiom>
+               <Retired_Terms>T9, M1</Retired_Terms>
+            </Change>
+            <Change id="237">
+               <Axiom>prop23 Domain C9</Axiom>
+               <Retired_Terms>C9, prop23</Retired_Terms>
+            </Change>
+            <Change id="238">
+               <Axiom>H7 SubClassOf prop17 only C7</Axiom>
+               <Retired_Terms>prop17, H7, C7</Retired_Terms>
+            </Change>
+            <Change id="239">
+               <Axiom>V7 SubClassOf L3</Axiom>
+               <Retired_Terms>V7, L3</Retired_Terms>
+            </Change>
+            <Change id="240">
+               <Axiom>N4 EquivalentTo C9 and (prop11 some L7)</Axiom>
+               <Retired_Terms>C9, N4, prop11, L7</Retired_Terms>
+            </Change>
+            <Change id="241">
+               <Axiom>L3 or (prop4 some L3) DisjointWith V5 or (prop4 some V5)</Axiom>
+               <Retired_Terms>L3, prop4, V5</Retired_Terms>
+            </Change>
+            <Change id="242">
+               <Axiom>H8 SubClassOf D6</Axiom>
+               <Retired_Terms>H8, D6</Retired_Terms>
+            </Change>
+            <Change id="243">
+               <Axiom>P1 SubClassOf S9</Axiom>
+               <Retired_Terms>P1, S9</Retired_Terms>
+            </Change>
+            <Change id="244">
+               <Axiom>E1 SubClassOf L3</Axiom>
+               <Retired_Terms>L3, E1</Retired_Terms>
+            </Change>
+            <Change id="245">
+               <Axiom>V2 SubClassOf M9</Axiom>
+               <Retired_Terms>V2, M9</Retired_Terms>
+            </Change>
+            <Change id="246">
+               <Axiom>P4 SubClassOf prop17 some W2</Axiom>
+               <Retired_Terms>P4, prop17, W2</Retired_Terms>
+            </Change>
+            <Change id="247">
+               <Axiom>C2 EquivalentTo C9 and A7</Axiom>
+               <Retired_Terms>A7, C9, C2</Retired_Terms>
+            </Change>
+            <Change id="248">
+               <Axiom>P1 EquivalentTo C9 and (prop30 some M1)</Axiom>
+               <Retired_Terms>P1, C9, prop30, M1</Retired_Terms>
+            </Change>
+            <Change id="249">
+               <Axiom>P7 SubClassOf V5</Axiom>
+               <Retired_Terms>P7, V5</Retired_Terms>
+            </Change>
+            <Change id="250">
+               <Axiom>I7 SubClassOf M1</Axiom>
+               <Retired_Terms>I7, M1</Retired_Terms>
+            </Change>
+            <Change id="251">
+               <Axiom>M9 SubClassOf D8</Axiom>
+               <Retired_Terms>M9, D8</Retired_Terms>
+            </Change>
+            <Change id="252">
+               <Axiom>N1 EquivalentTo C9 and (prop30 some I6) and (prop31 some (prop4 some V6))</Axiom>
+               <Retired_Terms>V6, I6, C9, prop30, prop4, prop31, N1</Retired_Terms>
+            </Change>
+            <Change id="253">
+               <Axiom>prop23 InverseOf prop22</Axiom>
+               <Retired_Terms>prop22, prop23</Retired_Terms>
+            </Change>
+            <Change id="254">
+               <Axiom>prop1 InverseOf prop4</Axiom>
+               <Retired_Terms>prop4, prop1</Retired_Terms>
+            </Change>
+            <Change id="255">
+               <Axiom>H7 SubClassOf L3</Axiom>
+               <Retired_Terms>L3, H7</Retired_Terms>
+            </Change>
+            <Change id="256">
+               <Axiom>H1 EquivalentTo C9 and (prop11 some P4)</Axiom>
+               <Retired_Terms>C9, P4, prop11, H1</Retired_Terms>
+            </Change>
+            <Change id="257">
+               <Axiom>E7 SubClassOf M1</Axiom>
+               <Retired_Terms>E7, M1</Retired_Terms>
+            </Change>
+            <Change id="258">
+               <Axiom>prop23 SubPropertyOf prop11</Axiom>
+               <Retired_Terms>prop23, prop11</Retired_Terms>
+            </Change>
+            <Change id="259">
+               <Axiom>P3 EquivalentTo U7 and (prop17 some 
+(E3 and (prop4 some H7)))</Axiom>
+               <Retired_Terms>P3, E3, prop4, prop17, U7, H7</Retired_Terms>
+            </Change>
+            <Change id="260">
+               <Axiom>H4 SubClassOf M1</Axiom>
+               <Retired_Terms>H4, M1</Retired_Terms>
+            </Change>
+            <Change id="261">
+               <Axiom>prop19 SubPropertyOf prop7</Axiom>
+               <Retired_Terms>prop7, prop19</Retired_Terms>
+            </Change>
+            <Change id="262">
+               <Axiom>L4 SubClassOf M1</Axiom>
+               <Retired_Terms>L4, M1</Retired_Terms>
+            </Change>
+            <Change id="263">
+               <Axiom>V3 EquivalentTo A4 and L2 and C9</Axiom>
+               <Retired_Terms>L2, C9, V3, A4</Retired_Terms>
+            </Change>
+            <Change id="264">
+               <Axiom>L7 DisjointWith P4</Axiom>
+               <Retired_Terms>P4, L7</Retired_Terms>
+            </Change>
+            <Change id="265">
+               <Axiom>prop19 Range Q6</Axiom>
+               <Retired_Terms>Q6, prop19</Retired_Terms>
+            </Change>
+            <Change id="266">
+               <Axiom>G6 EquivalentTo C9 and (prop30 some H4)</Axiom>
+               <Retired_Terms>C9, prop30, G6, H4</Retired_Terms>
+            </Change>
+            <Change id="267">
+               <Axiom>A4 SubClassOf S9</Axiom>
+               <Retired_Terms>S9, A4</Retired_Terms>
+            </Change>
+            <Change id="268">
+               <Axiom>prop12 SubPropertyOf prop7</Axiom>
+               <Retired_Terms>prop7, prop12</Retired_Terms>
+            </Change>
+            <Change id="269">
+               <Axiom>Q8 EquivalentTo C9 and (prop23 min 3 C8)</Axiom>
+               <Retired_Terms>Q8, C9, prop23</Retired_Terms>
+            </Change>
+            <Change id="270">
+               <Axiom>I6 SubClassOf M1</Axiom>
+               <Retired_Terms>I6, M1</Retired_Terms>
+            </Change>
+            <Change id="271">
+               <Axiom>B8 SubClassOf O5</Axiom>
+               <Retired_Terms>B8, O5</Retired_Terms>
+            </Change>
+            <Change id="272">
+               <Axiom>C9 SubClassOf L3</Axiom>
+               <Retired_Terms>L3, C9</Retired_Terms>
+            </Change>
+            <Change id="273">
+               <Axiom>O4 EquivalentTo L3 and (prop17 only (not (L3))) and (prop17 only (not (prop4 some L3)))</Axiom>
+               <Retired_Terms>L3, prop4, prop17, O4</Retired_Terms>
+            </Change>
+            <Change id="274">
+               <Axiom>U7 SubClassOf O4</Axiom>
+               <Retired_Terms>U7, O4</Retired_Terms>
+            </Change>
+            <Change id="275">
+               <Axiom>D8 SubClassOf E4</Axiom>
+               <Retired_Terms>E4, D8</Retired_Terms>
+            </Change>
+            <Change id="276">
+               <Axiom>L7 SubClassOf L3</Axiom>
+               <Retired_Terms>L3, L7</Retired_Terms>
+            </Change>
+            <Change id="277">
+               <Axiom>E1 SubClassOf prop17 only K8</Axiom>
+               <Retired_Terms>E1, prop17, K8</Retired_Terms>
+            </Change>
+            <Change id="278">
+               <Axiom>Q6 EquivalentTo S9 and D5 and C9</Axiom>
+               <Retired_Terms>Q6, D5, C9, S9</Retired_Terms>
+            </Change>
+            <Change id="279">
+               <Axiom>V3 SubClassOf (prop23 some L3) and (prop23 only L7)</Axiom>
+               <Retired_Terms>L3, prop23, L7, V3</Retired_Terms>
+            </Change>
+            <Change id="280">
+               <Axiom>C7 SubClassOf V5</Axiom>
+               <Retired_Terms>V5, C7</Retired_Terms>
+            </Change>
+            <Change id="281">
+               <Axiom>G9 EquivalentTo C9 and (prop30 some T9)</Axiom>
+               <Retired_Terms>C9, prop30, G9, T9</Retired_Terms>
+            </Change>
+            <Change id="282">
+               <Axiom>O5 SubClassOf D8</Axiom>
+               <Retired_Terms>D8, O5</Retired_Terms>
+            </Change>
+            <Change id="283">
+               <Axiom>A8 EquivalentTo prop22 some C8</Axiom>
+               <Retired_Terms>prop22, A8</Retired_Terms>
+            </Change>
+            <Change id="284">
+               <Axiom>prop12 Range F4</Axiom>
+               <Retired_Terms>F4, prop12</Retired_Terms>
+            </Change>
+            <Change id="285">
+               <Axiom>prop8 InverseOf prop17</Axiom>
+               <Retired_Terms>prop8, prop17</Retired_Terms>
+            </Change>
+            <Change id="286">
+               <Axiom>I9 EquivalentTo Q6 and (prop30 some 
+(T9 and V9))</Axiom>
+               <Retired_Terms>Q6, I9, V9, prop30, T9</Retired_Terms>
+            </Change>
+            <Change id="287">
+               <Axiom>H6 EquivalentTo S9 and C9</Axiom>
+               <Retired_Terms>C9, H6, S9</Retired_Terms>
+            </Change>
+            <Change id="288">
+               <Axiom>A6 SubClassOf E4</Axiom>
+               <Retired_Terms>A6, E4</Retired_Terms>
+            </Change>
+            <Change id="289">
+               <Axiom>S7 EquivalentTo C9 and (prop30 some I7)</Axiom>
+               <Retired_Terms>I7, C9, prop30, S7</Retired_Terms>
+            </Change>
+            <Change id="290">
+               <Axiom>F4 EquivalentTo S9 and L2 and C9</Axiom>
+               <Retired_Terms>L2, C9, F4, S9</Retired_Terms>
+            </Change>
+            <Change id="291">
+               <Axiom>K8 SubClassOf prop4 some P7</Axiom>
+               <Retired_Terms>prop4, K8, P7</Retired_Terms>
+            </Change>
+            <Change id="292">
+               <Axiom>S9 DisjointWith A7</Axiom>
+               <Retired_Terms>A7, S9</Retired_Terms>
+            </Change>
+            <Change id="293">
+               <Axiom>L3 SubClassOf prop17 some C8</Axiom>
+               <Retired_Terms>L3, prop17</Retired_Terms>
+            </Change>
+            <Change id="294">
+               <Axiom>prop5 Range E4</Axiom>
+               <Retired_Terms>prop5, E4</Retired_Terms>
+            </Change>
+            <Change id="295">
+               <Axiom>K5 EquivalentTo C9 and (prop23 some L7)</Axiom>
+               <Retired_Terms>C9, prop23, K5, L7</Retired_Terms>
+            </Change>
+            <Change id="296">
+               <Axiom>R6 SubClassOf L3</Axiom>
+               <Retired_Terms>L3, R6</Retired_Terms>
+            </Change>
+         </RetiredDescription>
+         <PureRemoval id="prem" size="0"/>
+         <PureRemovalWithRetiredTerms id="premrt" size="0"/>
+         <RetiredModifiedDefinition id="wkequiv" size="0"/>
+         <RetiredModifiedDefinitionWithRetiredTerms id="wkequivrt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffrems" size="0">
+         <RemovedRedundancy id="rred" size="0"/>
+         <RemovedRewrite id="rrws" size="0">
+            <RemovedCompleteRewrite id="rrw" size="0"/>
+            <RemovedPartialRewrite id="rprw" size="0"/>
+         </RemovedRewrite>
+         <RemovedProspectiveRedundancy id="rpred" size="0">
+            <RemovedReshuffleProspectiveRedundancy id="ravred" size="0"/>
+            <RemovedNewProspectiveRedundancy id="rnpred" size="0">
+               <RemovedNovelProspectiveRedundancy id="strength" size="0"/>
+               <RemovedPseudoNovelProspectiveRedundancy id="rpseudopred" size="0"/>
+            </RemovedNewProspectiveRedundancy>
+         </RemovedProspectiveRedundancy>
+      </Ineffectual>
+   </Removals>
+</root>
