@@ -1,0 +1,1700 @@
+<html xmlns:ecco="http://owl.cs.manchester.ac.uk/diff">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ecco</title>
+      <link rel="stylesheet" href="css/style.css"><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery-1.4.4.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="js/jquery.checkboxtree.js"></script><script type="text/javascript">
+					$(document).ready(function() {
+						$('#tree1').checkboxTree({
+							initializeChecked: 'expanded',
+							initializeUnchecked: 'collapsed',
+							collapseDuration: 50,
+							expandDuration: 100,
+							collapseImage: 'images/minus.png',
+							expandImage: 'images/plus.png',
+							onCheck: {
+								node: 'expand',
+								ancestors: 'checkIfFull',
+								descendants: 'check'
+							},
+							onUncheck: {
+								node: 'collapse',
+								ancestors: 'uncheck'
+							}
+						});
+						$('#tree2').checkboxTree({
+							initializeChecked: 'expanded',
+							initializeUnchecked: 'collapsed',
+							collapseDuration: 50,
+							expandDuration: 100,
+							collapseImage: 'images/minus.png',
+							expandImage: 'images/plus.png',
+							onCheck: {
+								node: 'expand',
+								ancestors: 'checkIfFull',
+								descendants: 'check'
+							},
+							onUncheck: {
+								node: 'collapse',
+								ancestors: 'uncheck'
+							}
+						});
+						$('#tree1-expandAll').click(function(){
+							$('#tree1').checkboxTree('expandAll');
+						});
+						$('#tree1-collapseAll').click(function(){
+							$('#tree1').checkboxTree('collapseAll');
+						});
+						$('#tree2-expandAll').click(function(){
+							$('#tree2').checkboxTree('expandAll');
+						});
+						$('#tree2-collapseAll').click(function(){
+							$('#tree2').checkboxTree('collapseAll');
+						});
+					});
+				</script></head>
+   <body>
+      <h1><br></h1>
+      				[<a href="../../index.jsp">Back Home</a>]
+      				
+      <form action="getXml" method="post" class="inl">
+         						[<a id="top3" target="_blank" href="EccoChangeSet_labels.xml">Source XML</a>]
+         					
+      </form><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp; [<a id="top1" href="javascript:;" onClick="showAll();">Show All</a> | 
+      				<a id="top2" href="javascript:;" onClick="hideAll();">Hide All</a>] <br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="865cd841-559b-4495-bec7-c291b76ec234-lbl"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
+      <table width="70%" style="table-layout:fixed;">
+         <tr>
+            <th class="topright"><input type="checkbox" name="removals" onClick="toggleGroup('removals')">  
+               <h3 style="display:inline;">Removals (70)</h3>
+            </th>
+            <th class="topleft"><input type="checkbox" name="additions" onClick="toggleGroup('additions')">  
+               <h3 style="display:inline;">Additions (226)</h3>
+            </th>
+         </tr>
+         <tr>
+            <td class="topright">
+               <ul id="tree1">
+                  <li>  <input type="checkbox" name="effRemsTrigger" onClick="toggleChanges('effRems','effRemsTrigger')">  
+                     <h4 style="display:inline;">Effectual (70)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, and are not entailed by Ontology 2');"><ul>
+                        <li>  Weakenings (0)</li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effRems" onClick="toggleDiv('retdesc');">  <a href="#retdesc">Retired Descriptions (70)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing retired terms, i.e., terms that no longer exist in Ontology 2');"></li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pure Removals (0)
+                        </li><br></ul>
+                  </li><br><li>  <input type="checkbox" name="ineffRemsTrigger" onClick="toggleChanges('ineffRems','ineffRemsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (0)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, but are entailed by Ontology 2, i.e., that have been removed but are still entailed');"><ul>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Prospective Redundancy (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+            <td class="topleft" style="vertical-align:top">
+               <ul id="tree2">
+                  <li>  <input type="checkbox" name="effAddsTrigger" onClick="toggleChanges('effAdds','effAddsTrigger')">  
+                     <h4 style="display:inline;">Effectual (226)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, and are not entailed by Ontology 1');"><ul>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Strengthenings (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('newdesc');">  <a href="#newdesc">New Descriptions (226)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing newly created terms, i.e., terms that did not exist in Ontology 1');"></li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pure Additions (0)
+                        </li>
+                     </ul>
+                  </li><br><li>  <input type="checkbox" name="ineffAddsTrigger" onClick="toggleChanges('ineffAdds','ineffAddsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (0)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, but are entailed by Ontology 1, i.e., that have been added but were already entailed');"><ul>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Retrospective Redundancy (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td class="topright">[<a href="javascript:void(0);" id="tree1-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree1-collapseAll">Collapse All</a>]
+            </td>
+            <td class="topleft">[<a href="javascript:void(0);" id="tree2-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree2-collapseAll">Collapse All</a>]
+            </td>
+         </tr>
+      </table>
+      <table width="100%" style="table-layout:fixed;">
+         <colgroup>
+            <col>
+            <col width="47.5%">
+            <col width="47.5%">
+         </colgroup>
+         
+         
+         
+         
+         
+         <tbody id="newdesc" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4>New Descriptions (226) <a href="#">[back to top]</a></h4>
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">New Description Axiom in Ontology 2</th>
+            </tr>
+            
+            <tr class="addition">
+               <td>1</td>
+               <td colspan="2">NonPhysicalObject<span class="subclass"> SubClassOf </span>Endurant. <br><i>New Terms: Endurant, NonPhysicalObject</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>2</td>
+               <td colspan="2">Manual_Wheelchair<span class="subclass"> SubClassOf </span>assistsWith<span class="some"> some </span>LowerLimbMobility. <br><i>New Terms: LowerLimbMobility, Manual_Wheelchair, assistsWith</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>3</td>
+               <td colspan="2">IntellectualGrowth<span class="subclass"> SubClassOf </span>IntellectualAbility. <br><i>New Terms: IntellectualAbility, IntellectualGrowth</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>4</td>
+               <td colspan="2">MultipleDisability<span class="subclass"> EquivalentTo </span>(MentalDisability<br><span class="keyword"> or </span>PhysicalDisability)<br><span class="keyword"> and </span>(affects min 2 Ability). <br><i>New Terms: MultipleDisability, affects, Ability, PhysicalDisability, MentalDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>5</td>
+               <td colspan="2">PhysicalAbility<span class="subclass"> SubClassOf </span>Ability. <br><i>New Terms: Ability, PhysicalAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>6</td>
+               <td colspan="2">Mobility<span class="subclass"> SubClassOf </span>Functionality. <br><i>New Terms: Mobility, Functionality</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>7</td>
+               <td colspan="2">Achondroplasia<span class="subclass"> SubClassOf </span>PhysicalDisability. <br><i>New Terms: Achondroplasia, PhysicalDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>8</td>
+               <td colspan="2">DisabledPersonsOrganisation<span class="subclass"> SubClassOf </span>ServiceProvider. <br><i>New Terms: ServiceProvider, DisabledPersonsOrganisation</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>9</td>
+               <td colspan="2">TelephoneAid<span class="subclass"> SubClassOf </span>hasFunction<span class="some"> only </span>Telephone_Communication. <br><i>New Terms: TelephoneAid, Telephone_Communication, hasFunction</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>10</td>
+               <td colspan="2">Eye<span class="subclass"> SubClassOf </span>BodyPart. <br><i>New Terms: BodyPart, Eye</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>11</td>
+               <td colspan="2">BodyPart<span class="subclass"> SubClassOf </span>PhysicalObject. <br><i>New Terms: BodyPart, PhysicalObject</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>12</td>
+               <td colspan="2">FaceToFaceCommunicationDevice<span class="subclass"> SubClassOf </span>hasFunction<span class="some"> only </span>FaceToFace_Communication. <br><i>New Terms: FaceToFace_Communication, FaceToFaceCommunicationDevice, hasFunction</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>13</td>
+               <td colspan="2">SensoryAbility<span class="subclass"> SubClassOf </span>PhysicalAbility. <br><i>New Terms: SensoryAbility, PhysicalAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>14</td>
+               <td colspan="2">Garden_Tool<span class="subclass"> SubClassOf </span>AssistiveDevice. <br><i>New Terms: Garden_Tool, AssistiveDevice</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>15</td>
+               <td colspan="2">hasFunction<span class="subclass"> Range </span>Functionality. <br><i>New Terms: Functionality, hasFunction</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>16</td>
+               <td colspan="2">ReadingDevice<span class="subclass"> SubClassOf </span>assistsWith<span class="some"> only </span>Read. <br><i>New Terms: ReadingDevice, assistsWith, Read</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>17</td>
+               <td colspan="2">Hard_of_hearing<span class="subclass"> SubClassOf </span>HearingDisability. <br><i>New Terms: Hard_of_hearing, HearingDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>18</td>
+               <td colspan="2">Device<span class="subclass"> SubClassOf </span>hasFunction<span class="some"> some </span>Functionality. <br><i>New Terms: Functionality, Device, hasFunction</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>19</td>
+               <td colspan="2">Ability<span class="subclass"> DisjointWith </span>Functionality. <br><i>New Terms: Ability, Functionality</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>20</td>
+               <td colspan="2">uses<span class="subclass"> Domain </span>Person. <br><i>New Terms: Person, uses</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>21</td>
+               <td colspan="2">WritingDevice<span class="subclass"> SubClassOf </span>assistsWith<span class="some"> only </span>Write. <br><i>New Terms: assistsWith, WritingDevice, Write</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>22</td>
+               <td colspan="2">Communication_Device<span class="subclass"> SubClassOf </span>assistsWith<span class="some"> only </span>CommunicationAbility. <br><i>New Terms: Communication_Device, assistsWith, CommunicationAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>23</td>
+               <td colspan="2">LightweightFoldable_Wheelchair<span class="subclass"> SubClassOf </span>Foldable_Wheelchair. <br><i>New Terms: Foldable_Wheelchair, LightweightFoldable_Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>24</td>
+               <td colspan="2">Hard_of_hearing<span class="subclass"> SubClassOf </span>affects<span class="some"> only </span>Hear_partially. <br><i>New Terms: affects, Hard_of_hearing, Hear_partially</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>25</td>
+               <td colspan="2">Cochlear_Implant<span class="subclass"> SubClassOf </span>ReplacementDevice. <br><i>New Terms: Cochlear_Implant, ReplacementDevice</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>26</td>
+               <td colspan="2">Muscular_dystrophy<span class="subclass"> SubClassOf </span>Muscle_Impairment. <br><i>New Terms: Muscle_Impairment, Muscular_dystrophy</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>27</td>
+               <td colspan="2">Reach<span class="subclass"> SubClassOf </span>isAffectedBy<span class="some"> only </span>Nerve_Circuit_Impairment. <br><i>New Terms: Nerve_Circuit_Impairment, Reach, isAffectedBy</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>28</td>
+               <td colspan="2">Device<span class="subclass"> SubClassOf </span>PhysicalObject. <br><i>New Terms: PhysicalObject, Device</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>29</td>
+               <td colspan="2">Foldable_Wheelchair<span class="subclass"> SubClassOf </span>Manual_Wheelchair. <br><i>New Terms: Manual_Wheelchair, Foldable_Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>30</td>
+               <td colspan="2">TactileReading<span class="subclass"> SubClassOf </span>ReadingDevice. <br><i>New Terms: TactileReading, ReadingDevice</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>31</td>
+               <td colspan="2">Manual_Wheelchair<span class="subclass"> SubClassOf </span>Wheelchair. <br><i>New Terms: Manual_Wheelchair, Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>32</td>
+               <td colspan="2">LimbMobility<span class="subclass"> SubClassOf </span>MovementAbility. <br><i>New Terms: LimbMobility, MovementAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>33</td>
+               <td colspan="2">TalkingReading<span class="subclass"> SubClassOf </span>ReadingDevice. <br><i>New Terms: ReadingDevice, TalkingReading</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>34</td>
+               <td colspan="2">ReplacementDevice<span class="subclass"> SubClassOf </span>Device. <br><i>New Terms: ReplacementDevice, Device</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>35</td>
+               <td colspan="2">UpperLimbMobility<span class="subclass"> SubClassOf </span>LimbMobility. <br><i>New Terms: LimbMobility, UpperLimbMobility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>36</td>
+               <td colspan="2">Quadriplegia<span class="subclass"> SubClassOf </span>affects<span class="some"> some </span>UpperLimbMobility. <br><i>New Terms: Quadriplegia, affects, UpperLimbMobility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>37</td>
+               <td colspan="2">assistsWith<span class="subclass"> InverseOf </span>isAssistedBy. <br><i>New Terms: isAssistedBy, assistsWith</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>38</td>
+               <td colspan="2">RomanLight_Wheelchair<span class="subclass"> SubClassOf </span>Lightweight_Wheelchair. <br><i>New Terms: Lightweight_Wheelchair, RomanLight_Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>39</td>
+               <td colspan="2">TalkingReading<span class="subclass"> SubClassOf </span>assistsWith<span class="some"> only </span>SightAbility. <br><i>New Terms: assistsWith, TalkingReading, SightAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>40</td>
+               <td colspan="2">PacerLight_Wheelchair<span class="subclass"> SubClassOf </span>LightweightFoldable_Wheelchair. <br><i>New Terms: PacerLight_Wheelchair, LightweightFoldable_Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>41</td>
+               <td colspan="2">SpecificMentalAbility<span class="subclass"> SubClassOf </span>MentalAbility. <br><i>New Terms: MentalAbility, SpecificMentalAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>42</td>
+               <td colspan="2">TactileReading<span class="subclass"> SubClassOf </span>assistsWith<span class="some"> only </span>SightAbility. <br><i>New Terms: TactileReading, assistsWith, SightAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>43</td>
+               <td colspan="2">Training<span class="subclass"> SubClassOf </span>Functionality. <br><i>New Terms: Training, Functionality</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>44</td>
+               <td colspan="2">Learn<span class="subclass"> SubClassOf </span>isAffectedBy<span class="some"> only </span>Epilepsy. <br><i>New Terms: Epilepsy, Learn, isAffectedBy</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>45</td>
+               <td colspan="2">ReadingDevice<span class="subclass"> SubClassOf </span>requiresAbility<span class="some"> only </span>HearingAbility. <br><i>New Terms: requiresAbility, ReadingDevice, HearingAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>46</td>
+               <td colspan="2">hasFunction<span class="subclass"> Domain </span>Device. <br><i>New Terms: Device, hasFunction</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>47</td>
+               <td colspan="2">Speak<span class="subclass"> SubClassOf </span>CommunicationAbility. <br><i>New Terms: Speak, CommunicationAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>48</td>
+               <td colspan="2">Understanding<span class="subclass"> SubClassOf </span>IntellectualAbility. <br><i>New Terms: IntellectualAbility, Understanding</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>49</td>
+               <td colspan="2">MentalDisability<span class="subclass"> DisjointWith </span>PhysicalDisability. <br><i>New Terms: PhysicalDisability, MentalDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>50</td>
+               <td colspan="2">Cerebral_palsy<span class="subclass"> SubClassOf </span>PhysicalDisability. <br><i>New Terms: Cerebral_palsy, PhysicalDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>51</td>
+               <td colspan="2">Motorised_Wheelchair<span class="subclass"> SubClassOf </span>assistsWith<span class="some"> some </span>UpperLimbMobility. <br><i>New Terms: assistsWith, UpperLimbMobility, Motorised_Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>52</td>
+               <td colspan="2">Scoliosis<span class="subclass"> SubClassOf </span>Spine_Impairment. <br><i>New Terms: Scoliosis, Spine_Impairment</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>53</td>
+               <td colspan="2">isAffectedBy<span class="subclass"> InverseOf </span>affects. <br><i>New Terms: affects, isAffectedBy</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>54</td>
+               <td colspan="2">Learn<span class="subclass"> SubClassOf </span>SpecificMentalAbility. <br><i>New Terms: Learn, SpecificMentalAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>55</td>
+               <td colspan="2">MentalDisability<span class="subclass"> SubClassOf </span>Disability. <br><i>New Terms: Disability, MentalDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>56</td>
+               <td colspan="2">Cleaning<span class="subclass"> SubClassOf </span>Housekeeping. <br><i>New Terms: Cleaning, Housekeeping</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>57</td>
+               <td colspan="2">Cooking<span class="subclass"> SubClassOf </span>Housekeeping. <br><i>New Terms: Housekeeping, Cooking</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>58</td>
+               <td colspan="2">Reach<span class="subclass"> SubClassOf </span>MovementAbility. <br><i>New Terms: MovementAbility, Reach</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>59</td>
+               <td colspan="2">Autism<span class="subclass"> SubClassOf </span>affects<span class="some"> only </span>CommunicationAbility. <br><i>New Terms: affects, Autism, CommunicationAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>60</td>
+               <td colspan="2">BrailleWritingDevice<span class="subclass"> SubClassOf </span>WritingDevice. <br><i>New Terms: WritingDevice, BrailleWritingDevice</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>61</td>
+               <td colspan="2">BatteryPowered_Wheelchair<span class="subclass"> SubClassOf </span>Motorised_Wheelchair. <br><i>New Terms: BatteryPowered_Wheelchair, Motorised_Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>62</td>
+               <td colspan="2">Recreation<span class="subclass"> SubClassOf </span>Functionality. <br><i>New Terms: Recreation, Functionality</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>63</td>
+               <td colspan="2">TelephoneAid<span class="subclass"> SubClassOf </span>assistsWith<span class="some"> only </span>
+                  (Listen<br><span class="keyword"> or </span>Speak). <br><i>New Terms: Speak, assistsWith, TelephoneAid, Listen</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>64</td>
+               <td colspan="2">Listen<span class="subclass"> DisjointWith </span>Write. <br><i>New Terms: Write, Listen</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>65</td>
+               <td colspan="2">Functionality<span class="subclass"> SubClassOf </span>Realizable. <br><i>New Terms: Realizable, Functionality</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>66</td>
+               <td colspan="2">Calculation<span class="subclass"> SubClassOf </span>SpecificMentalAbility. <br><i>New Terms: Calculation, SpecificMentalAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>67</td>
+               <td colspan="2">WritingDevice<span class="subclass"> SubClassOf </span>Communication_Device. <br><i>New Terms: Communication_Device, WritingDevice</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>68</td>
+               <td colspan="2">HearingAbility<span class="subclass"> SubClassOf </span>isAffectedBy<span class="some"> some </span>HearingDisability. <br><i>New Terms: isAffectedBy, HearingDisability, HearingAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>69</td>
+               <td colspan="2">BraillePillOrganiser<span class="subclass"> SubClassOf </span>TactileReading. <br><i>New Terms: TactileReading, BraillePillOrganiser</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>70</td>
+               <td colspan="2">Rehabilitation_Wheelchair<span class="subclass"> SubClassOf </span>Wheelchair. <br><i>New Terms: Rehabilitation_Wheelchair, Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>71</td>
+               <td colspan="2">Deaf<span class="subclass"> SubClassOf </span>affects<span class="some"> only </span>Hear. <br><i>New Terms: affects, Deaf, Hear</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>72</td>
+               <td colspan="2">IntellectualDisability<span class="subclass"> SubClassOf </span>MentalDisability. <br><i>New Terms: IntellectualDisability, MentalDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>73</td>
+               <td colspan="2">Autism<span class="subclass"> SubClassOf </span>MentalDisability. <br><i>New Terms: Autism, MentalDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>74</td>
+               <td colspan="2">Telephone_Communication<span class="subclass"> SubClassOf </span>Communication. <br><i>New Terms: Communication, Telephone_Communication</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>75</td>
+               <td colspan="2">EnvironmentalImprovement<span class="subclass"> SubClassOf </span>Functionality. <br><i>New Terms: EnvironmentalImprovement, Functionality</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>76</td>
+               <td colspan="2">VisualDisability<span class="subclass"> SubClassOf </span>PhysicalDisability. <br><i>New Terms: VisualDisability, PhysicalDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>77</td>
+               <td colspan="2">Nerve_Circuit_Impairment<span class="subclass"> SubClassOf </span>PhysicalDisability. <br><i>New Terms: Nerve_Circuit_Impairment, PhysicalDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>78</td>
+               <td colspan="2">Housekeeping<span class="subclass"> SubClassOf </span>EnvironmentalImprovement. <br><i>New Terms: Housekeeping, EnvironmentalImprovement</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>79</td>
+               <td colspan="2">Ability<span class="subclass"> SubClassOf </span>isAffectedBy<span class="some"> only </span>Disability. <br><i>New Terms: Ability, Disability, isAffectedBy</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>80</td>
+               <td colspan="2">Lightweight_Wheelchair<span class="subclass"> SubClassOf </span>Manual_Wheelchair. <br><i>New Terms: Lightweight_Wheelchair, Manual_Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>81</td>
+               <td colspan="2">ReplacementDevice<span class="subclass"> EquivalentTo </span>Device<br><span class="keyword"> and </span>(assistsWith<span class="some"> some </span>PhysicalAbility)<br><span class="keyword"> and </span>(replaces<span class="some"> some </span>BodyPart). <br><i>New Terms: BodyPart, assistsWith, PhysicalAbility, replaces, ReplacementDevice, Device</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>82</td>
+               <td colspan="2">Motorised_Wheelchair<span class="subclass"> SubClassOf </span>Wheelchair. <br><i>New Terms: Wheelchair, Motorised_Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>83</td>
+               <td colspan="2">HearingDisability<span class="subclass"> SubClassOf </span>PhysicalDisability. <br><i>New Terms: HearingDisability, PhysicalDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>84</td>
+               <td colspan="2">ReadingDevice<span class="subclass"> SubClassOf </span>Communication_Device. <br><i>New Terms: ReadingDevice, Communication_Device</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>85</td>
+               <td colspan="2">Read<span class="subclass"> DisjointWith </span>Write. <br><i>New Terms: Read, Write</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>86</td>
+               <td colspan="2">Communication_Device<span class="subclass"> SubClassOf </span>AssistiveDevice. <br><i>New Terms: AssistiveDevice, Communication_Device</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>87</td>
+               <td colspan="2">Hear<span class="subclass"> SubClassOf </span>HearingAbility. <br><i>New Terms: HearingAbility, Hear</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>88</td>
+               <td colspan="2">Manual_Wheelchair<span class="subclass"> SubClassOf </span><span class="keyword">not </span>(assistsWith<span class="some"> some </span>UpperLimbMobility). <br><i>New Terms: Manual_Wheelchair, assistsWith, UpperLimbMobility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>89</td>
+               <td colspan="2">Hospital<span class="subclass"> SubClassOf </span>ServiceProvider. <br><i>New Terms: Hospital, ServiceProvider</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>90</td>
+               <td colspan="2">LimbMobility<span class="subclass"> SubClassOf </span>isAffectedBy<span class="some"> only </span>Nerve_Circuit_Impairment. <br><i>New Terms: LimbMobility, Nerve_Circuit_Impairment, isAffectedBy</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>91</td>
+               <td colspan="2">ListenDevice<span class="subclass"> SubClassOf </span>Communication_Device. <br><i>New Terms: ListenDevice, Communication_Device</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>92</td>
+               <td colspan="2">MovementAbility<span class="subclass"> SubClassOf </span>PhysicalAbility. <br><i>New Terms: MovementAbility, PhysicalAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>93</td>
+               <td colspan="2">Garden_Tool<span class="subclass"> SubClassOf </span>hasFunction<span class="some"> some </span>Gardening. <br><i>New Terms: Garden_Tool, Gardening, hasFunction</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>94</td>
+               <td colspan="2">HomeFurnishing<span class="subclass"> SubClassOf </span>FurnishingImprovement. <br><i>New Terms: HomeFurnishing, FurnishingImprovement</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>95</td>
+               <td colspan="2">LowerLimbMobility<span class="subclass"> SubClassOf </span>isAssistedBy<span class="some"> only </span>Wheelchair. <br><i>New Terms: isAssistedBy, LowerLimbMobility, Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>96</td>
+               <td colspan="2">ObjectHandling<span class="subclass"> SubClassOf </span>EnvironmentalImprovement. <br><i>New Terms: EnvironmentalImprovement, ObjectHandling</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>97</td>
+               <td colspan="2">SightAbility<span class="subclass"> SubClassOf </span>SensoryAbility. <br><i>New Terms: SensoryAbility, SightAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>98</td>
+               <td colspan="2">Language<span class="subclass"> SubClassOf </span>SpecificMentalAbility. <br><i>New Terms: Language, SpecificMentalAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>99</td>
+               <td colspan="2">AssistiveDevice<span class="subclass"> EquivalentTo </span>Device<br><span class="keyword"> and </span>(ameliorates<span class="some"> some </span>Disability)<br><span class="keyword"> and </span>(assistsWith<span class="some"> some </span>Ability). <br><i>New Terms: ameliorates, AssistiveDevice, Ability, Disability, assistsWith, Device</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>100</td>
+               <td colspan="2">Realizable<span class="subclass"> SubClassOf </span>genericallyDependentOn<span class="some"> some </span>PhysicalObject. <br><i>New Terms: genericallyDependentOn, PhysicalObject, Realizable</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>101</td>
+               <td colspan="2">Limb_Impairment<span class="subclass"> SubClassOf </span>Bodypart_Impairment. <br><i>New Terms: Limb_Impairment, Bodypart_Impairment</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>102</td>
+               <td colspan="2">IntellectualAbility<span class="subclass"> SubClassOf </span>GlobalMentalAbility. <br><i>New Terms: IntellectualAbility, GlobalMentalAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>103</td>
+               <td colspan="2">PersonalCare<span class="subclass"> SubClassOf </span>Functionality. <br><i>New Terms: PersonalCare, Functionality</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>104</td>
+               <td colspan="2">NonPhysicalObject<span class="subclass"> DisjointWith </span>PhysicalObject. <br><i>New Terms: PhysicalObject, NonPhysicalObject</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>105</td>
+               <td colspan="2">Device<span class="subclass"> DisjointWith </span>Person. <br><i>New Terms: Person, Device</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>106</td>
+               <td colspan="2">HearingAbility<span class="subclass"> SubClassOf </span>SensoryAbility. <br><i>New Terms: SensoryAbility, HearingAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>107</td>
+               <td colspan="2">Reach<span class="subclass"> SubClassOf </span>isAssistedBy<span class="some"> only </span>Garden_Tool. <br><i>New Terms: isAssistedBy, Reach, Garden_Tool</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>108</td>
+               <td colspan="2">SymbolBoard<span class="subclass"> SubClassOf </span>FaceToFaceCommunicationDevice. <br><i>New Terms: SymbolBoard, FaceToFaceCommunicationDevice</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>109</td>
+               <td colspan="2">WritingDevice<span class="subclass"> SubClassOf </span>hasFunction<span class="some"> only </span>Written_Communication. <br><i>New Terms: Written_Communication, WritingDevice, hasFunction</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>110</td>
+               <td colspan="2">SpeechDisability<span class="subclass"> SubClassOf </span>PhysicalDisability. <br><i>New Terms: SpeechDisability, PhysicalDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>111</td>
+               <td colspan="2">Goniometer<span class="subclass"> SubClassOf </span>AssistiveDevice. <br><i>New Terms: AssistiveDevice, Goniometer</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>112</td>
+               <td colspan="2">BrailleAlarmClock<span class="subclass"> SubClassOf </span>TactileReading. <br><i>New Terms: BrailleAlarmClock, TactileReading</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>113</td>
+               <td colspan="2">Talking_Thermometer<span class="subclass"> SubClassOf </span>TalkingReading. <br><i>New Terms: Talking_Thermometer, TalkingReading</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>114</td>
+               <td colspan="2">AngleMeasurement<span class="subclass"> SubClassOf </span>EnvironmentalImprovement. <br><i>New Terms: EnvironmentalImprovement, AngleMeasurement</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>115</td>
+               <td colspan="2">OrientationAbility<span class="subclass"> SubClassOf </span>GlobalMentalAbility. <br><i>New Terms: OrientationAbility, GlobalMentalAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>116</td>
+               <td colspan="2">Multiple_sclerosis<span class="subclass"> SubClassOf </span>Nerve_Circuit_Impairment. <br><i>New Terms: Nerve_Circuit_Impairment, Multiple_sclerosis</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>117</td>
+               <td colspan="2">Osteogensis_Imperfecta<span class="subclass"> SubClassOf </span>PhysicalDisability. <br><i>New Terms: Osteogensis_Imperfecta, PhysicalDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>118</td>
+               <td colspan="2">Bending<span class="subclass"> SubClassOf </span>ObjectHandling. <br><i>New Terms: Bending, ObjectHandling</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>119</td>
+               <td colspan="2">CommunicationAbility<span class="subclass"> SubClassOf </span>Ability. <br><i>New Terms: Ability, CommunicationAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>120</td>
+               <td colspan="2">Patriot<span class="subclass"> SubClassOf </span>soldBy min 1 Vendor. <br><i>New Terms: soldBy, Vendor, Patriot</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>121</td>
+               <td colspan="2">Hear_partially<span class="subclass"> SubClassOf </span>HearingAbility. <br><i>New Terms: Hear_partially, HearingAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>122</td>
+               <td colspan="2">QuickieRXS_Wheelchair<span class="subclass"> SubClassOf </span>Lightweight_Wheelchair. <br><i>New Terms: Lightweight_Wheelchair, QuickieRXS_Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>123</td>
+               <td colspan="2">AltoSelect_Wheelchair<span class="subclass"> SubClassOf </span>LightweightFoldable_Wheelchair. <br><i>New Terms: AltoSelect_Wheelchair, LightweightFoldable_Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>124</td>
+               <td colspan="2">Rehabilitation_Wheelchair<span class="subclass"> SubClassOf </span>hasFunction<span class="some"> some </span>MedicalTreatmentFacilitator. <br><i>New Terms: MedicalTreatmentFacilitator, Rehabilitation_Wheelchair, hasFunction</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>125</td>
+               <td colspan="2">Patriot<span class="subclass"> SubClassOf </span>Rehabilitation_Wheelchair. <br><i>New Terms: Rehabilitation_Wheelchair, Patriot</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>126</td>
+               <td colspan="2">FaceToFaceCommunicationDevice<span class="subclass"> SubClassOf </span>Communication_Device. <br><i>New Terms: Communication_Device, FaceToFaceCommunicationDevice</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>127</td>
+               <td colspan="2">providedBy<span class="subclass"> Range </span>ServiceProvider. <br><i>New Terms: ServiceProvider, providedBy</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>128</td>
+               <td colspan="2">SpeechAbility<span class="subclass"> SubClassOf </span>SensoryAbility. <br><i>New Terms: SpeechAbility, SensoryAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>129</td>
+               <td colspan="2">Quadriplegia<span class="subclass"> SubClassOf </span>Nerve_Circuit_Impairment. <br><i>New Terms: Quadriplegia, Nerve_Circuit_Impairment</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>130</td>
+               <td colspan="2">Paraplegia<span class="subclass"> SubClassOf </span>affects<span class="some"> only </span>LowerLimbMobility. <br><i>New Terms: affects, Paraplegia, LowerLimbMobility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>131</td>
+               <td colspan="2">Paraplegia<span class="subclass"> SubClassOf </span>Nerve_Circuit_Impairment. <br><i>New Terms: Nerve_Circuit_Impairment, Paraplegia</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>132</td>
+               <td colspan="2">TactileReading<span class="subclass"> SubClassOf </span>ameliorates<span class="some"> only </span>VisualDisability. <br><i>New Terms: ameliorates, TactileReading, VisualDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>133</td>
+               <td colspan="2">PhysicalObject<span class="subclass"> SubClassOf </span>Endurant. <br><i>New Terms: PhysicalObject, Endurant</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>134</td>
+               <td colspan="2">Plier<span class="subclass"> SubClassOf </span>hasFunction<span class="some"> some </span>
+                  (Bending<br><span class="keyword"> or </span>Cutting<br><span class="keyword"> or </span>Holding). <br><i>New Terms: Holding, Cutting, Plier, Bending, hasFunction</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>135</td>
+               <td colspan="2">Written_Communication<span class="subclass"> SubClassOf </span>Communication. <br><i>New Terms: Written_Communication, Communication</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>136</td>
+               <td colspan="2">Wheelchair<span class="subclass"> SubClassOf </span>assistsWith<span class="some"> only </span>LimbMobility. <br><i>New Terms: LimbMobility, assistsWith, Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>137</td>
+               <td colspan="2">TactileReading<span class="subclass"> SubClassOf </span>requiresAbility<span class="some"> only </span>TactileAbility. <br><i>New Terms: TactileAbility, requiresAbility, TactileReading</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>138</td>
+               <td colspan="2">BrailleWatch<span class="subclass"> SubClassOf </span>TactileReading. <br><i>New Terms: TactileReading, BrailleWatch</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>139</td>
+               <td colspan="2">Epilepsy<span class="subclass"> SubClassOf </span>MentalDisability. <br><i>New Terms: Epilepsy, MentalDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>140</td>
+               <td colspan="2">Amputation<span class="subclass"> SubClassOf </span>Limb_Impairment. <br><i>New Terms: Limb_Impairment, Amputation</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>141</td>
+               <td colspan="2">Communication_Device<span class="subclass"> SubClassOf </span>hasFunction<span class="some"> only </span>Communication. <br><i>New Terms: Communication_Device, Communication, hasFunction</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>142</td>
+               <td colspan="2">Listen<span class="subclass"> DisjointWith </span>Speak. <br><i>New Terms: Speak, Listen</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>143</td>
+               <td colspan="2">Bodypart_Impairment<span class="subclass"> SubClassOf </span>PhysicalDisability. <br><i>New Terms: Bodypart_Impairment, PhysicalDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>144</td>
+               <td colspan="2">Deaf<span class="subclass"> SubClassOf </span>HearingDisability. <br><i>New Terms: HearingDisability, Deaf</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>145</td>
+               <td colspan="2">Manual_Wheelchair<span class="subclass"> DisjointWith </span>Motorised_Wheelchair. <br><i>New Terms: Manual_Wheelchair, Motorised_Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>146</td>
+               <td colspan="2">Disability<span class="subclass"> EquivalentTo </span>affects<span class="some"> some </span>Ability. <br><i>New Terms: affects, Ability, Disability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>147</td>
+               <td colspan="2">Perdurant<span class="subclass"> DisjointWith </span>Realizable. <br><i>New Terms: Realizable, Perdurant</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>148</td>
+               <td colspan="2">Touch<span class="subclass"> SubClassOf </span>TactileAbility. <br><i>New Terms: TactileAbility, Touch</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>149</td>
+               <td colspan="2">Reach<span class="subclass"> SubClassOf </span>isAssistedBy<span class="some"> only </span>Plier. <br><i>New Terms: isAssistedBy, Reach, Plier</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>150</td>
+               <td colspan="2">BodyPart<span class="subclass"> SubClassOf </span>properpartof<span class="some"> only </span>Person. <br><i>New Terms: Person, BodyPart, properpartof</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>151</td>
+               <td colspan="2">FaceToFace_Communication<span class="subclass"> DisjointWith </span>SymbolBoard. <br><i>New Terms: FaceToFace_Communication, SymbolBoard</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>152</td>
+               <td colspan="2">Communication<span class="subclass"> SubClassOf </span>Functionality. <br><i>New Terms: Communication, Functionality</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>153</td>
+               <td colspan="2">LowerLimbMobility<span class="subclass"> SubClassOf </span>LimbMobility. <br><i>New Terms: LimbMobility, LowerLimbMobility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>154</td>
+               <td colspan="2">Endurant<span class="subclass"> DisjointWith </span>Perdurant. <br><i>New Terms: Endurant, Perdurant</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>155</td>
+               <td colspan="2">Person<span class="subclass"> SubClassOf </span>PhysicalObject. <br><i>New Terms: Person, PhysicalObject</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>156</td>
+               <td colspan="2">MultipleDisability<span class="subclass"> SubClassOf </span>Disability. <br><i>New Terms: MultipleDisability, Disability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>157</td>
+               <td colspan="2">See<span class="subclass"> SubClassOf </span>SightAbility. <br><i>New Terms: See, SightAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>158</td>
+               <td colspan="2">FaceToFace_Communication<span class="subclass"> DisjointWith </span>Telephone_Communication. <br><i>New Terms: FaceToFace_Communication, Telephone_Communication</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>159</td>
+               <td colspan="2">Quadriplegia<span class="subclass"> SubClassOf </span>affects<span class="some"> some </span>LowerLimbMobility. <br><i>New Terms: Quadriplegia, affects, LowerLimbMobility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>160</td>
+               <td colspan="2">Speak<span class="subclass"> DisjointWith </span>Write. <br><i>New Terms: Speak, Write</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>161</td>
+               <td colspan="2">Memory<span class="subclass"> SubClassOf </span>SpecificMentalAbility. <br><i>New Terms: Memory, SpecificMentalAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>162</td>
+               <td colspan="2">FaceToFaceCommunicationSoftware<span class="subclass"> SubClassOf </span>FaceToFaceCommunicationDevice. <br><i>New Terms: FaceToFaceCommunicationSoftware, FaceToFaceCommunicationDevice</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>163</td>
+               <td colspan="2">AssistiveDevice<span class="subclass"> SubClassOf </span>Device. <br><i>New Terms: AssistiveDevice, Device</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>164</td>
+               <td colspan="2">Goniometer<span class="subclass"> SubClassOf </span>hasFunction<span class="some"> some </span>AngleMeasurement. <br><i>New Terms: Goniometer, hasFunction, AngleMeasurement</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>165</td>
+               <td colspan="2">MedicalTreatmentFacilitator<span class="subclass"> SubClassOf </span>Functionality. <br><i>New Terms: MedicalTreatmentFacilitator, Functionality</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>166</td>
+               <td colspan="2">Hemiplegia<span class="subclass"> SubClassOf </span>Nerve_Circuit_Impairment. <br><i>New Terms: Nerve_Circuit_Impairment, Hemiplegia</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>167</td>
+               <td colspan="2">TelephoneAid<span class="subclass"> SubClassOf </span>SpeechDevice. <br><i>New Terms: TelephoneAid, SpeechDevice</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>168</td>
+               <td colspan="2">Listen<span class="subclass"> DisjointWith </span>Read. <br><i>New Terms: Read, Listen</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>169</td>
+               <td colspan="2">Limb<span class="subclass"> SubClassOf </span>BodyPart. <br><i>New Terms: BodyPart, Limb</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>170</td>
+               <td colspan="2">Cutting<span class="subclass"> SubClassOf </span>ObjectHandling. <br><i>New Terms: Cutting, ObjectHandling</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>171</td>
+               <td colspan="2">MentalAbility<span class="subclass"> SubClassOf </span>Ability. <br><i>New Terms: Ability, MentalAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>172</td>
+               <td colspan="2">properpartof<span class="subclass"> SubPropertyOf </span>partof. <br><i>New Terms: partof, properpartof</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>173</td>
+               <td colspan="2">GlobalMentalAbility<span class="subclass"> SubClassOf </span>MentalAbility. <br><i>New Terms: GlobalMentalAbility, MentalAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>174</td>
+               <td colspan="2">Vendor<span class="subclass"> SubClassOf </span>ServiceProvider. <br><i>New Terms: ServiceProvider, Vendor</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>175</td>
+               <td colspan="2"> <span class="subclass">Transitive: </span>partof. <br><i>New Terms: partof</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>176</td>
+               <td colspan="2">soldBy<span class="subclass"> InverseOf </span>sells. <br><i>New Terms: soldBy, sells</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>177</td>
+               <td colspan="2">See_partially<span class="subclass"> SubClassOf </span>SightAbility. <br><i>New Terms: See_partially, SightAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>178</td>
+               <td colspan="2">Dystonia<span class="subclass"> SubClassOf </span>Muscle_Impairment. <br><i>New Terms: Muscle_Impairment, Dystonia</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>179</td>
+               <td colspan="2">TactileAbility<span class="subclass"> SubClassOf </span>SensoryAbility. <br><i>New Terms: TactileAbility, SensoryAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>180</td>
+               <td colspan="2">FurnishingImprovement<span class="subclass"> SubClassOf </span>EnvironmentalImprovement. <br><i>New Terms: EnvironmentalImprovement, FurnishingImprovement</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>181</td>
+               <td colspan="2">SensoryAbility<span class="subclass"> SubClassOf </span>properpartof<span class="some"> only </span>CommunicationAbility. <br><i>New Terms: properpartof, SensoryAbility, CommunicationAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>182</td>
+               <td colspan="2">Epilepsy<span class="subclass"> SubClassOf </span>affects<span class="some"> only </span>Understanding. <br><i>New Terms: Epilepsy, affects, Understanding</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>183</td>
+               <td colspan="2"> <span class="subclass">Asymmetric: </span>genericallyDependentOn. <br><i>New Terms: genericallyDependentOn</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>184</td>
+               <td colspan="2">Holding<span class="subclass"> SubClassOf </span>ObjectHandling. <br><i>New Terms: Holding, ObjectHandling</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>185</td>
+               <td colspan="2">PhysicalDisability<span class="subclass"> SubClassOf </span>Disability. <br><i>New Terms: Disability, PhysicalDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>186</td>
+               <td colspan="2">LightweightFoldable_Wheelchair<span class="subclass"> SubClassOf </span>Lightweight_Wheelchair. <br><i>New Terms: Lightweight_Wheelchair, LightweightFoldable_Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>187</td>
+               <td colspan="2">SpeechDevice<span class="subclass"> SubClassOf </span>Communication_Device. <br><i>New Terms: Communication_Device, SpeechDevice</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>188</td>
+               <td colspan="2">Spine_Impairment<span class="subclass"> SubClassOf </span>Bodypart_Impairment. <br><i>New Terms: Spine_Impairment, Bodypart_Impairment</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>189</td>
+               <td colspan="2">TelephoneAid<span class="subclass"> SubClassOf </span>ListenDevice. <br><i>New Terms: ListenDevice, TelephoneAid</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>190</td>
+               <td colspan="2">FaceToFace_Communication<span class="subclass"> SubClassOf </span>Communication. <br><i>New Terms: FaceToFace_Communication, Communication</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>191</td>
+               <td colspan="2">AltoSelect_Wheelchair<span class="subclass"> SubClassOf </span>soldBy<span class="some"> some </span>Vendor. <br><i>New Terms: soldBy, AltoSelect_Wheelchair, Vendor</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>192</td>
+               <td colspan="2">HearingDisability<span class="subclass"> DisjointWith </span>VisualDisability. <br><i>New Terms: VisualDisability, HearingDisability</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>193</td>
+               <td colspan="2">soldBy<span class="subclass"> SubPropertyOf </span>providedBy. <br><i>New Terms: soldBy, providedBy</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>194</td>
+               <td colspan="2">Muscle_Impairment<span class="subclass"> SubClassOf </span>Bodypart_Impairment. <br><i>New Terms: Bodypart_Impairment, Muscle_Impairment</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>195</td>
+               <td colspan="2">FurnishingImprovement<span class="subclass"> DisjointWith </span>Housekeeping. <br><i>New Terms: Housekeeping, FurnishingImprovement</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>196</td>
+               <td colspan="2">Person<span class="subclass"> SubClassOf </span>uses<span class="some"> only </span>Device. <br><i>New Terms: Person, uses, Device</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>197</td>
+               <td colspan="2">Spina_Bifida<span class="subclass"> SubClassOf </span>Spine_Impairment. <br><i>New Terms: Spina_Bifida, Spine_Impairment</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>198</td>
+               <td colspan="2">Prothese<span class="subclass"> SubClassOf </span>ReplacementDevice. <br><i>New Terms: Prothese, ReplacementDevice</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>199</td>
+               <td colspan="2">WorkFurnishing<span class="subclass"> SubClassOf </span>FurnishingImprovement. <br><i>New Terms: WorkFurnishing, FurnishingImprovement</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>200</td>
+               <td colspan="2">Eye<span class="subclass"> SubClassOf </span>realises<span class="some"> only </span>SightAbility. <br><i>New Terms: Eye, realises, SightAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>201</td>
+               <td colspan="2">ReadingDevice<span class="subclass"> SubClassOf </span>hasFunction<span class="some"> only </span>Written_Communication. <br><i>New Terms: Written_Communication, ReadingDevice, hasFunction</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>202</td>
+               <td colspan="2">Ability<span class="subclass"> SubClassOf </span>Realizable. <br><i>New Terms: Ability, Realizable</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>203</td>
+               <td colspan="2">Orthose<span class="subclass"> SubClassOf </span>AssistiveDevice. <br><i>New Terms: Orthose, AssistiveDevice</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>204</td>
+               <td colspan="2">Gardening<span class="subclass"> SubClassOf </span>Housekeeping. <br><i>New Terms: Housekeeping, Gardening</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>205</td>
+               <td colspan="2">Guillaume_Barre<span class="subclass"> SubClassOf </span>Nerve_Circuit_Impairment. <br><i>New Terms: Nerve_Circuit_Impairment, Guillaume_Barre</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>206</td>
+               <td colspan="2">Read<span class="subclass"> DisjointWith </span>Speak. <br><i>New Terms: Speak, Read</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>207</td>
+               <td colspan="2">sells<span class="subclass"> Domain </span>Vendor. <br><i>New Terms: Vendor, sells</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>208</td>
+               <td colspan="2">ServiceProvider<span class="subclass"> SubClassOf </span>NonPhysicalObject. <br><i>New Terms: ServiceProvider, NonPhysicalObject</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>209</td>
+               <td colspan="2">LowerLimbMobility<span class="subclass"> DisjointWith </span>UpperLimbMobility. <br><i>New Terms: LowerLimbMobility, UpperLimbMobility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>210</td>
+               <td colspan="2">SaturnAluLight_Wheelchair<span class="subclass"> SubClassOf </span>Lightweight_Wheelchair. <br><i>New Terms: Lightweight_Wheelchair, SaturnAluLight_Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>211</td>
+               <td colspan="2">Endurant<span class="subclass"> DisjointWith </span>Realizable. <br><i>New Terms: Realizable, Endurant</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>212</td>
+               <td colspan="2">Kyphosis<span class="subclass"> SubClassOf </span>Spine_Impairment. <br><i>New Terms: Spine_Impairment, Kyphosis</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>213</td>
+               <td colspan="2"> <span class="subclass">Transitive: </span>properpartof. <br><i>New Terms: properpartof</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>214</td>
+               <td colspan="2">LimbMobility<span class="subclass"> SubClassOf </span>isAffectedBy<span class="some"> only </span>Muscle_Impairment. <br><i>New Terms: LimbMobility, isAffectedBy, Muscle_Impairment</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>215</td>
+               <td colspan="2">Wheelchair<span class="subclass"> SubClassOf </span>AssistiveDevice. <br><i>New Terms: AssistiveDevice, Wheelchair</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>216</td>
+               <td colspan="2">Learn<span class="subclass"> SubClassOf </span>isAffectedBy<span class="some"> only </span>Autism. <br><i>New Terms: Learn, isAffectedBy, Autism</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>217</td>
+               <td colspan="2">Write<span class="subclass"> SubClassOf </span>CommunicationAbility. <br><i>New Terms: Write, CommunicationAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>218</td>
+               <td colspan="2">Device<span class="subclass"> SubClassOf </span>providedBy min 1 ServiceProvider. <br><i>New Terms: ServiceProvider, Device, providedBy</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>219</td>
+               <td colspan="2">Plier<span class="subclass"> SubClassOf </span>AssistiveDevice. <br><i>New Terms: AssistiveDevice, Plier</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>220</td>
+               <td colspan="2">Read<span class="subclass"> SubClassOf </span>CommunicationAbility. <br><i>New Terms: Read, CommunicationAbility</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>221</td>
+               <td colspan="2">uses<span class="subclass"> Range </span>Device. <br><i>New Terms: uses, Device</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>222</td>
+               <td colspan="2">FaceToFaceCommunicationDevice<span class="subclass"> SubClassOf </span>assistsWith<span class="some"> only </span>Speak. <br><i>New Terms: Speak, assistsWith, FaceToFaceCommunicationDevice</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>223</td>
+               <td colspan="2">Ability<span class="subclass"> SubClassOf </span>isAssistedBy<span class="some"> only </span>Device. <br><i>New Terms: isAssistedBy, Ability, Device</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>224</td>
+               <td colspan="2"> Reflexive: partof. <br><i>New Terms: partof</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>225</td>
+               <td colspan="2">Listen<span class="subclass"> SubClassOf </span>CommunicationAbility. <br><i>New Terms: CommunicationAbility, Listen</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>226</td>
+               <td colspan="2">Poliomyelitis<span class="subclass"> SubClassOf </span>Nerve_Circuit_Impairment. <br><i>New Terms: Nerve_Circuit_Impairment, Poliomyelitis</i></td>
+            </tr>
+            
+         </tbody>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         <tbody id="retdesc" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4>Retired Descriptions (70) <a href="#">[back to top]</a></h4>
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal" colspan="2">Retired Description Axiom in Ontology 1</th>
+            </tr>
+            
+            <tr class="removal">
+               <td>227</td>
+               <td colspan="2">haulage worker<span class="subclass"> EquivalentTo </span>works_for<span class="some"> some </span>
+                  (haulage company<br><span class="keyword"> or </span>(part_of<span class="some"> some </span>haulage company)).<br><i>Retired Terms: haulage company, part_of, haulage worker, works_for</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>228</td>
+               <td colspan="2">dog owner<span class="subclass"> EquivalentTo </span>person<br><span class="keyword"> and </span>(has_pet<span class="some"> some </span>dog).<br><i>Retired Terms: dog owner, person, has_pet, dog</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>229</td>
+               <td colspan="2">pet owner<span class="subclass"> EquivalentTo </span>person<br><span class="keyword"> and </span>(has_pet<span class="some"> some </span>animal).<br><i>Retired Terms: animal, person, has_pet, pet owner</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>230</td>
+               <td colspan="2">has_pet<span class="subclass"> Range </span>animal.<br><i>Retired Terms: animal, has_pet</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>231</td>
+               <td colspan="2">haulage company<span class="subclass"> SubClassOf </span>company.<br><i>Retired Terms: haulage company, company</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>232</td>
+               <td colspan="2">broadsheet<span class="subclass"> DisjointWith </span>tabloid.<br><i>Retired Terms: broadsheet, tabloid</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>233</td>
+               <td colspan="2">eats<span class="subclass"> Domain </span>animal.<br><i>Retired Terms: animal, eats</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>234</td>
+               <td colspan="2">newspaper<span class="subclass"> SubClassOf </span>broadsheet<br><span class="keyword"> or </span>tabloid.<br><i>Retired Terms: broadsheet, newspaper, tabloid</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>235</td>
+               <td colspan="2">white van man<span class="subclass"> SubClassOf </span>reads<span class="some"> only </span>tabloid.<br><i>Retired Terms: reads, white van man, tabloid</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>236</td>
+               <td colspan="2">van<span class="subclass"> SubClassOf </span>vehicle.<br><i>Retired Terms: van, vehicle</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>237</td>
+               <td colspan="2">has_pet<span class="subclass"> Domain </span>person.<br><i>Retired Terms: person, has_pet</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>238</td>
+               <td colspan="2">sheep<span class="subclass"> SubClassOf </span>eats<span class="some"> only </span>grass.<br><i>Retired Terms: eats, sheep, grass</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>239</td>
+               <td colspan="2">duck<span class="subclass"> SubClassOf </span>animal.<br><i>Retired Terms: duck, animal</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>240</td>
+               <td colspan="2">cat liker<span class="subclass"> EquivalentTo </span>person<br><span class="keyword"> and </span>(likes<span class="some"> some </span>cat).<br><i>Retired Terms: person, cat liker, likes, cat</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>241</td>
+               <td colspan="2">animal<br><span class="keyword"> or </span>(part_of<span class="some"> some </span>animal)<span class="subclass"> DisjointWith </span>plant<br><span class="keyword"> or </span>(part_of<span class="some"> some </span>plant).<br><i>Retired Terms: animal, part_of, plant</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>242</td>
+               <td colspan="2">bus company<span class="subclass"> SubClassOf </span>company.<br><i>Retired Terms: bus company, company</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>243</td>
+               <td colspan="2">driver<span class="subclass"> SubClassOf </span>adult.<br><i>Retired Terms: driver, adult</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>244</td>
+               <td colspan="2">giraffe<span class="subclass"> SubClassOf </span>animal.<br><i>Retired Terms: animal, giraffe</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>245</td>
+               <td colspan="2">quality broadsheet<span class="subclass"> SubClassOf </span>broadsheet.<br><i>Retired Terms: quality broadsheet, broadsheet</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>246</td>
+               <td colspan="2">dog<span class="subclass"> SubClassOf </span>eats<span class="some"> some </span>bone.<br><i>Retired Terms: dog, eats, bone</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>247</td>
+               <td colspan="2">kid<span class="subclass"> EquivalentTo </span>person<br><span class="keyword"> and </span>young.<br><i>Retired Terms: young, person, kid</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>248</td>
+               <td colspan="2">driver<span class="subclass"> EquivalentTo </span>person<br><span class="keyword"> and </span>(drives<span class="some"> some </span>vehicle).<br><i>Retired Terms: driver, person, drives, vehicle</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>249</td>
+               <td colspan="2">tree<span class="subclass"> SubClassOf </span>plant.<br><i>Retired Terms: tree, plant</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>250</td>
+               <td colspan="2">lorry<span class="subclass"> SubClassOf </span>vehicle.<br><i>Retired Terms: lorry, vehicle</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>251</td>
+               <td colspan="2">broadsheet<span class="subclass"> SubClassOf </span>newspaper.<br><i>Retired Terms: broadsheet, newspaper</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>252</td>
+               <td colspan="2">haulage truck driver<span class="subclass"> EquivalentTo </span>person<br><span class="keyword"> and </span>(drives<span class="some"> some </span>truck)<br><span class="keyword"> and </span>(works_for<span class="some"> some </span>(part_of<span class="some"> some </span>haulage company)).<br><i>Retired Terms: haulage company, truck, person, drives, part_of, works_for, haulage truck driver</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>253</td>
+               <td colspan="2">has_pet<span class="subclass"> InverseOf </span>is_pet_of.<br><i>Retired Terms: is_pet_of, has_pet</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>254</td>
+               <td colspan="2">has_part<span class="subclass"> InverseOf </span>part_of.<br><i>Retired Terms: part_of, has_part</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>255</td>
+               <td colspan="2">sheep<span class="subclass"> SubClassOf </span>animal.<br><i>Retired Terms: animal, sheep</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>256</td>
+               <td colspan="2">dog liker<span class="subclass"> EquivalentTo </span>person<br><span class="keyword"> and </span>(likes<span class="some"> some </span>dog).<br><i>Retired Terms: person, dog, likes, dog liker</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>257</td>
+               <td colspan="2">bicycle<span class="subclass"> SubClassOf </span>vehicle.<br><i>Retired Terms: bicycle, vehicle</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>258</td>
+               <td colspan="2">has_pet<span class="subclass"> SubPropertyOf </span>likes.<br><i>Retired Terms: has_pet, likes</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>259</td>
+               <td colspan="2">mad cow<span class="subclass"> EquivalentTo </span>cow<br><span class="keyword"> and </span>(eats<span class="some"> some </span>
+                  (brain<br><span class="keyword"> and </span>(part_of<span class="some"> some </span>sheep))).<br><i>Retired Terms: mad cow, brain, part_of, eats, cow, sheep</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>260</td>
+               <td colspan="2">bus<span class="subclass"> SubClassOf </span>vehicle.<br><i>Retired Terms: bus, vehicle</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>261</td>
+               <td colspan="2">has_father<span class="subclass"> SubPropertyOf </span>has_parent.<br><i>Retired Terms: has_parent, has_father</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>262</td>
+               <td colspan="2">car<span class="subclass"> SubClassOf </span>vehicle.<br><i>Retired Terms: car, vehicle</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>263</td>
+               <td colspan="2">old lady<span class="subclass"> EquivalentTo </span>elderly<br><span class="keyword"> and </span>female<br><span class="keyword"> and </span>person.<br><i>Retired Terms: female, person, old lady, elderly</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>264</td>
+               <td colspan="2">cat<span class="subclass"> DisjointWith </span>dog.<br><i>Retired Terms: dog, cat</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>265</td>
+               <td colspan="2">has_father<span class="subclass"> Range </span>man.<br><i>Retired Terms: man, has_father</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>266</td>
+               <td colspan="2">bus driver<span class="subclass"> EquivalentTo </span>person<br><span class="keyword"> and </span>(drives<span class="some"> some </span>bus).<br><i>Retired Terms: person, drives, bus driver, bus</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>267</td>
+               <td colspan="2">elderly<span class="subclass"> SubClassOf </span>adult.<br><i>Retired Terms: adult, elderly</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>268</td>
+               <td colspan="2">has_mother<span class="subclass"> SubPropertyOf </span>has_parent.<br><i>Retired Terms: has_parent, has_mother</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>269</td>
+               <td colspan="2">animal lover<span class="subclass"> EquivalentTo </span>person<br><span class="keyword"> and </span>(has_pet min 3 Thing).<br><i>Retired Terms: animal lover, person, has_pet</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>270</td>
+               <td colspan="2">truck<span class="subclass"> SubClassOf </span>vehicle.<br><i>Retired Terms: truck, vehicle</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>271</td>
+               <td colspan="2">red top<span class="subclass"> SubClassOf </span>tabloid.<br><i>Retired Terms: red top, tabloid</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>272</td>
+               <td colspan="2">person<span class="subclass"> SubClassOf </span>animal.<br><i>Retired Terms: animal, person</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>273</td>
+               <td colspan="2">vegetarian<span class="subclass"> EquivalentTo </span>animal<br><span class="keyword"> and </span>(eats<span class="some"> only </span>(<span class="keyword">not </span>(animal)))<br><span class="keyword"> and </span>(eats<span class="some"> only </span>(<span class="keyword">not </span>(part_of<span class="some"> some </span>animal))).<br><i>Retired Terms: animal, part_of, eats, vegetarian</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>274</td>
+               <td colspan="2">cow<span class="subclass"> SubClassOf </span>vegetarian.<br><i>Retired Terms: cow, vegetarian</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>275</td>
+               <td colspan="2">newspaper<span class="subclass"> SubClassOf </span>publication.<br><i>Retired Terms: publication, newspaper</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>276</td>
+               <td colspan="2">cat<span class="subclass"> SubClassOf </span>animal.<br><i>Retired Terms: animal, cat</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>277</td>
+               <td colspan="2">giraffe<span class="subclass"> SubClassOf </span>eats<span class="some"> only </span>leaf.<br><i>Retired Terms: giraffe, eats, leaf</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>278</td>
+               <td colspan="2">man<span class="subclass"> EquivalentTo </span>adult<br><span class="keyword"> and </span>male<br><span class="keyword"> and </span>person.<br><i>Retired Terms: man, male, person, adult</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>279</td>
+               <td colspan="2">old lady<span class="subclass"> SubClassOf </span>(has_pet<span class="some"> some </span>animal)<br><span class="keyword"> and </span>(has_pet<span class="some"> only </span>cat).<br><i>Retired Terms: animal, has_pet, cat, old lady</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>280</td>
+               <td colspan="2">grass<span class="subclass"> SubClassOf </span>plant.<br><i>Retired Terms: plant, grass</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>281</td>
+               <td colspan="2">van driver<span class="subclass"> EquivalentTo </span>person<br><span class="keyword"> and </span>(drives<span class="some"> some </span>van).<br><i>Retired Terms: person, drives, van driver, van</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>282</td>
+               <td colspan="2">tabloid<span class="subclass"> SubClassOf </span>newspaper.<br><i>Retired Terms: newspaper, tabloid</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>283</td>
+               <td colspan="2">pet<span class="subclass"> EquivalentTo </span>is_pet_of<span class="some"> some </span>Thing.<br><i>Retired Terms: is_pet_of, pet</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>284</td>
+               <td colspan="2">has_mother<span class="subclass"> Range </span>woman.<br><i>Retired Terms: woman, has_mother</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>285</td>
+               <td colspan="2">eaten_by<span class="subclass"> InverseOf </span>eats.<br><i>Retired Terms: eaten_by, eats</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>286</td>
+               <td colspan="2">white van man<span class="subclass"> EquivalentTo </span>man<br><span class="keyword"> and </span>(drives<span class="some"> some </span>
+                  (van<br><span class="keyword"> and </span>white thing)).<br><i>Retired Terms: man, white van man, white thing, drives, van</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>287</td>
+               <td colspan="2">grownup<span class="subclass"> EquivalentTo </span>adult<br><span class="keyword"> and </span>person.<br><i>Retired Terms: person, grownup, adult</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>288</td>
+               <td colspan="2">magazine<span class="subclass"> SubClassOf </span>publication.<br><i>Retired Terms: magazine, publication</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>289</td>
+               <td colspan="2">lorry driver<span class="subclass"> EquivalentTo </span>person<br><span class="keyword"> and </span>(drives<span class="some"> some </span>lorry).<br><i>Retired Terms: lorry, person, drives, lorry driver</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>290</td>
+               <td colspan="2">woman<span class="subclass"> EquivalentTo </span>adult<br><span class="keyword"> and </span>female<br><span class="keyword"> and </span>person.<br><i>Retired Terms: female, person, woman, adult</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>291</td>
+               <td colspan="2">leaf<span class="subclass"> SubClassOf </span>part_of<span class="some"> some </span>tree.<br><i>Retired Terms: part_of, leaf, tree</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>292</td>
+               <td colspan="2">adult<span class="subclass"> DisjointWith </span>young.<br><i>Retired Terms: young, adult</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>293</td>
+               <td colspan="2">animal<span class="subclass"> SubClassOf </span>eats<span class="some"> some </span>Thing.<br><i>Retired Terms: animal, eats</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>294</td>
+               <td colspan="2">reads<span class="subclass"> Range </span>publication.<br><i>Retired Terms: reads, publication</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>295</td>
+               <td colspan="2">cat owner<span class="subclass"> EquivalentTo </span>person<br><span class="keyword"> and </span>(has_pet<span class="some"> some </span>cat).<br><i>Retired Terms: person, has_pet, cat owner, cat</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>296</td>
+               <td colspan="2">tiger<span class="subclass"> SubClassOf </span>animal.<br><i>Retired Terms: animal, tiger</i></td>
+            </tr>
+            
+         </tbody>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         <tr class="withoutstyle">
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      <div id="shared" style="display:none" class="footnote">Shared axiom between Ontology 1 and 2.</div>
+   </body>
+</html>

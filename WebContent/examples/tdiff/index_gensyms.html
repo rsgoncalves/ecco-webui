@@ -1,0 +1,1700 @@
+<html xmlns:ecco="http://owl.cs.manchester.ac.uk/diff">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ecco</title>
+      <link rel="stylesheet" href="css/style.css"><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery-1.4.4.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="js/jquery.checkboxtree.js"></script><script type="text/javascript">
+					$(document).ready(function() {
+						$('#tree1').checkboxTree({
+							initializeChecked: 'expanded',
+							initializeUnchecked: 'collapsed',
+							collapseDuration: 50,
+							expandDuration: 100,
+							collapseImage: 'images/minus.png',
+							expandImage: 'images/plus.png',
+							onCheck: {
+								node: 'expand',
+								ancestors: 'checkIfFull',
+								descendants: 'check'
+							},
+							onUncheck: {
+								node: 'collapse',
+								ancestors: 'uncheck'
+							}
+						});
+						$('#tree2').checkboxTree({
+							initializeChecked: 'expanded',
+							initializeUnchecked: 'collapsed',
+							collapseDuration: 50,
+							expandDuration: 100,
+							collapseImage: 'images/minus.png',
+							expandImage: 'images/plus.png',
+							onCheck: {
+								node: 'expand',
+								ancestors: 'checkIfFull',
+								descendants: 'check'
+							},
+							onUncheck: {
+								node: 'collapse',
+								ancestors: 'uncheck'
+							}
+						});
+						$('#tree1-expandAll').click(function(){
+							$('#tree1').checkboxTree('expandAll');
+						});
+						$('#tree1-collapseAll').click(function(){
+							$('#tree1').checkboxTree('collapseAll');
+						});
+						$('#tree2-expandAll').click(function(){
+							$('#tree2').checkboxTree('expandAll');
+						});
+						$('#tree2-collapseAll').click(function(){
+							$('#tree2').checkboxTree('collapseAll');
+						});
+					});
+				</script></head>
+   <body>
+      <h1><br></h1>
+      				[<a href="../../index.jsp">Back Home</a>]
+      				
+      <form action="getXml" method="post" class="inl">
+         						[<a id="top3" target="_blank" href="EccoChangeSet_gensyms.xml">Source XML</a>]
+         					
+      </form><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp; [<a id="top1" href="javascript:;" onClick="showAll();">Show All</a> | 
+      				<a id="top2" href="javascript:;" onClick="hideAll();">Hide All</a>] <br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="865cd841-559b-4495-bec7-c291b76ec234-gs"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
+      <table width="70%" style="table-layout:fixed;">
+         <tr>
+            <th class="topright"><input type="checkbox" name="removals" onClick="toggleGroup('removals')">  
+               <h3 style="display:inline;">Removals (70)</h3>
+            </th>
+            <th class="topleft"><input type="checkbox" name="additions" onClick="toggleGroup('additions')">  
+               <h3 style="display:inline;">Additions (226)</h3>
+            </th>
+         </tr>
+         <tr>
+            <td class="topright">
+               <ul id="tree1">
+                  <li>  <input type="checkbox" name="effRemsTrigger" onClick="toggleChanges('effRems','effRemsTrigger')">  
+                     <h4 style="display:inline;">Effectual (70)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, and are not entailed by Ontology 2');"><ul>
+                        <li>  Weakenings (0)</li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effRems" onClick="toggleDiv('retdesc');">  <a href="#retdesc">Retired Descriptions (70)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing retired terms, i.e., terms that no longer exist in Ontology 2');"></li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pure Removals (0)
+                        </li><br></ul>
+                  </li><br><li>  <input type="checkbox" name="ineffRemsTrigger" onClick="toggleChanges('ineffRems','ineffRemsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (0)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, but are entailed by Ontology 2, i.e., that have been removed but are still entailed');"><ul>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Prospective Redundancy (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+            <td class="topleft" style="vertical-align:top">
+               <ul id="tree2">
+                  <li>  <input type="checkbox" name="effAddsTrigger" onClick="toggleChanges('effAdds','effAddsTrigger')">  
+                     <h4 style="display:inline;">Effectual (226)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, and are not entailed by Ontology 1');"><ul>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Strengthenings (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('newdesc');">  <a href="#newdesc">New Descriptions (226)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing newly created terms, i.e., terms that did not exist in Ontology 1');"></li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pure Additions (0)
+                        </li>
+                     </ul>
+                  </li><br><li>  <input type="checkbox" name="ineffAddsTrigger" onClick="toggleChanges('ineffAdds','ineffAddsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (0)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, but are entailed by Ontology 1, i.e., that have been added but were already entailed');"><ul>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Retrospective Redundancy (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td class="topright">[<a href="javascript:void(0);" id="tree1-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree1-collapseAll">Collapse All</a>]
+            </td>
+            <td class="topleft">[<a href="javascript:void(0);" id="tree2-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree2-collapseAll">Collapse All</a>]
+            </td>
+         </tr>
+      </table>
+      <table width="100%" style="table-layout:fixed;">
+         <colgroup>
+            <col>
+            <col width="47.5%">
+            <col width="47.5%">
+         </colgroup>
+         
+         
+         
+         
+         
+         <tbody id="newdesc" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4>New Descriptions (226) <a href="#">[back to top]</a></h4>
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">New Description Axiom in Ontology 2</th>
+            </tr>
+            
+            <tr class="addition">
+               <td>1</td>
+               <td colspan="2">D7<span class="subclass"> SubClassOf </span>R7. <br><i>New Terms: R7, D7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>2</td>
+               <td colspan="2">U3<span class="subclass"> SubClassOf </span>prop28<span class="some"> some </span>Q2. <br><i>New Terms: Q2, U3, prop28</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>3</td>
+               <td colspan="2">U9<span class="subclass"> SubClassOf </span>G4. <br><i>New Terms: G4, U9</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>4</td>
+               <td colspan="2">S5<span class="subclass"> EquivalentTo </span>(T1<br><span class="keyword"> or </span>U8)<br><span class="keyword"> and </span>(prop35 min 2 J9). <br><i>New Terms: S5, prop35, J9, U8, T1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>5</td>
+               <td colspan="2">R2<span class="subclass"> SubClassOf </span>J9. <br><i>New Terms: J9, R2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>6</td>
+               <td colspan="2">T4<span class="subclass"> SubClassOf </span>L8. <br><i>New Terms: T4, L8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>7</td>
+               <td colspan="2">R3<span class="subclass"> SubClassOf </span>U8. <br><i>New Terms: R3, U8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>8</td>
+               <td colspan="2">C5<span class="subclass"> SubClassOf </span>O2. <br><i>New Terms: O2, C5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>9</td>
+               <td colspan="2">Q4<span class="subclass"> SubClassOf </span>prop33<span class="some"> only </span>A2. <br><i>New Terms: Q4, A2, prop33</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>10</td>
+               <td colspan="2">R5<span class="subclass"> SubClassOf </span>U2. <br><i>New Terms: U2, R5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>11</td>
+               <td colspan="2">U2<span class="subclass"> SubClassOf </span>H3. <br><i>New Terms: U2, H3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>12</td>
+               <td colspan="2">O8<span class="subclass"> SubClassOf </span>prop33<span class="some"> only </span>T3. <br><i>New Terms: T3, O8, prop33</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>13</td>
+               <td colspan="2">D2<span class="subclass"> SubClassOf </span>R2. <br><i>New Terms: D2, R2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>14</td>
+               <td colspan="2">L1<span class="subclass"> SubClassOf </span>O1. <br><i>New Terms: L1, O1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>15</td>
+               <td colspan="2">prop33<span class="subclass"> Range </span>L8. <br><i>New Terms: L8, prop33</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>16</td>
+               <td colspan="2">T6<span class="subclass"> SubClassOf </span>prop28<span class="some"> only </span>R4. <br><i>New Terms: T6, prop28, R4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>17</td>
+               <td colspan="2">Q9<span class="subclass"> SubClassOf </span>P6. <br><i>New Terms: Q9, P6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>18</td>
+               <td colspan="2">O6<span class="subclass"> SubClassOf </span>prop33<span class="some"> some </span>L8. <br><i>New Terms: L8, O6, prop33</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>19</td>
+               <td colspan="2">J9<span class="subclass"> DisjointWith </span>L8. <br><i>New Terms: J9, L8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>20</td>
+               <td colspan="2">prop34<span class="subclass"> Domain </span>O7. <br><i>New Terms: O7, prop34</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>21</td>
+               <td colspan="2">W1<span class="subclass"> SubClassOf </span>prop28<span class="some"> only </span>F6. <br><i>New Terms: prop28, W1, F6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>22</td>
+               <td colspan="2">Q3<span class="subclass"> SubClassOf </span>prop28<span class="some"> only </span>N3. <br><i>New Terms: Q3, prop28, N3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>23</td>
+               <td colspan="2">Q5<span class="subclass"> SubClassOf </span>N7. <br><i>New Terms: N7, Q5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>24</td>
+               <td colspan="2">Q9<span class="subclass"> SubClassOf </span>prop35<span class="some"> only </span>S8. <br><i>New Terms: prop35, Q9, S8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>25</td>
+               <td colspan="2">T7<span class="subclass"> SubClassOf </span>I4. <br><i>New Terms: T7, I4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>26</td>
+               <td colspan="2">N9<span class="subclass"> SubClassOf </span>E6. <br><i>New Terms: E6, N9</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>27</td>
+               <td colspan="2">F1<span class="subclass"> SubClassOf </span>prop10<span class="some"> only </span>I5. <br><i>New Terms: I5, F1, prop10</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>28</td>
+               <td colspan="2">O6<span class="subclass"> SubClassOf </span>H3. <br><i>New Terms: H3, O6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>29</td>
+               <td colspan="2">N7<span class="subclass"> SubClassOf </span>U3. <br><i>New Terms: U3, N7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>30</td>
+               <td colspan="2">F8<span class="subclass"> SubClassOf </span>T6. <br><i>New Terms: F8, T6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>31</td>
+               <td colspan="2">U3<span class="subclass"> SubClassOf </span>M2. <br><i>New Terms: U3, M2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>32</td>
+               <td colspan="2">J7<span class="subclass"> SubClassOf </span>J4. <br><i>New Terms: J7, J4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>33</td>
+               <td colspan="2">B2<span class="subclass"> SubClassOf </span>T6. <br><i>New Terms: T6, B2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>34</td>
+               <td colspan="2">I4<span class="subclass"> SubClassOf </span>O6. <br><i>New Terms: I4, O6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>35</td>
+               <td colspan="2">L9<span class="subclass"> SubClassOf </span>J7. <br><i>New Terms: J7, L9</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>36</td>
+               <td colspan="2">K9<span class="subclass"> SubClassOf </span>prop35<span class="some"> some </span>L9. <br><i>New Terms: K9, prop35, L9</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>37</td>
+               <td colspan="2">prop28<span class="subclass"> InverseOf </span>prop26. <br><i>New Terms: prop26, prop28</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>38</td>
+               <td colspan="2">P5<span class="subclass"> SubClassOf </span>M3. <br><i>New Terms: M3, P5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>39</td>
+               <td colspan="2">B2<span class="subclass"> SubClassOf </span>prop28<span class="some"> only </span>V4. <br><i>New Terms: prop28, B2, V4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>40</td>
+               <td colspan="2">S3<span class="subclass"> SubClassOf </span>Q5. <br><i>New Terms: S3, Q5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>41</td>
+               <td colspan="2">J3<span class="subclass"> SubClassOf </span>U5. <br><i>New Terms: U5, J3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>42</td>
+               <td colspan="2">F8<span class="subclass"> SubClassOf </span>prop28<span class="some"> only </span>V4. <br><i>New Terms: F8, prop28, V4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>43</td>
+               <td colspan="2">M5<span class="subclass"> SubClassOf </span>L8. <br><i>New Terms: M5, L8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>44</td>
+               <td colspan="2">C6<span class="subclass"> SubClassOf </span>prop10<span class="some"> only </span>F3. <br><i>New Terms: F3, C6, prop10</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>45</td>
+               <td colspan="2">T6<span class="subclass"> SubClassOf </span>prop21<span class="some"> only </span>H5. <br><i>New Terms: prop21, T6, H5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>46</td>
+               <td colspan="2">prop33<span class="subclass"> Domain </span>O6. <br><i>New Terms: O6, prop33</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>47</td>
+               <td colspan="2">V8<span class="subclass"> SubClassOf </span>N3. <br><i>New Terms: V8, N3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>48</td>
+               <td colspan="2">V1<span class="subclass"> SubClassOf </span>G4. <br><i>New Terms: G4, V1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>49</td>
+               <td colspan="2">T1<span class="subclass"> DisjointWith </span>U8. <br><i>New Terms: U8, T1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>50</td>
+               <td colspan="2">S6<span class="subclass"> SubClassOf </span>U8. <br><i>New Terms: S6, U8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>51</td>
+               <td colspan="2">S2<span class="subclass"> SubClassOf </span>prop28<span class="some"> some </span>L9. <br><i>New Terms: prop28, L9, S2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>52</td>
+               <td colspan="2">J6<span class="subclass"> SubClassOf </span>N5. <br><i>New Terms: J6, N5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>53</td>
+               <td colspan="2">prop10<span class="subclass"> InverseOf </span>prop35. <br><i>New Terms: prop35, prop10</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>54</td>
+               <td colspan="2">C6<span class="subclass"> SubClassOf </span>J3. <br><i>New Terms: C6, J3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>55</td>
+               <td colspan="2">T1<span class="subclass"> SubClassOf </span>J1. <br><i>New Terms: J1, T1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>56</td>
+               <td colspan="2">Q1<span class="subclass"> SubClassOf </span>M6. <br><i>New Terms: Q1, M6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>57</td>
+               <td colspan="2">B1<span class="subclass"> SubClassOf </span>M6. <br><i>New Terms: M6, B1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>58</td>
+               <td colspan="2">F1<span class="subclass"> SubClassOf </span>J4. <br><i>New Terms: J4, F1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>59</td>
+               <td colspan="2">U6<span class="subclass"> SubClassOf </span>prop35<span class="some"> only </span>N3. <br><i>New Terms: prop35, U6, N3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>60</td>
+               <td colspan="2">B5<span class="subclass"> SubClassOf </span>W1. <br><i>New Terms: W1, B5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>61</td>
+               <td colspan="2">M8<span class="subclass"> SubClassOf </span>S2. <br><i>New Terms: M8, S2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>62</td>
+               <td colspan="2">C1<span class="subclass"> SubClassOf </span>L8. <br><i>New Terms: C1, L8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>63</td>
+               <td colspan="2">Q4<span class="subclass"> SubClassOf </span>prop28<span class="some"> only </span>
+                  (F7<br><span class="keyword"> or </span>V8). <br><i>New Terms: V8, prop28, Q4, F7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>64</td>
+               <td colspan="2">F7<span class="subclass"> DisjointWith </span>F6. <br><i>New Terms: F6, F7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>65</td>
+               <td colspan="2">L8<span class="subclass"> SubClassOf </span>M7. <br><i>New Terms: M7, L8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>66</td>
+               <td colspan="2">R1<span class="subclass"> SubClassOf </span>J3. <br><i>New Terms: R1, J3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>67</td>
+               <td colspan="2">W1<span class="subclass"> SubClassOf </span>Q3. <br><i>New Terms: Q3, W1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>68</td>
+               <td colspan="2">H5<span class="subclass"> SubClassOf </span>prop10<span class="some"> some </span>P6. <br><i>New Terms: prop10, P6, H5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>69</td>
+               <td colspan="2">A9<span class="subclass"> SubClassOf </span>F8. <br><i>New Terms: F8, A9</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>70</td>
+               <td colspan="2">G8<span class="subclass"> SubClassOf </span>M2. <br><i>New Terms: G8, M2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>71</td>
+               <td colspan="2">N2<span class="subclass"> SubClassOf </span>prop35<span class="some"> only </span>D9. <br><i>New Terms: prop35, N2, D9</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>72</td>
+               <td colspan="2">R9<span class="subclass"> SubClassOf </span>T1. <br><i>New Terms: R9, T1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>73</td>
+               <td colspan="2">U6<span class="subclass"> SubClassOf </span>T1. <br><i>New Terms: U6, T1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>74</td>
+               <td colspan="2">A2<span class="subclass"> SubClassOf </span>I2. <br><i>New Terms: I2, A2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>75</td>
+               <td colspan="2">K2<span class="subclass"> SubClassOf </span>L8. <br><i>New Terms: K2, L8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>76</td>
+               <td colspan="2">F9<span class="subclass"> SubClassOf </span>U8. <br><i>New Terms: F9, U8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>77</td>
+               <td colspan="2">I5<span class="subclass"> SubClassOf </span>U8. <br><i>New Terms: I5, U8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>78</td>
+               <td colspan="2">M6<span class="subclass"> SubClassOf </span>K2. <br><i>New Terms: M6, K2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>79</td>
+               <td colspan="2">J9<span class="subclass"> SubClassOf </span>prop10<span class="some"> only </span>J1. <br><i>New Terms: J9, J1, prop10</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>80</td>
+               <td colspan="2">M3<span class="subclass"> SubClassOf </span>U3. <br><i>New Terms: M3, U3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>81</td>
+               <td colspan="2">I4<span class="subclass"> EquivalentTo </span>O6<br><span class="keyword"> and </span>(prop28<span class="some"> some </span>R2)<br><span class="keyword"> and </span>(prop3<span class="some"> some </span>U2). <br><i>New Terms: U2, prop28, R2, prop3, I4, O6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>82</td>
+               <td colspan="2">S2<span class="subclass"> SubClassOf </span>M2. <br><i>New Terms: M2, S2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>83</td>
+               <td colspan="2">P6<span class="subclass"> SubClassOf </span>U8. <br><i>New Terms: P6, U8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>84</td>
+               <td colspan="2">T6<span class="subclass"> SubClassOf </span>Q3. <br><i>New Terms: T6, Q3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>85</td>
+               <td colspan="2">R4<span class="subclass"> DisjointWith </span>F6. <br><i>New Terms: R4, F6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>86</td>
+               <td colspan="2">Q3<span class="subclass"> SubClassOf </span>O1. <br><i>New Terms: O1, Q3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>87</td>
+               <td colspan="2">D9<span class="subclass"> SubClassOf </span>H5. <br><i>New Terms: H5, D9</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>88</td>
+               <td colspan="2">U3<span class="subclass"> SubClassOf </span><span class="keyword">not </span>(prop28<span class="some"> some </span>L9). <br><i>New Terms: U3, prop28, L9</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>89</td>
+               <td colspan="2">B7<span class="subclass"> SubClassOf </span>O2. <br><i>New Terms: B7, O2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>90</td>
+               <td colspan="2">J7<span class="subclass"> SubClassOf </span>prop10<span class="some"> only </span>I5. <br><i>New Terms: J7, I5, prop10</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>91</td>
+               <td colspan="2">D4<span class="subclass"> SubClassOf </span>Q3. <br><i>New Terms: D4, Q3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>92</td>
+               <td colspan="2">J4<span class="subclass"> SubClassOf </span>R2. <br><i>New Terms: J4, R2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>93</td>
+               <td colspan="2">L1<span class="subclass"> SubClassOf </span>prop33<span class="some"> some </span>L5. <br><i>New Terms: L1, L5, prop33</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>94</td>
+               <td colspan="2">B3<span class="subclass"> SubClassOf </span>J2. <br><i>New Terms: B3, J2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>95</td>
+               <td colspan="2">Q2<span class="subclass"> SubClassOf </span>prop26<span class="some"> only </span>M2. <br><i>New Terms: prop26, Q2, M2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>96</td>
+               <td colspan="2">B4<span class="subclass"> SubClassOf </span>K2. <br><i>New Terms: K2, B4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>97</td>
+               <td colspan="2">V4<span class="subclass"> SubClassOf </span>D2. <br><i>New Terms: D2, V4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>98</td>
+               <td colspan="2">F5<span class="subclass"> SubClassOf </span>J3. <br><i>New Terms: F5, J3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>99</td>
+               <td colspan="2">O1<span class="subclass"> EquivalentTo </span>O6<br><span class="keyword"> and </span>(prop25<span class="some"> some </span>J1)<br><span class="keyword"> and </span>(prop28<span class="some"> some </span>J9). <br><i>New Terms: prop25, O1, J9, J1, prop28, O6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>100</td>
+               <td colspan="2">M7<span class="subclass"> SubClassOf </span>prop27<span class="some"> some </span>H3. <br><i>New Terms: prop27, H3, M7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>101</td>
+               <td colspan="2">J8<span class="subclass"> SubClassOf </span>U4. <br><i>New Terms: J8, U4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>102</td>
+               <td colspan="2">G4<span class="subclass"> SubClassOf </span>E5. <br><i>New Terms: G4, E5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>103</td>
+               <td colspan="2">K6<span class="subclass"> SubClassOf </span>L8. <br><i>New Terms: K6, L8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>104</td>
+               <td colspan="2">D7<span class="subclass"> DisjointWith </span>H3. <br><i>New Terms: H3, D7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>105</td>
+               <td colspan="2">O6<span class="subclass"> DisjointWith </span>O7. <br><i>New Terms: O7, O6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>106</td>
+               <td colspan="2">H5<span class="subclass"> SubClassOf </span>D2. <br><i>New Terms: D2, H5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>107</td>
+               <td colspan="2">F1<span class="subclass"> SubClassOf </span>prop26<span class="some"> only </span>L1. <br><i>New Terms: prop26, F1, L1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>108</td>
+               <td colspan="2">E2<span class="subclass"> SubClassOf </span>O8. <br><i>New Terms: E2, O8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>109</td>
+               <td colspan="2">W1<span class="subclass"> SubClassOf </span>prop33<span class="some"> only </span>S4. <br><i>New Terms: S4, W1, prop33</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>110</td>
+               <td colspan="2">O9<span class="subclass"> SubClassOf </span>U8. <br><i>New Terms: O9, U8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>111</td>
+               <td colspan="2">B6<span class="subclass"> SubClassOf </span>O1. <br><i>New Terms: O1, B6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>112</td>
+               <td colspan="2">F2<span class="subclass"> SubClassOf </span>F8. <br><i>New Terms: F2, F8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>113</td>
+               <td colspan="2">P2<span class="subclass"> SubClassOf </span>B2. <br><i>New Terms: P2, B2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>114</td>
+               <td colspan="2">K3<span class="subclass"> SubClassOf </span>K2. <br><i>New Terms: K2, K3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>115</td>
+               <td colspan="2">I8<span class="subclass"> SubClassOf </span>E5. <br><i>New Terms: I8, E5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>116</td>
+               <td colspan="2">G7<span class="subclass"> SubClassOf </span>I5. <br><i>New Terms: I5, G7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>117</td>
+               <td colspan="2">D1<span class="subclass"> SubClassOf </span>U8. <br><i>New Terms: D1, U8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>118</td>
+               <td colspan="2">A3<span class="subclass"> SubClassOf </span>B4. <br><i>New Terms: A3, B4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>119</td>
+               <td colspan="2">N3<span class="subclass"> SubClassOf </span>J9. <br><i>New Terms: J9, N3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>120</td>
+               <td colspan="2">E8<span class="subclass"> SubClassOf </span>prop15 min 1 G1. <br><i>New Terms: prop15, G1, E8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>121</td>
+               <td colspan="2">S8<span class="subclass"> SubClassOf </span>H5. <br><i>New Terms: S8, H5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>122</td>
+               <td colspan="2">S1<span class="subclass"> SubClassOf </span>M3. <br><i>New Terms: M3, S1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>123</td>
+               <td colspan="2">K4<span class="subclass"> SubClassOf </span>Q5. <br><i>New Terms: K4, Q5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>124</td>
+               <td colspan="2">G8<span class="subclass"> SubClassOf </span>prop33<span class="some"> some </span>K1. <br><i>New Terms: K1, G8, prop33</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>125</td>
+               <td colspan="2">E8<span class="subclass"> SubClassOf </span>G8. <br><i>New Terms: G8, E8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>126</td>
+               <td colspan="2">O8<span class="subclass"> SubClassOf </span>Q3. <br><i>New Terms: Q3, O8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>127</td>
+               <td colspan="2">prop13<span class="subclass"> Range </span>O2. <br><i>New Terms: O2, prop13</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>128</td>
+               <td colspan="2">Q7<span class="subclass"> SubClassOf </span>D2. <br><i>New Terms: Q7, D2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>129</td>
+               <td colspan="2">K9<span class="subclass"> SubClassOf </span>I5. <br><i>New Terms: K9, I5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>130</td>
+               <td colspan="2">T5<span class="subclass"> SubClassOf </span>prop35<span class="some"> only </span>Q2. <br><i>New Terms: prop35, T5, Q2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>131</td>
+               <td colspan="2">T5<span class="subclass"> SubClassOf </span>I5. <br><i>New Terms: I5, T5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>132</td>
+               <td colspan="2">F8<span class="subclass"> SubClassOf </span>prop25<span class="some"> only </span>F9. <br><i>New Terms: prop25, F8, F9</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>133</td>
+               <td colspan="2">H3<span class="subclass"> SubClassOf </span>R7. <br><i>New Terms: H3, R7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>134</td>
+               <td colspan="2">L6<span class="subclass"> SubClassOf </span>prop33<span class="some"> some </span>
+                  (A3<br><span class="keyword"> or </span>G5<br><span class="keyword"> or </span>C4). <br><i>New Terms: C4, G5, L6, A3, prop33</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>135</td>
+               <td colspan="2">S4<span class="subclass"> SubClassOf </span>I2. <br><i>New Terms: S4, I2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>136</td>
+               <td colspan="2">M2<span class="subclass"> SubClassOf </span>prop28<span class="some"> only </span>J7. <br><i>New Terms: J7, prop28, M2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>137</td>
+               <td colspan="2">F8<span class="subclass"> SubClassOf </span>prop21<span class="some"> only </span>J5. <br><i>New Terms: J5, prop21, F8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>138</td>
+               <td colspan="2">P8<span class="subclass"> SubClassOf </span>F8. <br><i>New Terms: F8, P8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>139</td>
+               <td colspan="2">F3<span class="subclass"> SubClassOf </span>T1. <br><i>New Terms: F3, T1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>140</td>
+               <td colspan="2">D3<span class="subclass"> SubClassOf </span>J8. <br><i>New Terms: J8, D3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>141</td>
+               <td colspan="2">Q3<span class="subclass"> SubClassOf </span>prop33<span class="some"> only </span>I2. <br><i>New Terms: Q3, I2, prop33</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>142</td>
+               <td colspan="2">F7<span class="subclass"> DisjointWith </span>V8. <br><i>New Terms: V8, F7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>143</td>
+               <td colspan="2">U4<span class="subclass"> SubClassOf </span>U8. <br><i>New Terms: U4, U8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>144</td>
+               <td colspan="2">N2<span class="subclass"> SubClassOf </span>P6. <br><i>New Terms: P6, N2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>145</td>
+               <td colspan="2">U3<span class="subclass"> DisjointWith </span>S2. <br><i>New Terms: U3, S2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>146</td>
+               <td colspan="2">J1<span class="subclass"> EquivalentTo </span>prop35<span class="some"> some </span>J9. <br><i>New Terms: prop35, J9, J1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>147</td>
+               <td colspan="2">T8<span class="subclass"> DisjointWith </span>M7. <br><i>New Terms: M7, T8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>148</td>
+               <td colspan="2">G2<span class="subclass"> SubClassOf </span>J5. <br><i>New Terms: J5, G2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>149</td>
+               <td colspan="2">F1<span class="subclass"> SubClassOf </span>prop26<span class="some"> only </span>L6. <br><i>New Terms: prop26, F1, L6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>150</td>
+               <td colspan="2">U2<span class="subclass"> SubClassOf </span>prop2<span class="some"> only </span>O7. <br><i>New Terms: O7, U2, prop2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>151</td>
+               <td colspan="2">T3<span class="subclass"> DisjointWith </span>E2. <br><i>New Terms: T3, E2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>152</td>
+               <td colspan="2">I2<span class="subclass"> SubClassOf </span>L8. <br><i>New Terms: I2, L8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>153</td>
+               <td colspan="2">Q2<span class="subclass"> SubClassOf </span>J7. <br><i>New Terms: J7, Q2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>154</td>
+               <td colspan="2">R7<span class="subclass"> DisjointWith </span>T8. <br><i>New Terms: R7, T8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>155</td>
+               <td colspan="2">O7<span class="subclass"> SubClassOf </span>H3. <br><i>New Terms: O7, H3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>156</td>
+               <td colspan="2">S5<span class="subclass"> SubClassOf </span>J1. <br><i>New Terms: S5, J1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>157</td>
+               <td colspan="2">N6<span class="subclass"> SubClassOf </span>V4. <br><i>New Terms: N6, V4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>158</td>
+               <td colspan="2">T3<span class="subclass"> DisjointWith </span>A2. <br><i>New Terms: T3, A2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>159</td>
+               <td colspan="2">K9<span class="subclass"> SubClassOf </span>prop35<span class="some"> some </span>Q2. <br><i>New Terms: K9, prop35, Q2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>160</td>
+               <td colspan="2">V8<span class="subclass"> DisjointWith </span>F6. <br><i>New Terms: V8, F6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>161</td>
+               <td colspan="2">N8<span class="subclass"> SubClassOf </span>J3. <br><i>New Terms: N8, J3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>162</td>
+               <td colspan="2">G3<span class="subclass"> SubClassOf </span>O8. <br><i>New Terms: G3, O8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>163</td>
+               <td colspan="2">O1<span class="subclass"> SubClassOf </span>O6. <br><i>New Terms: O1, O6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>164</td>
+               <td colspan="2">B6<span class="subclass"> SubClassOf </span>prop33<span class="some"> some </span>K3. <br><i>New Terms: B6, prop33, K3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>165</td>
+               <td colspan="2">K1<span class="subclass"> SubClassOf </span>L8. <br><i>New Terms: K1, L8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>166</td>
+               <td colspan="2">H2<span class="subclass"> SubClassOf </span>I5. <br><i>New Terms: I5, H2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>167</td>
+               <td colspan="2">Q4<span class="subclass"> SubClassOf </span>K7. <br><i>New Terms: Q4, K7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>168</td>
+               <td colspan="2">F7<span class="subclass"> DisjointWith </span>R4. <br><i>New Terms: R4, F7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>169</td>
+               <td colspan="2">A1<span class="subclass"> SubClassOf </span>U2. <br><i>New Terms: U2, A1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>170</td>
+               <td colspan="2">G5<span class="subclass"> SubClassOf </span>B4. <br><i>New Terms: G5, B4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>171</td>
+               <td colspan="2">U5<span class="subclass"> SubClassOf </span>J9. <br><i>New Terms: J9, U5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>172</td>
+               <td colspan="2">prop2<span class="subclass"> SubPropertyOf </span>prop16. <br><i>New Terms: prop16, prop2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>173</td>
+               <td colspan="2">E5<span class="subclass"> SubClassOf </span>U5. <br><i>New Terms: E5, U5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>174</td>
+               <td colspan="2">G1<span class="subclass"> SubClassOf </span>O2. <br><i>New Terms: O2, G1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>175</td>
+               <td colspan="2"> <span class="subclass">Transitive: </span>prop16. <br><i>New Terms: prop16</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>176</td>
+               <td colspan="2">prop15<span class="subclass"> InverseOf </span>prop18. <br><i>New Terms: prop15, prop18</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>177</td>
+               <td colspan="2">O3<span class="subclass"> SubClassOf </span>V4. <br><i>New Terms: O3, V4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>178</td>
+               <td colspan="2">R8<span class="subclass"> SubClassOf </span>E6. <br><i>New Terms: E6, R8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>179</td>
+               <td colspan="2">J5<span class="subclass"> SubClassOf </span>D2. <br><i>New Terms: J5, D2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>180</td>
+               <td colspan="2">J2<span class="subclass"> SubClassOf </span>K2. <br><i>New Terms: K2, J2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>181</td>
+               <td colspan="2">D2<span class="subclass"> SubClassOf </span>prop2<span class="some"> only </span>N3. <br><i>New Terms: prop2, D2, N3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>182</td>
+               <td colspan="2">F3<span class="subclass"> SubClassOf </span>prop35<span class="some"> only </span>V1. <br><i>New Terms: F3, prop35, V1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>183</td>
+               <td colspan="2"> <span class="subclass">Asymmetric: </span>prop27. <br><i>New Terms: prop27</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>184</td>
+               <td colspan="2">C4<span class="subclass"> SubClassOf </span>B4. <br><i>New Terms: C4, B4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>185</td>
+               <td colspan="2">U8<span class="subclass"> SubClassOf </span>J1. <br><i>New Terms: J1, U8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>186</td>
+               <td colspan="2">Q5<span class="subclass"> SubClassOf </span>M3. <br><i>New Terms: M3, Q5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>187</td>
+               <td colspan="2">K7<span class="subclass"> SubClassOf </span>Q3. <br><i>New Terms: Q3, K7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>188</td>
+               <td colspan="2">N5<span class="subclass"> SubClassOf </span>U4. <br><i>New Terms: N5, U4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>189</td>
+               <td colspan="2">Q4<span class="subclass"> SubClassOf </span>D4. <br><i>New Terms: D4, Q4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>190</td>
+               <td colspan="2">T3<span class="subclass"> SubClassOf </span>I2. <br><i>New Terms: T3, I2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>191</td>
+               <td colspan="2">K4<span class="subclass"> SubClassOf </span>prop15<span class="some"> some </span>G1. <br><i>New Terms: prop15, K4, G1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>192</td>
+               <td colspan="2">P6<span class="subclass"> DisjointWith </span>F9. <br><i>New Terms: F9, P6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>193</td>
+               <td colspan="2">prop15<span class="subclass"> SubPropertyOf </span>prop13. <br><i>New Terms: prop15, prop13</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>194</td>
+               <td colspan="2">E6<span class="subclass"> SubClassOf </span>U4. <br><i>New Terms: U4, E6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>195</td>
+               <td colspan="2">J2<span class="subclass"> DisjointWith </span>M6. <br><i>New Terms: M6, J2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>196</td>
+               <td colspan="2">O7<span class="subclass"> SubClassOf </span>prop34<span class="some"> only </span>O6. <br><i>New Terms: O7, prop34, O6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>197</td>
+               <td colspan="2">E9<span class="subclass"> SubClassOf </span>N5. <br><i>New Terms: E9, N5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>198</td>
+               <td colspan="2">I3<span class="subclass"> SubClassOf </span>I4. <br><i>New Terms: I3, I4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>199</td>
+               <td colspan="2">I1<span class="subclass"> SubClassOf </span>J2. <br><i>New Terms: I1, J2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>200</td>
+               <td colspan="2">R5<span class="subclass"> SubClassOf </span>prop29<span class="some"> only </span>V4. <br><i>New Terms: R5, prop29, V4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>201</td>
+               <td colspan="2">T6<span class="subclass"> SubClassOf </span>prop33<span class="some"> only </span>S4. <br><i>New Terms: S4, T6, prop33</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>202</td>
+               <td colspan="2">J9<span class="subclass"> SubClassOf </span>M7. <br><i>New Terms: J9, M7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>203</td>
+               <td colspan="2">T2<span class="subclass"> SubClassOf </span>O1. <br><i>New Terms: T2, O1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>204</td>
+               <td colspan="2">L5<span class="subclass"> SubClassOf </span>M6. <br><i>New Terms: M6, L5</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>205</td>
+               <td colspan="2">H9<span class="subclass"> SubClassOf </span>I5. <br><i>New Terms: I5, H9</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>206</td>
+               <td colspan="2">R4<span class="subclass"> DisjointWith </span>V8. <br><i>New Terms: V8, R4</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>207</td>
+               <td colspan="2">prop18<span class="subclass"> Domain </span>G1. <br><i>New Terms: G1, prop18</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>208</td>
+               <td colspan="2">O2<span class="subclass"> SubClassOf </span>D7. <br><i>New Terms: O2, D7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>209</td>
+               <td colspan="2">Q2<span class="subclass"> DisjointWith </span>L9. <br><i>New Terms: Q2, L9</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>210</td>
+               <td colspan="2">C3<span class="subclass"> SubClassOf </span>M3. <br><i>New Terms: M3, C3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>211</td>
+               <td colspan="2">R7<span class="subclass"> DisjointWith </span>M7. <br><i>New Terms: M7, R7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>212</td>
+               <td colspan="2">U1<span class="subclass"> SubClassOf </span>N5. <br><i>New Terms: N5, U1</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>213</td>
+               <td colspan="2"> <span class="subclass">Transitive: </span>prop2. <br><i>New Terms: prop2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>214</td>
+               <td colspan="2">J7<span class="subclass"> SubClassOf </span>prop10<span class="some"> only </span>E6. <br><i>New Terms: J7, prop10, E6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>215</td>
+               <td colspan="2">M2<span class="subclass"> SubClassOf </span>O1. <br><i>New Terms: O1, M2</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>216</td>
+               <td colspan="2">C6<span class="subclass"> SubClassOf </span>prop10<span class="some"> only </span>U6. <br><i>New Terms: C6, prop10, U6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>217</td>
+               <td colspan="2">F6<span class="subclass"> SubClassOf </span>N3. <br><i>New Terms: F6, N3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>218</td>
+               <td colspan="2">O6<span class="subclass"> SubClassOf </span>prop13 min 1 O2. <br><i>New Terms: O2, O6, prop13</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>219</td>
+               <td colspan="2">L6<span class="subclass"> SubClassOf </span>O1. <br><i>New Terms: O1, L6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>220</td>
+               <td colspan="2">R4<span class="subclass"> SubClassOf </span>N3. <br><i>New Terms: R4, N3</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>221</td>
+               <td colspan="2">prop34<span class="subclass"> Range </span>O6. <br><i>New Terms: prop34, O6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>222</td>
+               <td colspan="2">O8<span class="subclass"> SubClassOf </span>prop28<span class="some"> only </span>V8. <br><i>New Terms: V8, prop28, O8</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>223</td>
+               <td colspan="2">J9<span class="subclass"> SubClassOf </span>prop26<span class="some"> only </span>O6. <br><i>New Terms: prop26, J9, O6</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>224</td>
+               <td colspan="2"> Reflexive: prop16. <br><i>New Terms: prop16</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>225</td>
+               <td colspan="2">F7<span class="subclass"> SubClassOf </span>N3. <br><i>New Terms: N3, F7</i></td>
+            </tr>
+            
+            <tr class="addition">
+               <td>226</td>
+               <td colspan="2">M4<span class="subclass"> SubClassOf </span>I5. <br><i>New Terms: I5, M4</i></td>
+            </tr>
+            
+         </tbody>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         <tbody id="retdesc" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4>Retired Descriptions (70) <a href="#">[back to top]</a></h4>
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal" colspan="2">Retired Description Axiom in Ontology 1</th>
+            </tr>
+            
+            <tr class="removal">
+               <td>227</td>
+               <td colspan="2">B9<span class="subclass"> EquivalentTo </span>prop31<span class="some"> some </span>
+                  (V6<br><span class="keyword"> or </span>(prop4<span class="some"> some </span>V6)).<br><i>Retired Terms: V6, prop4, B9, prop31</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>228</td>
+               <td colspan="2">P9<span class="subclass"> EquivalentTo </span>C9<br><span class="keyword"> and </span>(prop23<span class="some"> some </span>P4).<br><i>Retired Terms: P9, C9, prop23, P4</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>229</td>
+               <td colspan="2">A5<span class="subclass"> EquivalentTo </span>C9<br><span class="keyword"> and </span>(prop23<span class="some"> some </span>L3).<br><i>Retired Terms: L3, C9, prop23, A5</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>230</td>
+               <td colspan="2">prop23<span class="subclass"> Range </span>L3.<br><i>Retired Terms: L3, prop23</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>231</td>
+               <td colspan="2">V6<span class="subclass"> SubClassOf </span>D6.<br><i>Retired Terms: V6, D6</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>232</td>
+               <td colspan="2">M9<span class="subclass"> DisjointWith </span>O5.<br><i>Retired Terms: M9, O5</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>233</td>
+               <td colspan="2">prop17<span class="subclass"> Domain </span>L3.<br><i>Retired Terms: L3, prop17</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>234</td>
+               <td colspan="2">D8<span class="subclass"> SubClassOf </span>M9<br><span class="keyword"> or </span>O5.<br><i>Retired Terms: M9, D8, O5</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>235</td>
+               <td colspan="2">I9<span class="subclass"> SubClassOf </span>prop5<span class="some"> only </span>O5.<br><i>Retired Terms: prop5, I9, O5</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>236</td>
+               <td colspan="2">T9<span class="subclass"> SubClassOf </span>M1.<br><i>Retired Terms: T9, M1</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>237</td>
+               <td colspan="2">prop23<span class="subclass"> Domain </span>C9.<br><i>Retired Terms: C9, prop23</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>238</td>
+               <td colspan="2">H7<span class="subclass"> SubClassOf </span>prop17<span class="some"> only </span>C7.<br><i>Retired Terms: prop17, H7, C7</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>239</td>
+               <td colspan="2">V7<span class="subclass"> SubClassOf </span>L3.<br><i>Retired Terms: V7, L3</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>240</td>
+               <td colspan="2">N4<span class="subclass"> EquivalentTo </span>C9<br><span class="keyword"> and </span>(prop11<span class="some"> some </span>L7).<br><i>Retired Terms: C9, N4, prop11, L7</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>241</td>
+               <td colspan="2">L3<br><span class="keyword"> or </span>(prop4<span class="some"> some </span>L3)<span class="subclass"> DisjointWith </span>V5<br><span class="keyword"> or </span>(prop4<span class="some"> some </span>V5).<br><i>Retired Terms: L3, prop4, V5</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>242</td>
+               <td colspan="2">H8<span class="subclass"> SubClassOf </span>D6.<br><i>Retired Terms: H8, D6</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>243</td>
+               <td colspan="2">P1<span class="subclass"> SubClassOf </span>S9.<br><i>Retired Terms: P1, S9</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>244</td>
+               <td colspan="2">E1<span class="subclass"> SubClassOf </span>L3.<br><i>Retired Terms: L3, E1</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>245</td>
+               <td colspan="2">V2<span class="subclass"> SubClassOf </span>M9.<br><i>Retired Terms: V2, M9</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>246</td>
+               <td colspan="2">P4<span class="subclass"> SubClassOf </span>prop17<span class="some"> some </span>W2.<br><i>Retired Terms: P4, prop17, W2</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>247</td>
+               <td colspan="2">C2<span class="subclass"> EquivalentTo </span>C9<br><span class="keyword"> and </span>A7.<br><i>Retired Terms: A7, C9, C2</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>248</td>
+               <td colspan="2">P1<span class="subclass"> EquivalentTo </span>C9<br><span class="keyword"> and </span>(prop30<span class="some"> some </span>M1).<br><i>Retired Terms: P1, C9, prop30, M1</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>249</td>
+               <td colspan="2">P7<span class="subclass"> SubClassOf </span>V5.<br><i>Retired Terms: P7, V5</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>250</td>
+               <td colspan="2">I7<span class="subclass"> SubClassOf </span>M1.<br><i>Retired Terms: I7, M1</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>251</td>
+               <td colspan="2">M9<span class="subclass"> SubClassOf </span>D8.<br><i>Retired Terms: M9, D8</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>252</td>
+               <td colspan="2">N1<span class="subclass"> EquivalentTo </span>C9<br><span class="keyword"> and </span>(prop30<span class="some"> some </span>I6)<br><span class="keyword"> and </span>(prop31<span class="some"> some </span>(prop4<span class="some"> some </span>V6)).<br><i>Retired Terms: V6, I6, C9, prop30, prop4, prop31, N1</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>253</td>
+               <td colspan="2">prop23<span class="subclass"> InverseOf </span>prop22.<br><i>Retired Terms: prop22, prop23</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>254</td>
+               <td colspan="2">prop1<span class="subclass"> InverseOf </span>prop4.<br><i>Retired Terms: prop4, prop1</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>255</td>
+               <td colspan="2">H7<span class="subclass"> SubClassOf </span>L3.<br><i>Retired Terms: L3, H7</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>256</td>
+               <td colspan="2">H1<span class="subclass"> EquivalentTo </span>C9<br><span class="keyword"> and </span>(prop11<span class="some"> some </span>P4).<br><i>Retired Terms: C9, P4, prop11, H1</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>257</td>
+               <td colspan="2">E7<span class="subclass"> SubClassOf </span>M1.<br><i>Retired Terms: E7, M1</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>258</td>
+               <td colspan="2">prop23<span class="subclass"> SubPropertyOf </span>prop11.<br><i>Retired Terms: prop23, prop11</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>259</td>
+               <td colspan="2">P3<span class="subclass"> EquivalentTo </span>U7<br><span class="keyword"> and </span>(prop17<span class="some"> some </span>
+                  (E3<br><span class="keyword"> and </span>(prop4<span class="some"> some </span>H7))).<br><i>Retired Terms: P3, E3, prop4, prop17, U7, H7</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>260</td>
+               <td colspan="2">H4<span class="subclass"> SubClassOf </span>M1.<br><i>Retired Terms: H4, M1</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>261</td>
+               <td colspan="2">prop19<span class="subclass"> SubPropertyOf </span>prop7.<br><i>Retired Terms: prop7, prop19</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>262</td>
+               <td colspan="2">L4<span class="subclass"> SubClassOf </span>M1.<br><i>Retired Terms: L4, M1</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>263</td>
+               <td colspan="2">V3<span class="subclass"> EquivalentTo </span>A4<br><span class="keyword"> and </span>L2<br><span class="keyword"> and </span>C9.<br><i>Retired Terms: L2, C9, V3, A4</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>264</td>
+               <td colspan="2">L7<span class="subclass"> DisjointWith </span>P4.<br><i>Retired Terms: P4, L7</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>265</td>
+               <td colspan="2">prop19<span class="subclass"> Range </span>Q6.<br><i>Retired Terms: Q6, prop19</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>266</td>
+               <td colspan="2">G6<span class="subclass"> EquivalentTo </span>C9<br><span class="keyword"> and </span>(prop30<span class="some"> some </span>H4).<br><i>Retired Terms: C9, prop30, G6, H4</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>267</td>
+               <td colspan="2">A4<span class="subclass"> SubClassOf </span>S9.<br><i>Retired Terms: S9, A4</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>268</td>
+               <td colspan="2">prop12<span class="subclass"> SubPropertyOf </span>prop7.<br><i>Retired Terms: prop7, prop12</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>269</td>
+               <td colspan="2">Q8<span class="subclass"> EquivalentTo </span>C9<br><span class="keyword"> and </span>(prop23 min 3 C8).<br><i>Retired Terms: Q8, C9, prop23</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>270</td>
+               <td colspan="2">I6<span class="subclass"> SubClassOf </span>M1.<br><i>Retired Terms: I6, M1</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>271</td>
+               <td colspan="2">B8<span class="subclass"> SubClassOf </span>O5.<br><i>Retired Terms: B8, O5</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>272</td>
+               <td colspan="2">C9<span class="subclass"> SubClassOf </span>L3.<br><i>Retired Terms: L3, C9</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>273</td>
+               <td colspan="2">O4<span class="subclass"> EquivalentTo </span>L3<br><span class="keyword"> and </span>(prop17<span class="some"> only </span>(<span class="keyword">not </span>(L3)))<br><span class="keyword"> and </span>(prop17<span class="some"> only </span>(<span class="keyword">not </span>(prop4<span class="some"> some </span>L3))).<br><i>Retired Terms: L3, prop4, prop17, O4</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>274</td>
+               <td colspan="2">U7<span class="subclass"> SubClassOf </span>O4.<br><i>Retired Terms: U7, O4</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>275</td>
+               <td colspan="2">D8<span class="subclass"> SubClassOf </span>E4.<br><i>Retired Terms: E4, D8</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>276</td>
+               <td colspan="2">L7<span class="subclass"> SubClassOf </span>L3.<br><i>Retired Terms: L3, L7</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>277</td>
+               <td colspan="2">E1<span class="subclass"> SubClassOf </span>prop17<span class="some"> only </span>K8.<br><i>Retired Terms: E1, prop17, K8</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>278</td>
+               <td colspan="2">Q6<span class="subclass"> EquivalentTo </span>S9<br><span class="keyword"> and </span>D5<br><span class="keyword"> and </span>C9.<br><i>Retired Terms: Q6, D5, C9, S9</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>279</td>
+               <td colspan="2">V3<span class="subclass"> SubClassOf </span>(prop23<span class="some"> some </span>L3)<br><span class="keyword"> and </span>(prop23<span class="some"> only </span>L7).<br><i>Retired Terms: L3, prop23, L7, V3</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>280</td>
+               <td colspan="2">C7<span class="subclass"> SubClassOf </span>V5.<br><i>Retired Terms: V5, C7</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>281</td>
+               <td colspan="2">G9<span class="subclass"> EquivalentTo </span>C9<br><span class="keyword"> and </span>(prop30<span class="some"> some </span>T9).<br><i>Retired Terms: C9, prop30, G9, T9</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>282</td>
+               <td colspan="2">O5<span class="subclass"> SubClassOf </span>D8.<br><i>Retired Terms: D8, O5</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>283</td>
+               <td colspan="2">A8<span class="subclass"> EquivalentTo </span>prop22<span class="some"> some </span>C8.<br><i>Retired Terms: prop22, A8</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>284</td>
+               <td colspan="2">prop12<span class="subclass"> Range </span>F4.<br><i>Retired Terms: F4, prop12</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>285</td>
+               <td colspan="2">prop8<span class="subclass"> InverseOf </span>prop17.<br><i>Retired Terms: prop8, prop17</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>286</td>
+               <td colspan="2">I9<span class="subclass"> EquivalentTo </span>Q6<br><span class="keyword"> and </span>(prop30<span class="some"> some </span>
+                  (T9<br><span class="keyword"> and </span>V9)).<br><i>Retired Terms: Q6, I9, V9, prop30, T9</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>287</td>
+               <td colspan="2">H6<span class="subclass"> EquivalentTo </span>S9<br><span class="keyword"> and </span>C9.<br><i>Retired Terms: C9, H6, S9</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>288</td>
+               <td colspan="2">A6<span class="subclass"> SubClassOf </span>E4.<br><i>Retired Terms: A6, E4</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>289</td>
+               <td colspan="2">S7<span class="subclass"> EquivalentTo </span>C9<br><span class="keyword"> and </span>(prop30<span class="some"> some </span>I7).<br><i>Retired Terms: I7, C9, prop30, S7</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>290</td>
+               <td colspan="2">F4<span class="subclass"> EquivalentTo </span>S9<br><span class="keyword"> and </span>L2<br><span class="keyword"> and </span>C9.<br><i>Retired Terms: L2, C9, F4, S9</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>291</td>
+               <td colspan="2">K8<span class="subclass"> SubClassOf </span>prop4<span class="some"> some </span>P7.<br><i>Retired Terms: prop4, K8, P7</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>292</td>
+               <td colspan="2">S9<span class="subclass"> DisjointWith </span>A7.<br><i>Retired Terms: A7, S9</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>293</td>
+               <td colspan="2">L3<span class="subclass"> SubClassOf </span>prop17<span class="some"> some </span>C8.<br><i>Retired Terms: L3, prop17</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>294</td>
+               <td colspan="2">prop5<span class="subclass"> Range </span>E4.<br><i>Retired Terms: prop5, E4</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>295</td>
+               <td colspan="2">K5<span class="subclass"> EquivalentTo </span>C9<br><span class="keyword"> and </span>(prop23<span class="some"> some </span>L7).<br><i>Retired Terms: C9, prop23, K5, L7</i></td>
+            </tr>
+            
+            <tr class="removal">
+               <td>296</td>
+               <td colspan="2">R6<span class="subclass"> SubClassOf </span>L3.<br><i>Retired Terms: L3, R6</i></td>
+            </tr>
+            
+         </tbody>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         <tr class="withoutstyle">
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      <div id="shared" style="display:none" class="footnote">Shared axiom between Ontology 1 and 2.</div>
+   </body>
+</html>

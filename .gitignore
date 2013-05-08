@@ -1,17 +1,9 @@
-# Preliminary and test code #
-src/uk/ac/manchester/cs/diff/test/
-src/uk/ac/manchester/cs/diff/concept*
-
 # Test files #
 *.csv
-*.html
 todo
-out/*.xml
-out/xslt_server.xsl
 
 # Build #
 *.xpr
-ecco.jar
 build/*
 
 # SVN #
