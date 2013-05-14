@@ -22,6 +22,7 @@ package uk.ac.manchester.cs.diff;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -55,103 +56,134 @@ public class Output extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			getOutput(request, response);
-		} catch (TransformerException e) {
+		} catch (TransformerException | ServletException e) {
 			e.printStackTrace();
 		}
 	}
 
-	
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			getOutput(request, response);
-		} catch (TransformerException e) {
+		} catch (TransformerException | ServletException e) {
 			e.printStackTrace();
 		}
 	}
 
-	
+
 	/**
-	 * Toggle between gen syms and URI fragments
+	 * Toggle between gensyms, labels and entity names
 	 * @param request	Http request
 	 * @param response	Http response
 	 * @throws IOException
 	 * @throws ServletException
 	 * @throws TransformerException
+	 * @throws EccoException 
 	 */
 	private void getOutput(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, TransformerException {
 		HttpSession session = request.getSession();
+		PrintWriter pw = response.getWriter();
 		String xsltPath = (String) session.getAttribute("xsltPath");
 		XMLReport report = (XMLReport) session.getAttribute("report");
 		
-		PrintWriter pw = response.getWriter();
-		String id = request.getParameter("uuid").toString();
-		String genSyms = request.getParameter("gensyms");
-
-		boolean showGenSyms = false, showLabels = false, showNames = false;
-		if(genSyms.contains("GenSyms"))
-			showGenSyms = true;
-		else if(genSyms.contains("Names"))
-			showNames = true;
-		else if(genSyms.contains("Labels"))
-			showLabels = true;
-
-		String styledXml = "";
-		
-		if(showGenSyms) {
-			String gs_id = "";
-			if(!id.endsWith("-gs")) {
-				if(id.endsWith("-lbl")) 
-					gs_id = id.replace("-lbl", "-gs");
-				else
-					gs_id = id + "-gs";
+		String htmlOutput = "";
+		if(report != null && request.getParameter("uuid") != null) {
+			String id = request.getParameter("uuid").toString();
+			String genSyms = request.getParameter("gensyms");
+			if(genSyms.contains("GenSyms")) {
+				Document doc = getGensymsDocument(session, id);
+				if(doc != null) {
+					htmlOutput = report.getReportAsHTML(doc, xsltPath);
+					session.setAttribute("curuuid", doc.getElementById("root").getAttribute("uuid"));
+				}
 			}
-			else gs_id = id;
-			
-			Document doc = (Document)session.getAttribute(gs_id);
-			if(doc != null)
-				styledXml = report.getReportAsHTML(doc, xsltPath);
-			else
-				throw new Error("Your session has expired. This happens after 1 hour of inactivity.");
-		}
-		else if(showLabels) {
-			String lb_id = "";
-			
-			if(!id.endsWith("-lbl")) {
-				if(id.endsWith("-gs"))
-					lb_id = id.replace("-gs", "-lbl");
-				else
-					lb_id = id + "-lbl";
+			else if(genSyms.contains("Labels")) {
+				Document doc = getLabelsDocument(session, id);
+				if(doc != null) {
+					htmlOutput = report.getReportAsHTML(doc, xsltPath);
+					session.setAttribute("curuuid", doc.getElementById("root").getAttribute("uuid"));
+				}
 			}
-			else lb_id = id;
-			
-			Document doc = (Document)session.getAttribute(lb_id);
-			if(doc != null)
-				styledXml = report.getReportAsHTML(doc, xsltPath);
-			else
-				throw new Error("Your session has expired. This happens after 1 hour of inactivity.");
+			else if(genSyms.contains("Names")) {
+				Document doc = getNamesDocument(session, id);
+				if(doc != null) {
+					htmlOutput = report.getReportAsHTML(doc, xsltPath);
+					session.setAttribute("curuuid", doc.getElementById("root").getAttribute("uuid"));
+				}
+			}
 		}
-		else if(showNames) {
-			if(id.endsWith("-gs")) 
-				id = id.substring(0, id.length()-3);
-			else if(id.endsWith("-lbl"))
-				id = id.substring(0, id.length()-4);
-			
-			Document doc = (Document)session.getAttribute(id);
-
-			if(doc != null)
-				styledXml = report.getReportAsHTML(doc, xsltPath);
-			else
-				throw new Error("Your session has expired. This happens after 1 hour of inactivity.");
+		else if(report != null) {
+			String currentId = (String) request.getSession().getAttribute("curuuid");
+			Document doc = (Document) request.getSession().getAttribute(currentId);
+			htmlOutput = report.getReportAsHTML(doc, xsltPath);
 		}
-		else 
-			throw new Error("Document not retrieved properly.");
-
+		else { 
+			RequestDispatcher view = getServletContext().getRequestDispatcher("/index.jsp");
+			try {
+				view.forward(request, response);
+			} catch (ServletException e) {
+				e.printStackTrace();
+			}
+		}
 		response.setContentType("text/html");
-		pw.println(styledXml);
+		pw.println(htmlOutput);
 		pw.flush();
 		pw.close();
+	}
+	
+	
+	/**
+	 * Get the entity name-based XML document stored as a session attribute
+	 * @param session	Http session
+	 * @param id	uuid
+	 * @return Name-based XML document
+	 */
+	private Document getNamesDocument(HttpSession session, String id) {
+		if(id.endsWith("-gs")) 
+			id = id.substring(0, id.length()-3);
+		else if(id.endsWith("-lbl"))
+			id = id.substring(0, id.length()-4);
+		return (Document)session.getAttribute(id);
+	}
+	
+	
+	/**
+	 * Get the Gensym-based XML document stored as a session attribute
+	 * @param session	Http session
+	 * @param id	uuid
+	 * @return Gensym-based XML document
+	 */
+	private Document getGensymsDocument(HttpSession session, String id) {
+		String gs_id = "";
+		if(!id.endsWith("-gs")) {
+			if(id.endsWith("-lbl")) 
+				gs_id = id.replace("-lbl", "-gs");
+			else
+				gs_id = id + "-gs";
+		}
+		else gs_id = id;
+		return (Document)session.getAttribute(gs_id);
+	}
+	
+	
+	/**
+	 * Get the Label-based XML document stored as a session attribute
+	 * @param session	Http session
+	 * @param id	uuid
+	 * @return Label-based XML document
+	 */
+	private Document getLabelsDocument(HttpSession session, String id) {
+		String lb_id = "";
+		if(!id.endsWith("-lbl")) {
+			if(id.endsWith("-gs"))
+				lb_id = id.replace("-gs", "-lbl");
+			else
+				lb_id = id + "-lbl";
+		}
+		else lb_id = id;
+		return (Document)session.getAttribute(lb_id);
 	}
 }

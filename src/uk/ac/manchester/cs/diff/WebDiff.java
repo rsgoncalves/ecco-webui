@@ -25,6 +25,7 @@ import java.io.PrintWriter;
 import java.util.Iterator;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -93,43 +94,52 @@ public class WebDiff extends HttpServlet {
 	 * @throws FileUploadException 
 	 * @throws OWLOntologyCreationException 
 	 */
-	private void getDiff(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, TransformerException, OWLOntologyCreationException, FileUploadException {
+	private void getDiff(HttpServletRequest request, HttpServletResponse response) 
+			throws IOException, ServletException, TransformerException, OWLOntologyCreationException, FileUploadException {
 		PrintWriter pw = response.getWriter();
-		String xsltPath = "/usr/share/tomcat7/webapps/diff/xslt_server.xsl";	// Office Dell
+//		String xsltPath = "/usr/share/tomcat7/webapps/diff/xslt_server.xsl";	// Office Dell
 //		String xsltPath = "/usr/local/apache-tomcat-7.0.37/webapps/diff/xslt_server.xsl"; // Mac Pro
-//		String xsltPath = "/Users/rafa/Documents/PhD/workspace/ecco_web/WebContent/xslt_server.xsl"; // MacBook Pro
-		
-		EccoRunner runner = new EccoRunner(true, false, true, false, false);
-		// Load ontologies
-		loadOntologies(pw, request, response, runner);
-		// Get diff report 
-		XMLReport report = runner.computeDiff(ont1, ont2, false, false, false, xsltPath);
+		String xsltPath = "/Users/rafa/Documents/PhD/workspace/ecco-webui/WebContent/xslt_server.xsl"; // MacBook Pro
+		String styledXml = "";
+		if(request.getSession().getAttribute("report") != null) {
+			XMLReport report = (XMLReport) request.getSession().getAttribute("report");
+			String currentId = (String) request.getSession().getAttribute("curuuid");
+			Document doc = (Document) request.getSession().getAttribute(currentId);
+			styledXml = report.getReportAsHTML(doc, xsltPath);
+		}
+		else {
+			EccoRunner runner = new EccoRunner(true, false, true, false, false);
+			// Load ontologies
+			loadOntologies(pw, request, response, runner);
 
-		request.getSession().setAttribute("xsltPath", xsltPath);
-		request.getSession().setAttribute("report", report);
-		
-		Document doc = report.getXMLDocumentReport();
-		Document genSymDoc = report.getXMLDocumentReportUsingGenSyms();
-		Document labelDoc = report.getXMLDocumentReportUsingLabels();
+			if(ont1 != null && ont2 != null) {
+				// Get diff report 
+				XMLReport report = runner.computeDiff(ont1, ont2, false, false, false, xsltPath);
+				request.getSession().setAttribute("xsltPath", xsltPath);
+				request.getSession().setAttribute("report", report);
 
-		// Store XML document in session attribute
-		Element root = doc.getElementById("root");
-		String uuid = root.getAttribute("uuid");
-		request.getSession().setAttribute(uuid, doc);
-		request.getSession().setMaxInactiveInterval(3600);
+				// Store name-based XML document in session attribute
+				Document doc = report.getXMLDocumentReport();
+				Element root = doc.getElementById("root");
+				String uuid = root.getAttribute("uuid");
+				request.getSession().setAttribute(uuid, doc);
 
-		// Store gensym-based XML document in session attribute
-		Element gs_root = genSymDoc.getElementById("root");
-		String gs_uuid = gs_root.getAttribute("uuid");
-		request.getSession().setAttribute(gs_uuid, genSymDoc);
-		
-		// Store label-based XML document in session attribute		
-		Element lb_root = labelDoc.getElementById("root");
-		String lb_uuid = lb_root.getAttribute("uuid");		
-		request.getSession().setAttribute(lb_uuid, labelDoc);
+				// Store gensym-based XML document in session attribute
+				Document genSymDoc = report.getXMLDocumentReportUsingGenSyms();
+				Element gs_root = genSymDoc.getElementById("root");
+				String gs_uuid = gs_root.getAttribute("uuid");
+				request.getSession().setAttribute(gs_uuid, genSymDoc);
 
-		String styledXml = report.getReportAsHTML(labelDoc, xsltPath);
+				// Store label-based XML document in session attribute
+				Document labelDoc = report.getXMLDocumentReportUsingLabels();
+				Element lb_root = labelDoc.getElementById("root");
+				String lb_uuid = lb_root.getAttribute("uuid");		
+				request.getSession().setAttribute(lb_uuid, labelDoc);
 
+				styledXml = report.getReportAsHTML(labelDoc, xsltPath);
+				request.getSession().setAttribute("curuuid", lb_uuid);
+			}
+		}
 		response.setContentType("text/html");
 		pw.println(styledXml);
 		pw.flush();
@@ -147,48 +157,56 @@ public class WebDiff extends HttpServlet {
 	 * @throws FileUploadException
 	 * @throws OWLOntologyCreationException
 	 */
+	@SuppressWarnings("unchecked")
 	private void loadOntologies(PrintWriter pw, HttpServletRequest request, HttpServletResponse response, EccoRunner runner) 
 			throws IOException, FileUploadException, OWLOntologyCreationException {
-		// Create a factory for disk-based file items
-		FileItemFactory factory = new DiskFileItemFactory();
-		// Create a new file upload handler
-		ServletFileUpload upload = new ServletFileUpload(factory);
-		// Parse the request
-		@SuppressWarnings("unchecked")
-		List<FileItem> items = upload.parseRequest(request);
+		FileItemFactory factory = new DiskFileItemFactory(); 		// Create a factory for disk-based file items
+		ServletFileUpload upload = new ServletFileUpload(factory);	// Create a new file upload handler
+		List<FileItem> items = null;
+		try {
+			items = upload.parseRequest(request); 	// Parse the request
+		} catch(Exception e) {
+			RequestDispatcher view = getServletContext().getRequestDispatcher("/index.jsp");
+			try {
+				view.forward(request, response);
+			} catch (ServletException e1) {
+				e1.printStackTrace();
+			}
+		}
 		String ont1uri = "", ont2uri = "";
-		
-		// Process the uploaded items
-		Iterator<FileItem> iter = items.iterator();
-		while (iter.hasNext()) {
-			FileItem item = (FileItem) iter.next();
-			String name = item.getFieldName();
-			// Load from text area content
-			if (item.isFormField()) {
-				if(name.equals("o1")) {
-					ont1uri = item.getString();
-					if(!ont1uri.equals(""))
-						ont1 = runner.loadOntology(1, ont1uri.trim(), false);
-				}
-				else if(name.equals("o2")) {
-					ont2uri = item.getString();
-					if(!ont2uri.equals(""))
-						ont2 = runner.loadOntology(2, ont2uri.trim(), false);
-				}
-			} 
-			// Load from uploaded file
-			else {
-				if(name.equals("o1file")) {
-					InputStream file1Stream = item.getInputStream();
-					if(file1Stream != null && file1Stream.available() != 0)
-						ont1 = runner.loadOntology(1, file1Stream, false);
-				}
-				else if(name.equals("o2file")) {
-					InputStream file2Stream = item.getInputStream();
-					if(file2Stream != null  && file2Stream.available() != 0)
-						ont2 = runner.loadOntology(2, file2Stream, false);
+		if(items != null) {
+			// Process the uploaded items
+			Iterator<FileItem> iter = items.iterator();
+			while (iter.hasNext()) {
+				FileItem item = (FileItem) iter.next();
+				String name = item.getFieldName();
+				// Load from text area content
+				if(item.isFormField()) {
+					if(name.equals("o1")) {
+						ont1uri = item.getString();
+						if(!ont1uri.equals(""))
+							ont1 = runner.loadOntology(1, ont1uri.trim(), false);
+					}
+					else if(name.equals("o2")) {
+						ont2uri = item.getString();
+						if(!ont2uri.equals(""))
+							ont2 = runner.loadOntology(2, ont2uri.trim(), false);
+					}
+				} 
+				// Load from uploaded file
+				else {
+					if(name.equals("o1file")) {
+						InputStream file1Stream = item.getInputStream();
+						if(file1Stream != null && file1Stream.available() != 0)
+							ont1 = runner.loadOntology(1, file1Stream, false);
+					}
+					else if(name.equals("o2file")) {
+						InputStream file2Stream = item.getInputStream();
+						if(file2Stream != null  && file2Stream.available() != 0)
+							ont2 = runner.loadOntology(2, file2Stream, false);
+					}
 				}
 			}
-		}	
+		}
 	}
 }

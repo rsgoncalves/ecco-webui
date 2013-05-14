@@ -22,6 +22,7 @@ package uk.ac.manchester.cs.diff;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -81,24 +82,30 @@ public class XmlOutput extends HttpServlet {
 	 * @throws TransformerException
 	 */
 	private void getXml(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, TransformerException {
+		HttpSession session = request.getSession();
 		PrintWriter pw = response.getWriter();
 		String id = request.getParameter("uuid").toString();
 
-		HttpSession session = request.getSession();
+		XMLReport report = (XMLReport) session.getAttribute("report");
 		Document doc = (Document)session.getAttribute(id);
 
-		if(doc != null) {
-			XMLReport report = (XMLReport) session.getAttribute("report");
-			String xmlDoc = report.getReportAsString(doc);
+		if(report != null && doc != null) {
+			String xmlStringOutput = report.getReportAsString(doc);
 			response.setContentType("text/xml");
-			pw.println(xmlDoc);
+			pw.println(xmlStringOutput);
 			pw.flush();
 			pw.close();
 			//			Prompt to download
 			//		response.setContentType("application/octet-stream");
-			//		response.setHeader("Content-Disposition", "attachment; filename=\"diff.xml\"");
+			//		response.setHeader("Content-Disposition", "attachment; filename=\"EccoChangeSet.xml\"");
 		}
-		else
-			throw new Error("Your session has expired. This happens after 1 hour of inactivity.");
+		else {
+			RequestDispatcher view = getServletContext().getRequestDispatcher("/index.jsp");
+			try {
+				view.forward(request, response);
+			} catch (ServletException e1) {
+				e1.printStackTrace();
+			}
+		}
 	}
 }

@@ -1,10 +1,13 @@
 # Test files #
 *.csv
+*.xml
+*.html
 todo
 
 # Build #
 *.xpr
 build/*
+bin*
 
 # SVN #
 .svn
@@ -12,6 +15,7 @@ build/*
 # Eclipse #
 .classpath
 .project
+.settings
 
 # Compiled source #
 *.com
