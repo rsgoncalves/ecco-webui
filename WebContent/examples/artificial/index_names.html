@@ -2,65 +2,25 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>ecco</title>
-      <link rel="stylesheet" href="css/style.css"><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery-1.4.4.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="js/jquery.checkboxtree.js"></script><script type="text/javascript">
-					$(document).ready(function() {
-						$('#tree1').checkboxTree({
-							initializeChecked: 'expanded',
-							initializeUnchecked: 'collapsed',
-							collapseDuration: 50,
-							expandDuration: 100,
-							collapseImage: 'images/minus.png',
-							expandImage: 'images/plus.png',
-							onCheck: {
-								node: 'expand',
-								ancestors: 'checkIfFull',
-								descendants: 'check'
-							},
-							onUncheck: {
-								node: 'collapse',
-								ancestors: 'uncheck'
-							}
-						});
-						$('#tree2').checkboxTree({
-							initializeChecked: 'expanded',
-							initializeUnchecked: 'collapsed',
-							collapseDuration: 50,
-							expandDuration: 100,
-							collapseImage: 'images/minus.png',
-							expandImage: 'images/plus.png',
-							onCheck: {
-								node: 'expand',
-								ancestors: 'checkIfFull',
-								descendants: 'check'
-							},
-							onUncheck: {
-								node: 'collapse',
-								ancestors: 'uncheck'
-							}
-						});
-						$('#tree1-expandAll').click(function(){
-							$('#tree1').checkboxTree('expandAll');
-						});
-						$('#tree1-collapseAll').click(function(){
-							$('#tree1').checkboxTree('collapseAll');
-						});
-						$('#tree2-expandAll').click(function(){
-							$('#tree2').checkboxTree('expandAll');
-						});
-						$('#tree2-collapseAll').click(function(){
-							$('#tree2').checkboxTree('collapseAll');
-						});
-					});
-				</script></head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/reveal.css"><script type="text/javascript" src="js/jquery-1.4.4.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery.checkboxtree.js"></script><script type="text/javascript" src="js/jquery.reveal.js"></script><script type="text/javascript" src="js/jscript.js"></script></head>
    <body>
       <h1><br></h1>
-      				[<a href="../../index.jsp">Back Home</a>]
+      				[<a href="index.jsp">Back Home</a>]
       				
       <form action="getXml" method="post" class="inl">
          						[<a id="top3" target="_blank" href="EccoChangeSet_names.xml">Source XML</a>]
          					
-      </form><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp; [<a id="top1" href="javascript:;" onClick="showAll();">Show All</a> | 
-      				<a id="top2" href="javascript:;" onClick="hideAll();">Hide All</a>] <br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="5cd184a6-691c-4867-9356-131f50e64af2"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
+      </form><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp;
+      				[<a id="top1" href="javascript:;" onClick="showAll();$('#tree1').checkboxTree('expandAll');$('#tree2').checkboxTree('expandAll')">Show All</a> | 
+      				<a id="top2" href="javascript:;" onClick="hideAll();$('#tree1').checkboxTree('collapseAll');$('#tree2').checkboxTree('collapseAll');">Hide All</a>] 
+      				[<a id="genViewPerml" href="#" onclick="setPermalink();">Generate View Permalink</a>]
+      				
+      <div id="view-plink-modal" class="reveal-modal">
+         <h3>view-permalink</h3><textarea id="view-plink" rows="3" cols="60" readonly="true" style="resize: none;"></textarea><br>
+         					[<a href="javascript:;" onclick="select_all('view-plink');">Select all</a>]
+         					<a class="close-reveal-modal">x</a></div><br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="5cd184a6-691c-4867-9356-131f50e64af2"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
       <table width="70%" style="table-layout:fixed;">
          <tr>
             <th class="topright"><input type="checkbox" name="removals" onClick="toggleGroup('removals')">  
@@ -78,7 +38,7 @@
                         <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('weak','weakrt');">  <b>Weakenings (1)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are more constraining than existing axioms in Ontology 2');"><ul style="display:none">
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;With Shared Terms (0)
                               </li>
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('weakrt');">  <a href="#weakrt">With Retired Terms (1)</a></li>
+                              <li id="weakrttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('weakrt');">  <a href="#weakrt">With Retired Terms (1)</a></li>
                            </ul>
                         </li>
                         <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
@@ -86,7 +46,7 @@
                         <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Retired Descriptions (0)
                         </li>
                         <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('rem','remrt');">  <b>Pure Removals (1)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 2; typically related to hierachy changes');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('rem');">  <a href="#rem">With Shared Terms (1)</a></li>
+                              <li id="remtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('rem');">  <a href="#rem">With Shared Terms (1)</a></li>
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;With Retired Terms (0)
                               </li>
                            </ul>
@@ -94,10 +54,10 @@
                   </li><br><li>  <input type="checkbox" name="ineffRemsTrigger" onClick="toggleChanges('ineffRems','ineffRemsTrigger')">  
                      <h4 style="display:inline;">Ineffectual (4)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, but are entailed by Ontology 2, i.e., that have been removed but are still entailed');"><ul>
                         <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('ravred','rst','rpsnovred');">  <b>Prospective Redundancy (4)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 1 for which there are more constraining related axioms in Ontology 2');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('ravred');">  <a href="#ravred">Reshuffle (3)</a></li>
+                              <li id="ravredtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('ravred');">  <a href="#ravred">Reshuffle (3)</a></li>
                               <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst','rpsnovred');">  <b>Retired Prospective Redundancy (1)</b><b id="t1"></b>  
                                  <ul style="display:none">
-                                    <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst');">  <a href="#rst">Novel (1)</a></li>
+                                    <li id="rsttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst');">  <a href="#rst">Novel (1)</a></li>
                                     <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pseudo Novel (0)
                                     </li>
                                  </ul>
@@ -105,7 +65,7 @@
                            </ul>
                         </li>
                         <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rrewrite','rprw');">  <b>Rewritten (1)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 1 that are rewrites of axioms in Ontology 2');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rrewrite');">  <a href="#rrewrite">Complete (1)</a></li>
+                              <li id="rrewritetrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rrewrite');">  <a href="#rrewrite">Complete (1)</a></li>
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Partial (0)
                               </li>
                            </ul>
@@ -127,25 +87,25 @@
                         <li><img src="images/blank.png" alt="">&nbsp;&nbsp;New Descriptions (0)
                         </li>
                         <li>  <input type="checkbox" name="effAdds" onClick="toggleDiv('add','addnt');">  <b>Pure Additions (2)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 1; typically related to hierachy changes');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('add');">  <a href="#add">With Shared Terms (1)</a></li>
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('addnt');">  <a href="#addnt">With New Terms (1)</a></li>
+                              <li id="addtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('add');">  <a href="#add">With Shared Terms (1)</a></li>
+                              <li id="addnttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('addnt');">  <a href="#addnt">With New Terms (1)</a></li>
                            </ul>
                         </li>
                      </ul>
                   </li><br><li>  <input type="checkbox" name="ineffAddsTrigger" onClick="toggleChanges('ineffAdds','ineffAddsTrigger')">  
                      <h4 style="display:inline;">Ineffectual (5)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, but are entailed by Ontology 1, i.e., that have been added but were already entailed');"><ul>
                         <li>  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aavred','apseudopred','aweak');">  <b>Retrospective Redundancy (6)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 2 for which there are more constraining related axioms in Ontology 1');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aavred');">  <a href="#aavred">Reshuffle (4)</a></li>
+                              <li id="aavredtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aavred');">  <a href="#aavred">Reshuffle (4)</a></li>
                               <li>  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak','apseudopred');">  <b>New Retrospective Redundancy (2)</b>  
                                  <ul style="display:none">
-                                    <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak');">  <a href="#aweak">Novel (1)</a></li>
-                                    <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('apseudopred');">  <a href="#apseudopred">Pseudo Novel (1)</a></li>
+                                    <li id="aweaktrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak');">  <a href="#aweak">Novel (1)</a></li>
+                                    <li id="apseudopredtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('apseudopred');">  <a href="#apseudopred">Pseudo Novel (1)</a></li>
                                  </ul>
                               </li>
                            </ul>
                         </li>
                         <li>  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('arewrite','aprw');">  <b>Rewritten (1)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 2 that are rewrites of axioms in Ontology 1');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('arewrite');">  <a href="#arewrite">Complete (1)</a></li>
+                              <li id="arewritetrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('arewrite');">  <a href="#arewrite">Complete (1)</a></li>
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Partial (0)
                               </li>
                            </ul>
@@ -179,7 +139,7 @@
          <tbody id="add" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Pure Additions with Shared Terms (1) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Pure Additions with Shared Terms (1)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -196,7 +156,7 @@
          
          <tbody id="addnt" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="add"></a><h4>Pure Additions with New Terms (1) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="add"></a><h4 style="display: inline-block;">Pure Additions with New Terms (1)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -220,7 +180,7 @@
          <tbody id="arewrite" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Complete Rewrite (1) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Complete Rewrite (1)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -243,7 +203,7 @@
          
          <tbody id="aavred" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="aavred"></a><h4>Reshuffle Restrospective Redundant (4) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="aavred"></a><h4 style="display: inline-block;">Reshuffle Restrospective Redundant (4)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -290,7 +250,7 @@
          <tbody id="aweak" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Retrospective Novel Redundant (1) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Retrospective Novel Redundant (1)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -314,7 +274,7 @@
          <tbody id="apseudopred" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Retrospective Pseudo Novel Redundant (1) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Retrospective Pseudo Novel Redundant (1)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -342,7 +302,7 @@
          
          <tbody id="weakrt" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="weakening"></a><h4>Weakenings with Retired Terms (1) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="weakening"></a><h4 style="display: inline-block;">Weakenings with Retired Terms (1)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -365,7 +325,7 @@
          <tbody id="rem" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Pure Removals with Shared Terms (1) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Pure Removals with Shared Terms (1)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -390,7 +350,7 @@
          <tbody id="rrewrite" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Complete Rewrite (1) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Complete Rewrite (1)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -416,7 +376,7 @@
          
          <tbody id="ravred" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="ravred"></a><h4>Reshuffle Prospective Redundant (3) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="ravred"></a><h4 style="display: inline-block;">Reshuffle Prospective Redundant (3)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -452,7 +412,7 @@
                </td>
                <td><i>(1)</i>&nbsp; B<span class="subclass"> SubClassOf </span>C. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; A<span class="subclass"> SubClassOf </span>B<br><span class="keyword"> or </span>C. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; A<span class="subclass"> SubClassOf </span>B<br><span class="keyword"> or </span>C. 
                   						<br></td>
             </tr>
             
@@ -462,7 +422,7 @@
          <tbody id="rst" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Prospective Novel Redundant (1) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Prospective Novel Redundant (1)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -479,7 +439,7 @@
                <td><i>(1)</i>&nbsp; A<span class="subclass"> SubClassOf </span>B. 
                   						<br><i>(2)</i>&nbsp; B<span class="subclass"> SubClassOf </span>C. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
          </tbody>

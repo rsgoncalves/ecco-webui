@@ -2,65 +2,25 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>ecco</title>
-      <link rel="stylesheet" href="css/style.css"><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery-1.4.4.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="js/jquery.checkboxtree.js"></script><script type="text/javascript">
-					$(document).ready(function() {
-						$('#tree1').checkboxTree({
-							initializeChecked: 'expanded',
-							initializeUnchecked: 'collapsed',
-							collapseDuration: 50,
-							expandDuration: 100,
-							collapseImage: 'images/minus.png',
-							expandImage: 'images/plus.png',
-							onCheck: {
-								node: 'expand',
-								ancestors: 'checkIfFull',
-								descendants: 'check'
-							},
-							onUncheck: {
-								node: 'collapse',
-								ancestors: 'uncheck'
-							}
-						});
-						$('#tree2').checkboxTree({
-							initializeChecked: 'expanded',
-							initializeUnchecked: 'collapsed',
-							collapseDuration: 50,
-							expandDuration: 100,
-							collapseImage: 'images/minus.png',
-							expandImage: 'images/plus.png',
-							onCheck: {
-								node: 'expand',
-								ancestors: 'checkIfFull',
-								descendants: 'check'
-							},
-							onUncheck: {
-								node: 'collapse',
-								ancestors: 'uncheck'
-							}
-						});
-						$('#tree1-expandAll').click(function(){
-							$('#tree1').checkboxTree('expandAll');
-						});
-						$('#tree1-collapseAll').click(function(){
-							$('#tree1').checkboxTree('collapseAll');
-						});
-						$('#tree2-expandAll').click(function(){
-							$('#tree2').checkboxTree('expandAll');
-						});
-						$('#tree2-collapseAll').click(function(){
-							$('#tree2').checkboxTree('collapseAll');
-						});
-					});
-				</script></head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/reveal.css"><script type="text/javascript" src="js/jquery-1.4.4.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery.checkboxtree.js"></script><script type="text/javascript" src="js/jquery.reveal.js"></script><script type="text/javascript" src="js/jscript.js"></script></head>
    <body>
       <h1><br></h1>
-      				[<a href="../../index.jsp">Back Home</a>]
+      				[<a href="index.jsp">Back Home</a>]
       				
       <form action="getXml" method="post" class="inl">
          						[<a id="top3" target="_blank" href="EccoChangeSet_labels.xml">Source XML</a>]
          					
-      </form><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp; [<a id="top1" href="javascript:;" onClick="showAll();">Show All</a> | 
-      				<a id="top2" href="javascript:;" onClick="hideAll();">Hide All</a>] <br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="16a03a26-b4d5-4fe5-a000-84e9ed7b6149-lbl"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
+      </form><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp;
+      				[<a id="top1" href="javascript:;" onClick="showAll();$('#tree1').checkboxTree('expandAll');$('#tree2').checkboxTree('expandAll')">Show All</a> | 
+      				<a id="top2" href="javascript:;" onClick="hideAll();$('#tree1').checkboxTree('collapseAll');$('#tree2').checkboxTree('collapseAll');">Hide All</a>] 
+      				[<a id="genViewPerml" href="#" onclick="setPermalink();">Generate View Permalink</a>]
+      				
+      <div id="view-plink-modal" class="reveal-modal">
+         <h3>view-permalink</h3><textarea id="view-plink" rows="3" cols="60" readonly="true" style="resize: none;"></textarea><br>
+         					[<a href="javascript:;" onclick="select_all('view-plink');">Select all</a>]
+         					<a class="close-reveal-modal">x</a></div><br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="16a03a26-b4d5-4fe5-a000-84e9ed7b6149-lbl"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
       <table width="70%" style="table-layout:fixed;">
          <tr>
             <th class="topright"><input type="checkbox" name="removals" onClick="toggleGroup('removals')">  
@@ -76,13 +36,13 @@
                   <li>  <input type="checkbox" name="effRemsTrigger" onClick="toggleChanges('effRems','effRemsTrigger')">  
                      <h4 style="display:inline;">Effectual (287)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, and are not entailed by Ontology 2');"><ul>
                         <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('weak','weakrt');">  <b>Weakenings (18)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are more constraining than existing axioms in Ontology 2');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('weak');">  <a href="#weak">With Shared Terms (18)</a></li>
+                              <li id="weaktrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('weak');">  <a href="#weak">With Shared Terms (18)</a></li>
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;With Retired Terms (0)
                               </li>
                            </ul>
                         </li>
                         <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('wkequiv','wkequivrt');">  <b>Modified Definitions (3)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Equivalence axioms that have been extended; if split into subsumptions then one was strengthened and the other weakened');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('wkequiv');">  <a href="#wkequiv">With Shared Terms (3)</a></li>
+                              <li id="wkequivtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('wkequiv');">  <a href="#wkequiv">With Shared Terms (3)</a></li>
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;With Retired Terms (0)
                               </li>
                            </ul>
@@ -90,7 +50,7 @@
                         <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Retired Descriptions (0)
                         </li>
                         <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('rem','remrt');">  <b>Pure Removals (266)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 2; typically related to hierachy changes');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('rem');">  <a href="#rem">With Shared Terms (266)</a></li>
+                              <li id="remtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('rem');">  <a href="#rem">With Shared Terms (266)</a></li>
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;With Retired Terms (0)
                               </li>
                            </ul>
@@ -102,15 +62,15 @@
                               </li>
                               <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst','rpsnovred');">  <b>Retired Prospective Redundancy (199)</b><b id="t1"></b>  
                                  <ul style="display:none">
-                                    <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst');">  <a href="#rst">Novel (37)</a></li>
-                                    <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rpsnovred');">  <a href="#rpsnovred">Pseudo Novel (162)</a></li>
+                                    <li id="rsttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst');">  <a href="#rst">Novel (37)</a></li>
+                                    <li id="rpsnovredtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rpsnovred');">  <a href="#rpsnovred">Pseudo Novel (162)</a></li>
                                  </ul>
                               </li>
                            </ul>
                         </li>
                         <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
                         </li>
-                        <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rred','ravred')">  <a href="#rred">Redundant (1)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 1 that are entailed by at least one shared axiom between Ontology 1 and 2');"></li>
+                        <li id="rredtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rred')">  <a href="#rred">Redundant (1)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 1 that are entailed by at least one shared axiom between Ontology 1 and 2');"></li>
                      </ul>
                   </li>
                </ul>
@@ -120,20 +80,20 @@
                   <li>  <input type="checkbox" name="effAddsTrigger" onClick="toggleChanges('effAdds','effAddsTrigger')">  
                      <h4 style="display:inline;">Effectual (815)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, and are not entailed by Ontology 1');"><ul>
                         <li>  <input type="checkbox" name="effAdds" onClick="toggleDiv('st','stnt');">  <b>Strengthenings (66)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are more constraining than existing axioms in Ontology 1');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('st');">  <a href="#st">With Shared Terms (33)</a></li>
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('stnt');">  <a href="#stnt">With New Terms (33)</a></li>
+                              <li id="sttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('st');">  <a href="#st">With Shared Terms (33)</a></li>
+                              <li id="stnttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('stnt');">  <a href="#stnt">With New Terms (33)</a></li>
                            </ul>
                         </li>
                         <li>  <input type="checkbox" name="effAdds" onClick="toggleDiv('stequiv','stequivnt');">  <b>Modified Definitions (4)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Equivalence axioms that have been extended; if split into subsumptions then one was strengthened and the other weakened');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('stequiv');">  <a href="#aed">With Shared Terms (4)</a></li>
+                              <li id="stequivtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('stequiv');">  <a href="#aed">With Shared Terms (4)</a></li>
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;With New Terms (0)
                               </li>
                            </ul>
                         </li>
-                        <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('newdesc');">  <a href="#newdesc">New Descriptions (399)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing newly created terms, i.e., terms that did not exist in Ontology 1');"></li>
+                        <li id="newdesctrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('newdesc');">  <a href="#newdesc">New Descriptions (399)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing newly created terms, i.e., terms that did not exist in Ontology 1');"></li>
                         <li>  <input type="checkbox" name="effAdds" onClick="toggleDiv('add','addnt');">  <b>Pure Additions (346)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 1; typically related to hierachy changes');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('add');">  <a href="#add">With Shared Terms (300)</a></li>
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('addnt');">  <a href="#addnt">With New Terms (46)</a></li>
+                              <li id="addtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('add');">  <a href="#add">With Shared Terms (300)</a></li>
+                              <li id="addnttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('addnt');">  <a href="#addnt">With New Terms (46)</a></li>
                            </ul>
                         </li>
                      </ul>
@@ -144,8 +104,8 @@
                               </li>
                               <li>  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak','apseudopred');">  <b>New Retrospective Redundancy (202)</b>  
                                  <ul style="display:none">
-                                    <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak');">  <a href="#aweak">Novel (84)</a></li>
-                                    <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('apseudopred');">  <a href="#apseudopred">Pseudo Novel (118)</a></li>
+                                    <li id="aweaktrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak');">  <a href="#aweak">Novel (84)</a></li>
+                                    <li id="apseudopredtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('apseudopred');">  <a href="#apseudopred">Pseudo Novel (118)</a></li>
                                  </ul>
                               </li>
                            </ul>
@@ -178,7 +138,7 @@
          <tbody id="st" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Strengthenings with Shared Terms (33) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Strengthenings with Shared Terms (33)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -422,7 +382,7 @@
          
          <tbody id="stnt" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="st"></a><h4>Strengthenings with New Terms (33) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="st"></a><h4 style="display: inline-block;">Strengthenings with New Terms (33)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -674,7 +634,7 @@
          <tbody id="newdesc" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>New Descriptions (399) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">New Descriptions (399)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -2683,7 +2643,7 @@
          <tbody id="add" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Pure Additions with Shared Terms (300) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Pure Additions with Shared Terms (300)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -4195,7 +4155,7 @@
          
          <tbody id="addnt" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="add"></a><h4>Pure Additions with New Terms (46) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="add"></a><h4 style="display: inline-block;">Pure Additions with New Terms (46)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -4437,7 +4397,7 @@
          
          <tbody id="stequiv" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="aed"></a><h4>Modified Definitions with Shared Terms (4) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="aed"></a><h4 style="display: inline-block;">Modified Definitions with Shared Terms (4)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -4490,7 +4450,7 @@
          <tbody id="aweak" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Retrospective Novel Redundant (84) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Retrospective Novel Redundant (84)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -4502,7 +4462,7 @@
             <tr class="addition">
                <td rowspan="1">816</td>
                <td><i>(1)</i>&nbsp; Intracranial Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Intracerebral Route of Administration<span class="subclass"> SubClassOf </span>Intracranial Route of Administration. <br><i>(3)</i>&nbsp; Intraventricular Route of Drug Administration<span class="subclass"> SubClassOf </span>Intracerebral Route of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Intracerebral Route of Administration<span class="subclass"> SubClassOf </span>Intracranial Route of Administration. <br><i>(3)</i>&nbsp; Intraventricular Route of Drug Administration<span class="subclass"> SubClassOf </span>Intracerebral Route of Administration. <br></td>
                <td rowspan="1">Intraventricular Route of Drug Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
                </td>
             </tr>
@@ -4510,7 +4470,7 @@
             <tr class="addition">
                <td rowspan="1">817</td>
                <td><i>(1)</i>&nbsp; Intracranial Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Intratympanic Route of Administration<span class="subclass"> SubClassOf </span>Intracranial Route of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Intratympanic Route of Administration<span class="subclass"> SubClassOf </span>Intracranial Route of Administration. <br></td>
                <td rowspan="1">Intratympanic Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
                </td>
             </tr>
@@ -4523,14 +4483,14 @@
             </tr>
             <tr class="addition">
                <td><i>(1)</i>&nbsp; Topical Dosage Form<span class="subclass"> SubClassOf </span>Dosage Form By Route Of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Dosage Form By Route Of Administration<span class="subclass"> SubClassOf </span>Pharmaceutical Dosage Form. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Aerosol Dosage Form<span class="subclass"> SubClassOf </span>Topical Dosage Form. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Dosage Form By Route Of Administration<span class="subclass"> SubClassOf </span>Pharmaceutical Dosage Form. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Aerosol Dosage Form<span class="subclass"> SubClassOf </span>Topical Dosage Form. <br></td>
             </tr>
             
             <tr class="addition">
                <td rowspan="1">819</td>
                <td><i>(1)</i>&nbsp; Gamma Radiation<span class="subclass"> SubClassOf </span>Radiation, Charged Particles. <br><i>(2)</i>&nbsp; Radiation, Charged Particles<span class="subclass"> SubClassOf </span>Ionizing Radiation. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Gamma Radiation<span class="subclass"> SubClassOf </span>Ionizing Radiation. 
                </td>
             </tr>
@@ -4538,7 +4498,7 @@
             <tr class="addition">
                <td rowspan="1">820</td>
                <td><i>(1)</i>&nbsp; Non-Neoplastic Adrenal Gland Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. <br><i>(2)</i>&nbsp; Adrenal Gland Insufficiency<span class="subclass"> SubClassOf </span>Non-Neoplastic Adrenal Gland Disorder. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Adrenal Gland Insufficiency<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. 
                </td>
             </tr>
@@ -4546,7 +4506,7 @@
             <tr class="addition">
                <td rowspan="1">821</td>
                <td><i>(1)</i>&nbsp; Topical Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Auricular Route of Administration<span class="subclass"> SubClassOf </span>Topical Route of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Auricular Route of Administration<span class="subclass"> SubClassOf </span>Topical Route of Administration. <br></td>
                <td rowspan="1">Auricular Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                </td>
             </tr>
@@ -4554,7 +4514,7 @@
             <tr class="addition">
                <td rowspan="1">822</td>
                <td><i>(1)</i>&nbsp; Non-Neoplastic Thyroid Gland Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. <br><i>(2)</i>&nbsp; Thyroid Gland Malformation<span class="subclass"> SubClassOf </span>Non-Neoplastic Thyroid Gland Disorder. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Thyroid Gland Malformation<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. 
                </td>
             </tr>
@@ -4562,17 +4522,17 @@
             <tr class="addition">
                <td rowspan="2">823</td>
                <td><i>(1)</i>&nbsp; Adrenal Cortex Carcinoma<span class="subclass"> SubClassOf </span>Adrenal Gland Carcinoma. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Malignant Adrenal Gland Neoplasm<span class="subclass"> SubClassOf </span>Malignant Endocrine Neoplasm. <br><i>(3)</i>&nbsp; Adrenal Gland Carcinoma<span class="subclass"> SubClassOf </span>Malignant Adrenal Gland Neoplasm. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(4)</i>&nbsp; Adrenal Cortex Adenocarcinoma<span class="subclass"> SubClassOf </span>Adrenal Cortex Carcinoma. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Malignant Adrenal Gland Neoplasm<span class="subclass"> SubClassOf </span>Malignant Endocrine Neoplasm. <br><i>(3)</i>&nbsp; Adrenal Gland Carcinoma<span class="subclass"> SubClassOf </span>Malignant Adrenal Gland Neoplasm. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(4)</i>&nbsp; Adrenal Cortex Adenocarcinoma<span class="subclass"> SubClassOf </span>Adrenal Cortex Carcinoma. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="2">Adrenal Cortex Adenocarcinoma<span class="subclass"> SubClassOf </span>Malignant Endocrine Neoplasm. 
                </td>
             </tr>
             <tr class="addition">
                <td><i>(1)</i>&nbsp; Adrenal Cortex Carcinoma<span class="subclass"> SubClassOf </span>Malignant Adrenal Cortex Neoplasm. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Malignant Adrenal Cortex Neoplasm<span class="subclass"> SubClassOf </span>Malignant Adrenal Gland Neoplasm. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Malignant Adrenal Gland Neoplasm<span class="subclass"> SubClassOf </span>Malignant Endocrine Neoplasm. <br><i>(4)</i>&nbsp; Adrenal Cortex Adenocarcinoma<span class="subclass"> SubClassOf </span>Adrenal Cortex Carcinoma. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Malignant Adrenal Cortex Neoplasm<span class="subclass"> SubClassOf </span>Malignant Adrenal Gland Neoplasm. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Malignant Adrenal Gland Neoplasm<span class="subclass"> SubClassOf </span>Malignant Endocrine Neoplasm. <br><i>(4)</i>&nbsp; Adrenal Cortex Adenocarcinoma<span class="subclass"> SubClassOf </span>Adrenal Cortex Carcinoma. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="addition">
@@ -4585,7 +4545,7 @@
             <tr class="addition">
                <td rowspan="1">825</td>
                <td><i>(1)</i>&nbsp; Packaging Tube<span class="subclass"> SubClassOf </span>Container. <br><i>(2)</i>&nbsp; Container<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Packaging Tube<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
                </td>
             </tr>
@@ -4593,7 +4553,7 @@
             <tr class="addition">
                <td rowspan="1">826</td>
                <td><i>(1)</i>&nbsp; Intracranial Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Retrobulbar Route of Administration<span class="subclass"> SubClassOf </span>Intracranial Route of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Retrobulbar Route of Administration<span class="subclass"> SubClassOf </span>Intracranial Route of Administration. <br></td>
                <td rowspan="1">Retrobulbar Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
                </td>
             </tr>
@@ -4608,8 +4568,8 @@
             <tr class="addition">
                <td rowspan="2">828</td>
                <td><i>(1)</i>&nbsp; Topical Dosage Form<span class="subclass"> SubClassOf </span>Dosage Form By Route Of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Dosage Form By Route Of Administration<span class="subclass"> SubClassOf </span>Pharmaceutical Dosage Form. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Lotion Dosage Form<span class="subclass"> SubClassOf </span>Topical Dosage Form. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Dosage Form By Route Of Administration<span class="subclass"> SubClassOf </span>Pharmaceutical Dosage Form. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Lotion Dosage Form<span class="subclass"> SubClassOf </span>Topical Dosage Form. <br></td>
                <td rowspan="2">Lotion Dosage Form<span class="subclass"> SubClassOf </span>Pharmaceutical Dosage Form. 
                </td>
             </tr>
@@ -4620,9 +4580,9 @@
             <tr class="addition">
                <td rowspan="1">829</td>
                <td><i>(1)</i>&nbsp; Electromagnetic Radiation<span class="subclass"> SubClassOf </span>Physical Phenomenon<br><span class="keyword"> or </span>Property. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Radiation, Charged Particles<span class="subclass"> SubClassOf </span>Ionizing Radiation. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Ionizing Radiation<span class="subclass"> SubClassOf </span>Electromagnetic Radiation. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(4)</i>&nbsp; Alpha Particle Emitter<span class="subclass"> SubClassOf </span>Radiation, Charged Particles. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Radiation, Charged Particles<span class="subclass"> SubClassOf </span>Ionizing Radiation. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Ionizing Radiation<span class="subclass"> SubClassOf </span>Electromagnetic Radiation. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(4)</i>&nbsp; Alpha Particle Emitter<span class="subclass"> SubClassOf </span>Radiation, Charged Particles. <br></td>
                <td rowspan="1">Alpha Particle Emitter<span class="subclass"> SubClassOf </span>Physical Phenomenon<br><span class="keyword"> or </span>Property. 
                </td>
             </tr>
@@ -4630,7 +4590,7 @@
             <tr class="addition">
                <td rowspan="1">830</td>
                <td><i>(1)</i>&nbsp; Box<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Carton<span class="subclass"> SubClassOf </span>Box. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Carton<span class="subclass"> SubClassOf </span>Box. <br></td>
                <td rowspan="1">Carton<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
                </td>
             </tr>
@@ -4638,7 +4598,7 @@
             <tr class="addition">
                <td rowspan="1">831</td>
                <td><i>(1)</i>&nbsp; Non-Neoplastic Thyroid Gland Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. <br><i>(2)</i>&nbsp; Thyroiditis<span class="subclass"> SubClassOf </span>Non-Neoplastic Thyroid Gland Disorder. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Thyroiditis<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. 
                </td>
             </tr>
@@ -4660,7 +4620,7 @@
             <tr class="addition">
                <td rowspan="1">834</td>
                <td><i>(1)</i>&nbsp; Jar<span class="subclass"> SubClassOf </span>Container. <br><i>(2)</i>&nbsp; Container<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Jar<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
                </td>
             </tr>
@@ -4668,7 +4628,7 @@
             <tr class="addition">
                <td rowspan="1">835</td>
                <td><i>(1)</i>&nbsp; Benign Testicular Sertoli Cell Tumor<span class="subclass"> SubClassOf </span>Benign Testicular Neoplasm. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Benign Testicular Neoplasm<span class="subclass"> SubClassOf </span>Benign Endocrine Neoplasm. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Benign Testicular Neoplasm<span class="subclass"> SubClassOf </span>Benign Endocrine Neoplasm. <br></td>
                <td rowspan="1">Benign Testicular Sertoli Cell Tumor<span class="subclass"> SubClassOf </span>Benign Endocrine Neoplasm. 
                </td>
             </tr>
@@ -4676,7 +4636,7 @@
             <tr class="addition">
                <td rowspan="1">836</td>
                <td><i>(1)</i>&nbsp; Soft Tissue Route Of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Periarticular Route of Administration<span class="subclass"> SubClassOf </span>Soft Tissue Route Of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Periarticular Route of Administration<span class="subclass"> SubClassOf </span>Soft Tissue Route Of Administration. <br></td>
                <td rowspan="1">Periarticular Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
                </td>
             </tr>
@@ -4684,7 +4644,7 @@
             <tr class="addition">
                <td rowspan="1">837</td>
                <td><i>(1)</i>&nbsp; Medical Device<span class="subclass"> SubClassOf </span>Diagnostic, Therapeutic,<br><span class="keyword"> and </span>Research Equipment. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Detector<span class="subclass"> SubClassOf </span>Medical Device. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Detector<span class="subclass"> SubClassOf </span>Medical Device. <br></td>
                <td rowspan="1">Detector<span class="subclass"> SubClassOf </span>Diagnostic, Therapeutic,<br><span class="keyword"> and </span>Research Equipment. 
                </td>
             </tr>
@@ -4692,7 +4652,7 @@
             <tr class="addition">
                <td rowspan="1">838</td>
                <td><i>(1)</i>&nbsp; Parenteral Vial<span class="subclass"> SubClassOf </span>Vial. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Piggyback Vial<span class="subclass"> SubClassOf </span>Parenteral Vial. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Piggyback Vial<span class="subclass"> SubClassOf </span>Parenteral Vial. <br></td>
                <td rowspan="1">Piggyback Vial<span class="subclass"> SubClassOf </span>Vial. 
                </td>
             </tr>
@@ -4700,7 +4660,7 @@
             <tr class="addition">
                <td rowspan="1">839</td>
                <td><i>(1)</i>&nbsp; Non-Neoplastic Thyroid Gland Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. <br><i>(2)</i>&nbsp; Congenital Thyroid Gland Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Thyroid Gland Disorder. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Congenital Thyroid Gland Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. 
                </td>
             </tr>
@@ -4708,7 +4668,7 @@
             <tr class="addition">
                <td rowspan="1">840</td>
                <td><i>(1)</i>&nbsp; Topical Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Dental Route of Administration<span class="subclass"> SubClassOf </span>Topical Route of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Dental Route of Administration<span class="subclass"> SubClassOf </span>Topical Route of Administration. <br></td>
                <td rowspan="1">Dental Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                </td>
             </tr>
@@ -4716,7 +4676,7 @@
             <tr class="addition">
                <td rowspan="1">841</td>
                <td><i>(1)</i>&nbsp; Non-Neoplastic Pituitary Gland Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. <br><i>(2)</i>&nbsp; Pituitary Gland Hypoplasia<span class="subclass"> SubClassOf </span>Non-Neoplastic Pituitary Gland Disorder. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Pituitary Gland Hypoplasia<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. 
                </td>
             </tr>
@@ -4724,7 +4684,7 @@
             <tr class="addition">
                <td rowspan="1">842</td>
                <td><i>(1)</i>&nbsp; Loss of Chromosome 5<span class="subclass"> SubClassOf </span>Chromosomal Loss. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Loss of Chromosome 5q<span class="subclass"> SubClassOf </span>Loss of Chromosome 5. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Loss of Chromosome 5q<span class="subclass"> SubClassOf </span>Loss of Chromosome 5. <br></td>
                <td rowspan="1">Loss of Chromosome 5q<span class="subclass"> SubClassOf </span>Chromosomal Loss. 
                </td>
             </tr>
@@ -4732,7 +4692,7 @@
             <tr class="addition">
                <td rowspan="1">843</td>
                <td><i>(1)</i>&nbsp; Single Use Vial<span class="subclass"> SubClassOf </span>Parenteral Vial. <br><i>(2)</i>&nbsp; Parenteral Vial<span class="subclass"> SubClassOf </span>Vial. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Single Use Vial<span class="subclass"> SubClassOf </span>Vial. 
                </td>
             </tr>
@@ -4740,7 +4700,7 @@
             <tr class="addition">
                <td rowspan="1">844</td>
                <td><i>(1)</i>&nbsp; Benign Adrenal Gland Neoplasm<span class="subclass"> SubClassOf </span>Benign Endocrine Neoplasm. <br><i>(2)</i>&nbsp; Benign Adrenal Medulla Neoplasm<span class="subclass"> SubClassOf </span>Benign Adrenal Gland Neoplasm. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Benign Adrenal Medulla Neoplasm<span class="subclass"> SubClassOf </span>Benign Endocrine Neoplasm. 
                </td>
             </tr>
@@ -4748,7 +4708,7 @@
             <tr class="addition">
                <td rowspan="1">845</td>
                <td><i>(1)</i>&nbsp; Ampule<span class="subclass"> SubClassOf </span>Container. <br><i>(2)</i>&nbsp; Container<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Ampule<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
                </td>
             </tr>
@@ -4756,8 +4716,8 @@
             <tr class="addition">
                <td rowspan="1">846</td>
                <td><i>(1)</i>&nbsp; Malignant Adrenal Gland Neoplasm<span class="subclass"> SubClassOf </span>Malignant Endocrine Neoplasm. <br><i>(2)</i>&nbsp; Malignant Adrenal Medulla Neoplasm<span class="subclass"> SubClassOf </span>Malignant Adrenal Gland Neoplasm. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Malignant Adrenal Gland Pheochromocytoma<span class="subclass"> SubClassOf </span>Malignant Adrenal Medulla Neoplasm. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Malignant Adrenal Gland Pheochromocytoma<span class="subclass"> SubClassOf </span>Malignant Adrenal Medulla Neoplasm. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Malignant Adrenal Gland Pheochromocytoma<span class="subclass"> SubClassOf </span>Malignant Endocrine Neoplasm. 
                </td>
             </tr>
@@ -4765,7 +4725,7 @@
             <tr class="addition">
                <td rowspan="1">847</td>
                <td><i>(1)</i>&nbsp; Plastic Vial<span class="subclass"> SubClassOf </span>Parenteral Vial. <br><i>(2)</i>&nbsp; Parenteral Vial<span class="subclass"> SubClassOf </span>Vial. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Plastic Vial<span class="subclass"> SubClassOf </span>Vial. 
                </td>
             </tr>
@@ -4773,8 +4733,8 @@
             <tr class="addition">
                <td rowspan="1">848</td>
                <td><i>(1)</i>&nbsp; Dosage Form By Route Of Administration<span class="subclass"> SubClassOf </span>Pharmaceutical Dosage Form. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Injectable Dosage Form<span class="subclass"> SubClassOf </span>Parenteral Dosage Form. <br><i>(3)</i>&nbsp; Parenteral Dosage Form<span class="subclass"> SubClassOf </span>Dosage Form By Route Of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Injectable Dosage Form<span class="subclass"> SubClassOf </span>Parenteral Dosage Form. <br><i>(3)</i>&nbsp; Parenteral Dosage Form<span class="subclass"> SubClassOf </span>Dosage Form By Route Of Administration. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Injectable Dosage Form<span class="subclass"> SubClassOf </span>Pharmaceutical Dosage Form. 
                </td>
             </tr>
@@ -4782,7 +4742,7 @@
             <tr class="addition">
                <td rowspan="1">849</td>
                <td><i>(1)</i>&nbsp; Kit<span class="subclass"> SubClassOf </span>Medical Device. <br><i>(2)</i>&nbsp; Medical Device<span class="subclass"> SubClassOf </span>Diagnostic, Therapeutic,<br><span class="keyword"> and </span>Research Equipment. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Kit<span class="subclass"> SubClassOf </span>Diagnostic, Therapeutic,<br><span class="keyword"> and </span>Research Equipment. 
                </td>
             </tr>
@@ -4790,7 +4750,7 @@
             <tr class="addition">
                <td rowspan="1">850</td>
                <td><i>(1)</i>&nbsp; Bag<span class="subclass"> SubClassOf </span>Container. <br><i>(2)</i>&nbsp; Container<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Bag<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
                </td>
             </tr>
@@ -4798,7 +4758,7 @@
             <tr class="addition">
                <td rowspan="1">851</td>
                <td><i>(1)</i>&nbsp; Container<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Packet<span class="subclass"> SubClassOf </span>Container. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Packet<span class="subclass"> SubClassOf </span>Container. <br></td>
                <td rowspan="1">Packet<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
                </td>
             </tr>
@@ -4806,7 +4766,7 @@
             <tr class="addition">
                <td rowspan="1">852</td>
                <td><i>(1)</i>&nbsp; Tabminder<span class="subclass"> SubClassOf </span>Container. <br><i>(2)</i>&nbsp; Container<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Tabminder<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
                </td>
             </tr>
@@ -4821,7 +4781,7 @@
             <tr class="addition">
                <td rowspan="1">854</td>
                <td><i>(1)</i>&nbsp; Non-Neoplastic Thyroid Gland Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. <br><i>(2)</i>&nbsp; Hyperthyroidism<span class="subclass"> SubClassOf </span>Non-Neoplastic Thyroid Gland Disorder. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Hyperthyroidism<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. 
                </td>
             </tr>
@@ -4836,7 +4796,7 @@
             <tr class="addition">
                <td rowspan="1">856</td>
                <td><i>(1)</i>&nbsp; Topical Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Vaginal Route of Administration<span class="subclass"> SubClassOf </span>Topical Route of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Vaginal Route of Administration<span class="subclass"> SubClassOf </span>Topical Route of Administration. <br></td>
                <td rowspan="1">Vaginal Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                </td>
             </tr>
@@ -4844,7 +4804,7 @@
             <tr class="addition">
                <td rowspan="1">857</td>
                <td><i>(1)</i>&nbsp; Guanosine to Adenosine Transition Abnormality<span class="subclass"> SubClassOf </span>Nucleotide Transition Abnormality. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; TPMT*3A Allele<span class="subclass"> SubClassOf </span>Allele_Has_Abnormality<span class="some"> some </span>Guanosine to Adenosine Transition Abnormality. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; TPMT*3A Allele<span class="subclass"> SubClassOf </span>Allele_Has_Abnormality<span class="some"> some </span>Guanosine to Adenosine Transition Abnormality. <br></td>
                <td rowspan="1">TPMT*3A Allele<span class="subclass"> SubClassOf </span>Allele_Has_Abnormality<span class="some"> some </span>Nucleotide Transition Abnormality. 
                </td>
             </tr>
@@ -4852,7 +4812,7 @@
             <tr class="addition">
                <td rowspan="1">858</td>
                <td><i>(1)</i>&nbsp; Blister Pack<span class="subclass"> SubClassOf </span>Container. <br><i>(2)</i>&nbsp; Container<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Blister Pack<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
                </td>
             </tr>
@@ -4860,7 +4820,7 @@
             <tr class="addition">
                <td rowspan="1">859</td>
                <td><i>(1)</i>&nbsp; Perineural Route of Administration<span class="subclass"> SubClassOf </span>Soft Tissue Route Of Administration. <br><i>(2)</i>&nbsp; Soft Tissue Route Of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Perineural Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
                </td>
             </tr>
@@ -4868,7 +4828,7 @@
             <tr class="addition">
                <td rowspan="1">860</td>
                <td><i>(1)</i>&nbsp; Extended Release Film Coated Capsule Dosage Form<span class="subclass"> SubClassOf </span>Extended Release Coated Capsule Dosage Form. <br><i>(2)</i>&nbsp; Extended Release Coated Capsule Dosage Form<span class="subclass"> SubClassOf </span>Coated Capsule Dosage Form. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Extended Release Film Coated Capsule Dosage Form<span class="subclass"> SubClassOf </span>Coated Capsule Dosage Form. 
                </td>
             </tr>
@@ -4876,7 +4836,7 @@
             <tr class="addition">
                <td rowspan="1">861</td>
                <td><i>(1)</i>&nbsp; Combination Package<span class="subclass"> SubClassOf </span>Package. <br><i>(2)</i>&nbsp; Package<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Combination Package<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
                </td>
             </tr>
@@ -4884,7 +4844,7 @@
             <tr class="addition">
                <td rowspan="1">862</td>
                <td><i>(1)</i>&nbsp; Fluoride<span class="subclass"> SubClassOf </span>Element. <br><i>(2)</i>&nbsp; Element<span class="subclass"> SubClassOf </span>Inorganic Chemical. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Fluoride<span class="subclass"> SubClassOf </span>Inorganic Chemical. 
                </td>
             </tr>
@@ -4892,7 +4852,7 @@
             <tr class="addition">
                <td rowspan="1">863</td>
                <td><i>(1)</i>&nbsp; Hypogonadotropism<span class="subclass"> SubClassOf </span>Non-Neoplastic Gonadal Disorder. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Non-Neoplastic Gonadal Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Non-Neoplastic Gonadal Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. <br></td>
                <td rowspan="1">Hypogonadotropism<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. 
                </td>
             </tr>
@@ -4900,7 +4860,7 @@
             <tr class="addition">
                <td rowspan="1">864</td>
                <td><i>(1)</i>&nbsp; Intratendinous Route of Administration<span class="subclass"> SubClassOf </span>Soft Tissue Route Of Administration. <br><i>(2)</i>&nbsp; Soft Tissue Route Of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Intratendinous Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
                </td>
             </tr>
@@ -4908,7 +4868,7 @@
             <tr class="addition">
                <td rowspan="1">865</td>
                <td><i>(1)</i>&nbsp; Mucosal Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Nasal Route of Administration<span class="subclass"> SubClassOf </span>Mucosal Route of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Nasal Route of Administration<span class="subclass"> SubClassOf </span>Mucosal Route of Administration. <br></td>
                <td rowspan="1">Nasal Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                </td>
             </tr>
@@ -4916,7 +4876,7 @@
             <tr class="addition">
                <td rowspan="1">866</td>
                <td><i>(1)</i>&nbsp; Multi Dose Vial<span class="subclass"> SubClassOf </span>Parenteral Vial. <br><i>(2)</i>&nbsp; Parenteral Vial<span class="subclass"> SubClassOf </span>Vial. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Multi Dose Vial<span class="subclass"> SubClassOf </span>Vial. 
                </td>
             </tr>
@@ -4924,7 +4884,7 @@
             <tr class="addition">
                <td rowspan="1">867</td>
                <td><i>(1)</i>&nbsp; Parenteral Vial<span class="subclass"> SubClassOf </span>Vial. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Pharmacy Bulk Vial<span class="subclass"> SubClassOf </span>Parenteral Vial. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Pharmacy Bulk Vial<span class="subclass"> SubClassOf </span>Parenteral Vial. <br></td>
                <td rowspan="1">Pharmacy Bulk Vial<span class="subclass"> SubClassOf </span>Vial. 
                </td>
             </tr>
@@ -4932,7 +4892,7 @@
             <tr class="addition">
                <td rowspan="1">868</td>
                <td><i>(1)</i>&nbsp; Parenteral Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Transplacental Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Transplacental Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. <br></td>
                <td rowspan="1">Transplacental Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                </td>
             </tr>
@@ -4947,7 +4907,7 @@
             <tr class="addition">
                <td rowspan="1">870</td>
                <td><i>(1)</i>&nbsp; Parenteral Vial<span class="subclass"> SubClassOf </span>Vial. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Single Dose Vial<span class="subclass"> SubClassOf </span>Parenteral Vial. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Single Dose Vial<span class="subclass"> SubClassOf </span>Parenteral Vial. <br></td>
                <td rowspan="1">Single Dose Vial<span class="subclass"> SubClassOf </span>Vial. 
                </td>
             </tr>
@@ -4955,7 +4915,7 @@
             <tr class="addition">
                <td rowspan="1">871</td>
                <td><i>(1)</i>&nbsp; Benign Parathyroid Gland Neoplasm<span class="subclass"> SubClassOf </span>Benign Endocrine Neoplasm. <br><i>(2)</i>&nbsp; Parathyroid Gland Adenoma<span class="subclass"> SubClassOf </span>Benign Parathyroid Gland Neoplasm. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Parathyroid Gland Adenoma<span class="subclass"> SubClassOf </span>Benign Endocrine Neoplasm. 
                </td>
             </tr>
@@ -4963,7 +4923,7 @@
             <tr class="addition">
                <td rowspan="1">872</td>
                <td><i>(1)</i>&nbsp; Neoplastic Multinucleated Giant Cell<span class="subclass"> SubClassOf </span>Giant Cell. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Osteoclast-Like Giant Cell<span class="subclass"> SubClassOf </span>Neoplastic Multinucleated Giant Cell. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Osteoclast-Like Giant Cell<span class="subclass"> SubClassOf </span>Neoplastic Multinucleated Giant Cell. <br></td>
                <td rowspan="1">Osteoclast-Like Giant Cell<span class="subclass"> SubClassOf </span>Giant Cell. 
                </td>
             </tr>
@@ -4971,7 +4931,7 @@
             <tr class="addition">
                <td rowspan="1">873</td>
                <td><i>(1)</i>&nbsp; Cartridge<span class="subclass"> SubClassOf </span>Container. <br><i>(2)</i>&nbsp; Container<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Cartridge<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
                </td>
             </tr>
@@ -4984,14 +4944,14 @@
             </tr>
             <tr class="addition">
                <td><i>(1)</i>&nbsp; Topical Dosage Form<span class="subclass"> SubClassOf </span>Dosage Form By Route Of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Dosage Form By Route Of Administration<span class="subclass"> SubClassOf </span>Pharmaceutical Dosage Form. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Spray Dosage Form<span class="subclass"> SubClassOf </span>Topical Dosage Form. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Dosage Form By Route Of Administration<span class="subclass"> SubClassOf </span>Pharmaceutical Dosage Form. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Spray Dosage Form<span class="subclass"> SubClassOf </span>Topical Dosage Form. <br></td>
             </tr>
             
             <tr class="addition">
                <td rowspan="1">875</td>
                <td><i>(1)</i>&nbsp; Gonadal Agenesis<span class="subclass"> SubClassOf </span>Non-Neoplastic Gonadal Disorder. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Non-Neoplastic Gonadal Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Non-Neoplastic Gonadal Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. <br></td>
                <td rowspan="1">Gonadal Agenesis<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. 
                </td>
             </tr>
@@ -5004,14 +4964,14 @@
             </tr>
             <tr class="addition">
                <td><i>(1)</i>&nbsp; Topical Dosage Form<span class="subclass"> SubClassOf </span>Dosage Form By Route Of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Dosage Form By Route Of Administration<span class="subclass"> SubClassOf </span>Pharmaceutical Dosage Form. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Shampoo Dosage Form<span class="subclass"> SubClassOf </span>Topical Dosage Form. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Dosage Form By Route Of Administration<span class="subclass"> SubClassOf </span>Pharmaceutical Dosage Form. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Shampoo Dosage Form<span class="subclass"> SubClassOf </span>Topical Dosage Form. <br></td>
             </tr>
             
             <tr class="addition">
                <td rowspan="1">877</td>
                <td><i>(1)</i>&nbsp; Benign Adrenal Gland Neoplasm<span class="subclass"> SubClassOf </span>Benign Endocrine Neoplasm. <br><i>(2)</i>&nbsp; Adrenal Gland Adenoma<span class="subclass"> SubClassOf </span>Benign Adrenal Gland Neoplasm. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Adrenal Gland Adenoma<span class="subclass"> SubClassOf </span>Benign Endocrine Neoplasm. 
                </td>
             </tr>
@@ -5033,7 +4993,7 @@
             <tr class="addition">
                <td rowspan="1">880</td>
                <td><i>(1)</i>&nbsp; Intracranial Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Intracerebral Route of Administration<span class="subclass"> SubClassOf </span>Intracranial Route of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Intracerebral Route of Administration<span class="subclass"> SubClassOf </span>Intracranial Route of Administration. <br></td>
                <td rowspan="1">Intracerebral Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
                </td>
             </tr>
@@ -5041,7 +5001,7 @@
             <tr class="addition">
                <td rowspan="1">881</td>
                <td><i>(1)</i>&nbsp; Dose Pack<span class="subclass"> SubClassOf </span>Container. <br><i>(2)</i>&nbsp; Container<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Dose Pack<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
                </td>
             </tr>
@@ -5049,7 +5009,7 @@
             <tr class="addition">
                <td rowspan="1">882</td>
                <td><i>(1)</i>&nbsp; Enteral Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Oral Route of Administration<span class="subclass"> SubClassOf </span>Enteral Route of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Oral Route of Administration<span class="subclass"> SubClassOf </span>Enteral Route of Administration. <br></td>
                <td rowspan="1">Oral Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                </td>
             </tr>
@@ -5057,7 +5017,7 @@
             <tr class="addition">
                <td rowspan="1">883</td>
                <td><i>(1)</i>&nbsp; Enteral Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Rectal Route of Administration<span class="subclass"> SubClassOf </span>Enteral Route of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Rectal Route of Administration<span class="subclass"> SubClassOf </span>Enteral Route of Administration. <br></td>
                <td rowspan="1">Rectal Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                </td>
             </tr>
@@ -5065,7 +5025,7 @@
             <tr class="addition">
                <td rowspan="1">884</td>
                <td><i>(1)</i>&nbsp; Topical Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Genitourinary Route of Administration<span class="subclass"> SubClassOf </span>Topical Route of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Genitourinary Route of Administration<span class="subclass"> SubClassOf </span>Topical Route of Administration. <br></td>
                <td rowspan="1">Genitourinary Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                </td>
             </tr>
@@ -5073,7 +5033,7 @@
             <tr class="addition">
                <td rowspan="1">885</td>
                <td><i>(1)</i>&nbsp; Bottle<span class="subclass"> SubClassOf </span>Container. <br><i>(2)</i>&nbsp; Container<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Bottle<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
                </td>
             </tr>
@@ -5081,8 +5041,8 @@
             <tr class="addition">
                <td rowspan="1">886</td>
                <td><i>(1)</i>&nbsp; Topical Dosage Form<span class="subclass"> SubClassOf </span>Dosage Form By Route Of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Dosage Form By Route Of Administration<span class="subclass"> SubClassOf </span>Pharmaceutical Dosage Form. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Soap Dosage Form<span class="subclass"> SubClassOf </span>Topical Dosage Form. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Dosage Form By Route Of Administration<span class="subclass"> SubClassOf </span>Pharmaceutical Dosage Form. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Soap Dosage Form<span class="subclass"> SubClassOf </span>Topical Dosage Form. <br></td>
                <td rowspan="1">Soap Dosage Form<span class="subclass"> SubClassOf </span>Pharmaceutical Dosage Form. 
                </td>
             </tr>
@@ -5090,7 +5050,7 @@
             <tr class="addition">
                <td rowspan="1">887</td>
                <td><i>(1)</i>&nbsp; Non-Neoplastic Thyroid Gland Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. <br><i>(2)</i>&nbsp; Thyroid Gland Atrophy<span class="subclass"> SubClassOf </span>Non-Neoplastic Thyroid Gland Disorder. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Thyroid Gland Atrophy<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. 
                </td>
             </tr>
@@ -5098,7 +5058,7 @@
             <tr class="addition">
                <td rowspan="1">888</td>
                <td><i>(1)</i>&nbsp; Non-Neoplastic Thyroid Gland Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. <br><i>(2)</i>&nbsp; Hypothyroidism<span class="subclass"> SubClassOf </span>Non-Neoplastic Thyroid Gland Disorder. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Hypothyroidism<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. 
                </td>
             </tr>
@@ -5106,7 +5066,7 @@
             <tr class="addition">
                <td rowspan="1">889</td>
                <td><i>(1)</i>&nbsp; Soft Tissue Route Of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Intragingival Route of Administration<span class="subclass"> SubClassOf </span>Soft Tissue Route Of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Intragingival Route of Administration<span class="subclass"> SubClassOf </span>Soft Tissue Route Of Administration. <br></td>
                <td rowspan="1">Intragingival Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
                </td>
             </tr>
@@ -5114,7 +5074,7 @@
             <tr class="addition">
                <td rowspan="1">890</td>
                <td><i>(1)</i>&nbsp; Topical Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Intracavernous Route of Administration<span class="subclass"> SubClassOf </span>Topical Route of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Intracavernous Route of Administration<span class="subclass"> SubClassOf </span>Topical Route of Administration. <br></td>
                <td rowspan="1">Intracavernous Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                </td>
             </tr>
@@ -5122,7 +5082,7 @@
             <tr class="addition">
                <td rowspan="1">891</td>
                <td><i>(1)</i>&nbsp; Mucinous Neoplasm<span class="subclass"> SubClassOf </span>Disease_Has_Finding<span class="some"> only </span>Mucoid Stroma Formation. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Mucoepidermoid Carcinoma<span class="subclass"> SubClassOf </span>Mucinous Neoplasm. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Mucoepidermoid Carcinoma<span class="subclass"> SubClassOf </span>Mucinous Neoplasm. <br></td>
                <td rowspan="1">Mucoepidermoid Carcinoma<span class="subclass"> SubClassOf </span>Disease_Has_Finding<span class="some"> only </span>Mucoid Stroma Formation. 
                </td>
             </tr>
@@ -5130,8 +5090,8 @@
             <tr class="addition">
                <td rowspan="1">892</td>
                <td><i>(1)</i>&nbsp; Intracranial Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Parenteral Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Transtympanic Route of Administration<span class="subclass"> SubClassOf </span>Intracranial Route of Administration. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Parenteral Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Transtympanic Route of Administration<span class="subclass"> SubClassOf </span>Intracranial Route of Administration. <br></td>
                <td rowspan="1">Transtympanic Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                </td>
             </tr>
@@ -5139,7 +5099,7 @@
             <tr class="addition">
                <td rowspan="1">893</td>
                <td><i>(1)</i>&nbsp; Parenteral Vial<span class="subclass"> SubClassOf </span>Vial. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Glass Vial<span class="subclass"> SubClassOf </span>Parenteral Vial. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Glass Vial<span class="subclass"> SubClassOf </span>Parenteral Vial. <br></td>
                <td rowspan="1">Glass Vial<span class="subclass"> SubClassOf </span>Vial. 
                </td>
             </tr>
@@ -5154,7 +5114,7 @@
             <tr class="addition">
                <td rowspan="1">895</td>
                <td><i>(1)</i>&nbsp; Dewar<span class="subclass"> SubClassOf </span>Container. <br><i>(2)</i>&nbsp; Container<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Dewar<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
                </td>
             </tr>
@@ -5162,7 +5122,7 @@
             <tr class="addition">
                <td rowspan="1">896</td>
                <td><i>(1)</i>&nbsp; Intradiscal Route of Administration<span class="subclass"> SubClassOf </span>Intracartilaginous Route of Administration. <br><i>(2)</i>&nbsp; Intracartilaginous Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Intradiscal Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
                </td>
             </tr>
@@ -5170,7 +5130,7 @@
             <tr class="addition">
                <td rowspan="1">897</td>
                <td><i>(1)</i>&nbsp; Gas Cylinder<span class="subclass"> SubClassOf </span>Container. <br><i>(2)</i>&nbsp; Container<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Gas Cylinder<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
                </td>
             </tr>
@@ -5178,7 +5138,7 @@
             <tr class="addition">
                <td rowspan="1">898</td>
                <td><i>(1)</i>&nbsp; Non-Neoplastic Thyroid Gland Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. <br><i>(2)</i>&nbsp; Goiter<span class="subclass"> SubClassOf </span>Non-Neoplastic Thyroid Gland Disorder. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Goiter<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. 
                </td>
             </tr>
@@ -5186,7 +5146,7 @@
             <tr class="addition">
                <td rowspan="1">899</td>
                <td><i>(1)</i>&nbsp; Non-Neoplastic Adrenal Gland Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. <br><i>(2)</i>&nbsp; Congenital Adrenal Gland Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Adrenal Gland Disorder. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">Congenital Adrenal Gland Disorder<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. 
                </td>
             </tr>
@@ -5196,7 +5156,7 @@
          <tbody id="apseudopred" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Retrospective Pseudo Novel Redundant (118) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Retrospective Pseudo Novel Redundant (118)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -5696,7 +5656,7 @@
             <tr class="addition">
                <td rowspan="1">961</td>
                <td><i>(1)</i>&nbsp; CYP2D6*4 Allele<span class="subclass"> EquivalentTo </span>CYP2D6 Gene<br><span class="keyword"> and </span>(Allele_Has_Abnormality<span class="some"> some </span>Guanosine to Adenosine Transition Abnormality)<br><span class="keyword"> and </span>(Allele_Has_Abnormality<span class="some"> some </span>Splice-Site Mutation Abnormality)<br><span class="keyword"> and </span>(Allele_Has_Activity<span class="some"> some </span>Inactive)<br><span class="keyword"> and </span>(Allele_In_Chromosomal_Location<span class="some"> some </span>22q13.1)<br><span class="keyword"> and </span>(Allele_Plays_Altered_Role_In_Process<span class="some"> some </span>Drug Metabolism)<br><span class="keyword"> and </span>(Allele_Plays_Altered_Role_In_Process<span class="some"> some </span>Xenobiotic Metabolism). <br><i>(2)</i>&nbsp; Guanosine to Adenosine Transition Abnormality<span class="subclass"> SubClassOf </span>Nucleotide Transition Abnormality. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">CYP2D6*4 Allele<span class="subclass"> SubClassOf </span>Allele_Has_Abnormality<span class="some"> some </span>Nucleotide Transition Abnormality. 
                </td>
             </tr>
@@ -6024,7 +5984,7 @@
             <tr class="addition">
                <td rowspan="1">1002</td>
                <td><i>(1)</i>&nbsp; CYP2D6*8 Allele<span class="subclass"> EquivalentTo </span>CYP2D6 Gene<br><span class="keyword"> and </span>(Allele_Has_Abnormality<span class="some"> some </span>Guanosine to Thymidine Transversion Abnormality)<br><span class="keyword"> and </span>(Allele_Has_Abnormality<span class="some"> some </span>Protein Truncation Abnormality)<br><span class="keyword"> and </span>(Allele_Has_Activity<span class="some"> some </span>Inactive)<br><span class="keyword"> and </span>(Allele_In_Chromosomal_Location<span class="some"> some </span>22q13.1)<br><span class="keyword"> and </span>(Allele_Plays_Altered_Role_In_Process<span class="some"> some </span>Drug Metabolism)<br><span class="keyword"> and </span>(Allele_Plays_Altered_Role_In_Process<span class="some"> some </span>Xenobiotic Metabolism). <br><i>(2)</i>&nbsp; Guanosine to Thymidine Transversion Abnormality<span class="subclass"> SubClassOf </span>Nucleotide Transversion Abnormality. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">CYP2D6*8 Allele<span class="subclass"> SubClassOf </span>Allele_Has_Abnormality<span class="some"> some </span>Nucleotide Transversion Abnormality. 
                </td>
             </tr>
@@ -6128,7 +6088,7 @@
             <tr class="addition">
                <td rowspan="1">1015</td>
                <td><i>(1)</i>&nbsp; Thymidine to Cytosine Transition Abnormality<span class="subclass"> SubClassOf </span>Nucleotide Transition Abnormality. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; CYP2C9*1 Allele<span class="subclass"> EquivalentTo </span>CYP2C9 Gene<br><span class="keyword"> and </span>(Allele_Has_Abnormality<span class="some"> some </span>Deletion Abnormality)<br><span class="keyword"> and </span>(Allele_Has_Abnormality<span class="some"> some </span>Thymidine to Cytosine Transition Abnormality)<br><span class="keyword"> and </span>(Allele_Has_Activity<span class="some"> some </span>Standard Activity)<br><span class="keyword"> and </span>(Allele_Plays_Role_In_Metabolism_Of_Chemical_Or_Drug<span class="some"> some </span>Ibuprofen)<br><span class="keyword"> and </span>(Allele_Plays_Role_In_Metabolism_Of_Chemical_Or_Drug<span class="some"> some </span>Phenytoin)<br><span class="keyword"> and </span>(Allele_Plays_Role_In_Metabolism_Of_Chemical_Or_Drug<span class="some"> some </span>Warfarin). <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; CYP2C9*1 Allele<span class="subclass"> EquivalentTo </span>CYP2C9 Gene<br><span class="keyword"> and </span>(Allele_Has_Abnormality<span class="some"> some </span>Deletion Abnormality)<br><span class="keyword"> and </span>(Allele_Has_Abnormality<span class="some"> some </span>Thymidine to Cytosine Transition Abnormality)<br><span class="keyword"> and </span>(Allele_Has_Activity<span class="some"> some </span>Standard Activity)<br><span class="keyword"> and </span>(Allele_Plays_Role_In_Metabolism_Of_Chemical_Or_Drug<span class="some"> some </span>Ibuprofen)<br><span class="keyword"> and </span>(Allele_Plays_Role_In_Metabolism_Of_Chemical_Or_Drug<span class="some"> some </span>Phenytoin)<br><span class="keyword"> and </span>(Allele_Plays_Role_In_Metabolism_Of_Chemical_Or_Drug<span class="some"> some </span>Warfarin). <br></td>
                <td rowspan="1">CYP2C9*1 Allele<span class="subclass"> SubClassOf </span>Allele_Has_Abnormality<span class="some"> some </span>Nucleotide Transition Abnormality. 
                </td>
             </tr>
@@ -6159,7 +6119,7 @@
          
          <tbody id="weak" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="weakening"></a><h4>Weakenings with Shared Terms (18) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="weakening"></a><h4 style="display: inline-block;">Weakenings with Shared Terms (18)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -6319,7 +6279,7 @@
          <tbody id="rem" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Pure Removals with Shared Terms (266) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Pure Removals with Shared Terms (266)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -7662,7 +7622,7 @@
          
          <tbody id="wkequiv" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="redef"></a><h4>Modified Definitions with Shared Terms (3) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="redef"></a><h4 style="display: inline-block;">Modified Definitions with Shared Terms (3)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -7703,7 +7663,7 @@
          <tbody id="rred" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Redundant (1) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Redundant (1)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -7719,13 +7679,13 @@
                </td>
                <td><i>(1)</i>&nbsp; Epithelial Neoplasm<span class="subclass"> SubClassOf </span>Neoplasm by Morphology. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Reproductive Endocrine Neoplasm<span class="subclass"> SubClassOf </span>Endocrine Neoplasm. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Reproductive Endocrine Neoplasm<span class="subclass"> SubClassOf </span>Endocrine Neoplasm. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Endocrine Neoplasm<span class="subclass"> SubClassOf </span>Epithelial Neoplasm. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Endocrine Neoplasm<span class="subclass"> SubClassOf </span>Epithelial Neoplasm. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(4)</i>&nbsp; Sex Cord-Stromal Tumor<span class="subclass"> SubClassOf </span>Reproductive Endocrine Neoplasm. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(4)</i>&nbsp; Sex Cord-Stromal Tumor<span class="subclass"> SubClassOf </span>Reproductive Endocrine Neoplasm. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
          </tbody>
@@ -7740,7 +7700,7 @@
          <tbody id="rst" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Prospective Novel Redundant (37) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Prospective Novel Redundant (37)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -7756,7 +7716,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Intracavitary Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Intrauterine Route of Administration<span class="subclass"> SubClassOf </span>Intracavitary Route of Administration. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Intrauterine Route of Administration<span class="subclass"> SubClassOf </span>Intracavitary Route of Administration. 
                   						<br></td>
             </tr>
             
@@ -7779,9 +7739,9 @@
                <td><i>(1)</i>&nbsp; Somatotroph Cell<span class="subclass"> SubClassOf </span>Acidophilic Cell. 
                   						<br><i>(2)</i>&nbsp; Acidophilic Cell<span class="subclass"> SubClassOf </span>Adenohypophysial Cell. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Adenohypophysial Cell<span class="subclass"> SubClassOf </span>Glandular Cell. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Adenohypophysial Cell<span class="subclass"> SubClassOf </span>Glandular Cell. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -7801,7 +7761,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Topical Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Percutaneous Route of Administration<span class="subclass"> SubClassOf </span>Topical Route of Administration. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Percutaneous Route of Administration<span class="subclass"> SubClassOf </span>Topical Route of Administration. 
                   						<br></td>
             </tr>
             
@@ -7812,7 +7772,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Coated Tablet Dosage Form<span class="subclass"> SubClassOf </span>Tablet Dosage Form. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Enteric-Coated Tablet Dosage Form<span class="subclass"> SubClassOf </span>Coated Tablet Dosage Form. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Enteric-Coated Tablet Dosage Form<span class="subclass"> SubClassOf </span>Coated Tablet Dosage Form. 
                   						<br></td>
             </tr>
             
@@ -7833,9 +7793,9 @@
                </td>
                <td><i>(1)</i>&nbsp; Acidophilic Cell<span class="subclass"> SubClassOf </span>Adenohypophysial Cell. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Adenohypophysial Cell<span class="subclass"> SubClassOf </span>Anatomic_Structure_is_Physical_Part_of<span class="some"> some </span>Anterior Lobe of the Pituitary Gland. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Adenohypophysial Cell<span class="subclass"> SubClassOf </span>Anatomic_Structure_is_Physical_Part_of<span class="some"> some </span>Anterior Lobe of the Pituitary Gland. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Lactotroph Cell<span class="subclass"> SubClassOf </span>Acidophilic Cell. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Lactotroph Cell<span class="subclass"> SubClassOf </span>Acidophilic Cell. 
                   						<br></td>
             </tr>
             
@@ -7847,9 +7807,9 @@
                <td><i>(1)</i>&nbsp; Thyrotroph Cell<span class="subclass"> SubClassOf </span>Acidophilic Cell. 
                   						<br><i>(2)</i>&nbsp; Acidophilic Cell<span class="subclass"> SubClassOf </span>Adenohypophysial Cell. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Adenohypophysial Cell<span class="subclass"> SubClassOf </span>Anatomic_Structure_is_Physical_Part_of<span class="some"> some </span>Anterior Lobe of the Pituitary Gland. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Adenohypophysial Cell<span class="subclass"> SubClassOf </span>Anatomic_Structure_is_Physical_Part_of<span class="some"> some </span>Anterior Lobe of the Pituitary Gland. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -7859,7 +7819,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Non-Neoplastic Endocrine Disorder<span class="subclass"> SubClassOf </span>Endocrine Disorder. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Diabetes Insipidus<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Diabetes Insipidus<span class="subclass"> SubClassOf </span>Non-Neoplastic Endocrine Disorder. 
                   						<br></td>
             </tr>
             
@@ -7871,7 +7831,7 @@
                <td><i>(1)</i>&nbsp; Type II Epithelial Receptor Cell<span class="subclass"> SubClassOf </span>Taste Bud Cell. 
                   						<br><i>(2)</i>&nbsp; Taste Bud Cell<span class="subclass"> SubClassOf </span>Epithelial Receptor Cell. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -7891,7 +7851,7 @@
                </td>
                <td><i>(1)</i>&nbsp; List<span class="subclass"> SubClassOf </span>Document. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Links List<span class="subclass"> SubClassOf </span>List. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Links List<span class="subclass"> SubClassOf </span>List. 
                   						<br></td>
             </tr>
             
@@ -7902,9 +7862,9 @@
                </td>
                <td><i>(1)</i>&nbsp; Acidophilic Cell<span class="subclass"> SubClassOf </span>Adenohypophysial Cell. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Adenohypophysial Cell<span class="subclass"> SubClassOf </span>Glandular Cell. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Adenohypophysial Cell<span class="subclass"> SubClassOf </span>Glandular Cell. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Lactotroph Cell<span class="subclass"> SubClassOf </span>Acidophilic Cell. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Lactotroph Cell<span class="subclass"> SubClassOf </span>Acidophilic Cell. 
                   						<br></td>
             </tr>
             
@@ -7916,7 +7876,7 @@
                <td><i>(1)</i>&nbsp; Intrabronchial Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
                   						<br><i>(2)</i>&nbsp; Parenteral Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -7926,7 +7886,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Parenteral Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Intratubular Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Intratubular Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
                   						<br></td>
             </tr>
             
@@ -7947,7 +7907,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Unit of Volume<span class="subclass"> SubClassOf </span>Unit by Category. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Cubic Meter<span class="subclass"> SubClassOf </span>Unit of Volume. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Cubic Meter<span class="subclass"> SubClassOf </span>Unit of Volume. 
                   						<br></td>
             </tr>
             
@@ -7968,10 +7928,10 @@
                </td>
                <td><i>(1)</i>&nbsp; Cuboidal Cell<span class="subclass"> SubClassOf </span>Glandular Cell. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Collecting Cell<span class="subclass"> SubClassOf </span>Cuboidal Cell. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Collecting Cell<span class="subclass"> SubClassOf </span>Cuboidal Cell. 
                   						<br><i>(3)</i>&nbsp; Glandular Cell<span class="subclass"> SubClassOf </span>Epithelial Cell. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -8001,7 +7961,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Alpha-adrenergic Agonist<span class="subclass"> SubClassOf </span>Adrenergic Agent. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Tetrahydrozoline Hydrochloride<span class="subclass"> SubClassOf </span>Alpha-adrenergic Agonist. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Tetrahydrozoline Hydrochloride<span class="subclass"> SubClassOf </span>Alpha-adrenergic Agonist. 
                   						<br></td>
             </tr>
             
@@ -8013,7 +7973,7 @@
                <td><i>(1)</i>&nbsp; Type I Epithelial Receptor Cell<span class="subclass"> SubClassOf </span>Taste Bud Cell. 
                   						<br><i>(2)</i>&nbsp; Taste Bud Cell<span class="subclass"> SubClassOf </span>Epithelial Receptor Cell. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -8024,9 +7984,9 @@
                <td><i>(1)</i>&nbsp; Somatotroph Cell<span class="subclass"> SubClassOf </span>Acidophilic Cell. 
                   						<br><i>(2)</i>&nbsp; Acidophilic Cell<span class="subclass"> SubClassOf </span>Adenohypophysial Cell. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Adenohypophysial Cell<span class="subclass"> SubClassOf </span>Anatomic_Structure_is_Physical_Part_of<span class="some"> some </span>Anterior Lobe of the Pituitary Gland. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Adenohypophysial Cell<span class="subclass"> SubClassOf </span>Anatomic_Structure_is_Physical_Part_of<span class="some"> some </span>Anterior Lobe of the Pituitary Gland. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -8036,7 +7996,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Adenosquamous Breast Carcinoma<span class="subclass"> SubClassOf </span>Metaplastic Breast Carcinoma. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Low Grade Adenosquamous Breast Carcinoma<span class="subclass"> SubClassOf </span>Adenosquamous Breast Carcinoma. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Low Grade Adenosquamous Breast Carcinoma<span class="subclass"> SubClassOf </span>Adenosquamous Breast Carcinoma. 
                   						<br></td>
             </tr>
             
@@ -8048,7 +8008,7 @@
                <td><i>(1)</i>&nbsp; Unit of Linear Acceleration<span class="subclass"> SubClassOf </span>Unit by Category. 
                   						<br><i>(2)</i>&nbsp; Unit by Category<span class="subclass"> SubClassOf </span>Unit of Measure. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Gal<span class="subclass"> SubClassOf </span>Unit of Linear Acceleration. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Gal<span class="subclass"> SubClassOf </span>Unit of Linear Acceleration. 
                   						<br></td>
             </tr>
             
@@ -8059,7 +8019,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Inhaler<span class="subclass"> SubClassOf </span>Drug Packaging Device. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Inhaler Refill<span class="subclass"> SubClassOf </span>Inhaler. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Inhaler Refill<span class="subclass"> SubClassOf </span>Inhaler. 
                   						<br></td>
             </tr>
             
@@ -8071,7 +8031,7 @@
                <td><i>(1)</i>&nbsp; Type III Epithelial Receptor Cell<span class="subclass"> SubClassOf </span>Taste Bud Cell. 
                   						<br><i>(2)</i>&nbsp; Taste Bud Cell<span class="subclass"> SubClassOf </span>Epithelial Receptor Cell. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -8092,7 +8052,7 @@
                <td><i>(1)</i>&nbsp; Intraluminal Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
                   						<br><i>(2)</i>&nbsp; Parenteral Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -8102,7 +8062,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Guanosine to Cytosine Transversion Abnormality<span class="subclass"> SubClassOf </span>Nucleotide Transversion Abnormality. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; CYP2D6*11 Allele<span class="subclass"> SubClassOf </span>Allele_Has_Abnormality<span class="some"> some </span>Guanosine to Cytosine Transversion Abnormality. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; CYP2D6*11 Allele<span class="subclass"> SubClassOf </span>Allele_Has_Abnormality<span class="some"> some </span>Guanosine to Cytosine Transversion Abnormality. 
                   						<br></td>
             </tr>
             
@@ -8114,9 +8074,9 @@
                <td><i>(1)</i>&nbsp; Thyrotroph Cell<span class="subclass"> SubClassOf </span>Acidophilic Cell. 
                   						<br><i>(2)</i>&nbsp; Acidophilic Cell<span class="subclass"> SubClassOf </span>Adenohypophysial Cell. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Adenohypophysial Cell<span class="subclass"> SubClassOf </span>Glandular Cell. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Adenohypophysial Cell<span class="subclass"> SubClassOf </span>Glandular Cell. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -8127,9 +8087,9 @@
                <td><i>(1)</i>&nbsp; Milliliter<span class="subclass"> SubClassOf </span>Unit of Volume. 
                   						<br><i>(2)</i>&nbsp; Unit of Volume<span class="subclass"> SubClassOf </span>Unit by Category. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Unit by Category<span class="subclass"> SubClassOf </span>Unit of Measure. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Unit by Category<span class="subclass"> SubClassOf </span>Unit of Measure. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -8159,7 +8119,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Parenteral Route of Administration<span class="subclass"> SubClassOf </span>Route of Administration. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Intraductal Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Intraductal Route of Administration<span class="subclass"> SubClassOf </span>Parenteral Route of Administration. 
                   						<br></td>
             </tr>
             
@@ -8168,7 +8128,7 @@
          <tbody id="rpsnovred" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Prospective Pseudo Novel Redundant (162) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Prospective Pseudo Novel Redundant (162)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>

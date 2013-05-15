@@ -97,9 +97,9 @@ public class WebDiff extends HttpServlet {
 	private void getDiff(HttpServletRequest request, HttpServletResponse response) 
 			throws IOException, ServletException, TransformerException, OWLOntologyCreationException, FileUploadException {
 		PrintWriter pw = response.getWriter();
-//		String xsltPath = "/usr/share/tomcat7/webapps/diff/xslt_server.xsl";	// Office Dell
+		String xsltPath = "/usr/share/tomcat7/webapps/diff/xslt_server.xsl";	// Office Dell
 //		String xsltPath = "/usr/local/apache-tomcat-7.0.37/webapps/diff/xslt_server.xsl"; // Mac Pro
-		String xsltPath = "/Users/rafa/Documents/PhD/workspace/ecco-webui/WebContent/xslt_server.xsl"; // MacBook Pro
+//		String xsltPath = "/Users/rafa/Documents/PhD/workspace/ecco-webui/WebContent/xslt_server.xsl"; // MacBook Pro
 		String styledXml = "";
 		if(request.getSession().getAttribute("report") != null) {
 			XMLReport report = (XMLReport) request.getSession().getAttribute("report");

@@ -2,65 +2,25 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>ecco</title>
-      <link rel="stylesheet" href="css/style.css"><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery-1.4.4.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="js/jquery.checkboxtree.js"></script><script type="text/javascript">
-					$(document).ready(function() {
-						$('#tree1').checkboxTree({
-							initializeChecked: 'expanded',
-							initializeUnchecked: 'collapsed',
-							collapseDuration: 50,
-							expandDuration: 100,
-							collapseImage: 'images/minus.png',
-							expandImage: 'images/plus.png',
-							onCheck: {
-								node: 'expand',
-								ancestors: 'checkIfFull',
-								descendants: 'check'
-							},
-							onUncheck: {
-								node: 'collapse',
-								ancestors: 'uncheck'
-							}
-						});
-						$('#tree2').checkboxTree({
-							initializeChecked: 'expanded',
-							initializeUnchecked: 'collapsed',
-							collapseDuration: 50,
-							expandDuration: 100,
-							collapseImage: 'images/minus.png',
-							expandImage: 'images/plus.png',
-							onCheck: {
-								node: 'expand',
-								ancestors: 'checkIfFull',
-								descendants: 'check'
-							},
-							onUncheck: {
-								node: 'collapse',
-								ancestors: 'uncheck'
-							}
-						});
-						$('#tree1-expandAll').click(function(){
-							$('#tree1').checkboxTree('expandAll');
-						});
-						$('#tree1-collapseAll').click(function(){
-							$('#tree1').checkboxTree('collapseAll');
-						});
-						$('#tree2-expandAll').click(function(){
-							$('#tree2').checkboxTree('expandAll');
-						});
-						$('#tree2-collapseAll').click(function(){
-							$('#tree2').checkboxTree('collapseAll');
-						});
-					});
-				</script></head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/reveal.css"><script type="text/javascript" src="js/jquery-1.4.4.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery.checkboxtree.js"></script><script type="text/javascript" src="js/jquery.reveal.js"></script><script type="text/javascript" src="js/jscript.js"></script></head>
    <body>
       <h1><br></h1>
-      				[<a href="../../index.jsp">Back Home</a>]
+      				[<a href="index.jsp">Back Home</a>]
       				
       <form action="getXml" method="post" class="inl">
          						[<a id="top3" target="_blank" href="EccoChangeSet_gensyms.xml">Source XML</a>]
          					
-      </form><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp; [<a id="top1" href="javascript:;" onClick="showAll();">Show All</a> | 
-      				<a id="top2" href="javascript:;" onClick="hideAll();">Hide All</a>] <br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="16a03a26-b4d5-4fe5-a000-84e9ed7b6149-gs"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
+      </form><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp;
+      				[<a id="top1" href="javascript:;" onClick="showAll();$('#tree1').checkboxTree('expandAll');$('#tree2').checkboxTree('expandAll')">Show All</a> | 
+      				<a id="top2" href="javascript:;" onClick="hideAll();$('#tree1').checkboxTree('collapseAll');$('#tree2').checkboxTree('collapseAll');">Hide All</a>] 
+      				[<a id="genViewPerml" href="#" onclick="setPermalink();">Generate View Permalink</a>]
+      				
+      <div id="view-plink-modal" class="reveal-modal">
+         <h3>view-permalink</h3><textarea id="view-plink" rows="3" cols="60" readonly="true" style="resize: none;"></textarea><br>
+         					[<a href="javascript:;" onclick="select_all('view-plink');">Select all</a>]
+         					<a class="close-reveal-modal">x</a></div><br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="16a03a26-b4d5-4fe5-a000-84e9ed7b6149-gs"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
       <table width="70%" style="table-layout:fixed;">
          <tr>
             <th class="topright"><input type="checkbox" name="removals" onClick="toggleGroup('removals')">  
@@ -76,13 +36,13 @@
                   <li>  <input type="checkbox" name="effRemsTrigger" onClick="toggleChanges('effRems','effRemsTrigger')">  
                      <h4 style="display:inline;">Effectual (287)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, and are not entailed by Ontology 2');"><ul>
                         <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('weak','weakrt');">  <b>Weakenings (18)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are more constraining than existing axioms in Ontology 2');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('weak');">  <a href="#weak">With Shared Terms (18)</a></li>
+                              <li id="weaktrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('weak');">  <a href="#weak">With Shared Terms (18)</a></li>
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;With Retired Terms (0)
                               </li>
                            </ul>
                         </li>
                         <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('wkequiv','wkequivrt');">  <b>Modified Definitions (3)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Equivalence axioms that have been extended; if split into subsumptions then one was strengthened and the other weakened');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('wkequiv');">  <a href="#wkequiv">With Shared Terms (3)</a></li>
+                              <li id="wkequivtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('wkequiv');">  <a href="#wkequiv">With Shared Terms (3)</a></li>
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;With Retired Terms (0)
                               </li>
                            </ul>
@@ -90,7 +50,7 @@
                         <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Retired Descriptions (0)
                         </li>
                         <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('rem','remrt');">  <b>Pure Removals (266)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 2; typically related to hierachy changes');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('rem');">  <a href="#rem">With Shared Terms (266)</a></li>
+                              <li id="remtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('rem');">  <a href="#rem">With Shared Terms (266)</a></li>
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;With Retired Terms (0)
                               </li>
                            </ul>
@@ -102,15 +62,15 @@
                               </li>
                               <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst','rpsnovred');">  <b>Retired Prospective Redundancy (199)</b><b id="t1"></b>  
                                  <ul style="display:none">
-                                    <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst');">  <a href="#rst">Novel (37)</a></li>
-                                    <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rpsnovred');">  <a href="#rpsnovred">Pseudo Novel (162)</a></li>
+                                    <li id="rsttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst');">  <a href="#rst">Novel (37)</a></li>
+                                    <li id="rpsnovredtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rpsnovred');">  <a href="#rpsnovred">Pseudo Novel (162)</a></li>
                                  </ul>
                               </li>
                            </ul>
                         </li>
                         <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
                         </li>
-                        <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rred','ravred')">  <a href="#rred">Redundant (1)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 1 that are entailed by at least one shared axiom between Ontology 1 and 2');"></li>
+                        <li id="rredtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rred')">  <a href="#rred">Redundant (1)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 1 that are entailed by at least one shared axiom between Ontology 1 and 2');"></li>
                      </ul>
                   </li>
                </ul>
@@ -120,20 +80,20 @@
                   <li>  <input type="checkbox" name="effAddsTrigger" onClick="toggleChanges('effAdds','effAddsTrigger')">  
                      <h4 style="display:inline;">Effectual (815)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, and are not entailed by Ontology 1');"><ul>
                         <li>  <input type="checkbox" name="effAdds" onClick="toggleDiv('st','stnt');">  <b>Strengthenings (66)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are more constraining than existing axioms in Ontology 1');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('st');">  <a href="#st">With Shared Terms (33)</a></li>
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('stnt');">  <a href="#stnt">With New Terms (33)</a></li>
+                              <li id="sttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('st');">  <a href="#st">With Shared Terms (33)</a></li>
+                              <li id="stnttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('stnt');">  <a href="#stnt">With New Terms (33)</a></li>
                            </ul>
                         </li>
                         <li>  <input type="checkbox" name="effAdds" onClick="toggleDiv('stequiv','stequivnt');">  <b>Modified Definitions (4)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Equivalence axioms that have been extended; if split into subsumptions then one was strengthened and the other weakened');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('stequiv');">  <a href="#aed">With Shared Terms (4)</a></li>
+                              <li id="stequivtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('stequiv');">  <a href="#aed">With Shared Terms (4)</a></li>
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;With New Terms (0)
                               </li>
                            </ul>
                         </li>
-                        <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('newdesc');">  <a href="#newdesc">New Descriptions (399)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing newly created terms, i.e., terms that did not exist in Ontology 1');"></li>
+                        <li id="newdesctrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('newdesc');">  <a href="#newdesc">New Descriptions (399)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing newly created terms, i.e., terms that did not exist in Ontology 1');"></li>
                         <li>  <input type="checkbox" name="effAdds" onClick="toggleDiv('add','addnt');">  <b>Pure Additions (346)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 1; typically related to hierachy changes');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('add');">  <a href="#add">With Shared Terms (300)</a></li>
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('addnt');">  <a href="#addnt">With New Terms (46)</a></li>
+                              <li id="addtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('add');">  <a href="#add">With Shared Terms (300)</a></li>
+                              <li id="addnttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('addnt');">  <a href="#addnt">With New Terms (46)</a></li>
                            </ul>
                         </li>
                      </ul>
@@ -144,8 +104,8 @@
                               </li>
                               <li>  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak','apseudopred');">  <b>New Retrospective Redundancy (202)</b>  
                                  <ul style="display:none">
-                                    <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak');">  <a href="#aweak">Novel (84)</a></li>
-                                    <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('apseudopred');">  <a href="#apseudopred">Pseudo Novel (118)</a></li>
+                                    <li id="aweaktrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak');">  <a href="#aweak">Novel (84)</a></li>
+                                    <li id="apseudopredtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('apseudopred');">  <a href="#apseudopred">Pseudo Novel (118)</a></li>
                                  </ul>
                               </li>
                            </ul>
@@ -178,7 +138,7 @@
          <tbody id="st" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Strengthenings with Shared Terms (33) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Strengthenings with Shared Terms (33)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -422,7 +382,7 @@
          
          <tbody id="stnt" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="st"></a><h4>Strengthenings with New Terms (33) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="st"></a><h4 style="display: inline-block;">Strengthenings with New Terms (33)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -667,7 +627,7 @@
          <tbody id="newdesc" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>New Descriptions (399) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">New Descriptions (399)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -2675,7 +2635,7 @@
          <tbody id="add" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Pure Additions with Shared Terms (300) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Pure Additions with Shared Terms (300)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -4187,7 +4147,7 @@
          
          <tbody id="addnt" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="add"></a><h4>Pure Additions with New Terms (46) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="add"></a><h4 style="display: inline-block;">Pure Additions with New Terms (46)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -4429,7 +4389,7 @@
          
          <tbody id="stequiv" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="aed"></a><h4>Modified Definitions with Shared Terms (4) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="aed"></a><h4 style="display: inline-block;">Modified Definitions with Shared Terms (4)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -4482,7 +4442,7 @@
          <tbody id="aweak" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Retrospective Novel Redundant (84) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Retrospective Novel Redundant (84)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -4494,7 +4454,7 @@
             <tr class="addition">
                <td rowspan="1">816</td>
                <td><i>(1)</i>&nbsp; CBW7<span class="subclass"> SubClassOf </span>BU5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; FYZ4<span class="subclass"> SubClassOf </span>CBW7. <br><i>(3)</i>&nbsp; ATI2<span class="subclass"> SubClassOf </span>FYZ4. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; FYZ4<span class="subclass"> SubClassOf </span>CBW7. <br><i>(3)</i>&nbsp; ATI2<span class="subclass"> SubClassOf </span>FYZ4. <br></td>
                <td rowspan="1">ATI2<span class="subclass"> SubClassOf </span>BU5. 
                </td>
             </tr>
@@ -4502,7 +4462,7 @@
             <tr class="addition">
                <td rowspan="1">817</td>
                <td><i>(1)</i>&nbsp; CBW7<span class="subclass"> SubClassOf </span>BU5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; FHP6<span class="subclass"> SubClassOf </span>CBW7. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; FHP6<span class="subclass"> SubClassOf </span>CBW7. <br></td>
                <td rowspan="1">FHP6<span class="subclass"> SubClassOf </span>BU5. 
                </td>
             </tr>
@@ -4515,14 +4475,14 @@
             </tr>
             <tr class="addition">
                <td><i>(1)</i>&nbsp; DUU3<span class="subclass"> SubClassOf </span>BFL1. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; BFL1<span class="subclass"> SubClassOf </span>ECN1. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; BNO2<span class="subclass"> SubClassOf </span>DUU3. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BFL1<span class="subclass"> SubClassOf </span>ECN1. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; BNO2<span class="subclass"> SubClassOf </span>DUU3. <br></td>
             </tr>
             
             <tr class="addition">
                <td rowspan="1">819</td>
                <td><i>(1)</i>&nbsp; BRQ7<span class="subclass"> SubClassOf </span>EF7. <br><i>(2)</i>&nbsp; EF7<span class="subclass"> SubClassOf </span>BO5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">BRQ7<span class="subclass"> SubClassOf </span>BO5. 
                </td>
             </tr>
@@ -4530,7 +4490,7 @@
             <tr class="addition">
                <td rowspan="1">820</td>
                <td><i>(1)</i>&nbsp; DKN6<span class="subclass"> SubClassOf </span>AL2. <br><i>(2)</i>&nbsp; BLY6<span class="subclass"> SubClassOf </span>DKN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">BLY6<span class="subclass"> SubClassOf </span>AL2. 
                </td>
             </tr>
@@ -4538,7 +4498,7 @@
             <tr class="addition">
                <td rowspan="1">821</td>
                <td><i>(1)</i>&nbsp; APY9<span class="subclass"> SubClassOf </span>AQS5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; DBK8<span class="subclass"> SubClassOf </span>APY9. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; DBK8<span class="subclass"> SubClassOf </span>APY9. <br></td>
                <td rowspan="1">DBK8<span class="subclass"> SubClassOf </span>AQS5. 
                </td>
             </tr>
@@ -4546,7 +4506,7 @@
             <tr class="addition">
                <td rowspan="1">822</td>
                <td><i>(1)</i>&nbsp; IY3<span class="subclass"> SubClassOf </span>AL2. <br><i>(2)</i>&nbsp; EUM5<span class="subclass"> SubClassOf </span>IY3. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">EUM5<span class="subclass"> SubClassOf </span>AL2. 
                </td>
             </tr>
@@ -4554,17 +4514,17 @@
             <tr class="addition">
                <td rowspan="2">823</td>
                <td><i>(1)</i>&nbsp; CON9<span class="subclass"> SubClassOf </span>DPY8. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; DTY9<span class="subclass"> SubClassOf </span>DVU9. <br><i>(3)</i>&nbsp; DPY8<span class="subclass"> SubClassOf </span>DTY9. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(4)</i>&nbsp; AGX4<span class="subclass"> SubClassOf </span>CON9. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; DTY9<span class="subclass"> SubClassOf </span>DVU9. <br><i>(3)</i>&nbsp; DPY8<span class="subclass"> SubClassOf </span>DTY9. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(4)</i>&nbsp; AGX4<span class="subclass"> SubClassOf </span>CON9. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="2">AGX4<span class="subclass"> SubClassOf </span>DVU9. 
                </td>
             </tr>
             <tr class="addition">
                <td><i>(1)</i>&nbsp; CON9<span class="subclass"> SubClassOf </span>CUD1. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; CUD1<span class="subclass"> SubClassOf </span>DTY9. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; DTY9<span class="subclass"> SubClassOf </span>DVU9. <br><i>(4)</i>&nbsp; AGX4<span class="subclass"> SubClassOf </span>CON9. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; CUD1<span class="subclass"> SubClassOf </span>DTY9. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; DTY9<span class="subclass"> SubClassOf </span>DVU9. <br><i>(4)</i>&nbsp; AGX4<span class="subclass"> SubClassOf </span>CON9. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="addition">
@@ -4577,7 +4537,7 @@
             <tr class="addition">
                <td rowspan="1">825</td>
                <td><i>(1)</i>&nbsp; CSI4<span class="subclass"> SubClassOf </span>BXD1. <br><i>(2)</i>&nbsp; BXD1<span class="subclass"> SubClassOf </span>LN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">CSI4<span class="subclass"> SubClassOf </span>LN6. 
                </td>
             </tr>
@@ -4585,7 +4545,7 @@
             <tr class="addition">
                <td rowspan="1">826</td>
                <td><i>(1)</i>&nbsp; CBW7<span class="subclass"> SubClassOf </span>BU5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; FHB3<span class="subclass"> SubClassOf </span>CBW7. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; FHB3<span class="subclass"> SubClassOf </span>CBW7. <br></td>
                <td rowspan="1">FHB3<span class="subclass"> SubClassOf </span>BU5. 
                </td>
             </tr>
@@ -4600,8 +4560,8 @@
             <tr class="addition">
                <td rowspan="2">828</td>
                <td><i>(1)</i>&nbsp; DUU3<span class="subclass"> SubClassOf </span>BFL1. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; BFL1<span class="subclass"> SubClassOf </span>ECN1. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; EJJ4<span class="subclass"> SubClassOf </span>DUU3. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BFL1<span class="subclass"> SubClassOf </span>ECN1. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; EJJ4<span class="subclass"> SubClassOf </span>DUU3. <br></td>
                <td rowspan="2">EJJ4<span class="subclass"> SubClassOf </span>ECN1. 
                </td>
             </tr>
@@ -4612,9 +4572,9 @@
             <tr class="addition">
                <td rowspan="1">829</td>
                <td><i>(1)</i>&nbsp; CFY2<span class="subclass"> SubClassOf </span>DNQ6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; EF7<span class="subclass"> SubClassOf </span>BO5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; BO5<span class="subclass"> SubClassOf </span>CFY2. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(4)</i>&nbsp; EPG5<span class="subclass"> SubClassOf </span>EF7. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; EF7<span class="subclass"> SubClassOf </span>BO5. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; BO5<span class="subclass"> SubClassOf </span>CFY2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(4)</i>&nbsp; EPG5<span class="subclass"> SubClassOf </span>EF7. <br></td>
                <td rowspan="1">EPG5<span class="subclass"> SubClassOf </span>DNQ6. 
                </td>
             </tr>
@@ -4622,7 +4582,7 @@
             <tr class="addition">
                <td rowspan="1">830</td>
                <td><i>(1)</i>&nbsp; ALW6<span class="subclass"> SubClassOf </span>LN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; BPP4<span class="subclass"> SubClassOf </span>ALW6. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BPP4<span class="subclass"> SubClassOf </span>ALW6. <br></td>
                <td rowspan="1">BPP4<span class="subclass"> SubClassOf </span>LN6. 
                </td>
             </tr>
@@ -4630,7 +4590,7 @@
             <tr class="addition">
                <td rowspan="1">831</td>
                <td><i>(1)</i>&nbsp; IY3<span class="subclass"> SubClassOf </span>AL2. <br><i>(2)</i>&nbsp; CKC4<span class="subclass"> SubClassOf </span>IY3. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">CKC4<span class="subclass"> SubClassOf </span>AL2. 
                </td>
             </tr>
@@ -4652,7 +4612,7 @@
             <tr class="addition">
                <td rowspan="1">834</td>
                <td><i>(1)</i>&nbsp; QT6<span class="subclass"> SubClassOf </span>BXD1. <br><i>(2)</i>&nbsp; BXD1<span class="subclass"> SubClassOf </span>LN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">QT6<span class="subclass"> SubClassOf </span>LN6. 
                </td>
             </tr>
@@ -4660,7 +4620,7 @@
             <tr class="addition">
                <td rowspan="1">835</td>
                <td><i>(1)</i>&nbsp; ARU8<span class="subclass"> SubClassOf </span>WU3. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; WU3<span class="subclass"> SubClassOf </span>HO9. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; WU3<span class="subclass"> SubClassOf </span>HO9. <br></td>
                <td rowspan="1">ARU8<span class="subclass"> SubClassOf </span>HO9. 
                </td>
             </tr>
@@ -4668,7 +4628,7 @@
             <tr class="addition">
                <td rowspan="1">836</td>
                <td><i>(1)</i>&nbsp; VQ2<span class="subclass"> SubClassOf </span>BU5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; FJF2<span class="subclass"> SubClassOf </span>VQ2. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; FJF2<span class="subclass"> SubClassOf </span>VQ2. <br></td>
                <td rowspan="1">FJF2<span class="subclass"> SubClassOf </span>BU5. 
                </td>
             </tr>
@@ -4676,7 +4636,7 @@
             <tr class="addition">
                <td rowspan="1">837</td>
                <td><i>(1)</i>&nbsp; EDO3<span class="subclass"> SubClassOf </span>BGP3. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; ADX8<span class="subclass"> SubClassOf </span>EDO3. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; ADX8<span class="subclass"> SubClassOf </span>EDO3. <br></td>
                <td rowspan="1">ADX8<span class="subclass"> SubClassOf </span>BGP3. 
                </td>
             </tr>
@@ -4684,7 +4644,7 @@
             <tr class="addition">
                <td rowspan="1">838</td>
                <td><i>(1)</i>&nbsp; DRP2<span class="subclass"> SubClassOf </span>DTU2. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; FTH9<span class="subclass"> SubClassOf </span>DRP2. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; FTH9<span class="subclass"> SubClassOf </span>DRP2. <br></td>
                <td rowspan="1">FTH9<span class="subclass"> SubClassOf </span>DTU2. 
                </td>
             </tr>
@@ -4692,7 +4652,7 @@
             <tr class="addition">
                <td rowspan="1">839</td>
                <td><i>(1)</i>&nbsp; IY3<span class="subclass"> SubClassOf </span>AL2. <br><i>(2)</i>&nbsp; DBH2<span class="subclass"> SubClassOf </span>IY3. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">DBH2<span class="subclass"> SubClassOf </span>AL2. 
                </td>
             </tr>
@@ -4700,7 +4660,7 @@
             <tr class="addition">
                <td rowspan="1">840</td>
                <td><i>(1)</i>&nbsp; APY9<span class="subclass"> SubClassOf </span>AQS5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; CND7<span class="subclass"> SubClassOf </span>APY9. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; CND7<span class="subclass"> SubClassOf </span>APY9. <br></td>
                <td rowspan="1">CND7<span class="subclass"> SubClassOf </span>AQS5. 
                </td>
             </tr>
@@ -4708,7 +4668,7 @@
             <tr class="addition">
                <td rowspan="1">841</td>
                <td><i>(1)</i>&nbsp; BID8<span class="subclass"> SubClassOf </span>AL2. <br><i>(2)</i>&nbsp; ETE6<span class="subclass"> SubClassOf </span>BID8. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">ETE6<span class="subclass"> SubClassOf </span>AL2. 
                </td>
             </tr>
@@ -4716,7 +4676,7 @@
             <tr class="addition">
                <td rowspan="1">842</td>
                <td><i>(1)</i>&nbsp; AII3<span class="subclass"> SubClassOf </span>FUZ2. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; FXD9<span class="subclass"> SubClassOf </span>AII3. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; FXD9<span class="subclass"> SubClassOf </span>AII3. <br></td>
                <td rowspan="1">FXD9<span class="subclass"> SubClassOf </span>FUZ2. 
                </td>
             </tr>
@@ -4724,7 +4684,7 @@
             <tr class="addition">
                <td rowspan="1">843</td>
                <td><i>(1)</i>&nbsp; AUO1<span class="subclass"> SubClassOf </span>DRP2. <br><i>(2)</i>&nbsp; DRP2<span class="subclass"> SubClassOf </span>DTU2. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">AUO1<span class="subclass"> SubClassOf </span>DTU2. 
                </td>
             </tr>
@@ -4732,7 +4692,7 @@
             <tr class="addition">
                <td rowspan="1">844</td>
                <td><i>(1)</i>&nbsp; ER4<span class="subclass"> SubClassOf </span>HO9. <br><i>(2)</i>&nbsp; CRW8<span class="subclass"> SubClassOf </span>ER4. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">CRW8<span class="subclass"> SubClassOf </span>HO9. 
                </td>
             </tr>
@@ -4740,7 +4700,7 @@
             <tr class="addition">
                <td rowspan="1">845</td>
                <td><i>(1)</i>&nbsp; BWV2<span class="subclass"> SubClassOf </span>BXD1. <br><i>(2)</i>&nbsp; BXD1<span class="subclass"> SubClassOf </span>LN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">BWV2<span class="subclass"> SubClassOf </span>LN6. 
                </td>
             </tr>
@@ -4748,8 +4708,8 @@
             <tr class="addition">
                <td rowspan="1">846</td>
                <td><i>(1)</i>&nbsp; DTY9<span class="subclass"> SubClassOf </span>DVU9. <br><i>(2)</i>&nbsp; IF7<span class="subclass"> SubClassOf </span>DTY9. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; CYX8<span class="subclass"> SubClassOf </span>IF7. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; CYX8<span class="subclass"> SubClassOf </span>IF7. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">CYX8<span class="subclass"> SubClassOf </span>DVU9. 
                </td>
             </tr>
@@ -4757,7 +4717,7 @@
             <tr class="addition">
                <td rowspan="1">847</td>
                <td><i>(1)</i>&nbsp; EXF6<span class="subclass"> SubClassOf </span>DRP2. <br><i>(2)</i>&nbsp; DRP2<span class="subclass"> SubClassOf </span>DTU2. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">EXF6<span class="subclass"> SubClassOf </span>DTU2. 
                </td>
             </tr>
@@ -4765,8 +4725,8 @@
             <tr class="addition">
                <td rowspan="1">848</td>
                <td><i>(1)</i>&nbsp; BFL1<span class="subclass"> SubClassOf </span>ECN1. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; BYR8<span class="subclass"> SubClassOf </span>DBM8. <br><i>(3)</i>&nbsp; DBM8<span class="subclass"> SubClassOf </span>BFL1. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BYR8<span class="subclass"> SubClassOf </span>DBM8. <br><i>(3)</i>&nbsp; DBM8<span class="subclass"> SubClassOf </span>BFL1. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">BYR8<span class="subclass"> SubClassOf </span>ECN1. 
                </td>
             </tr>
@@ -4774,7 +4734,7 @@
             <tr class="addition">
                <td rowspan="1">849</td>
                <td><i>(1)</i>&nbsp; PM2<span class="subclass"> SubClassOf </span>EDO3. <br><i>(2)</i>&nbsp; EDO3<span class="subclass"> SubClassOf </span>BGP3. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">PM2<span class="subclass"> SubClassOf </span>BGP3. 
                </td>
             </tr>
@@ -4782,7 +4742,7 @@
             <tr class="addition">
                <td rowspan="1">850</td>
                <td><i>(1)</i>&nbsp; ANO9<span class="subclass"> SubClassOf </span>BXD1. <br><i>(2)</i>&nbsp; BXD1<span class="subclass"> SubClassOf </span>LN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">ANO9<span class="subclass"> SubClassOf </span>LN6. 
                </td>
             </tr>
@@ -4790,7 +4750,7 @@
             <tr class="addition">
                <td rowspan="1">851</td>
                <td><i>(1)</i>&nbsp; BXD1<span class="subclass"> SubClassOf </span>LN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; BHA9<span class="subclass"> SubClassOf </span>BXD1. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BHA9<span class="subclass"> SubClassOf </span>BXD1. <br></td>
                <td rowspan="1">BHA9<span class="subclass"> SubClassOf </span>LN6. 
                </td>
             </tr>
@@ -4798,7 +4758,7 @@
             <tr class="addition">
                <td rowspan="1">852</td>
                <td><i>(1)</i>&nbsp; CIK8<span class="subclass"> SubClassOf </span>BXD1. <br><i>(2)</i>&nbsp; BXD1<span class="subclass"> SubClassOf </span>LN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">CIK8<span class="subclass"> SubClassOf </span>LN6. 
                </td>
             </tr>
@@ -4813,7 +4773,7 @@
             <tr class="addition">
                <td rowspan="1">854</td>
                <td><i>(1)</i>&nbsp; IY3<span class="subclass"> SubClassOf </span>AL2. <br><i>(2)</i>&nbsp; GN9<span class="subclass"> SubClassOf </span>IY3. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">GN9<span class="subclass"> SubClassOf </span>AL2. 
                </td>
             </tr>
@@ -4828,7 +4788,7 @@
             <tr class="addition">
                <td rowspan="1">856</td>
                <td><i>(1)</i>&nbsp; APY9<span class="subclass"> SubClassOf </span>AQS5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; FVT6<span class="subclass"> SubClassOf </span>APY9. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; FVT6<span class="subclass"> SubClassOf </span>APY9. <br></td>
                <td rowspan="1">FVT6<span class="subclass"> SubClassOf </span>AQS5. 
                </td>
             </tr>
@@ -4836,7 +4796,7 @@
             <tr class="addition">
                <td rowspan="1">857</td>
                <td><i>(1)</i>&nbsp; FGK5<span class="subclass"> SubClassOf </span>DAS6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; FJL7<span class="subclass"> SubClassOf </span>prop34<span class="some"> some </span>FGK5. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; FJL7<span class="subclass"> SubClassOf </span>prop34<span class="some"> some </span>FGK5. <br></td>
                <td rowspan="1">FJL7<span class="subclass"> SubClassOf </span>prop34<span class="some"> some </span>DAS6. 
                </td>
             </tr>
@@ -4844,7 +4804,7 @@
             <tr class="addition">
                <td rowspan="1">858</td>
                <td><i>(1)</i>&nbsp; AIL6<span class="subclass"> SubClassOf </span>BXD1. <br><i>(2)</i>&nbsp; BXD1<span class="subclass"> SubClassOf </span>LN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">AIL6<span class="subclass"> SubClassOf </span>LN6. 
                </td>
             </tr>
@@ -4852,7 +4812,7 @@
             <tr class="addition">
                <td rowspan="1">859</td>
                <td><i>(1)</i>&nbsp; AFE5<span class="subclass"> SubClassOf </span>VQ2. <br><i>(2)</i>&nbsp; VQ2<span class="subclass"> SubClassOf </span>BU5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">AFE5<span class="subclass"> SubClassOf </span>BU5. 
                </td>
             </tr>
@@ -4860,7 +4820,7 @@
             <tr class="addition">
                <td rowspan="1">860</td>
                <td><i>(1)</i>&nbsp; CLN4<span class="subclass"> SubClassOf </span>BNE7. <br><i>(2)</i>&nbsp; BNE7<span class="subclass"> SubClassOf </span>ER5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">CLN4<span class="subclass"> SubClassOf </span>ER5. 
                </td>
             </tr>
@@ -4868,7 +4828,7 @@
             <tr class="addition">
                <td rowspan="1">861</td>
                <td><i>(1)</i>&nbsp; BNB3<span class="subclass"> SubClassOf </span>AQC7. <br><i>(2)</i>&nbsp; AQC7<span class="subclass"> SubClassOf </span>LN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">BNB3<span class="subclass"> SubClassOf </span>LN6. 
                </td>
             </tr>
@@ -4876,7 +4836,7 @@
             <tr class="addition">
                <td rowspan="1">862</td>
                <td><i>(1)</i>&nbsp; CJW7<span class="subclass"> SubClassOf </span>AQM2. <br><i>(2)</i>&nbsp; AQM2<span class="subclass"> SubClassOf </span>BYA6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">CJW7<span class="subclass"> SubClassOf </span>BYA6. 
                </td>
             </tr>
@@ -4884,7 +4844,7 @@
             <tr class="addition">
                <td rowspan="1">863</td>
                <td><i>(1)</i>&nbsp; CDG3<span class="subclass"> SubClassOf </span>BXB3. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; BXB3<span class="subclass"> SubClassOf </span>AL2. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BXB3<span class="subclass"> SubClassOf </span>AL2. <br></td>
                <td rowspan="1">CDG3<span class="subclass"> SubClassOf </span>AL2. 
                </td>
             </tr>
@@ -4892,7 +4852,7 @@
             <tr class="addition">
                <td rowspan="1">864</td>
                <td><i>(1)</i>&nbsp; DZH3<span class="subclass"> SubClassOf </span>VQ2. <br><i>(2)</i>&nbsp; VQ2<span class="subclass"> SubClassOf </span>BU5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">DZH3<span class="subclass"> SubClassOf </span>BU5. 
                </td>
             </tr>
@@ -4900,7 +4860,7 @@
             <tr class="addition">
                <td rowspan="1">865</td>
                <td><i>(1)</i>&nbsp; UU8<span class="subclass"> SubClassOf </span>AQS5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; VJ4<span class="subclass"> SubClassOf </span>UU8. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; VJ4<span class="subclass"> SubClassOf </span>UU8. <br></td>
                <td rowspan="1">VJ4<span class="subclass"> SubClassOf </span>AQS5. 
                </td>
             </tr>
@@ -4908,7 +4868,7 @@
             <tr class="addition">
                <td rowspan="1">866</td>
                <td><i>(1)</i>&nbsp; ZE9<span class="subclass"> SubClassOf </span>DRP2. <br><i>(2)</i>&nbsp; DRP2<span class="subclass"> SubClassOf </span>DTU2. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">ZE9<span class="subclass"> SubClassOf </span>DTU2. 
                </td>
             </tr>
@@ -4916,7 +4876,7 @@
             <tr class="addition">
                <td rowspan="1">867</td>
                <td><i>(1)</i>&nbsp; DRP2<span class="subclass"> SubClassOf </span>DTU2. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; FYN5<span class="subclass"> SubClassOf </span>DRP2. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; FYN5<span class="subclass"> SubClassOf </span>DRP2. <br></td>
                <td rowspan="1">FYN5<span class="subclass"> SubClassOf </span>DTU2. 
                </td>
             </tr>
@@ -4924,7 +4884,7 @@
             <tr class="addition">
                <td rowspan="1">868</td>
                <td><i>(1)</i>&nbsp; BU5<span class="subclass"> SubClassOf </span>AQS5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; BUH1<span class="subclass"> SubClassOf </span>BU5. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BUH1<span class="subclass"> SubClassOf </span>BU5. <br></td>
                <td rowspan="1">BUH1<span class="subclass"> SubClassOf </span>AQS5. 
                </td>
             </tr>
@@ -4939,7 +4899,7 @@
             <tr class="addition">
                <td rowspan="1">870</td>
                <td><i>(1)</i>&nbsp; DRP2<span class="subclass"> SubClassOf </span>DTU2. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; BZY7<span class="subclass"> SubClassOf </span>DRP2. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BZY7<span class="subclass"> SubClassOf </span>DRP2. <br></td>
                <td rowspan="1">BZY7<span class="subclass"> SubClassOf </span>DTU2. 
                </td>
             </tr>
@@ -4947,7 +4907,7 @@
             <tr class="addition">
                <td rowspan="1">871</td>
                <td><i>(1)</i>&nbsp; RY3<span class="subclass"> SubClassOf </span>HO9. <br><i>(2)</i>&nbsp; CCE8<span class="subclass"> SubClassOf </span>RY3. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">CCE8<span class="subclass"> SubClassOf </span>HO9. 
                </td>
             </tr>
@@ -4955,7 +4915,7 @@
             <tr class="addition">
                <td rowspan="1">872</td>
                <td><i>(1)</i>&nbsp; AXG1<span class="subclass"> SubClassOf </span>CFB5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; EZY1<span class="subclass"> SubClassOf </span>AXG1. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; EZY1<span class="subclass"> SubClassOf </span>AXG1. <br></td>
                <td rowspan="1">EZY1<span class="subclass"> SubClassOf </span>CFB5. 
                </td>
             </tr>
@@ -4963,7 +4923,7 @@
             <tr class="addition">
                <td rowspan="1">873</td>
                <td><i>(1)</i>&nbsp; FWM2<span class="subclass"> SubClassOf </span>BXD1. <br><i>(2)</i>&nbsp; BXD1<span class="subclass"> SubClassOf </span>LN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">FWM2<span class="subclass"> SubClassOf </span>LN6. 
                </td>
             </tr>
@@ -4976,14 +4936,14 @@
             </tr>
             <tr class="addition">
                <td><i>(1)</i>&nbsp; DUU3<span class="subclass"> SubClassOf </span>BFL1. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; BFL1<span class="subclass"> SubClassOf </span>ECN1. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; AUH1<span class="subclass"> SubClassOf </span>DUU3. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BFL1<span class="subclass"> SubClassOf </span>ECN1. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; AUH1<span class="subclass"> SubClassOf </span>DUU3. <br></td>
             </tr>
             
             <tr class="addition">
                <td rowspan="1">875</td>
                <td><i>(1)</i>&nbsp; DDM1<span class="subclass"> SubClassOf </span>BXB3. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; BXB3<span class="subclass"> SubClassOf </span>AL2. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BXB3<span class="subclass"> SubClassOf </span>AL2. <br></td>
                <td rowspan="1">DDM1<span class="subclass"> SubClassOf </span>AL2. 
                </td>
             </tr>
@@ -4996,14 +4956,14 @@
             </tr>
             <tr class="addition">
                <td><i>(1)</i>&nbsp; DUU3<span class="subclass"> SubClassOf </span>BFL1. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; BFL1<span class="subclass"> SubClassOf </span>ECN1. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; CJE3<span class="subclass"> SubClassOf </span>DUU3. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BFL1<span class="subclass"> SubClassOf </span>ECN1. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; CJE3<span class="subclass"> SubClassOf </span>DUU3. <br></td>
             </tr>
             
             <tr class="addition">
                <td rowspan="1">877</td>
                <td><i>(1)</i>&nbsp; ER4<span class="subclass"> SubClassOf </span>HO9. <br><i>(2)</i>&nbsp; ABA1<span class="subclass"> SubClassOf </span>ER4. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">ABA1<span class="subclass"> SubClassOf </span>HO9. 
                </td>
             </tr>
@@ -5025,7 +4985,7 @@
             <tr class="addition">
                <td rowspan="1">880</td>
                <td><i>(1)</i>&nbsp; CBW7<span class="subclass"> SubClassOf </span>BU5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; FYZ4<span class="subclass"> SubClassOf </span>CBW7. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; FYZ4<span class="subclass"> SubClassOf </span>CBW7. <br></td>
                <td rowspan="1">FYZ4<span class="subclass"> SubClassOf </span>BU5. 
                </td>
             </tr>
@@ -5033,7 +4993,7 @@
             <tr class="addition">
                <td rowspan="1">881</td>
                <td><i>(1)</i>&nbsp; DNA9<span class="subclass"> SubClassOf </span>BXD1. <br><i>(2)</i>&nbsp; BXD1<span class="subclass"> SubClassOf </span>LN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">DNA9<span class="subclass"> SubClassOf </span>LN6. 
                </td>
             </tr>
@@ -5041,7 +5001,7 @@
             <tr class="addition">
                <td rowspan="1">882</td>
                <td><i>(1)</i>&nbsp; BUO8<span class="subclass"> SubClassOf </span>AQS5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; AAQ3<span class="subclass"> SubClassOf </span>BUO8. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; AAQ3<span class="subclass"> SubClassOf </span>BUO8. <br></td>
                <td rowspan="1">AAQ3<span class="subclass"> SubClassOf </span>AQS5. 
                </td>
             </tr>
@@ -5049,7 +5009,7 @@
             <tr class="addition">
                <td rowspan="1">883</td>
                <td><i>(1)</i>&nbsp; BUO8<span class="subclass"> SubClassOf </span>AQS5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; AST1<span class="subclass"> SubClassOf </span>BUO8. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; AST1<span class="subclass"> SubClassOf </span>BUO8. <br></td>
                <td rowspan="1">AST1<span class="subclass"> SubClassOf </span>AQS5. 
                </td>
             </tr>
@@ -5057,7 +5017,7 @@
             <tr class="addition">
                <td rowspan="1">884</td>
                <td><i>(1)</i>&nbsp; APY9<span class="subclass"> SubClassOf </span>AQS5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; FGL7<span class="subclass"> SubClassOf </span>APY9. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; FGL7<span class="subclass"> SubClassOf </span>APY9. <br></td>
                <td rowspan="1">FGL7<span class="subclass"> SubClassOf </span>AQS5. 
                </td>
             </tr>
@@ -5065,7 +5025,7 @@
             <tr class="addition">
                <td rowspan="1">885</td>
                <td><i>(1)</i>&nbsp; FVC8<span class="subclass"> SubClassOf </span>BXD1. <br><i>(2)</i>&nbsp; BXD1<span class="subclass"> SubClassOf </span>LN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">FVC8<span class="subclass"> SubClassOf </span>LN6. 
                </td>
             </tr>
@@ -5073,8 +5033,8 @@
             <tr class="addition">
                <td rowspan="1">886</td>
                <td><i>(1)</i>&nbsp; DUU3<span class="subclass"> SubClassOf </span>BFL1. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; BFL1<span class="subclass"> SubClassOf </span>ECN1. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; YN9<span class="subclass"> SubClassOf </span>DUU3. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BFL1<span class="subclass"> SubClassOf </span>ECN1. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; YN9<span class="subclass"> SubClassOf </span>DUU3. <br></td>
                <td rowspan="1">YN9<span class="subclass"> SubClassOf </span>ECN1. 
                </td>
             </tr>
@@ -5082,7 +5042,7 @@
             <tr class="addition">
                <td rowspan="1">887</td>
                <td><i>(1)</i>&nbsp; IY3<span class="subclass"> SubClassOf </span>AL2. <br><i>(2)</i>&nbsp; CQB2<span class="subclass"> SubClassOf </span>IY3. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">CQB2<span class="subclass"> SubClassOf </span>AL2. 
                </td>
             </tr>
@@ -5090,7 +5050,7 @@
             <tr class="addition">
                <td rowspan="1">888</td>
                <td><i>(1)</i>&nbsp; IY3<span class="subclass"> SubClassOf </span>AL2. <br><i>(2)</i>&nbsp; CQZ7<span class="subclass"> SubClassOf </span>IY3. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">CQZ7<span class="subclass"> SubClassOf </span>AL2. 
                </td>
             </tr>
@@ -5098,7 +5058,7 @@
             <tr class="addition">
                <td rowspan="1">889</td>
                <td><i>(1)</i>&nbsp; VQ2<span class="subclass"> SubClassOf </span>BU5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; DPZ7<span class="subclass"> SubClassOf </span>VQ2. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; DPZ7<span class="subclass"> SubClassOf </span>VQ2. <br></td>
                <td rowspan="1">DPZ7<span class="subclass"> SubClassOf </span>BU5. 
                </td>
             </tr>
@@ -5106,7 +5066,7 @@
             <tr class="addition">
                <td rowspan="1">890</td>
                <td><i>(1)</i>&nbsp; APY9<span class="subclass"> SubClassOf </span>AQS5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; CDX8<span class="subclass"> SubClassOf </span>APY9. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; CDX8<span class="subclass"> SubClassOf </span>APY9. <br></td>
                <td rowspan="1">CDX8<span class="subclass"> SubClassOf </span>AQS5. 
                </td>
             </tr>
@@ -5114,7 +5074,7 @@
             <tr class="addition">
                <td rowspan="1">891</td>
                <td><i>(1)</i>&nbsp; FMS8<span class="subclass"> SubClassOf </span>prop153<span class="some"> only </span>BIV1. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; ABT1<span class="subclass"> SubClassOf </span>FMS8. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; ABT1<span class="subclass"> SubClassOf </span>FMS8. <br></td>
                <td rowspan="1">ABT1<span class="subclass"> SubClassOf </span>prop153<span class="some"> only </span>BIV1. 
                </td>
             </tr>
@@ -5122,8 +5082,8 @@
             <tr class="addition">
                <td rowspan="1">892</td>
                <td><i>(1)</i>&nbsp; CBW7<span class="subclass"> SubClassOf </span>BU5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; BU5<span class="subclass"> SubClassOf </span>AQS5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; FOG9<span class="subclass"> SubClassOf </span>CBW7. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BU5<span class="subclass"> SubClassOf </span>AQS5. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; FOG9<span class="subclass"> SubClassOf </span>CBW7. <br></td>
                <td rowspan="1">FOG9<span class="subclass"> SubClassOf </span>AQS5. 
                </td>
             </tr>
@@ -5131,7 +5091,7 @@
             <tr class="addition">
                <td rowspan="1">893</td>
                <td><i>(1)</i>&nbsp; DRP2<span class="subclass"> SubClassOf </span>DTU2. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; FDY9<span class="subclass"> SubClassOf </span>DRP2. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; FDY9<span class="subclass"> SubClassOf </span>DRP2. <br></td>
                <td rowspan="1">FDY9<span class="subclass"> SubClassOf </span>DTU2. 
                </td>
             </tr>
@@ -5146,7 +5106,7 @@
             <tr class="addition">
                <td rowspan="1">895</td>
                <td><i>(1)</i>&nbsp; DIV9<span class="subclass"> SubClassOf </span>BXD1. <br><i>(2)</i>&nbsp; BXD1<span class="subclass"> SubClassOf </span>LN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">DIV9<span class="subclass"> SubClassOf </span>LN6. 
                </td>
             </tr>
@@ -5154,7 +5114,7 @@
             <tr class="addition">
                <td rowspan="1">896</td>
                <td><i>(1)</i>&nbsp; DFQ9<span class="subclass"> SubClassOf </span>CWM3. <br><i>(2)</i>&nbsp; CWM3<span class="subclass"> SubClassOf </span>BU5. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">DFQ9<span class="subclass"> SubClassOf </span>BU5. 
                </td>
             </tr>
@@ -5162,7 +5122,7 @@
             <tr class="addition">
                <td rowspan="1">897</td>
                <td><i>(1)</i>&nbsp; EXA5<span class="subclass"> SubClassOf </span>BXD1. <br><i>(2)</i>&nbsp; BXD1<span class="subclass"> SubClassOf </span>LN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">EXA5<span class="subclass"> SubClassOf </span>LN6. 
                </td>
             </tr>
@@ -5170,7 +5130,7 @@
             <tr class="addition">
                <td rowspan="1">898</td>
                <td><i>(1)</i>&nbsp; IY3<span class="subclass"> SubClassOf </span>AL2. <br><i>(2)</i>&nbsp; FMZ6<span class="subclass"> SubClassOf </span>IY3. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">FMZ6<span class="subclass"> SubClassOf </span>AL2. 
                </td>
             </tr>
@@ -5178,7 +5138,7 @@
             <tr class="addition">
                <td rowspan="1">899</td>
                <td><i>(1)</i>&nbsp; DKN6<span class="subclass"> SubClassOf </span>AL2. <br><i>(2)</i>&nbsp; EBX7<span class="subclass"> SubClassOf </span>DKN6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">EBX7<span class="subclass"> SubClassOf </span>AL2. 
                </td>
             </tr>
@@ -5188,7 +5148,7 @@
          <tbody id="apseudopred" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Retrospective Pseudo Novel Redundant (118) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Retrospective Pseudo Novel Redundant (118)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -5688,7 +5648,7 @@
             <tr class="addition">
                <td rowspan="1">961</td>
                <td><i>(1)</i>&nbsp; DSK7<span class="subclass"> EquivalentTo </span>FIT1<br><span class="keyword"> and </span>(prop34<span class="some"> some </span>FGK5)<br><span class="keyword"> and </span>(prop34<span class="some"> some </span>EYY3)<br><span class="keyword"> and </span>(prop98<span class="some"> some </span>AHO3)<br><span class="keyword"> and </span>(prop86<span class="some"> some </span>FYP2)<br><span class="keyword"> and </span>(prop51<span class="some"> some </span>EYT8)<br><span class="keyword"> and </span>(prop51<span class="some"> some </span>ZL1). <br><i>(2)</i>&nbsp; FGK5<span class="subclass"> SubClassOf </span>DAS6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">DSK7<span class="subclass"> SubClassOf </span>prop34<span class="some"> some </span>DAS6. 
                </td>
             </tr>
@@ -6016,7 +5976,7 @@
             <tr class="addition">
                <td rowspan="1">1002</td>
                <td><i>(1)</i>&nbsp; DR5<span class="subclass"> EquivalentTo </span>FIT1<br><span class="keyword"> and </span>(prop34<span class="some"> some </span>BHM4)<br><span class="keyword"> and </span>(prop34<span class="some"> some </span>EDR7)<br><span class="keyword"> and </span>(prop98<span class="some"> some </span>AHO3)<br><span class="keyword"> and </span>(prop86<span class="some"> some </span>FYP2)<br><span class="keyword"> and </span>(prop51<span class="some"> some </span>EYT8)<br><span class="keyword"> and </span>(prop51<span class="some"> some </span>ZL1). <br><i>(2)</i>&nbsp; BHM4<span class="subclass"> SubClassOf </span>FOV3. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">DR5<span class="subclass"> SubClassOf </span>prop34<span class="some"> some </span>FOV3. 
                </td>
             </tr>
@@ -6120,7 +6080,7 @@
             <tr class="addition">
                <td rowspan="1">1015</td>
                <td><i>(1)</i>&nbsp; ERV1<span class="subclass"> SubClassOf </span>DAS6. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; CWI1<span class="subclass"> EquivalentTo </span>DEO4<br><span class="keyword"> and </span>(prop34<span class="some"> some </span>COH6)<br><span class="keyword"> and </span>(prop34<span class="some"> some </span>ERV1)<br><span class="keyword"> and </span>(prop98<span class="some"> some </span>DNC1)<br><span class="keyword"> and </span>(prop124<span class="some"> some </span>DIK6)<br><span class="keyword"> and </span>(prop124<span class="some"> some </span>ATX6)<br><span class="keyword"> and </span>(prop124<span class="some"> some </span>FVQ5). <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; CWI1<span class="subclass"> EquivalentTo </span>DEO4<br><span class="keyword"> and </span>(prop34<span class="some"> some </span>COH6)<br><span class="keyword"> and </span>(prop34<span class="some"> some </span>ERV1)<br><span class="keyword"> and </span>(prop98<span class="some"> some </span>DNC1)<br><span class="keyword"> and </span>(prop124<span class="some"> some </span>DIK6)<br><span class="keyword"> and </span>(prop124<span class="some"> some </span>ATX6)<br><span class="keyword"> and </span>(prop124<span class="some"> some </span>FVQ5). <br></td>
                <td rowspan="1">CWI1<span class="subclass"> SubClassOf </span>prop34<span class="some"> some </span>DAS6. 
                </td>
             </tr>
@@ -6151,7 +6111,7 @@
          
          <tbody id="weak" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="weakening"></a><h4>Weakenings with Shared Terms (18) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="weakening"></a><h4 style="display: inline-block;">Weakenings with Shared Terms (18)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -6311,7 +6271,7 @@
          <tbody id="rem" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Pure Removals with Shared Terms (266) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Pure Removals with Shared Terms (266)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -7654,7 +7614,7 @@
          
          <tbody id="wkequiv" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="redef"></a><h4>Modified Definitions with Shared Terms (3) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="redef"></a><h4 style="display: inline-block;">Modified Definitions with Shared Terms (3)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -7695,7 +7655,7 @@
          <tbody id="rred" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Redundant (1) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Redundant (1)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -7711,13 +7671,13 @@
                </td>
                <td><i>(1)</i>&nbsp; CUK8<span class="subclass"> SubClassOf </span>VK3. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; OU3<span class="subclass"> SubClassOf </span>CDU7. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; OU3<span class="subclass"> SubClassOf </span>CDU7. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; CDU7<span class="subclass"> SubClassOf </span>CUK8. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; CDU7<span class="subclass"> SubClassOf </span>CUK8. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(4)</i>&nbsp; DFQ1<span class="subclass"> SubClassOf </span>OU3. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(4)</i>&nbsp; DFQ1<span class="subclass"> SubClassOf </span>OU3. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
          </tbody>
@@ -7732,7 +7692,7 @@
          <tbody id="rst" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Prospective Novel Redundant (37) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Prospective Novel Redundant (37)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -7748,7 +7708,7 @@
                </td>
                <td><i>(1)</i>&nbsp; CLI3<span class="subclass"> SubClassOf </span>AQS5. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; AIE9<span class="subclass"> SubClassOf </span>CLI3. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; AIE9<span class="subclass"> SubClassOf </span>CLI3. 
                   						<br></td>
             </tr>
             
@@ -7771,9 +7731,9 @@
                <td><i>(1)</i>&nbsp; DVW6<span class="subclass"> SubClassOf </span>FYG1. 
                   						<br><i>(2)</i>&nbsp; FYG1<span class="subclass"> SubClassOf </span>ACZ4. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; ACZ4<span class="subclass"> SubClassOf </span>QK1. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; ACZ4<span class="subclass"> SubClassOf </span>QK1. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -7793,7 +7753,7 @@
                </td>
                <td><i>(1)</i>&nbsp; APY9<span class="subclass"> SubClassOf </span>AQS5. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; ADE3<span class="subclass"> SubClassOf </span>APY9. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; ADE3<span class="subclass"> SubClassOf </span>APY9. 
                   						<br></td>
             </tr>
             
@@ -7804,7 +7764,7 @@
                </td>
                <td><i>(1)</i>&nbsp; ARA6<span class="subclass"> SubClassOf </span>CUT1. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; BNR8<span class="subclass"> SubClassOf </span>ARA6. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BNR8<span class="subclass"> SubClassOf </span>ARA6. 
                   						<br></td>
             </tr>
             
@@ -7825,9 +7785,9 @@
                </td>
                <td><i>(1)</i>&nbsp; FYG1<span class="subclass"> SubClassOf </span>ACZ4. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; ACZ4<span class="subclass"> SubClassOf </span>prop85<span class="some"> some </span>CFO6. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; ACZ4<span class="subclass"> SubClassOf </span>prop85<span class="some"> some </span>CFO6. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; FGD9<span class="subclass"> SubClassOf </span>FYG1. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; FGD9<span class="subclass"> SubClassOf </span>FYG1. 
                   						<br></td>
             </tr>
             
@@ -7839,9 +7799,9 @@
                <td><i>(1)</i>&nbsp; CFV2<span class="subclass"> SubClassOf </span>FYG1. 
                   						<br><i>(2)</i>&nbsp; FYG1<span class="subclass"> SubClassOf </span>ACZ4. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; ACZ4<span class="subclass"> SubClassOf </span>prop85<span class="some"> some </span>CFO6. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; ACZ4<span class="subclass"> SubClassOf </span>prop85<span class="some"> some </span>CFO6. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -7851,7 +7811,7 @@
                </td>
                <td><i>(1)</i>&nbsp; AL2<span class="subclass"> SubClassOf </span>EUK6. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; ARE9<span class="subclass"> SubClassOf </span>AL2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; ARE9<span class="subclass"> SubClassOf </span>AL2. 
                   						<br></td>
             </tr>
             
@@ -7863,7 +7823,7 @@
                <td><i>(1)</i>&nbsp; BXF9<span class="subclass"> SubClassOf </span>EPA9. 
                   						<br><i>(2)</i>&nbsp; EPA9<span class="subclass"> SubClassOf </span>FI1. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -7883,7 +7843,7 @@
                </td>
                <td><i>(1)</i>&nbsp; BUJ5<span class="subclass"> SubClassOf </span>HW7. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; PS3<span class="subclass"> SubClassOf </span>BUJ5. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; PS3<span class="subclass"> SubClassOf </span>BUJ5. 
                   						<br></td>
             </tr>
             
@@ -7894,9 +7854,9 @@
                </td>
                <td><i>(1)</i>&nbsp; FYG1<span class="subclass"> SubClassOf </span>ACZ4. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; ACZ4<span class="subclass"> SubClassOf </span>QK1. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; ACZ4<span class="subclass"> SubClassOf </span>QK1. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; FGD9<span class="subclass"> SubClassOf </span>FYG1. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; FGD9<span class="subclass"> SubClassOf </span>FYG1. 
                   						<br></td>
             </tr>
             
@@ -7908,7 +7868,7 @@
                <td><i>(1)</i>&nbsp; CEK8<span class="subclass"> SubClassOf </span>BU5. 
                   						<br><i>(2)</i>&nbsp; BU5<span class="subclass"> SubClassOf </span>AQS5. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -7918,7 +7878,7 @@
                </td>
                <td><i>(1)</i>&nbsp; BU5<span class="subclass"> SubClassOf </span>AQS5. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; CLS7<span class="subclass"> SubClassOf </span>BU5. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; CLS7<span class="subclass"> SubClassOf </span>BU5. 
                   						<br></td>
             </tr>
             
@@ -7939,7 +7899,7 @@
                </td>
                <td><i>(1)</i>&nbsp; PQ8<span class="subclass"> SubClassOf </span>FGW2. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; BIK9<span class="subclass"> SubClassOf </span>PQ8. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BIK9<span class="subclass"> SubClassOf </span>PQ8. 
                   						<br></td>
             </tr>
             
@@ -7960,10 +7920,10 @@
                </td>
                <td><i>(1)</i>&nbsp; DKU4<span class="subclass"> SubClassOf </span>QK1. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; DXY4<span class="subclass"> SubClassOf </span>DKU4. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; DXY4<span class="subclass"> SubClassOf </span>DKU4. 
                   						<br><i>(3)</i>&nbsp; QK1<span class="subclass"> SubClassOf </span>AOU5. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -7993,7 +7953,7 @@
                </td>
                <td><i>(1)</i>&nbsp; ME4<span class="subclass"> SubClassOf </span>DLS9. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; ENG1<span class="subclass"> SubClassOf </span>ME4. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; ENG1<span class="subclass"> SubClassOf </span>ME4. 
                   						<br></td>
             </tr>
             
@@ -8005,7 +7965,7 @@
                <td><i>(1)</i>&nbsp; FCO1<span class="subclass"> SubClassOf </span>EPA9. 
                   						<br><i>(2)</i>&nbsp; EPA9<span class="subclass"> SubClassOf </span>FI1. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -8016,9 +7976,9 @@
                <td><i>(1)</i>&nbsp; DVW6<span class="subclass"> SubClassOf </span>FYG1. 
                   						<br><i>(2)</i>&nbsp; FYG1<span class="subclass"> SubClassOf </span>ACZ4. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; ACZ4<span class="subclass"> SubClassOf </span>prop85<span class="some"> some </span>CFO6. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; ACZ4<span class="subclass"> SubClassOf </span>prop85<span class="some"> some </span>CFO6. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -8028,7 +7988,7 @@
                </td>
                <td><i>(1)</i>&nbsp; FAC1<span class="subclass"> SubClassOf </span>CYN5. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; DNL8<span class="subclass"> SubClassOf </span>FAC1. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; DNL8<span class="subclass"> SubClassOf </span>FAC1. 
                   						<br></td>
             </tr>
             
@@ -8040,7 +8000,7 @@
                <td><i>(1)</i>&nbsp; FGC9<span class="subclass"> SubClassOf </span>FGW2. 
                   						<br><i>(2)</i>&nbsp; FGW2<span class="subclass"> SubClassOf </span>DWF9. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; ZI1<span class="subclass"> SubClassOf </span>FGC9. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; ZI1<span class="subclass"> SubClassOf </span>FGC9. 
                   						<br></td>
             </tr>
             
@@ -8051,7 +8011,7 @@
                </td>
                <td><i>(1)</i>&nbsp; DRZ5<span class="subclass"> SubClassOf </span>LN6. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; DGD2<span class="subclass"> SubClassOf </span>DRZ5. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; DGD2<span class="subclass"> SubClassOf </span>DRZ5. 
                   						<br></td>
             </tr>
             
@@ -8063,7 +8023,7 @@
                <td><i>(1)</i>&nbsp; DQN4<span class="subclass"> SubClassOf </span>EPA9. 
                   						<br><i>(2)</i>&nbsp; EPA9<span class="subclass"> SubClassOf </span>FI1. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -8084,7 +8044,7 @@
                <td><i>(1)</i>&nbsp; AWN3<span class="subclass"> SubClassOf </span>BU5. 
                   						<br><i>(2)</i>&nbsp; BU5<span class="subclass"> SubClassOf </span>AQS5. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -8094,7 +8054,7 @@
                </td>
                <td><i>(1)</i>&nbsp; LU4<span class="subclass"> SubClassOf </span>FOV3. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; FJN9<span class="subclass"> SubClassOf </span>prop34<span class="some"> some </span>LU4. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; FJN9<span class="subclass"> SubClassOf </span>prop34<span class="some"> some </span>LU4. 
                   						<br></td>
             </tr>
             
@@ -8106,9 +8066,9 @@
                <td><i>(1)</i>&nbsp; CFV2<span class="subclass"> SubClassOf </span>FYG1. 
                   						<br><i>(2)</i>&nbsp; FYG1<span class="subclass"> SubClassOf </span>ACZ4. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; ACZ4<span class="subclass"> SubClassOf </span>QK1. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; ACZ4<span class="subclass"> SubClassOf </span>QK1. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -8119,9 +8079,9 @@
                <td><i>(1)</i>&nbsp; CVZ6<span class="subclass"> SubClassOf </span>PQ8. 
                   						<br><i>(2)</i>&nbsp; PQ8<span class="subclass"> SubClassOf </span>FGW2. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; FGW2<span class="subclass"> SubClassOf </span>DWF9. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; FGW2<span class="subclass"> SubClassOf </span>DWF9. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -8151,7 +8111,7 @@
                </td>
                <td><i>(1)</i>&nbsp; BU5<span class="subclass"> SubClassOf </span>AQS5. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; COI8<span class="subclass"> SubClassOf </span>BU5. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; COI8<span class="subclass"> SubClassOf </span>BU5. 
                   						<br></td>
             </tr>
             
@@ -8160,7 +8120,7 @@
          <tbody id="rpsnovred" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Prospective Pseudo Novel Redundant (162) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Prospective Pseudo Novel Redundant (162)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>

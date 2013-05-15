@@ -17,7 +17,7 @@ You should have received a copy of the GNU Lesser General Public License along w
 If not, see http://www.gnu.org/licenses/
 -->
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ecco="http://owl.cs.manchester.ac.uk/diff">
-	<xsl:output method="html"/>
+	<xsl:output method="html" encoding="UTF-8"/>
 	<xsl:template match="/">
 		<html>
 			<head>

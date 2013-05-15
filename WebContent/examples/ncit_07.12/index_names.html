@@ -2,65 +2,25 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>ecco</title>
-      <link rel="stylesheet" href="css/style.css"><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery-1.4.4.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="js/jquery.checkboxtree.js"></script><script type="text/javascript">
-					$(document).ready(function() {
-						$('#tree1').checkboxTree({
-							initializeChecked: 'expanded',
-							initializeUnchecked: 'collapsed',
-							collapseDuration: 50,
-							expandDuration: 100,
-							collapseImage: 'images/minus.png',
-							expandImage: 'images/plus.png',
-							onCheck: {
-								node: 'expand',
-								ancestors: 'checkIfFull',
-								descendants: 'check'
-							},
-							onUncheck: {
-								node: 'collapse',
-								ancestors: 'uncheck'
-							}
-						});
-						$('#tree2').checkboxTree({
-							initializeChecked: 'expanded',
-							initializeUnchecked: 'collapsed',
-							collapseDuration: 50,
-							expandDuration: 100,
-							collapseImage: 'images/minus.png',
-							expandImage: 'images/plus.png',
-							onCheck: {
-								node: 'expand',
-								ancestors: 'checkIfFull',
-								descendants: 'check'
-							},
-							onUncheck: {
-								node: 'collapse',
-								ancestors: 'uncheck'
-							}
-						});
-						$('#tree1-expandAll').click(function(){
-							$('#tree1').checkboxTree('expandAll');
-						});
-						$('#tree1-collapseAll').click(function(){
-							$('#tree1').checkboxTree('collapseAll');
-						});
-						$('#tree2-expandAll').click(function(){
-							$('#tree2').checkboxTree('expandAll');
-						});
-						$('#tree2-collapseAll').click(function(){
-							$('#tree2').checkboxTree('collapseAll');
-						});
-					});
-				</script></head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/reveal.css"><script type="text/javascript" src="js/jquery-1.4.4.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery.checkboxtree.js"></script><script type="text/javascript" src="js/jquery.reveal.js"></script><script type="text/javascript" src="js/jscript.js"></script></head>
    <body>
       <h1><br></h1>
-      				[<a href="../../index.jsp">Back Home</a>]
+      				[<a href="index.jsp">Back Home</a>]
       				
       <form action="getXml" method="post" class="inl">
          						[<a id="top3" target="_blank" href="EccoChangeSet_names.xml">Source XML</a>]
          					
-      </form><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp; [<a id="top1" href="javascript:;" onClick="showAll();">Show All</a> | 
-      				<a id="top2" href="javascript:;" onClick="hideAll();">Hide All</a>] <br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="d69b81df-df36-4dcf-b6f8-e1c7bca32854"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
+      </form><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp;
+      				[<a id="top1" href="javascript:;" onClick="showAll();$('#tree1').checkboxTree('expandAll');$('#tree2').checkboxTree('expandAll')">Show All</a> | 
+      				<a id="top2" href="javascript:;" onClick="hideAll();$('#tree1').checkboxTree('collapseAll');$('#tree2').checkboxTree('collapseAll');">Hide All</a>] 
+      				[<a id="genViewPerml" href="#" onclick="setPermalink();">Generate View Permalink</a>]
+      				
+      <div id="view-plink-modal" class="reveal-modal">
+         <h3>view-permalink</h3><textarea id="view-plink" rows="3" cols="60" readonly="true" style="resize: none;"></textarea><br>
+         					[<a href="javascript:;" onclick="select_all('view-plink');">Select all</a>]
+         					<a class="close-reveal-modal">x</a></div><br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="d69b81df-df36-4dcf-b6f8-e1c7bca32854"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
       <table width="70%" style="table-layout:fixed;">
          <tr>
             <th class="topright"><input type="checkbox" name="removals" onClick="toggleGroup('removals')">  
@@ -76,13 +36,13 @@
                   <li>  <input type="checkbox" name="effRemsTrigger" onClick="toggleChanges('effRems','effRemsTrigger')">  
                      <h4 style="display:inline;">Effectual (101)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, and are not entailed by Ontology 2');"><ul>
                         <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('weak','weakrt');">  <b>Weakenings (1)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are more constraining than existing axioms in Ontology 2');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('weak');">  <a href="#weak">With Shared Terms (1)</a></li>
+                              <li id="weaktrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('weak');">  <a href="#weak">With Shared Terms (1)</a></li>
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;With Retired Terms (0)
                               </li>
                            </ul>
                         </li>
                         <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('wkequiv','wkequivrt');">  <b>Modified Definitions (1)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Equivalence axioms that have been extended; if split into subsumptions then one was strengthened and the other weakened');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('wkequiv');">  <a href="#wkequiv">With Shared Terms (1)</a></li>
+                              <li id="wkequivtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('wkequiv');">  <a href="#wkequiv">With Shared Terms (1)</a></li>
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;With Retired Terms (0)
                               </li>
                            </ul>
@@ -90,7 +50,7 @@
                         <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Retired Descriptions (0)
                         </li>
                         <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('rem','remrt');">  <b>Pure Removals (99)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 2; typically related to hierachy changes');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('rem');">  <a href="#rem">With Shared Terms (99)</a></li>
+                              <li id="remtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('rem');">  <a href="#rem">With Shared Terms (99)</a></li>
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;With Retired Terms (0)
                               </li>
                            </ul>
@@ -102,7 +62,7 @@
                               </li>
                               <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst','rpsnovred');">  <b>Retired Prospective Redundancy (29)</b><b id="t1"></b>  
                                  <ul style="display:none">
-                                    <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst');">  <a href="#rst">Novel (29)</a></li>
+                                    <li id="rsttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst');">  <a href="#rst">Novel (29)</a></li>
                                     <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pseudo Novel (0)
                                     </li>
                                  </ul>
@@ -124,14 +84,14 @@
                         <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Strengthenings (0)
                         </li>
                         <li>  <input type="checkbox" name="effAdds" onClick="toggleDiv('stequiv','stequivnt');">  <b>Modified Definitions (2)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Equivalence axioms that have been extended; if split into subsumptions then one was strengthened and the other weakened');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('stequiv');">  <a href="#aed">With Shared Terms (1)</a></li>
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('stequivnt');">  <a href="#aednt">With New Terms (1)</a></li>
+                              <li id="stequivtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('stequiv');">  <a href="#aed">With Shared Terms (1)</a></li>
+                              <li id="stequivnttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('stequivnt');">  <a href="#aednt">With New Terms (1)</a></li>
                            </ul>
                         </li>
-                        <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('newdesc');">  <a href="#newdesc">New Descriptions (421)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing newly created terms, i.e., terms that did not exist in Ontology 1');"></li>
+                        <li id="newdesctrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('newdesc');">  <a href="#newdesc">New Descriptions (421)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing newly created terms, i.e., terms that did not exist in Ontology 1');"></li>
                         <li>  <input type="checkbox" name="effAdds" onClick="toggleDiv('add','addnt');">  <b>Pure Additions (120)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 1; typically related to hierachy changes');"><ul style="display:none">
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('add');">  <a href="#add">With Shared Terms (62)</a></li>
-                              <li><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('addnt');">  <a href="#addnt">With New Terms (58)</a></li>
+                              <li id="addtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('add');">  <a href="#add">With Shared Terms (62)</a></li>
+                              <li id="addnttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('addnt');">  <a href="#addnt">With New Terms (58)</a></li>
                            </ul>
                         </li>
                      </ul>
@@ -142,7 +102,7 @@
                               </li>
                               <li>  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak','apseudopred');">  <b>New Retrospective Redundancy (7)</b>  
                                  <ul style="display:none">
-                                    <li><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak');">  <a href="#aweak">Novel (7)</a></li>
+                                    <li id="aweaktrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak');">  <a href="#aweak">Novel (7)</a></li>
                                     <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pseudo Novel (0)
                                     </li>
                                  </ul>
@@ -179,7 +139,7 @@
          <tbody id="newdesc" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>New Descriptions (421) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">New Descriptions (421)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -2297,7 +2257,7 @@
          <tbody id="add" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Pure Additions with Shared Terms (62) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Pure Additions with Shared Terms (62)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -2619,7 +2579,7 @@
          
          <tbody id="addnt" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="add"></a><h4>Pure Additions with New Terms (58) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="add"></a><h4 style="display: inline-block;">Pure Additions with New Terms (58)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -2921,7 +2881,7 @@
          
          <tbody id="stequiv" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="aed"></a><h4>Modified Definitions with Shared Terms (1) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="aed"></a><h4 style="display: inline-block;">Modified Definitions with Shared Terms (1)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -2941,7 +2901,7 @@
          
          <tbody id="stequivnt" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="aednt"></a><h4>Modified Definitions with New Terms (1) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="aednt"></a><h4 style="display: inline-block;">Modified Definitions with New Terms (1)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -2972,7 +2932,7 @@
          <tbody id="aweak" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Retrospective Novel Redundant (7) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Retrospective Novel Redundant (7)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -2994,7 +2954,7 @@
             <tr class="addition">
                <td rowspan="1">545</td>
                <td><i>(1)</i>&nbsp; Cancer_Treatment<span class="subclass"> SubClassOf </span>Therapeutic_Procedure. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Electric_Field_Therapy<span class="subclass"> SubClassOf </span>Cancer_Treatment. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Electric_Field_Therapy<span class="subclass"> SubClassOf </span>Cancer_Treatment. <br></td>
                <td rowspan="1">Electric_Field_Therapy<span class="subclass"> SubClassOf </span>Therapeutic_Procedure. 
                </td>
             </tr>
@@ -3002,7 +2962,7 @@
             <tr class="addition">
                <td rowspan="1">546</td>
                <td><i>(1)</i>&nbsp; chronic_lymphoblastic_lymphoma<span class="subclass"> SubClassOf </span>Leukemia_Antiquated. <br><i>(2)</i>&nbsp; Leukemia_Antiquated<span class="subclass"> SubClassOf </span>Hematopoietic_and_Lymphoid_Neoplasms_Antiquated. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="1">chronic_lymphoblastic_lymphoma<span class="subclass"> SubClassOf </span>Hematopoietic_and_Lymphoid_Neoplasms_Antiquated. 
                </td>
             </tr>
@@ -3017,7 +2977,7 @@
             <tr class="addition">
                <td rowspan="1">548</td>
                <td><i>(1)</i>&nbsp; Human_Clinical_Study_Subject<span class="subclass"> SubClassOf </span>Human_Study_Subject. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Potential_Clinical_Study_Subject<span class="subclass"> SubClassOf </span>Human_Clinical_Study_Subject. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Potential_Clinical_Study_Subject<span class="subclass"> SubClassOf </span>Human_Clinical_Study_Subject. <br></td>
                <td rowspan="1">Potential_Clinical_Study_Subject<span class="subclass"> SubClassOf </span>Human_Study_Subject. 
                </td>
             </tr>
@@ -3025,7 +2985,7 @@
             <tr class="addition">
                <td rowspan="1">549</td>
                <td><i>(1)</i>&nbsp; Non-Neoplastic_Peripheral_Nervous_System_Disorder<span class="subclass"> SubClassOf </span>Peripheral_Nervous_System_Disorder. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Neuropathy<span class="subclass"> SubClassOf </span>Non-Neoplastic_Peripheral_Nervous_System_Disorder. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Neuropathy<span class="subclass"> SubClassOf </span>Non-Neoplastic_Peripheral_Nervous_System_Disorder. <br></td>
                <td rowspan="1">Neuropathy<span class="subclass"> SubClassOf </span>Peripheral_Nervous_System_Disorder. 
                </td>
             </tr>
@@ -3033,15 +2993,15 @@
             <tr class="addition">
                <td rowspan="2">550</td>
                <td><i>(1)</i>&nbsp; Regional_Chemotherapy<span class="subclass"> SubClassOf </span>Chemotherapy. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Intratumoral_Therapy<span class="subclass"> SubClassOf </span>Regional_Chemotherapy. <br><i>(3)</i>&nbsp; Chemotherapy<span class="subclass"> SubClassOf </span>Therapeutic_Procedure. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Intratumoral_Therapy<span class="subclass"> SubClassOf </span>Regional_Chemotherapy. <br><i>(3)</i>&nbsp; Chemotherapy<span class="subclass"> SubClassOf </span>Therapeutic_Procedure. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
                <td rowspan="2">Intratumoral_Therapy<span class="subclass"> SubClassOf </span>Therapeutic_Procedure. 
                </td>
             </tr>
             <tr class="addition">
                <td><i>(1)</i>&nbsp; Regional_Chemotherapy<span class="subclass"> SubClassOf </span>Local_Therapy. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Local_Therapy<span class="subclass"> SubClassOf </span>Therapeutic_Procedure. 
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Intratumoral_Therapy<span class="subclass"> SubClassOf </span>Regional_Chemotherapy. <br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Local_Therapy<span class="subclass"> SubClassOf </span>Therapeutic_Procedure. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Intratumoral_Therapy<span class="subclass"> SubClassOf </span>Regional_Chemotherapy. <br></td>
             </tr>
             
          </tbody>
@@ -3055,7 +3015,7 @@
          
          <tbody id="weak" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="weakening"></a><h4>Weakenings with Shared Terms (1) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="weakening"></a><h4 style="display: inline-block;">Weakenings with Shared Terms (1)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -3081,7 +3041,7 @@
          <tbody id="rem" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Pure Removals with Shared Terms (99) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Pure Removals with Shared Terms (99)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -3589,7 +3549,7 @@
          
          <tbody id="wkequiv" style="display:none">
             <tr class="withoutstyle">
-               <td colspan="3"><a name="redef"></a><h4>Modified Definitions with Shared Terms (1) <a href="#">[back to top]</a></h4>
+               <td colspan="3"><a name="redef"></a><h4 style="display: inline-block;">Modified Definitions with Shared Terms (1)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -3622,7 +3582,7 @@
          <tbody id="rst" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
-                  <h4>Prospective Novel Redundant (29) <a href="#">[back to top]</a></h4>
+                  <h4 style="display: inline-block;">Prospective Novel Redundant (29)</h4> [<a href="#">back to top</a>]
                </td>
             </tr>
             <tr>
@@ -3638,7 +3598,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Supportive_Care<span class="subclass"> SubClassOf </span>Therapeutic_Procedure. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Infection_Prophylaxis_and_Management<span class="subclass"> SubClassOf </span>Supportive_Care. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Infection_Prophylaxis_and_Management<span class="subclass"> SubClassOf </span>Supportive_Care. 
                   						<br></td>
             </tr>
             
@@ -3659,10 +3619,10 @@
                </td>
                <td><i>(1)</i>&nbsp; Supportive_Care<span class="subclass"> SubClassOf </span>Therapeutic_Procedure. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Hydration_Therapy<span class="subclass"> SubClassOf </span>Physiological_Support. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Hydration_Therapy<span class="subclass"> SubClassOf </span>Physiological_Support. 
                   						<br><i>(3)</i>&nbsp; Physiological_Support<span class="subclass"> SubClassOf </span>Supportive_Care. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -3692,7 +3652,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Biological_Therapy<span class="subclass"> SubClassOf </span>Therapeutic_Procedure. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Bacteriolytic_Therapy<span class="subclass"> SubClassOf </span>Biological_Therapy. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Bacteriolytic_Therapy<span class="subclass"> SubClassOf </span>Biological_Therapy. 
                   						<br></td>
             </tr>
             
@@ -3704,7 +3664,7 @@
                <td><i>(1)</i>&nbsp; Adult_Papillary_Meningioma<span class="subclass"> EquivalentTo </span>Adult_Grade_III_Meningioma<br><span class="keyword"> and </span>Papillary_Meningioma. 
                   						<br><i>(2)</i>&nbsp; Papillary_Meningioma<span class="subclass"> EquivalentTo </span>Grade_III_Meningioma<br><span class="keyword"> and </span>(Disease_Has_Finding<span class="some"> only </span>Perivascular_Arrangement_of_Tumor_Cells)<br><span class="keyword"> and </span>(Disease_Has_Finding<span class="some"> only </span>Pseudopapillary_Pattern). 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Adult_Grade_III_Meningioma<span class="subclass"> EquivalentTo </span>Adult_Meningioma<br><span class="keyword"> and </span>Grade_III_Meningioma. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Adult_Grade_III_Meningioma<span class="subclass"> EquivalentTo </span>Adult_Meningioma<br><span class="keyword"> and </span>Grade_III_Meningioma. 
                   						<br></td>
             </tr>
             
@@ -3746,7 +3706,7 @@
                <td><i>(1)</i>&nbsp; Adult_Grade_III_Meningioma<span class="subclass"> EquivalentTo </span>Adult_Meningioma<br><span class="keyword"> and </span>Grade_III_Meningioma. 
                   						<br><i>(2)</i>&nbsp; Anaplastic_Malignant_Meningioma<span class="subclass"> EquivalentTo </span>Anaplastic_Malignant_Neoplasm<br><span class="keyword"> and </span>Grade_III_Meningioma<br><span class="keyword"> and </span>Malignant_Neoplasms_of_the_Meninges<br><span class="keyword"> and </span>(Disease_May_Have_Finding<span class="some"> some </span>High_Mitotic_Activity)<br><span class="keyword"> and </span>(Disease_Has_Finding<span class="some"> only </span>Malignant_Cellular_Infiltrate). 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(3)</i>&nbsp; Adult_Anaplastic_Malignant_Meningioma<span class="subclass"> EquivalentTo </span>Adult_Grade_III_Meningioma<br><span class="keyword"> and </span>Anaplastic_Malignant_Meningioma. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; Adult_Anaplastic_Malignant_Meningioma<span class="subclass"> EquivalentTo </span>Adult_Grade_III_Meningioma<br><span class="keyword"> and </span>Anaplastic_Malignant_Meningioma. 
                   						<br></td>
             </tr>
             
@@ -3758,7 +3718,7 @@
                <td><i>(1)</i>&nbsp; HLA_Class_I_Histocompatibility_Antigen_Cw-1_Alpha_Chain_Protein<span class="subclass"> SubClassOf </span>MHC_Class-I_Protein. 
                   						<br><i>(2)</i>&nbsp; MHC_Class-I_Protein<span class="subclass"> SubClassOf </span>Immunoprotein. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -3769,7 +3729,7 @@
                <td><i>(1)</i>&nbsp; Hypercalcemia_Therapy<span class="subclass"> SubClassOf </span>Supportive_Care. 
                   						<br><i>(2)</i>&nbsp; Supportive_Care<span class="subclass"> SubClassOf </span>Therapeutic_Procedure. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -3780,7 +3740,7 @@
                <td><i>(1)</i>&nbsp; Chromosomal_Inversion<span class="subclass"> SubClassOf </span>Chromosomal_Rearrangement. 
                   						<br><i>(2)</i>&nbsp; Chromosomal_Rearrangement<span class="subclass"> SubClassOf </span>Structural_Chromosomal_Abnormality. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -3790,7 +3750,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Lesion_with_Diameter_of_4mm_or_More<span class="subclass"> SubClassOf </span>Lesion. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Lesion_with_Diameter_Greater_than_10mm<span class="subclass"> SubClassOf </span>Lesion_with_Diameter_of_4mm_or_More. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Lesion_with_Diameter_Greater_than_10mm<span class="subclass"> SubClassOf </span>Lesion_with_Diameter_of_4mm_or_More. 
                   						<br></td>
             </tr>
             
@@ -3802,7 +3762,7 @@
                <td><i>(1)</i>&nbsp; Recombinant_Viral_Vaccine_Therapy<span class="subclass"> SubClassOf </span>Biological_Therapy. 
                   						<br><i>(2)</i>&nbsp; Biological_Therapy<span class="subclass"> SubClassOf </span>Therapeutic_Procedure. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -3812,7 +3772,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Supportive_Care<span class="subclass"> SubClassOf </span>Therapeutic_Procedure. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Anticoagulation_Treatment<span class="subclass"> SubClassOf </span>Supportive_Care. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Anticoagulation_Treatment<span class="subclass"> SubClassOf </span>Supportive_Care. 
                   						<br></td>
             </tr>
             
@@ -3855,7 +3815,7 @@
                   						<br><i>(2)</i>&nbsp; Adult_Grade_II_Meningioma<span class="subclass"> EquivalentTo </span>Adult_Meningioma<br><span class="keyword"> and </span>Grade_II_Meningioma. 
                   						<br><i>(3)</i>&nbsp; Atypical_Meningioma<span class="subclass"> EquivalentTo </span>Grade_II_Meningioma<br><span class="keyword"> and </span>(Disease_May_Have_Abnormal_Cell<span class="some"> some </span>Small_Meningothelial_Cell)<br><span class="keyword"> and </span>(Disease_May_Have_Finding<span class="some"> some </span>Geographic_Necrosis)<br><span class="keyword"> and </span>(Disease_May_Have_Finding<span class="some"> some </span>High_Mitotic_Activity)<br><span class="keyword"> and </span>(Disease_May_Have_Finding<span class="some"> some </span>Increased_Cellularity_Present)<br><span class="keyword"> and </span>(Disease_May_Have_Finding<span class="some"> some </span>Sheet-Like_Growth_Pattern). 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -3865,7 +3825,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Unit_of_Length<span class="subclass"> SubClassOf </span>Unit_by_Category. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Inch_Unit_of_Length<span class="subclass"> SubClassOf </span>Unit_of_Length. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Inch_Unit_of_Length<span class="subclass"> SubClassOf </span>Unit_of_Length. 
                   						<br></td>
             </tr>
             
@@ -3876,7 +3836,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Certificate<span class="subclass"> SubClassOf </span>Document_Type. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Certificate_of_Confidentiality<span class="subclass"> SubClassOf </span>Certificate. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Certificate_of_Confidentiality<span class="subclass"> SubClassOf </span>Certificate. 
                   						<br></td>
             </tr>
             
@@ -3907,7 +3867,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Regional_Lymph_Node_Dissection<span class="subclass"> SubClassOf </span>Lymphadenectomy. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Inguinal_Lymphadenectomy<span class="subclass"> SubClassOf </span>Regional_Lymph_Node_Dissection. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Inguinal_Lymphadenectomy<span class="subclass"> SubClassOf </span>Regional_Lymph_Node_Dissection. 
                   						<br></td>
             </tr>
             
@@ -3919,7 +3879,7 @@
                <td><i>(1)</i>&nbsp; Connective_Tissue_Growth_Factor_Protein<span class="subclass"> SubClassOf </span>Growth_Factor. 
                   						<br><i>(2)</i>&nbsp; Growth_Factor<span class="subclass"> SubClassOf </span>Protein_Organized_by_Function. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
             <tr class="removal">
@@ -3929,7 +3889,7 @@
                </td>
                <td><i>(1)</i>&nbsp; Supportive_Care<span class="subclass"> SubClassOf </span>Therapeutic_Procedure. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Drug_Extravasation_Therapy<span class="subclass"> SubClassOf </span>Supportive_Care. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Drug_Extravasation_Therapy<span class="subclass"> SubClassOf </span>Supportive_Care. 
                   						<br></td>
             </tr>
             
@@ -3940,15 +3900,15 @@
                </td>
                <td><i>(1)</i>&nbsp; Spinal_Cord_Ependymoma<span class="subclass"> EquivalentTo </span>Ependymoma<br><span class="keyword"> and </span>Spinal_Cord_Glial_Neoplasm<br><span class="keyword"> and </span>(Disease_May_Have_Finding<span class="some"> some </span>Ependymal_Rosette_Formation)<br><span class="keyword"> and </span>(Disease_May_Have_Finding<span class="some"> some </span>Motor_Manifestations)<br><span class="keyword"> and </span>(Disease_May_Have_Finding<span class="some"> some </span>Perivascular_Pseudorosette_Formation)<br><span class="keyword"> and </span>(Disease_May_Have_Finding<span class="some"> some </span>Sensory_Manifestations)<br><span class="keyword"> and </span>(Disease_Has_Normal_Tissue_Origin<span class="some"> only </span>Remnants_of_the_Central_Canal_of_the_Spinal_Cord)<br><span class="keyword"> and </span>(Disease_Has_Primary_Anatomic_Site<span class="some"> only </span>Spinal_Cord). 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(2)</i>&nbsp; Adult_Spinal_Cord_Ependymoma<span class="subclass"> EquivalentTo </span>Adult_Ependymoma<br><span class="keyword"> and </span>Adult_Spinal_Cord_Neoplasm<br><span class="keyword"> and </span>Spinal_Cord_Ependymoma<br><span class="keyword"> and </span>(Disease_Has_Normal_Tissue_Origin<span class="some"> only </span>Remnants_of_the_Central_Canal_of_the_Spinal_Cord). 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Adult_Spinal_Cord_Ependymoma<span class="subclass"> EquivalentTo </span>Adult_Ependymoma<br><span class="keyword"> and </span>Adult_Spinal_Cord_Neoplasm<br><span class="keyword"> and </span>Spinal_Cord_Ependymoma<br><span class="keyword"> and </span>(Disease_Has_Normal_Tissue_Origin<span class="some"> only </span>Remnants_of_the_Central_Canal_of_the_Spinal_Cord). 
                   						<br><i>(3)</i>&nbsp; Adult_Ependymal_Tumor<span class="subclass"> EquivalentTo </span>Adult_Central_Nervous_System_Neoplasm<br><span class="keyword"> and </span>Ependymal_Tumor. 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(4)</i>&nbsp; Adult_Spinal_Cord_Neoplasm<span class="subclass"> EquivalentTo </span>Adult_Central_Nervous_System_Neoplasm<br><span class="keyword"> and </span>Spinal_Cord_Neoplasm. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(4)</i>&nbsp; Adult_Spinal_Cord_Neoplasm<span class="subclass"> EquivalentTo </span>Adult_Central_Nervous_System_Neoplasm<br><span class="keyword"> and </span>Spinal_Cord_Neoplasm. 
                   						<br><i>(5)</i>&nbsp; Spinal_Cord_Glial_Neoplasm<span class="subclass"> EquivalentTo </span>Neuroglial_Tumor<br><span class="keyword"> and </span>Spinal_Cord_Neoplasm<br><span class="keyword"> and </span>(Disease_Has_Primary_Anatomic_Site<span class="some"> only </span>Spinal_Cord). 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br><i>(6)</i>&nbsp; Adult_Ependymoma<span class="subclass"> EquivalentTo </span>Adult_Ependymal_Tumor<br><span class="keyword"> and </span>Ependymoma<br><span class="keyword"> and </span>(Disease_May_Have_Finding<span class="some"> some </span>Ependymal_Rosette_Formation)<br><span class="keyword"> and </span>(Disease_May_Have_Finding<span class="some"> some </span>Perivascular_Pseudorosette_Formation). 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(6)</i>&nbsp; Adult_Ependymoma<span class="subclass"> EquivalentTo </span>Adult_Ependymal_Tumor<br><span class="keyword"> and </span>Ependymoma<br><span class="keyword"> and </span>(Disease_May_Have_Finding<span class="some"> some </span>Ependymal_Rosette_Formation)<br><span class="keyword"> and </span>(Disease_May_Have_Finding<span class="some"> some </span>Perivascular_Pseudorosette_Formation). 
                   						
-                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[*]</sup></div><br></td>
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
             
          </tbody>
