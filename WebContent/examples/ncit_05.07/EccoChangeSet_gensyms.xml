@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root id="root" uuid="5c2dacfb-3de5-455a-8255-761a8f6819f0-gs">
+<root id="root" uuid="63679cb6-db45-45dc-94be-007ee7aa8e41-gs">
    <Additions id="adds" size="1017">
       <Effectual id="effadds" size="815">
          <Strengthening id="st" size="33">
@@ -5485,7 +5485,7 @@
                      <Axiom>ANN3 SubClassOf AQS5</Axiom>
                      <Source>
                         <Axiom effectual="true">ANN3 SubClassOf AAQ3</Axiom>
-                        <Axiom effectual="true">AAQ3 SubClassOf AQS5</Axiom>
+                        <Axiom ineffectual="true">AAQ3 SubClassOf AQS5</Axiom>
                      </Source>
                   </Change>
                   <Change id="1309">
@@ -5519,7 +5519,7 @@
                   <Change id="1334">
                      <Axiom>BLL2 SubClassOf LN6</Axiom>
                      <Source>
-                        <Axiom effectual="true">ANO9 SubClassOf LN6</Axiom>
+                        <Axiom ineffectual="true">ANO9 SubClassOf LN6</Axiom>
                         <Axiom effectual="true">BLL2 SubClassOf ANO9</Axiom>
                      </Source>
                   </Change>

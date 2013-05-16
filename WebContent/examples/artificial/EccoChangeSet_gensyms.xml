@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root id="root" uuid="7052f08e-e18f-4e01-a637-6d5d54236876-gs">
+<root id="root" uuid="87725294-3542-46ab-9185-2eea6823f466-gs">
    <Additions id="adds" size="7">
       <Effectual id="effadds" size="2">
          <Strengthening id="st" size="0"/>
@@ -26,8 +26,8 @@
                <Change id="3">
                   <Axiom>A7 SubClassOf A6 and A4</Axiom>
                   <Source>
-                     <Axiom effectual="true">A7 SubClassOf A4</Axiom>
-                     <Axiom effectual="true">A7 SubClassOf A6</Axiom>
+                     <Axiom ineffectual="true">A7 SubClassOf A4</Axiom>
+                     <Axiom ineffectual="true">A7 SubClassOf A6</Axiom>
                   </Source>
                </Change>
             </AddedCompleteRewrite>
@@ -38,25 +38,25 @@
                <Change id="4">
                   <Axiom>A1 SubClassOf A2 or B1</Axiom>
                   <Source>
-                     <Axiom effectual="true">A1 SubClassOf B1</Axiom>
+                     <Axiom ineffectual="true">A1 SubClassOf B1</Axiom>
                   </Source>
                </Change>
                <Change id="7">
                   <Axiom>A8 SubClassOf A9</Axiom>
                   <Source>
-                     <Axiom effectual="true">A9 EquivalentTo A8</Axiom>
+                     <Axiom ineffectual="true">A9 EquivalentTo A8</Axiom>
                   </Source>
                </Change>
                <Change id="5">
                   <Axiom>A9 SubClassOf A8</Axiom>
                   <Source>
-                     <Axiom effectual="true">A9 EquivalentTo A8</Axiom>
+                     <Axiom ineffectual="true">A9 EquivalentTo A8</Axiom>
                   </Source>
                </Change>
                <Change id="6">
                   <Axiom>A9 SubClassOf A8 or A6</Axiom>
                   <Source>
-                     <Axiom effectual="true">A9 EquivalentTo A8</Axiom>
+                     <Axiom ineffectual="true">A9 EquivalentTo A8</Axiom>
                   </Source>
                </Change>
             </AddedReshuffleProspectiveRedundancy>
@@ -66,7 +66,7 @@
                      <Axiom>A9 SubClassOf A8 or A6</Axiom>
                      <Source>
                         <Axiom effectual="true">A9 SubClassOf A7</Axiom>
-                        <Axiom effectual="true">A7 SubClassOf A6</Axiom>
+                        <Axiom ineffectual="true">A7 SubClassOf A6</Axiom>
                      </Source>
                      <Source>
                         <Axiom effectual="true">A9 SubClassOf A7</Axiom>
@@ -120,8 +120,8 @@
                <Change id="11">
                   <Axiom>A9 EquivalentTo A8</Axiom>
                   <Source>
-                     <Axiom effectual="true">A9 SubClassOf A8</Axiom>
-                     <Axiom effectual="true">A8 SubClassOf A9</Axiom>
+                     <Axiom ineffectual="true">A9 SubClassOf A8</Axiom>
+                     <Axiom ineffectual="true">A8 SubClassOf A9</Axiom>
                   </Source>
                </Change>
             </RemovedCompleteRewrite>
@@ -133,19 +133,19 @@
                   <Axiom>A1 SubClassOf B1</Axiom>
                   <Source>
                      <Axiom shared="true">A2 SubClassOf B1</Axiom>
-                     <Axiom effectual="true">A1 SubClassOf A2 or B1</Axiom>
+                     <Axiom ineffectual="true">A1 SubClassOf A2 or B1</Axiom>
                   </Source>
                </Change>
                <Change id="14">
                   <Axiom>A7 SubClassOf A4</Axiom>
                   <Source>
-                     <Axiom effectual="true">A7 SubClassOf A6 and A4</Axiom>
+                     <Axiom ineffectual="true">A7 SubClassOf A6 and A4</Axiom>
                   </Source>
                </Change>
                <Change id="13">
                   <Axiom>A7 SubClassOf A6</Axiom>
                   <Source>
-                     <Axiom effectual="true">A7 SubClassOf A6 and A4</Axiom>
+                     <Axiom ineffectual="true">A7 SubClassOf A6 and A4</Axiom>
                   </Source>
                </Change>
             </RemovedReshuffleProspectiveRedundancy>

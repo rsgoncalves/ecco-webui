@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root id="root" uuid="3a0fc056-6641-4805-afe4-1f31afd9aec8-lbl">
+<root id="root" uuid="3ee917de-f171-4f82-a1d4-35e828e559cb-lbl">
    <Additions id="adds" size="492">
       <Effectual id="effadds" size="472">
          <Strengthening id="st" size="4">
@@ -1890,7 +1890,7 @@
                <Change id="473">
                   <Axiom>Polyubiquitin-B EquivalentTo Ubiquitin and (Gene_Product_Encoded_By_Gene some UBB Gene) and (Gene_Product_Has_Biochemical_Function some Ubiquitin) and (Gene_Product_Is_Element_In_Pathway some Parkinson's Disease Pathway KEGG) and (Gene_Product_Plays_Role_In_Biological_Process some Cell Cycle Regulation Process) and (Gene_Product_Plays_Role_In_Biological_Process some Cellular Stress Response) and (Gene_Product_Plays_Role_In_Biological_Process some Chromatin Remodeling) and (Gene_Product_Plays_Role_In_Biological_Process some Gene Expression) and (Gene_Product_Plays_Role_In_Biological_Process some Protein Degradation Process)</Axiom>
                   <Source>
-                     <Axiom effectual="true">Polyubiquitin-B EquivalentTo Ubiquitin and (Gene_Product_Encoded_By_Gene some UBB Gene) and (Gene_Product_Has_Biochemical_Function some Ubiquitin) and (Gene_Product_Is_Element_In_Pathway some Parkinson's Disease Pathway KEGG) and (Gene_Product_Plays_Role_In_Biological_Process some Cellular Stress Response) and (Gene_Product_Plays_Role_In_Biological_Process some Chromatin Remodeling) and (Gene_Product_Plays_Role_In_Biological_Process some Gene Expression) and (Gene_Product_Plays_Role_In_Biological_Process some Protein Degradation Process)</Axiom>
+                     <Axiom ineffectual="true">Polyubiquitin-B EquivalentTo Ubiquitin and (Gene_Product_Encoded_By_Gene some UBB Gene) and (Gene_Product_Has_Biochemical_Function some Ubiquitin) and (Gene_Product_Is_Element_In_Pathway some Parkinson's Disease Pathway KEGG) and (Gene_Product_Plays_Role_In_Biological_Process some Cellular Stress Response) and (Gene_Product_Plays_Role_In_Biological_Process some Chromatin Remodeling) and (Gene_Product_Plays_Role_In_Biological_Process some Gene Expression) and (Gene_Product_Plays_Role_In_Biological_Process some Protein Degradation Process)</Axiom>
                      <Axiom shared="true">Ubiquitin SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Cell Cycle Regulation Process</Axiom>
                   </Source>
                </Change>
@@ -2351,7 +2351,7 @@
                <Change id="569">
                   <Axiom>Polyubiquitin-B EquivalentTo Ubiquitin and (Gene_Product_Encoded_By_Gene some UBB Gene) and (Gene_Product_Has_Biochemical_Function some Ubiquitin) and (Gene_Product_Is_Element_In_Pathway some Parkinson's Disease Pathway KEGG) and (Gene_Product_Plays_Role_In_Biological_Process some Cellular Stress Response) and (Gene_Product_Plays_Role_In_Biological_Process some Chromatin Remodeling) and (Gene_Product_Plays_Role_In_Biological_Process some Gene Expression) and (Gene_Product_Plays_Role_In_Biological_Process some Protein Degradation Process)</Axiom>
                   <Source>
-                     <Axiom effectual="true">Polyubiquitin-B EquivalentTo Ubiquitin and (Gene_Product_Encoded_By_Gene some UBB Gene) and (Gene_Product_Has_Biochemical_Function some Ubiquitin) and (Gene_Product_Is_Element_In_Pathway some Parkinson's Disease Pathway KEGG) and (Gene_Product_Plays_Role_In_Biological_Process some Cell Cycle Regulation Process) and (Gene_Product_Plays_Role_In_Biological_Process some Cellular Stress Response) and (Gene_Product_Plays_Role_In_Biological_Process some Chromatin Remodeling) and (Gene_Product_Plays_Role_In_Biological_Process some Gene Expression) and (Gene_Product_Plays_Role_In_Biological_Process some Protein Degradation Process)</Axiom>
+                     <Axiom ineffectual="true">Polyubiquitin-B EquivalentTo Ubiquitin and (Gene_Product_Encoded_By_Gene some UBB Gene) and (Gene_Product_Has_Biochemical_Function some Ubiquitin) and (Gene_Product_Is_Element_In_Pathway some Parkinson's Disease Pathway KEGG) and (Gene_Product_Plays_Role_In_Biological_Process some Cell Cycle Regulation Process) and (Gene_Product_Plays_Role_In_Biological_Process some Cellular Stress Response) and (Gene_Product_Plays_Role_In_Biological_Process some Chromatin Remodeling) and (Gene_Product_Plays_Role_In_Biological_Process some Gene Expression) and (Gene_Product_Plays_Role_In_Biological_Process some Protein Degradation Process)</Axiom>
                      <Axiom shared="true">Ubiquitin SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Cell Cycle Regulation Process</Axiom>
                   </Source>
                </Change>

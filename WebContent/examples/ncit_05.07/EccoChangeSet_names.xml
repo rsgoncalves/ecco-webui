@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root id="root" uuid="5c2dacfb-3de5-455a-8255-761a8f6819f0">
+<root id="root" uuid="63679cb6-db45-45dc-94be-007ee7aa8e41">
    <Additions id="adds" size="1017">
       <Effectual id="effadds" size="815">
          <Strengthening id="st" size="33">
@@ -5595,7 +5595,7 @@
                      <Axiom>Oropharyngeal_Route_of_Drug_Administration SubClassOf Drug_Route_of_Administration</Axiom>
                      <Source>
                         <Axiom effectual="true">Oropharyngeal_Route_of_Drug_Administration SubClassOf Oral_Route_of_Drug_administration</Axiom>
-                        <Axiom effectual="true">Oral_Route_of_Drug_administration SubClassOf Drug_Route_of_Administration</Axiom>
+                        <Axiom ineffectual="true">Oral_Route_of_Drug_administration SubClassOf Drug_Route_of_Administration</Axiom>
                      </Source>
                   </Change>
                   <Change id="1324">
@@ -5674,7 +5674,7 @@
                   <Change id="1334">
                      <Axiom>Supersack SubClassOf Drug_Packaging_Device</Axiom>
                      <Source>
-                        <Axiom effectual="true">Bag SubClassOf Drug_Packaging_Device</Axiom>
+                        <Axiom ineffectual="true">Bag SubClassOf Drug_Packaging_Device</Axiom>
                         <Axiom effectual="true">Supersack SubClassOf Bag</Axiom>
                      </Source>
                   </Change>

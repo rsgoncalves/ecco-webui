@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root id="root" uuid="5c2dacfb-3de5-455a-8255-761a8f6819f0-lbl">
+<root id="root" uuid="63679cb6-db45-45dc-94be-007ee7aa8e41-lbl">
    <Additions id="adds" size="1017">
       <Effectual id="effadds" size="815">
          <Strengthening id="st" size="33">
@@ -1708,7 +1708,7 @@
                <Axiom>Ratio Scale SubClassOf Scale</Axiom>
                <New_Terms>Ratio Scale</New_Terms>
             </Change>
-            <Change id="382">
+            <Change id="381">
                <Axiom>Repeat SubClassOf Clinical or Research Activity</Axiom>
                <New_Terms>Repeat</New_Terms>
             </Change>
@@ -5587,7 +5587,7 @@
                      <Axiom>Oropharyngeal Route of Administration SubClassOf Route of Administration</Axiom>
                      <Source>
                         <Axiom effectual="true">Oropharyngeal Route of Administration SubClassOf Oral Route of Administration</Axiom>
-                        <Axiom effectual="true">Oral Route of Administration SubClassOf Route of Administration</Axiom>
+                        <Axiom ineffectual="true">Oral Route of Administration SubClassOf Route of Administration</Axiom>
                      </Source>
                   </Change>
                   <Change id="1324">
@@ -5666,7 +5666,7 @@
                   <Change id="1334">
                      <Axiom>Supersack SubClassOf Drug Packaging Device</Axiom>
                      <Source>
-                        <Axiom effectual="true">Bag SubClassOf Drug Packaging Device</Axiom>
+                        <Axiom ineffectual="true">Bag SubClassOf Drug Packaging Device</Axiom>
                         <Axiom effectual="true">Supersack SubClassOf Bag</Axiom>
                      </Source>
                   </Change>
