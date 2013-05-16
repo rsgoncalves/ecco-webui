@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root id="root" uuid="5cd184a6-691c-4867-9356-131f50e64af2-lbl">
+<root id="root" uuid="7052f08e-e18f-4e01-a637-6d5d54236876-lbl">
    <Additions id="adds" size="7">
       <Effectual id="effadds" size="2">
          <Strengthening id="st" size="0"/>
@@ -26,8 +26,8 @@
                <Change id="3">
                   <Axiom>F SubClassOf G and I</Axiom>
                   <Source>
-                     <Axiom>F SubClassOf I</Axiom>
-                     <Axiom>F SubClassOf G</Axiom>
+                     <Axiom effectual="true">F SubClassOf I</Axiom>
+                     <Axiom effectual="true">F SubClassOf G</Axiom>
                   </Source>
                </Change>
             </AddedCompleteRewrite>
@@ -38,39 +38,39 @@
                <Change id="4">
                   <Axiom>A SubClassOf B or C</Axiom>
                   <Source>
-                     <Axiom>A SubClassOf C</Axiom>
+                     <Axiom effectual="true">A SubClassOf C</Axiom>
                   </Source>
                </Change>
                <Change id="5">
-                  <Axiom>D SubClassOf E or G</Axiom>
+                  <Axiom>D SubClassOf E</Axiom>
                   <Source>
-                     <Axiom>D EquivalentTo E</Axiom>
+                     <Axiom effectual="true">D EquivalentTo E</Axiom>
                   </Source>
                </Change>
                <Change id="6">
-                  <Axiom>E SubClassOf D</Axiom>
+                  <Axiom>D SubClassOf E or G</Axiom>
                   <Source>
-                     <Axiom>D EquivalentTo E</Axiom>
+                     <Axiom effectual="true">D EquivalentTo E</Axiom>
                   </Source>
                </Change>
                <Change id="7">
-                  <Axiom>D SubClassOf E</Axiom>
+                  <Axiom>E SubClassOf D</Axiom>
                   <Source>
-                     <Axiom>D EquivalentTo E</Axiom>
+                     <Axiom effectual="true">D EquivalentTo E</Axiom>
                   </Source>
                </Change>
             </AddedReshuffleProspectiveRedundancy>
             <AddedNewProspectiveRedundancy id="anpred" size="2">
                <AddedNovelProspectiveRedundancy id="weak" size="1">
-                  <Change id="5">
+                  <Change id="6">
                      <Axiom>D SubClassOf E or G</Axiom>
                      <Source>
-                        <Axiom>D SubClassOf F</Axiom>
-                        <Axiom>F SubClassOf G</Axiom>
+                        <Axiom effectual="true">D SubClassOf F</Axiom>
+                        <Axiom effectual="true">F SubClassOf G</Axiom>
                      </Source>
                      <Source>
-                        <Axiom>D SubClassOf F</Axiom>
-                        <Axiom>F SubClassOf G and I and J</Axiom>
+                        <Axiom effectual="true">D SubClassOf F</Axiom>
+                        <Axiom effectual="true">F SubClassOf G and I and J</Axiom>
                      </Source>
                   </Change>
                </AddedNovelProspectiveRedundancy>
@@ -78,7 +78,7 @@
                   <Change id="3">
                      <Axiom>F SubClassOf G and I</Axiom>
                      <Source>
-                        <Axiom>F SubClassOf G and I and J</Axiom>
+                        <Axiom effectual="true">F SubClassOf G and I and J</Axiom>
                      </Source>
                   </Change>
                </AddedPseudoNovelProspectiveRedundancy>
@@ -86,8 +86,8 @@
          </AddedProspectiveRedundancy>
       </Ineffectual>
    </Additions>
-   <Removals id="rems" size="6">
-      <Effectual id="effrems" size="2">
+   <Removals id="rems" size="7">
+      <Effectual id="effrems" size="3">
          <Weakening id="wk" size="0"/>
          <WeakeningWithRetiredTerms id="wkrt" size="1">
             <Change id="8">
@@ -98,9 +98,14 @@
                <Retired_Terms>J</Retired_Terms>
             </Change>
          </WeakeningWithRetiredTerms>
-         <RetiredDescription id="retdesc" size="0"/>
-         <PureRemoval id="prem" size="1">
+         <RetiredDescription id="retdesc" size="1">
             <Change id="9">
+               <Axiom>B EquivalentTo M and N</Axiom>
+               <Retired_Terms>N, M</Retired_Terms>
+            </Change>
+         </RetiredDescription>
+         <PureRemoval id="prem" size="1">
+            <Change id="10">
                <Axiom>D SubClassOf F</Axiom>
             </Change>
          </PureRemoval>
@@ -112,11 +117,11 @@
          <RemovedRedundancy id="rred" size="0"/>
          <RemovedRewrite id="rrws" size="1">
             <RemovedCompleteRewrite id="rrw" size="1">
-               <Change id="10">
+               <Change id="11">
                   <Axiom>D EquivalentTo E</Axiom>
                   <Source>
-                     <Axiom>D SubClassOf E</Axiom>
-                     <Axiom>E SubClassOf D</Axiom>
+                     <Axiom effectual="true">D SubClassOf E</Axiom>
+                     <Axiom effectual="true">E SubClassOf D</Axiom>
                   </Source>
                </Change>
             </RemovedCompleteRewrite>
@@ -124,32 +129,32 @@
          </RemovedRewrite>
          <RemovedProspectiveRedundancy id="rpred" size="3">
             <RemovedReshuffleProspectiveRedundancy id="ravred" size="3">
-               <Change id="11">
-                  <Axiom>F SubClassOf I</Axiom>
-                  <Source>
-                     <Axiom>F SubClassOf G and I</Axiom>
-                  </Source>
-               </Change>
                <Change id="12">
-                  <Axiom>F SubClassOf G</Axiom>
-                  <Source>
-                     <Axiom>F SubClassOf G and I</Axiom>
-                  </Source>
-               </Change>
-               <Change id="13">
                   <Axiom>A SubClassOf C</Axiom>
                   <Source>
                      <Axiom shared="true">B SubClassOf C</Axiom>
-                     <Axiom>A SubClassOf B or C</Axiom>
+                     <Axiom effectual="true">A SubClassOf B or C</Axiom>
+                  </Source>
+               </Change>
+               <Change id="13">
+                  <Axiom>F SubClassOf G</Axiom>
+                  <Source>
+                     <Axiom effectual="true">F SubClassOf G and I</Axiom>
+                  </Source>
+               </Change>
+               <Change id="14">
+                  <Axiom>F SubClassOf I</Axiom>
+                  <Source>
+                     <Axiom effectual="true">F SubClassOf G and I</Axiom>
                   </Source>
                </Change>
             </RemovedReshuffleProspectiveRedundancy>
             <RemovedNewProspectiveRedundancy id="rnpred" size="1">
                <RemovedNovelProspectiveRedundancy id="strength" size="1">
-                  <Change id="13">
+                  <Change id="12">
                      <Axiom>A SubClassOf C</Axiom>
                      <Source>
-                        <Axiom>A SubClassOf B</Axiom>
+                        <Axiom effectual="true">A SubClassOf B</Axiom>
                         <Axiom shared="true">B SubClassOf C</Axiom>
                      </Source>
                   </Change>

@@ -24,8 +24,12 @@
 				<form>
 					<select name="url">
 						<option value="examples/ncit_05.07/index_labels.html">NCI Thesaurus 05.07</option>
+						<option value="examples/ncit_06.04/index_labels.html">NCI Thesaurus 06.04</option>
 						<option value="examples/ncit_07.12/index_labels.html">NCI Thesaurus 07.12</option>
+						<option value="examples/ncit_12.03/index_labels.html">NCI Thesaurus 12.03</option>
 						<option value="examples/ncit_12.07/index_labels.html">NCI Thesaurus 12.07</option>
+						<option value="examples/ncit_13.01/index_labels.html">NCI Thesaurus 13.01</option>
+						<option value="examples/ncit_13.04/index_labels.html">NCI Thesaurus 13.04</option>
 						<option value="examples/artificial/index_labels.html">Artificial</option>
 						<option value="examples/tdiff/index_labels.html">Totally different</option>
 					</select> 

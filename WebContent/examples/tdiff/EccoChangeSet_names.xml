@@ -1,915 +1,915 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root id="root" uuid="865cd841-559b-4495-bec7-c291b76ec234">
+<root id="root" uuid="0e133f91-b836-4570-81f4-2b9a8690215b">
    <Additions id="adds" size="226">
       <Effectual id="effadds" size="226">
          <Strengthening id="st" size="0"/>
          <StrengtheningWithNewTerms id="stnt" size="0"/>
          <NewDescription id="newdesc" size="226">
             <Change id="1">
-               <Axiom>NonPhysicalObject SubClassOf Endurant</Axiom>
-               <New_Terms>Endurant, NonPhysicalObject</New_Terms>
+               <Axiom> Asymmetric: genericallyDependentOn</Axiom>
+               <New_Terms>genericallyDependentOn</New_Terms>
             </Change>
             <Change id="2">
-               <Axiom>Manual_Wheelchair SubClassOf assistsWith some LowerLimbMobility</Axiom>
-               <New_Terms>LowerLimbMobility, Manual_Wheelchair, assistsWith</New_Terms>
+               <Axiom> Reflexive: partof</Axiom>
+               <New_Terms>partof</New_Terms>
             </Change>
             <Change id="3">
-               <Axiom>IntellectualGrowth SubClassOf IntellectualAbility</Axiom>
-               <New_Terms>IntellectualAbility, IntellectualGrowth</New_Terms>
+               <Axiom> Transitive: partof</Axiom>
+               <New_Terms>partof</New_Terms>
             </Change>
             <Change id="4">
-               <Axiom>MultipleDisability EquivalentTo (MentalDisability or PhysicalDisability) and (affects min 2 Ability)</Axiom>
-               <New_Terms>MultipleDisability, affects, Ability, PhysicalDisability, MentalDisability</New_Terms>
+               <Axiom> Transitive: properpartof</Axiom>
+               <New_Terms>properpartof</New_Terms>
             </Change>
             <Change id="5">
-               <Axiom>PhysicalAbility SubClassOf Ability</Axiom>
-               <New_Terms>Ability, PhysicalAbility</New_Terms>
-            </Change>
-            <Change id="6">
-               <Axiom>Mobility SubClassOf Functionality</Axiom>
-               <New_Terms>Mobility, Functionality</New_Terms>
-            </Change>
-            <Change id="7">
-               <Axiom>Achondroplasia SubClassOf PhysicalDisability</Axiom>
-               <New_Terms>Achondroplasia, PhysicalDisability</New_Terms>
-            </Change>
-            <Change id="8">
-               <Axiom>DisabledPersonsOrganisation SubClassOf ServiceProvider</Axiom>
-               <New_Terms>ServiceProvider, DisabledPersonsOrganisation</New_Terms>
-            </Change>
-            <Change id="9">
-               <Axiom>TelephoneAid SubClassOf hasFunction only Telephone_Communication</Axiom>
-               <New_Terms>TelephoneAid, Telephone_Communication, hasFunction</New_Terms>
-            </Change>
-            <Change id="10">
-               <Axiom>Eye SubClassOf BodyPart</Axiom>
-               <New_Terms>BodyPart, Eye</New_Terms>
-            </Change>
-            <Change id="11">
-               <Axiom>BodyPart SubClassOf PhysicalObject</Axiom>
-               <New_Terms>BodyPart, PhysicalObject</New_Terms>
-            </Change>
-            <Change id="12">
-               <Axiom>FaceToFaceCommunicationDevice SubClassOf hasFunction only FaceToFace_Communication</Axiom>
-               <New_Terms>FaceToFace_Communication, FaceToFaceCommunicationDevice, hasFunction</New_Terms>
-            </Change>
-            <Change id="13">
-               <Axiom>SensoryAbility SubClassOf PhysicalAbility</Axiom>
-               <New_Terms>SensoryAbility, PhysicalAbility</New_Terms>
-            </Change>
-            <Change id="14">
-               <Axiom>Garden_Tool SubClassOf AssistiveDevice</Axiom>
-               <New_Terms>Garden_Tool, AssistiveDevice</New_Terms>
-            </Change>
-            <Change id="15">
-               <Axiom>hasFunction Range Functionality</Axiom>
-               <New_Terms>Functionality, hasFunction</New_Terms>
-            </Change>
-            <Change id="16">
-               <Axiom>ReadingDevice SubClassOf assistsWith only Read</Axiom>
-               <New_Terms>ReadingDevice, assistsWith, Read</New_Terms>
-            </Change>
-            <Change id="17">
-               <Axiom>Hard_of_hearing SubClassOf HearingDisability</Axiom>
-               <New_Terms>Hard_of_hearing, HearingDisability</New_Terms>
-            </Change>
-            <Change id="18">
-               <Axiom>Device SubClassOf hasFunction some Functionality</Axiom>
-               <New_Terms>Functionality, Device, hasFunction</New_Terms>
-            </Change>
-            <Change id="19">
                <Axiom>Ability DisjointWith Functionality</Axiom>
                <New_Terms>Ability, Functionality</New_Terms>
             </Change>
-            <Change id="20">
-               <Axiom>uses Domain Person</Axiom>
-               <New_Terms>Person, uses</New_Terms>
+            <Change id="6">
+               <Axiom>Ability SubClassOf Realizable</Axiom>
+               <New_Terms>Ability, Realizable</New_Terms>
             </Change>
-            <Change id="21">
-               <Axiom>WritingDevice SubClassOf assistsWith only Write</Axiom>
-               <New_Terms>assistsWith, WritingDevice, Write</New_Terms>
-            </Change>
-            <Change id="22">
-               <Axiom>Communication_Device SubClassOf assistsWith only CommunicationAbility</Axiom>
-               <New_Terms>Communication_Device, assistsWith, CommunicationAbility</New_Terms>
-            </Change>
-            <Change id="23">
-               <Axiom>LightweightFoldable_Wheelchair SubClassOf Foldable_Wheelchair</Axiom>
-               <New_Terms>Foldable_Wheelchair, LightweightFoldable_Wheelchair</New_Terms>
-            </Change>
-            <Change id="24">
-               <Axiom>Hard_of_hearing SubClassOf affects only Hear_partially</Axiom>
-               <New_Terms>affects, Hard_of_hearing, Hear_partially</New_Terms>
-            </Change>
-            <Change id="25">
-               <Axiom>Cochlear_Implant SubClassOf ReplacementDevice</Axiom>
-               <New_Terms>Cochlear_Implant, ReplacementDevice</New_Terms>
-            </Change>
-            <Change id="26">
-               <Axiom>Muscular_dystrophy SubClassOf Muscle_Impairment</Axiom>
-               <New_Terms>Muscle_Impairment, Muscular_dystrophy</New_Terms>
-            </Change>
-            <Change id="27">
-               <Axiom>Reach SubClassOf isAffectedBy only Nerve_Circuit_Impairment</Axiom>
-               <New_Terms>Nerve_Circuit_Impairment, Reach, isAffectedBy</New_Terms>
-            </Change>
-            <Change id="28">
-               <Axiom>Device SubClassOf PhysicalObject</Axiom>
-               <New_Terms>PhysicalObject, Device</New_Terms>
-            </Change>
-            <Change id="29">
-               <Axiom>Foldable_Wheelchair SubClassOf Manual_Wheelchair</Axiom>
-               <New_Terms>Manual_Wheelchair, Foldable_Wheelchair</New_Terms>
-            </Change>
-            <Change id="30">
-               <Axiom>TactileReading SubClassOf ReadingDevice</Axiom>
-               <New_Terms>TactileReading, ReadingDevice</New_Terms>
-            </Change>
-            <Change id="31">
-               <Axiom>Manual_Wheelchair SubClassOf Wheelchair</Axiom>
-               <New_Terms>Manual_Wheelchair, Wheelchair</New_Terms>
-            </Change>
-            <Change id="32">
-               <Axiom>LimbMobility SubClassOf MovementAbility</Axiom>
-               <New_Terms>LimbMobility, MovementAbility</New_Terms>
-            </Change>
-            <Change id="33">
-               <Axiom>TalkingReading SubClassOf ReadingDevice</Axiom>
-               <New_Terms>ReadingDevice, TalkingReading</New_Terms>
-            </Change>
-            <Change id="34">
-               <Axiom>ReplacementDevice SubClassOf Device</Axiom>
-               <New_Terms>ReplacementDevice, Device</New_Terms>
-            </Change>
-            <Change id="35">
-               <Axiom>UpperLimbMobility SubClassOf LimbMobility</Axiom>
-               <New_Terms>LimbMobility, UpperLimbMobility</New_Terms>
-            </Change>
-            <Change id="36">
-               <Axiom>Quadriplegia SubClassOf affects some UpperLimbMobility</Axiom>
-               <New_Terms>Quadriplegia, affects, UpperLimbMobility</New_Terms>
-            </Change>
-            <Change id="37">
-               <Axiom>assistsWith InverseOf isAssistedBy</Axiom>
-               <New_Terms>isAssistedBy, assistsWith</New_Terms>
-            </Change>
-            <Change id="38">
-               <Axiom>RomanLight_Wheelchair SubClassOf Lightweight_Wheelchair</Axiom>
-               <New_Terms>Lightweight_Wheelchair, RomanLight_Wheelchair</New_Terms>
-            </Change>
-            <Change id="39">
-               <Axiom>TalkingReading SubClassOf assistsWith only SightAbility</Axiom>
-               <New_Terms>assistsWith, TalkingReading, SightAbility</New_Terms>
-            </Change>
-            <Change id="40">
-               <Axiom>PacerLight_Wheelchair SubClassOf LightweightFoldable_Wheelchair</Axiom>
-               <New_Terms>PacerLight_Wheelchair, LightweightFoldable_Wheelchair</New_Terms>
-            </Change>
-            <Change id="41">
-               <Axiom>SpecificMentalAbility SubClassOf MentalAbility</Axiom>
-               <New_Terms>MentalAbility, SpecificMentalAbility</New_Terms>
-            </Change>
-            <Change id="42">
-               <Axiom>TactileReading SubClassOf assistsWith only SightAbility</Axiom>
-               <New_Terms>TactileReading, assistsWith, SightAbility</New_Terms>
-            </Change>
-            <Change id="43">
-               <Axiom>Training SubClassOf Functionality</Axiom>
-               <New_Terms>Training, Functionality</New_Terms>
-            </Change>
-            <Change id="44">
-               <Axiom>Learn SubClassOf isAffectedBy only Epilepsy</Axiom>
-               <New_Terms>Epilepsy, Learn, isAffectedBy</New_Terms>
-            </Change>
-            <Change id="45">
-               <Axiom>ReadingDevice SubClassOf requiresAbility only HearingAbility</Axiom>
-               <New_Terms>requiresAbility, ReadingDevice, HearingAbility</New_Terms>
-            </Change>
-            <Change id="46">
-               <Axiom>hasFunction Domain Device</Axiom>
-               <New_Terms>Device, hasFunction</New_Terms>
-            </Change>
-            <Change id="47">
-               <Axiom>Speak SubClassOf CommunicationAbility</Axiom>
-               <New_Terms>Speak, CommunicationAbility</New_Terms>
-            </Change>
-            <Change id="48">
-               <Axiom>Understanding SubClassOf IntellectualAbility</Axiom>
-               <New_Terms>IntellectualAbility, Understanding</New_Terms>
-            </Change>
-            <Change id="49">
-               <Axiom>MentalDisability DisjointWith PhysicalDisability</Axiom>
-               <New_Terms>PhysicalDisability, MentalDisability</New_Terms>
-            </Change>
-            <Change id="50">
-               <Axiom>Cerebral_palsy SubClassOf PhysicalDisability</Axiom>
-               <New_Terms>Cerebral_palsy, PhysicalDisability</New_Terms>
-            </Change>
-            <Change id="51">
-               <Axiom>Motorised_Wheelchair SubClassOf assistsWith some UpperLimbMobility</Axiom>
-               <New_Terms>assistsWith, UpperLimbMobility, Motorised_Wheelchair</New_Terms>
-            </Change>
-            <Change id="52">
-               <Axiom>Scoliosis SubClassOf Spine_Impairment</Axiom>
-               <New_Terms>Scoliosis, Spine_Impairment</New_Terms>
-            </Change>
-            <Change id="53">
-               <Axiom>isAffectedBy InverseOf affects</Axiom>
-               <New_Terms>affects, isAffectedBy</New_Terms>
-            </Change>
-            <Change id="54">
-               <Axiom>Learn SubClassOf SpecificMentalAbility</Axiom>
-               <New_Terms>Learn, SpecificMentalAbility</New_Terms>
-            </Change>
-            <Change id="55">
-               <Axiom>MentalDisability SubClassOf Disability</Axiom>
-               <New_Terms>Disability, MentalDisability</New_Terms>
-            </Change>
-            <Change id="56">
-               <Axiom>Cleaning SubClassOf Housekeeping</Axiom>
-               <New_Terms>Cleaning, Housekeeping</New_Terms>
-            </Change>
-            <Change id="57">
-               <Axiom>Cooking SubClassOf Housekeeping</Axiom>
-               <New_Terms>Housekeeping, Cooking</New_Terms>
-            </Change>
-            <Change id="58">
-               <Axiom>Reach SubClassOf MovementAbility</Axiom>
-               <New_Terms>MovementAbility, Reach</New_Terms>
-            </Change>
-            <Change id="59">
-               <Axiom>Autism SubClassOf affects only CommunicationAbility</Axiom>
-               <New_Terms>affects, Autism, CommunicationAbility</New_Terms>
-            </Change>
-            <Change id="60">
-               <Axiom>BrailleWritingDevice SubClassOf WritingDevice</Axiom>
-               <New_Terms>WritingDevice, BrailleWritingDevice</New_Terms>
-            </Change>
-            <Change id="61">
-               <Axiom>BatteryPowered_Wheelchair SubClassOf Motorised_Wheelchair</Axiom>
-               <New_Terms>BatteryPowered_Wheelchair, Motorised_Wheelchair</New_Terms>
-            </Change>
-            <Change id="62">
-               <Axiom>Recreation SubClassOf Functionality</Axiom>
-               <New_Terms>Recreation, Functionality</New_Terms>
-            </Change>
-            <Change id="63">
-               <Axiom>TelephoneAid SubClassOf assistsWith only 
-(Listen or Speak)</Axiom>
-               <New_Terms>Speak, assistsWith, TelephoneAid, Listen</New_Terms>
-            </Change>
-            <Change id="64">
-               <Axiom>Listen DisjointWith Write</Axiom>
-               <New_Terms>Write, Listen</New_Terms>
-            </Change>
-            <Change id="65">
-               <Axiom>Functionality SubClassOf Realizable</Axiom>
-               <New_Terms>Realizable, Functionality</New_Terms>
-            </Change>
-            <Change id="66">
-               <Axiom>Calculation SubClassOf SpecificMentalAbility</Axiom>
-               <New_Terms>Calculation, SpecificMentalAbility</New_Terms>
-            </Change>
-            <Change id="67">
-               <Axiom>WritingDevice SubClassOf Communication_Device</Axiom>
-               <New_Terms>Communication_Device, WritingDevice</New_Terms>
-            </Change>
-            <Change id="68">
-               <Axiom>HearingAbility SubClassOf isAffectedBy some HearingDisability</Axiom>
-               <New_Terms>isAffectedBy, HearingDisability, HearingAbility</New_Terms>
-            </Change>
-            <Change id="69">
-               <Axiom>BraillePillOrganiser SubClassOf TactileReading</Axiom>
-               <New_Terms>TactileReading, BraillePillOrganiser</New_Terms>
-            </Change>
-            <Change id="70">
-               <Axiom>Rehabilitation_Wheelchair SubClassOf Wheelchair</Axiom>
-               <New_Terms>Rehabilitation_Wheelchair, Wheelchair</New_Terms>
-            </Change>
-            <Change id="71">
-               <Axiom>Deaf SubClassOf affects only Hear</Axiom>
-               <New_Terms>affects, Deaf, Hear</New_Terms>
-            </Change>
-            <Change id="72">
-               <Axiom>IntellectualDisability SubClassOf MentalDisability</Axiom>
-               <New_Terms>IntellectualDisability, MentalDisability</New_Terms>
-            </Change>
-            <Change id="73">
-               <Axiom>Autism SubClassOf MentalDisability</Axiom>
-               <New_Terms>Autism, MentalDisability</New_Terms>
-            </Change>
-            <Change id="74">
-               <Axiom>Telephone_Communication SubClassOf Communication</Axiom>
-               <New_Terms>Communication, Telephone_Communication</New_Terms>
-            </Change>
-            <Change id="75">
-               <Axiom>EnvironmentalImprovement SubClassOf Functionality</Axiom>
-               <New_Terms>EnvironmentalImprovement, Functionality</New_Terms>
-            </Change>
-            <Change id="76">
-               <Axiom>VisualDisability SubClassOf PhysicalDisability</Axiom>
-               <New_Terms>VisualDisability, PhysicalDisability</New_Terms>
-            </Change>
-            <Change id="77">
-               <Axiom>Nerve_Circuit_Impairment SubClassOf PhysicalDisability</Axiom>
-               <New_Terms>Nerve_Circuit_Impairment, PhysicalDisability</New_Terms>
-            </Change>
-            <Change id="78">
-               <Axiom>Housekeeping SubClassOf EnvironmentalImprovement</Axiom>
-               <New_Terms>Housekeeping, EnvironmentalImprovement</New_Terms>
-            </Change>
-            <Change id="79">
+            <Change id="7">
                <Axiom>Ability SubClassOf isAffectedBy only Disability</Axiom>
                <New_Terms>Ability, Disability, isAffectedBy</New_Terms>
             </Change>
-            <Change id="80">
-               <Axiom>Lightweight_Wheelchair SubClassOf Manual_Wheelchair</Axiom>
-               <New_Terms>Lightweight_Wheelchair, Manual_Wheelchair</New_Terms>
+            <Change id="8">
+               <Axiom>Ability SubClassOf isAssistedBy only Device</Axiom>
+               <New_Terms>isAssistedBy, Ability, Device</New_Terms>
             </Change>
-            <Change id="81">
-               <Axiom>ReplacementDevice EquivalentTo Device and (assistsWith some PhysicalAbility) and (replaces some BodyPart)</Axiom>
-               <New_Terms>BodyPart, assistsWith, PhysicalAbility, replaces, ReplacementDevice, Device</New_Terms>
+            <Change id="9">
+               <Axiom>Achondroplasia SubClassOf PhysicalDisability</Axiom>
+               <New_Terms>Achondroplasia, PhysicalDisability</New_Terms>
             </Change>
-            <Change id="82">
-               <Axiom>Motorised_Wheelchair SubClassOf Wheelchair</Axiom>
-               <New_Terms>Wheelchair, Motorised_Wheelchair</New_Terms>
-            </Change>
-            <Change id="83">
-               <Axiom>HearingDisability SubClassOf PhysicalDisability</Axiom>
-               <New_Terms>HearingDisability, PhysicalDisability</New_Terms>
-            </Change>
-            <Change id="84">
-               <Axiom>ReadingDevice SubClassOf Communication_Device</Axiom>
-               <New_Terms>ReadingDevice, Communication_Device</New_Terms>
-            </Change>
-            <Change id="85">
-               <Axiom>Read DisjointWith Write</Axiom>
-               <New_Terms>Read, Write</New_Terms>
-            </Change>
-            <Change id="86">
-               <Axiom>Communication_Device SubClassOf AssistiveDevice</Axiom>
-               <New_Terms>AssistiveDevice, Communication_Device</New_Terms>
-            </Change>
-            <Change id="87">
-               <Axiom>Hear SubClassOf HearingAbility</Axiom>
-               <New_Terms>HearingAbility, Hear</New_Terms>
-            </Change>
-            <Change id="88">
-               <Axiom>Manual_Wheelchair SubClassOf not (assistsWith some UpperLimbMobility)</Axiom>
-               <New_Terms>Manual_Wheelchair, assistsWith, UpperLimbMobility</New_Terms>
-            </Change>
-            <Change id="89">
-               <Axiom>Hospital SubClassOf ServiceProvider</Axiom>
-               <New_Terms>Hospital, ServiceProvider</New_Terms>
-            </Change>
-            <Change id="90">
-               <Axiom>LimbMobility SubClassOf isAffectedBy only Nerve_Circuit_Impairment</Axiom>
-               <New_Terms>LimbMobility, Nerve_Circuit_Impairment, isAffectedBy</New_Terms>
-            </Change>
-            <Change id="91">
-               <Axiom>ListenDevice SubClassOf Communication_Device</Axiom>
-               <New_Terms>ListenDevice, Communication_Device</New_Terms>
-            </Change>
-            <Change id="92">
-               <Axiom>MovementAbility SubClassOf PhysicalAbility</Axiom>
-               <New_Terms>MovementAbility, PhysicalAbility</New_Terms>
-            </Change>
-            <Change id="93">
-               <Axiom>Garden_Tool SubClassOf hasFunction some Gardening</Axiom>
-               <New_Terms>Garden_Tool, Gardening, hasFunction</New_Terms>
-            </Change>
-            <Change id="94">
-               <Axiom>HomeFurnishing SubClassOf FurnishingImprovement</Axiom>
-               <New_Terms>HomeFurnishing, FurnishingImprovement</New_Terms>
-            </Change>
-            <Change id="95">
-               <Axiom>LowerLimbMobility SubClassOf isAssistedBy only Wheelchair</Axiom>
-               <New_Terms>isAssistedBy, LowerLimbMobility, Wheelchair</New_Terms>
-            </Change>
-            <Change id="96">
-               <Axiom>ObjectHandling SubClassOf EnvironmentalImprovement</Axiom>
-               <New_Terms>EnvironmentalImprovement, ObjectHandling</New_Terms>
-            </Change>
-            <Change id="97">
-               <Axiom>SightAbility SubClassOf SensoryAbility</Axiom>
-               <New_Terms>SensoryAbility, SightAbility</New_Terms>
-            </Change>
-            <Change id="98">
-               <Axiom>Language SubClassOf SpecificMentalAbility</Axiom>
-               <New_Terms>Language, SpecificMentalAbility</New_Terms>
-            </Change>
-            <Change id="99">
-               <Axiom>AssistiveDevice EquivalentTo Device and (ameliorates some Disability) and (assistsWith some Ability)</Axiom>
-               <New_Terms>ameliorates, AssistiveDevice, Ability, Disability, assistsWith, Device</New_Terms>
-            </Change>
-            <Change id="100">
-               <Axiom>Realizable SubClassOf genericallyDependentOn some PhysicalObject</Axiom>
-               <New_Terms>genericallyDependentOn, PhysicalObject, Realizable</New_Terms>
-            </Change>
-            <Change id="101">
-               <Axiom>Limb_Impairment SubClassOf Bodypart_Impairment</Axiom>
-               <New_Terms>Limb_Impairment, Bodypart_Impairment</New_Terms>
-            </Change>
-            <Change id="102">
-               <Axiom>IntellectualAbility SubClassOf GlobalMentalAbility</Axiom>
-               <New_Terms>IntellectualAbility, GlobalMentalAbility</New_Terms>
-            </Change>
-            <Change id="103">
-               <Axiom>PersonalCare SubClassOf Functionality</Axiom>
-               <New_Terms>PersonalCare, Functionality</New_Terms>
-            </Change>
-            <Change id="104">
-               <Axiom>NonPhysicalObject DisjointWith PhysicalObject</Axiom>
-               <New_Terms>PhysicalObject, NonPhysicalObject</New_Terms>
-            </Change>
-            <Change id="105">
-               <Axiom>Device DisjointWith Person</Axiom>
-               <New_Terms>Person, Device</New_Terms>
-            </Change>
-            <Change id="106">
-               <Axiom>HearingAbility SubClassOf SensoryAbility</Axiom>
-               <New_Terms>SensoryAbility, HearingAbility</New_Terms>
-            </Change>
-            <Change id="107">
-               <Axiom>Reach SubClassOf isAssistedBy only Garden_Tool</Axiom>
-               <New_Terms>isAssistedBy, Reach, Garden_Tool</New_Terms>
-            </Change>
-            <Change id="108">
-               <Axiom>SymbolBoard SubClassOf FaceToFaceCommunicationDevice</Axiom>
-               <New_Terms>SymbolBoard, FaceToFaceCommunicationDevice</New_Terms>
-            </Change>
-            <Change id="109">
-               <Axiom>WritingDevice SubClassOf hasFunction only Written_Communication</Axiom>
-               <New_Terms>Written_Communication, WritingDevice, hasFunction</New_Terms>
-            </Change>
-            <Change id="110">
-               <Axiom>SpeechDisability SubClassOf PhysicalDisability</Axiom>
-               <New_Terms>SpeechDisability, PhysicalDisability</New_Terms>
-            </Change>
-            <Change id="111">
-               <Axiom>Goniometer SubClassOf AssistiveDevice</Axiom>
-               <New_Terms>AssistiveDevice, Goniometer</New_Terms>
-            </Change>
-            <Change id="112">
-               <Axiom>BrailleAlarmClock SubClassOf TactileReading</Axiom>
-               <New_Terms>BrailleAlarmClock, TactileReading</New_Terms>
-            </Change>
-            <Change id="113">
-               <Axiom>Talking_Thermometer SubClassOf TalkingReading</Axiom>
-               <New_Terms>Talking_Thermometer, TalkingReading</New_Terms>
-            </Change>
-            <Change id="114">
-               <Axiom>AngleMeasurement SubClassOf EnvironmentalImprovement</Axiom>
-               <New_Terms>EnvironmentalImprovement, AngleMeasurement</New_Terms>
-            </Change>
-            <Change id="115">
-               <Axiom>OrientationAbility SubClassOf GlobalMentalAbility</Axiom>
-               <New_Terms>OrientationAbility, GlobalMentalAbility</New_Terms>
-            </Change>
-            <Change id="116">
-               <Axiom>Multiple_sclerosis SubClassOf Nerve_Circuit_Impairment</Axiom>
-               <New_Terms>Nerve_Circuit_Impairment, Multiple_sclerosis</New_Terms>
-            </Change>
-            <Change id="117">
-               <Axiom>Osteogensis_Imperfecta SubClassOf PhysicalDisability</Axiom>
-               <New_Terms>Osteogensis_Imperfecta, PhysicalDisability</New_Terms>
-            </Change>
-            <Change id="118">
-               <Axiom>Bending SubClassOf ObjectHandling</Axiom>
-               <New_Terms>Bending, ObjectHandling</New_Terms>
-            </Change>
-            <Change id="119">
-               <Axiom>CommunicationAbility SubClassOf Ability</Axiom>
-               <New_Terms>Ability, CommunicationAbility</New_Terms>
-            </Change>
-            <Change id="120">
-               <Axiom>Patriot SubClassOf soldBy min 1 Vendor</Axiom>
-               <New_Terms>soldBy, Vendor, Patriot</New_Terms>
-            </Change>
-            <Change id="121">
-               <Axiom>Hear_partially SubClassOf HearingAbility</Axiom>
-               <New_Terms>Hear_partially, HearingAbility</New_Terms>
-            </Change>
-            <Change id="122">
-               <Axiom>QuickieRXS_Wheelchair SubClassOf Lightweight_Wheelchair</Axiom>
-               <New_Terms>Lightweight_Wheelchair, QuickieRXS_Wheelchair</New_Terms>
-            </Change>
-            <Change id="123">
+            <Change id="10">
                <Axiom>AltoSelect_Wheelchair SubClassOf LightweightFoldable_Wheelchair</Axiom>
                <New_Terms>AltoSelect_Wheelchair, LightweightFoldable_Wheelchair</New_Terms>
             </Change>
-            <Change id="124">
-               <Axiom>Rehabilitation_Wheelchair SubClassOf hasFunction some MedicalTreatmentFacilitator</Axiom>
-               <New_Terms>MedicalTreatmentFacilitator, Rehabilitation_Wheelchair, hasFunction</New_Terms>
+            <Change id="11">
+               <Axiom>AltoSelect_Wheelchair SubClassOf soldBy some Vendor</Axiom>
+               <New_Terms>soldBy, AltoSelect_Wheelchair, Vendor</New_Terms>
             </Change>
-            <Change id="125">
-               <Axiom>Patriot SubClassOf Rehabilitation_Wheelchair</Axiom>
-               <New_Terms>Rehabilitation_Wheelchair, Patriot</New_Terms>
+            <Change id="12">
+               <Axiom>Amputation SubClassOf Limb_Impairment</Axiom>
+               <New_Terms>Limb_Impairment, Amputation</New_Terms>
             </Change>
-            <Change id="126">
+            <Change id="13">
+               <Axiom>AngleMeasurement SubClassOf EnvironmentalImprovement</Axiom>
+               <New_Terms>EnvironmentalImprovement, AngleMeasurement</New_Terms>
+            </Change>
+            <Change id="14">
+               <Axiom>AssistiveDevice EquivalentTo Device and (ameliorates some Disability) and (assistsWith some Ability)</Axiom>
+               <New_Terms>ameliorates, AssistiveDevice, Ability, Disability, assistsWith, Device</New_Terms>
+            </Change>
+            <Change id="15">
+               <Axiom>AssistiveDevice SubClassOf Device</Axiom>
+               <New_Terms>AssistiveDevice, Device</New_Terms>
+            </Change>
+            <Change id="16">
+               <Axiom>Autism SubClassOf MentalDisability</Axiom>
+               <New_Terms>Autism, MentalDisability</New_Terms>
+            </Change>
+            <Change id="17">
+               <Axiom>Autism SubClassOf affects only CommunicationAbility</Axiom>
+               <New_Terms>affects, Autism, CommunicationAbility</New_Terms>
+            </Change>
+            <Change id="18">
+               <Axiom>BatteryPowered_Wheelchair SubClassOf Motorised_Wheelchair</Axiom>
+               <New_Terms>BatteryPowered_Wheelchair, Motorised_Wheelchair</New_Terms>
+            </Change>
+            <Change id="19">
+               <Axiom>Bending SubClassOf ObjectHandling</Axiom>
+               <New_Terms>Bending, ObjectHandling</New_Terms>
+            </Change>
+            <Change id="20">
+               <Axiom>BodyPart SubClassOf PhysicalObject</Axiom>
+               <New_Terms>BodyPart, PhysicalObject</New_Terms>
+            </Change>
+            <Change id="21">
+               <Axiom>BodyPart SubClassOf properpartof only Person</Axiom>
+               <New_Terms>Person, BodyPart, properpartof</New_Terms>
+            </Change>
+            <Change id="22">
+               <Axiom>Bodypart_Impairment SubClassOf PhysicalDisability</Axiom>
+               <New_Terms>Bodypart_Impairment, PhysicalDisability</New_Terms>
+            </Change>
+            <Change id="23">
+               <Axiom>BrailleAlarmClock SubClassOf TactileReading</Axiom>
+               <New_Terms>BrailleAlarmClock, TactileReading</New_Terms>
+            </Change>
+            <Change id="24">
+               <Axiom>BraillePillOrganiser SubClassOf TactileReading</Axiom>
+               <New_Terms>TactileReading, BraillePillOrganiser</New_Terms>
+            </Change>
+            <Change id="25">
+               <Axiom>BrailleWatch SubClassOf TactileReading</Axiom>
+               <New_Terms>TactileReading, BrailleWatch</New_Terms>
+            </Change>
+            <Change id="26">
+               <Axiom>BrailleWritingDevice SubClassOf WritingDevice</Axiom>
+               <New_Terms>WritingDevice, BrailleWritingDevice</New_Terms>
+            </Change>
+            <Change id="27">
+               <Axiom>Calculation SubClassOf SpecificMentalAbility</Axiom>
+               <New_Terms>Calculation, SpecificMentalAbility</New_Terms>
+            </Change>
+            <Change id="28">
+               <Axiom>Cerebral_palsy SubClassOf PhysicalDisability</Axiom>
+               <New_Terms>Cerebral_palsy, PhysicalDisability</New_Terms>
+            </Change>
+            <Change id="29">
+               <Axiom>Cleaning SubClassOf Housekeeping</Axiom>
+               <New_Terms>Cleaning, Housekeeping</New_Terms>
+            </Change>
+            <Change id="30">
+               <Axiom>Cochlear_Implant SubClassOf ReplacementDevice</Axiom>
+               <New_Terms>Cochlear_Implant, ReplacementDevice</New_Terms>
+            </Change>
+            <Change id="31">
+               <Axiom>Communication SubClassOf Functionality</Axiom>
+               <New_Terms>Communication, Functionality</New_Terms>
+            </Change>
+            <Change id="32">
+               <Axiom>CommunicationAbility SubClassOf Ability</Axiom>
+               <New_Terms>Ability, CommunicationAbility</New_Terms>
+            </Change>
+            <Change id="33">
+               <Axiom>Communication_Device SubClassOf AssistiveDevice</Axiom>
+               <New_Terms>AssistiveDevice, Communication_Device</New_Terms>
+            </Change>
+            <Change id="34">
+               <Axiom>Communication_Device SubClassOf assistsWith only CommunicationAbility</Axiom>
+               <New_Terms>Communication_Device, assistsWith, CommunicationAbility</New_Terms>
+            </Change>
+            <Change id="35">
+               <Axiom>Communication_Device SubClassOf hasFunction only Communication</Axiom>
+               <New_Terms>Communication_Device, Communication, hasFunction</New_Terms>
+            </Change>
+            <Change id="36">
+               <Axiom>Cooking SubClassOf Housekeeping</Axiom>
+               <New_Terms>Housekeeping, Cooking</New_Terms>
+            </Change>
+            <Change id="37">
+               <Axiom>Cutting SubClassOf ObjectHandling</Axiom>
+               <New_Terms>Cutting, ObjectHandling</New_Terms>
+            </Change>
+            <Change id="38">
+               <Axiom>Deaf SubClassOf HearingDisability</Axiom>
+               <New_Terms>HearingDisability, Deaf</New_Terms>
+            </Change>
+            <Change id="39">
+               <Axiom>Deaf SubClassOf affects only Hear</Axiom>
+               <New_Terms>affects, Deaf, Hear</New_Terms>
+            </Change>
+            <Change id="40">
+               <Axiom>Device DisjointWith Person</Axiom>
+               <New_Terms>Person, Device</New_Terms>
+            </Change>
+            <Change id="41">
+               <Axiom>Device SubClassOf PhysicalObject</Axiom>
+               <New_Terms>PhysicalObject, Device</New_Terms>
+            </Change>
+            <Change id="42">
+               <Axiom>Device SubClassOf hasFunction some Functionality</Axiom>
+               <New_Terms>Functionality, Device, hasFunction</New_Terms>
+            </Change>
+            <Change id="43">
+               <Axiom>Device SubClassOf providedBy min 1 ServiceProvider</Axiom>
+               <New_Terms>ServiceProvider, Device, providedBy</New_Terms>
+            </Change>
+            <Change id="44">
+               <Axiom>Disability EquivalentTo affects some Ability</Axiom>
+               <New_Terms>affects, Ability, Disability</New_Terms>
+            </Change>
+            <Change id="45">
+               <Axiom>DisabledPersonsOrganisation SubClassOf ServiceProvider</Axiom>
+               <New_Terms>ServiceProvider, DisabledPersonsOrganisation</New_Terms>
+            </Change>
+            <Change id="46">
+               <Axiom>Dystonia SubClassOf Muscle_Impairment</Axiom>
+               <New_Terms>Muscle_Impairment, Dystonia</New_Terms>
+            </Change>
+            <Change id="47">
+               <Axiom>Endurant DisjointWith Perdurant</Axiom>
+               <New_Terms>Endurant, Perdurant</New_Terms>
+            </Change>
+            <Change id="48">
+               <Axiom>Endurant DisjointWith Realizable</Axiom>
+               <New_Terms>Realizable, Endurant</New_Terms>
+            </Change>
+            <Change id="49">
+               <Axiom>EnvironmentalImprovement SubClassOf Functionality</Axiom>
+               <New_Terms>EnvironmentalImprovement, Functionality</New_Terms>
+            </Change>
+            <Change id="50">
+               <Axiom>Epilepsy SubClassOf MentalDisability</Axiom>
+               <New_Terms>Epilepsy, MentalDisability</New_Terms>
+            </Change>
+            <Change id="51">
+               <Axiom>Epilepsy SubClassOf affects only Understanding</Axiom>
+               <New_Terms>Epilepsy, affects, Understanding</New_Terms>
+            </Change>
+            <Change id="52">
+               <Axiom>Eye SubClassOf BodyPart</Axiom>
+               <New_Terms>BodyPart, Eye</New_Terms>
+            </Change>
+            <Change id="53">
+               <Axiom>Eye SubClassOf realises only SightAbility</Axiom>
+               <New_Terms>Eye, realises, SightAbility</New_Terms>
+            </Change>
+            <Change id="54">
                <Axiom>FaceToFaceCommunicationDevice SubClassOf Communication_Device</Axiom>
                <New_Terms>Communication_Device, FaceToFaceCommunicationDevice</New_Terms>
             </Change>
+            <Change id="55">
+               <Axiom>FaceToFaceCommunicationDevice SubClassOf assistsWith only Speak</Axiom>
+               <New_Terms>Speak, assistsWith, FaceToFaceCommunicationDevice</New_Terms>
+            </Change>
+            <Change id="56">
+               <Axiom>FaceToFaceCommunicationDevice SubClassOf hasFunction only FaceToFace_Communication</Axiom>
+               <New_Terms>FaceToFace_Communication, FaceToFaceCommunicationDevice, hasFunction</New_Terms>
+            </Change>
+            <Change id="57">
+               <Axiom>FaceToFaceCommunicationSoftware SubClassOf FaceToFaceCommunicationDevice</Axiom>
+               <New_Terms>FaceToFaceCommunicationSoftware, FaceToFaceCommunicationDevice</New_Terms>
+            </Change>
+            <Change id="58">
+               <Axiom>FaceToFace_Communication DisjointWith SymbolBoard</Axiom>
+               <New_Terms>FaceToFace_Communication, SymbolBoard</New_Terms>
+            </Change>
+            <Change id="59">
+               <Axiom>FaceToFace_Communication DisjointWith Telephone_Communication</Axiom>
+               <New_Terms>FaceToFace_Communication, Telephone_Communication</New_Terms>
+            </Change>
+            <Change id="60">
+               <Axiom>FaceToFace_Communication SubClassOf Communication</Axiom>
+               <New_Terms>FaceToFace_Communication, Communication</New_Terms>
+            </Change>
+            <Change id="61">
+               <Axiom>Foldable_Wheelchair SubClassOf Manual_Wheelchair</Axiom>
+               <New_Terms>Manual_Wheelchair, Foldable_Wheelchair</New_Terms>
+            </Change>
+            <Change id="62">
+               <Axiom>Functionality SubClassOf Realizable</Axiom>
+               <New_Terms>Realizable, Functionality</New_Terms>
+            </Change>
+            <Change id="63">
+               <Axiom>FurnishingImprovement DisjointWith Housekeeping</Axiom>
+               <New_Terms>Housekeeping, FurnishingImprovement</New_Terms>
+            </Change>
+            <Change id="64">
+               <Axiom>FurnishingImprovement SubClassOf EnvironmentalImprovement</Axiom>
+               <New_Terms>EnvironmentalImprovement, FurnishingImprovement</New_Terms>
+            </Change>
+            <Change id="65">
+               <Axiom>Garden_Tool SubClassOf AssistiveDevice</Axiom>
+               <New_Terms>Garden_Tool, AssistiveDevice</New_Terms>
+            </Change>
+            <Change id="66">
+               <Axiom>Garden_Tool SubClassOf hasFunction some Gardening</Axiom>
+               <New_Terms>Garden_Tool, Gardening, hasFunction</New_Terms>
+            </Change>
+            <Change id="67">
+               <Axiom>Gardening SubClassOf Housekeeping</Axiom>
+               <New_Terms>Housekeeping, Gardening</New_Terms>
+            </Change>
+            <Change id="68">
+               <Axiom>GlobalMentalAbility SubClassOf MentalAbility</Axiom>
+               <New_Terms>GlobalMentalAbility, MentalAbility</New_Terms>
+            </Change>
+            <Change id="69">
+               <Axiom>Goniometer SubClassOf AssistiveDevice</Axiom>
+               <New_Terms>AssistiveDevice, Goniometer</New_Terms>
+            </Change>
+            <Change id="70">
+               <Axiom>Goniometer SubClassOf hasFunction some AngleMeasurement</Axiom>
+               <New_Terms>Goniometer, hasFunction, AngleMeasurement</New_Terms>
+            </Change>
+            <Change id="71">
+               <Axiom>Guillaume_Barre SubClassOf Nerve_Circuit_Impairment</Axiom>
+               <New_Terms>Nerve_Circuit_Impairment, Guillaume_Barre</New_Terms>
+            </Change>
+            <Change id="72">
+               <Axiom>Hard_of_hearing SubClassOf HearingDisability</Axiom>
+               <New_Terms>Hard_of_hearing, HearingDisability</New_Terms>
+            </Change>
+            <Change id="73">
+               <Axiom>Hard_of_hearing SubClassOf affects only Hear_partially</Axiom>
+               <New_Terms>affects, Hard_of_hearing, Hear_partially</New_Terms>
+            </Change>
+            <Change id="74">
+               <Axiom>Hear SubClassOf HearingAbility</Axiom>
+               <New_Terms>HearingAbility, Hear</New_Terms>
+            </Change>
+            <Change id="75">
+               <Axiom>Hear_partially SubClassOf HearingAbility</Axiom>
+               <New_Terms>Hear_partially, HearingAbility</New_Terms>
+            </Change>
+            <Change id="76">
+               <Axiom>HearingAbility SubClassOf SensoryAbility</Axiom>
+               <New_Terms>SensoryAbility, HearingAbility</New_Terms>
+            </Change>
+            <Change id="77">
+               <Axiom>HearingAbility SubClassOf isAffectedBy some HearingDisability</Axiom>
+               <New_Terms>isAffectedBy, HearingDisability, HearingAbility</New_Terms>
+            </Change>
+            <Change id="78">
+               <Axiom>HearingDisability DisjointWith VisualDisability</Axiom>
+               <New_Terms>VisualDisability, HearingDisability</New_Terms>
+            </Change>
+            <Change id="79">
+               <Axiom>HearingDisability SubClassOf PhysicalDisability</Axiom>
+               <New_Terms>HearingDisability, PhysicalDisability</New_Terms>
+            </Change>
+            <Change id="80">
+               <Axiom>Hemiplegia SubClassOf Nerve_Circuit_Impairment</Axiom>
+               <New_Terms>Nerve_Circuit_Impairment, Hemiplegia</New_Terms>
+            </Change>
+            <Change id="81">
+               <Axiom>Holding SubClassOf ObjectHandling</Axiom>
+               <New_Terms>Holding, ObjectHandling</New_Terms>
+            </Change>
+            <Change id="82">
+               <Axiom>HomeFurnishing SubClassOf FurnishingImprovement</Axiom>
+               <New_Terms>HomeFurnishing, FurnishingImprovement</New_Terms>
+            </Change>
+            <Change id="83">
+               <Axiom>Hospital SubClassOf ServiceProvider</Axiom>
+               <New_Terms>Hospital, ServiceProvider</New_Terms>
+            </Change>
+            <Change id="84">
+               <Axiom>Housekeeping SubClassOf EnvironmentalImprovement</Axiom>
+               <New_Terms>Housekeeping, EnvironmentalImprovement</New_Terms>
+            </Change>
+            <Change id="85">
+               <Axiom>IntellectualAbility SubClassOf GlobalMentalAbility</Axiom>
+               <New_Terms>IntellectualAbility, GlobalMentalAbility</New_Terms>
+            </Change>
+            <Change id="86">
+               <Axiom>IntellectualDisability SubClassOf MentalDisability</Axiom>
+               <New_Terms>IntellectualDisability, MentalDisability</New_Terms>
+            </Change>
+            <Change id="87">
+               <Axiom>IntellectualGrowth SubClassOf IntellectualAbility</Axiom>
+               <New_Terms>IntellectualAbility, IntellectualGrowth</New_Terms>
+            </Change>
+            <Change id="88">
+               <Axiom>Kyphosis SubClassOf Spine_Impairment</Axiom>
+               <New_Terms>Spine_Impairment, Kyphosis</New_Terms>
+            </Change>
+            <Change id="89">
+               <Axiom>Language SubClassOf SpecificMentalAbility</Axiom>
+               <New_Terms>Language, SpecificMentalAbility</New_Terms>
+            </Change>
+            <Change id="90">
+               <Axiom>Learn SubClassOf SpecificMentalAbility</Axiom>
+               <New_Terms>Learn, SpecificMentalAbility</New_Terms>
+            </Change>
+            <Change id="91">
+               <Axiom>Learn SubClassOf isAffectedBy only Autism</Axiom>
+               <New_Terms>Learn, isAffectedBy, Autism</New_Terms>
+            </Change>
+            <Change id="92">
+               <Axiom>Learn SubClassOf isAffectedBy only Epilepsy</Axiom>
+               <New_Terms>Epilepsy, Learn, isAffectedBy</New_Terms>
+            </Change>
+            <Change id="93">
+               <Axiom>LightweightFoldable_Wheelchair SubClassOf Foldable_Wheelchair</Axiom>
+               <New_Terms>Foldable_Wheelchair, LightweightFoldable_Wheelchair</New_Terms>
+            </Change>
+            <Change id="94">
+               <Axiom>LightweightFoldable_Wheelchair SubClassOf Lightweight_Wheelchair</Axiom>
+               <New_Terms>Lightweight_Wheelchair, LightweightFoldable_Wheelchair</New_Terms>
+            </Change>
+            <Change id="95">
+               <Axiom>Lightweight_Wheelchair SubClassOf Manual_Wheelchair</Axiom>
+               <New_Terms>Lightweight_Wheelchair, Manual_Wheelchair</New_Terms>
+            </Change>
+            <Change id="96">
+               <Axiom>Limb SubClassOf BodyPart</Axiom>
+               <New_Terms>BodyPart, Limb</New_Terms>
+            </Change>
+            <Change id="97">
+               <Axiom>LimbMobility SubClassOf MovementAbility</Axiom>
+               <New_Terms>LimbMobility, MovementAbility</New_Terms>
+            </Change>
+            <Change id="98">
+               <Axiom>LimbMobility SubClassOf isAffectedBy only Muscle_Impairment</Axiom>
+               <New_Terms>LimbMobility, isAffectedBy, Muscle_Impairment</New_Terms>
+            </Change>
+            <Change id="99">
+               <Axiom>LimbMobility SubClassOf isAffectedBy only Nerve_Circuit_Impairment</Axiom>
+               <New_Terms>LimbMobility, Nerve_Circuit_Impairment, isAffectedBy</New_Terms>
+            </Change>
+            <Change id="100">
+               <Axiom>Limb_Impairment SubClassOf Bodypart_Impairment</Axiom>
+               <New_Terms>Limb_Impairment, Bodypart_Impairment</New_Terms>
+            </Change>
+            <Change id="101">
+               <Axiom>Listen DisjointWith Read</Axiom>
+               <New_Terms>Read, Listen</New_Terms>
+            </Change>
+            <Change id="102">
+               <Axiom>Listen DisjointWith Speak</Axiom>
+               <New_Terms>Speak, Listen</New_Terms>
+            </Change>
+            <Change id="103">
+               <Axiom>Listen DisjointWith Write</Axiom>
+               <New_Terms>Write, Listen</New_Terms>
+            </Change>
+            <Change id="104">
+               <Axiom>Listen SubClassOf CommunicationAbility</Axiom>
+               <New_Terms>CommunicationAbility, Listen</New_Terms>
+            </Change>
+            <Change id="105">
+               <Axiom>ListenDevice SubClassOf Communication_Device</Axiom>
+               <New_Terms>ListenDevice, Communication_Device</New_Terms>
+            </Change>
+            <Change id="106">
+               <Axiom>LowerLimbMobility DisjointWith UpperLimbMobility</Axiom>
+               <New_Terms>LowerLimbMobility, UpperLimbMobility</New_Terms>
+            </Change>
+            <Change id="107">
+               <Axiom>LowerLimbMobility SubClassOf LimbMobility</Axiom>
+               <New_Terms>LimbMobility, LowerLimbMobility</New_Terms>
+            </Change>
+            <Change id="108">
+               <Axiom>LowerLimbMobility SubClassOf isAssistedBy only Wheelchair</Axiom>
+               <New_Terms>isAssistedBy, LowerLimbMobility, Wheelchair</New_Terms>
+            </Change>
+            <Change id="109">
+               <Axiom>Manual_Wheelchair DisjointWith Motorised_Wheelchair</Axiom>
+               <New_Terms>Manual_Wheelchair, Motorised_Wheelchair</New_Terms>
+            </Change>
+            <Change id="110">
+               <Axiom>Manual_Wheelchair SubClassOf Wheelchair</Axiom>
+               <New_Terms>Manual_Wheelchair, Wheelchair</New_Terms>
+            </Change>
+            <Change id="111">
+               <Axiom>Manual_Wheelchair SubClassOf assistsWith some LowerLimbMobility</Axiom>
+               <New_Terms>LowerLimbMobility, Manual_Wheelchair, assistsWith</New_Terms>
+            </Change>
+            <Change id="112">
+               <Axiom>Manual_Wheelchair SubClassOf not (assistsWith some UpperLimbMobility)</Axiom>
+               <New_Terms>Manual_Wheelchair, assistsWith, UpperLimbMobility</New_Terms>
+            </Change>
+            <Change id="113">
+               <Axiom>MedicalTreatmentFacilitator SubClassOf Functionality</Axiom>
+               <New_Terms>MedicalTreatmentFacilitator, Functionality</New_Terms>
+            </Change>
+            <Change id="114">
+               <Axiom>Memory SubClassOf SpecificMentalAbility</Axiom>
+               <New_Terms>Memory, SpecificMentalAbility</New_Terms>
+            </Change>
+            <Change id="115">
+               <Axiom>MentalAbility SubClassOf Ability</Axiom>
+               <New_Terms>Ability, MentalAbility</New_Terms>
+            </Change>
+            <Change id="116">
+               <Axiom>MentalDisability DisjointWith PhysicalDisability</Axiom>
+               <New_Terms>PhysicalDisability, MentalDisability</New_Terms>
+            </Change>
+            <Change id="117">
+               <Axiom>MentalDisability SubClassOf Disability</Axiom>
+               <New_Terms>Disability, MentalDisability</New_Terms>
+            </Change>
+            <Change id="118">
+               <Axiom>Mobility SubClassOf Functionality</Axiom>
+               <New_Terms>Mobility, Functionality</New_Terms>
+            </Change>
+            <Change id="119">
+               <Axiom>Motorised_Wheelchair SubClassOf Wheelchair</Axiom>
+               <New_Terms>Wheelchair, Motorised_Wheelchair</New_Terms>
+            </Change>
+            <Change id="120">
+               <Axiom>Motorised_Wheelchair SubClassOf assistsWith some UpperLimbMobility</Axiom>
+               <New_Terms>assistsWith, UpperLimbMobility, Motorised_Wheelchair</New_Terms>
+            </Change>
+            <Change id="121">
+               <Axiom>MovementAbility SubClassOf PhysicalAbility</Axiom>
+               <New_Terms>MovementAbility, PhysicalAbility</New_Terms>
+            </Change>
+            <Change id="122">
+               <Axiom>MultipleDisability EquivalentTo (MentalDisability or PhysicalDisability) and (affects min 2 Ability)</Axiom>
+               <New_Terms>MultipleDisability, affects, Ability, PhysicalDisability, MentalDisability</New_Terms>
+            </Change>
+            <Change id="123">
+               <Axiom>MultipleDisability SubClassOf Disability</Axiom>
+               <New_Terms>MultipleDisability, Disability</New_Terms>
+            </Change>
+            <Change id="124">
+               <Axiom>Multiple_sclerosis SubClassOf Nerve_Circuit_Impairment</Axiom>
+               <New_Terms>Nerve_Circuit_Impairment, Multiple_sclerosis</New_Terms>
+            </Change>
+            <Change id="125">
+               <Axiom>Muscle_Impairment SubClassOf Bodypart_Impairment</Axiom>
+               <New_Terms>Bodypart_Impairment, Muscle_Impairment</New_Terms>
+            </Change>
+            <Change id="126">
+               <Axiom>Muscular_dystrophy SubClassOf Muscle_Impairment</Axiom>
+               <New_Terms>Muscle_Impairment, Muscular_dystrophy</New_Terms>
+            </Change>
             <Change id="127">
-               <Axiom>providedBy Range ServiceProvider</Axiom>
-               <New_Terms>ServiceProvider, providedBy</New_Terms>
+               <Axiom>Nerve_Circuit_Impairment SubClassOf PhysicalDisability</Axiom>
+               <New_Terms>Nerve_Circuit_Impairment, PhysicalDisability</New_Terms>
             </Change>
             <Change id="128">
-               <Axiom>SpeechAbility SubClassOf SensoryAbility</Axiom>
-               <New_Terms>SpeechAbility, SensoryAbility</New_Terms>
+               <Axiom>NonPhysicalObject DisjointWith PhysicalObject</Axiom>
+               <New_Terms>PhysicalObject, NonPhysicalObject</New_Terms>
             </Change>
             <Change id="129">
-               <Axiom>Quadriplegia SubClassOf Nerve_Circuit_Impairment</Axiom>
-               <New_Terms>Quadriplegia, Nerve_Circuit_Impairment</New_Terms>
+               <Axiom>NonPhysicalObject SubClassOf Endurant</Axiom>
+               <New_Terms>Endurant, NonPhysicalObject</New_Terms>
             </Change>
             <Change id="130">
-               <Axiom>Paraplegia SubClassOf affects only LowerLimbMobility</Axiom>
-               <New_Terms>affects, Paraplegia, LowerLimbMobility</New_Terms>
+               <Axiom>ObjectHandling SubClassOf EnvironmentalImprovement</Axiom>
+               <New_Terms>EnvironmentalImprovement, ObjectHandling</New_Terms>
             </Change>
             <Change id="131">
+               <Axiom>OrientationAbility SubClassOf GlobalMentalAbility</Axiom>
+               <New_Terms>OrientationAbility, GlobalMentalAbility</New_Terms>
+            </Change>
+            <Change id="132">
+               <Axiom>Orthose SubClassOf AssistiveDevice</Axiom>
+               <New_Terms>Orthose, AssistiveDevice</New_Terms>
+            </Change>
+            <Change id="133">
+               <Axiom>Osteogensis_Imperfecta SubClassOf PhysicalDisability</Axiom>
+               <New_Terms>Osteogensis_Imperfecta, PhysicalDisability</New_Terms>
+            </Change>
+            <Change id="134">
+               <Axiom>PacerLight_Wheelchair SubClassOf LightweightFoldable_Wheelchair</Axiom>
+               <New_Terms>PacerLight_Wheelchair, LightweightFoldable_Wheelchair</New_Terms>
+            </Change>
+            <Change id="135">
                <Axiom>Paraplegia SubClassOf Nerve_Circuit_Impairment</Axiom>
                <New_Terms>Nerve_Circuit_Impairment, Paraplegia</New_Terms>
             </Change>
-            <Change id="132">
-               <Axiom>TactileReading SubClassOf ameliorates only VisualDisability</Axiom>
-               <New_Terms>ameliorates, TactileReading, VisualDisability</New_Terms>
+            <Change id="136">
+               <Axiom>Paraplegia SubClassOf affects only LowerLimbMobility</Axiom>
+               <New_Terms>affects, Paraplegia, LowerLimbMobility</New_Terms>
             </Change>
-            <Change id="133">
+            <Change id="137">
+               <Axiom>Patriot SubClassOf Rehabilitation_Wheelchair</Axiom>
+               <New_Terms>Rehabilitation_Wheelchair, Patriot</New_Terms>
+            </Change>
+            <Change id="138">
+               <Axiom>Patriot SubClassOf soldBy min 1 Vendor</Axiom>
+               <New_Terms>soldBy, Vendor, Patriot</New_Terms>
+            </Change>
+            <Change id="139">
+               <Axiom>Perdurant DisjointWith Realizable</Axiom>
+               <New_Terms>Realizable, Perdurant</New_Terms>
+            </Change>
+            <Change id="140">
+               <Axiom>Person SubClassOf PhysicalObject</Axiom>
+               <New_Terms>Person, PhysicalObject</New_Terms>
+            </Change>
+            <Change id="141">
+               <Axiom>Person SubClassOf uses only Device</Axiom>
+               <New_Terms>Person, uses, Device</New_Terms>
+            </Change>
+            <Change id="142">
+               <Axiom>PersonalCare SubClassOf Functionality</Axiom>
+               <New_Terms>PersonalCare, Functionality</New_Terms>
+            </Change>
+            <Change id="143">
+               <Axiom>PhysicalAbility SubClassOf Ability</Axiom>
+               <New_Terms>Ability, PhysicalAbility</New_Terms>
+            </Change>
+            <Change id="144">
+               <Axiom>PhysicalDisability SubClassOf Disability</Axiom>
+               <New_Terms>Disability, PhysicalDisability</New_Terms>
+            </Change>
+            <Change id="145">
                <Axiom>PhysicalObject SubClassOf Endurant</Axiom>
                <New_Terms>PhysicalObject, Endurant</New_Terms>
             </Change>
-            <Change id="134">
+            <Change id="146">
+               <Axiom>Plier SubClassOf AssistiveDevice</Axiom>
+               <New_Terms>AssistiveDevice, Plier</New_Terms>
+            </Change>
+            <Change id="147">
                <Axiom>Plier SubClassOf hasFunction some 
 (Bending or Cutting or Holding)</Axiom>
                <New_Terms>Holding, Cutting, Plier, Bending, hasFunction</New_Terms>
             </Change>
-            <Change id="135">
-               <Axiom>Written_Communication SubClassOf Communication</Axiom>
-               <New_Terms>Written_Communication, Communication</New_Terms>
-            </Change>
-            <Change id="136">
-               <Axiom>Wheelchair SubClassOf assistsWith only LimbMobility</Axiom>
-               <New_Terms>LimbMobility, assistsWith, Wheelchair</New_Terms>
-            </Change>
-            <Change id="137">
-               <Axiom>TactileReading SubClassOf requiresAbility only TactileAbility</Axiom>
-               <New_Terms>TactileAbility, requiresAbility, TactileReading</New_Terms>
-            </Change>
-            <Change id="138">
-               <Axiom>BrailleWatch SubClassOf TactileReading</Axiom>
-               <New_Terms>TactileReading, BrailleWatch</New_Terms>
-            </Change>
-            <Change id="139">
-               <Axiom>Epilepsy SubClassOf MentalDisability</Axiom>
-               <New_Terms>Epilepsy, MentalDisability</New_Terms>
-            </Change>
-            <Change id="140">
-               <Axiom>Amputation SubClassOf Limb_Impairment</Axiom>
-               <New_Terms>Limb_Impairment, Amputation</New_Terms>
-            </Change>
-            <Change id="141">
-               <Axiom>Communication_Device SubClassOf hasFunction only Communication</Axiom>
-               <New_Terms>Communication_Device, Communication, hasFunction</New_Terms>
-            </Change>
-            <Change id="142">
-               <Axiom>Listen DisjointWith Speak</Axiom>
-               <New_Terms>Speak, Listen</New_Terms>
-            </Change>
-            <Change id="143">
-               <Axiom>Bodypart_Impairment SubClassOf PhysicalDisability</Axiom>
-               <New_Terms>Bodypart_Impairment, PhysicalDisability</New_Terms>
-            </Change>
-            <Change id="144">
-               <Axiom>Deaf SubClassOf HearingDisability</Axiom>
-               <New_Terms>HearingDisability, Deaf</New_Terms>
-            </Change>
-            <Change id="145">
-               <Axiom>Manual_Wheelchair DisjointWith Motorised_Wheelchair</Axiom>
-               <New_Terms>Manual_Wheelchair, Motorised_Wheelchair</New_Terms>
-            </Change>
-            <Change id="146">
-               <Axiom>Disability EquivalentTo affects some Ability</Axiom>
-               <New_Terms>affects, Ability, Disability</New_Terms>
-            </Change>
-            <Change id="147">
-               <Axiom>Perdurant DisjointWith Realizable</Axiom>
-               <New_Terms>Realizable, Perdurant</New_Terms>
-            </Change>
             <Change id="148">
-               <Axiom>Touch SubClassOf TactileAbility</Axiom>
-               <New_Terms>TactileAbility, Touch</New_Terms>
+               <Axiom>Poliomyelitis SubClassOf Nerve_Circuit_Impairment</Axiom>
+               <New_Terms>Nerve_Circuit_Impairment, Poliomyelitis</New_Terms>
             </Change>
             <Change id="149">
-               <Axiom>Reach SubClassOf isAssistedBy only Plier</Axiom>
-               <New_Terms>isAssistedBy, Reach, Plier</New_Terms>
-            </Change>
-            <Change id="150">
-               <Axiom>BodyPart SubClassOf properpartof only Person</Axiom>
-               <New_Terms>Person, BodyPart, properpartof</New_Terms>
-            </Change>
-            <Change id="151">
-               <Axiom>FaceToFace_Communication DisjointWith SymbolBoard</Axiom>
-               <New_Terms>FaceToFace_Communication, SymbolBoard</New_Terms>
-            </Change>
-            <Change id="152">
-               <Axiom>Communication SubClassOf Functionality</Axiom>
-               <New_Terms>Communication, Functionality</New_Terms>
-            </Change>
-            <Change id="153">
-               <Axiom>LowerLimbMobility SubClassOf LimbMobility</Axiom>
-               <New_Terms>LimbMobility, LowerLimbMobility</New_Terms>
-            </Change>
-            <Change id="154">
-               <Axiom>Endurant DisjointWith Perdurant</Axiom>
-               <New_Terms>Endurant, Perdurant</New_Terms>
-            </Change>
-            <Change id="155">
-               <Axiom>Person SubClassOf PhysicalObject</Axiom>
-               <New_Terms>Person, PhysicalObject</New_Terms>
-            </Change>
-            <Change id="156">
-               <Axiom>MultipleDisability SubClassOf Disability</Axiom>
-               <New_Terms>MultipleDisability, Disability</New_Terms>
-            </Change>
-            <Change id="157">
-               <Axiom>See SubClassOf SightAbility</Axiom>
-               <New_Terms>See, SightAbility</New_Terms>
-            </Change>
-            <Change id="158">
-               <Axiom>FaceToFace_Communication DisjointWith Telephone_Communication</Axiom>
-               <New_Terms>FaceToFace_Communication, Telephone_Communication</New_Terms>
-            </Change>
-            <Change id="159">
-               <Axiom>Quadriplegia SubClassOf affects some LowerLimbMobility</Axiom>
-               <New_Terms>Quadriplegia, affects, LowerLimbMobility</New_Terms>
-            </Change>
-            <Change id="160">
-               <Axiom>Speak DisjointWith Write</Axiom>
-               <New_Terms>Speak, Write</New_Terms>
-            </Change>
-            <Change id="161">
-               <Axiom>Memory SubClassOf SpecificMentalAbility</Axiom>
-               <New_Terms>Memory, SpecificMentalAbility</New_Terms>
-            </Change>
-            <Change id="162">
-               <Axiom>FaceToFaceCommunicationSoftware SubClassOf FaceToFaceCommunicationDevice</Axiom>
-               <New_Terms>FaceToFaceCommunicationSoftware, FaceToFaceCommunicationDevice</New_Terms>
-            </Change>
-            <Change id="163">
-               <Axiom>AssistiveDevice SubClassOf Device</Axiom>
-               <New_Terms>AssistiveDevice, Device</New_Terms>
-            </Change>
-            <Change id="164">
-               <Axiom>Goniometer SubClassOf hasFunction some AngleMeasurement</Axiom>
-               <New_Terms>Goniometer, hasFunction, AngleMeasurement</New_Terms>
-            </Change>
-            <Change id="165">
-               <Axiom>MedicalTreatmentFacilitator SubClassOf Functionality</Axiom>
-               <New_Terms>MedicalTreatmentFacilitator, Functionality</New_Terms>
-            </Change>
-            <Change id="166">
-               <Axiom>Hemiplegia SubClassOf Nerve_Circuit_Impairment</Axiom>
-               <New_Terms>Nerve_Circuit_Impairment, Hemiplegia</New_Terms>
-            </Change>
-            <Change id="167">
-               <Axiom>TelephoneAid SubClassOf SpeechDevice</Axiom>
-               <New_Terms>TelephoneAid, SpeechDevice</New_Terms>
-            </Change>
-            <Change id="168">
-               <Axiom>Listen DisjointWith Read</Axiom>
-               <New_Terms>Read, Listen</New_Terms>
-            </Change>
-            <Change id="169">
-               <Axiom>Limb SubClassOf BodyPart</Axiom>
-               <New_Terms>BodyPart, Limb</New_Terms>
-            </Change>
-            <Change id="170">
-               <Axiom>Cutting SubClassOf ObjectHandling</Axiom>
-               <New_Terms>Cutting, ObjectHandling</New_Terms>
-            </Change>
-            <Change id="171">
-               <Axiom>MentalAbility SubClassOf Ability</Axiom>
-               <New_Terms>Ability, MentalAbility</New_Terms>
-            </Change>
-            <Change id="172">
-               <Axiom>properpartof SubPropertyOf partof</Axiom>
-               <New_Terms>partof, properpartof</New_Terms>
-            </Change>
-            <Change id="173">
-               <Axiom>GlobalMentalAbility SubClassOf MentalAbility</Axiom>
-               <New_Terms>GlobalMentalAbility, MentalAbility</New_Terms>
-            </Change>
-            <Change id="174">
-               <Axiom>Vendor SubClassOf ServiceProvider</Axiom>
-               <New_Terms>ServiceProvider, Vendor</New_Terms>
-            </Change>
-            <Change id="175">
-               <Axiom> Transitive: partof</Axiom>
-               <New_Terms>partof</New_Terms>
-            </Change>
-            <Change id="176">
-               <Axiom>soldBy InverseOf sells</Axiom>
-               <New_Terms>soldBy, sells</New_Terms>
-            </Change>
-            <Change id="177">
-               <Axiom>See_partially SubClassOf SightAbility</Axiom>
-               <New_Terms>See_partially, SightAbility</New_Terms>
-            </Change>
-            <Change id="178">
-               <Axiom>Dystonia SubClassOf Muscle_Impairment</Axiom>
-               <New_Terms>Muscle_Impairment, Dystonia</New_Terms>
-            </Change>
-            <Change id="179">
-               <Axiom>TactileAbility SubClassOf SensoryAbility</Axiom>
-               <New_Terms>TactileAbility, SensoryAbility</New_Terms>
-            </Change>
-            <Change id="180">
-               <Axiom>FurnishingImprovement SubClassOf EnvironmentalImprovement</Axiom>
-               <New_Terms>EnvironmentalImprovement, FurnishingImprovement</New_Terms>
-            </Change>
-            <Change id="181">
-               <Axiom>SensoryAbility SubClassOf properpartof only CommunicationAbility</Axiom>
-               <New_Terms>properpartof, SensoryAbility, CommunicationAbility</New_Terms>
-            </Change>
-            <Change id="182">
-               <Axiom>Epilepsy SubClassOf affects only Understanding</Axiom>
-               <New_Terms>Epilepsy, affects, Understanding</New_Terms>
-            </Change>
-            <Change id="183">
-               <Axiom> Asymmetric: genericallyDependentOn</Axiom>
-               <New_Terms>genericallyDependentOn</New_Terms>
-            </Change>
-            <Change id="184">
-               <Axiom>Holding SubClassOf ObjectHandling</Axiom>
-               <New_Terms>Holding, ObjectHandling</New_Terms>
-            </Change>
-            <Change id="185">
-               <Axiom>PhysicalDisability SubClassOf Disability</Axiom>
-               <New_Terms>Disability, PhysicalDisability</New_Terms>
-            </Change>
-            <Change id="186">
-               <Axiom>LightweightFoldable_Wheelchair SubClassOf Lightweight_Wheelchair</Axiom>
-               <New_Terms>Lightweight_Wheelchair, LightweightFoldable_Wheelchair</New_Terms>
-            </Change>
-            <Change id="187">
-               <Axiom>SpeechDevice SubClassOf Communication_Device</Axiom>
-               <New_Terms>Communication_Device, SpeechDevice</New_Terms>
-            </Change>
-            <Change id="188">
-               <Axiom>Spine_Impairment SubClassOf Bodypart_Impairment</Axiom>
-               <New_Terms>Spine_Impairment, Bodypart_Impairment</New_Terms>
-            </Change>
-            <Change id="189">
-               <Axiom>TelephoneAid SubClassOf ListenDevice</Axiom>
-               <New_Terms>ListenDevice, TelephoneAid</New_Terms>
-            </Change>
-            <Change id="190">
-               <Axiom>FaceToFace_Communication SubClassOf Communication</Axiom>
-               <New_Terms>FaceToFace_Communication, Communication</New_Terms>
-            </Change>
-            <Change id="191">
-               <Axiom>AltoSelect_Wheelchair SubClassOf soldBy some Vendor</Axiom>
-               <New_Terms>soldBy, AltoSelect_Wheelchair, Vendor</New_Terms>
-            </Change>
-            <Change id="192">
-               <Axiom>HearingDisability DisjointWith VisualDisability</Axiom>
-               <New_Terms>VisualDisability, HearingDisability</New_Terms>
-            </Change>
-            <Change id="193">
-               <Axiom>soldBy SubPropertyOf providedBy</Axiom>
-               <New_Terms>soldBy, providedBy</New_Terms>
-            </Change>
-            <Change id="194">
-               <Axiom>Muscle_Impairment SubClassOf Bodypart_Impairment</Axiom>
-               <New_Terms>Bodypart_Impairment, Muscle_Impairment</New_Terms>
-            </Change>
-            <Change id="195">
-               <Axiom>FurnishingImprovement DisjointWith Housekeeping</Axiom>
-               <New_Terms>Housekeeping, FurnishingImprovement</New_Terms>
-            </Change>
-            <Change id="196">
-               <Axiom>Person SubClassOf uses only Device</Axiom>
-               <New_Terms>Person, uses, Device</New_Terms>
-            </Change>
-            <Change id="197">
-               <Axiom>Spina_Bifida SubClassOf Spine_Impairment</Axiom>
-               <New_Terms>Spina_Bifida, Spine_Impairment</New_Terms>
-            </Change>
-            <Change id="198">
                <Axiom>Prothese SubClassOf ReplacementDevice</Axiom>
                <New_Terms>Prothese, ReplacementDevice</New_Terms>
             </Change>
-            <Change id="199">
-               <Axiom>WorkFurnishing SubClassOf FurnishingImprovement</Axiom>
-               <New_Terms>WorkFurnishing, FurnishingImprovement</New_Terms>
+            <Change id="150">
+               <Axiom>Quadriplegia SubClassOf Nerve_Circuit_Impairment</Axiom>
+               <New_Terms>Quadriplegia, Nerve_Circuit_Impairment</New_Terms>
             </Change>
-            <Change id="200">
-               <Axiom>Eye SubClassOf realises only SightAbility</Axiom>
-               <New_Terms>Eye, realises, SightAbility</New_Terms>
+            <Change id="151">
+               <Axiom>Quadriplegia SubClassOf affects some LowerLimbMobility</Axiom>
+               <New_Terms>Quadriplegia, affects, LowerLimbMobility</New_Terms>
             </Change>
-            <Change id="201">
-               <Axiom>ReadingDevice SubClassOf hasFunction only Written_Communication</Axiom>
-               <New_Terms>Written_Communication, ReadingDevice, hasFunction</New_Terms>
+            <Change id="152">
+               <Axiom>Quadriplegia SubClassOf affects some UpperLimbMobility</Axiom>
+               <New_Terms>Quadriplegia, affects, UpperLimbMobility</New_Terms>
             </Change>
-            <Change id="202">
-               <Axiom>Ability SubClassOf Realizable</Axiom>
-               <New_Terms>Ability, Realizable</New_Terms>
+            <Change id="153">
+               <Axiom>QuickieRXS_Wheelchair SubClassOf Lightweight_Wheelchair</Axiom>
+               <New_Terms>Lightweight_Wheelchair, QuickieRXS_Wheelchair</New_Terms>
             </Change>
-            <Change id="203">
-               <Axiom>Orthose SubClassOf AssistiveDevice</Axiom>
-               <New_Terms>Orthose, AssistiveDevice</New_Terms>
+            <Change id="154">
+               <Axiom>Reach SubClassOf MovementAbility</Axiom>
+               <New_Terms>MovementAbility, Reach</New_Terms>
             </Change>
-            <Change id="204">
-               <Axiom>Gardening SubClassOf Housekeeping</Axiom>
-               <New_Terms>Housekeeping, Gardening</New_Terms>
+            <Change id="155">
+               <Axiom>Reach SubClassOf isAffectedBy only Nerve_Circuit_Impairment</Axiom>
+               <New_Terms>Nerve_Circuit_Impairment, Reach, isAffectedBy</New_Terms>
             </Change>
-            <Change id="205">
-               <Axiom>Guillaume_Barre SubClassOf Nerve_Circuit_Impairment</Axiom>
-               <New_Terms>Nerve_Circuit_Impairment, Guillaume_Barre</New_Terms>
+            <Change id="156">
+               <Axiom>Reach SubClassOf isAssistedBy only Garden_Tool</Axiom>
+               <New_Terms>isAssistedBy, Reach, Garden_Tool</New_Terms>
             </Change>
-            <Change id="206">
+            <Change id="157">
+               <Axiom>Reach SubClassOf isAssistedBy only Plier</Axiom>
+               <New_Terms>isAssistedBy, Reach, Plier</New_Terms>
+            </Change>
+            <Change id="158">
                <Axiom>Read DisjointWith Speak</Axiom>
                <New_Terms>Speak, Read</New_Terms>
             </Change>
-            <Change id="207">
-               <Axiom>sells Domain Vendor</Axiom>
-               <New_Terms>Vendor, sells</New_Terms>
+            <Change id="159">
+               <Axiom>Read DisjointWith Write</Axiom>
+               <New_Terms>Read, Write</New_Terms>
             </Change>
-            <Change id="208">
-               <Axiom>ServiceProvider SubClassOf NonPhysicalObject</Axiom>
-               <New_Terms>ServiceProvider, NonPhysicalObject</New_Terms>
-            </Change>
-            <Change id="209">
-               <Axiom>LowerLimbMobility DisjointWith UpperLimbMobility</Axiom>
-               <New_Terms>LowerLimbMobility, UpperLimbMobility</New_Terms>
-            </Change>
-            <Change id="210">
-               <Axiom>SaturnAluLight_Wheelchair SubClassOf Lightweight_Wheelchair</Axiom>
-               <New_Terms>Lightweight_Wheelchair, SaturnAluLight_Wheelchair</New_Terms>
-            </Change>
-            <Change id="211">
-               <Axiom>Endurant DisjointWith Realizable</Axiom>
-               <New_Terms>Realizable, Endurant</New_Terms>
-            </Change>
-            <Change id="212">
-               <Axiom>Kyphosis SubClassOf Spine_Impairment</Axiom>
-               <New_Terms>Spine_Impairment, Kyphosis</New_Terms>
-            </Change>
-            <Change id="213">
-               <Axiom> Transitive: properpartof</Axiom>
-               <New_Terms>properpartof</New_Terms>
-            </Change>
-            <Change id="214">
-               <Axiom>LimbMobility SubClassOf isAffectedBy only Muscle_Impairment</Axiom>
-               <New_Terms>LimbMobility, isAffectedBy, Muscle_Impairment</New_Terms>
-            </Change>
-            <Change id="215">
-               <Axiom>Wheelchair SubClassOf AssistiveDevice</Axiom>
-               <New_Terms>AssistiveDevice, Wheelchair</New_Terms>
-            </Change>
-            <Change id="216">
-               <Axiom>Learn SubClassOf isAffectedBy only Autism</Axiom>
-               <New_Terms>Learn, isAffectedBy, Autism</New_Terms>
-            </Change>
-            <Change id="217">
-               <Axiom>Write SubClassOf CommunicationAbility</Axiom>
-               <New_Terms>Write, CommunicationAbility</New_Terms>
-            </Change>
-            <Change id="218">
-               <Axiom>Device SubClassOf providedBy min 1 ServiceProvider</Axiom>
-               <New_Terms>ServiceProvider, Device, providedBy</New_Terms>
-            </Change>
-            <Change id="219">
-               <Axiom>Plier SubClassOf AssistiveDevice</Axiom>
-               <New_Terms>AssistiveDevice, Plier</New_Terms>
-            </Change>
-            <Change id="220">
+            <Change id="160">
                <Axiom>Read SubClassOf CommunicationAbility</Axiom>
                <New_Terms>Read, CommunicationAbility</New_Terms>
             </Change>
+            <Change id="161">
+               <Axiom>ReadingDevice SubClassOf Communication_Device</Axiom>
+               <New_Terms>ReadingDevice, Communication_Device</New_Terms>
+            </Change>
+            <Change id="162">
+               <Axiom>ReadingDevice SubClassOf assistsWith only Read</Axiom>
+               <New_Terms>ReadingDevice, assistsWith, Read</New_Terms>
+            </Change>
+            <Change id="163">
+               <Axiom>ReadingDevice SubClassOf hasFunction only Written_Communication</Axiom>
+               <New_Terms>Written_Communication, ReadingDevice, hasFunction</New_Terms>
+            </Change>
+            <Change id="164">
+               <Axiom>ReadingDevice SubClassOf requiresAbility only HearingAbility</Axiom>
+               <New_Terms>requiresAbility, ReadingDevice, HearingAbility</New_Terms>
+            </Change>
+            <Change id="165">
+               <Axiom>Realizable SubClassOf genericallyDependentOn some PhysicalObject</Axiom>
+               <New_Terms>genericallyDependentOn, PhysicalObject, Realizable</New_Terms>
+            </Change>
+            <Change id="166">
+               <Axiom>Recreation SubClassOf Functionality</Axiom>
+               <New_Terms>Recreation, Functionality</New_Terms>
+            </Change>
+            <Change id="167">
+               <Axiom>Rehabilitation_Wheelchair SubClassOf Wheelchair</Axiom>
+               <New_Terms>Rehabilitation_Wheelchair, Wheelchair</New_Terms>
+            </Change>
+            <Change id="168">
+               <Axiom>Rehabilitation_Wheelchair SubClassOf hasFunction some MedicalTreatmentFacilitator</Axiom>
+               <New_Terms>MedicalTreatmentFacilitator, Rehabilitation_Wheelchair, hasFunction</New_Terms>
+            </Change>
+            <Change id="169">
+               <Axiom>ReplacementDevice EquivalentTo Device and (assistsWith some PhysicalAbility) and (replaces some BodyPart)</Axiom>
+               <New_Terms>BodyPart, assistsWith, PhysicalAbility, replaces, ReplacementDevice, Device</New_Terms>
+            </Change>
+            <Change id="170">
+               <Axiom>ReplacementDevice SubClassOf Device</Axiom>
+               <New_Terms>ReplacementDevice, Device</New_Terms>
+            </Change>
+            <Change id="171">
+               <Axiom>RomanLight_Wheelchair SubClassOf Lightweight_Wheelchair</Axiom>
+               <New_Terms>Lightweight_Wheelchair, RomanLight_Wheelchair</New_Terms>
+            </Change>
+            <Change id="172">
+               <Axiom>SaturnAluLight_Wheelchair SubClassOf Lightweight_Wheelchair</Axiom>
+               <New_Terms>Lightweight_Wheelchair, SaturnAluLight_Wheelchair</New_Terms>
+            </Change>
+            <Change id="173">
+               <Axiom>Scoliosis SubClassOf Spine_Impairment</Axiom>
+               <New_Terms>Scoliosis, Spine_Impairment</New_Terms>
+            </Change>
+            <Change id="174">
+               <Axiom>See SubClassOf SightAbility</Axiom>
+               <New_Terms>See, SightAbility</New_Terms>
+            </Change>
+            <Change id="175">
+               <Axiom>See_partially SubClassOf SightAbility</Axiom>
+               <New_Terms>See_partially, SightAbility</New_Terms>
+            </Change>
+            <Change id="176">
+               <Axiom>SensoryAbility SubClassOf PhysicalAbility</Axiom>
+               <New_Terms>SensoryAbility, PhysicalAbility</New_Terms>
+            </Change>
+            <Change id="177">
+               <Axiom>SensoryAbility SubClassOf properpartof only CommunicationAbility</Axiom>
+               <New_Terms>properpartof, SensoryAbility, CommunicationAbility</New_Terms>
+            </Change>
+            <Change id="178">
+               <Axiom>ServiceProvider SubClassOf NonPhysicalObject</Axiom>
+               <New_Terms>ServiceProvider, NonPhysicalObject</New_Terms>
+            </Change>
+            <Change id="179">
+               <Axiom>SightAbility SubClassOf SensoryAbility</Axiom>
+               <New_Terms>SensoryAbility, SightAbility</New_Terms>
+            </Change>
+            <Change id="180">
+               <Axiom>Speak DisjointWith Write</Axiom>
+               <New_Terms>Speak, Write</New_Terms>
+            </Change>
+            <Change id="181">
+               <Axiom>Speak SubClassOf CommunicationAbility</Axiom>
+               <New_Terms>Speak, CommunicationAbility</New_Terms>
+            </Change>
+            <Change id="182">
+               <Axiom>SpecificMentalAbility SubClassOf MentalAbility</Axiom>
+               <New_Terms>MentalAbility, SpecificMentalAbility</New_Terms>
+            </Change>
+            <Change id="183">
+               <Axiom>SpeechAbility SubClassOf SensoryAbility</Axiom>
+               <New_Terms>SpeechAbility, SensoryAbility</New_Terms>
+            </Change>
+            <Change id="184">
+               <Axiom>SpeechDevice SubClassOf Communication_Device</Axiom>
+               <New_Terms>Communication_Device, SpeechDevice</New_Terms>
+            </Change>
+            <Change id="185">
+               <Axiom>SpeechDisability SubClassOf PhysicalDisability</Axiom>
+               <New_Terms>SpeechDisability, PhysicalDisability</New_Terms>
+            </Change>
+            <Change id="186">
+               <Axiom>Spina_Bifida SubClassOf Spine_Impairment</Axiom>
+               <New_Terms>Spina_Bifida, Spine_Impairment</New_Terms>
+            </Change>
+            <Change id="187">
+               <Axiom>Spine_Impairment SubClassOf Bodypart_Impairment</Axiom>
+               <New_Terms>Spine_Impairment, Bodypart_Impairment</New_Terms>
+            </Change>
+            <Change id="188">
+               <Axiom>SymbolBoard SubClassOf FaceToFaceCommunicationDevice</Axiom>
+               <New_Terms>SymbolBoard, FaceToFaceCommunicationDevice</New_Terms>
+            </Change>
+            <Change id="189">
+               <Axiom>TactileAbility SubClassOf SensoryAbility</Axiom>
+               <New_Terms>TactileAbility, SensoryAbility</New_Terms>
+            </Change>
+            <Change id="190">
+               <Axiom>TactileReading SubClassOf ReadingDevice</Axiom>
+               <New_Terms>TactileReading, ReadingDevice</New_Terms>
+            </Change>
+            <Change id="191">
+               <Axiom>TactileReading SubClassOf ameliorates only VisualDisability</Axiom>
+               <New_Terms>ameliorates, TactileReading, VisualDisability</New_Terms>
+            </Change>
+            <Change id="192">
+               <Axiom>TactileReading SubClassOf assistsWith only SightAbility</Axiom>
+               <New_Terms>TactileReading, assistsWith, SightAbility</New_Terms>
+            </Change>
+            <Change id="193">
+               <Axiom>TactileReading SubClassOf requiresAbility only TactileAbility</Axiom>
+               <New_Terms>TactileAbility, requiresAbility, TactileReading</New_Terms>
+            </Change>
+            <Change id="194">
+               <Axiom>TalkingReading SubClassOf ReadingDevice</Axiom>
+               <New_Terms>ReadingDevice, TalkingReading</New_Terms>
+            </Change>
+            <Change id="195">
+               <Axiom>TalkingReading SubClassOf assistsWith only SightAbility</Axiom>
+               <New_Terms>assistsWith, TalkingReading, SightAbility</New_Terms>
+            </Change>
+            <Change id="196">
+               <Axiom>Talking_Thermometer SubClassOf TalkingReading</Axiom>
+               <New_Terms>Talking_Thermometer, TalkingReading</New_Terms>
+            </Change>
+            <Change id="197">
+               <Axiom>TelephoneAid SubClassOf ListenDevice</Axiom>
+               <New_Terms>ListenDevice, TelephoneAid</New_Terms>
+            </Change>
+            <Change id="198">
+               <Axiom>TelephoneAid SubClassOf SpeechDevice</Axiom>
+               <New_Terms>TelephoneAid, SpeechDevice</New_Terms>
+            </Change>
+            <Change id="199">
+               <Axiom>TelephoneAid SubClassOf assistsWith only 
+(Listen or Speak)</Axiom>
+               <New_Terms>Speak, assistsWith, TelephoneAid, Listen</New_Terms>
+            </Change>
+            <Change id="200">
+               <Axiom>TelephoneAid SubClassOf hasFunction only Telephone_Communication</Axiom>
+               <New_Terms>TelephoneAid, Telephone_Communication, hasFunction</New_Terms>
+            </Change>
+            <Change id="201">
+               <Axiom>Telephone_Communication SubClassOf Communication</Axiom>
+               <New_Terms>Communication, Telephone_Communication</New_Terms>
+            </Change>
+            <Change id="202">
+               <Axiom>Touch SubClassOf TactileAbility</Axiom>
+               <New_Terms>TactileAbility, Touch</New_Terms>
+            </Change>
+            <Change id="203">
+               <Axiom>Training SubClassOf Functionality</Axiom>
+               <New_Terms>Training, Functionality</New_Terms>
+            </Change>
+            <Change id="204">
+               <Axiom>Understanding SubClassOf IntellectualAbility</Axiom>
+               <New_Terms>IntellectualAbility, Understanding</New_Terms>
+            </Change>
+            <Change id="205">
+               <Axiom>UpperLimbMobility SubClassOf LimbMobility</Axiom>
+               <New_Terms>LimbMobility, UpperLimbMobility</New_Terms>
+            </Change>
+            <Change id="206">
+               <Axiom>Vendor SubClassOf ServiceProvider</Axiom>
+               <New_Terms>ServiceProvider, Vendor</New_Terms>
+            </Change>
+            <Change id="207">
+               <Axiom>VisualDisability SubClassOf PhysicalDisability</Axiom>
+               <New_Terms>VisualDisability, PhysicalDisability</New_Terms>
+            </Change>
+            <Change id="208">
+               <Axiom>Wheelchair SubClassOf AssistiveDevice</Axiom>
+               <New_Terms>AssistiveDevice, Wheelchair</New_Terms>
+            </Change>
+            <Change id="209">
+               <Axiom>Wheelchair SubClassOf assistsWith only LimbMobility</Axiom>
+               <New_Terms>LimbMobility, assistsWith, Wheelchair</New_Terms>
+            </Change>
+            <Change id="210">
+               <Axiom>WorkFurnishing SubClassOf FurnishingImprovement</Axiom>
+               <New_Terms>WorkFurnishing, FurnishingImprovement</New_Terms>
+            </Change>
+            <Change id="211">
+               <Axiom>Write SubClassOf CommunicationAbility</Axiom>
+               <New_Terms>Write, CommunicationAbility</New_Terms>
+            </Change>
+            <Change id="212">
+               <Axiom>WritingDevice SubClassOf Communication_Device</Axiom>
+               <New_Terms>Communication_Device, WritingDevice</New_Terms>
+            </Change>
+            <Change id="213">
+               <Axiom>WritingDevice SubClassOf assistsWith only Write</Axiom>
+               <New_Terms>assistsWith, WritingDevice, Write</New_Terms>
+            </Change>
+            <Change id="214">
+               <Axiom>WritingDevice SubClassOf hasFunction only Written_Communication</Axiom>
+               <New_Terms>Written_Communication, WritingDevice, hasFunction</New_Terms>
+            </Change>
+            <Change id="215">
+               <Axiom>Written_Communication SubClassOf Communication</Axiom>
+               <New_Terms>Written_Communication, Communication</New_Terms>
+            </Change>
+            <Change id="216">
+               <Axiom>assistsWith InverseOf isAssistedBy</Axiom>
+               <New_Terms>isAssistedBy, assistsWith</New_Terms>
+            </Change>
+            <Change id="217">
+               <Axiom>hasFunction Domain Device</Axiom>
+               <New_Terms>Device, hasFunction</New_Terms>
+            </Change>
+            <Change id="218">
+               <Axiom>hasFunction Range Functionality</Axiom>
+               <New_Terms>Functionality, hasFunction</New_Terms>
+            </Change>
+            <Change id="219">
+               <Axiom>isAffectedBy InverseOf affects</Axiom>
+               <New_Terms>affects, isAffectedBy</New_Terms>
+            </Change>
+            <Change id="220">
+               <Axiom>properpartof SubPropertyOf partof</Axiom>
+               <New_Terms>partof, properpartof</New_Terms>
+            </Change>
             <Change id="221">
-               <Axiom>uses Range Device</Axiom>
-               <New_Terms>uses, Device</New_Terms>
+               <Axiom>providedBy Range ServiceProvider</Axiom>
+               <New_Terms>ServiceProvider, providedBy</New_Terms>
             </Change>
             <Change id="222">
-               <Axiom>FaceToFaceCommunicationDevice SubClassOf assistsWith only Speak</Axiom>
-               <New_Terms>Speak, assistsWith, FaceToFaceCommunicationDevice</New_Terms>
+               <Axiom>sells Domain Vendor</Axiom>
+               <New_Terms>Vendor, sells</New_Terms>
             </Change>
             <Change id="223">
-               <Axiom>Ability SubClassOf isAssistedBy only Device</Axiom>
-               <New_Terms>isAssistedBy, Ability, Device</New_Terms>
+               <Axiom>soldBy InverseOf sells</Axiom>
+               <New_Terms>soldBy, sells</New_Terms>
             </Change>
             <Change id="224">
-               <Axiom> Reflexive: partof</Axiom>
-               <New_Terms>partof</New_Terms>
+               <Axiom>soldBy SubPropertyOf providedBy</Axiom>
+               <New_Terms>soldBy, providedBy</New_Terms>
             </Change>
             <Change id="225">
-               <Axiom>Listen SubClassOf CommunicationAbility</Axiom>
-               <New_Terms>CommunicationAbility, Listen</New_Terms>
+               <Axiom>uses Domain Person</Axiom>
+               <New_Terms>Person, uses</New_Terms>
             </Change>
             <Change id="226">
-               <Axiom>Poliomyelitis SubClassOf Nerve_Circuit_Impairment</Axiom>
-               <New_Terms>Nerve_Circuit_Impairment, Poliomyelitis</New_Terms>
+               <Axiom>uses Range Device</Axiom>
+               <New_Terms>uses, Device</New_Terms>
             </Change>
          </NewDescription>
          <PureAddition id="padd" size="0"/>
@@ -932,293 +932,950 @@
          </AddedProspectiveRedundancy>
       </Ineffectual>
    </Additions>
-   <Removals id="rems" size="70">
-      <Effectual id="effrems" size="70">
+   <Removals id="rems" size="235">
+      <Effectual id="effrems" size="235">
          <Weakening id="wk" size="0"/>
          <WeakeningWithRetiredTerms id="wkrt" size="0"/>
-         <RetiredDescription id="retdesc" size="70">
+         <RetiredDescription id="retdesc" size="235">
             <Change id="227">
-               <Axiom>haulage_worker EquivalentTo works_for some 
-(haulage_company or (part_of some haulage_company))</Axiom>
-               <Retired_Terms>haulage_company, part_of, haulage_worker, works_for</Retired_Terms>
+               <Axiom>Category SubClassOf super_category exactly 1 Thing</Axiom>
+               <Retired_Terms>Category, super_category</Retired_Terms>
             </Change>
             <Change id="228">
-               <Axiom>dog_owner EquivalentTo person and (has_pet some dog)</Axiom>
-               <Retired_Terms>dog_owner, person, has_pet, dog</Retired_Terms>
+               <Axiom>Developer SubClassOf Member</Axiom>
+               <Retired_Terms>Developer, Member</Retired_Terms>
             </Change>
             <Change id="229">
-               <Axiom>pet_owner EquivalentTo person and (has_pet some animal)</Axiom>
-               <Retired_Terms>animal, person, has_pet, pet_owner</Retired_Terms>
+               <Axiom>Discussion SubClassOf Message</Axiom>
+               <Retired_Terms>Message, Discussion</Retired_Terms>
             </Change>
             <Change id="230">
-               <Axiom>has_pet Range animal</Axiom>
-               <Retired_Terms>animal, has_pet</Retired_Terms>
+               <Axiom>Foundry_member SubClassOf foundry_member_link exactly 1 Literal</Axiom>
+               <Retired_Terms>foundry_member_link, Foundry_member, Literal</Retired_Terms>
             </Change>
             <Change id="231">
-               <Axiom>haulage_company SubClassOf company</Axiom>
-               <Retired_Terms>haulage_company, company</Retired_Terms>
+               <Axiom>Foundry_member SubClassOf foundry_member_name exactly 1 Literal</Axiom>
+               <Retired_Terms>foundry_member_name, Foundry_member, Literal</Retired_Terms>
             </Change>
             <Change id="232">
-               <Axiom>broadsheet DisjointWith tabloid</Axiom>
-               <Retired_Terms>broadsheet, tabloid</Retired_Terms>
+               <Axiom>Help SubClassOf Message</Axiom>
+               <Retired_Terms>Message, Help</Retired_Terms>
             </Change>
             <Change id="233">
-               <Axiom>eats Domain animal</Axiom>
-               <Retired_Terms>animal, eats</Retired_Terms>
+               <Axiom>Member SubClassOf Person</Axiom>
+               <Retired_Terms>Person, Member</Retired_Terms>
             </Change>
             <Change id="234">
-               <Axiom>newspaper SubClassOf broadsheet or tabloid</Axiom>
-               <Retired_Terms>broadsheet, newspaper, tabloid</Retired_Terms>
+               <Axiom>Project SubClassOf activity_percentile max 1 Literal</Axiom>
+               <Retired_Terms>activity_percentile, Project, Literal</Retired_Terms>
             </Change>
             <Change id="235">
-               <Axiom>white_van_man SubClassOf reads only tabloid</Axiom>
-               <Retired_Terms>reads, white_van_man, tabloid</Retired_Terms>
+               <Axiom>Project SubClassOf activity_ranking max 1 Literal</Axiom>
+               <Retired_Terms>Project, activity_ranking, Literal</Retired_Terms>
             </Change>
             <Change id="236">
-               <Axiom>van SubClassOf vehicle</Axiom>
-               <Retired_Terms>van, vehicle</Retired_Terms>
+               <Axiom>Project SubClassOf belong_to_category exactly 1 Thing</Axiom>
+               <Retired_Terms>belong_to_category, Project</Retired_Terms>
             </Change>
             <Change id="237">
-               <Axiom>has_pet Domain person</Axiom>
-               <Retired_Terms>person, has_pet</Retired_Terms>
+               <Axiom>Project SubClassOf feature_request_link max 1 Literal</Axiom>
+               <Retired_Terms>feature_request_link, Project, Literal</Retired_Terms>
             </Change>
             <Change id="238">
-               <Axiom>sheep SubClassOf eats only grass</Axiom>
-               <Retired_Terms>eats, sheep, grass</Retired_Terms>
+               <Axiom>Project SubClassOf has_public_forum max 1 Thing</Axiom>
+               <Retired_Terms>has_public_forum, Project</Retired_Terms>
             </Change>
             <Change id="239">
-               <Axiom>duck SubClassOf animal</Axiom>
-               <Retired_Terms>duck, animal</Retired_Terms>
+               <Axiom>Project SubClassOf has_usage_statistics max 1 Thing</Axiom>
+               <Retired_Terms>Project, has_usage_statistics</Retired_Terms>
             </Change>
             <Change id="240">
-               <Axiom>cat_liker EquivalentTo person and (likes some cat)</Axiom>
-               <Retired_Terms>person, cat_liker, likes, cat</Retired_Terms>
+               <Axiom>Project SubClassOf project_bugs_link max 1 Literal</Axiom>
+               <Retired_Terms>project_bugs_link, Project, Literal</Retired_Terms>
             </Change>
             <Change id="241">
-               <Axiom>animal or (part_of some animal) DisjointWith plant or (part_of some plant)</Axiom>
-               <Retired_Terms>animal, part_of, plant</Retired_Terms>
+               <Axiom>Project SubClassOf project_foundry_member max 1 Thing</Axiom>
+               <Retired_Terms>Project, project_foundry_member</Retired_Terms>
             </Change>
             <Change id="242">
-               <Axiom>bus_company SubClassOf company</Axiom>
-               <Retired_Terms>bus_company, company</Retired_Terms>
+               <Axiom>Project SubClassOf project_homepage max 1 Literal</Axiom>
+               <Retired_Terms>project_homepage, Project, Literal</Retired_Terms>
             </Change>
             <Change id="243">
-               <Axiom>driver SubClassOf adult</Axiom>
-               <Retired_Terms>driver, adult</Retired_Terms>
+               <Axiom>Project SubClassOf project_mailing_list_link max 1 Literal</Axiom>
+               <Retired_Terms>Project, project_mailing_list_link, Literal</Retired_Terms>
             </Change>
             <Change id="244">
-               <Axiom>giraffe SubClassOf animal</Axiom>
-               <Retired_Terms>animal, giraffe</Retired_Terms>
+               <Axiom>Project SubClassOf project_patches_link max 1 Literal</Axiom>
+               <Retired_Terms>project_patches_link, Project, Literal</Retired_Terms>
             </Change>
             <Change id="245">
-               <Axiom>quality_broadsheet SubClassOf broadsheet</Axiom>
-               <Retired_Terms>quality_broadsheet, broadsheet</Retired_Terms>
+               <Axiom>Project SubClassOf project_support_requests_link max 1 Literal</Axiom>
+               <Retired_Terms>Project, project_support_requests_link, Literal</Retired_Terms>
             </Change>
             <Change id="246">
-               <Axiom>dog SubClassOf eats some bone</Axiom>
-               <Retired_Terms>dog, eats, bone</Retired_Terms>
+               <Axiom>Project SubClassOf project_url exactly 1 Literal</Axiom>
+               <Retired_Terms>project_url, Project, Literal</Retired_Terms>
             </Change>
             <Change id="247">
-               <Axiom>kid EquivalentTo person and young</Axiom>
-               <Retired_Terms>young, person, kid</Retired_Terms>
+               <Axiom>Project SubClassOf registration_date max 1 Literal</Axiom>
+               <Retired_Terms>registration_date, Project, Literal</Retired_Terms>
             </Change>
             <Change id="248">
-               <Axiom>driver EquivalentTo person and (drives some vehicle)</Axiom>
-               <Retired_Terms>driver, person, drives, vehicle</Retired_Terms>
+               <Axiom>Project SubClassOf summary max 1 Literal</Axiom>
+               <Retired_Terms>summary, Project, Literal</Retired_Terms>
             </Change>
             <Change id="249">
-               <Axiom>tree SubClassOf plant</Axiom>
-               <Retired_Terms>tree, plant</Retired_Terms>
+               <Axiom>Project SubClassOf title max 1 Literal</Axiom>
+               <Retired_Terms>title, Project, Literal</Retired_Terms>
             </Change>
             <Change id="250">
-               <Axiom>lorry SubClassOf vehicle</Axiom>
-               <Retired_Terms>lorry, vehicle</Retired_Terms>
+               <Axiom>Project_Admin SubClassOf Developer</Axiom>
+               <Retired_Terms>Project_Admin, Developer</Retired_Terms>
             </Change>
             <Change id="251">
-               <Axiom>broadsheet SubClassOf newspaper</Axiom>
-               <Retired_Terms>broadsheet, newspaper</Retired_Terms>
+               <Axiom>Statistic_Record SubClassOf Statistic_Record_D exactly 1 Literal</Axiom>
+               <Retired_Terms>Statistic_Record_D, Statistic_Record, Literal</Retired_Terms>
             </Change>
             <Change id="252">
-               <Axiom>haulage_truck_driver EquivalentTo person and (drives some truck) and (works_for some (part_of some haulage_company))</Axiom>
-               <Retired_Terms>haulage_company, truck, person, drives, part_of, works_for, haulage_truck_driver</Retired_Terms>
+               <Axiom>Statistic_Record SubClassOf all_traker exactly 1 Literal</Axiom>
+               <Retired_Terms>Statistic_Record, all_traker, Literal</Retired_Terms>
             </Change>
             <Change id="253">
-               <Axiom>has_pet InverseOf is_pet_of</Axiom>
-               <Retired_Terms>is_pet_of, has_pet</Retired_Terms>
+               <Axiom>Statistic_Record SubClassOf bugs exactly 1 Literal</Axiom>
+               <Retired_Terms>Statistic_Record, bugs, Literal</Retired_Terms>
             </Change>
             <Change id="254">
-               <Axiom>has_part InverseOf part_of</Axiom>
-               <Retired_Terms>part_of, has_part</Retired_Terms>
+               <Axiom>Statistic_Record SubClassOf page_views exactly 1 Literal</Axiom>
+               <Retired_Terms>page_views, Statistic_Record, Literal</Retired_Terms>
             </Change>
             <Change id="255">
-               <Axiom>sheep SubClassOf animal</Axiom>
-               <Retired_Terms>animal, sheep</Retired_Terms>
+               <Axiom>Statistic_Record SubClassOf project_cvs exactly 1 Literal</Axiom>
+               <Retired_Terms>project_cvs, Statistic_Record, Literal</Retired_Terms>
             </Change>
             <Change id="256">
-               <Axiom>dog_liker EquivalentTo person and (likes some dog)</Axiom>
-               <Retired_Terms>person, dog, likes, dog_liker</Retired_Terms>
+               <Axiom>Statistic_Record SubClassOf project_tasks exactly 1 Literal</Axiom>
+               <Retired_Terms>project_tasks, Statistic_Record, Literal</Retired_Terms>
             </Change>
             <Change id="257">
-               <Axiom>bicycle SubClassOf vehicle</Axiom>
-               <Retired_Terms>bicycle, vehicle</Retired_Terms>
+               <Axiom>Statistic_Record SubClassOf rank exactly 1 Literal</Axiom>
+               <Retired_Terms>rank, Statistic_Record, Literal</Retired_Terms>
             </Change>
             <Change id="258">
-               <Axiom>has_pet SubPropertyOf likes</Axiom>
-               <Retired_Terms>has_pet, likes</Retired_Terms>
+               <Axiom>Statistic_Record SubClassOf record_post_date exactly 1 Literal</Axiom>
+               <Retired_Terms>record_post_date, Statistic_Record, Literal</Retired_Terms>
             </Change>
             <Change id="259">
-               <Axiom>mad_cow EquivalentTo cow and (eats some 
-(brain and (part_of some sheep)))</Axiom>
-               <Retired_Terms>mad_cow, brain, part_of, eats, cow, sheep</Retired_Terms>
+               <Axiom>Statistic_Record SubClassOf statistic_record_patches exactly 1 Literal</Axiom>
+               <Retired_Terms>statistic_record_patches, Statistic_Record, Literal</Retired_Terms>
             </Change>
             <Change id="260">
-               <Axiom>bus SubClassOf vehicle</Axiom>
-               <Retired_Terms>bus, vehicle</Retired_Terms>
+               <Axiom>Statistic_Record SubClassOf statistic_record_support exactly 1 Literal</Axiom>
+               <Retired_Terms>statistic_record_support, Statistic_Record, Literal</Retired_Terms>
             </Change>
             <Change id="261">
-               <Axiom>has_father SubPropertyOf has_parent</Axiom>
-               <Retired_Terms>has_parent, has_father</Retired_Terms>
+               <Axiom>Statistic_Record_D Domain Statistic_Record</Axiom>
+               <Retired_Terms>Statistic_Record_D, Statistic_Record</Retired_Terms>
             </Change>
             <Change id="262">
-               <Axiom>car SubClassOf vehicle</Axiom>
-               <Retired_Terms>car, vehicle</Retired_Terms>
+               <Axiom>Statistic_Record_D Range: string</Axiom>
+               <Retired_Terms>Statistic_Record_D</Retired_Terms>
             </Change>
             <Change id="263">
-               <Axiom>old_lady EquivalentTo elderly and female and person</Axiom>
-               <Retired_Terms>female, person, old_lady, elderly</Retired_Terms>
+               <Axiom>Statistics_D Domain Usage_Statistics</Axiom>
+               <Retired_Terms>Statistics_D, Usage_Statistics</Retired_Terms>
             </Change>
             <Change id="264">
-               <Axiom>cat DisjointWith dog</Axiom>
-               <Retired_Terms>dog, cat</Retired_Terms>
+               <Axiom>Statistics_D Range: string</Axiom>
+               <Retired_Terms>Statistics_D</Retired_Terms>
             </Change>
             <Change id="265">
-               <Axiom>has_father Range man</Axiom>
-               <Retired_Terms>man, has_father</Retired_Terms>
+               <Axiom>Usage_Statistics SubClassOf Statistics_D exactly 1 Literal</Axiom>
+               <Retired_Terms>Statistics_D, Usage_Statistics, Literal</Retired_Terms>
             </Change>
             <Change id="266">
-               <Axiom>bus_driver EquivalentTo person and (drives some bus)</Axiom>
-               <Retired_Terms>person, drives, bus_driver, bus</Retired_Terms>
+               <Axiom>Usage_Statistics SubClassOf lifespan exactly 1 Literal</Axiom>
+               <Retired_Terms>lifespan, Usage_Statistics, Literal</Retired_Terms>
             </Change>
             <Change id="267">
-               <Axiom>elderly SubClassOf adult</Axiom>
-               <Retired_Terms>adult, elderly</Retired_Terms>
+               <Axiom>Usage_Statistics SubClassOf statistic_page_views exactly 1 Literal</Axiom>
+               <Retired_Terms>Usage_Statistics, statistic_page_views, Literal</Retired_Terms>
             </Change>
             <Change id="268">
-               <Axiom>has_mother SubPropertyOf has_parent</Axiom>
-               <Retired_Terms>has_parent, has_mother</Retired_Terms>
+               <Axiom>Usage_Statistics SubClassOf statistic_record_support exactly 1 Literal</Axiom>
+               <Retired_Terms>statistic_record_support, Usage_Statistics, Literal</Retired_Terms>
             </Change>
             <Change id="269">
-               <Axiom>animal_lover EquivalentTo person and (has_pet min 3 Thing)</Axiom>
-               <Retired_Terms>animal_lover, person, has_pet</Retired_Terms>
+               <Axiom>Usage_Statistics SubClassOf statistics_bugs exactly 1 Literal</Axiom>
+               <Retired_Terms>statistics_bugs, Usage_Statistics, Literal</Retired_Terms>
             </Change>
             <Change id="270">
-               <Axiom>truck SubClassOf vehicle</Axiom>
-               <Retired_Terms>truck, vehicle</Retired_Terms>
+               <Axiom>Usage_Statistics SubClassOf statistics_cvs exactly 1 Literal</Axiom>
+               <Retired_Terms>statistics_cvs, Usage_Statistics, Literal</Retired_Terms>
             </Change>
             <Change id="271">
-               <Axiom>red_top SubClassOf tabloid</Axiom>
-               <Retired_Terms>red_top, tabloid</Retired_Terms>
+               <Axiom>Usage_Statistics SubClassOf statistics_patches exactly 1 Literal</Axiom>
+               <Retired_Terms>statistics_patches, Usage_Statistics, Literal</Retired_Terms>
             </Change>
             <Change id="272">
-               <Axiom>person SubClassOf animal</Axiom>
-               <Retired_Terms>animal, person</Retired_Terms>
+               <Axiom>Usage_Statistics SubClassOf statistics_rank exactly 1 Literal</Axiom>
+               <Retired_Terms>Usage_Statistics, statistics_rank, Literal</Retired_Terms>
             </Change>
             <Change id="273">
-               <Axiom>vegetarian EquivalentTo animal and (eats only (not (animal))) and (eats only (not (part_of some animal)))</Axiom>
-               <Retired_Terms>animal, part_of, eats, vegetarian</Retired_Terms>
+               <Axiom>Usage_Statistics SubClassOf statistics_support exactly 1 Literal</Axiom>
+               <Retired_Terms>statistics_support, Usage_Statistics, Literal</Retired_Terms>
             </Change>
             <Change id="274">
-               <Axiom>cow SubClassOf vegetarian</Axiom>
-               <Retired_Terms>cow, vegetarian</Retired_Terms>
+               <Axiom>Usage_Statistics SubClassOf statistics_tasks exactly 1 Literal</Axiom>
+               <Retired_Terms>statistics_tasks, Usage_Statistics, Literal</Retired_Terms>
             </Change>
             <Change id="275">
-               <Axiom>newspaper SubClassOf publication</Axiom>
-               <Retired_Terms>publication, newspaper</Retired_Terms>
+               <Axiom>Usage_Statistics SubClassOf statistics_tracker exactly 1 Literal</Axiom>
+               <Retired_Terms>statistics_tracker, Usage_Statistics, Literal</Retired_Terms>
             </Change>
             <Change id="276">
-               <Axiom>cat SubClassOf animal</Axiom>
-               <Retired_Terms>animal, cat</Retired_Terms>
+               <Axiom>activity_percentile Domain Project</Axiom>
+               <Retired_Terms>activity_percentile, Project</Retired_Terms>
             </Change>
             <Change id="277">
-               <Axiom>giraffe SubClassOf eats only leaf</Axiom>
-               <Retired_Terms>giraffe, eats, leaf</Retired_Terms>
+               <Axiom>activity_percentile Range: float</Axiom>
+               <Retired_Terms>activity_percentile, float</Retired_Terms>
             </Change>
             <Change id="278">
-               <Axiom>man EquivalentTo adult and male and person</Axiom>
-               <Retired_Terms>man, male, person, adult</Retired_Terms>
+               <Axiom>activity_ranking Domain Project</Axiom>
+               <Retired_Terms>Project, activity_ranking</Retired_Terms>
             </Change>
             <Change id="279">
-               <Axiom>old_lady SubClassOf (has_pet some animal) and (has_pet only cat)</Axiom>
-               <Retired_Terms>animal, has_pet, cat, old_lady</Retired_Terms>
+               <Axiom>activity_ranking Range: float</Axiom>
+               <Retired_Terms>float, activity_ranking</Retired_Terms>
             </Change>
             <Change id="280">
-               <Axiom>grass SubClassOf plant</Axiom>
-               <Retired_Terms>plant, grass</Retired_Terms>
+               <Axiom>all_traker Domain Statistic_Record</Axiom>
+               <Retired_Terms>Statistic_Record, all_traker</Retired_Terms>
             </Change>
             <Change id="281">
-               <Axiom>van_driver EquivalentTo person and (drives some van)</Axiom>
-               <Retired_Terms>person, drives, van_driver, van</Retired_Terms>
+               <Axiom>all_traker Range: string</Axiom>
+               <Retired_Terms>all_traker</Retired_Terms>
             </Change>
             <Change id="282">
-               <Axiom>tabloid SubClassOf newspaper</Axiom>
-               <Retired_Terms>newspaper, tabloid</Retired_Terms>
+               <Axiom>belong_to_category Domain Project</Axiom>
+               <Retired_Terms>belong_to_category, Project</Retired_Terms>
             </Change>
             <Change id="283">
-               <Axiom>pet EquivalentTo is_pet_of some Thing</Axiom>
-               <Retired_Terms>is_pet_of, pet</Retired_Terms>
+               <Axiom>belong_to_category Range Category</Axiom>
+               <Retired_Terms>Category, belong_to_category</Retired_Terms>
             </Change>
             <Change id="284">
-               <Axiom>has_mother Range woman</Axiom>
-               <Retired_Terms>woman, has_mother</Retired_Terms>
+               <Axiom>belong_to_category SubPropertyOf has_usage_statistics</Axiom>
+               <Retired_Terms>belong_to_category, has_usage_statistics</Retired_Terms>
             </Change>
             <Change id="285">
-               <Axiom>eaten_by InverseOf eats</Axiom>
-               <Retired_Terms>eaten_by, eats</Retired_Terms>
+               <Axiom>belong_to_forum Domain Message</Axiom>
+               <Retired_Terms>belong_to_forum, Message</Retired_Terms>
             </Change>
             <Change id="286">
-               <Axiom>white_van_man EquivalentTo man and (drives some 
-(van and white_thing))</Axiom>
-               <Retired_Terms>man, white_van_man, white_thing, drives, van</Retired_Terms>
+               <Axiom>belong_to_forum Range Public_Forum</Axiom>
+               <Retired_Terms>belong_to_forum, Public_Forum</Retired_Terms>
             </Change>
             <Change id="287">
-               <Axiom>grownup EquivalentTo adult and person</Axiom>
-               <Retired_Terms>person, grownup, adult</Retired_Terms>
+               <Axiom>belong_to_project Domain Release_Package</Axiom>
+               <Retired_Terms>belong_to_project, Release_Package</Retired_Terms>
             </Change>
             <Change id="288">
-               <Axiom>magazine SubClassOf publication</Axiom>
-               <Retired_Terms>magazine, publication</Retired_Terms>
+               <Axiom>belong_to_project Range Project</Axiom>
+               <Retired_Terms>belong_to_project, Project</Retired_Terms>
             </Change>
             <Change id="289">
-               <Axiom>lorry_driver EquivalentTo person and (drives some lorry)</Axiom>
-               <Retired_Terms>lorry, person, drives, lorry_driver</Retired_Terms>
+               <Axiom>belong_to_statistics Domain Statistic_Record</Axiom>
+               <Retired_Terms>Statistic_Record, belong_to_statistics</Retired_Terms>
             </Change>
             <Change id="290">
-               <Axiom>woman EquivalentTo adult and female and person</Axiom>
-               <Retired_Terms>female, person, woman, adult</Retired_Terms>
+               <Axiom>belong_to_statistics Range Usage_Statistics</Axiom>
+               <Retired_Terms>Usage_Statistics, belong_to_statistics</Retired_Terms>
             </Change>
             <Change id="291">
-               <Axiom>leaf SubClassOf part_of some tree</Axiom>
-               <Retired_Terms>part_of, leaf, tree</Retired_Terms>
+               <Axiom>bugs Domain Statistic_Record</Axiom>
+               <Retired_Terms>Statistic_Record, bugs</Retired_Terms>
             </Change>
             <Change id="292">
-               <Axiom>adult DisjointWith young</Axiom>
-               <Retired_Terms>young, adult</Retired_Terms>
+               <Axiom>bugs Range: string</Axiom>
+               <Retired_Terms>bugs</Retired_Terms>
             </Change>
             <Change id="293">
-               <Axiom>animal SubClassOf eats some Thing</Axiom>
-               <Retired_Terms>animal, eats</Retired_Terms>
+               <Axiom>category_name Domain Category</Axiom>
+               <Retired_Terms>Category, category_name</Retired_Terms>
             </Change>
             <Change id="294">
-               <Axiom>reads Range publication</Axiom>
-               <Retired_Terms>reads, publication</Retired_Terms>
+               <Axiom>category_name Range: string</Axiom>
+               <Retired_Terms>category_name</Retired_Terms>
             </Change>
             <Change id="295">
-               <Axiom>cat_owner EquivalentTo person and (has_pet some cat)</Axiom>
-               <Retired_Terms>person, has_pet, cat_owner, cat</Retired_Terms>
+               <Axiom>database_environment Domain Project</Axiom>
+               <Retired_Terms>database_environment, Project</Retired_Terms>
             </Change>
             <Change id="296">
-               <Axiom>tiger SubClassOf animal</Axiom>
-               <Retired_Terms>animal, tiger</Retired_Terms>
+               <Axiom>database_environment Range: string</Axiom>
+               <Retired_Terms>database_environment</Retired_Terms>
+            </Change>
+            <Change id="297">
+               <Axiom>developed_by Domain Project</Axiom>
+               <Retired_Terms>developed_by, Project</Retired_Terms>
+            </Change>
+            <Change id="298">
+               <Axiom>developed_by Range Developer</Axiom>
+               <Retired_Terms>developed_by, Developer</Retired_Terms>
+            </Change>
+            <Change id="299">
+               <Axiom>development_status Domain Project</Axiom>
+               <Retired_Terms>Project, development_status</Retired_Terms>
+            </Change>
+            <Change id="300">
+               <Axiom>development_status Range: {"Alpha"^^string , "Beta"^^string , "Planning"^^string , "Pre-Alpha"^^string , "Stable"^^string}</Axiom>
+               <Retired_Terms>development_status</Retired_Terms>
+            </Change>
+            <Change id="301">
+               <Axiom>download_homepage Domain Version</Axiom>
+               <Retired_Terms>Version, download_homepage</Retired_Terms>
+            </Change>
+            <Change id="302">
+               <Axiom>download_homepage Range: string</Axiom>
+               <Retired_Terms>download_homepage</Retired_Terms>
+            </Change>
+            <Change id="303">
+               <Axiom>email_address Domain Member</Axiom>
+               <Retired_Terms>Member, email_address</Retired_Terms>
+            </Change>
+            <Change id="304">
+               <Axiom>email_address Range: string</Axiom>
+               <Retired_Terms>email_address</Retired_Terms>
+            </Change>
+            <Change id="305">
+               <Axiom>feature_request_link Domain Project</Axiom>
+               <Retired_Terms>feature_request_link, Project</Retired_Terms>
+            </Change>
+            <Change id="306">
+               <Axiom>feature_request_link Range: string</Axiom>
+               <Retired_Terms>feature_request_link</Retired_Terms>
+            </Change>
+            <Change id="307">
+               <Axiom>foundry_member_link Domain Foundry_member</Axiom>
+               <Retired_Terms>foundry_member_link, Foundry_member</Retired_Terms>
+            </Change>
+            <Change id="308">
+               <Axiom>foundry_member_link Range: string</Axiom>
+               <Retired_Terms>foundry_member_link</Retired_Terms>
+            </Change>
+            <Change id="309">
+               <Axiom>foundry_member_name Domain Foundry_member</Axiom>
+               <Retired_Terms>foundry_member_name, Foundry_member</Retired_Terms>
+            </Change>
+            <Change id="310">
+               <Axiom>foundry_member_name Range: string</Axiom>
+               <Retired_Terms>foundry_member_name</Retired_Terms>
+            </Change>
+            <Change id="311">
+               <Axiom>hasLatestNew Domain Project</Axiom>
+               <Retired_Terms>hasLatestNew, Project</Retired_Terms>
+            </Change>
+            <Change id="312">
+               <Axiom>hasLatestNew Range LastestNew</Axiom>
+               <Retired_Terms>hasLatestNew, LastestNew</Retired_Terms>
+            </Change>
+            <Change id="313">
+               <Axiom>hasMessage Domain Public_Forum</Axiom>
+               <Retired_Terms>Public_Forum, hasMessage</Retired_Terms>
+            </Change>
+            <Change id="314">
+               <Axiom>hasMessage Range Message</Axiom>
+               <Retired_Terms>Message, hasMessage</Retired_Terms>
+            </Change>
+            <Change id="315">
+               <Axiom>hasProject Domain Category</Axiom>
+               <Retired_Terms>Category, hasProject</Retired_Terms>
+            </Change>
+            <Change id="316">
+               <Axiom>hasProject Range Project</Axiom>
+               <Retired_Terms>hasProject, Project</Retired_Terms>
+            </Change>
+            <Change id="317">
+               <Axiom>hasProjectFile Domain Version</Axiom>
+               <Retired_Terms>Version, hasProjectFile</Retired_Terms>
+            </Change>
+            <Change id="318">
+               <Axiom>hasProjectFile Range ProjectFile</Axiom>
+               <Retired_Terms>ProjectFile, hasProjectFile</Retired_Terms>
+            </Change>
+            <Change id="319">
+               <Axiom>hasRecord Domain Usage_Statistics</Axiom>
+               <Retired_Terms>Usage_Statistics, hasRecord</Retired_Terms>
+            </Change>
+            <Change id="320">
+               <Axiom>hasRecord Range Statistic_Record</Axiom>
+               <Retired_Terms>Statistic_Record, hasRecord</Retired_Terms>
+            </Change>
+            <Change id="321">
+               <Axiom>hasVersion Domain Release_Package</Axiom>
+               <Retired_Terms>Release_Package, hasVersion</Retired_Terms>
+            </Change>
+            <Change id="322">
+               <Axiom>hasVersion Range Version</Axiom>
+               <Retired_Terms>Version, hasVersion</Retired_Terms>
+            </Change>
+            <Change id="323">
+               <Axiom>has_public_forum Domain Project</Axiom>
+               <Retired_Terms>has_public_forum, Project</Retired_Terms>
+            </Change>
+            <Change id="324">
+               <Axiom>has_public_forum Range Public_Forum</Axiom>
+               <Retired_Terms>has_public_forum, Public_Forum</Retired_Terms>
+            </Change>
+            <Change id="325">
+               <Axiom>has_release_package Domain Project</Axiom>
+               <Retired_Terms>has_release_package, Project</Retired_Terms>
+            </Change>
+            <Change id="326">
+               <Axiom>has_release_package Range Release_Package</Axiom>
+               <Retired_Terms>has_release_package, Release_Package</Retired_Terms>
+            </Change>
+            <Change id="327">
+               <Axiom>has_replied_message Domain Message</Axiom>
+               <Retired_Terms>Message, has_replied_message</Retired_Terms>
+            </Change>
+            <Change id="328">
+               <Axiom>has_replied_message Range Message</Axiom>
+               <Retired_Terms>Message, has_replied_message</Retired_Terms>
+            </Change>
+            <Change id="329">
+               <Axiom>has_usage_statistics Domain Project</Axiom>
+               <Retired_Terms>Project, has_usage_statistics</Retired_Terms>
+            </Change>
+            <Change id="330">
+               <Axiom>has_usage_statistics Range Usage_Statistics</Axiom>
+               <Retired_Terms>Usage_Statistics, has_usage_statistics</Retired_Terms>
+            </Change>
+            <Change id="331">
+               <Axiom>intended_audience Domain Project</Axiom>
+               <Retired_Terms>intended_audience, Project</Retired_Terms>
+            </Change>
+            <Change id="332">
+               <Axiom>intended_audience Range: {"Customer-Service"^^string , "Developers"^^string , "Education"^^string , "End-Users"^^string , "Information-Technology"^^string , "Other-Audience"^^string , "Research"^^string , "System-Administrators"^^string}</Axiom>
+               <Retired_Terms>intended_audience</Retired_Terms>
+            </Change>
+            <Change id="333">
+               <Axiom>last_post_date Domain Message</Axiom>
+               <Retired_Terms>Message, last_post_date</Retired_Terms>
+            </Change>
+            <Change id="334">
+               <Axiom>last_post_date Range: dateTime</Axiom>
+               <Retired_Terms>last_post_date, dateTime</Retired_Terms>
+            </Change>
+            <Change id="335">
+               <Axiom>license Domain Project</Axiom>
+               <Retired_Terms>license, Project</Retired_Terms>
+            </Change>
+            <Change id="336">
+               <Axiom>license Range: string</Axiom>
+               <Retired_Terms>license</Retired_Terms>
+            </Change>
+            <Change id="337">
+               <Axiom>lifespan Domain Usage_Statistics</Axiom>
+               <Retired_Terms>lifespan, Usage_Statistics</Retired_Terms>
+            </Change>
+            <Change id="338">
+               <Axiom>lifespan Range: string</Axiom>
+               <Retired_Terms>lifespan</Retired_Terms>
+            </Change>
+            <Change id="339">
+               <Axiom>login_name Domain Member</Axiom>
+               <Retired_Terms>login_name, Member</Retired_Terms>
+            </Change>
+            <Change id="340">
+               <Axiom>login_name Range: string</Axiom>
+               <Retired_Terms>login_name</Retired_Terms>
+            </Change>
+            <Change id="341">
+               <Axiom>manager Domain Project</Axiom>
+               <Retired_Terms>manager, Project</Retired_Terms>
+            </Change>
+            <Change id="342">
+               <Axiom>manager Range Project_Admin</Axiom>
+               <Retired_Terms>Project_Admin, manager</Retired_Terms>
+            </Change>
+            <Change id="343">
+               <Axiom>member_of_project Domain Member</Axiom>
+               <Retired_Terms>member_of_project, Member</Retired_Terms>
+            </Change>
+            <Change id="344">
+               <Axiom>member_of_project Range Project</Axiom>
+               <Retired_Terms>member_of_project, Project</Retired_Terms>
+            </Change>
+            <Change id="345">
+               <Axiom>message_content Domain Message</Axiom>
+               <Retired_Terms>message_content, Message</Retired_Terms>
+            </Change>
+            <Change id="346">
+               <Axiom>message_content Range: string</Axiom>
+               <Retired_Terms>message_content</Retired_Terms>
+            </Change>
+            <Change id="347">
+               <Axiom>message_topic Domain Message</Axiom>
+               <Retired_Terms>message_topic, Message</Retired_Terms>
+            </Change>
+            <Change id="348">
+               <Axiom>message_topic Range: string</Axiom>
+               <Retired_Terms>message_topic</Retired_Terms>
+            </Change>
+            <Change id="349">
+               <Axiom>news_link Domain LastestNew</Axiom>
+               <Retired_Terms>news_link, LastestNew</Retired_Terms>
+            </Change>
+            <Change id="350">
+               <Axiom>news_link Range: string</Axiom>
+               <Retired_Terms>news_link</Retired_Terms>
+            </Change>
+            <Change id="351">
+               <Axiom>news_released_by Domain LastestNew</Axiom>
+               <Retired_Terms>LastestNew, news_released_by</Retired_Terms>
+            </Change>
+            <Change id="352">
+               <Axiom>news_released_by Range Developer</Axiom>
+               <Retired_Terms>Developer, news_released_by</Retired_Terms>
+            </Change>
+            <Change id="353">
+               <Axiom>news_title Domain LastestNew</Axiom>
+               <Retired_Terms>LastestNew, news_title</Retired_Terms>
+            </Change>
+            <Change id="354">
+               <Axiom>news_title Range: string</Axiom>
+               <Retired_Terms>news_title</Retired_Terms>
+            </Change>
+            <Change id="355">
+               <Axiom>operating_system Domain Project</Axiom>
+               <Retired_Terms>operating_system, Project</Retired_Terms>
+            </Change>
+            <Change id="356">
+               <Axiom>operating_system Range: string</Axiom>
+               <Retired_Terms>operating_system</Retired_Terms>
+            </Change>
+            <Change id="357">
+               <Axiom>package_name Domain Release_Package</Axiom>
+               <Retired_Terms>package_name, Release_Package</Retired_Terms>
+            </Change>
+            <Change id="358">
+               <Axiom>package_name Range: string</Axiom>
+               <Retired_Terms>package_name</Retired_Terms>
+            </Change>
+            <Change id="359">
+               <Axiom>package_name1 Range: string</Axiom>
+               <Retired_Terms>package_name1</Retired_Terms>
+            </Change>
+            <Change id="360">
+               <Axiom>page_views Domain Statistic_Record</Axiom>
+               <Retired_Terms>page_views, Statistic_Record</Retired_Terms>
+            </Change>
+            <Change id="361">
+               <Axiom>page_views Range: string</Axiom>
+               <Retired_Terms>page_views</Retired_Terms>
+            </Change>
+            <Change id="362">
+               <Axiom>person_name Domain Person</Axiom>
+               <Retired_Terms>Person, person_name</Retired_Terms>
+            </Change>
+            <Change id="363">
+               <Axiom>person_name Range: string</Axiom>
+               <Retired_Terms>person_name</Retired_Terms>
+            </Change>
+            <Change id="364">
+               <Axiom>post_message Domain Member</Axiom>
+               <Retired_Terms>Member, post_message</Retired_Terms>
+            </Change>
+            <Change id="365">
+               <Axiom>post_message Range Message</Axiom>
+               <Retired_Terms>Message, post_message</Retired_Terms>
+            </Change>
+            <Change id="366">
+               <Axiom>posted_by Domain Message</Axiom>
+               <Retired_Terms>Message, posted_by</Retired_Terms>
+            </Change>
+            <Change id="367">
+               <Axiom>posted_by Range Member</Axiom>
+               <Retired_Terms>Member, posted_by</Retired_Terms>
+            </Change>
+            <Change id="368">
+               <Axiom>programming_language Domain Project</Axiom>
+               <Retired_Terms>programming_language, Project</Retired_Terms>
+            </Change>
+            <Change id="369">
+               <Axiom>programming_language Range: string</Axiom>
+               <Retired_Terms>programming_language</Retired_Terms>
+            </Change>
+            <Change id="370">
+               <Axiom>project_bugs_link Domain Project</Axiom>
+               <Retired_Terms>project_bugs_link, Project</Retired_Terms>
+            </Change>
+            <Change id="371">
+               <Axiom>project_bugs_link Range: string</Axiom>
+               <Retired_Terms>project_bugs_link</Retired_Terms>
+            </Change>
+            <Change id="372">
+               <Axiom>project_cvs Domain Statistic_Record</Axiom>
+               <Retired_Terms>project_cvs, Statistic_Record</Retired_Terms>
+            </Change>
+            <Change id="373">
+               <Axiom>project_cvs Range: string</Axiom>
+               <Retired_Terms>project_cvs</Retired_Terms>
+            </Change>
+            <Change id="374">
+               <Axiom>project_foundry_member Domain Project</Axiom>
+               <Retired_Terms>Project, project_foundry_member</Retired_Terms>
+            </Change>
+            <Change id="375">
+               <Axiom>project_foundry_member Range Foundry_member</Axiom>
+               <Retired_Terms>Foundry_member, project_foundry_member</Retired_Terms>
+            </Change>
+            <Change id="376">
+               <Axiom>project_homepage Domain Project</Axiom>
+               <Retired_Terms>project_homepage, Project</Retired_Terms>
+            </Change>
+            <Change id="377">
+               <Axiom>project_homepage Range: string</Axiom>
+               <Retired_Terms>project_homepage</Retired_Terms>
+            </Change>
+            <Change id="378">
+               <Axiom>project_mailing_list_link Domain Project</Axiom>
+               <Retired_Terms>Project, project_mailing_list_link</Retired_Terms>
+            </Change>
+            <Change id="379">
+               <Axiom>project_mailing_list_link Range: string</Axiom>
+               <Retired_Terms>project_mailing_list_link</Retired_Terms>
+            </Change>
+            <Change id="380">
+               <Axiom>project_of_statistic Domain Usage_Statistics</Axiom>
+               <Retired_Terms>Usage_Statistics, project_of_statistic</Retired_Terms>
+            </Change>
+            <Change id="381">
+               <Axiom>project_of_statistic Range Project</Axiom>
+               <Retired_Terms>project_of_statistic, Project</Retired_Terms>
+            </Change>
+            <Change id="382">
+               <Axiom>project_patches_link Domain Project</Axiom>
+               <Retired_Terms>project_patches_link, Project</Retired_Terms>
+            </Change>
+            <Change id="383">
+               <Axiom>project_patches_link Range: string</Axiom>
+               <Retired_Terms>project_patches_link</Retired_Terms>
+            </Change>
+            <Change id="384">
+               <Axiom>project_role Domain Developer</Axiom>
+               <Retired_Terms>project_role, Developer</Retired_Terms>
+            </Change>
+            <Change id="385">
+               <Axiom>project_role Range: string</Axiom>
+               <Retired_Terms>project_role</Retired_Terms>
+            </Change>
+            <Change id="386">
+               <Axiom>project_support_requests_link Domain Project</Axiom>
+               <Retired_Terms>Project, project_support_requests_link</Retired_Terms>
+            </Change>
+            <Change id="387">
+               <Axiom>project_support_requests_link Range: string</Axiom>
+               <Retired_Terms>project_support_requests_link</Retired_Terms>
+            </Change>
+            <Change id="388">
+               <Axiom>project_tasks Domain Statistic_Record</Axiom>
+               <Retired_Terms>project_tasks, Statistic_Record</Retired_Terms>
+            </Change>
+            <Change id="389">
+               <Axiom>project_tasks Range: string</Axiom>
+               <Retired_Terms>project_tasks</Retired_Terms>
+            </Change>
+            <Change id="390">
+               <Axiom>project_url Domain Project</Axiom>
+               <Retired_Terms>project_url, Project</Retired_Terms>
+            </Change>
+            <Change id="391">
+               <Axiom>project_url Range: string</Axiom>
+               <Retired_Terms>project_url</Retired_Terms>
+            </Change>
+            <Change id="392">
+               <Axiom>projectfile_DL Domain ProjectFile</Axiom>
+               <Retired_Terms>ProjectFile, projectfile_DL</Retired_Terms>
+            </Change>
+            <Change id="393">
+               <Axiom>projectfile_DL Range: string</Axiom>
+               <Retired_Terms>projectfile_DL</Retired_Terms>
+            </Change>
+            <Change id="394">
+               <Axiom>projectfile_arch Domain ProjectFile</Axiom>
+               <Retired_Terms>projectfile_arch, ProjectFile</Retired_Terms>
+            </Change>
+            <Change id="395">
+               <Axiom>projectfile_arch Range: string</Axiom>
+               <Retired_Terms>projectfile_arch</Retired_Terms>
+            </Change>
+            <Change id="396">
+               <Axiom>projectfile_name Domain ProjectFile</Axiom>
+               <Retired_Terms>ProjectFile, projectfile_name</Retired_Terms>
+            </Change>
+            <Change id="397">
+               <Axiom>projectfile_name Range: string</Axiom>
+               <Retired_Terms>projectfile_name</Retired_Terms>
+            </Change>
+            <Change id="398">
+               <Axiom>projectfile_size Domain ProjectFile</Axiom>
+               <Retired_Terms>projectfile_size, ProjectFile</Retired_Terms>
+            </Change>
+            <Change id="399">
+               <Axiom>projectfile_size Range: string</Axiom>
+               <Retired_Terms>projectfile_size</Retired_Terms>
+            </Change>
+            <Change id="400">
+               <Axiom>projectfile_type Domain ProjectFile</Axiom>
+               <Retired_Terms>ProjectFile, projectfile_type</Retired_Terms>
+            </Change>
+            <Change id="401">
+               <Axiom>projectfile_type Range: string</Axiom>
+               <Retired_Terms>projectfile_type</Retired_Terms>
+            </Change>
+            <Change id="402">
+               <Axiom>projectfile_url Domain ProjectFile</Axiom>
+               <Retired_Terms>ProjectFile, projectfile_url</Retired_Terms>
+            </Change>
+            <Change id="403">
+               <Axiom>projectfile_url Range: string</Axiom>
+               <Retired_Terms>projectfile_url</Retired_Terms>
+            </Change>
+            <Change id="404">
+               <Axiom>publicly_displayed_name Domain Member</Axiom>
+               <Retired_Terms>publicly_displayed_name, Member</Retired_Terms>
+            </Change>
+            <Change id="405">
+               <Axiom>publicly_displayed_name Range: string</Axiom>
+               <Retired_Terms>publicly_displayed_name</Retired_Terms>
+            </Change>
+            <Change id="406">
+               <Axiom>rank Domain Statistic_Record</Axiom>
+               <Retired_Terms>rank, Statistic_Record</Retired_Terms>
+            </Change>
+            <Change id="407">
+               <Axiom>rank Range: string</Axiom>
+               <Retired_Terms>rank</Retired_Terms>
+            </Change>
+            <Change id="408">
+               <Axiom>record_post_date Domain Statistic_Record</Axiom>
+               <Retired_Terms>record_post_date, Statistic_Record</Retired_Terms>
+            </Change>
+            <Change id="409">
+               <Axiom>record_post_date Range: string</Axiom>
+               <Retired_Terms>record_post_date</Retired_Terms>
+            </Change>
+            <Change id="410">
+               <Axiom>registration_date Domain Project</Axiom>
+               <Retired_Terms>registration_date, Project</Retired_Terms>
+            </Change>
+            <Change id="411">
+               <Axiom>registration_date Range: dateTime</Axiom>
+               <Retired_Terms>registration_date, dateTime</Retired_Terms>
+            </Change>
+            <Change id="412">
+               <Axiom>release_date Domain Version</Axiom>
+               <Retired_Terms>Version, release_date</Retired_Terms>
+            </Change>
+            <Change id="413">
+               <Axiom>release_date Range: string</Axiom>
+               <Retired_Terms>release_date</Retired_Terms>
+            </Change>
+            <Change id="414">
+               <Axiom>released_date Domain LastestNew</Axiom>
+               <Retired_Terms>released_date, LastestNew</Retired_Terms>
+            </Change>
+            <Change id="415">
+               <Axiom>released_date Range: string</Axiom>
+               <Retired_Terms>released_date</Retired_Terms>
+            </Change>
+            <Change id="416">
+               <Axiom>replies Domain Message</Axiom>
+               <Retired_Terms>replies, Message</Retired_Terms>
+            </Change>
+            <Change id="417">
+               <Axiom>replies Range: int</Axiom>
+               <Retired_Terms>replies, int</Retired_Terms>
+            </Change>
+            <Change id="418">
+               <Axiom>site_member_since Domain Member</Axiom>
+               <Retired_Terms>Member, site_member_since</Retired_Terms>
+            </Change>
+            <Change id="419">
+               <Axiom>site_member_since Range: dateTime</Axiom>
+               <Retired_Terms>dateTime, site_member_since</Retired_Terms>
+            </Change>
+            <Change id="420">
+               <Axiom>skills Domain Developer</Axiom>
+               <Retired_Terms>Developer, skills</Retired_Terms>
+            </Change>
+            <Change id="421">
+               <Axiom>skills Range: string</Axiom>
+               <Retired_Terms>skills</Retired_Terms>
+            </Change>
+            <Change id="422">
+               <Axiom>started_by Domain Message</Axiom>
+               <Retired_Terms>Message, started_by</Retired_Terms>
+            </Change>
+            <Change id="423">
+               <Axiom>started_by Range Member</Axiom>
+               <Retired_Terms>started_by, Member</Retired_Terms>
+            </Change>
+            <Change id="424">
+               <Axiom>statistic_page_views Domain Usage_Statistics</Axiom>
+               <Retired_Terms>Usage_Statistics, statistic_page_views</Retired_Terms>
+            </Change>
+            <Change id="425">
+               <Axiom>statistic_page_views Range: string</Axiom>
+               <Retired_Terms>statistic_page_views</Retired_Terms>
+            </Change>
+            <Change id="426">
+               <Axiom>statistic_record_patches Domain Statistic_Record</Axiom>
+               <Retired_Terms>statistic_record_patches, Statistic_Record</Retired_Terms>
+            </Change>
+            <Change id="427">
+               <Axiom>statistic_record_patches Range: string</Axiom>
+               <Retired_Terms>statistic_record_patches</Retired_Terms>
+            </Change>
+            <Change id="428">
+               <Axiom>statistic_record_support Domain Statistic_Record</Axiom>
+               <Retired_Terms>statistic_record_support, Statistic_Record</Retired_Terms>
+            </Change>
+            <Change id="429">
+               <Axiom>statistic_record_support Range: string</Axiom>
+               <Retired_Terms>statistic_record_support</Retired_Terms>
+            </Change>
+            <Change id="430">
+               <Axiom>statistics_bugs Domain Usage_Statistics</Axiom>
+               <Retired_Terms>statistics_bugs, Usage_Statistics</Retired_Terms>
+            </Change>
+            <Change id="431">
+               <Axiom>statistics_bugs Range: string</Axiom>
+               <Retired_Terms>statistics_bugs</Retired_Terms>
+            </Change>
+            <Change id="432">
+               <Axiom>statistics_cvs Domain Usage_Statistics</Axiom>
+               <Retired_Terms>statistics_cvs, Usage_Statistics</Retired_Terms>
+            </Change>
+            <Change id="433">
+               <Axiom>statistics_cvs Range: string</Axiom>
+               <Retired_Terms>statistics_cvs</Retired_Terms>
+            </Change>
+            <Change id="434">
+               <Axiom>statistics_patches Domain Usage_Statistics</Axiom>
+               <Retired_Terms>statistics_patches, Usage_Statistics</Retired_Terms>
+            </Change>
+            <Change id="435">
+               <Axiom>statistics_patches Range: string</Axiom>
+               <Retired_Terms>statistics_patches</Retired_Terms>
+            </Change>
+            <Change id="436">
+               <Axiom>statistics_rank Domain Usage_Statistics</Axiom>
+               <Retired_Terms>Usage_Statistics, statistics_rank</Retired_Terms>
+            </Change>
+            <Change id="437">
+               <Axiom>statistics_rank Range: string</Axiom>
+               <Retired_Terms>statistics_rank</Retired_Terms>
+            </Change>
+            <Change id="438">
+               <Axiom>statistics_support Domain Usage_Statistics</Axiom>
+               <Retired_Terms>statistics_support, Usage_Statistics</Retired_Terms>
+            </Change>
+            <Change id="439">
+               <Axiom>statistics_support Range: string</Axiom>
+               <Retired_Terms>statistics_support</Retired_Terms>
+            </Change>
+            <Change id="440">
+               <Axiom>statistics_tasks Domain Usage_Statistics</Axiom>
+               <Retired_Terms>statistics_tasks, Usage_Statistics</Retired_Terms>
+            </Change>
+            <Change id="441">
+               <Axiom>statistics_tasks Range: string</Axiom>
+               <Retired_Terms>statistics_tasks</Retired_Terms>
+            </Change>
+            <Change id="442">
+               <Axiom>statistics_tracker Domain Usage_Statistics</Axiom>
+               <Retired_Terms>statistics_tracker, Usage_Statistics</Retired_Terms>
+            </Change>
+            <Change id="443">
+               <Axiom>statistics_tracker Range: string</Axiom>
+               <Retired_Terms>statistics_tracker</Retired_Terms>
+            </Change>
+            <Change id="444">
+               <Axiom>sub_category Domain Category</Axiom>
+               <Retired_Terms>Category, sub_category</Retired_Terms>
+            </Change>
+            <Change id="445">
+               <Axiom>sub_category Range Category</Axiom>
+               <Retired_Terms>Category, sub_category</Retired_Terms>
+            </Change>
+            <Change id="446">
+               <Axiom>summary Domain Project</Axiom>
+               <Retired_Terms>summary, Project</Retired_Terms>
+            </Change>
+            <Change id="447">
+               <Axiom>summary Range: string</Axiom>
+               <Retired_Terms>summary</Retired_Terms>
+            </Change>
+            <Change id="448">
+               <Axiom>super_category Domain Category</Axiom>
+               <Retired_Terms>Category, super_category</Retired_Terms>
+            </Change>
+            <Change id="449">
+               <Axiom>super_category Range Category</Axiom>
+               <Retired_Terms>Category, super_category</Retired_Terms>
+            </Change>
+            <Change id="450">
+               <Axiom>title Domain Project</Axiom>
+               <Retired_Terms>title, Project</Retired_Terms>
+            </Change>
+            <Change id="451">
+               <Axiom>title Range: string</Axiom>
+               <Retired_Terms>title</Retired_Terms>
+            </Change>
+            <Change id="452">
+               <Axiom>topic Domain Project</Axiom>
+               <Retired_Terms>topic, Project</Retired_Terms>
+            </Change>
+            <Change id="453">
+               <Axiom>topic Range: string</Axiom>
+               <Retired_Terms>topic</Retired_Terms>
+            </Change>
+            <Change id="454">
+               <Axiom>translations Domain Project</Axiom>
+               <Retired_Terms>translations, Project</Retired_Terms>
+            </Change>
+            <Change id="455">
+               <Axiom>translations Range: {"Arabic"^^string , "Chinese"^^string , "Dutch"^^string , "English"^^string , "French"^^string , "German"^^string , "Italian"^^string , "Japanese"^^string , "Polish"^^string , "Russian"^^string , "Spanish"^^string}</Axiom>
+               <Retired_Terms>translations</Retired_Terms>
+            </Change>
+            <Change id="456">
+               <Axiom>user_id Domain Member</Axiom>
+               <Retired_Terms>user_id, Member</Retired_Terms>
+            </Change>
+            <Change id="457">
+               <Axiom>user_id Range: string</Axiom>
+               <Retired_Terms>user_id</Retired_Terms>
+            </Change>
+            <Change id="458">
+               <Axiom>user_interface Domain Project</Axiom>
+               <Retired_Terms>user_interface, Project</Retired_Terms>
+            </Change>
+            <Change id="459">
+               <Axiom>user_interface Range: string</Axiom>
+               <Retired_Terms>user_interface</Retired_Terms>
+            </Change>
+            <Change id="460">
+               <Axiom>version_id Domain Version</Axiom>
+               <Retired_Terms>Version, version_id</Retired_Terms>
+            </Change>
+            <Change id="461">
+               <Axiom>version_id Range: string</Axiom>
+               <Retired_Terms>version_id</Retired_Terms>
             </Change>
          </RetiredDescription>
          <PureRemoval id="prem" size="0"/>

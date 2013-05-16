@@ -20,11 +20,11 @@
       <div id="view-plink-modal" class="reveal-modal">
          <h3>view-permalink</h3><textarea id="view-plink" rows="3" cols="60" readonly="true" style="resize: none;"></textarea><br>
          					[<a href="javascript:;" onclick="select_all('view-plink');">Select all</a>]
-         					<a class="close-reveal-modal">x</a></div><br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="5cd184a6-691c-4867-9356-131f50e64af2"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
+         					<a class="close-reveal-modal">x</a></div><br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="7052f08e-e18f-4e01-a637-6d5d54236876"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
       <table width="70%" style="table-layout:fixed;">
          <tr>
             <th class="topright"><input type="checkbox" name="removals" onClick="toggleGroup('removals')">  
-               <h3 style="display:inline;">Removals (6)</h3>
+               <h3 style="display:inline;">Removals (7)</h3>
             </th>
             <th class="topleft"><input type="checkbox" name="additions" onClick="toggleGroup('additions')">  
                <h3 style="display:inline;">Additions (7)</h3>
@@ -34,7 +34,7 @@
             <td class="topright">
                <ul id="tree1">
                   <li>  <input type="checkbox" name="effRemsTrigger" onClick="toggleChanges('effRems','effRemsTrigger')">  
-                     <h4 style="display:inline;">Effectual (2)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, and are not entailed by Ontology 2');"><ul>
+                     <h4 style="display:inline;">Effectual (3)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, and are not entailed by Ontology 2');"><ul>
                         <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('weak','weakrt');">  <b>Weakenings (1)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are more constraining than existing axioms in Ontology 2');"><ul style="display:none">
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;With Shared Terms (0)
                               </li>
@@ -43,8 +43,7 @@
                         </li>
                         <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
                         </li>
-                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Retired Descriptions (0)
-                        </li>
+                        <li id="retdesctrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effRems" onClick="toggleDiv('retdesc');">  <a href="#retdesc">Retired Descriptions (1)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing retired terms, i.e., terms that no longer exist in Ontology 2');"></li>
                         <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('rem','remrt');">  <b>Pure Removals (1)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 2; typically related to hierachy changes');"><ul style="display:none">
                               <li id="remtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('rem');">  <a href="#rem">With Shared Terms (1)</a></li>
                               <li><img src="images/blank.png" alt="">&nbsp;&nbsp;With Retired Terms (0)
@@ -130,12 +129,6 @@
             <col width="47.5%">
             <col width="47.5%">
          </colgroup>
-         
-         
-         
-         
-         
-         
          <tbody id="add" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
@@ -146,14 +139,11 @@
                <th class="addition">ID</th>
                <th class="addition" colspan="2">Addition to Ontology 2</th>
             </tr>
-            
             <tr class="addition">
                <td>1</td>
                <td colspan="2">A<span class="subclass"> SubClassOf </span>B. <br></td>
             </tr>
-            
          </tbody>
-         
          <tbody id="addnt" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3"><a name="add"></a><h4 style="display: inline-block;">Pure Additions with New Terms (1)</h4> [<a href="#">back to top</a>]
@@ -163,20 +153,11 @@
                <th class="addition">ID</th>
                <th class="addition" colspan="2">Addition to Ontology 2</th>
             </tr>
-            
             <tr class="addition">
                <td>2</td>
                <td colspan="2">E<span class="subclass"> SubClassOf </span>B<br><span class="keyword"> or </span>(r<span class="some"> some </span>C). <br><i>New Terms: r</i></td>
             </tr>
-            
          </tbody>
-         
-         
-         
-         
-         
-         
-         
          <tbody id="arewrite" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
@@ -188,19 +169,15 @@
                <th class="normaladd">Justifications in Ontology 1</th>
                <th class="addition">Axiom in Ontology 2</th>
             </tr>
-            
             <tr class="addition">
                <td rowspan="1">3</td>
-               <td><i>(1)</i>&nbsp; F<span class="subclass"> SubClassOf </span>I. <br><i>(2)</i>&nbsp; F<span class="subclass"> SubClassOf </span>G. <br></td>
+               <td><i>(1)</i>&nbsp; F<span class="subclass"> SubClassOf </span>I. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; F<span class="subclass"> SubClassOf </span>G. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
                <td rowspan="1">F<span class="subclass"> SubClassOf </span>G<br><span class="keyword"> and </span>I. 
                </td>
             </tr>
-            
          </tbody>
-         
-         
-         
-         
          <tbody id="aavred" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3"><a name="aavred"></a><h4 style="display: inline-block;">Reshuffle Restrospective Redundant (4)</h4> [<a href="#">back to top</a>]
@@ -211,42 +188,39 @@
                <th class="normaladd">Justifications in Ontology 1</th>
                <th class="addition">Axiom in Ontology 2</th>
             </tr>
-            
             <tr class="addition">
                <td rowspan="1">4</td>
                <td><i>(1)</i>&nbsp; A<span class="subclass"> SubClassOf </span>C. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div>
                </td>
                <td rowspan="1">A<span class="subclass"> SubClassOf </span>B<br><span class="keyword"> or </span>C. 
                </td>
             </tr>
-            
             <tr class="addition">
                <td rowspan="1">5</td>
                <td><i>(1)</i>&nbsp; D<span class="subclass"> EquivalentTo </span>E. 
-               </td>
-               <td rowspan="1">D<span class="subclass"> SubClassOf </span>E<br><span class="keyword"> or </span>G. 
-               </td>
-            </tr>
-            
-            <tr class="addition">
-               <td rowspan="1">6</td>
-               <td><i>(1)</i>&nbsp; D<span class="subclass"> EquivalentTo </span>E. 
-               </td>
-               <td rowspan="1">E<span class="subclass"> SubClassOf </span>D. 
-               </td>
-            </tr>
-            
-            <tr class="addition">
-               <td rowspan="1">7</td>
-               <td><i>(1)</i>&nbsp; D<span class="subclass"> EquivalentTo </span>E. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div>
                </td>
                <td rowspan="1">D<span class="subclass"> SubClassOf </span>E. 
                </td>
             </tr>
-            
+            <tr class="addition">
+               <td rowspan="1">6</td>
+               <td><i>(1)</i>&nbsp; D<span class="subclass"> EquivalentTo </span>E. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div>
+               </td>
+               <td rowspan="1">D<span class="subclass"> SubClassOf </span>E<br><span class="keyword"> or </span>G. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">7</td>
+               <td><i>(1)</i>&nbsp; D<span class="subclass"> EquivalentTo </span>E. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div>
+               </td>
+               <td rowspan="1">E<span class="subclass"> SubClassOf </span>D. 
+               </td>
+            </tr>
          </tbody>
-         
-         
          <tbody id="aweak" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
@@ -258,19 +232,20 @@
                <th class="normaladd">Justifications in Ontology 1</th>
                <th class="addition">Axiom in Ontology 2</th>
             </tr>
-            
             <tr class="addition">
-               <td rowspan="2">5</td>
-               <td><i>(1)</i>&nbsp; D<span class="subclass"> SubClassOf </span>F. <br><i>(2)</i>&nbsp; F<span class="subclass"> SubClassOf </span>G. <br></td>
+               <td rowspan="2">6</td>
+               <td><i>(1)</i>&nbsp; D<span class="subclass"> SubClassOf </span>F. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; F<span class="subclass"> SubClassOf </span>G. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
                <td rowspan="2">D<span class="subclass"> SubClassOf </span>E<br><span class="keyword"> or </span>G. 
                </td>
             </tr>
             <tr class="addition">
-               <td><i>(1)</i>&nbsp; D<span class="subclass"> SubClassOf </span>F. <br><i>(2)</i>&nbsp; F<span class="subclass"> SubClassOf </span>G<br><span class="keyword"> and </span>I<br><span class="keyword"> and </span>J. <br></td>
+               <td><i>(1)</i>&nbsp; D<span class="subclass"> SubClassOf </span>F. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; F<span class="subclass"> SubClassOf </span>G<br><span class="keyword"> and </span>I<br><span class="keyword"> and </span>J. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
             </tr>
-            
          </tbody>
-         
          <tbody id="apseudopred" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
@@ -282,24 +257,15 @@
                <th class="normaladd">Justifications in Ontology 1</th>
                <th class="addition">Axiom in Ontology 2</th>
             </tr>
-            
             <tr class="addition">
                <td rowspan="1">3</td>
                <td><i>(1)</i>&nbsp; F<span class="subclass"> SubClassOf </span>G<br><span class="keyword"> and </span>I<br><span class="keyword"> and </span>J. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div>
                </td>
                <td rowspan="1">F<span class="subclass"> SubClassOf </span>G<br><span class="keyword"> and </span>I. 
                </td>
             </tr>
-            
          </tbody>
-         
-         
-         
-         
-         
-         
-         
-         
          <tbody id="weakrt" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3"><a name="weakening"></a><h4 style="display: inline-block;">Weakenings with Retired Terms (1)</h4> [<a href="#">back to top</a>]
@@ -310,7 +276,6 @@
                <th class="removal">Stronger Axiom in Ontology 1</th>
                <th class="normalrem">Weakened Axiom in Ontology 2</th>
             </tr>
-            
             <tr class="removal">
                <td>8</td>
                <td>F<span class="subclass"> SubClassOf </span>G<br><span class="keyword"> and </span>I<br><span class="keyword"> and </span>J. 
@@ -318,10 +283,22 @@
                </td>
                <td>F<span class="subclass"> SubClassOf </span>G<br><span class="keyword"> and </span>I.<br><i>Retired Terms: J</i></td>
             </tr>
-            
          </tbody>
-         
-         
+         <tbody id="retdesc" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Retired Descriptions (1)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal" colspan="2">Retired Description Axiom in Ontology 1</th>
+            </tr>
+            <tr class="removal">
+               <td>9</td>
+               <td colspan="2">B<span class="subclass"> EquivalentTo </span>M<br><span class="keyword"> and </span>N.<br><i>Retired Terms: N, M</i></td>
+            </tr>
+         </tbody>
          <tbody id="rem" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
@@ -332,21 +309,11 @@
                <th class="removal">ID</th>
                <th class="removal" colspan="2">Removal from Ontology 1</th>
             </tr>
-            
             <tr class="removal">
-               <td>9</td>
+               <td>10</td>
                <td colspan="2">D<span class="subclass"> SubClassOf </span>F.<br></td>
             </tr>
-            
          </tbody>
-         
-         
-         
-         
-         
-         
-         
-         
          <tbody id="rrewrite" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
@@ -358,22 +325,18 @@
                <th class="removal">Axiom in Ontology 1</th>
                <th class="normalrem">Justifications in Ontology 2</th>
             </tr>
-            
             <tr class="removal">
-               <td rowspan="1">10</td>
+               <td rowspan="1">11</td>
                <td rowspan="1">D<span class="subclass"> EquivalentTo </span>E. 
                   			
                </td>
                <td><i>(1)</i>&nbsp; D<span class="subclass"> SubClassOf </span>E. 
-                  						<br><i>(2)</i>&nbsp; E<span class="subclass"> SubClassOf </span>D. 
-                  						<br></td>
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; E<span class="subclass"> SubClassOf </span>D. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
             </tr>
-            
          </tbody>
-         
-         
-         
-         
          <tbody id="ravred" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3"><a name="ravred"></a><h4 style="display: inline-block;">Reshuffle Prospective Redundant (3)</h4> [<a href="#">back to top</a>]
@@ -384,41 +347,38 @@
                <th class="removal">Axiom in Ontology 1</th>
                <th class="normalrem">Justifications in Ontology 2</th>
             </tr>
-            
-            <tr class="removal">
-               <td rowspan="1">11</td>
-               <td rowspan="1">F<span class="subclass"> SubClassOf </span>I. 
-                  			
-               </td>
-               <td><i>(1)</i>&nbsp; F<span class="subclass"> SubClassOf </span>G<br><span class="keyword"> and </span>I. 
-                  						
-               </td>
-            </tr>
-            
             <tr class="removal">
                <td rowspan="1">12</td>
-               <td rowspan="1">F<span class="subclass"> SubClassOf </span>G. 
-                  			
-               </td>
-               <td><i>(1)</i>&nbsp; F<span class="subclass"> SubClassOf </span>G<br><span class="keyword"> and </span>I. 
-                  						
-               </td>
-            </tr>
-            
-            <tr class="removal">
-               <td rowspan="1">13</td>
                <td rowspan="1">A<span class="subclass"> SubClassOf </span>C. 
                   			
                </td>
                <td><i>(1)</i>&nbsp; B<span class="subclass"> SubClassOf </span>C. 
                   						
                   <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; A<span class="subclass"> SubClassOf </span>B<br><span class="keyword"> or </span>C. 
-                  						<br></td>
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
             </tr>
-            
+            <tr class="removal">
+               <td rowspan="1">13</td>
+               <td rowspan="1">F<span class="subclass"> SubClassOf </span>G. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; F<span class="subclass"> SubClassOf </span>G<br><span class="keyword"> and </span>I. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div>
+               </td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">14</td>
+               <td rowspan="1">F<span class="subclass"> SubClassOf </span>I. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; F<span class="subclass"> SubClassOf </span>G<br><span class="keyword"> and </span>I. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div>
+               </td>
+            </tr>
          </tbody>
-         
-         
          <tbody id="rst" style="display:none">
             <tr class="withoutstyle">
                <td colspan="3">
@@ -430,25 +390,18 @@
                <th class="removal">Axiom in Ontology 1</th>
                <th class="normalrem">Justifications in Ontology 2</th>
             </tr>
-            
             <tr class="removal">
-               <td rowspan="1">13</td>
+               <td rowspan="1">12</td>
                <td rowspan="1">A<span class="subclass"> SubClassOf </span>C. 
                   			
                </td>
                <td><i>(1)</i>&nbsp; A<span class="subclass"> SubClassOf </span>B. 
-                  						<br><i>(2)</i>&nbsp; B<span class="subclass"> SubClassOf </span>C. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; B<span class="subclass"> SubClassOf </span>C. 
                   						
                   <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
             </tr>
-            
          </tbody>
-         
-         
-         
-         
-         
-         
          <tr class="withoutstyle">
             <td>&nbsp;</td>
          </tr>
