@@ -101,13 +101,15 @@ public class WebDiff extends HttpServlet {
 //		String xsltPath = "/usr/local/apache-tomcat-7.0.37/webapps/diff/xslt_server.xsl"; // Mac Pro
 //		String xsltPath = "/Users/rafa/Documents/PhD/workspace/ecco-webui/WebContent/xslt_server.xsl"; // MacBook Pro
 		String styledXml = "";
-		if(request.getSession().getAttribute("report") != null) {
-			XMLReport report = (XMLReport) request.getSession().getAttribute("report");
-			String currentId = (String) request.getSession().getAttribute("curuuid");
-			Document doc = (Document) request.getSession().getAttribute(currentId);
-			styledXml = report.getReportAsHTML(doc, xsltPath);
-		}
-		else {
+		
+//		if(request.getSession().getAttribute("report") != null) {
+//			XMLReport report = (XMLReport) request.getSession().getAttribute("report");
+//			String currentId = (String) request.getSession().getAttribute("curuuid");
+//			Document doc = (Document) request.getSession().getAttribute(currentId);
+//			styledXml = report.getReportAsHTML(doc, xsltPath);
+//		}
+//		else {
+		
 			EccoRunner runner = new EccoRunner(true, false, true, false, false);
 			// Load ontologies
 			loadOntologies(pw, request, response, runner);
@@ -139,7 +141,7 @@ public class WebDiff extends HttpServlet {
 				styledXml = report.getReportAsHTML(labelDoc, xsltPath);
 				request.getSession().setAttribute("curuuid", lb_uuid);
 			}
-		}
+//		}
 		response.setContentType("text/html");
 		pw.println(styledXml);
 		pw.flush();

@@ -1,0 +1,974 @@
+<html xmlns:ecco="http://owl.cs.manchester.ac.uk/diff">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ecco</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/reveal.css"><script type="text/javascript" src="js/jquery-1.4.4.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery.checkboxtree.js"></script><script type="text/javascript" src="js/jquery.reveal.js"></script><script type="text/javascript" src="js/jscript.js"></script></head>
+   <body>
+      <h1><br></h1>
+      				[<a href="index.jsp">Back Home</a>]
+      				
+      <form action="getXml" method="post" class="inl">
+         						[<a id="top3" target="_blank" href="EccoChangeSet_gensyms.xml">Source XML</a>]
+         					
+      </form><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp;
+      				[<a id="top1" href="javascript:;" onClick="showAll();$('#tree1').checkboxTree('expandAll');$('#tree2').checkboxTree('expandAll')">Show All</a> | 
+      				<a id="top2" href="javascript:;" onClick="hideAll();$('#tree1').checkboxTree('collapseAll');$('#tree2').checkboxTree('collapseAll');">Hide All</a>] 
+      				[<a id="genViewPerml" href="#" onclick="setPermalink();">Generate View Permalink</a>]
+      				
+      <div id="view-plink-modal" class="reveal-modal">
+         <h3>view-permalink</h3><textarea id="view-plink" rows="3" cols="60" readonly="true" style="resize: none;"></textarea><br>
+         					[<a href="javascript:;" onclick="select_all('view-plink');">Select all</a>]
+         					<a class="close-reveal-modal">x</a></div><br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="9dc1ba22-8454-4095-aea7-09b376d0391a-gs"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
+      <table width="70%" style="table-layout:fixed;">
+         <tr>
+            <th class="topright"><input type="checkbox" name="removals" onClick="toggleGroup('removals')">  
+               <h3 style="display:inline;">Removals (47)</h3>
+            </th>
+            <th class="topleft"><input type="checkbox" name="additions" onClick="toggleGroup('additions')">  
+               <h3 style="display:inline;">Additions (95)</h3>
+            </th>
+         </tr>
+         <tr>
+            <td class="topright">
+               <ul id="tree1">
+                  <li>  <input type="checkbox" name="effRemsTrigger" onClick="toggleChanges('effRems','effRemsTrigger')">  
+                     <h4 style="display:inline;">Effectual (15)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, and are not entailed by Ontology 2');"><ul>
+                        <li>  Weakenings (0)</li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li id="retdesctrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effRems" onClick="toggleDiv('retdesc');">  <a href="#retdesc">Retired Descriptions (15)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing retired terms, i.e., terms that no longer exist in Ontology 2');"></li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pure Removals (0)
+                        </li><br></ul>
+                  </li><br><li>  <input type="checkbox" name="ineffRemsTrigger" onClick="toggleChanges('ineffRems','ineffRemsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (32)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, but are entailed by Ontology 2, i.e., that have been removed but are still entailed');"><ul>
+                        <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('ravred','rst','rpsnovred');">  <b>Prospective Redundancy (32)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 1 for which there are more constraining related axioms in Ontology 2');"><ul style="display:none">
+                              <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Reshuffle (0)
+                              </li>
+                              <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst','rpsnovred');">  <b>Retired Prospective Redundancy (32)</b><b id="t1"></b>  
+                                 <ul style="display:none">
+                                    <li id="rsttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst');">  <a href="#rst">Novel (32)</a></li>
+                                    <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pseudo Novel (0)
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+            <td class="topleft" style="vertical-align:top">
+               <ul id="tree2">
+                  <li>  <input type="checkbox" name="effAddsTrigger" onClick="toggleChanges('effAdds','effAddsTrigger')">  
+                     <h4 style="display:inline;">Effectual (95)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, and are not entailed by Ontology 1');"><ul>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Strengthenings (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li id="newdesctrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('newdesc');">  <a href="#newdesc">New Descriptions (70)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing newly created terms, i.e., terms that did not exist in Ontology 1');"></li>
+                        <li>  <input type="checkbox" name="effAdds" onClick="toggleDiv('add','addnt');">  <b>Pure Additions (25)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 1; typically related to hierachy changes');"><ul style="display:none">
+                              <li id="addtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('add');">  <a href="#add">With Shared Terms (10)</a></li>
+                              <li id="addnttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('addnt');">  <a href="#addnt">With New Terms (15)</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li><br><li>  <input type="checkbox" name="ineffAddsTrigger" onClick="toggleChanges('ineffAdds','ineffAddsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (0)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, but are entailed by Ontology 1, i.e., that have been added but were already entailed');"><ul>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Retrospective Redundancy (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td class="topright">[<a href="javascript:void(0);" id="tree1-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree1-collapseAll">Collapse All</a>]
+            </td>
+            <td class="topleft">[<a href="javascript:void(0);" id="tree2-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree2-collapseAll">Collapse All</a>]
+            </td>
+         </tr>
+      </table>
+      <table width="100%" style="table-layout:fixed;">
+         <colgroup>
+            <col>
+            <col width="47.5%">
+            <col width="47.5%">
+         </colgroup>
+         <tbody id="newdesc" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">New Descriptions (70)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">New Description Axiom in Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td>4</td>
+               <td colspan="2">AGQ4<span class="subclass"> SubClassOf </span>ADE2. <br><i>New Terms: AGQ4</i></td>
+            </tr>
+            <tr class="addition">
+               <td>3</td>
+               <td colspan="2">AGQ4<span class="subclass"> SubClassOf </span>AGS4. <br><i>New Terms: AGQ4, AGS4</i></td>
+            </tr>
+            <tr class="addition">
+               <td>2</td>
+               <td colspan="2">AGS4<span class="subclass"> SubClassOf </span>TD5. <br><i>New Terms: AGS4</i></td>
+            </tr>
+            <tr class="addition">
+               <td>6</td>
+               <td colspan="2">AIB1<span class="subclass"> SubClassOf </span>TW6. <br><i>New Terms: AIB1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>12</td>
+               <td colspan="2">AIG2<span class="subclass"> SubClassOf </span>PJ4. <br><i>New Terms: AIG2</i></td>
+            </tr>
+            <tr class="addition">
+               <td>5</td>
+               <td colspan="2">AIK1<span class="subclass"> SubClassOf </span>ADE2. <br><i>New Terms: AIK1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>10</td>
+               <td colspan="2">ALA8<span class="subclass"> SubClassOf </span>RJ2. <br><i>New Terms: ALA8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>9</td>
+               <td colspan="2">ALH6<span class="subclass"> SubClassOf </span>RJ2. <br><i>New Terms: ALH6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>11</td>
+               <td colspan="2">ALQ2<span class="subclass"> SubClassOf </span>QQ9. <br><i>New Terms: ALQ2</i></td>
+            </tr>
+            <tr class="addition">
+               <td>48</td>
+               <td colspan="2">ALW9<span class="subclass"> SubClassOf </span>YA7. <br><i>New Terms: ALW9</i></td>
+            </tr>
+            <tr class="addition">
+               <td>47</td>
+               <td colspan="2">ALX1<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: ALX1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>46</td>
+               <td colspan="2">ALX3<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: ALX3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>55</td>
+               <td colspan="2">ALX5<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: ALX5</i></td>
+            </tr>
+            <tr class="addition">
+               <td>54</td>
+               <td colspan="2">ALX6<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: ALX6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>52</td>
+               <td colspan="2">ALX7<span class="subclass"> SubClassOf </span>AGC6. <br><i>New Terms: ALX7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>53</td>
+               <td colspan="2">ALX7<span class="subclass"> SubClassOf </span>AGC7. <br><i>New Terms: ALX7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>51</td>
+               <td colspan="2">ALX8<span class="subclass"> SubClassOf </span>ZB4. <br><i>New Terms: ALX8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>50</td>
+               <td colspan="2">ALX9<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: ALX9</i></td>
+            </tr>
+            <tr class="addition">
+               <td>49</td>
+               <td colspan="2">ALY1<span class="subclass"> SubClassOf </span>ALF2. <br><i>New Terms: ALY1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>56</td>
+               <td colspan="2">ALZ1<span class="subclass"> SubClassOf </span>AGQ6. <br><i>New Terms: ALZ1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>61</td>
+               <td colspan="2">ALZ3<span class="subclass"> SubClassOf </span>HP5. <br><i>New Terms: ALZ3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>58</td>
+               <td colspan="2">ALZ4<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: ALZ4</i></td>
+            </tr>
+            <tr class="addition">
+               <td>57</td>
+               <td colspan="2">ALZ5<span class="subclass"> SubClassOf </span>AGQ6. <br><i>New Terms: ALZ5</i></td>
+            </tr>
+            <tr class="addition">
+               <td>60</td>
+               <td colspan="2">ALZ6<span class="subclass"> SubClassOf </span>AIL7. <br><i>New Terms: ALZ6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>59</td>
+               <td colspan="2">ALZ8<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: ALZ8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>36</td>
+               <td colspan="2">AMB9<span class="subclass"> SubClassOf </span>UO5. <br><i>New Terms: AMB9</i></td>
+            </tr>
+            <tr class="addition">
+               <td>38</td>
+               <td colspan="2">AMC2<span class="subclass"> SubClassOf </span>CD7. <br><i>New Terms: AMC2</i></td>
+            </tr>
+            <tr class="addition">
+               <td>37</td>
+               <td colspan="2">AMC3<span class="subclass"> SubClassOf </span>CD7. <br><i>New Terms: AMC3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>40</td>
+               <td colspan="2">AMC4<span class="subclass"> SubClassOf </span>ABA5. <br><i>New Terms: AMC4</i></td>
+            </tr>
+            <tr class="addition">
+               <td>39</td>
+               <td colspan="2">AMC5<span class="subclass"> SubClassOf </span>ABA5. <br><i>New Terms: AMC5</i></td>
+            </tr>
+            <tr class="addition">
+               <td>42</td>
+               <td colspan="2">AMC6<span class="subclass"> SubClassOf </span>ALF2. <br><i>New Terms: AMC6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>41</td>
+               <td colspan="2">AMC7<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: AMC7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>44</td>
+               <td colspan="2">AMC8<span class="subclass"> SubClassOf </span>ALF2. <br><i>New Terms: AMC8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>43</td>
+               <td colspan="2">AMC9<span class="subclass"> SubClassOf </span>QU7. <br><i>New Terms: AMC9</i></td>
+            </tr>
+            <tr class="addition">
+               <td>45</td>
+               <td colspan="2">AMD1<span class="subclass"> SubClassOf </span>ATL6. <br><i>New Terms: AMD1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>64</td>
+               <td colspan="2">ANI6<span class="subclass"> SubClassOf </span>AVW3. <br><i>New Terms: ANI6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>65</td>
+               <td colspan="2">ANI7<span class="subclass"> SubClassOf </span>AVW3. <br><i>New Terms: ANI7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>66</td>
+               <td colspan="2">ANI8<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: ANI8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>62</td>
+               <td colspan="2">ANJ2<span class="subclass"> SubClassOf </span>ZD2. <br><i>New Terms: ANJ2</i></td>
+            </tr>
+            <tr class="addition">
+               <td>63</td>
+               <td colspan="2">ANJ3<span class="subclass"> SubClassOf </span>AVW3. <br><i>New Terms: ANJ3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>15</td>
+               <td colspan="2">AOA6<span class="subclass"> SubClassOf </span>UO5. <br><i>New Terms: AOA6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>13</td>
+               <td colspan="2">APK1<span class="subclass"> SubClassOf </span>PJ4. <br><i>New Terms: APK1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>7</td>
+               <td colspan="2">APZ9<span class="subclass"> SubClassOf </span>TW6. <br><i>New Terms: APZ9</i></td>
+            </tr>
+            <tr class="addition">
+               <td>19</td>
+               <td colspan="2">AVR6<span class="subclass"> SubClassOf </span>AOG4. <br><i>New Terms: AVR6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>18</td>
+               <td colspan="2">AVR7<span class="subclass"> SubClassOf </span>AOG4. <br><i>New Terms: AVR7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>17</td>
+               <td colspan="2">AVR8<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: AVR8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>16</td>
+               <td colspan="2">AVR9<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: AVR9</i></td>
+            </tr>
+            <tr class="addition">
+               <td>20</td>
+               <td colspan="2">AVS2<span class="subclass"> SubClassOf </span>AOG4. <br><i>New Terms: AVS2</i></td>
+            </tr>
+            <tr class="addition">
+               <td>21</td>
+               <td colspan="2">AVS3<span class="subclass"> SubClassOf </span>AOG4. <br><i>New Terms: AVS3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>22</td>
+               <td colspan="2">AVS5<span class="subclass"> SubClassOf </span>AOG4. <br><i>New Terms: AVS5</i></td>
+            </tr>
+            <tr class="addition">
+               <td>23</td>
+               <td colspan="2">AVS6<span class="subclass"> SubClassOf </span>AOG4. <br><i>New Terms: AVS6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>24</td>
+               <td colspan="2">AVS7<span class="subclass"> SubClassOf </span>YI9. <br><i>New Terms: AVS7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>25</td>
+               <td colspan="2">AVS9<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: AVS9</i></td>
+            </tr>
+            <tr class="addition">
+               <td>26</td>
+               <td colspan="2">AVT3<span class="subclass"> SubClassOf </span>AIL7. <br><i>New Terms: AVT3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>28</td>
+               <td colspan="2">AVT4<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: AVT4</i></td>
+            </tr>
+            <tr class="addition">
+               <td>27</td>
+               <td colspan="2">AVT6<span class="subclass"> SubClassOf </span>AIL7. <br><i>New Terms: AVT6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>30</td>
+               <td colspan="2">AVT8<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: AVT8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>29</td>
+               <td colspan="2">AVT9<span class="subclass"> SubClassOf </span>ALF2. <br><i>New Terms: AVT9</i></td>
+            </tr>
+            <tr class="addition">
+               <td>35</td>
+               <td colspan="2">AWB3<span class="subclass"> SubClassOf </span>QU7. <br><i>New Terms: AWB3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>32</td>
+               <td colspan="2">AWB6<span class="subclass"> SubClassOf </span>UX7. <br><i>New Terms: AWB6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>31</td>
+               <td colspan="2">AWB7<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: AWB7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>34</td>
+               <td colspan="2">AWB8<span class="subclass"> SubClassOf </span>VB6. <br><i>New Terms: AWB8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>33</td>
+               <td colspan="2">AWB9<span class="subclass"> SubClassOf </span>SB5. <br><i>New Terms: AWB9</i></td>
+            </tr>
+            <tr class="addition">
+               <td>8</td>
+               <td colspan="2">BCW8<span class="subclass"> SubClassOf </span>QR2. <br><i>New Terms: BCW8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>1</td>
+               <td colspan="2">BDC6<span class="subclass"> SubClassOf </span>RH9. <br><i>New Terms: BDC6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>68</td>
+               <td colspan="2">MY1<span class="subclass"> SubClassOf </span>MK8. <br><i>New Terms: MY1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>69</td>
+               <td colspan="2">ND9<span class="subclass"> SubClassOf </span>MK8. <br><i>New Terms: ND9</i></td>
+            </tr>
+            <tr class="addition">
+               <td>70</td>
+               <td colspan="2">NF9<span class="subclass"> SubClassOf </span>MK8. <br><i>New Terms: NF9</i></td>
+            </tr>
+            <tr class="addition">
+               <td>67</td>
+               <td colspan="2">NT6<span class="subclass"> SubClassOf </span>MK8. <br><i>New Terms: NT6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>14</td>
+               <td colspan="2">RY5<span class="subclass"> SubClassOf </span>AGS4. <br><i>New Terms: RY5, AGS4</i></td>
+            </tr>
+         </tbody>
+         <tbody id="add" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Pure Additions with Shared Terms (10)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">Addition to Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td>71</td>
+               <td colspan="2">AAB4<span class="subclass"> SubClassOf </span>AAK7. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>79</td>
+               <td colspan="2">AAI4<span class="subclass"> SubClassOf </span>AIJ3. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>80</td>
+               <td colspan="2">AFU6<span class="subclass"> SubClassOf </span>AIJ3. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>78</td>
+               <td colspan="2">AIE2<span class="subclass"> SubClassOf </span>AVH3. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>73</td>
+               <td colspan="2">KY6<span class="subclass"> SubClassOf </span>OM6. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>72</td>
+               <td colspan="2">KY6<span class="subclass"> SubClassOf </span>X6. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>75</td>
+               <td colspan="2">NM9<span class="subclass"> SubClassOf </span>OM7. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>74</td>
+               <td colspan="2">NM9<span class="subclass"> SubClassOf </span>X6. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>76</td>
+               <td colspan="2">VD9<span class="subclass"> SubClassOf </span>ADL3. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>77</td>
+               <td colspan="2">VD9<span class="subclass"> SubClassOf </span>VZ5. <br></td>
+            </tr>
+         </tbody>
+         <tbody id="addnt" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3"><a name="add"></a><h4 style="display: inline-block;">Pure Additions with New Terms (15)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">Addition to Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td>86</td>
+               <td colspan="2">AAJ8<span class="subclass"> SubClassOf </span>ALX7. <br><i>New Terms: ALX7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>85</td>
+               <td colspan="2">ABL5<span class="subclass"> SubClassOf </span>ALZ8. <br><i>New Terms: ALZ8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>84</td>
+               <td colspan="2">ABM1<span class="subclass"> SubClassOf </span>ALZ8. <br><i>New Terms: ALZ8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>82</td>
+               <td colspan="2">AHZ5<span class="subclass"> SubClassOf </span>ALY1. <br><i>New Terms: ALY1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>83</td>
+               <td colspan="2">AIE5<span class="subclass"> SubClassOf </span>ALX7. <br><i>New Terms: ALX7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>81</td>
+               <td colspan="2">AIR4<span class="subclass"> SubClassOf </span>AMC7. <br><i>New Terms: AMC7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>95</td>
+               <td colspan="2">D6<span class="subclass"> SubClassOf </span>AWB3. <br><i>New Terms: AWB3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>94</td>
+               <td colspan="2">XP2<span class="subclass"> SubClassOf </span>ALX7. <br><i>New Terms: ALX7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>93</td>
+               <td colspan="2">XP3<span class="subclass"> SubClassOf </span>ALX7. <br><i>New Terms: ALX7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>92</td>
+               <td colspan="2">XP4<span class="subclass"> SubClassOf </span>ALX7. <br><i>New Terms: ALX7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>88</td>
+               <td colspan="2">YX7<span class="subclass"> SubClassOf </span>ALX7. <br><i>New Terms: ALX7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>89</td>
+               <td colspan="2">YZ6<span class="subclass"> SubClassOf </span>ALX7. <br><i>New Terms: ALX7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>90</td>
+               <td colspan="2">YZ7<span class="subclass"> SubClassOf </span>ALX7. <br><i>New Terms: ALX7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>91</td>
+               <td colspan="2">ZA1<span class="subclass"> SubClassOf </span>ALX7. <br><i>New Terms: ALX7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>87</td>
+               <td colspan="2">ZD4<span class="subclass"> SubClassOf </span>AMC7. <br><i>New Terms: AMC7</i></td>
+            </tr>
+         </tbody>
+         <tbody id="retdesc" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Retired Descriptions (15)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal" colspan="2">Retired Description Axiom in Ontology 1</th>
+            </tr>
+            <tr class="removal">
+               <td>106</td>
+               <td colspan="2">ASS7<span class="subclass"> SubClassOf </span>QQ9.<br><i>Retired Terms: ASS7</i></td>
+            </tr>
+            <tr class="removal">
+               <td>104</td>
+               <td colspan="2">ASW6<span class="subclass"> SubClassOf </span>RJ2.<br><i>Retired Terms: ASW6</i></td>
+            </tr>
+            <tr class="removal">
+               <td>105</td>
+               <td colspan="2">ASW9<span class="subclass"> SubClassOf </span>RJ2.<br><i>Retired Terms: ASW9</i></td>
+            </tr>
+            <tr class="removal">
+               <td>100</td>
+               <td colspan="2">AUZ6<span class="subclass"> SubClassOf </span>ADE2.<br><i>Retired Terms: AUZ6</i></td>
+            </tr>
+            <tr class="removal">
+               <td>107</td>
+               <td colspan="2">AVB2<span class="subclass"> SubClassOf </span>PJ4.<br><i>Retired Terms: AVB2</i></td>
+            </tr>
+            <tr class="removal">
+               <td>101</td>
+               <td colspan="2">AVE1<span class="subclass"> SubClassOf </span>TW6.<br><i>Retired Terms: AVE1</i></td>
+            </tr>
+            <tr class="removal">
+               <td>108</td>
+               <td colspan="2">AVS1<span class="subclass"> SubClassOf </span>PJ4.<br><i>Retired Terms: AVS1</i></td>
+            </tr>
+            <tr class="removal">
+               <td>96</td>
+               <td colspan="2">AYK4<span class="subclass"> SubClassOf </span>RH9.<br><i>Retired Terms: AYK4</i></td>
+            </tr>
+            <tr class="removal">
+               <td>103</td>
+               <td colspan="2">AYO8<span class="subclass"> SubClassOf </span>QR2.<br><i>Retired Terms: AYO8</i></td>
+            </tr>
+            <tr class="removal">
+               <td>99</td>
+               <td colspan="2">BAQ7<span class="subclass"> SubClassOf </span>ADE2.<br><i>Retired Terms: BAQ7</i></td>
+            </tr>
+            <tr class="removal">
+               <td>98</td>
+               <td colspan="2">BAQ7<span class="subclass"> SubClassOf </span>BAT3.<br><i>Retired Terms: BAQ7, BAT3</i></td>
+            </tr>
+            <tr class="removal">
+               <td>97</td>
+               <td colspan="2">BAT3<span class="subclass"> SubClassOf </span>TD5.<br><i>Retired Terms: BAT3</i></td>
+            </tr>
+            <tr class="removal">
+               <td>102</td>
+               <td colspan="2">MA4<span class="subclass"> SubClassOf </span>TW6.<br><i>Retired Terms: MA4</i></td>
+            </tr>
+            <tr class="removal">
+               <td>109</td>
+               <td colspan="2">QW8<span class="subclass"> SubClassOf </span>BAT3.<br><i>Retired Terms: QW8, BAT3</i></td>
+            </tr>
+            <tr class="removal">
+               <td>110</td>
+               <td colspan="2">ZR1<span class="subclass"> SubClassOf </span>UO5.<br><i>Retired Terms: ZR1</i></td>
+            </tr>
+         </tbody>
+         <tbody id="rst" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Prospective Novel Redundant (32)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal">Axiom in Ontology 1</th>
+               <th class="normalrem">Justifications in Ontology 2</th>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">111</td>
+               <td rowspan="1">AAB3<span class="subclass"> SubClassOf </span>AAK7. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AAB4<span class="subclass"> SubClassOf </span>AAK7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; AAB3<span class="subclass"> SubClassOf </span>AAB4. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">126</td>
+               <td rowspan="1">AAJ8<span class="subclass"> SubClassOf </span>AGC6. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AAJ8<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC6. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">127</td>
+               <td rowspan="1">AAJ8<span class="subclass"> SubClassOf </span>AGC7. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AAJ8<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">122</td>
+               <td rowspan="1">AHZ5<span class="subclass"> SubClassOf </span>ALF2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; ALY1<span class="subclass"> SubClassOf </span>ALF2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; AHZ5<span class="subclass"> SubClassOf </span>ALY1. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">125</td>
+               <td rowspan="1">AIE2<span class="subclass"> SubClassOf </span>AIL7. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AVH3<span class="subclass"> SubClassOf </span>AIL7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; AIE2<span class="subclass"> SubClassOf </span>AVH3. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">123</td>
+               <td rowspan="1">AIE5<span class="subclass"> SubClassOf </span>AGC6. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AIE5<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC6. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">124</td>
+               <td rowspan="1">AIE5<span class="subclass"> SubClassOf </span>AGC7. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AIE5<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">121</td>
+               <td rowspan="1">AIR4<span class="subclass"> SubClassOf </span>HU2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AMC7<span class="subclass"> SubClassOf </span>HU2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; AIR4<span class="subclass"> SubClassOf </span>AMC7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">116</td>
+               <td rowspan="1">IO6<span class="subclass"> SubClassOf </span>ADL3. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; IO6<span class="subclass"> SubClassOf </span>VD9. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; VD9<span class="subclass"> SubClassOf </span>ADL3. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">117</td>
+               <td rowspan="1">IO6<span class="subclass"> SubClassOf </span>VZ5. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; IO6<span class="subclass"> SubClassOf </span>VD9. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; VD9<span class="subclass"> SubClassOf </span>VZ5. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">114</td>
+               <td rowspan="1">IP5<span class="subclass"> SubClassOf </span>ADL3. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; IP5<span class="subclass"> SubClassOf </span>VD9. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; VD9<span class="subclass"> SubClassOf </span>ADL3. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">115</td>
+               <td rowspan="1">IP5<span class="subclass"> SubClassOf </span>VZ5. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; IP5<span class="subclass"> SubClassOf </span>VD9. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; VD9<span class="subclass"> SubClassOf </span>VZ5. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="2">112</td>
+               <td rowspan="2">KY6<span class="subclass"> SubClassOf </span>YT8. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; OM6<span class="subclass"> SubClassOf </span>YT8. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; KY6<span class="subclass"> SubClassOf </span>OM6. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td><i>(1)</i>&nbsp; KY6<span class="subclass"> SubClassOf </span>X6. 
+                  							
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; X6<span class="subclass"> SubClassOf </span>YT8. 
+                  							
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="2">113</td>
+               <td rowspan="2">NM9<span class="subclass"> SubClassOf </span>YT8. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; X6<span class="subclass"> SubClassOf </span>YT8. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; NM9<span class="subclass"> SubClassOf </span>X6. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td><i>(1)</i>&nbsp; OM7<span class="subclass"> SubClassOf </span>YT8. 
+                  							
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; NM9<span class="subclass"> SubClassOf </span>OM7. 
+                  							
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">118</td>
+               <td rowspan="1">QE9<span class="subclass"> SubClassOf </span>ADL3. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; VD9<span class="subclass"> SubClassOf </span>ADL3. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; QE9<span class="subclass"> SubClassOf </span>VD9. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">119</td>
+               <td rowspan="1">QE9<span class="subclass"> SubClassOf </span>VZ5. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; QE9<span class="subclass"> SubClassOf </span>VD9. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; VD9<span class="subclass"> SubClassOf </span>VZ5. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">120</td>
+               <td rowspan="1">VD9<span class="subclass"> SubClassOf </span>AFK4. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; VZ5<span class="subclass"> SubClassOf </span>AFK4. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; VD9<span class="subclass"> SubClassOf </span>VZ5. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">141</td>
+               <td rowspan="1">XP2<span class="subclass"> SubClassOf </span>AGC6. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; XP2<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC6. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">142</td>
+               <td rowspan="1">XP2<span class="subclass"> SubClassOf </span>AGC7. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; XP2<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">139</td>
+               <td rowspan="1">XP3<span class="subclass"> SubClassOf </span>AGC6. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; XP3<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC6. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">140</td>
+               <td rowspan="1">XP3<span class="subclass"> SubClassOf </span>AGC7. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; XP3<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">137</td>
+               <td rowspan="1">XP4<span class="subclass"> SubClassOf </span>AGC6. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; XP4<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC6. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">138</td>
+               <td rowspan="1">XP4<span class="subclass"> SubClassOf </span>AGC7. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; XP4<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">129</td>
+               <td rowspan="1">YX7<span class="subclass"> SubClassOf </span>AGC6. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; YX7<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC6. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">130</td>
+               <td rowspan="1">YX7<span class="subclass"> SubClassOf </span>AGC7. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; YX7<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">131</td>
+               <td rowspan="1">YZ6<span class="subclass"> SubClassOf </span>AGC6. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC6. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; YZ6<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">132</td>
+               <td rowspan="1">YZ6<span class="subclass"> SubClassOf </span>AGC7. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; YZ6<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">133</td>
+               <td rowspan="1">YZ7<span class="subclass"> SubClassOf </span>AGC6. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; YZ7<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC6. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">134</td>
+               <td rowspan="1">YZ7<span class="subclass"> SubClassOf </span>AGC7. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; YZ7<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">135</td>
+               <td rowspan="1">ZA1<span class="subclass"> SubClassOf </span>AGC6. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; ZA1<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC6. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">136</td>
+               <td rowspan="1">ZA1<span class="subclass"> SubClassOf </span>AGC7. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; ZA1<span class="subclass"> SubClassOf </span>ALX7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALX7<span class="subclass"> SubClassOf </span>AGC7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">128</td>
+               <td rowspan="1">ZD4<span class="subclass"> SubClassOf </span>HU2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AMC7<span class="subclass"> SubClassOf </span>HU2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ZD4<span class="subclass"> SubClassOf </span>AMC7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+         </tbody>
+         <tr class="withoutstyle">
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      <div id="shared" style="display:none" class="footnote">Shared axiom between Ontology 1 and 2.</div>
+   </body>
+</html>

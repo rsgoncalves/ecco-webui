@@ -1,0 +1,2166 @@
+<html xmlns:ecco="http://owl.cs.manchester.ac.uk/diff">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ecco</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/reveal.css"><script type="text/javascript" src="js/jquery-1.4.4.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery.checkboxtree.js"></script><script type="text/javascript" src="js/jquery.reveal.js"></script><script type="text/javascript" src="js/jscript.js"></script></head>
+   <body>
+      <h1><br></h1>
+      				[<a href="index.jsp">Back Home</a>]
+      				
+      <form action="getXml" method="post" class="inl">
+         						[<a id="top3" target="_blank" href="EccoChangeSet_names.xml">Source XML</a>]
+         					
+      </form><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp;
+      				[<a id="top1" href="javascript:;" onClick="showAll();$('#tree1').checkboxTree('expandAll');$('#tree2').checkboxTree('expandAll')">Show All</a> | 
+      				<a id="top2" href="javascript:;" onClick="hideAll();$('#tree1').checkboxTree('collapseAll');$('#tree2').checkboxTree('collapseAll');">Hide All</a>] 
+      				[<a id="genViewPerml" href="#" onclick="setPermalink();">Generate View Permalink</a>]
+      				
+      <div id="view-plink-modal" class="reveal-modal">
+         <h3>view-permalink</h3><textarea id="view-plink" rows="3" cols="60" readonly="true" style="resize: none;"></textarea><br>
+         					[<a href="javascript:;" onclick="select_all('view-plink');">Select all</a>]
+         					<a class="close-reveal-modal">x</a></div><br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="e1f2cc95-6151-4214-9482-beba12d3e941"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
+      <table width="70%" style="table-layout:fixed;">
+         <tr>
+            <th class="topright"><input type="checkbox" name="removals" onClick="toggleGroup('removals')">  
+               <h3 style="display:inline;">Removals (186)</h3>
+            </th>
+            <th class="topleft"><input type="checkbox" name="additions" onClick="toggleGroup('additions')">  
+               <h3 style="display:inline;">Additions (246)</h3>
+            </th>
+         </tr>
+         <tr>
+            <td class="topright">
+               <ul id="tree1">
+                  <li>  <input type="checkbox" name="effRemsTrigger" onClick="toggleChanges('effRems','effRemsTrigger')">  
+                     <h4 style="display:inline;">Effectual (166)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, and are not entailed by Ontology 2');"><ul>
+                        <li>  Weakenings (0)</li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li id="retdesctrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effRems" onClick="toggleDiv('retdesc');">  <a href="#retdesc">Retired Descriptions (2)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing retired terms, i.e., terms that no longer exist in Ontology 2');"></li>
+                        <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('rem','remrt');">  <b>Pure Removals (164)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 2; typically related to hierachy changes');"><ul style="display:none">
+                              <li id="remtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('rem');">  <a href="#rem">With Shared Terms (158)</a></li>
+                              <li id="remrttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('remrt');">  <a href="#remrt">With Retired Terms (6)</a></li>
+                           </ul>
+                        </li><br></ul>
+                  </li><br><li>  <input type="checkbox" name="ineffRemsTrigger" onClick="toggleChanges('ineffRems','ineffRemsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (20)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, but are entailed by Ontology 2, i.e., that have been removed but are still entailed');"><ul>
+                        <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('ravred','rst','rpsnovred');">  <b>Prospective Redundancy (20)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 1 for which there are more constraining related axioms in Ontology 2');"><ul style="display:none">
+                              <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Reshuffle (0)
+                              </li>
+                              <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst','rpsnovred');">  <b>Retired Prospective Redundancy (20)</b><b id="t1"></b>  
+                                 <ul style="display:none">
+                                    <li id="rsttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst');">  <a href="#rst">Novel (20)</a></li>
+                                    <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pseudo Novel (0)
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+            <td class="topleft" style="vertical-align:top">
+               <ul id="tree2">
+                  <li>  <input type="checkbox" name="effAddsTrigger" onClick="toggleChanges('effAdds','effAddsTrigger')">  
+                     <h4 style="display:inline;">Effectual (230)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, and are not entailed by Ontology 1');"><ul>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Strengthenings (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li id="newdesctrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('newdesc');">  <a href="#newdesc">New Descriptions (53)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing newly created terms, i.e., terms that did not exist in Ontology 1');"></li>
+                        <li>  <input type="checkbox" name="effAdds" onClick="toggleDiv('add','addnt');">  <b>Pure Additions (177)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 1; typically related to hierachy changes');"><ul style="display:none">
+                              <li id="addtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('add');">  <a href="#add">With Shared Terms (152)</a></li>
+                              <li id="addnttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('addnt');">  <a href="#addnt">With New Terms (25)</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li><br><li>  <input type="checkbox" name="ineffAddsTrigger" onClick="toggleChanges('ineffAdds','ineffAddsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (16)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, but are entailed by Ontology 1, i.e., that have been added but were already entailed');"><ul>
+                        <li>  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aavred','apseudopred','aweak');">  <b>Retrospective Redundancy (16)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 2 for which there are more constraining related axioms in Ontology 1');"><ul style="display:none">
+                              <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Reshuffle (0)
+                              </li>
+                              <li>  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak','apseudopred');">  <b>New Retrospective Redundancy (16)</b>  
+                                 <ul style="display:none">
+                                    <li id="aweaktrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak');">  <a href="#aweak">Novel (16)</a></li>
+                                    <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pseudo Novel (0)
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td class="topright">[<a href="javascript:void(0);" id="tree1-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree1-collapseAll">Collapse All</a>]
+            </td>
+            <td class="topleft">[<a href="javascript:void(0);" id="tree2-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree2-collapseAll">Collapse All</a>]
+            </td>
+         </tr>
+      </table>
+      <table width="100%" style="table-layout:fixed;">
+         <colgroup>
+            <col>
+            <col width="47.5%">
+            <col width="47.5%">
+         </colgroup>
+         <tbody id="newdesc" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">New Descriptions (53)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">New Description Axiom in Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td>1</td>
+               <td colspan="2">BTO_0000332<span class="subclass"> SubClassOf </span>EFO_0000523. <br><i>New Terms: BTO_0000332</i></td>
+            </tr>
+            <tr class="addition">
+               <td>2</td>
+               <td colspan="2">BTO_0000383<span class="subclass"> SubClassOf </span>EFO_0001639. <br><i>New Terms: BTO_0000383</i></td>
+            </tr>
+            <tr class="addition">
+               <td>3</td>
+               <td colspan="2">BTO_0000849<span class="subclass"> SubClassOf </span>EFO_0001639. <br><i>New Terms: BTO_0000849</i></td>
+            </tr>
+            <tr class="addition">
+               <td>4</td>
+               <td colspan="2">BTO_0001202<span class="subclass"> SubClassOf </span>EFO_0000796. <br><i>New Terms: BTO_0001202</i></td>
+            </tr>
+            <tr class="addition">
+               <td>5</td>
+               <td colspan="2">BTO_0001629<span class="subclass"> SubClassOf </span>EFO_0001955. <br><i>New Terms: BTO_0001629</i></td>
+            </tr>
+            <tr class="addition">
+               <td>6</td>
+               <td colspan="2">BTO_0001630<span class="subclass"> SubClassOf </span>EFO_0001955. <br><i>New Terms: BTO_0001630</i></td>
+            </tr>
+            <tr class="addition">
+               <td>7</td>
+               <td colspan="2">BTO_0001699<span class="subclass"> SubClassOf </span>EFO_0000798. <br><i>New Terms: BTO_0001699</i></td>
+            </tr>
+            <tr class="addition">
+               <td>8</td>
+               <td colspan="2">BTO_0001899<span class="subclass"> SubClassOf </span>EFO_0002958. <br><i>New Terms: BTO_0001899</i></td>
+            </tr>
+            <tr class="addition">
+               <td>9</td>
+               <td colspan="2">BTO_0001903<span class="subclass"> SubClassOf </span>EFO_0002958. <br><i>New Terms: BTO_0001903</i></td>
+            </tr>
+            <tr class="addition">
+               <td>10</td>
+               <td colspan="2">BTO_0002217<span class="subclass"> SubClassOf </span>BTO_0000214. <br><i>New Terms: BTO_0002217</i></td>
+            </tr>
+            <tr class="addition">
+               <td>11</td>
+               <td colspan="2">BTO_0003147<span class="subclass"> SubClassOf </span>EFO_0000993. <br><i>New Terms: BTO_0003147</i></td>
+            </tr>
+            <tr class="addition">
+               <td>12</td>
+               <td colspan="2">CL_0000002<span class="subclass"> SubClassOf </span>EFO_0000322. <br><i>New Terms: CL_0000002</i></td>
+            </tr>
+            <tr class="addition">
+               <td>13</td>
+               <td colspan="2">CL_0000007<span class="subclass"> SubClassOf </span>CL_0002321. <br><i>New Terms: CL_0000007</i></td>
+            </tr>
+            <tr class="addition">
+               <td>14</td>
+               <td colspan="2">CL_0000700<span class="subclass"> SubClassOf </span>CL_0000540. <br><i>New Terms: CL_0000700</i></td>
+            </tr>
+            <tr class="addition">
+               <td>15</td>
+               <td colspan="2">CL_0000764<span class="subclass"> SubClassOf </span>CL_0000763. <br><i>New Terms: CL_0000764</i></td>
+            </tr>
+            <tr class="addition">
+               <td>16</td>
+               <td colspan="2">DOID_10113<span class="subclass"> SubClassOf </span>EFO_0001067. <br><i>New Terms: DOID_10113</i></td>
+            </tr>
+            <tr class="addition">
+               <td>17</td>
+               <td colspan="2">EFO_0005017<span class="subclass"> SubClassOf </span>CHEBI_33697. <br><i>New Terms: EFO_0005017</i></td>
+            </tr>
+            <tr class="addition">
+               <td>18</td>
+               <td colspan="2">EFO_0005018<span class="subclass"> SubClassOf </span>EFO_0005017. <br><i>New Terms: EFO_0005018, EFO_0005017</i></td>
+            </tr>
+            <tr class="addition">
+               <td>19</td>
+               <td colspan="2">EFO_0005019<span class="subclass"> SubClassOf </span>OBI_0000869. <br><i>New Terms: OBI_0000869, EFO_0005019</i></td>
+            </tr>
+            <tr class="addition">
+               <td>20</td>
+               <td colspan="2">EFO_0005051<span class="subclass"> SubClassOf </span>EFO_0004170. <br><i>New Terms: EFO_0005051</i></td>
+            </tr>
+            <tr class="addition">
+               <td>21</td>
+               <td colspan="2">EFO_0005052<span class="subclass"> SubClassOf </span>EFO_0001444. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>22</td>
+               <td colspan="2">EFO_0005053<span class="subclass"> SubClassOf </span>EFO_0001444. <br><i>New Terms: EFO_0005053</i></td>
+            </tr>
+            <tr class="addition">
+               <td>23</td>
+               <td colspan="2">EFO_0005054<span class="subclass"> SubClassOf </span>EFO_0004298. <br><i>New Terms: EFO_0005054</i></td>
+            </tr>
+            <tr class="addition">
+               <td>24</td>
+               <td colspan="2">EFO_0005055<span class="subclass"> SubClassOf </span>EFO_0000719. <br><i>New Terms: EFO_0005055</i></td>
+            </tr>
+            <tr class="addition">
+               <td>25</td>
+               <td colspan="2">EFO_0005055<span class="subclass"> SubClassOf </span>EFO_0004298. <br><i>New Terms: EFO_0005055</i></td>
+            </tr>
+            <tr class="addition">
+               <td>26</td>
+               <td colspan="2">EFO_0005056<span class="subclass"> SubClassOf </span>EFO_0000246. <br><i>New Terms: EFO_0005056</i></td>
+            </tr>
+            <tr class="addition">
+               <td>27</td>
+               <td colspan="2">EFO_0005057<span class="subclass"> SubClassOf </span>EFO_0001444. <br><i>New Terms: EFO_0005057</i></td>
+            </tr>
+            <tr class="addition">
+               <td>28</td>
+               <td colspan="2">EFO_0005058<span class="subclass"> SubClassOf </span>EFO_0001444. <br><i>New Terms: EFO_0005058</i></td>
+            </tr>
+            <tr class="addition">
+               <td>29</td>
+               <td colspan="2">EFO_0005059<span class="subclass"> SubClassOf </span>EFO_0001444. <br><i>New Terms: EFO_0005059</i></td>
+            </tr>
+            <tr class="addition">
+               <td>30</td>
+               <td colspan="2">EFO_0005060<span class="subclass"> SubClassOf </span>MaterialEntity. <br><i>New Terms: EFO_0005060</i></td>
+            </tr>
+            <tr class="addition">
+               <td>31</td>
+               <td colspan="2">EFO_0005061<span class="subclass"> SubClassOf </span>EFO_0005060. <br><i>New Terms: EFO_0005061, EFO_0005060</i></td>
+            </tr>
+            <tr class="addition">
+               <td>32</td>
+               <td colspan="2">EFO_0005062<span class="subclass"> SubClassOf </span>EFO_0005061. <br><i>New Terms: EFO_0005061, EFO_0005062</i></td>
+            </tr>
+            <tr class="addition">
+               <td>33</td>
+               <td colspan="2">EFO_0005063<span class="subclass"> SubClassOf </span>EFO_0005061. <br><i>New Terms: EFO_0005061, EFO_0005063</i></td>
+            </tr>
+            <tr class="addition">
+               <td>34</td>
+               <td colspan="2">EFO_0005064<span class="subclass"> SubClassOf </span>EFO_0005061. <br><i>New Terms: EFO_0005061, EFO_0005064</i></td>
+            </tr>
+            <tr class="addition">
+               <td>35</td>
+               <td colspan="2">EFO_0005065<span class="subclass"> SubClassOf </span>EFO_0005061. <br><i>New Terms: EFO_0005061, EFO_0005065</i></td>
+            </tr>
+            <tr class="addition">
+               <td>36</td>
+               <td colspan="2">EFO_0005066<span class="subclass"> SubClassOf </span>MaterialEntity. <br><i>New Terms: EFO_0005066</i></td>
+            </tr>
+            <tr class="addition">
+               <td>37</td>
+               <td colspan="2">EFO_0005067<span class="subclass"> SubClassOf </span>EFO_0005066. <br><i>New Terms: EFO_0005066, EFO_0005067</i></td>
+            </tr>
+            <tr class="addition">
+               <td>38</td>
+               <td colspan="2">EFO_0005069<span class="subclass"> SubClassOf </span>EFO_0005060. <br><i>New Terms: EFO_0005060, EFO_0005069</i></td>
+            </tr>
+            <tr class="addition">
+               <td>39</td>
+               <td colspan="2">EFO_0005070<span class="subclass"> SubClassOf </span>EFO_0005069. <br><i>New Terms: EFO_0005070, EFO_0005069</i></td>
+            </tr>
+            <tr class="addition">
+               <td>40</td>
+               <td colspan="2">EFO_0005071<span class="subclass"> SubClassOf </span>EFO_0005069. <br><i>New Terms: EFO_0005071, EFO_0005069</i></td>
+            </tr>
+            <tr class="addition">
+               <td>41</td>
+               <td colspan="2">EFO_0005072<span class="subclass"> SubClassOf </span>EFO_0005060. <br><i>New Terms: EFO_0005060, EFO_0005072</i></td>
+            </tr>
+            <tr class="addition">
+               <td>42</td>
+               <td colspan="2">EFO_0005073<span class="subclass"> SubClassOf </span>EFO_0005072. <br><i>New Terms: EFO_0005072, EFO_0005073</i></td>
+            </tr>
+            <tr class="addition">
+               <td>43</td>
+               <td colspan="2">EFO_0005074<span class="subclass"> SubClassOf </span>EFO_0005077. <br><i>New Terms: EFO_0005074, EFO_0005077</i></td>
+            </tr>
+            <tr class="addition">
+               <td>44</td>
+               <td colspan="2">EFO_0005075<span class="subclass"> SubClassOf </span>EFO_0005072. <br><i>New Terms: EFO_0005072, EFO_0005075</i></td>
+            </tr>
+            <tr class="addition">
+               <td>45</td>
+               <td colspan="2">EFO_0005076<span class="subclass"> SubClassOf </span>EFO_0005072. <br><i>New Terms: EFO_0005072, EFO_0005076</i></td>
+            </tr>
+            <tr class="addition">
+               <td>46</td>
+               <td colspan="2">EFO_0005077<span class="subclass"> SubClassOf </span>EFO_0005072. <br><i>New Terms: EFO_0005072, EFO_0005077</i></td>
+            </tr>
+            <tr class="addition">
+               <td>47</td>
+               <td colspan="2">EFO_0005078<span class="subclass"> SubClassOf </span>EFO_0005072. <br><i>New Terms: EFO_0005072, EFO_0005078</i></td>
+            </tr>
+            <tr class="addition">
+               <td>48</td>
+               <td colspan="2">EFO_0005079<span class="subclass"> SubClassOf </span>EFO_0005072. <br><i>New Terms: EFO_0005072, EFO_0005079</i></td>
+            </tr>
+            <tr class="addition">
+               <td>49</td>
+               <td colspan="2">GO_1901557<span class="subclass"> SubClassOf </span>GO_0042493. <br><i>New Terms: GO_1901557</i></td>
+            </tr>
+            <tr class="addition">
+               <td>50</td>
+               <td colspan="2">GO_1990054<span class="subclass"> SubClassOf </span>GO_0097327. <br><i>New Terms: GO_1990054</i></td>
+            </tr>
+            <tr class="addition">
+               <td>51</td>
+               <td colspan="2">IDO_0000450<span class="subclass"> SubClassOf </span>Disposition. <br><i>New Terms: IDO_0000450</i></td>
+            </tr>
+            <tr class="addition">
+               <td>52</td>
+               <td colspan="2">OBI_0000869<span class="subclass"> SubClassOf </span>CHEBI_33697. <br><i>New Terms: OBI_0000869</i></td>
+            </tr>
+            <tr class="addition">
+               <td>53</td>
+               <td colspan="2">ZEA_0015075<span class="subclass"> SubClassOf </span>EFO_0000998. <br><i>New Terms: ZEA_0015075</i></td>
+            </tr>
+         </tbody>
+         <tbody id="add" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Pure Additions with Shared Terms (152)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">Addition to Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td>54</td>
+               <td colspan="2">EFO_0000212<span class="subclass"> SubClassOf </span>ObsoleteClass. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>55</td>
+               <td colspan="2">EFO_0000414<span class="subclass"> SubClassOf </span>EFO_0000795. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>56</td>
+               <td colspan="2">EFO_0000420<span class="subclass"> SubClassOf </span>ObsoleteClass. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>57</td>
+               <td colspan="2">EFO_0000492<span class="subclass"> SubClassOf </span>ObsoleteClass. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>58</td>
+               <td colspan="2">EFO_0000890<span class="subclass"> SubClassOf </span>EFO_0000899. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>59</td>
+               <td colspan="2">EFO_0001033<span class="subclass"> SubClassOf </span>EFO_0002696. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>60</td>
+               <td colspan="2">EFO_0001952<span class="subclass"> SubClassOf </span>EFO_0000818. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>61</td>
+               <td colspan="2">EFO_0001953<span class="subclass"> SubClassOf </span>EFO_0000818. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>62</td>
+               <td colspan="2">EFO_0002512<span class="subclass"> SubClassOf </span>ObsoleteClass. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>63</td>
+               <td colspan="2">EFO_0002620<span class="subclass"> SubClassOf </span>ObsoleteClass. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>64</td>
+               <td colspan="2">EFO_0002631<span class="subclass"> SubClassOf </span>ObsoleteClass. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>65</td>
+               <td colspan="2">EFO_0003916<span class="subclass"> SubClassOf </span>ObsoleteClass. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>66</td>
+               <td colspan="2">EFO_0004135<span class="subclass"> SubClassOf </span>ObsoleteClass. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>67</td>
+               <td colspan="2">EFO_0004146<span class="subclass"> SubClassOf </span>ObsoleteClass. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>68</td>
+               <td colspan="2">EFO_0004305<span class="subclass"> SubClassOf </span>EFO_0004306. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>69</td>
+               <td colspan="2">EFO_0004458<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>70</td>
+               <td colspan="2">EFO_0004507<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>71</td>
+               <td colspan="2">EFO_0004526<span class="subclass"> SubClassOf </span>EFO_0004306. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>72</td>
+               <td colspan="2">EFO_0004527<span class="subclass"> SubClassOf </span>EFO_0004306. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>73</td>
+               <td colspan="2">EFO_0004528<span class="subclass"> SubClassOf </span>EFO_0004306. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>74</td>
+               <td colspan="2">EFO_0004535<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>75</td>
+               <td colspan="2">EFO_0004555<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>76</td>
+               <td colspan="2">EFO_0004568<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>77</td>
+               <td colspan="2">EFO_0004581<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>78</td>
+               <td colspan="2">EFO_0004583<span class="subclass"> SubClassOf </span>ObsoleteClass. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>79</td>
+               <td colspan="2">EFO_0004588<span class="subclass"> SubClassOf </span>ObsoleteClass. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>80</td>
+               <td colspan="2">EFO_0004626<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>81</td>
+               <td colspan="2">EFO_0004670<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>82</td>
+               <td colspan="2">EFO_0004684<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>83</td>
+               <td colspan="2">EFO_0004744<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>84</td>
+               <td colspan="2">EFO_0004750<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>85</td>
+               <td colspan="2">EFO_0004753<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>86</td>
+               <td colspan="2">EFO_0004768<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>87</td>
+               <td colspan="2">EFO_0004791<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>88</td>
+               <td colspan="2">EFO_0004792<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>89</td>
+               <td colspan="2">EFO_0004812<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>90</td>
+               <td colspan="2">EFO_0004813<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>91</td>
+               <td colspan="2">EFO_0004814<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>92</td>
+               <td colspan="2">EFO_0005000<span class="subclass"> SubClassOf </span>EFO_0004747. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>93</td>
+               <td colspan="2">EFO_0005040<span class="subclass"> SubClassOf </span>ObsoleteClass. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>94</td>
+               <td colspan="2">EFO_0005047<span class="subclass"> SubClassOf </span>EFO_0004503. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>95</td>
+               <td colspan="2">NCBITaxon_10239<span class="subclass"> SubClassOf </span>ObsoleteClass. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>96</td>
+               <td colspan="2">NCBITaxon_10252<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>97</td>
+               <td colspan="2">NCBITaxon_10298<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>98</td>
+               <td colspan="2">NCBITaxon_10363<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>99</td>
+               <td colspan="2">NCBITaxon_10376<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>100</td>
+               <td colspan="2">NCBITaxon_10383<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>101</td>
+               <td colspan="2">NCBITaxon_10398<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>102</td>
+               <td colspan="2">NCBITaxon_10487<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>103</td>
+               <td colspan="2">NCBITaxon_10506<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>104</td>
+               <td colspan="2">NCBITaxon_10519<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>105</td>
+               <td colspan="2">NCBITaxon_10524<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>106</td>
+               <td colspan="2">NCBITaxon_10566<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>107</td>
+               <td colspan="2">NCBITaxon_10629<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>108</td>
+               <td colspan="2">NCBITaxon_10662<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>109</td>
+               <td colspan="2">NCBITaxon_10744<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>110</td>
+               <td colspan="2">NCBITaxon_10832<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>111</td>
+               <td colspan="2">NCBITaxon_11053<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>112</td>
+               <td colspan="2">NCBITaxon_11060<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>113</td>
+               <td colspan="2">NCBITaxon_11069<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>114</td>
+               <td colspan="2">NCBITaxon_11070<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>115</td>
+               <td colspan="2">NCBITaxon_11082<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>116</td>
+               <td colspan="2">NCBITaxon_11089<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>117</td>
+               <td colspan="2">NCBITaxon_11099<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>118</td>
+               <td colspan="2">NCBITaxon_11260<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>119</td>
+               <td colspan="2">NCBITaxon_11277<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>120</td>
+               <td colspan="2">NCBITaxon_11292<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>121</td>
+               <td colspan="2">NCBITaxon_11320<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>122</td>
+               <td colspan="2">NCBITaxon_11577<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>123</td>
+               <td colspan="2">NCBITaxon_11588<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>124</td>
+               <td colspan="2">NCBITaxon_11590<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>125</td>
+               <td colspan="2">NCBITaxon_11593<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>126</td>
+               <td colspan="2">NCBITaxon_11599<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>127</td>
+               <td colspan="2">NCBITaxon_11604<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>128</td>
+               <td colspan="2">NCBITaxon_11608<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>129</td>
+               <td colspan="2">NCBITaxon_11613<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>130</td>
+               <td colspan="2">NCBITaxon_11619<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>131</td>
+               <td colspan="2">NCBITaxon_11620<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>132</td>
+               <td colspan="2">NCBITaxon_11622<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>133</td>
+               <td colspan="2">NCBITaxon_11623<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>134</td>
+               <td colspan="2">NCBITaxon_11628<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>135</td>
+               <td colspan="2">NCBITaxon_11629<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>136</td>
+               <td colspan="2">NCBITaxon_11631<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>137</td>
+               <td colspan="2">NCBITaxon_11987<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>138</td>
+               <td colspan="2">NCBITaxon_12139<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>139</td>
+               <td colspan="2">NCBITaxon_12144<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>140</td>
+               <td colspan="2">NCBITaxon_12183<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>141</td>
+               <td colspan="2">NCBITaxon_12211<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>142</td>
+               <td colspan="2">NCBITaxon_12230<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>143</td>
+               <td colspan="2">NCBITaxon_12239<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>144</td>
+               <td colspan="2">NCBITaxon_12242<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>145</td>
+               <td colspan="2">NCBITaxon_12260<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>146</td>
+               <td colspan="2">NCBITaxon_12271<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>147</td>
+               <td colspan="2">NCBITaxon_12280<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>148</td>
+               <td colspan="2">NCBITaxon_12282<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>149</td>
+               <td colspan="2">NCBITaxon_12287<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>150</td>
+               <td colspan="2">NCBITaxon_12295<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>151</td>
+               <td colspan="2">NCBITaxon_12305<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>152</td>
+               <td colspan="2">NCBITaxon_12307<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>153</td>
+               <td colspan="2">NCBITaxon_12538<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>154</td>
+               <td colspan="2">NCBITaxon_12542<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>155</td>
+               <td colspan="2">NCBITaxon_128947<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>156</td>
+               <td colspan="2">NCBITaxon_146500<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>157</td>
+               <td colspan="2">NCBITaxon_186538<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>158</td>
+               <td colspan="2">NCBITaxon_186539<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>159</td>
+               <td colspan="2">NCBITaxon_186540<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>160</td>
+               <td colspan="2">NCBITaxon_192452<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>161</td>
+               <td colspan="2">NCBITaxon_208973<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>162</td>
+               <td colspan="2">NCBITaxon_212035<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>163</td>
+               <td colspan="2">NCBITaxon_227859<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>164</td>
+               <td colspan="2">NCBITaxon_227984<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>165</td>
+               <td colspan="2">NCBITaxon_228578<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>166</td>
+               <td colspan="2">NCBITaxon_238854<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>167</td>
+               <td colspan="2">NCBITaxon_264653<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>168</td>
+               <td colspan="2">NCBITaxon_273357<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>169</td>
+               <td colspan="2">NCBITaxon_28280<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>170</td>
+               <td colspan="2">NCBITaxon_28284<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>171</td>
+               <td colspan="2">NCBITaxon_28285<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>172</td>
+               <td colspan="2">NCBITaxon_31537<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>173</td>
+               <td colspan="2">NCBITaxon_32604<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>174</td>
+               <td colspan="2">NCBITaxon_33743<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>175</td>
+               <td colspan="2">NCBITaxon_35305<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>176</td>
+               <td colspan="2">NCBITaxon_35328<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>177</td>
+               <td colspan="2">NCBITaxon_37296<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>178</td>
+               <td colspan="2">NCBITaxon_375033<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>179</td>
+               <td colspan="2">NCBITaxon_375050<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>180</td>
+               <td colspan="2">NCBITaxon_375052<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>181</td>
+               <td colspan="2">NCBITaxon_37733<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>182</td>
+               <td colspan="2">NCBITaxon_378830<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>183</td>
+               <td colspan="2">NCBITaxon_380964<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>184</td>
+               <td colspan="2">NCBITaxon_38766<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>185</td>
+               <td colspan="2">NCBITaxon_38767<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>186</td>
+               <td colspan="2">NCBITaxon_45218<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>187</td>
+               <td colspan="2">NCBITaxon_45219<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>188</td>
+               <td colspan="2">NCBITaxon_45709<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>189</td>
+               <td colspan="2">NCBITaxon_47506<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>190</td>
+               <td colspan="2">NCBITaxon_47929<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>191</td>
+               <td colspan="2">NCBITaxon_482058<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>192</td>
+               <td colspan="2">NCBITaxon_55096<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>193</td>
+               <td colspan="2">NCBITaxon_55097<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>194</td>
+               <td colspan="2">NCBITaxon_57482<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>195</td>
+               <td colspan="2">NCBITaxon_57483<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>196</td>
+               <td colspan="2">NCBITaxon_64315<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>197</td>
+               <td colspan="2">NCBITaxon_65016<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>198</td>
+               <td colspan="2">NCBITaxon_79692<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>199</td>
+               <td colspan="2">NCBITaxon_90961<span class="subclass"> SubClassOf </span>NCBITaxon_10239. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>200</td>
+               <td colspan="2">pat_id_2264<span class="subclass"> SubClassOf </span>EFO_0000618. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>201</td>
+               <td colspan="2">pat_id_5545<span class="subclass"> SubClassOf </span>EFO_0001379. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>202</td>
+               <td colspan="2">pat_id_65<span class="subclass"> SubClassOf </span>EFO_0002970. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>203</td>
+               <td colspan="2">pat_id_846<span class="subclass"> SubClassOf </span>EFO_0000618. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>204</td>
+               <td colspan="2">pat_id_852<span class="subclass"> SubClassOf </span>EFO_0002890. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>205</td>
+               <td colspan="2">pat_id_8591<span class="subclass"> SubClassOf </span>EFO_0003777. <br></td>
+            </tr>
+         </tbody>
+         <tbody id="addnt" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3"><a name="add"></a><h4 style="display: inline-block;">Pure Additions with New Terms (25)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">Addition to Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td>206</td>
+               <td colspan="2">CL_0000038<span class="subclass"> SubClassOf </span>CL_0000764. <br><i>New Terms: CL_0000764</i></td>
+            </tr>
+            <tr class="addition">
+               <td>207</td>
+               <td colspan="2">CL_0000232<span class="subclass"> SubClassOf </span>CL_0000764. <br><i>New Terms: CL_0000764</i></td>
+            </tr>
+            <tr class="addition">
+               <td>208</td>
+               <td colspan="2">CL_0000547<span class="subclass"> SubClassOf </span>CL_0000764. <br><i>New Terms: CL_0000764</i></td>
+            </tr>
+            <tr class="addition">
+               <td>209</td>
+               <td colspan="2">CL_0000558<span class="subclass"> SubClassOf </span>CL_0000764. <br><i>New Terms: CL_0000764</i></td>
+            </tr>
+            <tr class="addition">
+               <td>210</td>
+               <td colspan="2">CL_0000765<span class="subclass"> SubClassOf </span>CL_0000764. <br><i>New Terms: CL_0000764</i></td>
+            </tr>
+            <tr class="addition">
+               <td>211</td>
+               <td colspan="2">CL_0002417<span class="subclass"> SubClassOf </span>CL_0000764. <br><i>New Terms: CL_0000764</i></td>
+            </tr>
+            <tr class="addition">
+               <td>212</td>
+               <td colspan="2">EFO_0003926<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>213</td>
+               <td colspan="2">EFO_0004346<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>214</td>
+               <td colspan="2">EFO_0004464<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>215</td>
+               <td colspan="2">EFO_0004569<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>216</td>
+               <td colspan="2">EFO_0004625<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>217</td>
+               <td colspan="2">EFO_0004641<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>218</td>
+               <td colspan="2">EFO_0004760<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>219</td>
+               <td colspan="2">EFO_0004763<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>220</td>
+               <td colspan="2">EFO_0004771<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>221</td>
+               <td colspan="2">EFO_0004800<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>222</td>
+               <td colspan="2">EFO_0004830<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>223</td>
+               <td colspan="2">EFO_0004832<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>224</td>
+               <td colspan="2">EFO_0004840<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>225</td>
+               <td colspan="2">EFO_0004846<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>226</td>
+               <td colspan="2">EFO_0004868<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>227</td>
+               <td colspan="2">EFO_0004874<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>228</td>
+               <td colspan="2">EFO_0004886<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>229</td>
+               <td colspan="2">EFO_0004913<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+            <tr class="addition">
+               <td>230</td>
+               <td colspan="2">EFO_0004914<span class="subclass"> SubClassOf </span>EFO_0005052. <br><i>New Terms: EFO_0005052</i></td>
+            </tr>
+         </tbody>
+         <tbody id="aweak" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Retrospective Novel Redundant (16)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="normaladd">Justifications in Ontology 1</th>
+               <th class="addition">Axiom in Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td rowspan="2">231</td>
+               <td><i>(1)</i>&nbsp; EFO_0002888<span class="subclass"> SubClassOf </span>EFO_0000322. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; EFO_0001196<span class="subclass"> SubClassOf </span>EFO_0002888. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="2">EFO_0001196<span class="subclass"> SubClassOf </span>EFO_0000322. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td><i>(1)</i>&nbsp; EFO_0001196<span class="subclass"> SubClassOf </span>EFO_0002009. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0002009<span class="subclass"> SubClassOf </span>EFO_0000322. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">232</td>
+               <td><i>(1)</i>&nbsp; EFO_0001220<span class="subclass"> SubClassOf </span>EFO_0002937. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0002937<span class="subclass"> SubClassOf </span>EFO_0001639. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">EFO_0001220<span class="subclass"> SubClassOf </span>EFO_0001639. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="2">233</td>
+               <td><i>(1)</i>&nbsp; EFO_0002009<span class="subclass"> SubClassOf </span>EFO_0000322. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; EFO_0001222<span class="subclass"> SubClassOf </span>EFO_0002009. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="2">EFO_0001222<span class="subclass"> SubClassOf </span>EFO_0000322. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td><i>(1)</i>&nbsp; EFO_0002887<span class="subclass"> SubClassOf </span>EFO_0000322. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; EFO_0001222<span class="subclass"> SubClassOf </span>EFO_0002887. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">234</td>
+               <td><i>(1)</i>&nbsp; EFO_0002937<span class="subclass"> SubClassOf </span>EFO_0001639. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; EFO_0001667<span class="subclass"> SubClassOf </span>EFO_0002937. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">EFO_0001667<span class="subclass"> SubClassOf </span>EFO_0001639. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">235</td>
+               <td><i>(1)</i>&nbsp; EFO_0002937<span class="subclass"> SubClassOf </span>EFO_0001639. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; EFO_0002128<span class="subclass"> SubClassOf </span>EFO_0002937. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">EFO_0002128<span class="subclass"> SubClassOf </span>EFO_0001639. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">236</td>
+               <td><i>(1)</i>&nbsp; EFO_0002937<span class="subclass"> SubClassOf </span>EFO_0001639. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; EFO_0002212<span class="subclass"> SubClassOf </span>EFO_0002937. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">EFO_0002212<span class="subclass"> SubClassOf </span>EFO_0001639. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">237</td>
+               <td><i>(1)</i>&nbsp; EFO_0002937<span class="subclass"> SubClassOf </span>EFO_0001639. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; EFO_0002213<span class="subclass"> SubClassOf </span>EFO_0002937. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">EFO_0002213<span class="subclass"> SubClassOf </span>EFO_0001639. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">238</td>
+               <td><i>(1)</i>&nbsp; EFO_0002214<span class="subclass"> SubClassOf </span>EFO_0002937. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0002937<span class="subclass"> SubClassOf </span>EFO_0001639. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">EFO_0002214<span class="subclass"> SubClassOf </span>EFO_0001639. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">239</td>
+               <td><i>(1)</i>&nbsp; EFO_0002237<span class="subclass"> SubClassOf </span>EFO_0002937. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0002937<span class="subclass"> SubClassOf </span>EFO_0001639. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">EFO_0002237<span class="subclass"> SubClassOf </span>EFO_0001639. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">240</td>
+               <td><i>(1)</i>&nbsp; EFO_0002937<span class="subclass"> SubClassOf </span>EFO_0001639. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; EFO_0002239<span class="subclass"> SubClassOf </span>EFO_0002937. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">EFO_0002239<span class="subclass"> SubClassOf </span>EFO_0001639. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">241</td>
+               <td><i>(1)</i>&nbsp; EFO_0002245<span class="subclass"> SubClassOf </span>EFO_0002937. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0002937<span class="subclass"> SubClassOf </span>EFO_0001639. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">EFO_0002245<span class="subclass"> SubClassOf </span>EFO_0001639. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">242</td>
+               <td><i>(1)</i>&nbsp; EFO_0002937<span class="subclass"> SubClassOf </span>EFO_0001639. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; EFO_0002314<span class="subclass"> SubClassOf </span>EFO_0002937. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">EFO_0002314<span class="subclass"> SubClassOf </span>EFO_0001639. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">243</td>
+               <td><i>(1)</i>&nbsp; EFO_0002326<span class="subclass"> SubClassOf </span>EFO_0002937. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0002937<span class="subclass"> SubClassOf </span>EFO_0001639. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">EFO_0002326<span class="subclass"> SubClassOf </span>EFO_0001639. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">244</td>
+               <td><i>(1)</i>&nbsp; EFO_0002380<span class="subclass"> SubClassOf </span>EFO_0002937. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0002937<span class="subclass"> SubClassOf </span>EFO_0001639. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">EFO_0002380<span class="subclass"> SubClassOf </span>EFO_0001639. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">245</td>
+               <td><i>(1)</i>&nbsp; EFO_0002545<span class="subclass"> SubClassOf </span>EFO_0000461. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0000461<span class="subclass"> SubClassOf </span>EFO_0000795. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">EFO_0002545<span class="subclass"> SubClassOf </span>EFO_0000795. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">246</td>
+               <td><i>(1)</i>&nbsp; EFO_0002937<span class="subclass"> SubClassOf </span>EFO_0001639. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; EFO_0002796<span class="subclass"> SubClassOf </span>EFO_0002937. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">EFO_0002796<span class="subclass"> SubClassOf </span>EFO_0001639. 
+               </td>
+            </tr>
+         </tbody>
+         <tbody id="retdesc" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Retired Descriptions (2)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal" colspan="2">Retired Description Axiom in Ontology 1</th>
+            </tr>
+            <tr class="removal">
+               <td>247</td>
+               <td colspan="2">CL_0000764<span class="subclass"> SubClassOf </span>CL_0000763.<br><i>Retired Terms: CL_0000764</i></td>
+            </tr>
+            <tr class="removal">
+               <td>248</td>
+               <td colspan="2">EFO_0004858<span class="subclass"> SubClassOf </span>GO_0042493.<br><i>Retired Terms: EFO_0004858</i></td>
+            </tr>
+         </tbody>
+         <tbody id="rem" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Pure Removals with Shared Terms (158)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal" colspan="2">Removal from Ontology 1</th>
+            </tr>
+            <tr class="removal">
+               <td>249</td>
+               <td colspan="2">EFO_0000212<span class="subclass"> SubClassOf </span>EFO_0002890.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>250</td>
+               <td colspan="2">EFO_0000220<span class="subclass"> SubClassOf </span>EFO_0000565.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>251</td>
+               <td colspan="2">EFO_0000420<span class="subclass"> SubClassOf </span>EFO_0000795.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>252</td>
+               <td colspan="2">EFO_0000492<span class="subclass"> SubClassOf </span>EFO_0000508.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>253</td>
+               <td colspan="2">EFO_0001075<span class="subclass"> SubClassOf </span>EFO_0000512.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>254</td>
+               <td colspan="2">EFO_0001075<span class="subclass"> SubClassOf </span>EFO_0003863.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>255</td>
+               <td colspan="2">EFO_0001196<span class="subclass"> SubClassOf </span>EFO_0002009.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>256</td>
+               <td colspan="2">EFO_0001196<span class="subclass"> SubClassOf </span>EFO_0002888.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>257</td>
+               <td colspan="2">EFO_0001220<span class="subclass"> SubClassOf </span>EFO_0002937.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>258</td>
+               <td colspan="2">EFO_0001222<span class="subclass"> SubClassOf </span>EFO_0002009.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>259</td>
+               <td colspan="2">EFO_0001222<span class="subclass"> SubClassOf </span>EFO_0002887.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>260</td>
+               <td colspan="2">EFO_0001667<span class="subclass"> SubClassOf </span>EFO_0002937.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>261</td>
+               <td colspan="2">EFO_0002128<span class="subclass"> SubClassOf </span>EFO_0002937.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>262</td>
+               <td colspan="2">EFO_0002212<span class="subclass"> SubClassOf </span>EFO_0002937.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>263</td>
+               <td colspan="2">EFO_0002213<span class="subclass"> SubClassOf </span>EFO_0002937.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>264</td>
+               <td colspan="2">EFO_0002214<span class="subclass"> SubClassOf </span>EFO_0002937.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>265</td>
+               <td colspan="2">EFO_0002237<span class="subclass"> SubClassOf </span>EFO_0002937.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>266</td>
+               <td colspan="2">EFO_0002239<span class="subclass"> SubClassOf </span>EFO_0002937.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>267</td>
+               <td colspan="2">EFO_0002245<span class="subclass"> SubClassOf </span>EFO_0002937.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>268</td>
+               <td colspan="2">EFO_0002314<span class="subclass"> SubClassOf </span>EFO_0002937.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>269</td>
+               <td colspan="2">EFO_0002326<span class="subclass"> SubClassOf </span>EFO_0002937.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>270</td>
+               <td colspan="2">EFO_0002380<span class="subclass"> SubClassOf </span>EFO_0002937.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>271</td>
+               <td colspan="2">EFO_0002512<span class="subclass"> SubClassOf </span>EFO_0000618.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>272</td>
+               <td colspan="2">EFO_0002545<span class="subclass"> SubClassOf </span>EFO_0000461.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>273</td>
+               <td colspan="2">EFO_0002620<span class="subclass"> SubClassOf </span>EFO_0001379.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>274</td>
+               <td colspan="2">EFO_0002631<span class="subclass"> SubClassOf </span>EFO_0000318.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>275</td>
+               <td colspan="2">EFO_0002796<span class="subclass"> SubClassOf </span>EFO_0002937.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>276</td>
+               <td colspan="2">EFO_0003916<span class="subclass"> SubClassOf </span>EFO_0000618.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>277</td>
+               <td colspan="2">EFO_0003916<span class="subclass"> SubClassOf </span>pat_id_18711.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>278</td>
+               <td colspan="2">EFO_0003926<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>279</td>
+               <td colspan="2">EFO_0004135<span class="subclass"> SubClassOf </span>EFO_0000618.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>280</td>
+               <td colspan="2">EFO_0004146<span class="subclass"> SubClassOf </span>EFO_0004145.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>281</td>
+               <td colspan="2">EFO_0004346<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>282</td>
+               <td colspan="2">EFO_0004569<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>283</td>
+               <td colspan="2">EFO_0004583<span class="subclass"> SubClassOf </span>EFO_0004582.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>284</td>
+               <td colspan="2">EFO_0004588<span class="subclass"> SubClassOf </span>EFO_0004582.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>285</td>
+               <td colspan="2">EFO_0004625<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>286</td>
+               <td colspan="2">EFO_0004641<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>287</td>
+               <td colspan="2">EFO_0004760<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>288</td>
+               <td colspan="2">EFO_0004763<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>289</td>
+               <td colspan="2">EFO_0004771<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>290</td>
+               <td colspan="2">EFO_0004800<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>291</td>
+               <td colspan="2">EFO_0004830<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>292</td>
+               <td colspan="2">EFO_0004832<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>293</td>
+               <td colspan="2">EFO_0004840<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>294</td>
+               <td colspan="2">EFO_0004846<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>295</td>
+               <td colspan="2">EFO_0004868<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>296</td>
+               <td colspan="2">EFO_0004874<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>297</td>
+               <td colspan="2">EFO_0004886<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>298</td>
+               <td colspan="2">EFO_0004913<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>299</td>
+               <td colspan="2">EFO_0004914<span class="subclass"> SubClassOf </span>EFO_0004464.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>300</td>
+               <td colspan="2">EFO_0005040<span class="subclass"> SubClassOf </span>GO_0097327.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>301</td>
+               <td colspan="2">GO_0033273<span class="subclass"> SubClassOf </span>EFO_0004729.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>302</td>
+               <td colspan="2">NCBITaxon_10239<span class="subclass"> SubClassOf </span>OBI_0100026.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>303</td>
+               <td colspan="2">NCBITaxon_10252<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>304</td>
+               <td colspan="2">NCBITaxon_10298<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>305</td>
+               <td colspan="2">NCBITaxon_10363<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>306</td>
+               <td colspan="2">NCBITaxon_10376<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>307</td>
+               <td colspan="2">NCBITaxon_10383<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>308</td>
+               <td colspan="2">NCBITaxon_10398<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>309</td>
+               <td colspan="2">NCBITaxon_10487<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>310</td>
+               <td colspan="2">NCBITaxon_10506<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>311</td>
+               <td colspan="2">NCBITaxon_10519<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>312</td>
+               <td colspan="2">NCBITaxon_10524<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>313</td>
+               <td colspan="2">NCBITaxon_10566<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>314</td>
+               <td colspan="2">NCBITaxon_10629<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>315</td>
+               <td colspan="2">NCBITaxon_10662<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>316</td>
+               <td colspan="2">NCBITaxon_10744<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>317</td>
+               <td colspan="2">NCBITaxon_10832<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>318</td>
+               <td colspan="2">NCBITaxon_11053<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>319</td>
+               <td colspan="2">NCBITaxon_11060<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>320</td>
+               <td colspan="2">NCBITaxon_11069<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>321</td>
+               <td colspan="2">NCBITaxon_11070<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>322</td>
+               <td colspan="2">NCBITaxon_11082<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>323</td>
+               <td colspan="2">NCBITaxon_11089<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>324</td>
+               <td colspan="2">NCBITaxon_11099<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>325</td>
+               <td colspan="2">NCBITaxon_11260<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>326</td>
+               <td colspan="2">NCBITaxon_11277<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>327</td>
+               <td colspan="2">NCBITaxon_11292<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>328</td>
+               <td colspan="2">NCBITaxon_11320<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>329</td>
+               <td colspan="2">NCBITaxon_11577<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>330</td>
+               <td colspan="2">NCBITaxon_11588<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>331</td>
+               <td colspan="2">NCBITaxon_11590<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>332</td>
+               <td colspan="2">NCBITaxon_11593<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>333</td>
+               <td colspan="2">NCBITaxon_11599<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>334</td>
+               <td colspan="2">NCBITaxon_11604<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>335</td>
+               <td colspan="2">NCBITaxon_11608<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>336</td>
+               <td colspan="2">NCBITaxon_11613<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>337</td>
+               <td colspan="2">NCBITaxon_11619<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>338</td>
+               <td colspan="2">NCBITaxon_11620<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>339</td>
+               <td colspan="2">NCBITaxon_11622<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>340</td>
+               <td colspan="2">NCBITaxon_11623<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>341</td>
+               <td colspan="2">NCBITaxon_11628<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>342</td>
+               <td colspan="2">NCBITaxon_11629<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>343</td>
+               <td colspan="2">NCBITaxon_11631<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>344</td>
+               <td colspan="2">NCBITaxon_11987<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>345</td>
+               <td colspan="2">NCBITaxon_12139<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>346</td>
+               <td colspan="2">NCBITaxon_12144<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>347</td>
+               <td colspan="2">NCBITaxon_12183<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>348</td>
+               <td colspan="2">NCBITaxon_12211<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>349</td>
+               <td colspan="2">NCBITaxon_12230<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>350</td>
+               <td colspan="2">NCBITaxon_12239<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>351</td>
+               <td colspan="2">NCBITaxon_12242<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>352</td>
+               <td colspan="2">NCBITaxon_12260<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>353</td>
+               <td colspan="2">NCBITaxon_12271<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>354</td>
+               <td colspan="2">NCBITaxon_12280<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>355</td>
+               <td colspan="2">NCBITaxon_12282<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>356</td>
+               <td colspan="2">NCBITaxon_12287<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>357</td>
+               <td colspan="2">NCBITaxon_12295<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>358</td>
+               <td colspan="2">NCBITaxon_12305<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>359</td>
+               <td colspan="2">NCBITaxon_12307<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>360</td>
+               <td colspan="2">NCBITaxon_12538<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>361</td>
+               <td colspan="2">NCBITaxon_12542<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>362</td>
+               <td colspan="2">NCBITaxon_128947<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>363</td>
+               <td colspan="2">NCBITaxon_146500<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>364</td>
+               <td colspan="2">NCBITaxon_186538<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>365</td>
+               <td colspan="2">NCBITaxon_186539<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>366</td>
+               <td colspan="2">NCBITaxon_186540<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>367</td>
+               <td colspan="2">NCBITaxon_192452<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>368</td>
+               <td colspan="2">NCBITaxon_208973<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>369</td>
+               <td colspan="2">NCBITaxon_212035<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>370</td>
+               <td colspan="2">NCBITaxon_227859<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>371</td>
+               <td colspan="2">NCBITaxon_227984<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>372</td>
+               <td colspan="2">NCBITaxon_228578<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>373</td>
+               <td colspan="2">NCBITaxon_238854<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>374</td>
+               <td colspan="2">NCBITaxon_264653<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>375</td>
+               <td colspan="2">NCBITaxon_273357<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>376</td>
+               <td colspan="2">NCBITaxon_28280<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>377</td>
+               <td colspan="2">NCBITaxon_28284<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>378</td>
+               <td colspan="2">NCBITaxon_28285<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>379</td>
+               <td colspan="2">NCBITaxon_31537<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>380</td>
+               <td colspan="2">NCBITaxon_32604<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>381</td>
+               <td colspan="2">NCBITaxon_33743<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>382</td>
+               <td colspan="2">NCBITaxon_35305<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>383</td>
+               <td colspan="2">NCBITaxon_35328<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>384</td>
+               <td colspan="2">NCBITaxon_37296<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>385</td>
+               <td colspan="2">NCBITaxon_375033<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>386</td>
+               <td colspan="2">NCBITaxon_375050<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>387</td>
+               <td colspan="2">NCBITaxon_375052<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>388</td>
+               <td colspan="2">NCBITaxon_37733<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>389</td>
+               <td colspan="2">NCBITaxon_378830<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>390</td>
+               <td colspan="2">NCBITaxon_380964<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>391</td>
+               <td colspan="2">NCBITaxon_38766<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>392</td>
+               <td colspan="2">NCBITaxon_38767<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>393</td>
+               <td colspan="2">NCBITaxon_45218<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>394</td>
+               <td colspan="2">NCBITaxon_45219<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>395</td>
+               <td colspan="2">NCBITaxon_45709<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>396</td>
+               <td colspan="2">NCBITaxon_47506<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>397</td>
+               <td colspan="2">NCBITaxon_47929<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>398</td>
+               <td colspan="2">NCBITaxon_482058<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>399</td>
+               <td colspan="2">NCBITaxon_55096<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>400</td>
+               <td colspan="2">NCBITaxon_55097<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>401</td>
+               <td colspan="2">NCBITaxon_57482<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>402</td>
+               <td colspan="2">NCBITaxon_57483<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>403</td>
+               <td colspan="2">NCBITaxon_64315<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>404</td>
+               <td colspan="2">NCBITaxon_65016<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>405</td>
+               <td colspan="2">NCBITaxon_79692<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>406</td>
+               <td colspan="2">NCBITaxon_90961<span class="subclass"> SubClassOf </span>NCBITaxon_10239.<br></td>
+            </tr>
+         </tbody>
+         <tbody id="remrt" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3"><a name="rem"></a><h4 style="display: inline-block;">Pure Removals with Retired Terms (6)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal" colspan="2">Removal from Ontology 1</th>
+            </tr>
+            <tr class="removal">
+               <td>407</td>
+               <td colspan="2">CL_0000038<span class="subclass"> SubClassOf </span>CL_0000764.<br><i>Retired Terms: CL_0000764</i></td>
+            </tr>
+            <tr class="removal">
+               <td>408</td>
+               <td colspan="2">CL_0000232<span class="subclass"> SubClassOf </span>CL_0000764.<br><i>Retired Terms: CL_0000764</i></td>
+            </tr>
+            <tr class="removal">
+               <td>409</td>
+               <td colspan="2">CL_0000547<span class="subclass"> SubClassOf </span>CL_0000764.<br><i>Retired Terms: CL_0000764</i></td>
+            </tr>
+            <tr class="removal">
+               <td>410</td>
+               <td colspan="2">CL_0000558<span class="subclass"> SubClassOf </span>CL_0000764.<br><i>Retired Terms: CL_0000764</i></td>
+            </tr>
+            <tr class="removal">
+               <td>411</td>
+               <td colspan="2">CL_0000765<span class="subclass"> SubClassOf </span>CL_0000764.<br><i>Retired Terms: CL_0000764</i></td>
+            </tr>
+            <tr class="removal">
+               <td>412</td>
+               <td colspan="2">CL_0002417<span class="subclass"> SubClassOf </span>CL_0000764.<br><i>Retired Terms: CL_0000764</i></td>
+            </tr>
+         </tbody>
+         <tbody id="rst" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Prospective Novel Redundant (20)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal">Axiom in Ontology 1</th>
+               <th class="normalrem">Justifications in Ontology 2</th>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">413</td>
+               <td rowspan="1">EFO_0000890<span class="subclass"> SubClassOf </span>EFO_0000802. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0000890<span class="subclass"> SubClassOf </span>EFO_0000899. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0000899<span class="subclass"> SubClassOf </span>EFO_0000891. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; EFO_0000891<span class="subclass"> SubClassOf </span>EFO_0000802. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">414</td>
+               <td rowspan="1">EFO_0004305<span class="subclass"> SubClassOf </span>EFO_0004503. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004305<span class="subclass"> SubClassOf </span>EFO_0004306. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0005047<span class="subclass"> SubClassOf </span>EFO_0004503. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(3)</i>&nbsp; EFO_0004306<span class="subclass"> SubClassOf </span>EFO_0005047. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">415</td>
+               <td rowspan="1">EFO_0004305<span class="subclass"> SubClassOf </span>EFO_0005047. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004305<span class="subclass"> SubClassOf </span>EFO_0004306. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0004306<span class="subclass"> SubClassOf </span>EFO_0005047. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">416</td>
+               <td rowspan="1">EFO_0004306<span class="subclass"> SubClassOf </span>EFO_0004503. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0005047<span class="subclass"> SubClassOf </span>EFO_0004503. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0004306<span class="subclass"> SubClassOf </span>EFO_0005047. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">417</td>
+               <td rowspan="1">EFO_0004464<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004464<span class="subclass"> SubClassOf </span>EFO_0005052. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0005052<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">418</td>
+               <td rowspan="1">EFO_0004507<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004507<span class="subclass"> SubClassOf </span>EFO_0004747. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0004747<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">419</td>
+               <td rowspan="1">EFO_0004526<span class="subclass"> SubClassOf </span>EFO_0004503. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004526<span class="subclass"> SubClassOf </span>EFO_0004306. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0005047<span class="subclass"> SubClassOf </span>EFO_0004503. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(3)</i>&nbsp; EFO_0004306<span class="subclass"> SubClassOf </span>EFO_0005047. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">420</td>
+               <td rowspan="1">EFO_0004526<span class="subclass"> SubClassOf </span>EFO_0005047. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004526<span class="subclass"> SubClassOf </span>EFO_0004306. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0004306<span class="subclass"> SubClassOf </span>EFO_0005047. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">421</td>
+               <td rowspan="1">EFO_0004527<span class="subclass"> SubClassOf </span>EFO_0004503. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004527<span class="subclass"> SubClassOf </span>EFO_0004306. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0005047<span class="subclass"> SubClassOf </span>EFO_0004503. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(3)</i>&nbsp; EFO_0004306<span class="subclass"> SubClassOf </span>EFO_0005047. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">422</td>
+               <td rowspan="1">EFO_0004528<span class="subclass"> SubClassOf </span>EFO_0004503. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004528<span class="subclass"> SubClassOf </span>EFO_0004306. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0005047<span class="subclass"> SubClassOf </span>EFO_0004503. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(3)</i>&nbsp; EFO_0004306<span class="subclass"> SubClassOf </span>EFO_0005047. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">423</td>
+               <td rowspan="1">EFO_0004535<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004535<span class="subclass"> SubClassOf </span>EFO_0004747. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0004747<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">424</td>
+               <td rowspan="1">EFO_0004555<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004555<span class="subclass"> SubClassOf </span>EFO_0004747. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0004747<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">425</td>
+               <td rowspan="1">EFO_0004568<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004568<span class="subclass"> SubClassOf </span>EFO_0004747. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0004747<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">426</td>
+               <td rowspan="1">EFO_0004626<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004626<span class="subclass"> SubClassOf </span>EFO_0004747. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0004747<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">427</td>
+               <td rowspan="1">EFO_0004670<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004670<span class="subclass"> SubClassOf </span>EFO_0004747. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0004747<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">428</td>
+               <td rowspan="1">EFO_0004744<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004744<span class="subclass"> SubClassOf </span>EFO_0004747. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0004747<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">429</td>
+               <td rowspan="1">EFO_0004791<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004791<span class="subclass"> SubClassOf </span>EFO_0004747. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0004747<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">430</td>
+               <td rowspan="1">EFO_0004792<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004747<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; EFO_0004792<span class="subclass"> SubClassOf </span>EFO_0004747. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">431</td>
+               <td rowspan="1">EFO_0004813<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004813<span class="subclass"> SubClassOf </span>EFO_0004747. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; EFO_0004747<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">432</td>
+               <td rowspan="1">EFO_0005047<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; EFO_0004503<span class="subclass"> SubClassOf </span>EFO_0001444. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; EFO_0005047<span class="subclass"> SubClassOf </span>EFO_0004503. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+         </tbody>
+         <tr class="withoutstyle">
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      <div id="shared" style="display:none" class="footnote">Shared axiom between Ontology 1 and 2.</div>
+   </body>
+</html>

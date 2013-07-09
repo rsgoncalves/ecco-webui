@@ -1,0 +1,2391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="root" uuid="4231bd24-7b14-4f86-9749-aa576cf5634d-lbl">
+   <Additions id="adds" size="500">
+      <Effectual id="effadds" size="500">
+         <Strengthening id="st" size="0"/>
+         <StrengtheningWithNewTerms id="stnt" size="0"/>
+         <NewDescription id="newdesc" size="383">
+            <Change id="179">
+               <Axiom>1,25-Dihydroxyvitamin D(3) 24-Hydroxylase, Mitochondrial SubClassOf Cytochrome P450</Axiom>
+               <New_Terms>1,25-Dihydroxyvitamin D(3) 24-Hydroxylase, Mitochondrial</New_Terms>
+            </Change>
+            <Change id="180">
+               <Axiom>1,25-Dihydroxyvitamin D(3) 24-Hydroxylase, Mitochondrial SubClassOf Gene_Product_Encoded_By_Gene some CYP24A1 Gene</Axiom>
+               <New_Terms>1,25-Dihydroxyvitamin D(3) 24-Hydroxylase, Mitochondrial, CYP24A1 Gene</New_Terms>
+            </Change>
+            <Change id="319">
+               <Axiom>ALPL Gene SubClassOf Phosphatase Family Gene</Axiom>
+               <New_Terms>ALPL Gene</New_Terms>
+            </Change>
+            <Change id="320">
+               <Axiom>ALPL wt Allele SubClassOf ALPL Gene</Axiom>
+               <New_Terms>ALPL Gene, ALPL wt Allele</New_Terms>
+            </Change>
+            <Change id="89">
+               <Axiom>ANTXR1 Gene SubClassOf Cell Adhesion Molecule Gene</Axiom>
+               <New_Terms>ANTXR1 Gene</New_Terms>
+            </Change>
+            <Change id="90">
+               <Axiom>ANTXR1 Gene SubClassOf Gene_Plays_Role_In_Process some Cell Motility</Axiom>
+               <New_Terms>ANTXR1 Gene</New_Terms>
+            </Change>
+            <Change id="93">
+               <Axiom>ANTXR1 Gene SubClassOf Gene_Plays_Role_In_Process some Cell Surface Extension</Axiom>
+               <New_Terms>ANTXR1 Gene</New_Terms>
+            </Change>
+            <Change id="91">
+               <Axiom>ANTXR1 Gene SubClassOf Gene_Plays_Role_In_Process some Cell-Matrix Adhesion Process</Axiom>
+               <New_Terms>ANTXR1 Gene</New_Terms>
+            </Change>
+            <Change id="92">
+               <Axiom>ANTXR1 Gene SubClassOf Gene_Plays_Role_In_Process some Cytoskeletal Modeling</Axiom>
+               <New_Terms>ANTXR1 Gene</New_Terms>
+            </Change>
+            <Change id="94">
+               <Axiom>ANTXR1 wt Allele SubClassOf ANTXR1 Gene</Axiom>
+               <New_Terms>ANTXR1 Gene, ANTXR1 wt Allele</New_Terms>
+            </Change>
+            <Change id="95">
+               <Axiom>ANTXR1 wt Allele SubClassOf Gene_In_Chromosomal_Location some 2p13.1</Axiom>
+               <New_Terms>ANTXR1 wt Allele</New_Terms>
+            </Change>
+            <Change id="98">
+               <Axiom>APLN Gene SubClassOf Gene_Plays_Role_In_Process some Immune Response Process</Axiom>
+               <New_Terms>APLN Gene</New_Terms>
+            </Change>
+            <Change id="97">
+               <Axiom>APLN Gene SubClassOf Peptide Hormone Gene</Axiom>
+               <New_Terms>APLN Gene</New_Terms>
+            </Change>
+            <Change id="99">
+               <Axiom>APLN wt Allele EquivalentTo APLN Gene and (Gene_Is_Element_In_Pathway some Neuroactive Ligand-Receptor Signaling Pathway) and (Gene_In_Chromosomal_Location some Xq25)</Axiom>
+               <New_Terms>APLN wt Allele, APLN Gene</New_Terms>
+            </Change>
+            <Change id="321">
+               <Axiom>Alkaline Phosphatase, Tissue-Nonspecific Isozyme SubClassOf Alkaline Phosphatase</Axiom>
+               <New_Terms>Alkaline Phosphatase, Tissue-Nonspecific Isozyme</New_Terms>
+            </Change>
+            <Change id="322">
+               <Axiom>Alkaline Phosphatase, Tissue-Nonspecific Isozyme SubClassOf Gene_Product_Encoded_By_Gene some ALPL Gene</Axiom>
+               <New_Terms>Alkaline Phosphatase, Tissue-Nonspecific Isozyme, ALPL Gene</New_Terms>
+            </Change>
+            <Change id="280">
+               <Axiom>Alpha-Enolase SubClassOf Gene_Product_Encoded_By_Gene some ENO1 Gene</Axiom>
+               <New_Terms>Alpha-Enolase, ENO1 Gene</New_Terms>
+            </Change>
+            <Change id="279">
+               <Axiom>Alpha-Enolase SubClassOf Lyase</Axiom>
+               <New_Terms>Alpha-Enolase</New_Terms>
+            </Change>
+            <Change id="96">
+               <Axiom>Anthrax Toxin Receptor 1 EquivalentTo Cell Adhesion Molecule and (Gene_Product_Has_Associated_Anatomy some Plasma Membrane) and (Gene_Product_Plays_Role_In_Biological_Process some Cell Motility) and (Gene_Product_Plays_Role_In_Biological_Process some Cell-Matrix Adhesion Process) and (Gene_Product_Plays_Role_In_Biological_Process some Cytoskeletal Modeling) and (Gene_Product_Plays_Role_In_Biological_Process some Cell Surface Extension) and (Gene_Product_Encoded_By_Gene some ANTXR1 Gene)</Axiom>
+               <New_Terms>ANTXR1 Gene, Anthrax Toxin Receptor 1</New_Terms>
+            </Change>
+            <Change id="219">
+               <Axiom>Anti-CD22 Monoclonal Antibody-MMAE Conjugate DCDT2980S SubClassOf Monoclonal Antibody</Axiom>
+               <New_Terms>Anti-CD22 Monoclonal Antibody-MMAE Conjugate DCDT2980S</New_Terms>
+            </Change>
+            <Change id="191">
+               <Axiom>Anti-CD79B Monoclonal Antibody-MMAE Conjugate DCDS4501A SubClassOf Monoclonal Antibody</Axiom>
+               <New_Terms>Anti-CD79B Monoclonal Antibody-MMAE Conjugate DCDS4501A</New_Terms>
+            </Change>
+            <Change id="383">
+               <Axiom>Anti-Macrophage Migration Inhibitory Factor Monoclonal Antibody SubClassOf Monoclonal Antibody</Axiom>
+               <New_Terms>Anti-Macrophage Migration Inhibitory Factor Monoclonal Antibody</New_Terms>
+            </Change>
+            <Change id="100">
+               <Axiom>Apelin EquivalentTo Peptide Hormone and (Gene_Product_Is_Element_In_Pathway some Neuroactive Ligand-Receptor Signaling Pathway) and (Gene_Product_Expressed_In_Tissue some Brain) and (Gene_Product_Expressed_In_Tissue some Human Colostrum) and (Gene_Product_Plays_Role_In_Biological_Process some Immune Response Process) and (Gene_Product_Encoded_By_Gene some APLN Gene)</Axiom>
+               <New_Terms>APLN Gene, Apelin</New_Terms>
+            </Change>
+            <Change id="7">
+               <Axiom>BCL2-Related Protein A1 SubClassOf Apoptosis Regulator</Axiom>
+               <New_Terms>BCL2-Related Protein A1</New_Terms>
+            </Change>
+            <Change id="8">
+               <Axiom>BCL2-Related Protein A1 SubClassOf Gene_Product_Encoded_By_Gene some BCL2A1 Gene</Axiom>
+               <New_Terms>BCL2-Related Protein A1, BCL2A1 Gene</New_Terms>
+            </Change>
+            <Change id="5">
+               <Axiom>BCL2A1 Gene SubClassOf BCL-2 Gene Family</Axiom>
+               <New_Terms>BCL2A1 Gene</New_Terms>
+            </Change>
+            <Change id="6">
+               <Axiom>BCL2A1 wt Allele SubClassOf BCL2A1 Gene</Axiom>
+               <New_Terms>BCL2A1 Gene, BCL2A1 wt Allele</New_Terms>
+            </Change>
+            <Change id="198">
+               <Axiom>BMF Gene SubClassOf Apoptosis Regulation Gene</Axiom>
+               <New_Terms>BMF Gene</New_Terms>
+            </Change>
+            <Change id="199">
+               <Axiom>BMF Gene SubClassOf Gene_Plays_Role_In_Process some Positive Regulation of Apoptosis</Axiom>
+               <New_Terms>BMF Gene</New_Terms>
+            </Change>
+            <Change id="200">
+               <Axiom>BMF wt Allele SubClassOf BMF Gene</Axiom>
+               <New_Terms>BMF wt Allele, BMF Gene</New_Terms>
+            </Change>
+            <Change id="201">
+               <Axiom>BMF wt Allele SubClassOf Gene_In_Chromosomal_Location some 15q14</Axiom>
+               <New_Terms>BMF wt Allele</New_Terms>
+            </Change>
+            <Change id="202">
+               <Axiom>Bcl-2-Modifying Factor SubClassOf Apoptosis Regulator</Axiom>
+               <New_Terms>Bcl-2-Modifying Factor</New_Terms>
+            </Change>
+            <Change id="207">
+               <Axiom>Bcl-2-Modifying Factor SubClassOf Gene_Product_Encoded_By_Gene some BMF Gene</Axiom>
+               <New_Terms>Bcl-2-Modifying Factor, BMF Gene</New_Terms>
+            </Change>
+            <Change id="203">
+               <Axiom>Bcl-2-Modifying Factor SubClassOf Gene_Product_Has_Associated_Anatomy some Cytosol</Axiom>
+               <New_Terms>Bcl-2-Modifying Factor</New_Terms>
+            </Change>
+            <Change id="205">
+               <Axiom>Bcl-2-Modifying Factor SubClassOf Gene_Product_Has_Biochemical_Function some Apoptosis Promoter</Axiom>
+               <New_Terms>Bcl-2-Modifying Factor</New_Terms>
+            </Change>
+            <Change id="204">
+               <Axiom>Bcl-2-Modifying Factor SubClassOf Gene_Product_Has_Structural_Domain_Or_Motif some BH3 Domain</Axiom>
+               <New_Terms>Bcl-2-Modifying Factor</New_Terms>
+            </Change>
+            <Change id="206">
+               <Axiom>Bcl-2-Modifying Factor SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Positive Regulation of Apoptosis</Axiom>
+               <New_Terms>Bcl-2-Modifying Factor</New_Terms>
+            </Change>
+            <Change id="154">
+               <Axiom>C-C Chemokine Receptor Type 7 SubClassOf G Protein-Coupled Receptor</Axiom>
+               <New_Terms>C-C Chemokine Receptor Type 7</New_Terms>
+            </Change>
+            <Change id="155">
+               <Axiom>C-C Chemokine Receptor Type 7 SubClassOf Gene_Product_Encoded_By_Gene some CCR7 Gene</Axiom>
+               <New_Terms>CCR7 Gene, C-C Chemokine Receptor Type 7</New_Terms>
+            </Change>
+            <Change id="159">
+               <Axiom>C-Type Lectin Domain Family 4 Member C SubClassOf Gene_Product_Encoded_By_Gene some CLEC4C Gene</Axiom>
+               <New_Terms>CLEC4C Gene, C-Type Lectin Domain Family 4 Member C</New_Terms>
+            </Change>
+            <Change id="158">
+               <Axiom>C-Type Lectin Domain Family 4 Member C SubClassOf Immunoprotein</Axiom>
+               <New_Terms>C-Type Lectin Domain Family 4 Member C</New_Terms>
+            </Change>
+            <Change id="175">
+               <Axiom>C-X-C Motif Chemokine 16 SubClassOf Alpha Chemokine</Axiom>
+               <New_Terms>C-X-C Motif Chemokine 16</New_Terms>
+            </Change>
+            <Change id="176">
+               <Axiom>C-X-C Motif Chemokine 16 SubClassOf Gene_Product_Encoded_By_Gene some CXCL16 Gene</Axiom>
+               <New_Terms>CXCL16 Gene, C-X-C Motif Chemokine 16</New_Terms>
+            </Change>
+            <Change id="21">
+               <Axiom>CA9 Gene SubClassOf Lyase Gene</Axiom>
+               <New_Terms>CA9 Gene</New_Terms>
+            </Change>
+            <Change id="22">
+               <Axiom>CA9 wt Allele SubClassOf CA9 Gene</Axiom>
+               <New_Terms>CA9 Gene, CA9 wt Allele</New_Terms>
+            </Change>
+            <Change id="9">
+               <Axiom>CAMK2N1 Gene SubClassOf Signaling Pathway Gene</Axiom>
+               <New_Terms>CAMK2N1 Gene</New_Terms>
+            </Change>
+            <Change id="10">
+               <Axiom>CAMK2N1 wt Allele SubClassOf CAMK2N1 Gene</Axiom>
+               <New_Terms>CAMK2N1 wt Allele, CAMK2N1 Gene</New_Terms>
+            </Change>
+            <Change id="138">
+               <Axiom>CCAAT/Enhancer Binding Protein Beta SubClassOf Gene_Product_Encoded_By_Gene some CEBPB Gene</Axiom>
+               <New_Terms>CEBPB Gene, CCAAT/Enhancer Binding Protein Beta</New_Terms>
+            </Change>
+            <Change id="137">
+               <Axiom>CCAAT/Enhancer Binding Protein Beta SubClassOf Transcription Factor</Axiom>
+               <New_Terms>CCAAT/Enhancer Binding Protein Beta</New_Terms>
+            </Change>
+            <Change id="315">
+               <Axiom>CCNA1 Gene SubClassOf Cyclin Gene</Axiom>
+               <New_Terms>CCNA1 Gene</New_Terms>
+            </Change>
+            <Change id="316">
+               <Axiom>CCNA1 wt Allele SubClassOf CCNA1 Gene</Axiom>
+               <New_Terms>CCNA1 wt Allele, CCNA1 Gene</New_Terms>
+            </Change>
+            <Change id="152">
+               <Axiom>CCR7 Gene SubClassOf G Protein-Coupled Receptor Gene</Axiom>
+               <New_Terms>CCR7 Gene</New_Terms>
+            </Change>
+            <Change id="153">
+               <Axiom>CCR7 wt Allele SubClassOf CCR7 Gene</Axiom>
+               <New_Terms>CCR7 Gene, CCR7 wt Allele</New_Terms>
+            </Change>
+            <Change id="36">
+               <Axiom>CD163 Gene SubClassOf Receptor Gene</Axiom>
+               <New_Terms>CD163 Gene</New_Terms>
+            </Change>
+            <Change id="37">
+               <Axiom>CD163 wt Allele SubClassOf CD163 Gene</Axiom>
+               <New_Terms>CD163 Gene, CD163 wt Allele</New_Terms>
+            </Change>
+            <Change id="42">
+               <Axiom>CD226 Antigen SubClassOf Cell Adhesion Molecule</Axiom>
+               <New_Terms>CD226 Antigen</New_Terms>
+            </Change>
+            <Change id="43">
+               <Axiom>CD226 Antigen SubClassOf Gene_Product_Encoded_By_Gene some CD226 Gene</Axiom>
+               <New_Terms>CD226 Antigen, CD226 Gene</New_Terms>
+            </Change>
+            <Change id="40">
+               <Axiom>CD226 Gene SubClassOf Cell Adhesion Molecule Gene</Axiom>
+               <New_Terms>CD226 Gene</New_Terms>
+            </Change>
+            <Change id="41">
+               <Axiom>CD226 wt Allele SubClassOf CD226 Gene</Axiom>
+               <New_Terms>CD226 Gene, CD226 wt Allele</New_Terms>
+            </Change>
+            <Change id="44">
+               <Axiom>CD244 Gene SubClassOf Receptor Gene</Axiom>
+               <New_Terms>CD244 Gene</New_Terms>
+            </Change>
+            <Change id="45">
+               <Axiom>CD244 wt Allele SubClassOf CD244 Gene</Axiom>
+               <New_Terms>CD244 wt Allele, CD244 Gene</New_Terms>
+            </Change>
+            <Change id="51">
+               <Axiom>CD27 Antigen SubClassOf Gene_Product_Encoded_By_Gene some CD27 Gene</Axiom>
+               <New_Terms>CD27 Gene, CD27 Antigen</New_Terms>
+            </Change>
+            <Change id="50">
+               <Axiom>CD27 Antigen SubClassOf TNF Receptor Family Protein</Axiom>
+               <New_Terms>CD27 Antigen</New_Terms>
+            </Change>
+            <Change id="48">
+               <Axiom>CD27 Gene SubClassOf TNF Receptor Family Gene</Axiom>
+               <New_Terms>CD27 Gene</New_Terms>
+            </Change>
+            <Change id="49">
+               <Axiom>CD27 wt Allele SubClassOf CD27 Gene</Axiom>
+               <New_Terms>CD27 Gene, CD27 wt Allele</New_Terms>
+            </Change>
+            <Change id="52">
+               <Axiom>CD69 Gene SubClassOf Receptor Gene</Axiom>
+               <New_Terms>CD69 Gene</New_Terms>
+            </Change>
+            <Change id="53">
+               <Axiom>CD69 wt Allele SubClassOf CD69 Gene</Axiom>
+               <New_Terms>CD69 Gene, CD69 wt Allele</New_Terms>
+            </Change>
+            <Change id="59">
+               <Axiom>CD70 Antigen SubClassOf Gene_Product_Encoded_By_Gene some CD70 Gene</Axiom>
+               <New_Terms>CD70 Gene, CD70 Antigen</New_Terms>
+            </Change>
+            <Change id="58">
+               <Axiom>CD70 Antigen SubClassOf TNF Receptor Family Protein</Axiom>
+               <New_Terms>CD70 Antigen</New_Terms>
+            </Change>
+            <Change id="56">
+               <Axiom>CD70 Gene SubClassOf TNF Receptor Family Gene</Axiom>
+               <New_Terms>CD70 Gene</New_Terms>
+            </Change>
+            <Change id="57">
+               <Axiom>CD70 wt Allele SubClassOf CD70 Gene</Axiom>
+               <New_Terms>CD70 Gene, CD70 wt Allele</New_Terms>
+            </Change>
+            <Change id="123">
+               <Axiom>CD8A Gene SubClassOf Immunoprotein Gene</Axiom>
+               <New_Terms>CD8A Gene</New_Terms>
+            </Change>
+            <Change id="124">
+               <Axiom>CD8A wt Allele SubClassOf CD8A Gene</Axiom>
+               <New_Terms>CD8A wt Allele, CD8A Gene</New_Terms>
+            </Change>
+            <Change id="127">
+               <Axiom>CDC20 Gene SubClassOf Cell Cycle Gene</Axiom>
+               <New_Terms>CDC20 Gene</New_Terms>
+            </Change>
+            <Change id="128">
+               <Axiom>CDC20 wt Allele SubClassOf CDC20 Gene</Axiom>
+               <New_Terms>CDC20 wt Allele, CDC20 Gene</New_Terms>
+            </Change>
+            <Change id="160">
+               <Axiom>CDC25C Gene SubClassOf Cell Cycle Gene</Axiom>
+               <New_Terms>CDC25C Gene</New_Terms>
+            </Change>
+            <Change id="161">
+               <Axiom>CDC25C wt Allele SubClassOf CDC25C Gene</Axiom>
+               <New_Terms>CDC25C wt Allele, CDC25C Gene</New_Terms>
+            </Change>
+            <Change id="131">
+               <Axiom>CEACAM1 Gene SubClassOf CEA Family Gene</Axiom>
+               <New_Terms>CEACAM1 Gene</New_Terms>
+            </Change>
+            <Change id="132">
+               <Axiom>CEACAM1 wt Allele SubClassOf CEACAM1 Gene</Axiom>
+               <New_Terms>CEACAM1 Gene, CEACAM1 wt Allele</New_Terms>
+            </Change>
+            <Change id="135">
+               <Axiom>CEBPB Gene SubClassOf Transcription Regulation Gene</Axiom>
+               <New_Terms>CEBPB Gene</New_Terms>
+            </Change>
+            <Change id="136">
+               <Axiom>CEBPB wt Allele SubClassOf CEBPB Gene</Axiom>
+               <New_Terms>CEBPB Gene, CEBPB wt Allele</New_Terms>
+            </Change>
+            <Change id="139">
+               <Axiom>CEP55 Gene SubClassOf Cell Cycle Gene</Axiom>
+               <New_Terms>CEP55 Gene</New_Terms>
+            </Change>
+            <Change id="140">
+               <Axiom>CEP55 wt Allele SubClassOf CEP55 Gene</Axiom>
+               <New_Terms>CEP55 wt Allele, CEP55 Gene</New_Terms>
+            </Change>
+            <Change id="143">
+               <Axiom>CERKL Gene SubClassOf Apoptosis Inhibitor Gene</Axiom>
+               <New_Terms>CERKL Gene</New_Terms>
+            </Change>
+            <Change id="144">
+               <Axiom>CERKL wt Allele SubClassOf CERKL Gene</Axiom>
+               <New_Terms>CERKL Gene, CERKL wt Allele</New_Terms>
+            </Change>
+            <Change id="148">
+               <Axiom>CERS5 Gene SubClassOf Apoptosis Promoter Gene</Axiom>
+               <New_Terms>CERS5 Gene</New_Terms>
+            </Change>
+            <Change id="149">
+               <Axiom>CERS5 wt Allele SubClassOf CERS5 Gene</Axiom>
+               <New_Terms>CERS5 wt Allele, CERS5 Gene</New_Terms>
+            </Change>
+            <Change id="156">
+               <Axiom>CLEC4C Gene SubClassOf Immunoprotein Gene</Axiom>
+               <New_Terms>CLEC4C Gene</New_Terms>
+            </Change>
+            <Change id="157">
+               <Axiom>CLEC4C wt Allele SubClassOf CLEC4C Gene</Axiom>
+               <New_Terms>CLEC4C wt Allele, CLEC4C Gene</New_Terms>
+            </Change>
+            <Change id="193">
+               <Axiom>CLLU1 Gene SubClassOf Cancer Gene</Axiom>
+               <New_Terms>CLLU1 Gene</New_Terms>
+            </Change>
+            <Change id="194">
+               <Axiom>CLLU1 wt Allele SubClassOf CLLU1 Gene</Axiom>
+               <New_Terms>CLLU1 wt Allele, CLLU1 Gene</New_Terms>
+            </Change>
+            <Change id="195">
+               <Axiom>CLLU1 wt Allele SubClassOf Gene_In_Chromosomal_Location some 12q22</Axiom>
+               <New_Terms>CLLU1 wt Allele</New_Terms>
+            </Change>
+            <Change id="164">
+               <Axiom>CP Gene SubClassOf Oxidoreductase Gene</Axiom>
+               <New_Terms>CP Gene</New_Terms>
+            </Change>
+            <Change id="165">
+               <Axiom>CP wt Allele SubClassOf CP Gene</Axiom>
+               <New_Terms>CP Gene, CP wt Allele</New_Terms>
+            </Change>
+            <Change id="168">
+               <Axiom>CRBN Gene SubClassOf Protein Complex Subunit Gene</Axiom>
+               <New_Terms>CRBN Gene</New_Terms>
+            </Change>
+            <Change id="169">
+               <Axiom>CRBN wt Allele SubClassOf CRBN Gene</Axiom>
+               <New_Terms>CRBN wt Allele, CRBN Gene</New_Terms>
+            </Change>
+            <Change id="229">
+               <Axiom>CRTAM Gene SubClassOf Immunoprotein Gene</Axiom>
+               <New_Terms>CRTAM Gene</New_Terms>
+            </Change>
+            <Change id="230">
+               <Axiom>CRTAM wt Allele SubClassOf CRTAM Gene</Axiom>
+               <New_Terms>CRTAM wt Allele, CRTAM Gene</New_Terms>
+            </Change>
+            <Change id="15">
+               <Axiom>CTAG2 Gene SubClassOf Tumor Antigen Gene</Axiom>
+               <New_Terms>CTAG2 Gene</New_Terms>
+            </Change>
+            <Change id="16">
+               <Axiom>CTAG2 wt Allele SubClassOf CTAG2 Gene</Axiom>
+               <New_Terms>CTAG2 Gene, CTAG2 wt Allele</New_Terms>
+            </Change>
+            <Change id="25">
+               <Axiom>CTSG Gene SubClassOf Cysteine Peptidase Gene</Axiom>
+               <New_Terms>CTSG Gene</New_Terms>
+            </Change>
+            <Change id="26">
+               <Axiom>CTSG wt Allele SubClassOf CTSG Gene</Axiom>
+               <New_Terms>CTSG Gene, CTSG wt Allele</New_Terms>
+            </Change>
+            <Change id="173">
+               <Axiom>CXCL16 Gene SubClassOf CXC Cytokine Gene</Axiom>
+               <New_Terms>CXCL16 Gene</New_Terms>
+            </Change>
+            <Change id="174">
+               <Axiom>CXCL16 wt Allele SubClassOf CXCL16 Gene</Axiom>
+               <New_Terms>CXCL16 Gene, CXCL16 wt Allele</New_Terms>
+            </Change>
+            <Change id="323">
+               <Axiom>CYP1B1 Gene SubClassOf Cytochrome P450 Family Gene</Axiom>
+               <New_Terms>CYP1B1 Gene</New_Terms>
+            </Change>
+            <Change id="324">
+               <Axiom>CYP1B1 Gene SubClassOf Gene_Plays_Role_In_Process some Eye Development</Axiom>
+               <New_Terms>CYP1B1 Gene</New_Terms>
+            </Change>
+            <Change id="325">
+               <Axiom>CYP1B1 Gene SubClassOf Gene_Plays_Role_In_Process some Xenobiotic Metabolism</Axiom>
+               <New_Terms>CYP1B1 Gene</New_Terms>
+            </Change>
+            <Change id="327">
+               <Axiom>CYP1B1 wt Allele SubClassOf CYP1B1 Gene</Axiom>
+               <New_Terms>CYP1B1 wt Allele, CYP1B1 Gene</New_Terms>
+            </Change>
+            <Change id="330">
+               <Axiom>CYP1B1 wt Allele SubClassOf Gene_Is_Element_In_Pathway some Metabolism of Xenobiotics by Cytochrome P450 Pathway</Axiom>
+               <New_Terms>CYP1B1 wt Allele</New_Terms>
+            </Change>
+            <Change id="328">
+               <Axiom>CYP1B1 wt Allele SubClassOf Gene_Is_Element_In_Pathway some Steroid Hormone Biosynthesis Pathway</Axiom>
+               <New_Terms>CYP1B1 wt Allele</New_Terms>
+            </Change>
+            <Change id="329">
+               <Axiom>CYP1B1 wt Allele SubClassOf Gene_Is_Element_In_Pathway some Tryptophan Metabolism Pathway</Axiom>
+               <New_Terms>CYP1B1 wt Allele</New_Terms>
+            </Change>
+            <Change id="177">
+               <Axiom>CYP24A1 Gene SubClassOf Cytochrome P450 Family Gene</Axiom>
+               <New_Terms>CYP24A1 Gene</New_Terms>
+            </Change>
+            <Change id="178">
+               <Axiom>CYP24A1 wt Allele SubClassOf CYP24A1 Gene</Axiom>
+               <New_Terms>CYP24A1 wt Allele, CYP24A1 Gene</New_Terms>
+            </Change>
+            <Change id="181">
+               <Axiom>CYP27A1 Gene SubClassOf Cytochrome P450 Family Gene</Axiom>
+               <New_Terms>CYP27A1 Gene</New_Terms>
+            </Change>
+            <Change id="182">
+               <Axiom>CYP27A1 wt Allele SubClassOf CYP27A1 Gene</Axiom>
+               <New_Terms>CYP27A1 wt Allele, CYP27A1 Gene</New_Terms>
+            </Change>
+            <Change id="12">
+               <Axiom>Calcium/Calmodulin-Dependent Protein Kinase II Inhibitor 1 SubClassOf Gene_Product_Encoded_By_Gene some CAMK2N1 Gene</Axiom>
+               <New_Terms>CAMK2N1 Gene, Calcium/Calmodulin-Dependent Protein Kinase II Inhibitor 1</New_Terms>
+            </Change>
+            <Change id="11">
+               <Axiom>Calcium/Calmodulin-Dependent Protein Kinase II Inhibitor 1 SubClassOf Signaling Protein</Axiom>
+               <New_Terms>Calcium/Calmodulin-Dependent Protein Kinase II Inhibitor 1</New_Terms>
+            </Change>
+            <Change id="20">
+               <Axiom>Cancer/Testis Antigen 2 SubClassOf Gene_Product_Encoded_By_Gene some CTAG2 Gene</Axiom>
+               <New_Terms>CTAG2 Gene, Cancer/Testis Antigen 2</New_Terms>
+            </Change>
+            <Change id="19">
+               <Axiom>Cancer/Testis Antigen 2 SubClassOf Tumor-Related Protein</Axiom>
+               <New_Terms>Cancer/Testis Antigen 2</New_Terms>
+            </Change>
+            <Change id="24">
+               <Axiom>Carbonic Anhydrase 9 SubClassOf Gene_Product_Encoded_By_Gene some CA9 Gene</Axiom>
+               <New_Terms>CA9 Gene, Carbonic Anhydrase 9</New_Terms>
+            </Change>
+            <Change id="23">
+               <Axiom>Carbonic Anhydrase 9 SubClassOf Lyase</Axiom>
+               <New_Terms>Carbonic Anhydrase 9</New_Terms>
+            </Change>
+            <Change id="133">
+               <Axiom>Carcinoembryonic Antigen-Related Cell Adhesion Molecule 1 SubClassOf Carcinoembryonic Antigen</Axiom>
+               <New_Terms>Carcinoembryonic Antigen-Related Cell Adhesion Molecule 1</New_Terms>
+            </Change>
+            <Change id="134">
+               <Axiom>Carcinoembryonic Antigen-Related Cell Adhesion Molecule 1 SubClassOf Gene_Product_Encoded_By_Gene some CEACAM1 Gene</Axiom>
+               <New_Terms>CEACAM1 Gene, Carcinoembryonic Antigen-Related Cell Adhesion Molecule 1</New_Terms>
+            </Change>
+            <Change id="28">
+               <Axiom>Cathepsin G SubClassOf Cathepsin</Axiom>
+               <New_Terms>Cathepsin G</New_Terms>
+            </Change>
+            <Change id="29">
+               <Axiom>Cathepsin G SubClassOf Gene_Product_Encoded_By_Gene some CTSG Gene</Axiom>
+               <New_Terms>Cathepsin G, CTSG Gene</New_Terms>
+            </Change>
+            <Change id="129">
+               <Axiom>Cell Division Cycle Protein 20 Homolog SubClassOf Cell Cycle Protein</Axiom>
+               <New_Terms>Cell Division Cycle Protein 20 Homolog</New_Terms>
+            </Change>
+            <Change id="130">
+               <Axiom>Cell Division Cycle Protein 20 Homolog SubClassOf Gene_Product_Encoded_By_Gene some CDC20 Gene</Axiom>
+               <New_Terms>Cell Division Cycle Protein 20 Homolog, CDC20 Gene</New_Terms>
+            </Change>
+            <Change id="141">
+               <Axiom>Centrosomal Protein of 55 kDa SubClassOf Cell Cycle Protein</Axiom>
+               <New_Terms>Centrosomal Protein of 55 kDa</New_Terms>
+            </Change>
+            <Change id="142">
+               <Axiom>Centrosomal Protein of 55 kDa SubClassOf Gene_Product_Encoded_By_Gene some CEP55 Gene</Axiom>
+               <New_Terms>Centrosomal Protein of 55 kDa, CEP55 Gene</New_Terms>
+            </Change>
+            <Change id="145">
+               <Axiom>Ceramide Kinase-like Protein SubClassOf Apoptosis Inhibitor</Axiom>
+               <New_Terms>Ceramide Kinase-like Protein</New_Terms>
+            </Change>
+            <Change id="147">
+               <Axiom>Ceramide Kinase-like Protein SubClassOf Gene_Product_Encoded_By_Gene some CERKL Gene</Axiom>
+               <New_Terms>CERKL Gene, Ceramide Kinase-like Protein</New_Terms>
+            </Change>
+            <Change id="146">
+               <Axiom>Ceramide Kinase-like Protein SubClassOf Gene_Product_Has_Structural_Domain_Or_Motif some PH Domain</Axiom>
+               <New_Terms>Ceramide Kinase-like Protein</New_Terms>
+            </Change>
+            <Change id="150">
+               <Axiom>Ceramide Synthase 5 SubClassOf Apoptosis Promoter</Axiom>
+               <New_Terms>Ceramide Synthase 5</New_Terms>
+            </Change>
+            <Change id="151">
+               <Axiom>Ceramide Synthase 5 SubClassOf Gene_Product_Encoded_By_Gene some CERS5 Gene</Axiom>
+               <New_Terms>Ceramide Synthase 5, CERS5 Gene</New_Terms>
+            </Change>
+            <Change id="167">
+               <Axiom>Ceruloplasmin SubClassOf Gene_Product_Encoded_By_Gene some CP Gene</Axiom>
+               <New_Terms>CP Gene, Ceruloplasmin</New_Terms>
+            </Change>
+            <Change id="166">
+               <Axiom>Ceruloplasmin SubClassOf Oxidoreductase</Axiom>
+               <New_Terms>Ceruloplasmin</New_Terms>
+            </Change>
+            <Change id="197">
+               <Axiom>Chronic Lymphocytic Leukemia Up-Regulated Protein 1 SubClassOf Gene_Product_Encoded_By_Gene some CLLU1 Gene</Axiom>
+               <New_Terms>Chronic Lymphocytic Leukemia Up-Regulated Protein 1, CLLU1 Gene</New_Terms>
+            </Change>
+            <Change id="196">
+               <Axiom>Chronic Lymphocytic Leukemia Up-Regulated Protein 1 SubClassOf Tumor-Related Protein</Axiom>
+               <New_Terms>Chronic Lymphocytic Leukemia Up-Regulated Protein 1</New_Terms>
+            </Change>
+            <Change id="192">
+               <Axiom>Circulating Cell-Free RNA SubClassOf Ribonucleic Acid</Axiom>
+               <New_Terms>Circulating Cell-Free RNA</New_Terms>
+            </Change>
+            <Change id="304">
+               <Axiom>Coagulation Factor XII SubClassOf Coagulation Factor</Axiom>
+               <New_Terms>Coagulation Factor XII</New_Terms>
+            </Change>
+            <Change id="305">
+               <Axiom>Coagulation Factor XII SubClassOf Gene_Product_Encoded_By_Gene some F12 Gene</Axiom>
+               <New_Terms>F12 Gene, Coagulation Factor XII</New_Terms>
+            </Change>
+            <Change id="317">
+               <Axiom>Cyclin A1 SubClassOf Cyclin</Axiom>
+               <New_Terms>Cyclin A1</New_Terms>
+            </Change>
+            <Change id="318">
+               <Axiom>Cyclin A1 SubClassOf Gene_Product_Encoded_By_Gene some CCNA1 Gene</Axiom>
+               <New_Terms>Cyclin A1, CCNA1 Gene</New_Terms>
+            </Change>
+            <Change id="259">
+               <Axiom>Cyclin D SubClassOf Gene_Product_Has_Biochemical_Function some Cyclin</Axiom>
+               <New_Terms>Cyclin D</New_Terms>
+            </Change>
+            <Change id="260">
+               <Axiom>Cyclin D SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Cell Cycle Progression</Axiom>
+               <New_Terms>Cyclin D</New_Terms>
+            </Change>
+            <Change id="258">
+               <Axiom>Cyclin D SubClassOf Protein Family</Axiom>
+               <New_Terms>Cyclin D</New_Terms>
+            </Change>
+            <Change id="264">
+               <Axiom>Cyclin E SubClassOf Gene_Product_Has_Biochemical_Function some Cyclin</Axiom>
+               <New_Terms>Cyclin E</New_Terms>
+            </Change>
+            <Change id="265">
+               <Axiom>Cyclin E SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Cell Cycle Progression</Axiom>
+               <New_Terms>Cyclin E</New_Terms>
+            </Change>
+            <Change id="263">
+               <Axiom>Cyclin E SubClassOf Protein Family</Axiom>
+               <New_Terms>Cyclin E</New_Terms>
+            </Change>
+            <Change id="332">
+               <Axiom>Cytochrome P450 1B1 EquivalentTo Cytochrome P450 and (Gene_Product_Is_Element_In_Pathway some Steroid Hormone Biosynthesis Pathway) and (Gene_Product_Is_Element_In_Pathway some Tryptophan Metabolism Pathway) and (Gene_Product_Is_Element_In_Pathway some Metabolism of Xenobiotics by Cytochrome P450 Pathway) and (Gene_Product_Has_Associated_Anatomy some Membrane of the Rough Endoplasmic Reticulum) and (Gene_Product_Has_Associated_Anatomy some Membrane of the Smooth Endoplasmic Reticulum) and (Gene_Product_Has_Biochemical_Function some Cytochrome P450) and (Gene_Product_Plays_Role_In_Biological_Process some Eye Development) and (Gene_Product_Plays_Role_In_Biological_Process some Xenobiotic Metabolism) and (Gene_Product_Encoded_By_Gene some CYP1B1 Gene)</Axiom>
+               <New_Terms>Cytochrome P450 1B1, CYP1B1 Gene</New_Terms>
+            </Change>
+            <Change id="232">
+               <Axiom>Cytotoxic and Regulatory T-Cell Molecule SubClassOf Gene_Product_Encoded_By_Gene some CRTAM Gene</Axiom>
+               <New_Terms>Cytotoxic and Regulatory T-Cell Molecule, CRTAM Gene</New_Terms>
+            </Change>
+            <Change id="231">
+               <Axiom>Cytotoxic and Regulatory T-Cell Molecule SubClassOf Immunoprotein</Axiom>
+               <New_Terms>Cytotoxic and Regulatory T-Cell Molecule</New_Terms>
+            </Change>
+            <Change id="241">
+               <Axiom>DCAF7 Gene SubClassOf Transcription Regulation Gene</Axiom>
+               <New_Terms>DCAF7 Gene</New_Terms>
+            </Change>
+            <Change id="242">
+               <Axiom>DCAF7 wt Allele SubClassOf DCAF7 Gene</Axiom>
+               <New_Terms>DCAF7 wt Allele, DCAF7 Gene</New_Terms>
+            </Change>
+            <Change id="244">
+               <Axiom>DDB-1 and CUL4-Associated Factor 7 SubClassOf Gene_Product_Encoded_By_Gene some DCAF7 Gene</Axiom>
+               <New_Terms>DDB-1 and CUL4-Associated Factor 7, DCAF7 Gene</New_Terms>
+            </Change>
+            <Change id="243">
+               <Axiom>DDB-1 and CUL4-Associated Factor 7 SubClassOf Transcription Regulatory Protein</Axiom>
+               <New_Terms>DDB-1 and CUL4-Associated Factor 7</New_Terms>
+            </Change>
+            <Change id="245">
+               <Axiom>DDIT4 Gene SubClassOf Apoptosis Regulation Gene</Axiom>
+               <New_Terms>DDIT4 Gene</New_Terms>
+            </Change>
+            <Change id="246">
+               <Axiom>DDIT4 wt Allele SubClassOf DDIT4 Gene</Axiom>
+               <New_Terms>DDIT4 Gene, DDIT4 wt Allele</New_Terms>
+            </Change>
+            <Change id="233">
+               <Axiom>DEGS1 Gene SubClassOf Oxidoreductase Gene</Axiom>
+               <New_Terms>DEGS1 Gene</New_Terms>
+            </Change>
+            <Change id="234">
+               <Axiom>DEGS1 wt Allele SubClassOf DEGS1 Gene</Axiom>
+               <New_Terms>DEGS1 Gene, DEGS1 wt Allele</New_Terms>
+            </Change>
+            <Change id="237">
+               <Axiom>DEGS2 Gene SubClassOf Oxidoreductase Gene</Axiom>
+               <New_Terms>DEGS2 Gene</New_Terms>
+            </Change>
+            <Change id="238">
+               <Axiom>DEGS2 wt Allele SubClassOf DEGS2 Gene</Axiom>
+               <New_Terms>DEGS2 Gene, DEGS2 wt Allele</New_Terms>
+            </Change>
+            <Change id="366">
+               <Axiom>DLL3 Gene SubClassOf Gene_Plays_Role_In_Process some Signal Transduction</Axiom>
+               <New_Terms>DLL3 Gene</New_Terms>
+            </Change>
+            <Change id="365">
+               <Axiom>DLL3 Gene SubClassOf Signaling Pathway Gene</Axiom>
+               <New_Terms>DLL3 Gene</New_Terms>
+            </Change>
+            <Change id="367">
+               <Axiom>DLL3 wt Allele SubClassOf DLL3 Gene</Axiom>
+               <New_Terms>DLL3 wt Allele, DLL3 Gene</New_Terms>
+            </Change>
+            <Change id="369">
+               <Axiom>DLL3 wt Allele SubClassOf Gene_In_Chromosomal_Location some 19q13</Axiom>
+               <New_Terms>DLL3 wt Allele</New_Terms>
+            </Change>
+            <Change id="368">
+               <Axiom>DLL3 wt Allele SubClassOf Gene_Is_Element_In_Pathway some Notch Signaling Pathway</Axiom>
+               <New_Terms>DLL3 wt Allele</New_Terms>
+            </Change>
+            <Change id="247">
+               <Axiom>DNA Damage-Inducible Transcript 4 Protein SubClassOf Apoptosis Regulator</Axiom>
+               <New_Terms>DNA Damage-Inducible Transcript 4 Protein</New_Terms>
+            </Change>
+            <Change id="248">
+               <Axiom>DNA Damage-Inducible Transcript 4 Protein SubClassOf Gene_Product_Encoded_By_Gene some DDIT4 Gene</Axiom>
+               <New_Terms>DNA Damage-Inducible Transcript 4 Protein, DDIT4 Gene</New_Terms>
+            </Change>
+            <Change id="376">
+               <Axiom>Delta-Like Protein 3 SubClassOf Gene_Product_Encoded_By_Gene some DLL3 Gene</Axiom>
+               <New_Terms>Delta-Like Protein 3, DLL3 Gene</New_Terms>
+            </Change>
+            <Change id="373">
+               <Axiom>Delta-Like Protein 3 SubClassOf Gene_Product_Has_Associated_Anatomy some Plasma Membrane</Axiom>
+               <New_Terms>Delta-Like Protein 3</New_Terms>
+            </Change>
+            <Change id="372">
+               <Axiom>Delta-Like Protein 3 SubClassOf Gene_Product_Has_Chemical_Classification some Transmembrane Protein</Axiom>
+               <New_Terms>Delta-Like Protein 3</New_Terms>
+            </Change>
+            <Change id="374">
+               <Axiom>Delta-Like Protein 3 SubClassOf Gene_Product_Has_Structural_Domain_Or_Motif some Transmembrane Domain</Axiom>
+               <New_Terms>Delta-Like Protein 3</New_Terms>
+            </Change>
+            <Change id="371">
+               <Axiom>Delta-Like Protein 3 SubClassOf Gene_Product_Is_Element_In_Pathway some Notch Signaling Pathway</Axiom>
+               <New_Terms>Delta-Like Protein 3</New_Terms>
+            </Change>
+            <Change id="375">
+               <Axiom>Delta-Like Protein 3 SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Signal Transduction</Axiom>
+               <New_Terms>Delta-Like Protein 3</New_Terms>
+            </Change>
+            <Change id="370">
+               <Axiom>Delta-Like Protein 3 SubClassOf Signaling Protein</Axiom>
+               <New_Terms>Delta-Like Protein 3</New_Terms>
+            </Change>
+            <Change id="249">
+               <Axiom>EIF2S1 Gene SubClassOf Translation Process Gene</Axiom>
+               <New_Terms>EIF2S1 Gene</New_Terms>
+            </Change>
+            <Change id="250">
+               <Axiom>EIF2S1 wt Allele SubClassOf EIF2S1 Gene</Axiom>
+               <New_Terms>EIF2S1 wt Allele, EIF2S1 Gene</New_Terms>
+            </Change>
+            <Change id="253">
+               <Axiom>EIF4A1 Gene SubClassOf Translation Process Gene</Axiom>
+               <New_Terms>EIF4A1 Gene</New_Terms>
+            </Change>
+            <Change id="254">
+               <Axiom>EIF4A1 wt Allele SubClassOf EIF4A1 Gene</Axiom>
+               <New_Terms>EIF4A1 Gene, EIF4A1 wt Allele</New_Terms>
+            </Change>
+            <Change id="261">
+               <Axiom>ELANE Gene SubClassOf Peptidase Gene</Axiom>
+               <New_Terms>ELANE Gene</New_Terms>
+            </Change>
+            <Change id="262">
+               <Axiom>ELANE wt Allele SubClassOf ELANE Gene</Axiom>
+               <New_Terms>ELANE Gene, ELANE wt Allele</New_Terms>
+            </Change>
+            <Change id="277">
+               <Axiom>ENO1 Gene SubClassOf Lyase Gene</Axiom>
+               <New_Terms>ENO1 Gene</New_Terms>
+            </Change>
+            <Change id="278">
+               <Axiom>ENO1 wt Allele SubClassOf ENO1 Gene</Axiom>
+               <New_Terms>ENO1 wt Allele, ENO1 Gene</New_Terms>
+            </Change>
+            <Change id="289">
+               <Axiom>ENPP2 Gene SubClassOf Esterase Gene</Axiom>
+               <New_Terms>ENPP2 Gene</New_Terms>
+            </Change>
+            <Change id="290">
+               <Axiom>ENPP2 wt Allele SubClassOf ENPP2 Gene</Axiom>
+               <New_Terms>ENPP2 Gene, ENPP2 wt Allele</New_Terms>
+            </Change>
+            <Change id="14">
+               <Axiom>ERK Inhibitor MK-8353 SubClassOf Serine/Threonine Kinase Inhibitor</Axiom>
+               <New_Terms>ERK Inhibitor MK-8353</New_Terms>
+            </Change>
+            <Change id="74">
+               <Axiom>ESM1 Gene SubClassOf Regulatory Gene</Axiom>
+               <New_Terms>ESM1 Gene</New_Terms>
+            </Change>
+            <Change id="75">
+               <Axiom>ESM1 wt Allele SubClassOf ESM1 Gene</Axiom>
+               <New_Terms>ESM1 Gene, ESM1 wt Allele</New_Terms>
+            </Change>
+            <Change id="76">
+               <Axiom>ESM1 wt Allele SubClassOf Gene_In_Chromosomal_Location some 5q11.2</Axiom>
+               <New_Terms>ESM1 wt Allele</New_Terms>
+            </Change>
+            <Change id="55">
+               <Axiom>Early Activation Antigen CD69 SubClassOf Gene_Product_Encoded_By_Gene some CD69 Gene</Axiom>
+               <New_Terms>CD69 Gene, Early Activation Antigen CD69</New_Terms>
+            </Change>
+            <Change id="54">
+               <Axiom>Early Activation Antigen CD69 SubClassOf Receptor</Axiom>
+               <New_Terms>Early Activation Antigen CD69</New_Terms>
+            </Change>
+            <Change id="292">
+               <Axiom>Ectonucleotide Pyrophosphatase/Phosphodiesterase Family Member 2 SubClassOf Gene_Product_Encoded_By_Gene some ENPP2 Gene</Axiom>
+               <New_Terms>ENPP2 Gene, Ectonucleotide Pyrophosphatase/Phosphodiesterase Family Member 2</New_Terms>
+            </Change>
+            <Change id="291">
+               <Axiom>Ectonucleotide Pyrophosphatase/Phosphodiesterase Family Member 2 SubClassOf Phospholipase</Axiom>
+               <New_Terms>Ectonucleotide Pyrophosphatase/Phosphodiesterase Family Member 2</New_Terms>
+            </Change>
+            <Change id="63">
+               <Axiom>Effector T-Lymphocyte SubClassOf Mature T-Lymphocyte</Axiom>
+               <New_Terms>Effector T-Lymphocyte</New_Terms>
+            </Change>
+            <Change id="80">
+               <Axiom>Endothelial Cell-Specific Molecule 1 SubClassOf Gene_Product_Encoded_By_Gene some ESM1 Gene</Axiom>
+               <New_Terms>ESM1 Gene, Endothelial Cell-Specific Molecule 1</New_Terms>
+            </Change>
+            <Change id="79">
+               <Axiom>Endothelial Cell-Specific Molecule 1 SubClassOf Gene_Product_Expressed_In_Tissue some Lung Tissue</Axiom>
+               <New_Terms>Endothelial Cell-Specific Molecule 1</New_Terms>
+            </Change>
+            <Change id="78">
+               <Axiom>Endothelial Cell-Specific Molecule 1 SubClassOf Gene_Product_Has_Associated_Anatomy some Extracellular Space</Axiom>
+               <New_Terms>Endothelial Cell-Specific Molecule 1</New_Terms>
+            </Change>
+            <Change id="77">
+               <Axiom>Endothelial Cell-Specific Molecule 1 SubClassOf Regulatory Protein</Axiom>
+               <New_Terms>Endothelial Cell-Specific Molecule 1</New_Terms>
+            </Change>
+            <Change id="60">
+               <Axiom>Enjoyment of Life SubClassOf Emotion</Axiom>
+               <New_Terms>Enjoyment of Life</New_Terms>
+            </Change>
+            <Change id="4">
+               <Axiom>Estradiol 17-Beta-Dehydrogenase 1 SubClassOf Gene_Product_Encoded_By_Gene some HSD17B1 Gene</Axiom>
+               <New_Terms>Estradiol 17-Beta-Dehydrogenase 1, HSD17B1 Gene</New_Terms>
+            </Change>
+            <Change id="3">
+               <Axiom>Estradiol 17-Beta-Dehydrogenase 1 SubClassOf Oxidoreductase</Axiom>
+               <New_Terms>Estradiol 17-Beta-Dehydrogenase 1</New_Terms>
+            </Change>
+            <Change id="256">
+               <Axiom>Eukaryotic Initiation Factor 4A-I SubClassOf Gene_Product_Encoded_By_Gene some EIF4A1 Gene</Axiom>
+               <New_Terms>EIF4A1 Gene, Eukaryotic Initiation Factor 4A-I</New_Terms>
+            </Change>
+            <Change id="255">
+               <Axiom>Eukaryotic Initiation Factor 4A-I SubClassOf Translation Process Protein</Axiom>
+               <New_Terms>Eukaryotic Initiation Factor 4A-I</New_Terms>
+            </Change>
+            <Change id="252">
+               <Axiom>Eukaryotic Translation Initiation Factor 2 Subunit 1 SubClassOf Gene_Product_Encoded_By_Gene some EIF2S1 Gene</Axiom>
+               <New_Terms>Eukaryotic Translation Initiation Factor 2 Subunit 1, EIF2S1 Gene</New_Terms>
+            </Change>
+            <Change id="251">
+               <Axiom>Eukaryotic Translation Initiation Factor 2 Subunit 1 SubClassOf Translation Process Protein</Axiom>
+               <New_Terms>Eukaryotic Translation Initiation Factor 2 Subunit 1</New_Terms>
+            </Change>
+            <Change id="313">
+               <Axiom>F-Box Only Protein 32 SubClassOf Gene_Product_Encoded_By_Gene some FBXO32 Gene</Axiom>
+               <New_Terms>F-Box Only Protein 32, FBXO32 Gene</New_Terms>
+            </Change>
+            <Change id="312">
+               <Axiom>F-Box Only Protein 32 SubClassOf Ubiquitination Regulation Protein</Axiom>
+               <New_Terms>F-Box Only Protein 32</New_Terms>
+            </Change>
+            <Change id="298">
+               <Axiom>F12 Gene SubClassOf Coagulation Factor Gene</Axiom>
+               <New_Terms>F12 Gene</New_Terms>
+            </Change>
+            <Change id="302">
+               <Axiom>F12 wt Allele SubClassOf F12 Gene</Axiom>
+               <New_Terms>F12 Gene, F12 wt Allele</New_Terms>
+            </Change>
+            <Change id="307">
+               <Axiom>FBXO32 Gene SubClassOf Regulatory Gene</Axiom>
+               <New_Terms>FBXO32 Gene</New_Terms>
+            </Change>
+            <Change id="308">
+               <Axiom>FBXO32 wt Allele SubClassOf FBXO32 Gene</Axiom>
+               <New_Terms>FBXO32 Gene, FBXO32 wt Allele</New_Terms>
+            </Change>
+            <Change id="326">
+               <Axiom>FCGR1A Gene SubClassOf Immunoprotein Gene</Axiom>
+               <New_Terms>FCGR1A Gene</New_Terms>
+            </Change>
+            <Change id="331">
+               <Axiom>FCGR1A wt Allele SubClassOf FCGR1A Gene</Axiom>
+               <New_Terms>FCGR1A wt Allele, FCGR1A Gene</New_Terms>
+            </Change>
+            <Change id="185">
+               <Axiom>FOLFIRI-Cetuximab Regimen SubClassOf Chemotherapy Regimen Used to Treat Colorectal Carcinoma</Axiom>
+               <New_Terms>FOLFIRI-Cetuximab Regimen</New_Terms>
+            </Change>
+            <Change id="187">
+               <Axiom>FOLFIRI-Cetuximab Regimen SubClassOf Chemotherapy_Regimen_Has_Component some Cetuximab</Axiom>
+               <New_Terms>FOLFIRI-Cetuximab Regimen</New_Terms>
+            </Change>
+            <Change id="188">
+               <Axiom>FOLFIRI-Cetuximab Regimen SubClassOf Chemotherapy_Regimen_Has_Component some Fluorouracil</Axiom>
+               <New_Terms>FOLFIRI-Cetuximab Regimen</New_Terms>
+            </Change>
+            <Change id="186">
+               <Axiom>FOLFIRI-Cetuximab Regimen SubClassOf Chemotherapy_Regimen_Has_Component some Irinotecan Hydrochloride</Axiom>
+               <New_Terms>FOLFIRI-Cetuximab Regimen</New_Terms>
+            </Change>
+            <Change id="189">
+               <Axiom>FOLFIRI-Cetuximab Regimen SubClassOf Chemotherapy_Regimen_Has_Component some Leucovorin Calcium</Axiom>
+               <New_Terms>FOLFIRI-Cetuximab Regimen</New_Terms>
+            </Change>
+            <Change id="190">
+               <Axiom>FOLFIRI-Cetuximab Regimen SubClassOf Regimen_Has_Accepted_Use_For_Disease some Colorectal Carcinoma</Axiom>
+               <New_Terms>FOLFIRI-Cetuximab Regimen</New_Terms>
+            </Change>
+            <Change id="274">
+               <Axiom>Ganglioside GQ SubClassOf Antigen</Axiom>
+               <New_Terms>Ganglioside GQ</New_Terms>
+            </Change>
+            <Change id="275">
+               <Axiom>Ganglioside GQ SubClassOf Ganglioside</Axiom>
+               <New_Terms>Ganglioside GQ</New_Terms>
+            </Change>
+            <Change id="102">
+               <Axiom>Glycogen Synthase Kinase 3 SubClassOf Gene_Product_Has_Associated_Anatomy some Cytosol</Axiom>
+               <New_Terms>Glycogen Synthase Kinase 3</New_Terms>
+            </Change>
+            <Change id="103">
+               <Axiom>Glycogen Synthase Kinase 3 SubClassOf Gene_Product_Has_Biochemical_Function some Serine/Threonine Protein Kinase</Axiom>
+               <New_Terms>Glycogen Synthase Kinase 3</New_Terms>
+            </Change>
+            <Change id="109">
+               <Axiom>Glycogen Synthase Kinase 3 SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Cell Death Process</Axiom>
+               <New_Terms>Glycogen Synthase Kinase 3</New_Terms>
+            </Change>
+            <Change id="104">
+               <Axiom>Glycogen Synthase Kinase 3 SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Cell Motility</Axiom>
+               <New_Terms>Glycogen Synthase Kinase 3</New_Terms>
+            </Change>
+            <Change id="106">
+               <Axiom>Glycogen Synthase Kinase 3 SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Cell Proliferation</Axiom>
+               <New_Terms>Glycogen Synthase Kinase 3</New_Terms>
+            </Change>
+            <Change id="108">
+               <Axiom>Glycogen Synthase Kinase 3 SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Glycogenesis Induction</Axiom>
+               <New_Terms>Glycogen Synthase Kinase 3</New_Terms>
+            </Change>
+            <Change id="107">
+               <Axiom>Glycogen Synthase Kinase 3 SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Serine/Threonine Phosphorylation</Axiom>
+               <New_Terms>Glycogen Synthase Kinase 3</New_Terms>
+            </Change>
+            <Change id="105">
+               <Axiom>Glycogen Synthase Kinase 3 SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Signal Transduction</Axiom>
+               <New_Terms>Glycogen Synthase Kinase 3</New_Terms>
+            </Change>
+            <Change id="101">
+               <Axiom>Glycogen Synthase Kinase 3 SubClassOf Protein Family</Axiom>
+               <New_Terms>Glycogen Synthase Kinase 3</New_Terms>
+            </Change>
+            <Change id="379">
+               <Axiom>HES4 Gene SubClassOf Gene_Plays_Role_In_Process some DNA Binding</Axiom>
+               <New_Terms>HES4 Gene</New_Terms>
+            </Change>
+            <Change id="378">
+               <Axiom>HES4 Gene SubClassOf Gene_Plays_Role_In_Process some Transcriptional Repression</Axiom>
+               <New_Terms>HES4 Gene</New_Terms>
+            </Change>
+            <Change id="377">
+               <Axiom>HES4 Gene SubClassOf Transcription Factor Gene</Axiom>
+               <New_Terms>HES4 Gene</New_Terms>
+            </Change>
+            <Change id="381">
+               <Axiom>HES4 wt Allele SubClassOf Gene_In_Chromosomal_Location some 1p36.33</Axiom>
+               <New_Terms>HES4 wt Allele</New_Terms>
+            </Change>
+            <Change id="380">
+               <Axiom>HES4 wt Allele SubClassOf HES4 Gene</Axiom>
+               <New_Terms>HES4 Gene, HES4 wt Allele</New_Terms>
+            </Change>
+            <Change id="1">
+               <Axiom>HSD17B1 Gene SubClassOf Oxidoreductase Gene</Axiom>
+               <New_Terms>HSD17B1 Gene</New_Terms>
+            </Change>
+            <Change id="2">
+               <Axiom>HSD17B1 wt Allele SubClassOf HSD17B1 Gene</Axiom>
+               <New_Terms>HSD17B1 wt Allele, HSD17B1 Gene</New_Terms>
+            </Change>
+            <Change id="334">
+               <Axiom>High Affinity Immunoglobulin Gamma Fc Receptor I SubClassOf Gene_Product_Encoded_By_Gene some FCGR1A Gene</Axiom>
+               <New_Terms>High Affinity Immunoglobulin Gamma Fc Receptor I, FCGR1A Gene</New_Terms>
+            </Change>
+            <Change id="333">
+               <Axiom>High Affinity Immunoglobulin Gamma Fc Receptor I SubClassOf Immunoprotein</Axiom>
+               <New_Terms>High Affinity Immunoglobulin Gamma Fc Receptor I</New_Terms>
+            </Change>
+            <Change id="13">
+               <Axiom>Hot Flash Related Daily Inference Scale SubClassOf Research or Clinical Assessment Tool</Axiom>
+               <New_Terms>Hot Flash Related Daily Inference Scale</New_Terms>
+            </Change>
+            <Change id="269">
+               <Axiom>I-Kappa-B Kinase SubClassOf Gene_Product_Has_Biochemical_Function some Serine/Threonine Protein Kinase</Axiom>
+               <New_Terms>I-Kappa-B Kinase</New_Terms>
+            </Change>
+            <Change id="271">
+               <Axiom>I-Kappa-B Kinase SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Serine/Threonine Phosphorylation</Axiom>
+               <New_Terms>I-Kappa-B Kinase</New_Terms>
+            </Change>
+            <Change id="270">
+               <Axiom>I-Kappa-B Kinase SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Signal Transduction</Axiom>
+               <New_Terms>I-Kappa-B Kinase</New_Terms>
+            </Change>
+            <Change id="268">
+               <Axiom>I-Kappa-B Kinase SubClassOf Protein or Riboprotein Complex</Axiom>
+               <New_Terms>I-Kappa-B Kinase</New_Terms>
+            </Change>
+            <Change id="360">
+               <Axiom>ITGB7 Gene SubClassOf Cell Adhesion Molecule Gene</Axiom>
+               <New_Terms>ITGB7 Gene</New_Terms>
+            </Change>
+            <Change id="362">
+               <Axiom>ITGB7 Gene SubClassOf Gene_Plays_Role_In_Process some Cell-Matrix Adhesion Process</Axiom>
+               <New_Terms>ITGB7 Gene</New_Terms>
+            </Change>
+            <Change id="361">
+               <Axiom>ITGB7 Gene SubClassOf Gene_Plays_Role_In_Process some Immune System Process</Axiom>
+               <New_Terms>ITGB7 Gene</New_Terms>
+            </Change>
+            <Change id="363">
+               <Axiom>ITGB7 wt Allele EquivalentTo ITGB7 Gene and (Gene_Is_Element_In_Pathway some Focal Adhesion Pathway) and (Gene_Is_Element_In_Pathway some Actin Cytoskeleton Regulation Pathway) and (Gene_Is_Element_In_Pathway some Arrhythmogenic Right Ventricular Cardiomyopathy Pathway) and (Gene_Is_Element_In_Pathway some Cell Adhesion Molecule Signaling Pathway) and (Gene_Is_Element_In_Pathway some Dilated Cardiomyopathy Pathway) and (Gene_Is_Element_In_Pathway some Hypertrophic Cardiomyopathy Pathway) and (Gene_Is_Element_In_Pathway some ECM-Receptor Interaction Signaling Pathway) and (Gene_Is_Element_In_Pathway some Intestinal IgA Production Pathway) and (Gene_Is_Element_In_Pathway some Adherens Junction Formation Pathway) and (Gene_In_Chromosomal_Location some 12q13.13)</Axiom>
+               <New_Terms>ITGB7 wt Allele, ITGB7 Gene</New_Terms>
+            </Change>
+            <Change id="31">
+               <Axiom>Immunoconjugate RO5479599 SubClassOf Immunoconjugate</Axiom>
+               <New_Terms>Immunoconjugate RO5479599</New_Terms>
+            </Change>
+            <Change id="364">
+               <Axiom>Integrin Beta-7 EquivalentTo Cell Adhesion Molecule and (Gene_Product_Is_Element_In_Pathway some Focal Adhesion Pathway) and (Gene_Product_Is_Element_In_Pathway some Actin Cytoskeleton Regulation Pathway) and (Gene_Product_Is_Element_In_Pathway some Arrhythmogenic Right Ventricular Cardiomyopathy Pathway) and (Gene_Product_Is_Element_In_Pathway some Cell Adhesion Molecule Signaling Pathway) and (Gene_Product_Is_Element_In_Pathway some Dilated Cardiomyopathy Pathway) and (Gene_Product_Is_Element_In_Pathway some Hypertrophic Cardiomyopathy Pathway) and (Gene_Product_Is_Element_In_Pathway some ECM-Receptor Interaction Signaling Pathway) and (Gene_Product_Is_Element_In_Pathway some Intestinal IgA Production Pathway) and (Gene_Product_Is_Element_In_Pathway some Adherens Junction Formation Pathway) and (Gene_Product_Has_Chemical_Classification some Transmembrane Protein) and (Gene_Product_Has_Associated_Anatomy some Plasma Membrane) and (Gene_Product_Has_Structural_Domain_Or_Motif some Transmembrane Domain) and (Gene_Product_Has_Biochemical_Function some Integrin) and (Gene_Product_Plays_Role_In_Biological_Process some Immune System Process) and (Gene_Product_Plays_Role_In_Biological_Process some Cell-Matrix Adhesion Process) and (Gene_Product_Encoded_By_Gene some ITGB7 Gene)</Axiom>
+               <New_Terms>Integrin Beta-7, ITGB7 Gene</New_Terms>
+            </Change>
+            <Change id="17">
+               <Axiom>Itraconazole Dispersion In Polymer Matrix SubClassOf Angiogenesis Inhibitor</Axiom>
+               <New_Terms>Itraconazole Dispersion In Polymer Matrix</New_Terms>
+            </Change>
+            <Change id="18">
+               <Axiom>Itraconazole Dispersion In Polymer Matrix SubClassOf Antifungal Agent</Axiom>
+               <New_Terms>Itraconazole Dispersion In Polymer Matrix</New_Terms>
+            </Change>
+            <Change id="209">
+               <Axiom>KIF23 Gene SubClassOf Gene_Plays_Role_In_Process some Cytokinesis</Axiom>
+               <New_Terms>KIF23 Gene</New_Terms>
+            </Change>
+            <Change id="210">
+               <Axiom>KIF23 Gene SubClassOf Gene_Plays_Role_In_Process some Microtubule Process</Axiom>
+               <New_Terms>KIF23 Gene</New_Terms>
+            </Change>
+            <Change id="208">
+               <Axiom>KIF23 Gene SubClassOf Transport Protein Gene</Axiom>
+               <New_Terms>KIF23 Gene</New_Terms>
+            </Change>
+            <Change id="213">
+               <Axiom>KIF23 wt Allele SubClassOf Gene_In_Chromosomal_Location some 15q23</Axiom>
+               <New_Terms>KIF23 wt Allele</New_Terms>
+            </Change>
+            <Change id="212">
+               <Axiom>KIF23 wt Allele SubClassOf Gene_Is_Element_In_Pathway some Aurora B Signaling Pathway</Axiom>
+               <New_Terms>KIF23 wt Allele</New_Terms>
+            </Change>
+            <Change id="211">
+               <Axiom>KIF23 wt Allele SubClassOf KIF23 Gene</Axiom>
+               <New_Terms>KIF23 Gene, KIF23 wt Allele</New_Terms>
+            </Change>
+            <Change id="214">
+               <Axiom>Kinesin-Like Protein KIF23 EquivalentTo Transport Protein and (Gene_Product_Is_Element_In_Pathway some Aurora B Signaling Pathway) and (Gene_Product_Has_Associated_Anatomy some Microtubule) and (Gene_Product_Has_Associated_Anatomy some Contractile System) and (Gene_Product_Has_Biochemical_Function some Microtubule Associated Protein) and (Gene_Product_Plays_Role_In_Biological_Process some Cytokinesis) and (Gene_Product_Encoded_By_Gene some KIF23 Gene)</Axiom>
+               <New_Terms>KIF23 Gene, Kinesin-Like Protein KIF23</New_Terms>
+            </Change>
+            <Change id="257">
+               <Axiom>Lactate Dehydrogenase Isoenzyme 5 SubClassOf Lactate Dehydrogenase</Axiom>
+               <New_Terms>Lactate Dehydrogenase Isoenzyme 5</New_Terms>
+            </Change>
+            <Change id="118">
+               <Axiom>Leisure Activity SubClassOf Physical Activity</Axiom>
+               <New_Terms>Leisure Activity</New_Terms>
+            </Change>
+            <Change id="162">
+               <Axiom>M-Phase Inducer Phosphatase 3 SubClassOf Cell Cycle Protein</Axiom>
+               <New_Terms>M-Phase Inducer Phosphatase 3</New_Terms>
+            </Change>
+            <Change id="163">
+               <Axiom>M-Phase Inducer Phosphatase 3 SubClassOf Gene_Product_Encoded_By_Gene some CDC25C Gene</Axiom>
+               <New_Terms>M-Phase Inducer Phosphatase 3, CDC25C Gene</New_Terms>
+            </Change>
+            <Change id="62">
+               <Axiom>Memory T-Lymphocyte SubClassOf Mature T-Lymphocyte</Axiom>
+               <New_Terms>Memory T-Lymphocyte</New_Terms>
+            </Change>
+            <Change id="65">
+               <Axiom>NDRG2 Gene SubClassOf Gene_Plays_Role_In_Process some Cell Differentiation Process</Axiom>
+               <New_Terms>NDRG2 Gene</New_Terms>
+            </Change>
+            <Change id="66">
+               <Axiom>NDRG2 Gene SubClassOf Gene_Plays_Role_In_Process some Signal Transduction</Axiom>
+               <New_Terms>NDRG2 Gene</New_Terms>
+            </Change>
+            <Change id="64">
+               <Axiom>NDRG2 Gene SubClassOf Signaling Pathway Gene</Axiom>
+               <New_Terms>NDRG2 Gene</New_Terms>
+            </Change>
+            <Change id="68">
+               <Axiom>NDRG2 wt Allele SubClassOf Gene_In_Chromosomal_Location some 14q11.2</Axiom>
+               <New_Terms>NDRG2 wt Allele</New_Terms>
+            </Change>
+            <Change id="67">
+               <Axiom>NDRG2 wt Allele SubClassOf NDRG2 Gene</Axiom>
+               <New_Terms>NDRG2 Gene, NDRG2 wt Allele</New_Terms>
+            </Change>
+            <Change id="61">
+               <Axiom>Naive T-Lymphocyte SubClassOf Mature T-Lymphocyte</Axiom>
+               <New_Terms>Naive T-Lymphocyte</New_Terms>
+            </Change>
+            <Change id="46">
+               <Axiom>Natural Killer Cell Receptor 2B4 SubClassOf Cell Surface Receptor</Axiom>
+               <New_Terms>Natural Killer Cell Receptor 2B4</New_Terms>
+            </Change>
+            <Change id="47">
+               <Axiom>Natural Killer Cell Receptor 2B4 SubClassOf Gene_Product_Encoded_By_Gene some CD244 Gene</Axiom>
+               <New_Terms>Natural Killer Cell Receptor 2B4, CD244 Gene</New_Terms>
+            </Change>
+            <Change id="267">
+               <Axiom>Neutrophil Elastase SubClassOf Gene_Product_Encoded_By_Gene some ELANE Gene</Axiom>
+               <New_Terms>ELANE Gene, Neutrophil Elastase</New_Terms>
+            </Change>
+            <Change id="266">
+               <Axiom>Neutrophil Elastase SubClassOf Serine Protease</Axiom>
+               <New_Terms>Neutrophil Elastase</New_Terms>
+            </Change>
+            <Change id="352">
+               <Axiom>Nuclear Receptor ROR-Gamma EquivalentTo Nuclear Orphan Receptor and (Gene_Product_Is_Element_In_Pathway some Circadian Rhythm Pathway KEGG) and (Gene_Product_Has_Chemical_Classification some Nuclear Hormone Receptor Superfamily) and (Gene_Product_Has_Associated_Anatomy some Nucleus) and (Gene_Product_Has_Structural_Domain_Or_Motif some Hormone Receptor DNA-Binding Domain) and (Gene_Product_Plays_Role_In_Biological_Process some Transcriptional Regulation) and (Gene_Product_Plays_Role_In_Biological_Process some Transcription Initiation) and (Gene_Product_Encoded_By_Gene some RORC Gene)</Axiom>
+               <New_Terms>Nuclear Receptor ROR-Gamma, RORC Gene</New_Terms>
+            </Change>
+            <Change id="353">
+               <Axiom>Nuclear Receptor ROR-Gamma SubClassOf Gene_Product_Plays_Role_In_Biological_Process some DNA Binding</Axiom>
+               <New_Terms>Nuclear Receptor ROR-Gamma</New_Terms>
+            </Change>
+            <Change id="276">
+               <Axiom>Oligodendrocyte Marker O4 SubClassOf Antigen</Axiom>
+               <New_Terms>Oligodendrocyte Marker O4</New_Terms>
+            </Change>
+            <Change id="114">
+               <Axiom>PARP1 Gene Product SubClassOf DNA Repair Protein</Axiom>
+               <New_Terms>PARP1 Gene Product</New_Terms>
+            </Change>
+            <Change id="115">
+               <Axiom>PARP1 Gene Product SubClassOf Gene_Product_Encoded_By_Gene some PARP1 Gene</Axiom>
+               <New_Terms>PARP1 Gene Product</New_Terms>
+            </Change>
+            <Change id="82">
+               <Axiom>PLXDC1 Gene SubClassOf Gene_Plays_Role_In_Process some Positive Regulation of Angiogenesis</Axiom>
+               <New_Terms>PLXDC1 Gene</New_Terms>
+            </Change>
+            <Change id="81">
+               <Axiom>PLXDC1 Gene SubClassOf Regulatory Gene</Axiom>
+               <New_Terms>PLXDC1 Gene</New_Terms>
+            </Change>
+            <Change id="84">
+               <Axiom>PLXDC1 wt Allele SubClassOf Gene_In_Chromosomal_Location some 17q21.1</Axiom>
+               <New_Terms>PLXDC1 wt Allele</New_Terms>
+            </Change>
+            <Change id="83">
+               <Axiom>PLXDC1 wt Allele SubClassOf PLXDC1 Gene</Axiom>
+               <New_Terms>PLXDC1 wt Allele, PLXDC1 Gene</New_Terms>
+            </Change>
+            <Change id="295">
+               <Axiom>PTPN13 Gene SubClassOf Gene_Plays_Role_In_Process some Protein Dephosphorylation</Axiom>
+               <New_Terms>PTPN13 Gene</New_Terms>
+            </Change>
+            <Change id="294">
+               <Axiom>PTPN13 Gene SubClassOf Gene_Plays_Role_In_Process some Signal Transduction</Axiom>
+               <New_Terms>PTPN13 Gene</New_Terms>
+            </Change>
+            <Change id="293">
+               <Axiom>PTPN13 Gene SubClassOf Non-Receptor Protein Tyrosine Phosphatase Gene</Axiom>
+               <New_Terms>PTPN13 Gene</New_Terms>
+            </Change>
+            <Change id="296">
+               <Axiom>PTPN13 wt Allele EquivalentTo PTPN13 Gene and (Gene_Is_Element_In_Pathway some Fas Signaling Pathway BioCarta) and (Gene_Is_Element_In_Pathway some Ephrin B Reverse Signaling Pathway) and (Gene_Is_Element_In_Pathway some Fc-Epsilon Receptor I Signaling Pathway PID) and (Gene_In_Chromosomal_Location some 4q21.3)</Axiom>
+               <New_Terms>PTPN13 Gene, PTPN13 wt Allele</New_Terms>
+            </Change>
+            <Change id="281">
+               <Axiom>PXN Gene SubClassOf Adaptor Signaling Protein Gene</Axiom>
+               <New_Terms>PXN Gene</New_Terms>
+            </Change>
+            <Change id="286">
+               <Axiom>PXN Gene SubClassOf Gene_Plays_Role_In_Process some Cell Surface Extension</Axiom>
+               <New_Terms>PXN Gene</New_Terms>
+            </Change>
+            <Change id="283">
+               <Axiom>PXN Gene SubClassOf Gene_Plays_Role_In_Process some Cell-Cell Adhesion Process</Axiom>
+               <New_Terms>PXN Gene</New_Terms>
+            </Change>
+            <Change id="284">
+               <Axiom>PXN Gene SubClassOf Gene_Plays_Role_In_Process some Cell-Matrix Adhesion Process</Axiom>
+               <New_Terms>PXN Gene</New_Terms>
+            </Change>
+            <Change id="285">
+               <Axiom>PXN Gene SubClassOf Gene_Plays_Role_In_Process some Cytoskeletal Modeling</Axiom>
+               <New_Terms>PXN Gene</New_Terms>
+            </Change>
+            <Change id="282">
+               <Axiom>PXN Gene SubClassOf Gene_Plays_Role_In_Process some Signal Transduction</Axiom>
+               <New_Terms>PXN Gene</New_Terms>
+            </Change>
+            <Change id="287">
+               <Axiom>PXN wt Allele EquivalentTo PXN Gene and (Gene_Is_Element_In_Pathway some Focal Adhesion Pathway) and (Gene_Is_Element_In_Pathway some Agrin Pathway) and (Gene_Is_Element_In_Pathway some Cell to Cell Adhesion Signaling Pathway) and (Gene_Is_Element_In_Pathway some Extracellular Matrix Binding Pathway) and (Gene_Is_Element_In_Pathway some Integrin Signaling Pathway) and (Gene_Is_Element_In_Pathway some Calpain-2 Cell Motility Pathway) and (Gene_Is_Element_In_Pathway some Calpain-1 Cell Spread Pathway) and (Gene_Is_Element_In_Pathway some Angiogenesis Pathway) and (Gene_Is_Element_In_Pathway some Actin Cytoskeleton Regulation Pathway) and (Gene_Is_Element_In_Pathway some Leukocyte Transendothelial Migration Pathway) and (Gene_Is_Element_In_Pathway some Chemokine Signaling Pathway) and (Gene_Is_Element_In_Pathway some VEGF Signaling Pathway) and (Gene_Is_Element_In_Pathway some Angiopoietin-1 Receptor Signaling Pathway) and (Gene_Is_Element_In_Pathway some Arf6 Pathway) and (Gene_Is_Element_In_Pathway some CXCR4-Mediated Signaling Pathway) and (Gene_Is_Element_In_Pathway some Ephrin B Forward Signaling Pathway) and (Gene_Is_Element_In_Pathway some Fc-Epsilon Receptor I Signaling Pathway PID) and (Gene_Is_Element_In_Pathway some IGF1 Pathway) and (Gene_Is_Element_In_Pathway some Integrin Angiogenesis Pathway) and (Gene_Is_Element_In_Pathway some Lysophosphatidic Acid Receptor Signaling Pathway) and (Gene_Is_Element_In_Pathway some mTOR Signaling Pathway PID) and (Gene_Is_Element_In_Pathway some Hepatocyte Growth Factor Receptor Signaling Pathway PID) and (Gene_Is_Element_In_Pathway some Proto-Oncogene Tyrosine-Protein Kinase Receptor Ret Signaling Pathway) and (Gene_Is_Element_In_Pathway some Bacterial Invasion of Epithelial Cell Pathway) and (Gene_In_Chromosomal_Location some 12q24.31)</Axiom>
+               <New_Terms>PXN Gene, PXN wt Allele</New_Terms>
+            </Change>
+            <Change id="110">
+               <Axiom>Pancreastatin SubClassOf Chromogranin</Axiom>
+               <New_Terms>Pancreastatin</New_Terms>
+            </Change>
+            <Change id="113">
+               <Axiom>Pancreastatin SubClassOf Gene_Product_Encoded_By_Gene some CHGA Gene</Axiom>
+               <New_Terms>Pancreastatin</New_Terms>
+            </Change>
+            <Change id="112">
+               <Axiom>Pancreastatin SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Hormone Activity Inhibition</Axiom>
+               <New_Terms>Pancreastatin</New_Terms>
+            </Change>
+            <Change id="111">
+               <Axiom>Pancreastatin SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Intercellular Communication Inhibition</Axiom>
+               <New_Terms>Pancreastatin</New_Terms>
+            </Change>
+            <Change id="288">
+               <Axiom>Paxillin EquivalentTo Adaptor Signaling Protein and (Gene_Product_Is_Element_In_Pathway some Focal Adhesion Pathway) and (Gene_Product_Is_Element_In_Pathway some Agrin Pathway) and (Gene_Product_Is_Element_In_Pathway some Cell to Cell Adhesion Signaling Pathway) and (Gene_Product_Is_Element_In_Pathway some Extracellular Matrix Binding Pathway) and (Gene_Product_Is_Element_In_Pathway some Integrin Signaling Pathway) and (Gene_Product_Is_Element_In_Pathway some Calpain-2 Cell Motility Pathway) and (Gene_Product_Is_Element_In_Pathway some Calpain-1 Cell Spread Pathway) and (Gene_Product_Is_Element_In_Pathway some Angiogenesis Pathway) and (Gene_Product_Is_Element_In_Pathway some Actin Cytoskeleton Regulation Pathway) and (Gene_Product_Is_Element_In_Pathway some Leukocyte Transendothelial Migration Pathway) and (Gene_Product_Is_Element_In_Pathway some Chemokine Signaling Pathway) and (Gene_Product_Is_Element_In_Pathway some VEGF Signaling Pathway) and (Gene_Product_Is_Element_In_Pathway some Angiopoietin-1 Receptor Signaling Pathway) and (Gene_Product_Is_Element_In_Pathway some Arf6 Pathway) and (Gene_Product_Is_Element_In_Pathway some CXCR4-Mediated Signaling Pathway) and (Gene_Product_Is_Element_In_Pathway some Ephrin B Forward Signaling Pathway) and (Gene_Product_Is_Element_In_Pathway some Fc-Epsilon Receptor I Signaling Pathway PID) and (Gene_Product_Is_Element_In_Pathway some IGF1 Pathway) and (Gene_Product_Is_Element_In_Pathway some Integrin Angiogenesis Pathway) and (Gene_Product_Is_Element_In_Pathway some Lysophosphatidic Acid Receptor Signaling Pathway) and (Gene_Product_Is_Element_In_Pathway some mTOR Signaling Pathway PID) and (Gene_Product_Is_Element_In_Pathway some Hepatocyte Growth Factor Receptor Signaling Pathway PID) and (Gene_Product_Is_Element_In_Pathway some Proto-Oncogene Tyrosine-Protein Kinase Receptor Ret Signaling Pathway) and (Gene_Product_Is_Element_In_Pathway some Bacterial Invasion of Epithelial Cell Pathway) and (Gene_Product_Has_Associated_Anatomy some Cytoskeleton) and (Gene_Product_Has_Associated_Anatomy some Focal Adhesion) and (Gene_Product_Has_Biochemical_Function some Adaptor Signaling Protein) and (Gene_Product_Plays_Role_In_Biological_Process some Signal Transduction) and (Gene_Product_Plays_Role_In_Biological_Process some Cell-Cell Adhesion Process) and (Gene_Product_Plays_Role_In_Biological_Process some Cell-Matrix Adhesion Process) and (Gene_Product_Plays_Role_In_Biological_Process some Cytoskeletal Modeling) and (Gene_Product_Plays_Role_In_Biological_Process some Cell Surface Extension) and (Gene_Product_Encoded_By_Gene some PXN Gene)</Axiom>
+               <New_Terms>PXN Gene, Paxillin</New_Terms>
+            </Change>
+            <Change id="85">
+               <Axiom>Plexin Domain-Containing Protein 1 SubClassOf Angiogenesis Promoter</Axiom>
+               <New_Terms>Plexin Domain-Containing Protein 1</New_Terms>
+            </Change>
+            <Change id="88">
+               <Axiom>Plexin Domain-Containing Protein 1 SubClassOf Gene_Product_Encoded_By_Gene some PLXDC1 Gene</Axiom>
+               <New_Terms>Plexin Domain-Containing Protein 1, PLXDC1 Gene</New_Terms>
+            </Change>
+            <Change id="86">
+               <Axiom>Plexin Domain-Containing Protein 1 SubClassOf Gene_Product_Has_Associated_Anatomy some Plasma Membrane</Axiom>
+               <New_Terms>Plexin Domain-Containing Protein 1</New_Terms>
+            </Change>
+            <Change id="87">
+               <Axiom>Plexin Domain-Containing Protein 1 SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Positive Regulation of Angiogenesis</Axiom>
+               <New_Terms>Plexin Domain-Containing Protein 1</New_Terms>
+            </Change>
+            <Change id="117">
+               <Axiom>Poly [ADP-Rbose] Polymerase 1 p85 SubClassOf Gene_Product_Encoded_By_Gene some PARP1 Gene</Axiom>
+               <New_Terms>Poly [ADP-Rbose] Polymerase 1 p85</New_Terms>
+            </Change>
+            <Change id="116">
+               <Axiom>Poly [ADP-Rbose] Polymerase 1 p85 SubClassOf PARP1 Gene Product</Axiom>
+               <New_Terms>PARP1 Gene Product, Poly [ADP-Rbose] Polymerase 1 p85</New_Terms>
+            </Change>
+            <Change id="172">
+               <Axiom>Protein Cereblon SubClassOf Gene_Product_Encoded_By_Gene some CRBN Gene</Axiom>
+               <New_Terms>CRBN Gene, Protein Cereblon</New_Terms>
+            </Change>
+            <Change id="171">
+               <Axiom>Protein Cereblon SubClassOf Gene_Product_Is_Physical_Part_Of some E3 Ubiquitin Ligase</Axiom>
+               <New_Terms>Protein Cereblon</New_Terms>
+            </Change>
+            <Change id="170">
+               <Axiom>Protein Cereblon SubClassOf Protein Complex Subunit</Axiom>
+               <New_Terms>Protein Cereblon</New_Terms>
+            </Change>
+            <Change id="73">
+               <Axiom>Protein NDRG2 SubClassOf Gene_Product_Encoded_By_Gene some NDRG2 Gene</Axiom>
+               <New_Terms>NDRG2 Gene, Protein NDRG2</New_Terms>
+            </Change>
+            <Change id="70">
+               <Axiom>Protein NDRG2 SubClassOf Gene_Product_Has_Associated_Anatomy some Cytoplasm</Axiom>
+               <New_Terms>Protein NDRG2</New_Terms>
+            </Change>
+            <Change id="71">
+               <Axiom>Protein NDRG2 SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Cell Differentiation Process</Axiom>
+               <New_Terms>Protein NDRG2</New_Terms>
+            </Change>
+            <Change id="72">
+               <Axiom>Protein NDRG2 SubClassOf Gene_Product_Plays_Role_In_Biological_Process some Signal Transduction</Axiom>
+               <New_Terms>Protein NDRG2</New_Terms>
+            </Change>
+            <Change id="69">
+               <Axiom>Protein NDRG2 SubClassOf Signaling Protein</Axiom>
+               <New_Terms>Protein NDRG2</New_Terms>
+            </Change>
+            <Change id="335">
+               <Axiom>RAD23B Gene SubClassOf DNA Repair Gene</Axiom>
+               <New_Terms>RAD23B Gene</New_Terms>
+            </Change>
+            <Change id="336">
+               <Axiom>RAD23B Gene SubClassOf Gene_Plays_Role_In_Process some Nucleotide Excision Repair</Axiom>
+               <New_Terms>RAD23B Gene</New_Terms>
+            </Change>
+            <Change id="337">
+               <Axiom>RAD23B Gene SubClassOf Gene_Plays_Role_In_Process some Ubiquitinated Protein Degradation</Axiom>
+               <New_Terms>RAD23B Gene</New_Terms>
+            </Change>
+            <Change id="339">
+               <Axiom>RAD23B wt Allele SubClassOf Gene_Is_Element_In_Pathway some Nucleotide Excision Repair Pathway</Axiom>
+               <New_Terms>RAD23B wt Allele</New_Terms>
+            </Change>
+            <Change id="338">
+               <Axiom>RAD23B wt Allele SubClassOf RAD23B Gene</Axiom>
+               <New_Terms>RAD23B Gene, RAD23B wt Allele</New_Terms>
+            </Change>
+            <Change id="347">
+               <Axiom>RORC Gene SubClassOf Gene_Plays_Role_In_Process some DNA Binding</Axiom>
+               <New_Terms>RORC Gene</New_Terms>
+            </Change>
+            <Change id="348">
+               <Axiom>RORC Gene SubClassOf Gene_Plays_Role_In_Process some Transcription Initiation</Axiom>
+               <New_Terms>RORC Gene</New_Terms>
+            </Change>
+            <Change id="346">
+               <Axiom>RORC Gene SubClassOf Gene_Plays_Role_In_Process some Transcriptional Activation</Axiom>
+               <New_Terms>RORC Gene</New_Terms>
+            </Change>
+            <Change id="345">
+               <Axiom>RORC Gene SubClassOf Orphan Nuclear Receptor Gene</Axiom>
+               <New_Terms>RORC Gene</New_Terms>
+            </Change>
+            <Change id="351">
+               <Axiom>RORC wt Allele SubClassOf Gene_In_Chromosomal_Location some 1q21</Axiom>
+               <New_Terms>RORC wt Allele</New_Terms>
+            </Change>
+            <Change id="350">
+               <Axiom>RORC wt Allele SubClassOf Gene_Is_Element_In_Pathway some Circadian Rhythm Pathway KEGG</Axiom>
+               <New_Terms>RORC wt Allele</New_Terms>
+            </Change>
+            <Change id="349">
+               <Axiom>RORC wt Allele SubClassOf RORC Gene</Axiom>
+               <New_Terms>RORC Gene, RORC wt Allele</New_Terms>
+            </Change>
+            <Change id="228">
+               <Axiom>Retired Concept 2012 SubClassOf Retired Concept</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="32">
+               <Axiom>SLAMF1 Gene SubClassOf Signaling Pathway Gene</Axiom>
+               <New_Terms>SLAMF1 Gene</New_Terms>
+            </Change>
+            <Change id="33">
+               <Axiom>SLAMF1 wt Allele SubClassOf SLAMF1 Gene</Axiom>
+               <New_Terms>SLAMF1 wt Allele, SLAMF1 Gene</New_Terms>
+            </Change>
+            <Change id="39">
+               <Axiom>Scavenger Receptor Cysteine-Rich Type 1 Protein M130 SubClassOf Gene_Product_Encoded_By_Gene some CD163 Gene</Axiom>
+               <New_Terms>CD163 Gene, Scavenger Receptor Cysteine-Rich Type 1 Protein M130</New_Terms>
+            </Change>
+            <Change id="38">
+               <Axiom>Scavenger Receptor Cysteine-Rich Type 1 Protein M130 SubClassOf Receptor</Axiom>
+               <New_Terms>Scavenger Receptor Cysteine-Rich Type 1 Protein M130</New_Terms>
+            </Change>
+            <Change id="35">
+               <Axiom>Signaling Lymphocytic Activation Molecule SubClassOf Gene_Product_Encoded_By_Gene some SLAMF1 Gene</Axiom>
+               <New_Terms>Signaling Lymphocytic Activation Molecule, SLAMF1 Gene</New_Terms>
+            </Change>
+            <Change id="34">
+               <Axiom>Signaling Lymphocytic Activation Molecule SubClassOf Signaling Protein</Axiom>
+               <New_Terms>Signaling Lymphocytic Activation Molecule</New_Terms>
+            </Change>
+            <Change id="236">
+               <Axiom>Sphingolipid Delta(4)-Desaturase DES1 SubClassOf Gene_Product_Encoded_By_Gene some DEGS1 Gene</Axiom>
+               <New_Terms>Sphingolipid Delta(4)-Desaturase DES1, DEGS1 Gene</New_Terms>
+            </Change>
+            <Change id="235">
+               <Axiom>Sphingolipid Delta(4)-Desaturase DES1 SubClassOf Oxidoreductase</Axiom>
+               <New_Terms>Sphingolipid Delta(4)-Desaturase DES1</New_Terms>
+            </Change>
+            <Change id="240">
+               <Axiom>Sphingolipid Delta(4)-Desaturase/C4-Hydroxylase DES2 SubClassOf Gene_Product_Encoded_By_Gene some DEGS2 Gene</Axiom>
+               <New_Terms>DEGS2 Gene, Sphingolipid Delta(4)-Desaturase/C4-Hydroxylase DES2</New_Terms>
+            </Change>
+            <Change id="239">
+               <Axiom>Sphingolipid Delta(4)-Desaturase/C4-Hydroxylase DES2 SubClassOf Oxidoreductase</Axiom>
+               <New_Terms>Sphingolipid Delta(4)-Desaturase/C4-Hydroxylase DES2</New_Terms>
+            </Change>
+            <Change id="183">
+               <Axiom>Sterol 26-Hydroxylase, Mitochondrial SubClassOf Cytochrome P450</Axiom>
+               <New_Terms>Sterol 26-Hydroxylase, Mitochondrial</New_Terms>
+            </Change>
+            <Change id="184">
+               <Axiom>Sterol 26-Hydroxylase, Mitochondrial SubClassOf Gene_Product_Encoded_By_Gene some CYP27A1 Gene</Axiom>
+               <New_Terms>CYP27A1 Gene, Sterol 26-Hydroxylase, Mitochondrial</New_Terms>
+            </Change>
+            <Change id="359">
+               <Axiom>T-Box Transcription Factor TBX21 EquivalentTo Transcription Factor and (Gene_Product_Is_Element_In_Pathway some Glucocorticoid Receptor Regulatory Network) and (Gene_Product_Is_Element_In_Pathway some IL12-Mediated Signaling Pathway) and (Gene_Product_Is_Element_In_Pathway some IL12/STAT4 Signaling Pathway) and (Gene_Product_Is_Element_In_Pathway some IL27-Mediated Signaling Pathway) and (Gene_Product_Is_Element_In_Pathway some Calcineurin-Regulated NFAT-Dependent Transcription Pathway) and (Gene_Product_Expressed_In_Tissue some T-Lymphocyte) and (Gene_Product_Has_Biochemical_Function some Sequence-Specific DNA Binding Protein) and (Gene_Product_Plays_Role_In_Biological_Process some Transcription) and (Gene_Product_Plays_Role_In_Biological_Process some DNA Binding) and (Gene_Product_Plays_Role_In_Biological_Process some Cellular Migration Process) and (Gene_Product_Encoded_By_Gene some TBX21 Gene)</Axiom>
+               <New_Terms>T-Box Transcription Factor TBX21, TBX21 Gene</New_Terms>
+            </Change>
+            <Change id="126">
+               <Axiom>T-Cell Surface Glycoprotein CD8 Alpha Chain SubClassOf Gene_Product_Encoded_By_Gene some CD8A Gene</Axiom>
+               <New_Terms>T-Cell Surface Glycoprotein CD8 Alpha Chain, CD8A Gene</New_Terms>
+            </Change>
+            <Change id="125">
+               <Axiom>T-Cell Surface Glycoprotein CD8 Alpha Chain SubClassOf Immunoprotein</Axiom>
+               <New_Terms>T-Cell Surface Glycoprotein CD8 Alpha Chain</New_Terms>
+            </Change>
+            <Change id="357">
+               <Axiom>TBX21 Gene SubClassOf Gene_Plays_Role_In_Process some Cellular Migration Process</Axiom>
+               <New_Terms>TBX21 Gene</New_Terms>
+            </Change>
+            <Change id="356">
+               <Axiom>TBX21 Gene SubClassOf Gene_Plays_Role_In_Process some DNA Binding</Axiom>
+               <New_Terms>TBX21 Gene</New_Terms>
+            </Change>
+            <Change id="355">
+               <Axiom>TBX21 Gene SubClassOf Gene_Plays_Role_In_Process some Transcription</Axiom>
+               <New_Terms>TBX21 Gene</New_Terms>
+            </Change>
+            <Change id="354">
+               <Axiom>TBX21 Gene SubClassOf Transcription Factor Gene</Axiom>
+               <New_Terms>TBX21 Gene</New_Terms>
+            </Change>
+            <Change id="358">
+               <Axiom>TBX21 wt Allele EquivalentTo TBX21 Gene and (Gene_Is_Element_In_Pathway some Glucocorticoid Receptor Regulatory Network) and (Gene_Is_Element_In_Pathway some IL12-Mediated Signaling Pathway) and (Gene_Is_Element_In_Pathway some IL12/STAT4 Signaling Pathway) and (Gene_Is_Element_In_Pathway some IL27-Mediated Signaling Pathway) and (Gene_Is_Element_In_Pathway some Calcineurin-Regulated NFAT-Dependent Transcription Pathway) and (Gene_In_Chromosomal_Location some 17q21.32)</Axiom>
+               <New_Terms>TBX21 wt Allele, TBX21 Gene</New_Terms>
+            </Change>
+            <Change id="309">
+               <Axiom>TNNI3 Gene SubClassOf Cytoskeletal Gene</Axiom>
+               <New_Terms>TNNI3 Gene</New_Terms>
+            </Change>
+            <Change id="310">
+               <Axiom>TNNI3 Gene SubClassOf Gene_Plays_Role_In_Process some Cardiac Muscle Contraction</Axiom>
+               <New_Terms>TNNI3 Gene</New_Terms>
+            </Change>
+            <Change id="311">
+               <Axiom>TNNI3 wt Allele EquivalentTo TNNI3 Gene and (Gene_Is_Element_In_Pathway some Cardiac Muscle Contraction Pathway) and (Gene_Is_Element_In_Pathway some Dilated Cardiomyopathy Pathway) and (Gene_Is_Element_In_Pathway some Hypertrophic Cardiomyopathy Pathway) and (Gene_In_Chromosomal_Location some 19q13.4)</Axiom>
+               <New_Terms>TNNI3 Gene, TNNI3 wt Allele</New_Terms>
+            </Change>
+            <Change id="299">
+               <Axiom>TNNT2 Gene SubClassOf Cytoskeletal Gene</Axiom>
+               <New_Terms>TNNT2 Gene</New_Terms>
+            </Change>
+            <Change id="301">
+               <Axiom>TNNT2 Gene SubClassOf Gene_Plays_Role_In_Process some Cardiac Muscle Contraction</Axiom>
+               <New_Terms>TNNT2 Gene</New_Terms>
+            </Change>
+            <Change id="300">
+               <Axiom>TNNT2 Gene SubClassOf Gene_Plays_Role_In_Process some Myogenesis</Axiom>
+               <New_Terms>TNNT2 Gene</New_Terms>
+            </Change>
+            <Change id="303">
+               <Axiom>TNNT2 wt Allele EquivalentTo TNNT2 Gene and (Gene_Is_Element_In_Pathway some Cardiac Muscle Contraction Pathway) and (Gene_Is_Element_In_Pathway some Dilated Cardiomyopathy Pathway) and (Gene_Is_Element_In_Pathway some Hypertrophic Cardiomyopathy Pathway) and (Gene_In_Chromosomal_Location some 1q32)</Axiom>
+               <New_Terms>TNNT2 Gene, TNNT2 wt Allele</New_Terms>
+            </Change>
+            <Change id="220">
+               <Axiom>TUBA3C Gene SubClassOf Cytoskeletal Gene</Axiom>
+               <New_Terms>TUBA3C Gene</New_Terms>
+            </Change>
+            <Change id="221">
+               <Axiom>TUBA3C Gene SubClassOf Gene_Plays_Role_In_Process some Microtubule Process</Axiom>
+               <New_Terms>TUBA3C Gene</New_Terms>
+            </Change>
+            <Change id="225">
+               <Axiom>TUBA3C wt Allele SubClassOf Gene_Is_Element_In_Pathway some Gap Junction Assembly Pathway</Axiom>
+               <New_Terms>TUBA3C wt Allele</New_Terms>
+            </Change>
+            <Change id="223">
+               <Axiom>TUBA3C wt Allele SubClassOf Gene_Is_Element_In_Pathway some MTA3 Pathway</Axiom>
+               <New_Terms>TUBA3C wt Allele</New_Terms>
+            </Change>
+            <Change id="224">
+               <Axiom>TUBA3C wt Allele SubClassOf Gene_Is_Element_In_Pathway some Pathogenic Escherichia coli Infection Pathway</Axiom>
+               <New_Terms>TUBA3C wt Allele</New_Terms>
+            </Change>
+            <Change id="226">
+               <Axiom>TUBA3C wt Allele SubClassOf Gene_Is_Element_In_Pathway some Phagocytosis Pathway</Axiom>
+               <New_Terms>TUBA3C wt Allele</New_Terms>
+            </Change>
+            <Change id="222">
+               <Axiom>TUBA3C wt Allele SubClassOf TUBA3C Gene</Axiom>
+               <New_Terms>TUBA3C wt Allele, TUBA3C Gene</New_Terms>
+            </Change>
+            <Change id="215">
+               <Axiom>TUBB Gene SubClassOf Cytoskeletal Gene</Axiom>
+               <New_Terms>TUBB Gene</New_Terms>
+            </Change>
+            <Change id="216">
+               <Axiom>TUBB Gene SubClassOf Gene_Plays_Role_In_Process some Microtubule Process</Axiom>
+               <New_Terms>TUBB Gene</New_Terms>
+            </Change>
+            <Change id="217">
+               <Axiom>TUBB wt Allele EquivalentTo TUBB Gene and (Gene_Is_Element_In_Pathway some Pathogenic Escherichia coli Infection Pathway) and (Gene_Is_Element_In_Pathway some Gap Junction Assembly Pathway) and (Gene_Is_Element_In_Pathway some Phagocytosis Pathway) and (Gene_In_Chromosomal_Location some 6p21.33)</Axiom>
+               <New_Terms>TUBB wt Allele, TUBB Gene</New_Terms>
+            </Change>
+            <Change id="341">
+               <Axiom>TUBB3 Gene SubClassOf Cytoskeletal Gene</Axiom>
+               <New_Terms>TUBB3 Gene</New_Terms>
+            </Change>
+            <Change id="342">
+               <Axiom>TUBB3 Gene SubClassOf Gene_Plays_Role_In_Process some Microtubule Process</Axiom>
+               <New_Terms>TUBB3 Gene</New_Terms>
+            </Change>
+            <Change id="343">
+               <Axiom>TUBB3 wt Allele EquivalentTo TUBB3 Gene and (Gene_Is_Element_In_Pathway some Pathogenic Escherichia coli Infection Pathway) and (Gene_Is_Element_In_Pathway some Gap Junction Assembly Pathway) and (Gene_Is_Element_In_Pathway some Phagocytosis Pathway) and (Gene_In_Chromosomal_Location some 16q24.3)</Axiom>
+               <New_Terms>TUBB3 wt Allele, TUBB3 Gene</New_Terms>
+            </Change>
+            <Change id="27">
+               <Axiom>Telapristone Acetate SubClassOf Progesterone Antagonist</Axiom>
+               <New_Terms>Telapristone Acetate</New_Terms>
+            </Change>
+            <Change id="30">
+               <Axiom>Telapristone SubClassOf Progesterone Antagonist</Axiom>
+               <New_Terms>Telapristone</New_Terms>
+            </Change>
+            <Change id="382">
+               <Axiom>Transcription Factor HES-4 EquivalentTo Transcription Factor and (Gene_Product_Has_Chemical_Classification some BHLH Protein) and (Gene_Product_Has_Associated_Anatomy some Nucleus) and (Gene_Product_Has_Structural_Domain_Or_Motif some bHLH Domain) and (Gene_Product_Has_Biochemical_Function some Transcription Repressor/Corepressor) and (Gene_Product_Has_Biochemical_Function some Sequence-Specific DNA Binding Protein) and (Gene_Product_Plays_Role_In_Biological_Process some Transcriptional Repression) and (Gene_Product_Encoded_By_Gene some HES4 Gene)</Axiom>
+               <New_Terms>HES4 Gene, Transcription Factor HES-4</New_Terms>
+            </Change>
+            <Change id="314">
+               <Axiom>Troponin I, Cardiac Muscle EquivalentTo Cytoskeletal Protein and (Gene_Product_Is_Element_In_Pathway some Cardiac Muscle Contraction Pathway) and (Gene_Product_Is_Element_In_Pathway some Dilated Cardiomyopathy Pathway) and (Gene_Product_Is_Element_In_Pathway some Hypertrophic Cardiomyopathy Pathway) and (Gene_Product_Has_Associated_Anatomy some Cytosol) and (Gene_Product_Expressed_In_Tissue some Myocardium) and (Gene_Product_Expressed_In_Tissue some Heart) and (Gene_Product_Has_Biochemical_Function some Troponin I) and (Gene_Product_Plays_Role_In_Biological_Process some Cardiac Muscle Contraction) and (Gene_Product_Encoded_By_Gene some TNNI3 Gene)</Axiom>
+               <New_Terms>Troponin I, Cardiac Muscle, TNNI3 Gene</New_Terms>
+            </Change>
+            <Change id="306">
+               <Axiom>Troponin T, Cardiac Muscle EquivalentTo Cytoskeletal Protein and (Gene_Product_Is_Element_In_Pathway some Cardiac Muscle Contraction Pathway) and (Gene_Product_Is_Element_In_Pathway some Dilated Cardiomyopathy Pathway) and (Gene_Product_Is_Element_In_Pathway some Hypertrophic Cardiomyopathy Pathway) and (Gene_Product_Has_Associated_Anatomy some Cytosol) and (Gene_Product_Expressed_In_Tissue some Myocardium) and (Gene_Product_Expressed_In_Tissue some Heart) and (Gene_Product_Has_Biochemical_Function some Troponin T) and (Gene_Product_Plays_Role_In_Biological_Process some Myogenesis) and (Gene_Product_Plays_Role_In_Biological_Process some Cardiac Muscle Contraction) and (Gene_Product_Encoded_By_Gene some TNNT2 Gene)</Axiom>
+               <New_Terms>TNNT2 Gene, Troponin T, Cardiac Muscle</New_Terms>
+            </Change>
+            <Change id="227">
+               <Axiom>Tubulin Alpha-3C/D Chain EquivalentTo Tubulin and (Gene_Product_Is_Element_In_Pathway some MTA3 Pathway) and (Gene_Product_Is_Element_In_Pathway some Pathogenic Escherichia coli Infection Pathway) and (Gene_Product_Is_Element_In_Pathway some Gap Junction Assembly Pathway) and (Gene_Product_Is_Element_In_Pathway some Phagocytosis Pathway) and (Gene_Product_Has_Associated_Anatomy some Microtubule) and (Gene_Product_Plays_Role_In_Biological_Process some Microtubule Process) and (Gene_Product_Encoded_By_Gene some TUBA3C Gene)</Axiom>
+               <New_Terms>Tubulin Alpha-3C/D Chain, TUBA3C Gene</New_Terms>
+            </Change>
+            <Change id="218">
+               <Axiom>Tubulin Beta Chain EquivalentTo Tubulin and (Gene_Product_Is_Element_In_Pathway some Pathogenic Escherichia coli Infection Pathway) and (Gene_Product_Is_Element_In_Pathway some Gap Junction Assembly Pathway) and (Gene_Product_Is_Element_In_Pathway some Phagocytosis Pathway) and (Gene_Product_Has_Associated_Anatomy some Microtubule) and (Gene_Product_Plays_Role_In_Biological_Process some Microtubule Process) and (Gene_Product_Encoded_By_Gene some TUBB Gene)</Axiom>
+               <New_Terms>Tubulin Beta Chain, TUBB Gene</New_Terms>
+            </Change>
+            <Change id="344">
+               <Axiom>Tubulin Beta-3 Chain EquivalentTo Tubulin and (Gene_Product_Is_Element_In_Pathway some Pathogenic Escherichia coli Infection Pathway) and (Gene_Product_Is_Element_In_Pathway some Gap Junction Assembly Pathway) and (Gene_Product_Is_Element_In_Pathway some Phagocytosis Pathway) and (Gene_Product_Has_Associated_Anatomy some Microtubule) and (Gene_Product_Plays_Role_In_Biological_Process some Microtubule Process) and (Gene_Product_Encoded_By_Gene some TUBB3 Gene)</Axiom>
+               <New_Terms>Tubulin Beta-3 Chain, TUBB3 Gene</New_Terms>
+            </Change>
+            <Change id="272">
+               <Axiom>Type III Procollagen N-Terminal Peptide SubClassOf Collagen</Axiom>
+               <New_Terms>Type III Procollagen N-Terminal Peptide</New_Terms>
+            </Change>
+            <Change id="273">
+               <Axiom>Type III Procollagen N-Terminal Peptide SubClassOf Gene_Product_Has_Chemical_Classification some Protein Fragment</Axiom>
+               <New_Terms>Type III Procollagen N-Terminal Peptide</New_Terms>
+            </Change>
+            <Change id="297">
+               <Axiom>Tyrosine-Protein Phosphatase Non-Receptor Type 13 EquivalentTo Protein Tyrosine Phosphatase and (Gene_Product_Is_Element_In_Pathway some Fas Signaling Pathway BioCarta) and (Gene_Product_Is_Element_In_Pathway some Ephrin B Reverse Signaling Pathway) and (Gene_Product_Is_Element_In_Pathway some Fc-Epsilon Receptor I Signaling Pathway PID) and (Gene_Product_Has_Associated_Anatomy some Nucleus) and (Gene_Product_Has_Associated_Anatomy some Cytoplasm) and (Gene_Product_Has_Biochemical_Function some Protein Tyrosine Phosphatase) and (Gene_Product_Plays_Role_In_Biological_Process some Signal Transduction) and (Gene_Product_Plays_Role_In_Biological_Process some Protein Dephosphorylation) and (Gene_Product_Encoded_By_Gene some PTPN13 Gene)</Axiom>
+               <New_Terms>Tyrosine-Protein Phosphatase Non-Receptor Type 13, PTPN13 Gene</New_Terms>
+            </Change>
+            <Change id="122">
+               <Axiom>UDP-Glucuronosyltransferase 1-7 EquivalentTo Glycosyltransferase and (Gene_Product_Is_Element_In_Pathway some Ascorbate and Aldarate Metabolism Pathway) and (Gene_Product_Is_Element_In_Pathway some Steroid Hormone Biosynthesis Pathway) and (Gene_Product_Is_Element_In_Pathway some Pentose and Glucuronate Interconversions Pathway) and (Gene_Product_Is_Element_In_Pathway some Porphyrin and Chlorophyll Metabolism Pathway) and (Gene_Product_Is_Element_In_Pathway some Retinol Metabolism Pathway) and (Gene_Product_Is_Element_In_Pathway some Starch and Sucrose Metabolism Pathway) and (Gene_Product_Is_Element_In_Pathway some Metabolism of Xenobiotics by Cytochrome P450 Pathway) and (Gene_Product_Is_Element_In_Pathway some Drug Metabolism by Cytochrome P450 Pathway) and (Gene_Product_Is_Element_In_Pathway some Drug Metabolism by Non-CYP450 Enzymes Pathway) and (Gene_Product_Has_Associated_Anatomy some Membrane of the Rough Endoplasmic Reticulum) and (Gene_Product_Has_Associated_Anatomy some Membrane of the Smooth Endoplasmic Reticulum) and (Gene_Product_Expressed_In_Tissue some Gastric Tissue) and (Gene_Product_Expressed_In_Tissue some Hepatic Tissue) and (Gene_Product_Plays_Role_In_Biological_Process some Detoxification) and (Gene_Product_Encoded_By_Gene some UGT1A7 Gene)</Axiom>
+               <New_Terms>UDP-Glucuronosyltransferase 1-7, UGT1A7 Gene</New_Terms>
+            </Change>
+            <Change id="120">
+               <Axiom>UGT1A7 Gene SubClassOf Gene_Plays_Role_In_Process some Detoxification</Axiom>
+               <New_Terms>UGT1A7 Gene</New_Terms>
+            </Change>
+            <Change id="119">
+               <Axiom>UGT1A7 Gene SubClassOf Glycosyltransferase Gene</Axiom>
+               <New_Terms>UGT1A7 Gene</New_Terms>
+            </Change>
+            <Change id="121">
+               <Axiom>UGT1A7 wt Allele EquivalentTo UGT1A7 Gene and (Gene_Is_Element_In_Pathway some Ascorbate and Aldarate Metabolism Pathway) and (Gene_Is_Element_In_Pathway some Steroid Hormone Biosynthesis Pathway) and (Gene_Is_Element_In_Pathway some Pentose and Glucuronate Interconversions Pathway) and (Gene_Is_Element_In_Pathway some Porphyrin and Chlorophyll Metabolism Pathway) and (Gene_Is_Element_In_Pathway some Retinol Metabolism Pathway) and (Gene_Is_Element_In_Pathway some Starch and Sucrose Metabolism Pathway) and (Gene_Is_Element_In_Pathway some Metabolism of Xenobiotics by Cytochrome P450 Pathway) and (Gene_Is_Element_In_Pathway some Drug Metabolism by Cytochrome P450 Pathway) and (Gene_Is_Element_In_Pathway some Drug Metabolism by Non-CYP450 Enzymes Pathway) and (Gene_In_Chromosomal_Location some 2q37)</Axiom>
+               <New_Terms>UGT1A7 wt Allele, UGT1A7 Gene</New_Terms>
+            </Change>
+            <Change id="340">
+               <Axiom>UV Excision Repair Protein RAD23 Homolog B EquivalentTo DNA Repair Protein and (Gene_Product_Is_Element_In_Pathway some Nucleotide Excision Repair Pathway) and (Gene_Product_Has_Associated_Anatomy some Nucleus) and (Gene_Product_Has_Associated_Anatomy some Cytoplasm) and (Gene_Product_Has_Structural_Domain_Or_Motif some UBA Domain) and (Gene_Product_Has_Biochemical_Function some DNA Repair Protein) and (Gene_Product_Has_Biochemical_Function some Ubiquitination Regulation Protein) and (Gene_Product_Plays_Role_In_Biological_Process some Nucleotide Excision Repair) and (Gene_Product_Plays_Role_In_Biological_Process some Ubiquitinated Protein Degradation) and (Gene_Product_Encoded_By_Gene some RAD23B Gene)</Axiom>
+               <New_Terms>RAD23B Gene, UV Excision Repair Protein RAD23 Homolog B</New_Terms>
+            </Change>
+         </NewDescription>
+         <PureAddition id="padd" size="10">
+            <Change id="392">
+               <Axiom>Erdheim-Chester Disease SubClassOf Rare Disorder</Axiom>
+            </Change>
+            <Change id="384">
+               <Axiom>IFNA13 Gene SubClassOf Cytokine Gene</Axiom>
+            </Change>
+            <Change id="385">
+               <Axiom>IFNA2 Gene SubClassOf Cytokine Gene</Axiom>
+            </Change>
+            <Change id="390">
+               <Axiom>IFNG Gene SubClassOf Cytokine Gene</Axiom>
+            </Change>
+            <Change id="386">
+               <Axiom>IFNW1 Gene SubClassOf Cytokine Gene</Axiom>
+            </Change>
+            <Change id="388">
+               <Axiom>Lactate Dehydrogenase SubClassOf Gene_Product_Has_Biochemical_Function some Oxidoreductase</Axiom>
+            </Change>
+            <Change id="387">
+               <Axiom>Lactate Dehydrogenase SubClassOf Protein or Riboprotein Complex</Axiom>
+            </Change>
+            <Change id="393">
+               <Axiom>Leisure Time SubClassOf Time</Axiom>
+            </Change>
+            <Change id="391">
+               <Axiom>Poly(ADP Ribose) Polymerase SubClassOf Gene_Product_Encoded_By_Gene some PARP1 Gene</Axiom>
+            </Change>
+            <Change id="389">
+               <Axiom>Stage IV Testicular Non-Seminomatous Germ Cell Tumor SubClassOf Germ Cell Tumor (Antiquated)</Axiom>
+            </Change>
+         </PureAddition>
+         <PureAdditionWithNewTerms id="paddnt" size="106">
+            <Change id="457">
+               <Axiom>ALT_LONG_DEFINITION SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="448">
+               <Axiom>Allele_Associated_With_Disease SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="451">
+               <Axiom>Allele_Ceases_Function_In_Pathway SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="452">
+               <Axiom>Allele_Is_Cancer_Related_Type SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="450">
+               <Axiom>Allele_Not_Associated_With_Abnormality SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="449">
+               <Axiom>Allele_Not_Associated_With_Disease SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="498">
+               <Axiom>Alpha 1 Antitrypsin SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="394">
+               <Axiom>Alpha 1 Microglobulin Measurement SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="483">
+               <Axiom>Alvespimycin SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="395">
+               <Axiom>Anal Atresia SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="495">
+               <Axiom>Argininosuccinate Lyase Deficiency SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="478">
+               <Axiom>Bordetella pertussis Filamentous Hemagglutinin Antigen, B SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="479">
+               <Axiom>Bordetella pertussis Filamentous Hemagglutinin Antigen, C SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="467">
+               <Axiom>Bromovinyl-Deoxyuridine SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="460">
+               <Axiom>CTRM_ID SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="468">
+               <Axiom>Celeriac, Cooked SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="469">
+               <Axiom>Celeriac, Raw SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="428">
+               <Axiom>Chemical_Or_Drug_FDA_Approved_For_Disease SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="429">
+               <Axiom>Chemical_Or_Drug_Has_Accepted_Therapeutic_Use_For SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="430">
+               <Axiom>Chemical_Or_Drug_Has_Study_Therapeutic_Use_For SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="414">
+               <Axiom>Cisplatin/Doxorubicin/Methotrexate/Muramyl Tripeptide Phosphatidylethanolamine Liposome SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="415">
+               <Axiom>Cisplatin/Ifosfamide/Muramyl Tripeptide Phosphatidylethanolamine Liposome SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="480">
+               <Axiom>Clostridium tetani Toxoid Antigen, B SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="408">
+               <Axiom>Collateral Sulcus SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="481">
+               <Axiom>Corynebacterium diphtheriae Toxoid Antigen, C SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="401">
+               <Axiom>Cytotoxic T-Lymphocyte SubClassOf Effector T-Lymphocyte</Axiom>
+               <New_Terms>Effector T-Lymphocyte</New_Terms>
+            </Change>
+            <Change id="461">
+               <Axiom>DC_Anatomy SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="416">
+               <Axiom>Doxorubicin/Ifosfamide/Methotrexate/Muramyl Tripeptide Phosphatidylethanolamine Liposome SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="431">
+               <Axiom>EO_Anatomic_Structure_Is_Physical_Part_Of SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="432">
+               <Axiom>EO_Derived_By_Technique SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="433">
+               <Axiom>EO_Develops_Disease SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="434">
+               <Axiom>EO_Disease_Metastatic_To_EO_Anatomy SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="435">
+               <Axiom>EO_Models_Human_Disease SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="476">
+               <Axiom>Ethohexadiol SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="398">
+               <Axiom>Feel Less Physically Attractive Due to Disease or Treatment SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="409">
+               <Axiom>Fissure of Rolando SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="436">
+               <Axiom>Gene_Product_Has_Malfunction_Type SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="488">
+               <Axiom>Gram per Day SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="497">
+               <Axiom>History of Old Myocardial Infarction SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="471">
+               <Axiom>Hydrastis canadensis Root SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="397">
+               <Axiom>Hydroxyethyl Starch SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="402">
+               <Axiom>Hypoxanthine Phosphoribosyltransferase SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="473">
+               <Axiom>Inconclusive SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="463">
+               <Axiom>Inferior Wall Myocardial Infarction SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="494">
+               <Axiom>Inhibitor of Nuclear Factor Kappa-B Kinase Subunit Beta SubClassOf Gene_Product_Is_Physical_Part_Of some I-Kappa-B Kinase</Axiom>
+               <New_Terms>I-Kappa-B Kinase</New_Terms>
+            </Change>
+            <Change id="493">
+               <Axiom>Intedanib SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="456">
+               <Axiom>Internal Thoracic Vein SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="492">
+               <Axiom>Iodine I-123 SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="490">
+               <Axiom>Iodine I-131 SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="420">
+               <Axiom>LONG_DEFINITION SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="410">
+               <Axiom>Lateral Sulcus of Sylvius SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="464">
+               <Axiom>Lateral Wall Myocardial Infarction SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="413">
+               <Axiom>Left Brachiocephalic Vein SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="459">
+               <Axiom>Limonene SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="411">
+               <Axiom>Lobus Spigelii SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="421">
+               <Axiom>Maps_To_LASH SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="458">
+               <Axiom>Microgram per 24 Hours SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="472">
+               <Axiom>Milligram per Gram per Day SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="470">
+               <Axiom>Milliliter per Day SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="405">
+               <Axiom>Miscellaneous Antimetabolite SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="404">
+               <Axiom>Miscellaneous Antineoplastic Antibiotic SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="422">
+               <Axiom>Mitelman_Code SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="485">
+               <Axiom>Mobitz I SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="486">
+               <Axiom>Mobitz II SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="423">
+               <Axiom>NDFRT_Code SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="424">
+               <Axiom>NDFRT_Name SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="475">
+               <Axiom>NF-Kappa-B Essential Modulator SubClassOf Gene_Product_Is_Physical_Part_Of some I-Kappa-B Kinase</Axiom>
+               <New_Terms>I-Kappa-B Kinase</New_Terms>
+            </Change>
+            <Change id="417">
+               <Axiom>Nitric Oxide Synthase 2B SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="418">
+               <Axiom>Nitric Oxide Synthase 2C SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="487">
+               <Axiom>Ornithine Transcarbamylase Deficiency SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="499">
+               <Axiom>PAX3/FOXO1 Fusion Protein SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="412">
+               <Axiom>Parieto-Occipital Sulcus SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="400">
+               <Axiom>Partial Response of Multiple Myeloma or Plasma Cell Leukemia SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="453">
+               <Axiom>Poly(ADP Ribose) Polymerase SubClassOf PARP1 Gene Product</Axiom>
+               <New_Terms>PARP1 Gene Product</New_Terms>
+            </Change>
+            <Change id="482">
+               <Axiom>Polyethylene Glycol 3350-Based Laxative SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="465">
+               <Axiom>Posterior Wall Myocardial Infarction SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="455">
+               <Axiom>Procedure_May_Have_Imaged_Anatomy SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="454">
+               <Axiom>Procedure_May_Have_Target_Anatomy SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="399">
+               <Axiom>Progression of Multiple Myeloma or Plasma Cell Leukemia SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="396">
+               <Axiom>Proteus morganii SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="489">
+               <Axiom>Rathyronine SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="407">
+               <Axiom>Recombinant Vaccinia-PSA(L155)-TRICOM Vaccine SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="425">
+               <Axiom>Related_Lash_Concept SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="426">
+               <Axiom>Related_MedDRA_Code SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="484">
+               <Axiom>Reptilase Time SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="496">
+               <Axiom>Retinoic Acid Embryopathy SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="477">
+               <Axiom>Ropidoxuridine SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="462">
+               <Axiom>ST Elevation SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="466">
+               <Axiom>Septal Myocardial Infarction SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="427">
+               <Axiom>Synonym Property SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="419">
+               <Axiom>T-Cell Large Granular Lymphocyte SubClassOf Effector T-Lymphocyte</Axiom>
+               <New_Terms>Effector T-Lymphocyte</New_Terms>
+            </Change>
+            <Change id="491">
+               <Axiom>TPH Inhibitor LX1606 SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="437">
+               <Axiom>Technique_Has_Associated_Condition SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="438">
+               <Axiom>Technique_Has_Purpose SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="439">
+               <Axiom>Technique_Has_Sample_Or_Specimen_Anatomy SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="440">
+               <Axiom>Technique_Has_Sample_Or_Specimen_Chemical_Or_Drug SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="441">
+               <Axiom>Technique_Has_Target_Anatomy SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="442">
+               <Axiom>Technique_Has_Target_Chemical_Or_Drug SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="443">
+               <Axiom>Technique_Has_Target_Disease SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="444">
+               <Axiom>Technique_Has_Target_Organism SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="445">
+               <Axiom>Technique_Has_Target_Protein SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="446">
+               <Axiom>Technique_Is_Used_In_Technique SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="447">
+               <Axiom>Technique_Uses_Equipment SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="474">
+               <Axiom>Xp11.4-11.21 SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="406">
+               <Axiom>p53:264-272 Peptide SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+            <Change id="403">
+               <Axiom>p59-HCK SubClassOf Retired Concept 2012</Axiom>
+               <New_Terms>Retired Concept 2012</New_Terms>
+            </Change>
+         </PureAdditionWithNewTerms>
+         <NewModifiedDefinition id="stequiv" size="0"/>
+         <NewModifiedDefinitionWithNewTerms id="stequivnt" size="1">
+            <Change id="500">
+               <Axiom>Conserved Helix-Loop-Helix Ubiquitous Kinase EquivalentTo Signaling Protein and (Gene_Product_Is_Physical_Part_Of some I-Kappa-B Kinase) and (Gene_Product_Has_Biochemical_Function some Serine/Threonine Protein Kinase) and (Gene_Product_Plays_Role_In_Biological_Process some Signal Transduction) and (Gene_Product_Plays_Role_In_Biological_Process some Protein-Protein Interaction) and (Gene_Product_Plays_Role_In_Biological_Process some Serine/Threonine Phosphorylation) and (Gene_Product_Encoded_By_Gene some CHUK Gene)</Axiom>
+               <Source>
+                  <Axiom>Conserved Helix-Loop-Helix Ubiquitous Kinase EquivalentTo Signaling Protein and (Gene_Product_Has_Biochemical_Function some Serine/Threonine Protein Kinase) and (Gene_Product_Plays_Role_In_Biological_Process some Signal Transduction) and (Gene_Product_Plays_Role_In_Biological_Process some Protein-Protein Interaction) and (Gene_Product_Plays_Role_In_Biological_Process some Serine/Threonine Phosphorylation) and (Gene_Product_Encoded_By_Gene some CHUK Gene)</Axiom>
+               </Source>
+               <New_Terms>I-Kappa-B Kinase</New_Terms>
+            </Change>
+         </NewModifiedDefinitionWithNewTerms>
+      </Effectual>
+      <Ineffectual id="ineffadds" size="0">
+         <AddedRedundancy id="ared" size="0"/>
+         <AddedRewrite id="arws" size="0">
+            <AddedCompleteRewrite id="arw" size="0"/>
+            <AddedPartialRewrite id="aprw" size="0"/>
+         </AddedRewrite>
+         <AddedProspectiveRedundancy id="apred" size="0">
+            <AddedReshuffleProspectiveRedundancy id="aavred" size="0"/>
+            <AddedNewProspectiveRedundancy id="anpred" size="0">
+               <AddedNovelProspectiveRedundancy id="weak" size="0"/>
+               <AddedPseudoNovelProspectiveRedundancy id="apseudopred" size="0"/>
+            </AddedNewProspectiveRedundancy>
+         </AddedProspectiveRedundancy>
+      </Ineffectual>
+   </Additions>
+   <Removals id="rems" size="109">
+      <Effectual id="effrems" size="107">
+         <Weakening id="wk" size="0"/>
+         <WeakeningWithRetiredTerms id="wkrt" size="0"/>
+         <RetiredDescription id="retdesc" size="0"/>
+         <PureRemoval id="prem" size="106">
+            <Change id="564">
+               <Axiom>ALT_LONG_DEFINITION SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="556">
+               <Axiom>Allele_Associated_With_Disease SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="559">
+               <Axiom>Allele_Ceases_Function_In_Pathway SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="560">
+               <Axiom>Allele_Is_Cancer_Related_Type SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="558">
+               <Axiom>Allele_Not_Associated_With_Abnormality SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="557">
+               <Axiom>Allele_Not_Associated_With_Disease SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="605">
+               <Axiom>Alpha 1 Antitrypsin SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="501">
+               <Axiom>Alpha 1 Microglobulin Measurement SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="590">
+               <Axiom>Alvespimycin SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="502">
+               <Axiom>Anal Atresia SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="602">
+               <Axiom>Argininosuccinate Lyase Deficiency SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="585">
+               <Axiom>Bordetella pertussis Filamentous Hemagglutinin Antigen, B SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="586">
+               <Axiom>Bordetella pertussis Filamentous Hemagglutinin Antigen, C SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="575">
+               <Axiom>Bromovinyl-Deoxyuridine SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="568">
+               <Axiom>CTRM_ID SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="576">
+               <Axiom>Celeriac, Cooked SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="577">
+               <Axiom>Celeriac, Raw SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="536">
+               <Axiom>Chemical_Or_Drug_FDA_Approved_For_Disease SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="537">
+               <Axiom>Chemical_Or_Drug_Has_Accepted_Therapeutic_Use_For SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="538">
+               <Axiom>Chemical_Or_Drug_Has_Study_Therapeutic_Use_For SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="523">
+               <Axiom>Cisplatin/Doxorubicin/Methotrexate/Muramyl Tripeptide Phosphatidylethanolamine Liposome SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="524">
+               <Axiom>Cisplatin/Ifosfamide/Muramyl Tripeptide Phosphatidylethanolamine Liposome SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="587">
+               <Axiom>Clostridium tetani Toxoid Antigen, B SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="517">
+               <Axiom>Collateral Sulcus SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="588">
+               <Axiom>Corynebacterium diphtheriae Toxoid Antigen, C SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="569">
+               <Axiom>DC_Anatomy SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="525">
+               <Axiom>Doxorubicin/Ifosfamide/Methotrexate/Muramyl Tripeptide Phosphatidylethanolamine Liposome SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="539">
+               <Axiom>EO_Anatomic_Structure_Is_Physical_Part_Of SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="540">
+               <Axiom>EO_Derived_By_Technique SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="541">
+               <Axiom>EO_Develops_Disease SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="542">
+               <Axiom>EO_Disease_Metastatic_To_EO_Anatomy SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="543">
+               <Axiom>EO_Models_Human_Disease SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="565">
+               <Axiom>Erdheim-Chester Disease SubClassOf Non-Neoplastic Bone Disorder</Axiom>
+            </Change>
+            <Change id="583">
+               <Axiom>Ethohexadiol SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="505">
+               <Axiom>Feel Less Physically Attractive Due to Disease or Treatment SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="518">
+               <Axiom>Fissure of Rolando SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="544">
+               <Axiom>Gene_Product_Has_Malfunction_Type SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="595">
+               <Axiom>Gram per Day SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="604">
+               <Axiom>History of Old Myocardial Infarction SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="579">
+               <Axiom>Hydrastis canadensis Root SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="504">
+               <Axiom>Hydroxyethyl Starch SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="508">
+               <Axiom>Hypoxanthine Phosphoribosyltransferase SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="581">
+               <Axiom>Inconclusive SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="571">
+               <Axiom>Inferior Wall Myocardial Infarction SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="601">
+               <Axiom>Intedanib SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="563">
+               <Axiom>Internal Thoracic Vein SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="600">
+               <Axiom>Iodine I-123 SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="598">
+               <Axiom>Iodine I-131 SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="528">
+               <Axiom>LONG_DEFINITION SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="513">
+               <Axiom>Lactate Dehydrogenase SubClassOf Gene_Product_Has_Biochemical_Function some Protein or Riboprotein Complex</Axiom>
+            </Change>
+            <Change id="512">
+               <Axiom>Lactate Dehydrogenase SubClassOf Oxidoreductase</Axiom>
+            </Change>
+            <Change id="519">
+               <Axiom>Lateral Sulcus of Sylvius SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="572">
+               <Axiom>Lateral Wall Myocardial Infarction SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="522">
+               <Axiom>Left Brachiocephalic Vein SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="596">
+               <Axiom>Leisure Time SubClassOf Physical Activity</Axiom>
+            </Change>
+            <Change id="567">
+               <Axiom>Limonene SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="520">
+               <Axiom>Lobus Spigelii SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="529">
+               <Axiom>Maps_To_LASH SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="566">
+               <Axiom>Microgram per 24 Hours SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="580">
+               <Axiom>Milligram per Gram per Day SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="578">
+               <Axiom>Milliliter per Day SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="511">
+               <Axiom>Miscellaneous Antimetabolite SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="510">
+               <Axiom>Miscellaneous Antineoplastic Antibiotic SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="530">
+               <Axiom>Mitelman_Code SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="592">
+               <Axiom>Mobitz I SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="593">
+               <Axiom>Mobitz II SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="531">
+               <Axiom>NDFRT_Code SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="532">
+               <Axiom>NDFRT_Name SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="526">
+               <Axiom>Nitric Oxide Synthase 2B SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="527">
+               <Axiom>Nitric Oxide Synthase 2C SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="594">
+               <Axiom>Ornithine Transcarbamylase Deficiency SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="606">
+               <Axiom>PAX3/FOXO1 Fusion Protein SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="521">
+               <Axiom>Parieto-Occipital Sulcus SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="507">
+               <Axiom>Partial Response of Multiple Myeloma or Plasma Cell Leukemia SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="589">
+               <Axiom>Polyethylene Glycol 3350-Based Laxative SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="573">
+               <Axiom>Posterior Wall Myocardial Infarction SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="562">
+               <Axiom>Procedure_May_Have_Imaged_Anatomy SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="561">
+               <Axiom>Procedure_May_Have_Target_Anatomy SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="506">
+               <Axiom>Progression of Multiple Myeloma or Plasma Cell Leukemia SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="503">
+               <Axiom>Proteus morganii SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="597">
+               <Axiom>Rathyronine SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="516">
+               <Axiom>Recombinant Vaccinia-PSA(L155)-TRICOM Vaccine SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="533">
+               <Axiom>Related_Lash_Concept SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="534">
+               <Axiom>Related_MedDRA_Code SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="591">
+               <Axiom>Reptilase Time SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="603">
+               <Axiom>Retinoic Acid Embryopathy SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="584">
+               <Axiom>Ropidoxuridine SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="570">
+               <Axiom>ST Elevation SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="574">
+               <Axiom>Septal Myocardial Infarction SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="515">
+               <Axiom>Stage IV Testicular Non-Seminomatous Germ Cell Tumor EquivalentTo Malignant Testicular Non-Seminomatous Germ Cell Tumor and (Disease_May_Have_Cytogenetic_Abnormality some i(12p)) and (Disease_May_Have_Cytogenetic_Abnormality some Gain of Chromosome 12p) and (Disease_Is_Stage some Stage IV)</Axiom>
+            </Change>
+            <Change id="535">
+               <Axiom>Synonym Property SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="599">
+               <Axiom>TPH Inhibitor LX1606 SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="545">
+               <Axiom>Technique_Has_Associated_Condition SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="546">
+               <Axiom>Technique_Has_Purpose SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="547">
+               <Axiom>Technique_Has_Sample_Or_Specimen_Anatomy SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="548">
+               <Axiom>Technique_Has_Sample_Or_Specimen_Chemical_Or_Drug SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="549">
+               <Axiom>Technique_Has_Target_Anatomy SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="550">
+               <Axiom>Technique_Has_Target_Chemical_Or_Drug SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="551">
+               <Axiom>Technique_Has_Target_Disease SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="552">
+               <Axiom>Technique_Has_Target_Organism SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="553">
+               <Axiom>Technique_Has_Target_Protein SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="554">
+               <Axiom>Technique_Is_Used_In_Technique SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="555">
+               <Axiom>Technique_Uses_Equipment SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="582">
+               <Axiom>Xp11.4-11.21 SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="514">
+               <Axiom>p53:264-272 Peptide SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+            <Change id="509">
+               <Axiom>p59-HCK SubClassOf Retired Concept Current Year</Axiom>
+            </Change>
+         </PureRemoval>
+         <PureRemovalWithRetiredTerms id="premrt" size="0"/>
+         <RetiredModifiedDefinition id="wkequiv" size="1">
+            <Change id="607">
+               <Axiom>Conserved Helix-Loop-Helix Ubiquitous Kinase EquivalentTo Signaling Protein and (Gene_Product_Has_Biochemical_Function some Serine/Threonine Protein Kinase) and (Gene_Product_Plays_Role_In_Biological_Process some Signal Transduction) and (Gene_Product_Plays_Role_In_Biological_Process some Protein-Protein Interaction) and (Gene_Product_Plays_Role_In_Biological_Process some Serine/Threonine Phosphorylation) and (Gene_Product_Encoded_By_Gene some CHUK Gene)</Axiom>
+               <Source>
+                  <Axiom>Conserved Helix-Loop-Helix Ubiquitous Kinase EquivalentTo Signaling Protein and (Gene_Product_Is_Physical_Part_Of some I-Kappa-B Kinase) and (Gene_Product_Has_Biochemical_Function some Serine/Threonine Protein Kinase) and (Gene_Product_Plays_Role_In_Biological_Process some Signal Transduction) and (Gene_Product_Plays_Role_In_Biological_Process some Protein-Protein Interaction) and (Gene_Product_Plays_Role_In_Biological_Process some Serine/Threonine Phosphorylation) and (Gene_Product_Encoded_By_Gene some CHUK Gene)</Axiom>
+               </Source>
+            </Change>
+         </RetiredModifiedDefinition>
+         <RetiredModifiedDefinitionWithRetiredTerms id="wkequivrt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffrems" size="2">
+         <RemovedRedundancy id="rred" size="0"/>
+         <RemovedRewrite id="rrws" size="0">
+            <RemovedCompleteRewrite id="rrw" size="0"/>
+            <RemovedPartialRewrite id="rprw" size="0"/>
+         </RemovedRewrite>
+         <RemovedProspectiveRedundancy id="rpred" size="2">
+            <RemovedReshuffleProspectiveRedundancy id="ravred" size="0"/>
+            <RemovedNewProspectiveRedundancy id="rnpred" size="2">
+               <RemovedNovelProspectiveRedundancy id="strength" size="2">
+                  <Change id="609">
+                     <Axiom>Poly(ADP Ribose) Polymerase SubClassOf DNA Repair Protein</Axiom>
+                     <Source>
+                        <Axiom effectual="true">Poly(ADP Ribose) Polymerase SubClassOf PARP1 Gene Product</Axiom>
+                        <Axiom effectual="true">PARP1 Gene Product SubClassOf DNA Repair Protein</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="608">
+                     <Axiom>T-Cell Large Granular Lymphocyte SubClassOf Mature T-Lymphocyte</Axiom>
+                     <Source>
+                        <Axiom effectual="true">T-Cell Large Granular Lymphocyte SubClassOf Effector T-Lymphocyte</Axiom>
+                        <Axiom effectual="true">Effector T-Lymphocyte SubClassOf Mature T-Lymphocyte</Axiom>
+                     </Source>
+                  </Change>
+               </RemovedNovelProspectiveRedundancy>
+               <RemovedPseudoNovelProspectiveRedundancy id="rpseudopred" size="0"/>
+            </RemovedNewProspectiveRedundancy>
+         </RemovedProspectiveRedundancy>
+      </Ineffectual>
+   </Removals>
+</root>

@@ -1,0 +1,1600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="root" uuid="e1f2cc95-6151-4214-9482-beba12d3e941-gs">
+   <Additions id="adds" size="246">
+      <Effectual id="effadds" size="230">
+         <Strengthening id="st" size="0"/>
+         <StrengtheningWithNewTerms id="stnt" size="0"/>
+         <NewDescription id="newdesc" size="53">
+            <Change id="16">
+               <Axiom>AEV1 SubClassOf BY9</Axiom>
+               <New_Terms>AEV1</New_Terms>
+            </Change>
+            <Change id="49">
+               <Axiom>AQX9 SubClassOf NX8</Axiom>
+               <New_Terms>AQX9</New_Terms>
+            </Change>
+            <Change id="7">
+               <Axiom>ASN8 SubClassOf QQ6</Axiom>
+               <New_Terms>ASN8</New_Terms>
+            </Change>
+            <Change id="5">
+               <Axiom>ASR7 SubClassOf RI8</Axiom>
+               <New_Terms>ASR7</New_Terms>
+            </Change>
+            <Change id="6">
+               <Axiom>ASS1 SubClassOf RI8</Axiom>
+               <New_Terms>ASS1</New_Terms>
+            </Change>
+            <Change id="52">
+               <Axiom>AUA3 SubClassOf YU1</Axiom>
+               <New_Terms>AUA3</New_Terms>
+            </Change>
+            <Change id="1">
+               <Axiom>AUU7 SubClassOf ADD7</Axiom>
+               <New_Terms>AUU7</New_Terms>
+            </Change>
+            <Change id="8">
+               <Axiom>AUW3 SubClassOf PJ1</Axiom>
+               <New_Terms>AUW3</New_Terms>
+            </Change>
+            <Change id="2">
+               <Axiom>AUZ2 SubClassOf TW2</Axiom>
+               <New_Terms>AUZ2</New_Terms>
+            </Change>
+            <Change id="19">
+               <Axiom>AVG8 SubClassOf AUA3</Axiom>
+               <New_Terms>AUA3, AVG8</New_Terms>
+            </Change>
+            <Change id="18">
+               <Axiom>AVH1 SubClassOf AVH3</Axiom>
+               <New_Terms>AVH1, AVH3</New_Terms>
+            </Change>
+            <Change id="17">
+               <Axiom>AVH3 SubClassOf YU1</Axiom>
+               <New_Terms>AVH3</New_Terms>
+            </Change>
+            <Change id="44">
+               <Axiom>AVL6 SubClassOf AVS8</Axiom>
+               <New_Terms>AVS8, AVL6</New_Terms>
+            </Change>
+            <Change id="45">
+               <Axiom>AVL7 SubClassOf AVS8</Axiom>
+               <New_Terms>AVS8, AVL7</New_Terms>
+            </Change>
+            <Change id="42">
+               <Axiom>AVL8 SubClassOf AVS8</Axiom>
+               <New_Terms>AVS8, AVL8</New_Terms>
+            </Change>
+            <Change id="43">
+               <Axiom>AVM1 SubClassOf AVM3</Axiom>
+               <New_Terms>AVM1, AVM3</New_Terms>
+            </Change>
+            <Change id="48">
+               <Axiom>AVM2 SubClassOf AVS8</Axiom>
+               <New_Terms>AVS8, AVM2</New_Terms>
+            </Change>
+            <Change id="46">
+               <Axiom>AVM3 SubClassOf AVS8</Axiom>
+               <New_Terms>AVS8, AVM3</New_Terms>
+            </Change>
+            <Change id="47">
+               <Axiom>AVM4 SubClassOf AVS8</Axiom>
+               <New_Terms>AVS8, AVM4</New_Terms>
+            </Change>
+            <Change id="9">
+               <Axiom>AVM7 SubClassOf PJ1</Axiom>
+               <New_Terms>AVM7</New_Terms>
+            </Change>
+            <Change id="29">
+               <Axiom>AVO2 SubClassOf HU2</Axiom>
+               <New_Terms>AVO2</New_Terms>
+            </Change>
+            <Change id="27">
+               <Axiom>AVO4 SubClassOf HU2</Axiom>
+               <New_Terms>AVO4</New_Terms>
+            </Change>
+            <Change id="28">
+               <Axiom>AVO6 SubClassOf HU2</Axiom>
+               <New_Terms>AVO6</New_Terms>
+            </Change>
+            <Change id="25">
+               <Axiom>AVO8 SubClassOf AKU6</Axiom>
+               <New_Terms>AVO8</New_Terms>
+            </Change>
+            <Change id="24">
+               <Axiom>AVO8 SubClassOf QE8</Axiom>
+               <New_Terms>AVO8</New_Terms>
+            </Change>
+            <Change id="26">
+               <Axiom>AVP1 SubClassOf YA3</Axiom>
+               <New_Terms>AVP1</New_Terms>
+            </Change>
+            <Change id="22">
+               <Axiom>AVP4 SubClassOf HU2</Axiom>
+               <New_Terms>AVP4</New_Terms>
+            </Change>
+            <Change id="23">
+               <Axiom>AVP5 SubClassOf AKU6</Axiom>
+               <New_Terms>AVP5</New_Terms>
+            </Change>
+            <Change id="20">
+               <Axiom>AVP6 SubClassOf AOB7</Axiom>
+               <New_Terms>AVP6</New_Terms>
+            </Change>
+            <Change id="21">
+               <Axiom>AVP7 SubClassOf HU2</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="31">
+               <Axiom>AVP8 SubClassOf AVQ1</Axiom>
+               <New_Terms>AVP8, AVQ1</New_Terms>
+            </Change>
+            <Change id="30">
+               <Axiom>AVQ1 SubClassOf TD1</Axiom>
+               <New_Terms>AVQ1</New_Terms>
+            </Change>
+            <Change id="36">
+               <Axiom>AVR5 SubClassOf TD1</Axiom>
+               <New_Terms>AVR5</New_Terms>
+            </Change>
+            <Change id="37">
+               <Axiom>AVR7 SubClassOf AVR5</Axiom>
+               <New_Terms>AVR5, AVR7</New_Terms>
+            </Change>
+            <Change id="38">
+               <Axiom>AVS1 SubClassOf AVQ1</Axiom>
+               <New_Terms>AVQ1, AVS1</New_Terms>
+            </Change>
+            <Change id="32">
+               <Axiom>AVS2 SubClassOf AVP8</Axiom>
+               <New_Terms>AVP8, AVS2</New_Terms>
+            </Change>
+            <Change id="33">
+               <Axiom>AVS4 SubClassOf AVP8</Axiom>
+               <New_Terms>AVP8, AVS4</New_Terms>
+            </Change>
+            <Change id="34">
+               <Axiom>AVS5 SubClassOf AVP8</Axiom>
+               <New_Terms>AVP8, AVS5</New_Terms>
+            </Change>
+            <Change id="35">
+               <Axiom>AVS6 SubClassOf AVP8</Axiom>
+               <New_Terms>AVP8, AVS6</New_Terms>
+            </Change>
+            <Change id="39">
+               <Axiom>AVS7 SubClassOf AVS1</Axiom>
+               <New_Terms>AVS7, AVS1</New_Terms>
+            </Change>
+            <Change id="41">
+               <Axiom>AVS8 SubClassOf AVQ1</Axiom>
+               <New_Terms>AVQ1, AVS8</New_Terms>
+            </Change>
+            <Change id="40">
+               <Axiom>AVT1 SubClassOf AVS1</Axiom>
+               <New_Terms>AVT1, AVS1</New_Terms>
+            </Change>
+            <Change id="53">
+               <Axiom>AWC3 SubClassOf UP7</Axiom>
+               <New_Terms>AWC3</New_Terms>
+            </Change>
+            <Change id="12">
+               <Axiom>AXK3 SubClassOf YT4</Axiom>
+               <New_Terms>AXK3</New_Terms>
+            </Change>
+            <Change id="13">
+               <Axiom>AXR3 SubClassOf AMY9</Axiom>
+               <New_Terms>AXR3</New_Terms>
+            </Change>
+            <Change id="4">
+               <Axiom>AYH6 SubClassOf QQ8</Axiom>
+               <New_Terms>AYH6</New_Terms>
+            </Change>
+            <Change id="14">
+               <Axiom>EZ6 SubClassOf RL8</Axiom>
+               <New_Terms>EZ6</New_Terms>
+            </Change>
+            <Change id="15">
+               <Axiom>HY8 SubClassOf OQ1</Axiom>
+               <New_Terms>HY8</New_Terms>
+            </Change>
+            <Change id="3">
+               <Axiom>MA4 SubClassOf TW2</Axiom>
+               <New_Terms>MA4</New_Terms>
+            </Change>
+            <Change id="50">
+               <Axiom>NE1 SubClassOf ALT4</Axiom>
+               <New_Terms>NE1</New_Terms>
+            </Change>
+            <Change id="10">
+               <Axiom>QW4 SubClassOf BAM2</Axiom>
+               <New_Terms>QW4</New_Terms>
+            </Change>
+            <Change id="51">
+               <Axiom>YH5 SubClassOf IH6</Axiom>
+               <New_Terms>YH5</New_Terms>
+            </Change>
+            <Change id="11">
+               <Axiom>ZQ6 SubClassOf UO1</Axiom>
+               <New_Terms>ZQ6</New_Terms>
+            </Change>
+         </NewDescription>
+         <PureAddition id="padd" size="152">
+            <Change id="176">
+               <Axiom>AAF9 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="82">
+               <Axiom>AAJ4 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="55">
+               <Axiom>AAO1 SubClassOf QR1</Axiom>
+            </Change>
+            <Change id="56">
+               <Axiom>AAQ2 SubClassOf GG7</Axiom>
+            </Change>
+            <Change id="80">
+               <Axiom>ABL6 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="81">
+               <Axiom>ABW3 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="169">
+               <Axiom>ACL1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="170">
+               <Axiom>ACL7 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="171">
+               <Axiom>ACM1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="57">
+               <Axiom>ACP1 SubClassOf GG7</Axiom>
+            </Change>
+            <Change id="183">
+               <Axiom>ADK1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="181">
+               <Axiom>AEG9 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="197">
+               <Axiom>AER2 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="160">
+               <Axiom>AFZ4 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="192">
+               <Axiom>AGF5 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="193">
+               <Axiom>AGF6 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="202">
+               <Axiom>AGH4 SubClassOf PG6</Axiom>
+            </Change>
+            <Change id="69">
+               <Axiom>AGJ7 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="172">
+               <Axiom>AHE4 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="151">
+               <Axiom>AHW1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="152">
+               <Axiom>AHW4 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="76">
+               <Axiom>AIA4 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="79">
+               <Axiom>AIC9 SubClassOf GG7</Axiom>
+            </Change>
+            <Change id="78">
+               <Axiom>AID6 SubClassOf GG7</Axiom>
+            </Change>
+            <Change id="77">
+               <Axiom>AID8 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="165">
+               <Axiom>AIF3 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="150">
+               <Axiom>AIM1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="149">
+               <Axiom>AIM9 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="70">
+               <Axiom>AIN5 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="74">
+               <Axiom>AIP2 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="71">
+               <Axiom>AIQ3 SubClassOf ALL2</Axiom>
+            </Change>
+            <Change id="72">
+               <Axiom>AIQ4 SubClassOf ALL2</Axiom>
+            </Change>
+            <Change id="73">
+               <Axiom>AIQ6 SubClassOf ALL2</Axiom>
+            </Change>
+            <Change id="75">
+               <Axiom>AIR6 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="142">
+               <Axiom>AIW3 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="143">
+               <Axiom>AIW6 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="144">
+               <Axiom>AIX9 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="141">
+               <Axiom>AJB2 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="173">
+               <Axiom>AJE6 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="146">
+               <Axiom>AJF2 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="148">
+               <Axiom>AJG9 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="147">
+               <Axiom>AJH1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="145">
+               <Axiom>AJI9 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="174">
+               <Axiom>AJM8 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="153">
+               <Axiom>AKP7 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="154">
+               <Axiom>AKQ1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="68">
+               <Axiom>ALL1 SubClassOf ALL2</Axiom>
+            </Change>
+            <Change id="191">
+               <Axiom>ALS1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="162">
+               <Axiom>ALS8 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="189">
+               <Axiom>ALY1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="158">
+               <Axiom>ANE8 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="157">
+               <Axiom>ANF1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="159">
+               <Axiom>ANG1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="196">
+               <Axiom>ANH8 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="167">
+               <Axiom>ANL2 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="66">
+               <Axiom>ANT7 SubClassOf GG7</Axiom>
+            </Change>
+            <Change id="67">
+               <Axiom>ANV9 SubClassOf GG7</Axiom>
+            </Change>
+            <Change id="201">
+               <Axiom>AO2 SubClassOf HA1</Axiom>
+            </Change>
+            <Change id="200">
+               <Axiom>APQ6 SubClassOf AFK2</Axiom>
+            </Change>
+            <Change id="205">
+               <Axiom>ARS1 SubClassOf XA5</Axiom>
+            </Change>
+            <Change id="59">
+               <Axiom>AS7 SubClassOf LH1</Axiom>
+            </Change>
+            <Change id="126">
+               <Axiom>ASF6 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="122">
+               <Axiom>ASJ4 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="125">
+               <Axiom>ASK3 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="124">
+               <Axiom>ASK4 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="123">
+               <Axiom>ASK6 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="131">
+               <Axiom>ASM6 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="133">
+               <Axiom>ASM8 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="132">
+               <Axiom>ASM9 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="135">
+               <Axiom>ASN1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="134">
+               <Axiom>ASN2 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="130">
+               <Axiom>ASN4 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="129">
+               <Axiom>ASN5 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="127">
+               <Axiom>ASN9 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="128">
+               <Axiom>ASO1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="163">
+               <Axiom>ASR5 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="136">
+               <Axiom>ATK3 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="164">
+               <Axiom>ATV3 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="179">
+               <Axiom>ATX6 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="180">
+               <Axiom>ATX8 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="178">
+               <Axiom>ATZ8 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="96">
+               <Axiom>AUD1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="97">
+               <Axiom>AUM6 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="121">
+               <Axiom>AUO5 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="95">
+               <Axiom>AUU8 SubClassOf GG7</Axiom>
+            </Change>
+            <Change id="93">
+               <Axiom>AVE2 SubClassOf GG7</Axiom>
+            </Change>
+            <Change id="94">
+               <Axiom>AVF2 SubClassOf AIK8</Axiom>
+            </Change>
+            <Change id="98">
+               <Axiom>AVH8 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="100">
+               <Axiom>AVK3 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="99">
+               <Axiom>AVK8 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="101">
+               <Axiom>AVX7 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="92">
+               <Axiom>AWL2 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="168">
+               <Axiom>AWO2 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="120">
+               <Axiom>AZO7 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="119">
+               <Axiom>AZP3 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="118">
+               <Axiom>AZW6 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="139">
+               <Axiom>BBA8 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="138">
+               <Axiom>BBB1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="140">
+               <Axiom>BBL1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="161">
+               <Axiom>BBX1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="166">
+               <Axiom>BCH1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="111">
+               <Axiom>BCI1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="114">
+               <Axiom>BCI5 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="113">
+               <Axiom>BCI8 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="112">
+               <Axiom>BCJ3 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="115">
+               <Axiom>BCJ5 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="116">
+               <Axiom>BCJ7 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="117">
+               <Axiom>BCK5 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="177">
+               <Axiom>E9 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="54">
+               <Axiom>FI2 SubClassOf GG7</Axiom>
+            </Change>
+            <Change id="188">
+               <Axiom>GL7 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="182">
+               <Axiom>GM1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="199">
+               <Axiom>GQ9 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="107">
+               <Axiom>GS8 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="184">
+               <Axiom>GX6 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="185">
+               <Axiom>GX7 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="62">
+               <Axiom>IO8 SubClassOf GG7</Axiom>
+            </Change>
+            <Change id="106">
+               <Axiom>IQ2 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="103">
+               <Axiom>IX8 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="104">
+               <Axiom>JA5 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="105">
+               <Axiom>JC9 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="102">
+               <Axiom>KN7 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="64">
+               <Axiom>KR9 SubClassOf GG7</Axiom>
+            </Change>
+            <Change id="63">
+               <Axiom>KS9 SubClassOf GG7</Axiom>
+            </Change>
+            <Change id="110">
+               <Axiom>KZ4 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="137">
+               <Axiom>LM3 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="109">
+               <Axiom>NB3 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="198">
+               <Axiom>NG1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="186">
+               <Axiom>NJ5 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="187">
+               <Axiom>NJ6 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="108">
+               <Axiom>ON4 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="155">
+               <Axiom>OT3 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="203">
+               <Axiom>PD6 SubClassOf AFK2</Axiom>
+            </Change>
+            <Change id="204">
+               <Axiom>QD8 SubClassOf OK8</Axiom>
+            </Change>
+            <Change id="60">
+               <Axiom>RJ8 SubClassOf SF3</Axiom>
+            </Change>
+            <Change id="61">
+               <Axiom>RJ9 SubClassOf SF3</Axiom>
+            </Change>
+            <Change id="58">
+               <Axiom>SS8 SubClassOf SV1</Axiom>
+            </Change>
+            <Change id="194">
+               <Axiom>SY2 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="195">
+               <Axiom>SY5 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="190">
+               <Axiom>TE5 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="65">
+               <Axiom>TJ9 SubClassOf GG7</Axiom>
+            </Change>
+            <Change id="90">
+               <Axiom>XO6 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="89">
+               <Axiom>XO7 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="91">
+               <Axiom>XP2 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="156">
+               <Axiom>XQ1 SubClassOf AUF1</Axiom>
+            </Change>
+            <Change id="83">
+               <Axiom>YY5 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="84">
+               <Axiom>YZ2 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="85">
+               <Axiom>YZ5 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="88">
+               <Axiom>ZG6 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="87">
+               <Axiom>ZG8 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="86">
+               <Axiom>ZH2 SubClassOf YY4</Axiom>
+            </Change>
+            <Change id="175">
+               <Axiom>ZO9 SubClassOf AUF1</Axiom>
+            </Change>
+         </PureAddition>
+         <PureAdditionWithNewTerms id="paddnt" size="25">
+            <Change id="216">
+               <Axiom>ABL5 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="217">
+               <Axiom>ABS3 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="230">
+               <Axiom>AEN9 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="229">
+               <Axiom>AEO2 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="228">
+               <Axiom>AFE5 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="225">
+               <Axiom>AFT8 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="224">
+               <Axiom>AFU8 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="226">
+               <Axiom>AGA4 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="227">
+               <Axiom>AGC5 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="214">
+               <Axiom>AGG3 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="215">
+               <Axiom>AIA3 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="213">
+               <Axiom>ALG9 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="210">
+               <Axiom>OP8 SubClassOf HY8</Axiom>
+               <New_Terms>HY8</New_Terms>
+            </Change>
+            <Change id="209">
+               <Axiom>RJ5 SubClassOf HY8</Axiom>
+               <New_Terms>HY8</New_Terms>
+            </Change>
+            <Change id="208">
+               <Axiom>RM3 SubClassOf HY8</Axiom>
+               <New_Terms>HY8</New_Terms>
+            </Change>
+            <Change id="211">
+               <Axiom>TD8 SubClassOf HY8</Axiom>
+               <New_Terms>HY8</New_Terms>
+            </Change>
+            <Change id="212">
+               <Axiom>TM2 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="207">
+               <Axiom>VD9 SubClassOf HY8</Axiom>
+               <New_Terms>HY8</New_Terms>
+            </Change>
+            <Change id="223">
+               <Axiom>XL9 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="222">
+               <Axiom>XM2 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="221">
+               <Axiom>XP7 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="206">
+               <Axiom>YG4 SubClassOf HY8</Axiom>
+               <New_Terms>HY8</New_Terms>
+            </Change>
+            <Change id="219">
+               <Axiom>ZH7 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="218">
+               <Axiom>ZI2 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+            <Change id="220">
+               <Axiom>ZK9 SubClassOf AVP7</Axiom>
+               <New_Terms>AVP7</New_Terms>
+            </Change>
+         </PureAdditionWithNewTerms>
+         <NewModifiedDefinition id="stequiv" size="0"/>
+         <NewModifiedDefinitionWithNewTerms id="stequivnt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffadds" size="16">
+         <AddedRedundancy id="ared" size="0"/>
+         <AddedRewrite id="arws" size="0">
+            <AddedCompleteRewrite id="arw" size="0"/>
+            <AddedPartialRewrite id="aprw" size="0"/>
+         </AddedRewrite>
+         <AddedProspectiveRedundancy id="apred" size="16">
+            <AddedReshuffleProspectiveRedundancy id="aavred" size="0"/>
+            <AddedNewProspectiveRedundancy id="anpred" size="16">
+               <AddedNovelProspectiveRedundancy id="weak" size="16">
+                  <Change id="235">
+                     <Axiom>BV4 SubClassOf TW2</Axiom>
+                     <Source>
+                        <Axiom shared="true">QA8 SubClassOf TW2</Axiom>
+                        <Axiom effectual="true">BV4 SubClassOf QA8</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="240">
+                     <Axiom>DB8 SubClassOf TW2</Axiom>
+                     <Source>
+                        <Axiom shared="true">QA8 SubClassOf TW2</Axiom>
+                        <Axiom effectual="true">DB8 SubClassOf QA8</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="239">
+                     <Axiom>DC3 SubClassOf TW2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">DC3 SubClassOf QA8</Axiom>
+                        <Axiom shared="true">QA8 SubClassOf TW2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="241">
+                     <Axiom>DK7 SubClassOf TW2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">DK7 SubClassOf QA8</Axiom>
+                        <Axiom shared="true">QA8 SubClassOf TW2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="237">
+                     <Axiom>DN8 SubClassOf TW2</Axiom>
+                     <Source>
+                        <Axiom shared="true">QA8 SubClassOf TW2</Axiom>
+                        <Axiom effectual="true">DN8 SubClassOf QA8</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="236">
+                     <Axiom>DO1 SubClassOf TW2</Axiom>
+                     <Source>
+                        <Axiom shared="true">QA8 SubClassOf TW2</Axiom>
+                        <Axiom effectual="true">DO1 SubClassOf QA8</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="238">
+                     <Axiom>DP2 SubClassOf TW2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">DP2 SubClassOf QA8</Axiom>
+                        <Axiom shared="true">QA8 SubClassOf TW2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="244">
+                     <Axiom>EZ1 SubClassOf TW2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">EZ1 SubClassOf QA8</Axiom>
+                        <Axiom shared="true">QA8 SubClassOf TW2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="243">
+                     <Axiom>FR9 SubClassOf TW2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">FR9 SubClassOf QA8</Axiom>
+                        <Axiom shared="true">QA8 SubClassOf TW2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="242">
+                     <Axiom>FT6 SubClassOf TW2</Axiom>
+                     <Source>
+                        <Axiom shared="true">QA8 SubClassOf TW2</Axiom>
+                        <Axiom effectual="true">FT6 SubClassOf QA8</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="245">
+                     <Axiom>JB8 SubClassOf QR1</Axiom>
+                     <Source>
+                        <Axiom effectual="true">JB8 SubClassOf ABA1</Axiom>
+                        <Axiom shared="true">ABA1 SubClassOf QR1</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="231">
+                     <Axiom>KY6 SubClassOf YT4</Axiom>
+                     <Source>
+                        <Axiom shared="true">OM2 SubClassOf YT4</Axiom>
+                        <Axiom effectual="true">KY6 SubClassOf OM2</Axiom>
+                     </Source>
+                     <Source>
+                        <Axiom effectual="true">KY6 SubClassOf X6</Axiom>
+                        <Axiom shared="true">X6 SubClassOf YT4</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="246">
+                     <Axiom>NG7 SubClassOf TW2</Axiom>
+                     <Source>
+                        <Axiom shared="true">QA8 SubClassOf TW2</Axiom>
+                        <Axiom effectual="true">NG7 SubClassOf QA8</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="233">
+                     <Axiom>NM6 SubClassOf YT4</Axiom>
+                     <Source>
+                        <Axiom shared="true">X6 SubClassOf YT4</Axiom>
+                        <Axiom effectual="true">NM6 SubClassOf X6</Axiom>
+                     </Source>
+                     <Source>
+                        <Axiom shared="true">OM3 SubClassOf YT4</Axiom>
+                        <Axiom effectual="true">NM6 SubClassOf OM3</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="232">
+                     <Axiom>NM8 SubClassOf TW2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">NM8 SubClassOf QA8</Axiom>
+                        <Axiom shared="true">QA8 SubClassOf TW2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="234">
+                     <Axiom>UN6 SubClassOf TW2</Axiom>
+                     <Source>
+                        <Axiom shared="true">QA8 SubClassOf TW2</Axiom>
+                        <Axiom effectual="true">UN6 SubClassOf QA8</Axiom>
+                     </Source>
+                  </Change>
+               </AddedNovelProspectiveRedundancy>
+               <AddedPseudoNovelProspectiveRedundancy id="apseudopred" size="0"/>
+            </AddedNewProspectiveRedundancy>
+         </AddedProspectiveRedundancy>
+      </Ineffectual>
+   </Additions>
+   <Removals id="rems" size="186">
+      <Effectual id="effrems" size="166">
+         <Weakening id="wk" size="0"/>
+         <WeakeningWithRetiredTerms id="wkrt" size="0"/>
+         <RetiredDescription id="retdesc" size="2">
+            <Change id="248">
+               <Axiom>AFZ6 SubClassOf NX8</Axiom>
+               <Retired_Terms>AFZ6</Retired_Terms>
+            </Change>
+            <Change id="247">
+               <Axiom>OP7 SubClassOf OQ1</Axiom>
+               <Retired_Terms>OP7</Retired_Terms>
+            </Change>
+         </RetiredDescription>
+         <PureRemoval id="prem" size="158">
+            <Change id="383">
+               <Axiom>AAF9 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="251">
+               <Axiom>AAQ2 SubClassOf QR1</Axiom>
+            </Change>
+            <Change id="285">
+               <Axiom>ABL5 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="286">
+               <Axiom>ABS3 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="376">
+               <Axiom>ACL1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="377">
+               <Axiom>ACL7 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="378">
+               <Axiom>ACM1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="252">
+               <Axiom>ACP1 SubClassOf ADI7</Axiom>
+            </Change>
+            <Change id="390">
+               <Axiom>ADK1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="388">
+               <Axiom>AEG9 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="299">
+               <Axiom>AEN9 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="298">
+               <Axiom>AEO2 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="404">
+               <Axiom>AER2 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="297">
+               <Axiom>AFE5 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="294">
+               <Axiom>AFT8 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="293">
+               <Axiom>AFU8 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="367">
+               <Axiom>AFZ4 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="295">
+               <Axiom>AGA4 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="296">
+               <Axiom>AGC5 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="399">
+               <Axiom>AGF5 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="400">
+               <Axiom>AGF6 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="379">
+               <Axiom>AHE4 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="358">
+               <Axiom>AHW1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="359">
+               <Axiom>AHW4 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="282">
+               <Axiom>AIA3 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="284">
+               <Axiom>AIC9 SubClassOf AID7</Axiom>
+            </Change>
+            <Change id="283">
+               <Axiom>AID6 SubClassOf AID7</Axiom>
+            </Change>
+            <Change id="372">
+               <Axiom>AIF3 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="357">
+               <Axiom>AIM1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="356">
+               <Axiom>AIM9 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="349">
+               <Axiom>AIW3 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="350">
+               <Axiom>AIW6 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="351">
+               <Axiom>AIX9 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="348">
+               <Axiom>AJB2 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="380">
+               <Axiom>AJE6 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="353">
+               <Axiom>AJF2 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="355">
+               <Axiom>AJG9 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="354">
+               <Axiom>AJH1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="352">
+               <Axiom>AJI9 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="381">
+               <Axiom>AJM8 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="360">
+               <Axiom>AKP7 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="361">
+               <Axiom>AKQ1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="281">
+               <Axiom>ALG9 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="398">
+               <Axiom>ALS1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="369">
+               <Axiom>ALS8 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="396">
+               <Axiom>ALY1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="365">
+               <Axiom>ANE8 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="364">
+               <Axiom>ANF1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="366">
+               <Axiom>ANG1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="403">
+               <Axiom>ANH8 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="374">
+               <Axiom>ANL2 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="279">
+               <Axiom>ANT7 SubClassOf AFK2</Axiom>
+            </Change>
+            <Change id="280">
+               <Axiom>ANV9 SubClassOf ANU6</Axiom>
+            </Change>
+            <Change id="333">
+               <Axiom>ASF6 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="329">
+               <Axiom>ASJ4 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="332">
+               <Axiom>ASK3 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="331">
+               <Axiom>ASK4 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="330">
+               <Axiom>ASK6 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="338">
+               <Axiom>ASM6 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="340">
+               <Axiom>ASM8 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="339">
+               <Axiom>ASM9 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="342">
+               <Axiom>ASN1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="341">
+               <Axiom>ASN2 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="337">
+               <Axiom>ASN4 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="336">
+               <Axiom>ASN5 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="334">
+               <Axiom>ASN9 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="335">
+               <Axiom>ASO1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="370">
+               <Axiom>ASR5 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="343">
+               <Axiom>ATK3 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="371">
+               <Axiom>ATV3 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="386">
+               <Axiom>ATX6 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="387">
+               <Axiom>ATX8 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="385">
+               <Axiom>ATZ8 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="303">
+               <Axiom>AUD1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="304">
+               <Axiom>AUM6 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="328">
+               <Axiom>AUO5 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="302">
+               <Axiom>AUU8 SubClassOf AHR5</Axiom>
+            </Change>
+            <Change id="300">
+               <Axiom>AVE2 SubClassOf ALT4</Axiom>
+            </Change>
+            <Change id="305">
+               <Axiom>AVH8 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="307">
+               <Axiom>AVK3 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="306">
+               <Axiom>AVK8 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="308">
+               <Axiom>AVX7 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="375">
+               <Axiom>AWO2 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="327">
+               <Axiom>AZO7 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="326">
+               <Axiom>AZP3 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="325">
+               <Axiom>AZW6 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="346">
+               <Axiom>BBA8 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="345">
+               <Axiom>BBB1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="347">
+               <Axiom>BBL1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="368">
+               <Axiom>BBX1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="373">
+               <Axiom>BCH1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="318">
+               <Axiom>BCI1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="321">
+               <Axiom>BCI5 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="320">
+               <Axiom>BCI8 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="319">
+               <Axiom>BCJ3 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="322">
+               <Axiom>BCJ5 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="323">
+               <Axiom>BCJ7 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="324">
+               <Axiom>BCK5 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="261">
+               <Axiom>BV4 SubClassOf QA8</Axiom>
+            </Change>
+            <Change id="253">
+               <Axiom>BW5 SubClassOf ADK8</Axiom>
+            </Change>
+            <Change id="254">
+               <Axiom>BW5 SubClassOf VZ1</Axiom>
+            </Change>
+            <Change id="266">
+               <Axiom>DB8 SubClassOf QA8</Axiom>
+            </Change>
+            <Change id="265">
+               <Axiom>DC3 SubClassOf QA8</Axiom>
+            </Change>
+            <Change id="267">
+               <Axiom>DK7 SubClassOf QA8</Axiom>
+            </Change>
+            <Change id="263">
+               <Axiom>DN8 SubClassOf QA8</Axiom>
+            </Change>
+            <Change id="262">
+               <Axiom>DO1 SubClassOf QA8</Axiom>
+            </Change>
+            <Change id="264">
+               <Axiom>DP2 SubClassOf QA8</Axiom>
+            </Change>
+            <Change id="384">
+               <Axiom>E9 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="270">
+               <Axiom>EZ1 SubClassOf QA8</Axiom>
+            </Change>
+            <Change id="250">
+               <Axiom>FG2 SubClassOf ACV3</Axiom>
+            </Change>
+            <Change id="249">
+               <Axiom>FI2 SubClassOf OK8</Axiom>
+            </Change>
+            <Change id="269">
+               <Axiom>FR9 SubClassOf QA8</Axiom>
+            </Change>
+            <Change id="268">
+               <Axiom>FT6 SubClassOf QA8</Axiom>
+            </Change>
+            <Change id="395">
+               <Axiom>GL7 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="389">
+               <Axiom>GM1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="406">
+               <Axiom>GQ9 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="314">
+               <Axiom>GS8 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="391">
+               <Axiom>GX6 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="392">
+               <Axiom>GX7 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="271">
+               <Axiom>IO8 SubClassOf AFK2</Axiom>
+            </Change>
+            <Change id="313">
+               <Axiom>IQ2 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="310">
+               <Axiom>IX8 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="311">
+               <Axiom>JA5 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="272">
+               <Axiom>JB8 SubClassOf ABA1</Axiom>
+            </Change>
+            <Change id="312">
+               <Axiom>JC9 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="309">
+               <Axiom>KN7 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="274">
+               <Axiom>KR9 SubClassOf YJ4</Axiom>
+            </Change>
+            <Change id="273">
+               <Axiom>KS9 SubClassOf HA1</Axiom>
+            </Change>
+            <Change id="256">
+               <Axiom>KY6 SubClassOf OM2</Axiom>
+            </Change>
+            <Change id="255">
+               <Axiom>KY6 SubClassOf X6</Axiom>
+            </Change>
+            <Change id="317">
+               <Axiom>KZ4 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="344">
+               <Axiom>LM3 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="316">
+               <Axiom>NB3 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="405">
+               <Axiom>NG1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="275">
+               <Axiom>NG7 SubClassOf QA8</Axiom>
+            </Change>
+            <Change id="393">
+               <Axiom>NJ5 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="394">
+               <Axiom>NJ6 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="259">
+               <Axiom>NM6 SubClassOf OM3</Axiom>
+            </Change>
+            <Change id="258">
+               <Axiom>NM6 SubClassOf X6</Axiom>
+            </Change>
+            <Change id="257">
+               <Axiom>NM8 SubClassOf QA8</Axiom>
+            </Change>
+            <Change id="315">
+               <Axiom>ON4 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="362">
+               <Axiom>OT3 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="401">
+               <Axiom>SY2 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="402">
+               <Axiom>SY5 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="397">
+               <Axiom>TE5 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="276">
+               <Axiom>TJ9 SubClassOf AFK2</Axiom>
+            </Change>
+            <Change id="277">
+               <Axiom>TJ9 SubClassOf AXW1</Axiom>
+            </Change>
+            <Change id="278">
+               <Axiom>TM2 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="260">
+               <Axiom>UN6 SubClassOf QA8</Axiom>
+            </Change>
+            <Change id="301">
+               <Axiom>VA1 SubClassOf YZ8</Axiom>
+            </Change>
+            <Change id="292">
+               <Axiom>XL9 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="291">
+               <Axiom>XM2 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="290">
+               <Axiom>XP7 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="363">
+               <Axiom>XQ1 SubClassOf AUU8</Axiom>
+            </Change>
+            <Change id="288">
+               <Axiom>ZH7 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="287">
+               <Axiom>ZI2 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="289">
+               <Axiom>ZK9 SubClassOf AGG3</Axiom>
+            </Change>
+            <Change id="382">
+               <Axiom>ZO9 SubClassOf AUU8</Axiom>
+            </Change>
+         </PureRemoval>
+         <PureRemovalWithRetiredTerms id="premrt" size="6">
+            <Change id="411">
+               <Axiom>OP8 SubClassOf OP7</Axiom>
+               <Retired_Terms>OP7</Retired_Terms>
+            </Change>
+            <Change id="410">
+               <Axiom>RJ5 SubClassOf OP7</Axiom>
+               <Retired_Terms>OP7</Retired_Terms>
+            </Change>
+            <Change id="409">
+               <Axiom>RM3 SubClassOf OP7</Axiom>
+               <Retired_Terms>OP7</Retired_Terms>
+            </Change>
+            <Change id="412">
+               <Axiom>TD8 SubClassOf OP7</Axiom>
+               <Retired_Terms>OP7</Retired_Terms>
+            </Change>
+            <Change id="408">
+               <Axiom>VD9 SubClassOf OP7</Axiom>
+               <Retired_Terms>OP7</Retired_Terms>
+            </Change>
+            <Change id="407">
+               <Axiom>YG4 SubClassOf OP7</Axiom>
+               <Retired_Terms>OP7</Retired_Terms>
+            </Change>
+         </PureRemovalWithRetiredTerms>
+         <RetiredModifiedDefinition id="wkequiv" size="0"/>
+         <RetiredModifiedDefinitionWithRetiredTerms id="wkequivrt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffrems" size="20">
+         <RemovedRedundancy id="rred" size="0"/>
+         <RemovedRewrite id="rrws" size="0">
+            <RemovedCompleteRewrite id="rrw" size="0"/>
+            <RemovedPartialRewrite id="rprw" size="0"/>
+         </RemovedRewrite>
+         <RemovedProspectiveRedundancy id="rpred" size="20">
+            <RemovedReshuffleProspectiveRedundancy id="ravred" size="0"/>
+            <RemovedNewProspectiveRedundancy id="rnpred" size="20">
+               <RemovedNovelProspectiveRedundancy id="strength" size="20">
+                  <Change id="426">
+                     <Axiom>ABL6 SubClassOf HU2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">ABL6 SubClassOf YY4</Axiom>
+                        <Axiom shared="true">YY4 SubClassOf HU2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="427">
+                     <Axiom>ABW3 SubClassOf HU2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">ABW3 SubClassOf YY4</Axiom>
+                        <Axiom shared="true">YY4 SubClassOf HU2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="417">
+                     <Axiom>AGG3 SubClassOf HU2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">AGG3 SubClassOf AVP7</Axiom>
+                        <Axiom effectual="true">AVP7 SubClassOf HU2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="425">
+                     <Axiom>AIA4 SubClassOf HU2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">AIA4 SubClassOf YY4</Axiom>
+                        <Axiom shared="true">YY4 SubClassOf HU2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="418">
+                     <Axiom>AIN5 SubClassOf HU2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">AIN5 SubClassOf YY4</Axiom>
+                        <Axiom shared="true">YY4 SubClassOf HU2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="423">
+                     <Axiom>AIP2 SubClassOf HU2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">AIP2 SubClassOf YY4</Axiom>
+                        <Axiom shared="true">YY4 SubClassOf HU2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="419">
+                     <Axiom>AIQ3 SubClassOf AIK8</Axiom>
+                     <Source>
+                        <Axiom effectual="true">AIQ3 SubClassOf ALL2</Axiom>
+                        <Axiom effectual="true">AVF2 SubClassOf AIK8</Axiom>
+                        <Axiom shared="true">ALL2 SubClassOf AVF2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="420">
+                     <Axiom>AIQ3 SubClassOf AVF2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">AIQ3 SubClassOf ALL2</Axiom>
+                        <Axiom shared="true">ALL2 SubClassOf AVF2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="421">
+                     <Axiom>AIQ4 SubClassOf AIK8</Axiom>
+                     <Source>
+                        <Axiom effectual="true">AIQ4 SubClassOf ALL2</Axiom>
+                        <Axiom effectual="true">AVF2 SubClassOf AIK8</Axiom>
+                        <Axiom shared="true">ALL2 SubClassOf AVF2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="422">
+                     <Axiom>AIQ6 SubClassOf AIK8</Axiom>
+                     <Source>
+                        <Axiom effectual="true">AIQ6 SubClassOf ALL2</Axiom>
+                        <Axiom effectual="true">AVF2 SubClassOf AIK8</Axiom>
+                        <Axiom shared="true">ALL2 SubClassOf AVF2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="424">
+                     <Axiom>AIR6 SubClassOf HU2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">AIR6 SubClassOf YY4</Axiom>
+                        <Axiom shared="true">YY4 SubClassOf HU2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="414">
+                     <Axiom>ALL1 SubClassOf AIK8</Axiom>
+                     <Source>
+                        <Axiom effectual="true">ALL1 SubClassOf ALL2</Axiom>
+                        <Axiom effectual="true">AVF2 SubClassOf AIK8</Axiom>
+                        <Axiom shared="true">ALL2 SubClassOf AVF2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="415">
+                     <Axiom>ALL1 SubClassOf AVF2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">ALL1 SubClassOf ALL2</Axiom>
+                        <Axiom shared="true">ALL2 SubClassOf AVF2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="416">
+                     <Axiom>ALL2 SubClassOf AIK8</Axiom>
+                     <Source>
+                        <Axiom effectual="true">AVF2 SubClassOf AIK8</Axiom>
+                        <Axiom shared="true">ALL2 SubClassOf AVF2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="432">
+                     <Axiom>AVF2 SubClassOf HU2</Axiom>
+                     <Source>
+                        <Axiom shared="true">AIK8 SubClassOf HU2</Axiom>
+                        <Axiom effectual="true">AVF2 SubClassOf AIK8</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="413">
+                     <Axiom>SS8 SubClassOf SF8</Axiom>
+                     <Source>
+                        <Axiom effectual="true">SS8 SubClassOf SV1</Axiom>
+                        <Axiom shared="true">SV1 SubClassOf SS6</Axiom>
+                        <Axiom shared="true">SS6 SubClassOf SF8</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="431">
+                     <Axiom>XO6 SubClassOf HU2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">XO6 SubClassOf YY4</Axiom>
+                        <Axiom shared="true">YY4 SubClassOf HU2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="428">
+                     <Axiom>YY5 SubClassOf HU2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">YY5 SubClassOf YY4</Axiom>
+                        <Axiom shared="true">YY4 SubClassOf HU2</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="430">
+                     <Axiom>ZG6 SubClassOf HU2</Axiom>
+                     <Source>
+                        <Axiom shared="true">YY4 SubClassOf HU2</Axiom>
+                        <Axiom effectual="true">ZG6 SubClassOf YY4</Axiom>
+                     </Source>
+                  </Change>
+                  <Change id="429">
+                     <Axiom>ZG8 SubClassOf HU2</Axiom>
+                     <Source>
+                        <Axiom effectual="true">ZG8 SubClassOf YY4</Axiom>
+                        <Axiom shared="true">YY4 SubClassOf HU2</Axiom>
+                     </Source>
+                  </Change>
+               </RemovedNovelProspectiveRedundancy>
+               <RemovedPseudoNovelProspectiveRedundancy id="rpseudopred" size="0"/>
+            </RemovedNewProspectiveRedundancy>
+         </RemovedProspectiveRedundancy>
+      </Ineffectual>
+   </Removals>
+</root>

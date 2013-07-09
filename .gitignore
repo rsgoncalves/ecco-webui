@@ -1,7 +1,5 @@
 # Test files #
 *.csv
-*.xml
-*.html
 *.txt
 todo
 

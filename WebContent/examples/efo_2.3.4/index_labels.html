@@ -1,0 +1,2166 @@
+<html xmlns:ecco="http://owl.cs.manchester.ac.uk/diff">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ecco</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/reveal.css"><script type="text/javascript" src="js/jquery-1.4.4.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery.checkboxtree.js"></script><script type="text/javascript" src="js/jquery.reveal.js"></script><script type="text/javascript" src="js/jscript.js"></script></head>
+   <body>
+      <h1><br></h1>
+      				[<a href="index.jsp">Back Home</a>]
+      				
+      <form action="getXml" method="post" class="inl">
+         						[<a id="top3" target="_blank" href="EccoChangeSet_labels.xml">Source XML</a>]
+         					
+      </form><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp;
+      				[<a id="top1" href="javascript:;" onClick="showAll();$('#tree1').checkboxTree('expandAll');$('#tree2').checkboxTree('expandAll')">Show All</a> | 
+      				<a id="top2" href="javascript:;" onClick="hideAll();$('#tree1').checkboxTree('collapseAll');$('#tree2').checkboxTree('collapseAll');">Hide All</a>] 
+      				[<a id="genViewPerml" href="#" onclick="setPermalink();">Generate View Permalink</a>]
+      				
+      <div id="view-plink-modal" class="reveal-modal">
+         <h3>view-permalink</h3><textarea id="view-plink" rows="3" cols="60" readonly="true" style="resize: none;"></textarea><br>
+         					[<a href="javascript:;" onclick="select_all('view-plink');">Select all</a>]
+         					<a class="close-reveal-modal">x</a></div><br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="e1f2cc95-6151-4214-9482-beba12d3e941-lbl"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
+      <table width="70%" style="table-layout:fixed;">
+         <tr>
+            <th class="topright"><input type="checkbox" name="removals" onClick="toggleGroup('removals')">  
+               <h3 style="display:inline;">Removals (186)</h3>
+            </th>
+            <th class="topleft"><input type="checkbox" name="additions" onClick="toggleGroup('additions')">  
+               <h3 style="display:inline;">Additions (246)</h3>
+            </th>
+         </tr>
+         <tr>
+            <td class="topright">
+               <ul id="tree1">
+                  <li>  <input type="checkbox" name="effRemsTrigger" onClick="toggleChanges('effRems','effRemsTrigger')">  
+                     <h4 style="display:inline;">Effectual (166)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, and are not entailed by Ontology 2');"><ul>
+                        <li>  Weakenings (0)</li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li id="retdesctrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effRems" onClick="toggleDiv('retdesc');">  <a href="#retdesc">Retired Descriptions (2)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing retired terms, i.e., terms that no longer exist in Ontology 2');"></li>
+                        <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('rem','remrt');">  <b>Pure Removals (164)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 2; typically related to hierachy changes');"><ul style="display:none">
+                              <li id="remtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('rem');">  <a href="#rem">With Shared Terms (158)</a></li>
+                              <li id="remrttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('remrt');">  <a href="#remrt">With Retired Terms (6)</a></li>
+                           </ul>
+                        </li><br></ul>
+                  </li><br><li>  <input type="checkbox" name="ineffRemsTrigger" onClick="toggleChanges('ineffRems','ineffRemsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (20)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, but are entailed by Ontology 2, i.e., that have been removed but are still entailed');"><ul>
+                        <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('ravred','rst','rpsnovred');">  <b>Prospective Redundancy (20)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 1 for which there are more constraining related axioms in Ontology 2');"><ul style="display:none">
+                              <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Reshuffle (0)
+                              </li>
+                              <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst','rpsnovred');">  <b>Retired Prospective Redundancy (20)</b><b id="t1"></b>  
+                                 <ul style="display:none">
+                                    <li id="rsttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst');">  <a href="#rst">Novel (20)</a></li>
+                                    <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pseudo Novel (0)
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+            <td class="topleft" style="vertical-align:top">
+               <ul id="tree2">
+                  <li>  <input type="checkbox" name="effAddsTrigger" onClick="toggleChanges('effAdds','effAddsTrigger')">  
+                     <h4 style="display:inline;">Effectual (230)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, and are not entailed by Ontology 1');"><ul>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Strengthenings (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li id="newdesctrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('newdesc');">  <a href="#newdesc">New Descriptions (53)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing newly created terms, i.e., terms that did not exist in Ontology 1');"></li>
+                        <li>  <input type="checkbox" name="effAdds" onClick="toggleDiv('add','addnt');">  <b>Pure Additions (177)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 1; typically related to hierachy changes');"><ul style="display:none">
+                              <li id="addtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('add');">  <a href="#add">With Shared Terms (152)</a></li>
+                              <li id="addnttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('addnt');">  <a href="#addnt">With New Terms (25)</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li><br><li>  <input type="checkbox" name="ineffAddsTrigger" onClick="toggleChanges('ineffAdds','ineffAddsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (16)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, but are entailed by Ontology 1, i.e., that have been added but were already entailed');"><ul>
+                        <li>  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aavred','apseudopred','aweak');">  <b>Retrospective Redundancy (16)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 2 for which there are more constraining related axioms in Ontology 1');"><ul style="display:none">
+                              <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Reshuffle (0)
+                              </li>
+                              <li>  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak','apseudopred');">  <b>New Retrospective Redundancy (16)</b>  
+                                 <ul style="display:none">
+                                    <li id="aweaktrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak');">  <a href="#aweak">Novel (16)</a></li>
+                                    <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pseudo Novel (0)
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td class="topright">[<a href="javascript:void(0);" id="tree1-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree1-collapseAll">Collapse All</a>]
+            </td>
+            <td class="topleft">[<a href="javascript:void(0);" id="tree2-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree2-collapseAll">Collapse All</a>]
+            </td>
+         </tr>
+      </table>
+      <table width="100%" style="table-layout:fixed;">
+         <colgroup>
+            <col>
+            <col width="47.5%">
+            <col width="47.5%">
+         </colgroup>
+         <tbody id="newdesc" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">New Descriptions (53)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">New Description Axiom in Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td>20</td>
+               <td colspan="2">454 GS 20 standard manufacturer's protocol<span class="subclass"> SubClassOf </span>nucleic acid sequencing protocol. <br><i>New Terms: 454 GS 20 standard manufacturer's protocol</i></td>
+            </tr>
+            <tr class="addition">
+               <td>23</td>
+               <td colspan="2">QRS complex<span class="subclass"> SubClassOf </span>cardiovascular measurement. <br><i>New Terms: QRS complex</i></td>
+            </tr>
+            <tr class="addition">
+               <td>25</td>
+               <td colspan="2">QRS duration<span class="subclass"> SubClassOf </span>cardiovascular measurement. <br><i>New Terms: QRS duration</i></td>
+            </tr>
+            <tr class="addition">
+               <td>24</td>
+               <td colspan="2">QRS duration<span class="subclass"> SubClassOf </span>temporal measurement. <br><i>New Terms: QRS duration</i></td>
+            </tr>
+            <tr class="addition">
+               <td>29</td>
+               <td colspan="2">acylcarnitine measurement<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: acylcarnitine measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>26</td>
+               <td colspan="2">age at death<span class="subclass"> SubClassOf </span>age. <br><i>New Terms: age at death</i></td>
+            </tr>
+            <tr class="addition">
+               <td>39</td>
+               <td colspan="2">aminosilane substrate coating<span class="subclass"> SubClassOf </span>array surface coating. <br><i>New Terms: aminosilane substrate coating, array surface coating</i></td>
+            </tr>
+            <tr class="addition">
+               <td>41</td>
+               <td colspan="2">array reporter<span class="subclass"> SubClassOf </span>instrument part. <br><i>New Terms: instrument part, array reporter</i></td>
+            </tr>
+            <tr class="addition">
+               <td>38</td>
+               <td colspan="2">array surface coating<span class="subclass"> SubClassOf </span>instrument part. <br><i>New Terms: instrument part, array surface coating</i></td>
+            </tr>
+            <tr class="addition">
+               <td>37</td>
+               <td colspan="2">block<span class="subclass"> SubClassOf </span>collection of material. <br><i>New Terms: collection of material, block</i></td>
+            </tr>
+            <tr class="addition">
+               <td>7</td>
+               <td colspan="2">bursa of Fabricius<span class="subclass"> SubClassOf </span>haemopoietic system. <br><i>New Terms: bursa of Fabricius</i></td>
+            </tr>
+            <tr class="addition">
+               <td>53</td>
+               <td colspan="2">cob<span class="subclass"> SubClassOf </span>plant reproductive system structure. <br><i>New Terms: cob</i></td>
+            </tr>
+            <tr class="addition">
+               <td>36</td>
+               <td colspan="2">collection of material<span class="subclass"> SubClassOf </span>material entity. <br><i>New Terms: collection of material</i></td>
+            </tr>
+            <tr class="addition">
+               <td>1</td>
+               <td colspan="2">culture condition:dark-grown cell<span class="subclass"> SubClassOf </span>growth condition. <br><i>New Terms: culture condition:dark-grown cell</i></td>
+            </tr>
+            <tr class="addition">
+               <td>10</td>
+               <td colspan="2">culture supernatant<span class="subclass"> SubClassOf </span>cell culture. <br><i>New Terms: culture supernatant</i></td>
+            </tr>
+            <tr class="addition">
+               <td>14</td>
+               <td colspan="2">dopaminergic neuron<span class="subclass"> SubClassOf </span>neuron. <br><i>New Terms: dopaminergic neuron</i></td>
+            </tr>
+            <tr class="addition">
+               <td>13</td>
+               <td colspan="2">early embryonic cell<span class="subclass"> SubClassOf </span>embryonic cell. <br><i>New Terms: early embryonic cell</i></td>
+            </tr>
+            <tr class="addition">
+               <td>15</td>
+               <td colspan="2">erythroid lineage cell<span class="subclass"> SubClassOf </span>myeloid cell. <br><i>New Terms: erythroid lineage cell</i></td>
+            </tr>
+            <tr class="addition">
+               <td>32</td>
+               <td colspan="2">glass substrate<span class="subclass"> SubClassOf </span>substrate. <br><i>New Terms: substrate, glass substrate</i></td>
+            </tr>
+            <tr class="addition">
+               <td>12</td>
+               <td colspan="2">immortal cell line cell<span class="subclass"> SubClassOf </span>cell line. <br><i>New Terms: immortal cell line cell</i></td>
+            </tr>
+            <tr class="addition">
+               <td>42</td>
+               <td colspan="2">in situ oligo<span class="subclass"> SubClassOf </span>array reporter. <br><i>New Terms: array reporter, in situ oligo</i></td>
+            </tr>
+            <tr class="addition">
+               <td>30</td>
+               <td colspan="2">instrument part<span class="subclass"> SubClassOf </span>material entity. <br><i>New Terms: instrument part</i></td>
+            </tr>
+            <tr class="addition">
+               <td>22</td>
+               <td colspan="2">internal carotid intimal medial thickness<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: internal carotid intimal medial thickness</i></td>
+            </tr>
+            <tr class="addition">
+               <td>11</td>
+               <td colspan="2">juvenile leaf<span class="subclass"> SubClassOf </span>leaf. <br><i>New Terms: juvenile leaf</i></td>
+            </tr>
+            <tr class="addition">
+               <td>5</td>
+               <td colspan="2">left ventricle<span class="subclass"> SubClassOf </span>heart component. <br><i>New Terms: left ventricle</i></td>
+            </tr>
+            <tr class="addition">
+               <td>9</td>
+               <td colspan="2">logarithmic phase culture<span class="subclass"> SubClassOf </span>experimental cell. <br><i>New Terms: logarithmic phase culture</i></td>
+            </tr>
+            <tr class="addition">
+               <td>18</td>
+               <td colspan="2">long non poly RNA<span class="subclass"> SubClassOf </span>non polyA RNA. <br><i>New Terms: long non poly RNA, non polyA RNA</i></td>
+            </tr>
+            <tr class="addition">
+               <td>19</td>
+               <td colspan="2">long poly A RNA<span class="subclass"> SubClassOf </span>polyA RNA. <br><i>New Terms: polyA RNA, long poly A RNA</i></td>
+            </tr>
+            <tr class="addition">
+               <td>3</td>
+               <td colspan="2">melanoma cell line<span class="subclass"> SubClassOf </span>cancer cell line. <br><i>New Terms: melanoma cell line</i></td>
+            </tr>
+            <tr class="addition">
+               <td>27</td>
+               <td colspan="2">myoglobin measurement<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: myoglobin measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>21</td>
+               <td colspan="2">nervous system measurement<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>34</td>
+               <td colspan="2">nitrocellulose substrate<span class="subclass"> SubClassOf </span>substrate. <br><i>New Terms: substrate, nitrocellulose substrate</i></td>
+            </tr>
+            <tr class="addition">
+               <td>17</td>
+               <td colspan="2">non polyA RNA<span class="subclass"> SubClassOf </span>RNA. <br><i>New Terms: non polyA RNA</i></td>
+            </tr>
+            <tr class="addition">
+               <td>33</td>
+               <td colspan="2">nylon substrate<span class="subclass"> SubClassOf </span>substrate. <br><i>New Terms: substrate, nylon substrate</i></td>
+            </tr>
+            <tr class="addition">
+               <td>51</td>
+               <td colspan="2">pathogenicity<span class="subclass"> SubClassOf </span>disposition. <br><i>New Terms: pathogenicity</i></td>
+            </tr>
+            <tr class="addition">
+               <td>52</td>
+               <td colspan="2">polyA RNA<span class="subclass"> SubClassOf </span>RNA. <br><i>New Terms: polyA RNA</i></td>
+            </tr>
+            <tr class="addition">
+               <td>40</td>
+               <td colspan="2">polylysine substrate coating<span class="subclass"> SubClassOf </span>array surface coating. <br><i>New Terms: polylysine substrate coating, array surface coating</i></td>
+            </tr>
+            <tr class="addition">
+               <td>2</td>
+               <td colspan="2">renal cell carcinoma cell line<span class="subclass"> SubClassOf </span>cancer cell line. <br><i>New Terms: renal cell carcinoma cell line</i></td>
+            </tr>
+            <tr class="addition">
+               <td>49</td>
+               <td colspan="2">response to fenofibrate<span class="subclass"> SubClassOf </span>response to drug. <br><i>New Terms: response to fenofibrate</i></td>
+            </tr>
+            <tr class="addition">
+               <td>50</td>
+               <td colspan="2">response to temozolomide<span class="subclass"> SubClassOf </span>response to antineoplastic agent. <br><i>New Terms: response to temozolomide</i></td>
+            </tr>
+            <tr class="addition">
+               <td>6</td>
+               <td colspan="2">right ventricle<span class="subclass"> SubClassOf </span>heart component. <br><i>New Terms: right ventricle</i></td>
+            </tr>
+            <tr class="addition">
+               <td>4</td>
+               <td colspan="2">saliva<span class="subclass"> SubClassOf </span>animal fluid. <br><i>New Terms: saliva</i></td>
+            </tr>
+            <tr class="addition">
+               <td>35</td>
+               <td colspan="2">silicon substrate<span class="subclass"> SubClassOf </span>substrate. <br><i>New Terms: substrate, silicon substrate</i></td>
+            </tr>
+            <tr class="addition">
+               <td>43</td>
+               <td colspan="2">spotted antibody reporter<span class="subclass"> SubClassOf </span>spotted protein reporter. <br><i>New Terms: spotted antibody reporter, spotted protein reporter</i></td>
+            </tr>
+            <tr class="addition">
+               <td>44</td>
+               <td colspan="2">spotted colony reporter<span class="subclass"> SubClassOf </span>array reporter. <br><i>New Terms: array reporter, spotted colony reporter</i></td>
+            </tr>
+            <tr class="addition">
+               <td>45</td>
+               <td colspan="2">spotted double stranded DNA reporter<span class="subclass"> SubClassOf </span>array reporter. <br><i>New Terms: array reporter, spotted double stranded DNA reporter</i></td>
+            </tr>
+            <tr class="addition">
+               <td>46</td>
+               <td colspan="2">spotted protein reporter<span class="subclass"> SubClassOf </span>array reporter. <br><i>New Terms: array reporter, spotted protein reporter</i></td>
+            </tr>
+            <tr class="addition">
+               <td>47</td>
+               <td colspan="2">spotted single stranded DNA PCR amplicon reporter<span class="subclass"> SubClassOf </span>array reporter. <br><i>New Terms: array reporter, spotted single stranded DNA PCR amplicon reporter</i></td>
+            </tr>
+            <tr class="addition">
+               <td>48</td>
+               <td colspan="2">spotted single stranded oligo reporter<span class="subclass"> SubClassOf </span>array reporter. <br><i>New Terms: array reporter, spotted single stranded oligo reporter</i></td>
+            </tr>
+            <tr class="addition">
+               <td>8</td>
+               <td colspan="2">stationary phase culture<span class="subclass"> SubClassOf </span>experimental cell. <br><i>New Terms: stationary phase culture</i></td>
+            </tr>
+            <tr class="addition">
+               <td>31</td>
+               <td colspan="2">substrate<span class="subclass"> SubClassOf </span>instrument part. <br><i>New Terms: substrate, instrument part</i></td>
+            </tr>
+            <tr class="addition">
+               <td>16</td>
+               <td colspan="2">trypanosomiasis<span class="subclass"> SubClassOf </span>parasitic Infection. <br><i>New Terms: trypanosomiasis</i></td>
+            </tr>
+            <tr class="addition">
+               <td>28</td>
+               <td colspan="2">tyrosine measurement<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: tyrosine measurement</i></td>
+            </tr>
+         </tbody>
+         <tbody id="add" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Pure Additions with Shared Terms (152)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">Addition to Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td>162</td>
+               <td colspan="2">Acanthamoeba polyphaga mimivirus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>186</td>
+               <td colspan="2">Amapari virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>146</td>
+               <td colspan="2">Arabis mosaic virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>205</td>
+               <td colspan="2">Arrhythmogenic right ventricular dysplasia<span class="subclass"> SubClassOf </span>heart disease. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>199</td>
+               <td colspan="2">Australian bat lyssavirus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>107</td>
+               <td colspan="2">BK polyomavirus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>145</td>
+               <td colspan="2">Bean pod mottle virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>176</td>
+               <td colspan="2">Bluetongue virus 2<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>117</td>
+               <td colspan="2">Bovine viral diarrhea virus 1<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>69</td>
+               <td colspan="2">C-reactive protein measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>175</td>
+               <td colspan="2">California encephalitis virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>161</td>
+               <td colspan="2">Choristoneura fumiferana MNPV<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>160</td>
+               <td colspan="2">Cocksfoot streak virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>125</td>
+               <td colspan="2">Crimean-Congo hemorrhagic fever virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>152</td>
+               <td colspan="2">Cucumber mosaic virus (strain FNY)<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>151</td>
+               <td colspan="2">Cucumber mosaic virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>197</td>
+               <td colspan="2">Cyanophage S-BnM1<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>139</td>
+               <td colspan="2">Cymbidium ringspot virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>70</td>
+               <td colspan="2">D dimer measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>111</td>
+               <td colspan="2">Dengue virus 1<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>112</td>
+               <td colspan="2">Dengue virus 2<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>113</td>
+               <td colspan="2">Dengue virus 3<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>114</td>
+               <td colspan="2">Dengue virus 4<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>185</td>
+               <td colspan="2">Duvenhage virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>194</td>
+               <td colspan="2">European bat lyssavirus 1<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>195</td>
+               <td colspan="2">European bat lyssavirus 2<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>201</td>
+               <td colspan="2">Familial primary hyperparathyroidism<span class="subclass"> SubClassOf </span>endocrine system disease. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>149</td>
+               <td colspan="2">Flock house virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>187</td>
+               <td colspan="2">Guanarito virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>126</td>
+               <td colspan="2">Hantaan virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>100</td>
+               <td colspan="2">Herpesvirus saimiri (strain 11)<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>169</td>
+               <td colspan="2">Human adenovirus 4<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>170</td>
+               <td colspan="2">Human adenovirus 40<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>105</td>
+               <td colspan="2">Human adenovirus 41<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>171</td>
+               <td colspan="2">Human adenovirus 5<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>104</td>
+               <td colspan="2">Human adenovirus 7<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>189</td>
+               <td colspan="2">Human echovirus 18<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>97</td>
+               <td colspan="2">Human herpesvirus 1<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>99</td>
+               <td colspan="2">Human herpesvirus 4<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>98</td>
+               <td colspan="2">Human herpesvirus 5 strain Towne<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>173</td>
+               <td colspan="2">Human herpesvirus 6B<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>177</td>
+               <td colspan="2">Human herpesvirus 8<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>106</td>
+               <td colspan="2">Human papillomavirus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>118</td>
+               <td colspan="2">Human respiratory syncytial virus A strain Long<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>198</td>
+               <td colspan="2">Human respiratory syncytial virus B1<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>80</td>
+               <td colspan="2">IGFBP-3 measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>183</td>
+               <td colspan="2">Influenza A virus (A/Texas/36/1991(H1N1))<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>121</td>
+               <td colspan="2">Influenza A virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>200</td>
+               <td colspan="2">Intracranial arteriovenous malformation<span class="subclass"> SubClassOf </span>nervous system disease. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>192</td>
+               <td colspan="2">Ippy virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>102</td>
+               <td colspan="2">Iridovirus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>130</td>
+               <td colspan="2">Junin virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>174</td>
+               <td colspan="2">Kyasanur forest disease virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>122</td>
+               <td colspan="2">La Crosse virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>172</td>
+               <td colspan="2">Lactococcus phage c2<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>184</td>
+               <td colspan="2">Lagos bat virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>182</td>
+               <td colspan="2">Lake Victoria marburgvirus - Angola2005<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>132</td>
+               <td colspan="2">Lassa virus Josiah<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>131</td>
+               <td colspan="2">Lassa virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>133</td>
+               <td colspan="2">Lymphocytic choriomeningitis virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>190</td>
+               <td colspan="2">Macacine herpesvirus 3<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>134</td>
+               <td colspan="2">Machupo virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>137</td>
+               <td colspan="2">Melon necrotic spot virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>193</td>
+               <td colspan="2">Mobala virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>153</td>
+               <td colspan="2">Mokola virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>135</td>
+               <td colspan="2">Mopeia virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>108</td>
+               <td colspan="2">Myoviridae<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>204</td>
+               <td colspan="2">Nephroblastoma<span class="subclass"> SubClassOf </span>renal carcinoma. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>168</td>
+               <td colspan="2">Ngari virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>154</td>
+               <td colspan="2">Omsk hemorrhagic fever virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>101</td>
+               <td colspan="2">Ovine herpesvirus 2<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>103</td>
+               <td colspan="2">Paramecium bursaria Chlorella virus 1<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>143</td>
+               <td colspan="2">Pepper mild mottle virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>141</td>
+               <td colspan="2">Plum pox virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>109</td>
+               <td colspan="2">Podoviridae<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>140</td>
+               <td colspan="2">Potato virus X<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>203</td>
+               <td colspan="2">Progressive supranuclear palsy<span class="subclass"> SubClassOf </span>nervous system disease. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>181</td>
+               <td colspan="2">Prunus necrotic ringspot virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>127</td>
+               <td colspan="2">Puumala virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>120</td>
+               <td colspan="2">Rabies virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>191</td>
+               <td colspan="2">Ralstonia phage RSL1<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>158</td>
+               <td colspan="2">Reston ebolavirus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>123</td>
+               <td colspan="2">Rift Valley fever virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>196</td>
+               <td colspan="2">Rocio virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>163</td>
+               <td colspan="2">SARS coronavirus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>164</td>
+               <td colspan="2">SARS coronavirus Tor2<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>188</td>
+               <td colspan="2">Sabia virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>128</td>
+               <td colspan="2">Seoul virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>138</td>
+               <td colspan="2">Southern bean mosaic virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>159</td>
+               <td colspan="2">Sudan ebolavirus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>179</td>
+               <td colspan="2">Synechococcus phage S-IO17<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>180</td>
+               <td colspan="2">Synechococcus phage S-IO21<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>178</td>
+               <td colspan="2">Synechococcus phage S-IO9<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>166</td>
+               <td colspan="2">Synechococcus phage S-PM2<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>167</td>
+               <td colspan="2">Synechococcus phage S-RSM2<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>136</td>
+               <td colspan="2">Tacaribe virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>144</td>
+               <td colspan="2">Tobacco mosaic virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>150</td>
+               <td colspan="2">Tobacco rattle virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>148</td>
+               <td colspan="2">Tobacco ringspot virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>147</td>
+               <td colspan="2">Tomato ringspot virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>129</td>
+               <td colspan="2">Tomato spotted wilt virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>110</td>
+               <td colspan="2">Tomato yellow leaf curl virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>124</td>
+               <td colspan="2">Toscana virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>142</td>
+               <td colspan="2">Turnip mosaic virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>96</td>
+               <td colspan="2">Vaccinia virus Lister<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>119</td>
+               <td colspan="2">Vesicular stomatitis Indiana virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>156</td>
+               <td colspan="2">Watermelon mosaic virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>115</td>
+               <td colspan="2">West Nile virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>116</td>
+               <td colspan="2">Yellow fever virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>165</td>
+               <td colspan="2">Youcai mosaic virus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>155</td>
+               <td colspan="2">Zaire ebolavirus - Gabon (1994-1997)<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>157</td>
+               <td colspan="2">Zaire ebolavirus<span class="subclass"> SubClassOf </span>Virus. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>90</td>
+               <td colspan="2">alpha globulin measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>81</td>
+               <td colspan="2">beta-amyloid 1-42 measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>202</td>
+               <td colspan="2">central core disease<span class="subclass"> SubClassOf </span>muscular disease. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>55</td>
+               <td colspan="2">ectoderm<span class="subclass"> SubClassOf </span>animal developmental tissue. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>68</td>
+               <td colspan="2">erythrocyte count<span class="subclass"> SubClassOf </span>erythrocyte indices. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>94</td>
+               <td colspan="2">erythrocyte measurement<span class="subclass"> SubClassOf </span>hematological measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>61</td>
+               <td colspan="2">external carotid artery<span class="subclass"> SubClassOf </span>carotid artery. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>86</td>
+               <td colspan="2">follicle stimulating hormone measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>75</td>
+               <td colspan="2">glycoprotein measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>84</td>
+               <td colspan="2">interleukin 10 measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>85</td>
+               <td colspan="2">interleukin 12 measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>77</td>
+               <td colspan="2">interleukin 18 measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>89</td>
+               <td colspan="2">interleukin-1 beta measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>91</td>
+               <td colspan="2">interleukin-6 receptor measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>60</td>
+               <td colspan="2">internal carotid artery<span class="subclass"> SubClassOf </span>carotid artery. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>58</td>
+               <td colspan="2">invertebrate ganglion<span class="subclass"> SubClassOf </span>ganglion. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>92</td>
+               <td colspan="2">leptin measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>83</td>
+               <td colspan="2">matrix metalloproteinase measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>72</td>
+               <td colspan="2">mean corpuscular hemoglobin<span class="subclass"> SubClassOf </span>erythrocyte indices. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>73</td>
+               <td colspan="2">mean corpuscular hemoglobin concentration<span class="subclass"> SubClassOf </span>erythrocyte indices. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>71</td>
+               <td colspan="2">mean corpuscular volume<span class="subclass"> SubClassOf </span>erythrocyte indices. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>66</td>
+               <td colspan="2">obsolete_Machado-Joseph disease<span class="subclass"> SubClassOf </span>obsolete class. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>95</td>
+               <td colspan="2">obsolete_Viruses<span class="subclass"> SubClassOf </span>obsolete class. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>54</td>
+               <td colspan="2">obsolete_Wilms tumor<span class="subclass"> SubClassOf </span>obsolete class. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>78</td>
+               <td colspan="2">obsolete_alanine transaminase measurement<span class="subclass"> SubClassOf </span>obsolete class. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>64</td>
+               <td colspan="2">obsolete_arrhythmogenic right ventricular cardiomyopathy<span class="subclass"> SubClassOf </span>obsolete class. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>67</td>
+               <td colspan="2">obsolete_central core myopathy<span class="subclass"> SubClassOf </span>obsolete class. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>65</td>
+               <td colspan="2">obsolete_cerebral arteriovenous malformation<span class="subclass"> SubClassOf </span>obsolete class. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>56</td>
+               <td colspan="2">obsolete_dorsal mesothoracic disc<span class="subclass"> SubClassOf </span>obsolete class. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>57</td>
+               <td colspan="2">obsolete_familial combined hyperlipidemia<span class="subclass"> SubClassOf </span>obsolete class. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>79</td>
+               <td colspan="2">obsolete_gamma glutamyl transpeptidase measurement<span class="subclass"> SubClassOf </span>obsolete class. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>63</td>
+               <td colspan="2">obsolete_primary hyperparathyroidism<span class="subclass"> SubClassOf </span>obsolete class. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>93</td>
+               <td colspan="2">obsolete_response to temozolomide<span class="subclass"> SubClassOf </span>obsolete class. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>62</td>
+               <td colspan="2">obsolete_supranuclear palsy, progressive<span class="subclass"> SubClassOf </span>obsolete class. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>88</td>
+               <td colspan="2">plasminogen activator inhibitor 1 measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>74</td>
+               <td colspan="2">serum albumin measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>76</td>
+               <td colspan="2">serum non-albumin protein measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>87</td>
+               <td colspan="2">tissue plasminogen activator measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>59</td>
+               <td colspan="2">translation profiling<span class="subclass"> SubClassOf </span>array assay. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>82</td>
+               <td colspan="2">tumor necrosis factor-alpha measurement<span class="subclass"> SubClassOf </span>protein measurement. <br></td>
+            </tr>
+         </tbody>
+         <tbody id="addnt" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3"><a name="add"></a><h4 style="display: inline-block;">Pure Additions with New Terms (25)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">Addition to Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td>214</td>
+               <td colspan="2">brain measurement<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>215</td>
+               <td colspan="2">brain serotonin transporter measurement<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>222</td>
+               <td colspan="2">caudate nucleus volume<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>224</td>
+               <td colspan="2">cortical thickness<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>210</td>
+               <td colspan="2">erythroblast<span class="subclass"> SubClassOf </span>erythroid lineage cell. <br><i>New Terms: erythroid lineage cell</i></td>
+            </tr>
+            <tr class="addition">
+               <td>207</td>
+               <td colspan="2">erythrocyte<span class="subclass"> SubClassOf </span>erythroid lineage cell. <br><i>New Terms: erythroid lineage cell</i></td>
+            </tr>
+            <tr class="addition">
+               <td>206</td>
+               <td colspan="2">erythroid progenitor cell<span class="subclass"> SubClassOf </span>erythroid lineage cell. <br><i>New Terms: erythroid lineage cell</i></td>
+            </tr>
+            <tr class="addition">
+               <td>230</td>
+               <td colspan="2">facial neural processing<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>221</td>
+               <td colspan="2">frontal theta oscillation measurement<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>228</td>
+               <td colspan="2">intra cranial volume<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>229</td>
+               <td colspan="2">lentiform nucleus measurement<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>227</td>
+               <td colspan="2">memory performance<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>213</td>
+               <td colspan="2">neuroimaging measurement<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>212</td>
+               <td colspan="2">neuropsychological test<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>223</td>
+               <td colspan="2">optic disc size measurement<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>219</td>
+               <td colspan="2">p-tau measurement<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>211</td>
+               <td colspan="2">primitive erythroid lineage cell<span class="subclass"> SubClassOf </span>erythroid lineage cell. <br><i>New Terms: erythroid lineage cell</i></td>
+            </tr>
+            <tr class="addition">
+               <td>208</td>
+               <td colspan="2">proerythroblast<span class="subclass"> SubClassOf </span>erythroid lineage cell. <br><i>New Terms: erythroid lineage cell</i></td>
+            </tr>
+            <tr class="addition">
+               <td>216</td>
+               <td colspan="2">progranulin measurement<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>209</td>
+               <td colspan="2">reticulocyte<span class="subclass"> SubClassOf </span>erythroid lineage cell. <br><i>New Terms: erythroid lineage cell</i></td>
+            </tr>
+            <tr class="addition">
+               <td>225</td>
+               <td colspan="2">serotonin measurement<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>218</td>
+               <td colspan="2">t-tau measurement<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>220</td>
+               <td colspan="2">visual cortical surface area measurement<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>226</td>
+               <td colspan="2">volumetric brain MRI<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>217</td>
+               <td colspan="2">white matter integrity<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: nervous system measurement</i></td>
+            </tr>
+         </tbody>
+         <tbody id="aweak" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Retrospective Novel Redundant (16)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="normaladd">Justifications in Ontology 1</th>
+               <th class="addition">Axiom in Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">235</td>
+               <td><i>(1)</i>&nbsp; lymphoma<br><span class="keyword"> or </span>leukaemia cell line<span class="subclass"> SubClassOf </span>cancer cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; CCRFCEM<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">CCRFCEM<span class="subclass"> SubClassOf </span>cancer cell line. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">234</td>
+               <td><i>(1)</i>&nbsp; lymphoma<br><span class="keyword"> or </span>leukaemia cell line<span class="subclass"> SubClassOf </span>cancer cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; CEM/C1<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">CEM/C1<span class="subclass"> SubClassOf </span>cancer cell line. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="2">231</td>
+               <td><i>(1)</i>&nbsp; Homo sapiens cell line<span class="subclass"> SubClassOf </span>cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; IMR-90<span class="subclass"> SubClassOf </span>Homo sapiens cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="2">IMR-90<span class="subclass"> SubClassOf </span>cell line. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td><i>(1)</i>&nbsp; IMR-90<span class="subclass"> SubClassOf </span>fibroblast derived cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; fibroblast derived cell line<span class="subclass"> SubClassOf </span>cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">236</td>
+               <td><i>(1)</i>&nbsp; lymphoma<br><span class="keyword"> or </span>leukaemia cell line<span class="subclass"> SubClassOf </span>cancer cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; JM1<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">JM1<span class="subclass"> SubClassOf </span>cancer cell line. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">237</td>
+               <td><i>(1)</i>&nbsp; lymphoma<br><span class="keyword"> or </span>leukaemia cell line<span class="subclass"> SubClassOf </span>cancer cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; JRT3T35<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">JRT3T35<span class="subclass"> SubClassOf </span>cancer cell line. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">238</td>
+               <td><i>(1)</i>&nbsp; JVM3<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; lymphoma<br><span class="keyword"> or </span>leukaemia cell line<span class="subclass"> SubClassOf </span>cancer cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">JVM3<span class="subclass"> SubClassOf </span>cancer cell line. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">246</td>
+               <td><i>(1)</i>&nbsp; lymphoma<br><span class="keyword"> or </span>leukaemia cell line<span class="subclass"> SubClassOf </span>cancer cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; Jurkat<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">Jurkat<span class="subclass"> SubClassOf </span>cancer cell line. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">239</td>
+               <td><i>(1)</i>&nbsp; MJ<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; lymphoma<br><span class="keyword"> or </span>leukaemia cell line<span class="subclass"> SubClassOf </span>cancer cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">MJ<span class="subclass"> SubClassOf </span>cancer cell line. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">232</td>
+               <td><i>(1)</i>&nbsp; MOLT-4<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; lymphoma<br><span class="keyword"> or </span>leukaemia cell line<span class="subclass"> SubClassOf </span>cancer cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">MOLT-4<span class="subclass"> SubClassOf </span>cancer cell line. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">240</td>
+               <td><i>(1)</i>&nbsp; lymphoma<br><span class="keyword"> or </span>leukaemia cell line<span class="subclass"> SubClassOf </span>cancer cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; MOLT16<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">MOLT16<span class="subclass"> SubClassOf </span>cancer cell line. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">241</td>
+               <td><i>(1)</i>&nbsp; NALM6<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; lymphoma<br><span class="keyword"> or </span>leukaemia cell line<span class="subclass"> SubClassOf </span>cancer cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">NALM6<span class="subclass"> SubClassOf </span>cancer cell line. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="2">233</td>
+               <td><i>(1)</i>&nbsp; fibroblast derived cell line<span class="subclass"> SubClassOf </span>cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; NIH3T3<span class="subclass"> SubClassOf </span>fibroblast derived cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="2">NIH3T3<span class="subclass"> SubClassOf </span>cell line. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td><i>(1)</i>&nbsp; mouse cell line<span class="subclass"> SubClassOf </span>cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; NIH3T3<span class="subclass"> SubClassOf </span>mouse cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">242</td>
+               <td><i>(1)</i>&nbsp; lymphoma<br><span class="keyword"> or </span>leukaemia cell line<span class="subclass"> SubClassOf </span>cancer cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; RCHACV<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">RCHACV<span class="subclass"> SubClassOf </span>cancer cell line. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">243</td>
+               <td><i>(1)</i>&nbsp; SEM<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; lymphoma<br><span class="keyword"> or </span>leukaemia cell line<span class="subclass"> SubClassOf </span>cancer cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">SEM<span class="subclass"> SubClassOf </span>cancer cell line. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">244</td>
+               <td><i>(1)</i>&nbsp; TANOUE<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; lymphoma<br><span class="keyword"> or </span>leukaemia cell line<span class="subclass"> SubClassOf </span>cancer cell line. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">TANOUE<span class="subclass"> SubClassOf </span>cancer cell line. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">245</td>
+               <td><i>(1)</i>&nbsp; endoderm<span class="subclass"> SubClassOf </span>embryonic structure. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; embryonic structure<span class="subclass"> SubClassOf </span>animal developmental tissue. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">endoderm<span class="subclass"> SubClassOf </span>animal developmental tissue. 
+               </td>
+            </tr>
+         </tbody>
+         <tbody id="retdesc" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Retired Descriptions (2)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal" colspan="2">Retired Description Axiom in Ontology 1</th>
+            </tr>
+            <tr class="removal">
+               <td>247</td>
+               <td colspan="2">erythroid lineage cell<span class="subclass"> SubClassOf </span>myeloid cell.<br><i>Retired Terms: erythroid lineage cell</i></td>
+            </tr>
+            <tr class="removal">
+               <td>248</td>
+               <td colspan="2">response to ribavirin<span class="subclass"> SubClassOf </span>response to drug.<br><i>Retired Terms: response to ribavirin</i></td>
+            </tr>
+         </tbody>
+         <tbody id="rem" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Pure Removals with Shared Terms (158)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal" colspan="2">Removal from Ontology 1</th>
+            </tr>
+            <tr class="removal">
+               <td>369</td>
+               <td colspan="2">Acanthamoeba polyphaga mimivirus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>393</td>
+               <td colspan="2">Amapari virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>353</td>
+               <td colspan="2">Arabis mosaic virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>406</td>
+               <td colspan="2">Australian bat lyssavirus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>314</td>
+               <td colspan="2">BK polyomavirus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>352</td>
+               <td colspan="2">Bean pod mottle virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>383</td>
+               <td colspan="2">Bluetongue virus 2<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>324</td>
+               <td colspan="2">Bovine viral diarrhea virus 1<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>261</td>
+               <td colspan="2">CCRFCEM<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>260</td>
+               <td colspan="2">CEM/C1<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>382</td>
+               <td colspan="2">California encephalitis virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>368</td>
+               <td colspan="2">Choristoneura fumiferana MNPV<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>367</td>
+               <td colspan="2">Cocksfoot streak virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>332</td>
+               <td colspan="2">Crimean-Congo hemorrhagic fever virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>359</td>
+               <td colspan="2">Cucumber mosaic virus (strain FNY)<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>358</td>
+               <td colspan="2">Cucumber mosaic virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>404</td>
+               <td colspan="2">Cyanophage S-BnM1<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>346</td>
+               <td colspan="2">Cymbidium ringspot virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>318</td>
+               <td colspan="2">Dengue virus 1<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>319</td>
+               <td colspan="2">Dengue virus 2<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>320</td>
+               <td colspan="2">Dengue virus 3<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>321</td>
+               <td colspan="2">Dengue virus 4<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>392</td>
+               <td colspan="2">Duvenhage virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>401</td>
+               <td colspan="2">European bat lyssavirus 1<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>402</td>
+               <td colspan="2">European bat lyssavirus 2<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>356</td>
+               <td colspan="2">Flock house virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>394</td>
+               <td colspan="2">Guanarito virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>333</td>
+               <td colspan="2">Hantaan virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>307</td>
+               <td colspan="2">Herpesvirus saimiri (strain 11)<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>376</td>
+               <td colspan="2">Human adenovirus 4<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>377</td>
+               <td colspan="2">Human adenovirus 40<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>312</td>
+               <td colspan="2">Human adenovirus 41<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>378</td>
+               <td colspan="2">Human adenovirus 5<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>311</td>
+               <td colspan="2">Human adenovirus 7<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>396</td>
+               <td colspan="2">Human echovirus 18<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>304</td>
+               <td colspan="2">Human herpesvirus 1<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>306</td>
+               <td colspan="2">Human herpesvirus 4<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>305</td>
+               <td colspan="2">Human herpesvirus 5 strain Towne<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>380</td>
+               <td colspan="2">Human herpesvirus 6B<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>384</td>
+               <td colspan="2">Human herpesvirus 8<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>313</td>
+               <td colspan="2">Human papillomavirus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>325</td>
+               <td colspan="2">Human respiratory syncytial virus A strain Long<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>405</td>
+               <td colspan="2">Human respiratory syncytial virus B1<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>256</td>
+               <td colspan="2">IMR-90<span class="subclass"> SubClassOf </span>Homo sapiens cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>255</td>
+               <td colspan="2">IMR-90<span class="subclass"> SubClassOf </span>fibroblast derived cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>390</td>
+               <td colspan="2">Influenza A virus (A/Texas/36/1991(H1N1))<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>328</td>
+               <td colspan="2">Influenza A virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>399</td>
+               <td colspan="2">Ippy virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>309</td>
+               <td colspan="2">Iridovirus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>262</td>
+               <td colspan="2">JM1<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>263</td>
+               <td colspan="2">JRT3T35<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>264</td>
+               <td colspan="2">JVM3<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>337</td>
+               <td colspan="2">Junin virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>275</td>
+               <td colspan="2">Jurkat<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>381</td>
+               <td colspan="2">Kyasanur forest disease virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>329</td>
+               <td colspan="2">La Crosse virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>379</td>
+               <td colspan="2">Lactococcus phage c2<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>391</td>
+               <td colspan="2">Lagos bat virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>389</td>
+               <td colspan="2">Lake Victoria marburgvirus - Angola2005<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>339</td>
+               <td colspan="2">Lassa virus Josiah<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>338</td>
+               <td colspan="2">Lassa virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>340</td>
+               <td colspan="2">Lymphocytic choriomeningitis virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>265</td>
+               <td colspan="2">MJ<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>257</td>
+               <td colspan="2">MOLT-4<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>266</td>
+               <td colspan="2">MOLT16<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>397</td>
+               <td colspan="2">Macacine herpesvirus 3<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>341</td>
+               <td colspan="2">Machupo virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>344</td>
+               <td colspan="2">Melon necrotic spot virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>400</td>
+               <td colspan="2">Mobala virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>360</td>
+               <td colspan="2">Mokola virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>342</td>
+               <td colspan="2">Mopeia virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>315</td>
+               <td colspan="2">Myoviridae<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>267</td>
+               <td colspan="2">NALM6<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>258</td>
+               <td colspan="2">NIH3T3<span class="subclass"> SubClassOf </span>fibroblast derived cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>259</td>
+               <td colspan="2">NIH3T3<span class="subclass"> SubClassOf </span>mouse cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>375</td>
+               <td colspan="2">Ngari virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>361</td>
+               <td colspan="2">Omsk hemorrhagic fever virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>308</td>
+               <td colspan="2">Ovine herpesvirus 2<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>310</td>
+               <td colspan="2">Paramecium bursaria Chlorella virus 1<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>350</td>
+               <td colspan="2">Pepper mild mottle virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>348</td>
+               <td colspan="2">Plum pox virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>316</td>
+               <td colspan="2">Podoviridae<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>347</td>
+               <td colspan="2">Potato virus X<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>388</td>
+               <td colspan="2">Prunus necrotic ringspot virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>334</td>
+               <td colspan="2">Puumala virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>268</td>
+               <td colspan="2">RCHACV<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>327</td>
+               <td colspan="2">Rabies virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>398</td>
+               <td colspan="2">Ralstonia phage RSL1<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>365</td>
+               <td colspan="2">Reston ebolavirus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>330</td>
+               <td colspan="2">Rift Valley fever virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>403</td>
+               <td colspan="2">Rocio virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>370</td>
+               <td colspan="2">SARS coronavirus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>371</td>
+               <td colspan="2">SARS coronavirus Tor2<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>269</td>
+               <td colspan="2">SEM<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>395</td>
+               <td colspan="2">Sabia virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>335</td>
+               <td colspan="2">Seoul virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>345</td>
+               <td colspan="2">Southern bean mosaic virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>366</td>
+               <td colspan="2">Sudan ebolavirus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>386</td>
+               <td colspan="2">Synechococcus phage S-IO17<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>387</td>
+               <td colspan="2">Synechococcus phage S-IO21<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>385</td>
+               <td colspan="2">Synechococcus phage S-IO9<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>373</td>
+               <td colspan="2">Synechococcus phage S-PM2<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>374</td>
+               <td colspan="2">Synechococcus phage S-RSM2<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>270</td>
+               <td colspan="2">TANOUE<span class="subclass"> SubClassOf </span>lymphoma<br><span class="keyword"> or </span>leukaemia cell line.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>343</td>
+               <td colspan="2">Tacaribe virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>351</td>
+               <td colspan="2">Tobacco mosaic virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>357</td>
+               <td colspan="2">Tobacco rattle virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>355</td>
+               <td colspan="2">Tobacco ringspot virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>354</td>
+               <td colspan="2">Tomato ringspot virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>336</td>
+               <td colspan="2">Tomato spotted wilt virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>317</td>
+               <td colspan="2">Tomato yellow leaf curl virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>331</td>
+               <td colspan="2">Toscana virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>349</td>
+               <td colspan="2">Turnip mosaic virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>303</td>
+               <td colspan="2">Vaccinia virus Lister<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>326</td>
+               <td colspan="2">Vesicular stomatitis Indiana virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>363</td>
+               <td colspan="2">Watermelon mosaic virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>322</td>
+               <td colspan="2">West Nile virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>323</td>
+               <td colspan="2">Yellow fever virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>372</td>
+               <td colspan="2">Youcai mosaic virus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>362</td>
+               <td colspan="2">Zaire ebolavirus - Gabon (1994-1997)<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>364</td>
+               <td colspan="2">Zaire ebolavirus<span class="subclass"> SubClassOf </span>obsolete_Viruses.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>250</td>
+               <td colspan="2">acute lymphoblastic leukemia<span class="subclass"> SubClassOf </span>leukemia.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>282</td>
+               <td colspan="2">brain serotonin transporter measurement<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>291</td>
+               <td colspan="2">caudate nucleus volume<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>293</td>
+               <td colspan="2">cortical thickness<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>272</td>
+               <td colspan="2">endoderm<span class="subclass"> SubClassOf </span>embryonic structure.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>299</td>
+               <td colspan="2">facial neural processing<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>290</td>
+               <td colspan="2">frontal theta oscillation measurement<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>297</td>
+               <td colspan="2">intra cranial volume<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>298</td>
+               <td colspan="2">lentiform nucleus measurement<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>296</td>
+               <td colspan="2">memory performance<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>281</td>
+               <td colspan="2">neuroimaging measurement<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>278</td>
+               <td colspan="2">neuropsychological test<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>279</td>
+               <td colspan="2">obsolete_Machado-Joseph disease<span class="subclass"> SubClassOf </span>nervous system disease.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>302</td>
+               <td colspan="2">obsolete_Viruses<span class="subclass"> SubClassOf </span>organism.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>249</td>
+               <td colspan="2">obsolete_Wilms tumor<span class="subclass"> SubClassOf </span>renal carcinoma.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>283</td>
+               <td colspan="2">obsolete_alanine transaminase measurement<span class="subclass"> SubClassOf </span>liver enzyme measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>274</td>
+               <td colspan="2">obsolete_arrhythmogenic right ventricular cardiomyopathy<span class="subclass"> SubClassOf </span>cardiomyopathy.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>280</td>
+               <td colspan="2">obsolete_central core myopathy<span class="subclass"> SubClassOf </span>myopathy.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>277</td>
+               <td colspan="2">obsolete_cerebral arteriovenous malformation<span class="subclass"> SubClassOf </span>Genetic vascular anomaly.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>276</td>
+               <td colspan="2">obsolete_cerebral arteriovenous malformation<span class="subclass"> SubClassOf </span>nervous system disease.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>251</td>
+               <td colspan="2">obsolete_dorsal mesothoracic disc<span class="subclass"> SubClassOf </span>animal developmental tissue.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>252</td>
+               <td colspan="2">obsolete_familial combined hyperlipidemia<span class="subclass"> SubClassOf </span>genetic disorder.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>284</td>
+               <td colspan="2">obsolete_gamma glutamyl transpeptidase measurement<span class="subclass"> SubClassOf </span>liver enzyme measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>273</td>
+               <td colspan="2">obsolete_primary hyperparathyroidism<span class="subclass"> SubClassOf </span>endocrine system disease.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>300</td>
+               <td colspan="2">obsolete_response to temozolomide<span class="subclass"> SubClassOf </span>response to antineoplastic agent.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>271</td>
+               <td colspan="2">obsolete_supranuclear palsy, progressive<span class="subclass"> SubClassOf </span>nervous system disease.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>292</td>
+               <td colspan="2">optic disc size measurement<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>253</td>
+               <td colspan="2">ovarian carcinoma<span class="subclass"> SubClassOf </span>reproductive system disease.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>254</td>
+               <td colspan="2">ovarian carcinoma<span class="subclass"> SubClassOf </span>urogenital neoplasm.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>288</td>
+               <td colspan="2">p-tau measurement<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>285</td>
+               <td colspan="2">progranulin measurement<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>301</td>
+               <td colspan="2">response to vitamin<span class="subclass"> SubClassOf </span>vitamin measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>294</td>
+               <td colspan="2">serotonin measurement<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>287</td>
+               <td colspan="2">t-tau measurement<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>289</td>
+               <td colspan="2">visual cortical surface area measurement<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>295</td>
+               <td colspan="2">volumetric brain MRI<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>286</td>
+               <td colspan="2">white matter integrity<span class="subclass"> SubClassOf </span>brain measurement.<br></td>
+            </tr>
+         </tbody>
+         <tbody id="remrt" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3"><a name="rem"></a><h4 style="display: inline-block;">Pure Removals with Retired Terms (6)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal" colspan="2">Removal from Ontology 1</th>
+            </tr>
+            <tr class="removal">
+               <td>411</td>
+               <td colspan="2">erythroblast<span class="subclass"> SubClassOf </span>erythroid lineage cell.<br><i>Retired Terms: erythroid lineage cell</i></td>
+            </tr>
+            <tr class="removal">
+               <td>408</td>
+               <td colspan="2">erythrocyte<span class="subclass"> SubClassOf </span>erythroid lineage cell.<br><i>Retired Terms: erythroid lineage cell</i></td>
+            </tr>
+            <tr class="removal">
+               <td>407</td>
+               <td colspan="2">erythroid progenitor cell<span class="subclass"> SubClassOf </span>erythroid lineage cell.<br><i>Retired Terms: erythroid lineage cell</i></td>
+            </tr>
+            <tr class="removal">
+               <td>412</td>
+               <td colspan="2">primitive erythroid lineage cell<span class="subclass"> SubClassOf </span>erythroid lineage cell.<br><i>Retired Terms: erythroid lineage cell</i></td>
+            </tr>
+            <tr class="removal">
+               <td>409</td>
+               <td colspan="2">proerythroblast<span class="subclass"> SubClassOf </span>erythroid lineage cell.<br><i>Retired Terms: erythroid lineage cell</i></td>
+            </tr>
+            <tr class="removal">
+               <td>410</td>
+               <td colspan="2">reticulocyte<span class="subclass"> SubClassOf </span>erythroid lineage cell.<br><i>Retired Terms: erythroid lineage cell</i></td>
+            </tr>
+         </tbody>
+         <tbody id="rst" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Prospective Novel Redundant (20)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal">Axiom in Ontology 1</th>
+               <th class="normalrem">Justifications in Ontology 2</th>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">418</td>
+               <td rowspan="1">D dimer measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; D dimer measurement<span class="subclass"> SubClassOf </span>protein measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; protein measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">426</td>
+               <td rowspan="1">IGFBP-3 measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; IGFBP-3 measurement<span class="subclass"> SubClassOf </span>protein measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; protein measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">431</td>
+               <td rowspan="1">alpha globulin measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; alpha globulin measurement<span class="subclass"> SubClassOf </span>protein measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; protein measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">427</td>
+               <td rowspan="1">beta-amyloid 1-42 measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; beta-amyloid 1-42 measurement<span class="subclass"> SubClassOf </span>protein measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; protein measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">417</td>
+               <td rowspan="1">brain measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; brain measurement<span class="subclass"> SubClassOf </span>nervous system measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; nervous system measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">415</td>
+               <td rowspan="1">erythrocyte count<span class="subclass"> SubClassOf </span>erythrocyte measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; erythrocyte count<span class="subclass"> SubClassOf </span>erythrocyte indices. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; erythrocyte indices<span class="subclass"> SubClassOf </span>erythrocyte measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">414</td>
+               <td rowspan="1">erythrocyte count<span class="subclass"> SubClassOf </span>hematological measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; erythrocyte count<span class="subclass"> SubClassOf </span>erythrocyte indices. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; erythrocyte measurement<span class="subclass"> SubClassOf </span>hematological measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(3)</i>&nbsp; erythrocyte indices<span class="subclass"> SubClassOf </span>erythrocyte measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">416</td>
+               <td rowspan="1">erythrocyte indices<span class="subclass"> SubClassOf </span>hematological measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; erythrocyte measurement<span class="subclass"> SubClassOf </span>hematological measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; erythrocyte indices<span class="subclass"> SubClassOf </span>erythrocyte measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">432</td>
+               <td rowspan="1">erythrocyte measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; hematological measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; erythrocyte measurement<span class="subclass"> SubClassOf </span>hematological measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">424</td>
+               <td rowspan="1">glycoprotein measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; glycoprotein measurement<span class="subclass"> SubClassOf </span>protein measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; protein measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">413</td>
+               <td rowspan="1">invertebrate ganglion<span class="subclass"> SubClassOf </span>nervous system. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; invertebrate ganglion<span class="subclass"> SubClassOf </span>ganglion. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ganglion<span class="subclass"> SubClassOf </span>peripheral nervous system. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; peripheral nervous system<span class="subclass"> SubClassOf </span>nervous system. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">428</td>
+               <td rowspan="1">matrix metalloproteinase measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; matrix metalloproteinase measurement<span class="subclass"> SubClassOf </span>protein measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; protein measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">421</td>
+               <td rowspan="1">mean corpuscular hemoglobin<span class="subclass"> SubClassOf </span>hematological measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; mean corpuscular hemoglobin<span class="subclass"> SubClassOf </span>erythrocyte indices. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; erythrocyte measurement<span class="subclass"> SubClassOf </span>hematological measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(3)</i>&nbsp; erythrocyte indices<span class="subclass"> SubClassOf </span>erythrocyte measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">422</td>
+               <td rowspan="1">mean corpuscular hemoglobin concentration<span class="subclass"> SubClassOf </span>hematological measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; mean corpuscular hemoglobin concentration<span class="subclass"> SubClassOf </span>erythrocyte indices. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; erythrocyte measurement<span class="subclass"> SubClassOf </span>hematological measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(3)</i>&nbsp; erythrocyte indices<span class="subclass"> SubClassOf </span>erythrocyte measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">420</td>
+               <td rowspan="1">mean corpuscular volume<span class="subclass"> SubClassOf </span>erythrocyte measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; mean corpuscular volume<span class="subclass"> SubClassOf </span>erythrocyte indices. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; erythrocyte indices<span class="subclass"> SubClassOf </span>erythrocyte measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">419</td>
+               <td rowspan="1">mean corpuscular volume<span class="subclass"> SubClassOf </span>hematological measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; mean corpuscular volume<span class="subclass"> SubClassOf </span>erythrocyte indices. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; erythrocyte measurement<span class="subclass"> SubClassOf </span>hematological measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(3)</i>&nbsp; erythrocyte indices<span class="subclass"> SubClassOf </span>erythrocyte measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">430</td>
+               <td rowspan="1">plasminogen activator inhibitor 1 measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; protein measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; plasminogen activator inhibitor 1 measurement<span class="subclass"> SubClassOf </span>protein measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">423</td>
+               <td rowspan="1">serum albumin measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; serum albumin measurement<span class="subclass"> SubClassOf </span>protein measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; protein measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">425</td>
+               <td rowspan="1">serum non-albumin protein measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; serum non-albumin protein measurement<span class="subclass"> SubClassOf </span>protein measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; protein measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">429</td>
+               <td rowspan="1">tissue plasminogen activator measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; tissue plasminogen activator measurement<span class="subclass"> SubClassOf </span>protein measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; protein measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+         </tbody>
+         <tr class="withoutstyle">
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      <div id="shared" style="display:none" class="footnote">Shared axiom between Ontology 1 and 2.</div>
+   </body>
+</html>

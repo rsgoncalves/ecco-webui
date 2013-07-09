@@ -62,9 +62,10 @@
 	<div class="box">
 		<small>
 			<i>ecco</i> accepts ontologies in RDF/XML, OWL/XML, Functional, Manchester, OBO, or KRSS syntaxes.<br/><br/>
-			Imported ontologies must have an accessible IRI, i.e., if an imported ontology is in the local file<br/>
+			Imported ontologies must have an accessible IRI, e.g., if an imported ontology is in the local file<br/>
 			system, it should have an IRI such as: "file:/users/me/ontologies/importedOntology.owl".<br/><br/>
-			Get the latest desktop version of <i>ecco</i> from <a href="https://github.com/rsgoncalves/ecco" target="_blank">here</a>.
+			Get the latest desktop version of <i>ecco</i> from <a href="https://github.com/rsgoncalves/ecco" target="_blank">here</a>. 
+			Code for this web app is hosted <a href="https://github.com/rsgoncalves/ecco-webui" target="_blank">here</a>.
 		</small>
 		<p>
 			<small>Powered by <a href="http://owlapi.sourceforge.net/" target="_blank">The OWL API</a> 

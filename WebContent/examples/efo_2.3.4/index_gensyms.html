@@ -1,0 +1,2166 @@
+<html xmlns:ecco="http://owl.cs.manchester.ac.uk/diff">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ecco</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/reveal.css"><script type="text/javascript" src="js/jquery-1.4.4.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery.checkboxtree.js"></script><script type="text/javascript" src="js/jquery.reveal.js"></script><script type="text/javascript" src="js/jscript.js"></script></head>
+   <body>
+      <h1><br></h1>
+      				[<a href="index.jsp">Back Home</a>]
+      				
+      <form action="getXml" method="post" class="inl">
+         						[<a id="top3" target="_blank" href="EccoChangeSet_gensyms.xml">Source XML</a>]
+         					
+      </form><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp;
+      				[<a id="top1" href="javascript:;" onClick="showAll();$('#tree1').checkboxTree('expandAll');$('#tree2').checkboxTree('expandAll')">Show All</a> | 
+      				<a id="top2" href="javascript:;" onClick="hideAll();$('#tree1').checkboxTree('collapseAll');$('#tree2').checkboxTree('collapseAll');">Hide All</a>] 
+      				[<a id="genViewPerml" href="#" onclick="setPermalink();">Generate View Permalink</a>]
+      				
+      <div id="view-plink-modal" class="reveal-modal">
+         <h3>view-permalink</h3><textarea id="view-plink" rows="3" cols="60" readonly="true" style="resize: none;"></textarea><br>
+         					[<a href="javascript:;" onclick="select_all('view-plink');">Select all</a>]
+         					<a class="close-reveal-modal">x</a></div><br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="e1f2cc95-6151-4214-9482-beba12d3e941-gs"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
+      <table width="70%" style="table-layout:fixed;">
+         <tr>
+            <th class="topright"><input type="checkbox" name="removals" onClick="toggleGroup('removals')">  
+               <h3 style="display:inline;">Removals (186)</h3>
+            </th>
+            <th class="topleft"><input type="checkbox" name="additions" onClick="toggleGroup('additions')">  
+               <h3 style="display:inline;">Additions (246)</h3>
+            </th>
+         </tr>
+         <tr>
+            <td class="topright">
+               <ul id="tree1">
+                  <li>  <input type="checkbox" name="effRemsTrigger" onClick="toggleChanges('effRems','effRemsTrigger')">  
+                     <h4 style="display:inline;">Effectual (166)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, and are not entailed by Ontology 2');"><ul>
+                        <li>  Weakenings (0)</li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li id="retdesctrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effRems" onClick="toggleDiv('retdesc');">  <a href="#retdesc">Retired Descriptions (2)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing retired terms, i.e., terms that no longer exist in Ontology 2');"></li>
+                        <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('rem','remrt');">  <b>Pure Removals (164)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 2; typically related to hierachy changes');"><ul style="display:none">
+                              <li id="remtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('rem');">  <a href="#rem">With Shared Terms (158)</a></li>
+                              <li id="remrttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('remrt');">  <a href="#remrt">With Retired Terms (6)</a></li>
+                           </ul>
+                        </li><br></ul>
+                  </li><br><li>  <input type="checkbox" name="ineffRemsTrigger" onClick="toggleChanges('ineffRems','ineffRemsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (20)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, but are entailed by Ontology 2, i.e., that have been removed but are still entailed');"><ul>
+                        <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('ravred','rst','rpsnovred');">  <b>Prospective Redundancy (20)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 1 for which there are more constraining related axioms in Ontology 2');"><ul style="display:none">
+                              <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Reshuffle (0)
+                              </li>
+                              <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst','rpsnovred');">  <b>Retired Prospective Redundancy (20)</b><b id="t1"></b>  
+                                 <ul style="display:none">
+                                    <li id="rsttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst');">  <a href="#rst">Novel (20)</a></li>
+                                    <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pseudo Novel (0)
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+            <td class="topleft" style="vertical-align:top">
+               <ul id="tree2">
+                  <li>  <input type="checkbox" name="effAddsTrigger" onClick="toggleChanges('effAdds','effAddsTrigger')">  
+                     <h4 style="display:inline;">Effectual (230)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, and are not entailed by Ontology 1');"><ul>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Strengthenings (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li id="newdesctrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('newdesc');">  <a href="#newdesc">New Descriptions (53)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing newly created terms, i.e., terms that did not exist in Ontology 1');"></li>
+                        <li>  <input type="checkbox" name="effAdds" onClick="toggleDiv('add','addnt');">  <b>Pure Additions (177)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 1; typically related to hierachy changes');"><ul style="display:none">
+                              <li id="addtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('add');">  <a href="#add">With Shared Terms (152)</a></li>
+                              <li id="addnttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('addnt');">  <a href="#addnt">With New Terms (25)</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li><br><li>  <input type="checkbox" name="ineffAddsTrigger" onClick="toggleChanges('ineffAdds','ineffAddsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (16)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, but are entailed by Ontology 1, i.e., that have been added but were already entailed');"><ul>
+                        <li>  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aavred','apseudopred','aweak');">  <b>Retrospective Redundancy (16)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 2 for which there are more constraining related axioms in Ontology 1');"><ul style="display:none">
+                              <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Reshuffle (0)
+                              </li>
+                              <li>  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak','apseudopred');">  <b>New Retrospective Redundancy (16)</b>  
+                                 <ul style="display:none">
+                                    <li id="aweaktrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak');">  <a href="#aweak">Novel (16)</a></li>
+                                    <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pseudo Novel (0)
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td class="topright">[<a href="javascript:void(0);" id="tree1-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree1-collapseAll">Collapse All</a>]
+            </td>
+            <td class="topleft">[<a href="javascript:void(0);" id="tree2-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree2-collapseAll">Collapse All</a>]
+            </td>
+         </tr>
+      </table>
+      <table width="100%" style="table-layout:fixed;">
+         <colgroup>
+            <col>
+            <col width="47.5%">
+            <col width="47.5%">
+         </colgroup>
+         <tbody id="newdesc" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">New Descriptions (53)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">New Description Axiom in Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td>16</td>
+               <td colspan="2">AEV1<span class="subclass"> SubClassOf </span>BY9. <br><i>New Terms: AEV1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>49</td>
+               <td colspan="2">AQX9<span class="subclass"> SubClassOf </span>NX8. <br><i>New Terms: AQX9</i></td>
+            </tr>
+            <tr class="addition">
+               <td>7</td>
+               <td colspan="2">ASN8<span class="subclass"> SubClassOf </span>QQ6. <br><i>New Terms: ASN8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>5</td>
+               <td colspan="2">ASR7<span class="subclass"> SubClassOf </span>RI8. <br><i>New Terms: ASR7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>6</td>
+               <td colspan="2">ASS1<span class="subclass"> SubClassOf </span>RI8. <br><i>New Terms: ASS1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>52</td>
+               <td colspan="2">AUA3<span class="subclass"> SubClassOf </span>YU1. <br><i>New Terms: AUA3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>1</td>
+               <td colspan="2">AUU7<span class="subclass"> SubClassOf </span>ADD7. <br><i>New Terms: AUU7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>8</td>
+               <td colspan="2">AUW3<span class="subclass"> SubClassOf </span>PJ1. <br><i>New Terms: AUW3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>2</td>
+               <td colspan="2">AUZ2<span class="subclass"> SubClassOf </span>TW2. <br><i>New Terms: AUZ2</i></td>
+            </tr>
+            <tr class="addition">
+               <td>19</td>
+               <td colspan="2">AVG8<span class="subclass"> SubClassOf </span>AUA3. <br><i>New Terms: AUA3, AVG8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>18</td>
+               <td colspan="2">AVH1<span class="subclass"> SubClassOf </span>AVH3. <br><i>New Terms: AVH1, AVH3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>17</td>
+               <td colspan="2">AVH3<span class="subclass"> SubClassOf </span>YU1. <br><i>New Terms: AVH3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>44</td>
+               <td colspan="2">AVL6<span class="subclass"> SubClassOf </span>AVS8. <br><i>New Terms: AVS8, AVL6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>45</td>
+               <td colspan="2">AVL7<span class="subclass"> SubClassOf </span>AVS8. <br><i>New Terms: AVS8, AVL7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>42</td>
+               <td colspan="2">AVL8<span class="subclass"> SubClassOf </span>AVS8. <br><i>New Terms: AVS8, AVL8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>43</td>
+               <td colspan="2">AVM1<span class="subclass"> SubClassOf </span>AVM3. <br><i>New Terms: AVM1, AVM3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>48</td>
+               <td colspan="2">AVM2<span class="subclass"> SubClassOf </span>AVS8. <br><i>New Terms: AVS8, AVM2</i></td>
+            </tr>
+            <tr class="addition">
+               <td>46</td>
+               <td colspan="2">AVM3<span class="subclass"> SubClassOf </span>AVS8. <br><i>New Terms: AVS8, AVM3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>47</td>
+               <td colspan="2">AVM4<span class="subclass"> SubClassOf </span>AVS8. <br><i>New Terms: AVS8, AVM4</i></td>
+            </tr>
+            <tr class="addition">
+               <td>9</td>
+               <td colspan="2">AVM7<span class="subclass"> SubClassOf </span>PJ1. <br><i>New Terms: AVM7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>29</td>
+               <td colspan="2">AVO2<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: AVO2</i></td>
+            </tr>
+            <tr class="addition">
+               <td>27</td>
+               <td colspan="2">AVO4<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: AVO4</i></td>
+            </tr>
+            <tr class="addition">
+               <td>28</td>
+               <td colspan="2">AVO6<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: AVO6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>25</td>
+               <td colspan="2">AVO8<span class="subclass"> SubClassOf </span>AKU6. <br><i>New Terms: AVO8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>24</td>
+               <td colspan="2">AVO8<span class="subclass"> SubClassOf </span>QE8. <br><i>New Terms: AVO8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>26</td>
+               <td colspan="2">AVP1<span class="subclass"> SubClassOf </span>YA3. <br><i>New Terms: AVP1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>22</td>
+               <td colspan="2">AVP4<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: AVP4</i></td>
+            </tr>
+            <tr class="addition">
+               <td>23</td>
+               <td colspan="2">AVP5<span class="subclass"> SubClassOf </span>AKU6. <br><i>New Terms: AVP5</i></td>
+            </tr>
+            <tr class="addition">
+               <td>20</td>
+               <td colspan="2">AVP6<span class="subclass"> SubClassOf </span>AOB7. <br><i>New Terms: AVP6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>21</td>
+               <td colspan="2">AVP7<span class="subclass"> SubClassOf </span>HU2. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>31</td>
+               <td colspan="2">AVP8<span class="subclass"> SubClassOf </span>AVQ1. <br><i>New Terms: AVP8, AVQ1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>30</td>
+               <td colspan="2">AVQ1<span class="subclass"> SubClassOf </span>TD1. <br><i>New Terms: AVQ1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>36</td>
+               <td colspan="2">AVR5<span class="subclass"> SubClassOf </span>TD1. <br><i>New Terms: AVR5</i></td>
+            </tr>
+            <tr class="addition">
+               <td>37</td>
+               <td colspan="2">AVR7<span class="subclass"> SubClassOf </span>AVR5. <br><i>New Terms: AVR5, AVR7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>38</td>
+               <td colspan="2">AVS1<span class="subclass"> SubClassOf </span>AVQ1. <br><i>New Terms: AVQ1, AVS1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>32</td>
+               <td colspan="2">AVS2<span class="subclass"> SubClassOf </span>AVP8. <br><i>New Terms: AVP8, AVS2</i></td>
+            </tr>
+            <tr class="addition">
+               <td>33</td>
+               <td colspan="2">AVS4<span class="subclass"> SubClassOf </span>AVP8. <br><i>New Terms: AVP8, AVS4</i></td>
+            </tr>
+            <tr class="addition">
+               <td>34</td>
+               <td colspan="2">AVS5<span class="subclass"> SubClassOf </span>AVP8. <br><i>New Terms: AVP8, AVS5</i></td>
+            </tr>
+            <tr class="addition">
+               <td>35</td>
+               <td colspan="2">AVS6<span class="subclass"> SubClassOf </span>AVP8. <br><i>New Terms: AVP8, AVS6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>39</td>
+               <td colspan="2">AVS7<span class="subclass"> SubClassOf </span>AVS1. <br><i>New Terms: AVS7, AVS1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>41</td>
+               <td colspan="2">AVS8<span class="subclass"> SubClassOf </span>AVQ1. <br><i>New Terms: AVQ1, AVS8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>40</td>
+               <td colspan="2">AVT1<span class="subclass"> SubClassOf </span>AVS1. <br><i>New Terms: AVT1, AVS1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>53</td>
+               <td colspan="2">AWC3<span class="subclass"> SubClassOf </span>UP7. <br><i>New Terms: AWC3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>12</td>
+               <td colspan="2">AXK3<span class="subclass"> SubClassOf </span>YT4. <br><i>New Terms: AXK3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>13</td>
+               <td colspan="2">AXR3<span class="subclass"> SubClassOf </span>AMY9. <br><i>New Terms: AXR3</i></td>
+            </tr>
+            <tr class="addition">
+               <td>4</td>
+               <td colspan="2">AYH6<span class="subclass"> SubClassOf </span>QQ8. <br><i>New Terms: AYH6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>14</td>
+               <td colspan="2">EZ6<span class="subclass"> SubClassOf </span>RL8. <br><i>New Terms: EZ6</i></td>
+            </tr>
+            <tr class="addition">
+               <td>15</td>
+               <td colspan="2">HY8<span class="subclass"> SubClassOf </span>OQ1. <br><i>New Terms: HY8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>3</td>
+               <td colspan="2">MA4<span class="subclass"> SubClassOf </span>TW2. <br><i>New Terms: MA4</i></td>
+            </tr>
+            <tr class="addition">
+               <td>50</td>
+               <td colspan="2">NE1<span class="subclass"> SubClassOf </span>ALT4. <br><i>New Terms: NE1</i></td>
+            </tr>
+            <tr class="addition">
+               <td>10</td>
+               <td colspan="2">QW4<span class="subclass"> SubClassOf </span>BAM2. <br><i>New Terms: QW4</i></td>
+            </tr>
+            <tr class="addition">
+               <td>51</td>
+               <td colspan="2">YH5<span class="subclass"> SubClassOf </span>IH6. <br><i>New Terms: YH5</i></td>
+            </tr>
+            <tr class="addition">
+               <td>11</td>
+               <td colspan="2">ZQ6<span class="subclass"> SubClassOf </span>UO1. <br><i>New Terms: ZQ6</i></td>
+            </tr>
+         </tbody>
+         <tbody id="add" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Pure Additions with Shared Terms (152)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">Addition to Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td>176</td>
+               <td colspan="2">AAF9<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>82</td>
+               <td colspan="2">AAJ4<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>55</td>
+               <td colspan="2">AAO1<span class="subclass"> SubClassOf </span>QR1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>56</td>
+               <td colspan="2">AAQ2<span class="subclass"> SubClassOf </span>GG7. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>80</td>
+               <td colspan="2">ABL6<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>81</td>
+               <td colspan="2">ABW3<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>169</td>
+               <td colspan="2">ACL1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>170</td>
+               <td colspan="2">ACL7<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>171</td>
+               <td colspan="2">ACM1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>57</td>
+               <td colspan="2">ACP1<span class="subclass"> SubClassOf </span>GG7. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>183</td>
+               <td colspan="2">ADK1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>181</td>
+               <td colspan="2">AEG9<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>197</td>
+               <td colspan="2">AER2<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>160</td>
+               <td colspan="2">AFZ4<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>192</td>
+               <td colspan="2">AGF5<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>193</td>
+               <td colspan="2">AGF6<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>202</td>
+               <td colspan="2">AGH4<span class="subclass"> SubClassOf </span>PG6. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>69</td>
+               <td colspan="2">AGJ7<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>172</td>
+               <td colspan="2">AHE4<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>151</td>
+               <td colspan="2">AHW1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>152</td>
+               <td colspan="2">AHW4<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>76</td>
+               <td colspan="2">AIA4<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>79</td>
+               <td colspan="2">AIC9<span class="subclass"> SubClassOf </span>GG7. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>78</td>
+               <td colspan="2">AID6<span class="subclass"> SubClassOf </span>GG7. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>77</td>
+               <td colspan="2">AID8<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>165</td>
+               <td colspan="2">AIF3<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>150</td>
+               <td colspan="2">AIM1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>149</td>
+               <td colspan="2">AIM9<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>70</td>
+               <td colspan="2">AIN5<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>74</td>
+               <td colspan="2">AIP2<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>71</td>
+               <td colspan="2">AIQ3<span class="subclass"> SubClassOf </span>ALL2. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>72</td>
+               <td colspan="2">AIQ4<span class="subclass"> SubClassOf </span>ALL2. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>73</td>
+               <td colspan="2">AIQ6<span class="subclass"> SubClassOf </span>ALL2. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>75</td>
+               <td colspan="2">AIR6<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>142</td>
+               <td colspan="2">AIW3<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>143</td>
+               <td colspan="2">AIW6<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>144</td>
+               <td colspan="2">AIX9<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>141</td>
+               <td colspan="2">AJB2<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>173</td>
+               <td colspan="2">AJE6<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>146</td>
+               <td colspan="2">AJF2<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>148</td>
+               <td colspan="2">AJG9<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>147</td>
+               <td colspan="2">AJH1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>145</td>
+               <td colspan="2">AJI9<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>174</td>
+               <td colspan="2">AJM8<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>153</td>
+               <td colspan="2">AKP7<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>154</td>
+               <td colspan="2">AKQ1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>68</td>
+               <td colspan="2">ALL1<span class="subclass"> SubClassOf </span>ALL2. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>191</td>
+               <td colspan="2">ALS1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>162</td>
+               <td colspan="2">ALS8<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>189</td>
+               <td colspan="2">ALY1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>158</td>
+               <td colspan="2">ANE8<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>157</td>
+               <td colspan="2">ANF1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>159</td>
+               <td colspan="2">ANG1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>196</td>
+               <td colspan="2">ANH8<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>167</td>
+               <td colspan="2">ANL2<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>66</td>
+               <td colspan="2">ANT7<span class="subclass"> SubClassOf </span>GG7. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>67</td>
+               <td colspan="2">ANV9<span class="subclass"> SubClassOf </span>GG7. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>201</td>
+               <td colspan="2">AO2<span class="subclass"> SubClassOf </span>HA1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>200</td>
+               <td colspan="2">APQ6<span class="subclass"> SubClassOf </span>AFK2. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>205</td>
+               <td colspan="2">ARS1<span class="subclass"> SubClassOf </span>XA5. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>59</td>
+               <td colspan="2">AS7<span class="subclass"> SubClassOf </span>LH1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>126</td>
+               <td colspan="2">ASF6<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>122</td>
+               <td colspan="2">ASJ4<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>125</td>
+               <td colspan="2">ASK3<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>124</td>
+               <td colspan="2">ASK4<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>123</td>
+               <td colspan="2">ASK6<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>131</td>
+               <td colspan="2">ASM6<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>133</td>
+               <td colspan="2">ASM8<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>132</td>
+               <td colspan="2">ASM9<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>135</td>
+               <td colspan="2">ASN1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>134</td>
+               <td colspan="2">ASN2<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>130</td>
+               <td colspan="2">ASN4<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>129</td>
+               <td colspan="2">ASN5<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>127</td>
+               <td colspan="2">ASN9<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>128</td>
+               <td colspan="2">ASO1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>163</td>
+               <td colspan="2">ASR5<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>136</td>
+               <td colspan="2">ATK3<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>164</td>
+               <td colspan="2">ATV3<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>179</td>
+               <td colspan="2">ATX6<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>180</td>
+               <td colspan="2">ATX8<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>178</td>
+               <td colspan="2">ATZ8<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>96</td>
+               <td colspan="2">AUD1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>97</td>
+               <td colspan="2">AUM6<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>121</td>
+               <td colspan="2">AUO5<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>95</td>
+               <td colspan="2">AUU8<span class="subclass"> SubClassOf </span>GG7. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>93</td>
+               <td colspan="2">AVE2<span class="subclass"> SubClassOf </span>GG7. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>94</td>
+               <td colspan="2">AVF2<span class="subclass"> SubClassOf </span>AIK8. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>98</td>
+               <td colspan="2">AVH8<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>100</td>
+               <td colspan="2">AVK3<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>99</td>
+               <td colspan="2">AVK8<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>101</td>
+               <td colspan="2">AVX7<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>92</td>
+               <td colspan="2">AWL2<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>168</td>
+               <td colspan="2">AWO2<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>120</td>
+               <td colspan="2">AZO7<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>119</td>
+               <td colspan="2">AZP3<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>118</td>
+               <td colspan="2">AZW6<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>139</td>
+               <td colspan="2">BBA8<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>138</td>
+               <td colspan="2">BBB1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>140</td>
+               <td colspan="2">BBL1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>161</td>
+               <td colspan="2">BBX1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>166</td>
+               <td colspan="2">BCH1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>111</td>
+               <td colspan="2">BCI1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>114</td>
+               <td colspan="2">BCI5<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>113</td>
+               <td colspan="2">BCI8<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>112</td>
+               <td colspan="2">BCJ3<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>115</td>
+               <td colspan="2">BCJ5<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>116</td>
+               <td colspan="2">BCJ7<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>117</td>
+               <td colspan="2">BCK5<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>177</td>
+               <td colspan="2">E9<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>54</td>
+               <td colspan="2">FI2<span class="subclass"> SubClassOf </span>GG7. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>188</td>
+               <td colspan="2">GL7<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>182</td>
+               <td colspan="2">GM1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>199</td>
+               <td colspan="2">GQ9<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>107</td>
+               <td colspan="2">GS8<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>184</td>
+               <td colspan="2">GX6<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>185</td>
+               <td colspan="2">GX7<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>62</td>
+               <td colspan="2">IO8<span class="subclass"> SubClassOf </span>GG7. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>106</td>
+               <td colspan="2">IQ2<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>103</td>
+               <td colspan="2">IX8<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>104</td>
+               <td colspan="2">JA5<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>105</td>
+               <td colspan="2">JC9<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>102</td>
+               <td colspan="2">KN7<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>64</td>
+               <td colspan="2">KR9<span class="subclass"> SubClassOf </span>GG7. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>63</td>
+               <td colspan="2">KS9<span class="subclass"> SubClassOf </span>GG7. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>110</td>
+               <td colspan="2">KZ4<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>137</td>
+               <td colspan="2">LM3<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>109</td>
+               <td colspan="2">NB3<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>198</td>
+               <td colspan="2">NG1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>186</td>
+               <td colspan="2">NJ5<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>187</td>
+               <td colspan="2">NJ6<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>108</td>
+               <td colspan="2">ON4<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>155</td>
+               <td colspan="2">OT3<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>203</td>
+               <td colspan="2">PD6<span class="subclass"> SubClassOf </span>AFK2. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>204</td>
+               <td colspan="2">QD8<span class="subclass"> SubClassOf </span>OK8. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>60</td>
+               <td colspan="2">RJ8<span class="subclass"> SubClassOf </span>SF3. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>61</td>
+               <td colspan="2">RJ9<span class="subclass"> SubClassOf </span>SF3. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>58</td>
+               <td colspan="2">SS8<span class="subclass"> SubClassOf </span>SV1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>194</td>
+               <td colspan="2">SY2<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>195</td>
+               <td colspan="2">SY5<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>190</td>
+               <td colspan="2">TE5<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>65</td>
+               <td colspan="2">TJ9<span class="subclass"> SubClassOf </span>GG7. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>90</td>
+               <td colspan="2">XO6<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>89</td>
+               <td colspan="2">XO7<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>91</td>
+               <td colspan="2">XP2<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>156</td>
+               <td colspan="2">XQ1<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>83</td>
+               <td colspan="2">YY5<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>84</td>
+               <td colspan="2">YZ2<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>85</td>
+               <td colspan="2">YZ5<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>88</td>
+               <td colspan="2">ZG6<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>87</td>
+               <td colspan="2">ZG8<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>86</td>
+               <td colspan="2">ZH2<span class="subclass"> SubClassOf </span>YY4. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>175</td>
+               <td colspan="2">ZO9<span class="subclass"> SubClassOf </span>AUF1. <br></td>
+            </tr>
+         </tbody>
+         <tbody id="addnt" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3"><a name="add"></a><h4 style="display: inline-block;">Pure Additions with New Terms (25)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">Addition to Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td>216</td>
+               <td colspan="2">ABL5<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>217</td>
+               <td colspan="2">ABS3<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>230</td>
+               <td colspan="2">AEN9<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>229</td>
+               <td colspan="2">AEO2<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>228</td>
+               <td colspan="2">AFE5<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>225</td>
+               <td colspan="2">AFT8<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>224</td>
+               <td colspan="2">AFU8<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>226</td>
+               <td colspan="2">AGA4<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>227</td>
+               <td colspan="2">AGC5<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>214</td>
+               <td colspan="2">AGG3<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>215</td>
+               <td colspan="2">AIA3<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>213</td>
+               <td colspan="2">ALG9<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>210</td>
+               <td colspan="2">OP8<span class="subclass"> SubClassOf </span>HY8. <br><i>New Terms: HY8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>209</td>
+               <td colspan="2">RJ5<span class="subclass"> SubClassOf </span>HY8. <br><i>New Terms: HY8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>208</td>
+               <td colspan="2">RM3<span class="subclass"> SubClassOf </span>HY8. <br><i>New Terms: HY8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>211</td>
+               <td colspan="2">TD8<span class="subclass"> SubClassOf </span>HY8. <br><i>New Terms: HY8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>212</td>
+               <td colspan="2">TM2<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>207</td>
+               <td colspan="2">VD9<span class="subclass"> SubClassOf </span>HY8. <br><i>New Terms: HY8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>223</td>
+               <td colspan="2">XL9<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>222</td>
+               <td colspan="2">XM2<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>221</td>
+               <td colspan="2">XP7<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>206</td>
+               <td colspan="2">YG4<span class="subclass"> SubClassOf </span>HY8. <br><i>New Terms: HY8</i></td>
+            </tr>
+            <tr class="addition">
+               <td>219</td>
+               <td colspan="2">ZH7<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>218</td>
+               <td colspan="2">ZI2<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+            <tr class="addition">
+               <td>220</td>
+               <td colspan="2">ZK9<span class="subclass"> SubClassOf </span>AVP7. <br><i>New Terms: AVP7</i></td>
+            </tr>
+         </tbody>
+         <tbody id="aweak" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Retrospective Novel Redundant (16)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="normaladd">Justifications in Ontology 1</th>
+               <th class="addition">Axiom in Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">235</td>
+               <td><i>(1)</i>&nbsp; QA8<span class="subclass"> SubClassOf </span>TW2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; BV4<span class="subclass"> SubClassOf </span>QA8. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">BV4<span class="subclass"> SubClassOf </span>TW2. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">240</td>
+               <td><i>(1)</i>&nbsp; QA8<span class="subclass"> SubClassOf </span>TW2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; DB8<span class="subclass"> SubClassOf </span>QA8. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">DB8<span class="subclass"> SubClassOf </span>TW2. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">239</td>
+               <td><i>(1)</i>&nbsp; DC3<span class="subclass"> SubClassOf </span>QA8. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; QA8<span class="subclass"> SubClassOf </span>TW2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">DC3<span class="subclass"> SubClassOf </span>TW2. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">241</td>
+               <td><i>(1)</i>&nbsp; DK7<span class="subclass"> SubClassOf </span>QA8. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; QA8<span class="subclass"> SubClassOf </span>TW2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">DK7<span class="subclass"> SubClassOf </span>TW2. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">237</td>
+               <td><i>(1)</i>&nbsp; QA8<span class="subclass"> SubClassOf </span>TW2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; DN8<span class="subclass"> SubClassOf </span>QA8. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">DN8<span class="subclass"> SubClassOf </span>TW2. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">236</td>
+               <td><i>(1)</i>&nbsp; QA8<span class="subclass"> SubClassOf </span>TW2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; DO1<span class="subclass"> SubClassOf </span>QA8. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">DO1<span class="subclass"> SubClassOf </span>TW2. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">238</td>
+               <td><i>(1)</i>&nbsp; DP2<span class="subclass"> SubClassOf </span>QA8. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; QA8<span class="subclass"> SubClassOf </span>TW2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">DP2<span class="subclass"> SubClassOf </span>TW2. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">244</td>
+               <td><i>(1)</i>&nbsp; EZ1<span class="subclass"> SubClassOf </span>QA8. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; QA8<span class="subclass"> SubClassOf </span>TW2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">EZ1<span class="subclass"> SubClassOf </span>TW2. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">243</td>
+               <td><i>(1)</i>&nbsp; FR9<span class="subclass"> SubClassOf </span>QA8. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; QA8<span class="subclass"> SubClassOf </span>TW2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">FR9<span class="subclass"> SubClassOf </span>TW2. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">242</td>
+               <td><i>(1)</i>&nbsp; QA8<span class="subclass"> SubClassOf </span>TW2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; FT6<span class="subclass"> SubClassOf </span>QA8. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">FT6<span class="subclass"> SubClassOf </span>TW2. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">245</td>
+               <td><i>(1)</i>&nbsp; JB8<span class="subclass"> SubClassOf </span>ABA1. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ABA1<span class="subclass"> SubClassOf </span>QR1. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">JB8<span class="subclass"> SubClassOf </span>QR1. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="2">231</td>
+               <td><i>(1)</i>&nbsp; OM2<span class="subclass"> SubClassOf </span>YT4. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; KY6<span class="subclass"> SubClassOf </span>OM2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="2">KY6<span class="subclass"> SubClassOf </span>YT4. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td><i>(1)</i>&nbsp; KY6<span class="subclass"> SubClassOf </span>X6. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; X6<span class="subclass"> SubClassOf </span>YT4. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">246</td>
+               <td><i>(1)</i>&nbsp; QA8<span class="subclass"> SubClassOf </span>TW2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; NG7<span class="subclass"> SubClassOf </span>QA8. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">NG7<span class="subclass"> SubClassOf </span>TW2. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="2">233</td>
+               <td><i>(1)</i>&nbsp; X6<span class="subclass"> SubClassOf </span>YT4. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; NM6<span class="subclass"> SubClassOf </span>X6. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="2">NM6<span class="subclass"> SubClassOf </span>YT4. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td><i>(1)</i>&nbsp; OM3<span class="subclass"> SubClassOf </span>YT4. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; NM6<span class="subclass"> SubClassOf </span>OM3. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">232</td>
+               <td><i>(1)</i>&nbsp; NM8<span class="subclass"> SubClassOf </span>QA8. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; QA8<span class="subclass"> SubClassOf </span>TW2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+               <td rowspan="1">NM8<span class="subclass"> SubClassOf </span>TW2. 
+               </td>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">234</td>
+               <td><i>(1)</i>&nbsp; QA8<span class="subclass"> SubClassOf </span>TW2. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; UN6<span class="subclass"> SubClassOf </span>QA8. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+               <td rowspan="1">UN6<span class="subclass"> SubClassOf </span>TW2. 
+               </td>
+            </tr>
+         </tbody>
+         <tbody id="retdesc" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Retired Descriptions (2)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal" colspan="2">Retired Description Axiom in Ontology 1</th>
+            </tr>
+            <tr class="removal">
+               <td>248</td>
+               <td colspan="2">AFZ6<span class="subclass"> SubClassOf </span>NX8.<br><i>Retired Terms: AFZ6</i></td>
+            </tr>
+            <tr class="removal">
+               <td>247</td>
+               <td colspan="2">OP7<span class="subclass"> SubClassOf </span>OQ1.<br><i>Retired Terms: OP7</i></td>
+            </tr>
+         </tbody>
+         <tbody id="rem" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Pure Removals with Shared Terms (158)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal" colspan="2">Removal from Ontology 1</th>
+            </tr>
+            <tr class="removal">
+               <td>383</td>
+               <td colspan="2">AAF9<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>251</td>
+               <td colspan="2">AAQ2<span class="subclass"> SubClassOf </span>QR1.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>285</td>
+               <td colspan="2">ABL5<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>286</td>
+               <td colspan="2">ABS3<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>376</td>
+               <td colspan="2">ACL1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>377</td>
+               <td colspan="2">ACL7<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>378</td>
+               <td colspan="2">ACM1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>252</td>
+               <td colspan="2">ACP1<span class="subclass"> SubClassOf </span>ADI7.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>390</td>
+               <td colspan="2">ADK1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>388</td>
+               <td colspan="2">AEG9<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>299</td>
+               <td colspan="2">AEN9<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>298</td>
+               <td colspan="2">AEO2<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>404</td>
+               <td colspan="2">AER2<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>297</td>
+               <td colspan="2">AFE5<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>294</td>
+               <td colspan="2">AFT8<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>293</td>
+               <td colspan="2">AFU8<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>367</td>
+               <td colspan="2">AFZ4<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>295</td>
+               <td colspan="2">AGA4<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>296</td>
+               <td colspan="2">AGC5<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>399</td>
+               <td colspan="2">AGF5<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>400</td>
+               <td colspan="2">AGF6<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>379</td>
+               <td colspan="2">AHE4<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>358</td>
+               <td colspan="2">AHW1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>359</td>
+               <td colspan="2">AHW4<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>282</td>
+               <td colspan="2">AIA3<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>284</td>
+               <td colspan="2">AIC9<span class="subclass"> SubClassOf </span>AID7.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>283</td>
+               <td colspan="2">AID6<span class="subclass"> SubClassOf </span>AID7.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>372</td>
+               <td colspan="2">AIF3<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>357</td>
+               <td colspan="2">AIM1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>356</td>
+               <td colspan="2">AIM9<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>349</td>
+               <td colspan="2">AIW3<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>350</td>
+               <td colspan="2">AIW6<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>351</td>
+               <td colspan="2">AIX9<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>348</td>
+               <td colspan="2">AJB2<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>380</td>
+               <td colspan="2">AJE6<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>353</td>
+               <td colspan="2">AJF2<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>355</td>
+               <td colspan="2">AJG9<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>354</td>
+               <td colspan="2">AJH1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>352</td>
+               <td colspan="2">AJI9<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>381</td>
+               <td colspan="2">AJM8<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>360</td>
+               <td colspan="2">AKP7<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>361</td>
+               <td colspan="2">AKQ1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>281</td>
+               <td colspan="2">ALG9<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>398</td>
+               <td colspan="2">ALS1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>369</td>
+               <td colspan="2">ALS8<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>396</td>
+               <td colspan="2">ALY1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>365</td>
+               <td colspan="2">ANE8<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>364</td>
+               <td colspan="2">ANF1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>366</td>
+               <td colspan="2">ANG1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>403</td>
+               <td colspan="2">ANH8<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>374</td>
+               <td colspan="2">ANL2<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>279</td>
+               <td colspan="2">ANT7<span class="subclass"> SubClassOf </span>AFK2.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>280</td>
+               <td colspan="2">ANV9<span class="subclass"> SubClassOf </span>ANU6.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>333</td>
+               <td colspan="2">ASF6<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>329</td>
+               <td colspan="2">ASJ4<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>332</td>
+               <td colspan="2">ASK3<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>331</td>
+               <td colspan="2">ASK4<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>330</td>
+               <td colspan="2">ASK6<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>338</td>
+               <td colspan="2">ASM6<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>340</td>
+               <td colspan="2">ASM8<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>339</td>
+               <td colspan="2">ASM9<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>342</td>
+               <td colspan="2">ASN1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>341</td>
+               <td colspan="2">ASN2<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>337</td>
+               <td colspan="2">ASN4<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>336</td>
+               <td colspan="2">ASN5<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>334</td>
+               <td colspan="2">ASN9<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>335</td>
+               <td colspan="2">ASO1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>370</td>
+               <td colspan="2">ASR5<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>343</td>
+               <td colspan="2">ATK3<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>371</td>
+               <td colspan="2">ATV3<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>386</td>
+               <td colspan="2">ATX6<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>387</td>
+               <td colspan="2">ATX8<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>385</td>
+               <td colspan="2">ATZ8<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>303</td>
+               <td colspan="2">AUD1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>304</td>
+               <td colspan="2">AUM6<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>328</td>
+               <td colspan="2">AUO5<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>302</td>
+               <td colspan="2">AUU8<span class="subclass"> SubClassOf </span>AHR5.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>300</td>
+               <td colspan="2">AVE2<span class="subclass"> SubClassOf </span>ALT4.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>305</td>
+               <td colspan="2">AVH8<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>307</td>
+               <td colspan="2">AVK3<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>306</td>
+               <td colspan="2">AVK8<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>308</td>
+               <td colspan="2">AVX7<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>375</td>
+               <td colspan="2">AWO2<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>327</td>
+               <td colspan="2">AZO7<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>326</td>
+               <td colspan="2">AZP3<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>325</td>
+               <td colspan="2">AZW6<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>346</td>
+               <td colspan="2">BBA8<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>345</td>
+               <td colspan="2">BBB1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>347</td>
+               <td colspan="2">BBL1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>368</td>
+               <td colspan="2">BBX1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>373</td>
+               <td colspan="2">BCH1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>318</td>
+               <td colspan="2">BCI1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>321</td>
+               <td colspan="2">BCI5<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>320</td>
+               <td colspan="2">BCI8<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>319</td>
+               <td colspan="2">BCJ3<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>322</td>
+               <td colspan="2">BCJ5<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>323</td>
+               <td colspan="2">BCJ7<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>324</td>
+               <td colspan="2">BCK5<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>261</td>
+               <td colspan="2">BV4<span class="subclass"> SubClassOf </span>QA8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>253</td>
+               <td colspan="2">BW5<span class="subclass"> SubClassOf </span>ADK8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>254</td>
+               <td colspan="2">BW5<span class="subclass"> SubClassOf </span>VZ1.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>266</td>
+               <td colspan="2">DB8<span class="subclass"> SubClassOf </span>QA8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>265</td>
+               <td colspan="2">DC3<span class="subclass"> SubClassOf </span>QA8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>267</td>
+               <td colspan="2">DK7<span class="subclass"> SubClassOf </span>QA8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>263</td>
+               <td colspan="2">DN8<span class="subclass"> SubClassOf </span>QA8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>262</td>
+               <td colspan="2">DO1<span class="subclass"> SubClassOf </span>QA8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>264</td>
+               <td colspan="2">DP2<span class="subclass"> SubClassOf </span>QA8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>384</td>
+               <td colspan="2">E9<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>270</td>
+               <td colspan="2">EZ1<span class="subclass"> SubClassOf </span>QA8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>250</td>
+               <td colspan="2">FG2<span class="subclass"> SubClassOf </span>ACV3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>249</td>
+               <td colspan="2">FI2<span class="subclass"> SubClassOf </span>OK8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>269</td>
+               <td colspan="2">FR9<span class="subclass"> SubClassOf </span>QA8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>268</td>
+               <td colspan="2">FT6<span class="subclass"> SubClassOf </span>QA8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>395</td>
+               <td colspan="2">GL7<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>389</td>
+               <td colspan="2">GM1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>406</td>
+               <td colspan="2">GQ9<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>314</td>
+               <td colspan="2">GS8<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>391</td>
+               <td colspan="2">GX6<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>392</td>
+               <td colspan="2">GX7<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>271</td>
+               <td colspan="2">IO8<span class="subclass"> SubClassOf </span>AFK2.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>313</td>
+               <td colspan="2">IQ2<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>310</td>
+               <td colspan="2">IX8<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>311</td>
+               <td colspan="2">JA5<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>272</td>
+               <td colspan="2">JB8<span class="subclass"> SubClassOf </span>ABA1.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>312</td>
+               <td colspan="2">JC9<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>309</td>
+               <td colspan="2">KN7<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>274</td>
+               <td colspan="2">KR9<span class="subclass"> SubClassOf </span>YJ4.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>273</td>
+               <td colspan="2">KS9<span class="subclass"> SubClassOf </span>HA1.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>256</td>
+               <td colspan="2">KY6<span class="subclass"> SubClassOf </span>OM2.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>255</td>
+               <td colspan="2">KY6<span class="subclass"> SubClassOf </span>X6.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>317</td>
+               <td colspan="2">KZ4<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>344</td>
+               <td colspan="2">LM3<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>316</td>
+               <td colspan="2">NB3<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>405</td>
+               <td colspan="2">NG1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>275</td>
+               <td colspan="2">NG7<span class="subclass"> SubClassOf </span>QA8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>393</td>
+               <td colspan="2">NJ5<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>394</td>
+               <td colspan="2">NJ6<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>259</td>
+               <td colspan="2">NM6<span class="subclass"> SubClassOf </span>OM3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>258</td>
+               <td colspan="2">NM6<span class="subclass"> SubClassOf </span>X6.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>257</td>
+               <td colspan="2">NM8<span class="subclass"> SubClassOf </span>QA8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>315</td>
+               <td colspan="2">ON4<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>362</td>
+               <td colspan="2">OT3<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>401</td>
+               <td colspan="2">SY2<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>402</td>
+               <td colspan="2">SY5<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>397</td>
+               <td colspan="2">TE5<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>276</td>
+               <td colspan="2">TJ9<span class="subclass"> SubClassOf </span>AFK2.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>277</td>
+               <td colspan="2">TJ9<span class="subclass"> SubClassOf </span>AXW1.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>278</td>
+               <td colspan="2">TM2<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>260</td>
+               <td colspan="2">UN6<span class="subclass"> SubClassOf </span>QA8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>301</td>
+               <td colspan="2">VA1<span class="subclass"> SubClassOf </span>YZ8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>292</td>
+               <td colspan="2">XL9<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>291</td>
+               <td colspan="2">XM2<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>290</td>
+               <td colspan="2">XP7<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>363</td>
+               <td colspan="2">XQ1<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>288</td>
+               <td colspan="2">ZH7<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>287</td>
+               <td colspan="2">ZI2<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>289</td>
+               <td colspan="2">ZK9<span class="subclass"> SubClassOf </span>AGG3.<br></td>
+            </tr>
+            <tr class="removal">
+               <td>382</td>
+               <td colspan="2">ZO9<span class="subclass"> SubClassOf </span>AUU8.<br></td>
+            </tr>
+         </tbody>
+         <tbody id="remrt" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3"><a name="rem"></a><h4 style="display: inline-block;">Pure Removals with Retired Terms (6)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal" colspan="2">Removal from Ontology 1</th>
+            </tr>
+            <tr class="removal">
+               <td>411</td>
+               <td colspan="2">OP8<span class="subclass"> SubClassOf </span>OP7.<br><i>Retired Terms: OP7</i></td>
+            </tr>
+            <tr class="removal">
+               <td>410</td>
+               <td colspan="2">RJ5<span class="subclass"> SubClassOf </span>OP7.<br><i>Retired Terms: OP7</i></td>
+            </tr>
+            <tr class="removal">
+               <td>409</td>
+               <td colspan="2">RM3<span class="subclass"> SubClassOf </span>OP7.<br><i>Retired Terms: OP7</i></td>
+            </tr>
+            <tr class="removal">
+               <td>412</td>
+               <td colspan="2">TD8<span class="subclass"> SubClassOf </span>OP7.<br><i>Retired Terms: OP7</i></td>
+            </tr>
+            <tr class="removal">
+               <td>408</td>
+               <td colspan="2">VD9<span class="subclass"> SubClassOf </span>OP7.<br><i>Retired Terms: OP7</i></td>
+            </tr>
+            <tr class="removal">
+               <td>407</td>
+               <td colspan="2">YG4<span class="subclass"> SubClassOf </span>OP7.<br><i>Retired Terms: OP7</i></td>
+            </tr>
+         </tbody>
+         <tbody id="rst" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Prospective Novel Redundant (20)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal">Axiom in Ontology 1</th>
+               <th class="normalrem">Justifications in Ontology 2</th>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">426</td>
+               <td rowspan="1">ABL6<span class="subclass"> SubClassOf </span>HU2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; ABL6<span class="subclass"> SubClassOf </span>YY4. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; YY4<span class="subclass"> SubClassOf </span>HU2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">427</td>
+               <td rowspan="1">ABW3<span class="subclass"> SubClassOf </span>HU2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; ABW3<span class="subclass"> SubClassOf </span>YY4. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; YY4<span class="subclass"> SubClassOf </span>HU2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">417</td>
+               <td rowspan="1">AGG3<span class="subclass"> SubClassOf </span>HU2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AGG3<span class="subclass"> SubClassOf </span>AVP7. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; AVP7<span class="subclass"> SubClassOf </span>HU2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">425</td>
+               <td rowspan="1">AIA4<span class="subclass"> SubClassOf </span>HU2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AIA4<span class="subclass"> SubClassOf </span>YY4. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; YY4<span class="subclass"> SubClassOf </span>HU2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">418</td>
+               <td rowspan="1">AIN5<span class="subclass"> SubClassOf </span>HU2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AIN5<span class="subclass"> SubClassOf </span>YY4. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; YY4<span class="subclass"> SubClassOf </span>HU2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">423</td>
+               <td rowspan="1">AIP2<span class="subclass"> SubClassOf </span>HU2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AIP2<span class="subclass"> SubClassOf </span>YY4. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; YY4<span class="subclass"> SubClassOf </span>HU2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">419</td>
+               <td rowspan="1">AIQ3<span class="subclass"> SubClassOf </span>AIK8. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AIQ3<span class="subclass"> SubClassOf </span>ALL2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; AVF2<span class="subclass"> SubClassOf </span>AIK8. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(3)</i>&nbsp; ALL2<span class="subclass"> SubClassOf </span>AVF2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">420</td>
+               <td rowspan="1">AIQ3<span class="subclass"> SubClassOf </span>AVF2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AIQ3<span class="subclass"> SubClassOf </span>ALL2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALL2<span class="subclass"> SubClassOf </span>AVF2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">421</td>
+               <td rowspan="1">AIQ4<span class="subclass"> SubClassOf </span>AIK8. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AIQ4<span class="subclass"> SubClassOf </span>ALL2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; AVF2<span class="subclass"> SubClassOf </span>AIK8. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(3)</i>&nbsp; ALL2<span class="subclass"> SubClassOf </span>AVF2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">422</td>
+               <td rowspan="1">AIQ6<span class="subclass"> SubClassOf </span>AIK8. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AIQ6<span class="subclass"> SubClassOf </span>ALL2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; AVF2<span class="subclass"> SubClassOf </span>AIK8. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(3)</i>&nbsp; ALL2<span class="subclass"> SubClassOf </span>AVF2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">424</td>
+               <td rowspan="1">AIR6<span class="subclass"> SubClassOf </span>HU2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AIR6<span class="subclass"> SubClassOf </span>YY4. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; YY4<span class="subclass"> SubClassOf </span>HU2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">414</td>
+               <td rowspan="1">ALL1<span class="subclass"> SubClassOf </span>AIK8. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; ALL1<span class="subclass"> SubClassOf </span>ALL2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; AVF2<span class="subclass"> SubClassOf </span>AIK8. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(3)</i>&nbsp; ALL2<span class="subclass"> SubClassOf </span>AVF2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">415</td>
+               <td rowspan="1">ALL1<span class="subclass"> SubClassOf </span>AVF2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; ALL1<span class="subclass"> SubClassOf </span>ALL2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALL2<span class="subclass"> SubClassOf </span>AVF2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">416</td>
+               <td rowspan="1">ALL2<span class="subclass"> SubClassOf </span>AIK8. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AVF2<span class="subclass"> SubClassOf </span>AIK8. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ALL2<span class="subclass"> SubClassOf </span>AVF2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">432</td>
+               <td rowspan="1">AVF2<span class="subclass"> SubClassOf </span>HU2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; AIK8<span class="subclass"> SubClassOf </span>HU2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; AVF2<span class="subclass"> SubClassOf </span>AIK8. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">413</td>
+               <td rowspan="1">SS8<span class="subclass"> SubClassOf </span>SF8. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; SS8<span class="subclass"> SubClassOf </span>SV1. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; SV1<span class="subclass"> SubClassOf </span>SS6. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(3)</i>&nbsp; SS6<span class="subclass"> SubClassOf </span>SF8. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">431</td>
+               <td rowspan="1">XO6<span class="subclass"> SubClassOf </span>HU2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; XO6<span class="subclass"> SubClassOf </span>YY4. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; YY4<span class="subclass"> SubClassOf </span>HU2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">428</td>
+               <td rowspan="1">YY5<span class="subclass"> SubClassOf </span>HU2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; YY5<span class="subclass"> SubClassOf </span>YY4. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; YY4<span class="subclass"> SubClassOf </span>HU2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">430</td>
+               <td rowspan="1">ZG6<span class="subclass"> SubClassOf </span>HU2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; YY4<span class="subclass"> SubClassOf </span>HU2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; ZG6<span class="subclass"> SubClassOf </span>YY4. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">429</td>
+               <td rowspan="1">ZG8<span class="subclass"> SubClassOf </span>HU2. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; ZG8<span class="subclass"> SubClassOf </span>YY4. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; YY4<span class="subclass"> SubClassOf </span>HU2. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+         </tbody>
+         <tr class="withoutstyle">
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      <div id="shared" style="display:none" class="footnote">Shared axiom between Ontology 1 and 2.</div>
+   </body>
+</html>

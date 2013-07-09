@@ -1,0 +1,974 @@
+<html xmlns:ecco="http://owl.cs.manchester.ac.uk/diff">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ecco</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/reveal.css"><script type="text/javascript" src="js/jquery-1.4.4.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="js/script.js"></script><script type="text/javascript" src="js/jquery.checkboxtree.js"></script><script type="text/javascript" src="js/jquery.reveal.js"></script><script type="text/javascript" src="js/jscript.js"></script></head>
+   <body>
+      <h1><br></h1>
+      				[<a href="index.jsp">Back Home</a>]
+      				
+      <form action="getXml" method="post" class="inl">
+         						[<a id="top3" target="_blank" href="EccoChangeSet_labels.xml">Source XML</a>]
+         					
+      </form><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp;
+      				[<a id="top1" href="javascript:;" onClick="showAll();$('#tree1').checkboxTree('expandAll');$('#tree2').checkboxTree('expandAll')">Show All</a> | 
+      				<a id="top2" href="javascript:;" onClick="hideAll();$('#tree1').checkboxTree('collapseAll');$('#tree2').checkboxTree('collapseAll');">Hide All</a>] 
+      				[<a id="genViewPerml" href="#" onclick="setPermalink();">Generate View Permalink</a>]
+      				
+      <div id="view-plink-modal" class="reveal-modal">
+         <h3>view-permalink</h3><textarea id="view-plink" rows="3" cols="60" readonly="true" style="resize: none;"></textarea><br>
+         					[<a href="javascript:;" onclick="select_all('view-plink');">Select all</a>]
+         					<a class="close-reveal-modal">x</a></div><br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="9dc1ba22-8454-4095-aea7-09b376d0391a-lbl"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
+      <table width="70%" style="table-layout:fixed;">
+         <tr>
+            <th class="topright"><input type="checkbox" name="removals" onClick="toggleGroup('removals')">  
+               <h3 style="display:inline;">Removals (47)</h3>
+            </th>
+            <th class="topleft"><input type="checkbox" name="additions" onClick="toggleGroup('additions')">  
+               <h3 style="display:inline;">Additions (95)</h3>
+            </th>
+         </tr>
+         <tr>
+            <td class="topright">
+               <ul id="tree1">
+                  <li>  <input type="checkbox" name="effRemsTrigger" onClick="toggleChanges('effRems','effRemsTrigger')">  
+                     <h4 style="display:inline;">Effectual (15)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, and are not entailed by Ontology 2');"><ul>
+                        <li>  Weakenings (0)</li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li id="retdesctrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effRems" onClick="toggleDiv('retdesc');">  <a href="#retdesc">Retired Descriptions (15)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing retired terms, i.e., terms that no longer exist in Ontology 2');"></li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pure Removals (0)
+                        </li><br></ul>
+                  </li><br><li>  <input type="checkbox" name="ineffRemsTrigger" onClick="toggleChanges('ineffRems','ineffRemsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (32)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, but are entailed by Ontology 2, i.e., that have been removed but are still entailed');"><ul>
+                        <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('ravred','rst','rpsnovred');">  <b>Prospective Redundancy (32)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms in Ontology 1 for which there are more constraining related axioms in Ontology 2');"><ul style="display:none">
+                              <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Reshuffle (0)
+                              </li>
+                              <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst','rpsnovred');">  <b>Retired Prospective Redundancy (32)</b><b id="t1"></b>  
+                                 <ul style="display:none">
+                                    <li id="rsttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rst');">  <a href="#rst">Novel (32)</a></li>
+                                    <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Pseudo Novel (0)
+                                    </li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+            <td class="topleft" style="vertical-align:top">
+               <ul id="tree2">
+                  <li>  <input type="checkbox" name="effAddsTrigger" onClick="toggleChanges('effAdds','effAddsTrigger')">  
+                     <h4 style="display:inline;">Effectual (95)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, and are not entailed by Ontology 1');"><ul>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Strengthenings (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li id="newdesctrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('newdesc');">  <a href="#newdesc">New Descriptions (70)</a>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms describing newly created terms, i.e., terms that did not exist in Ontology 1');"></li>
+                        <li>  <input type="checkbox" name="effAdds" onClick="toggleDiv('add','addnt');">  <b>Pure Additions (25)</b>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 1; typically related to hierachy changes');"><ul style="display:none">
+                              <li id="addtrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('add');">  <a href="#add">With Shared Terms (10)</a></li>
+                              <li id="addnttrig"><img src="images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('addnt');">  <a href="#addnt">With New Terms (15)</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li><br><li>  <input type="checkbox" name="ineffAddsTrigger" onClick="toggleChanges('ineffAdds','ineffAddsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (0)</h4>  <img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, but are entailed by Ontology 1, i.e., that have been added but were already entailed');"><ul>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Retrospective Redundancy (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td class="topright">[<a href="javascript:void(0);" id="tree1-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree1-collapseAll">Collapse All</a>]
+            </td>
+            <td class="topleft">[<a href="javascript:void(0);" id="tree2-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree2-collapseAll">Collapse All</a>]
+            </td>
+         </tr>
+      </table>
+      <table width="100%" style="table-layout:fixed;">
+         <colgroup>
+            <col>
+            <col width="47.5%">
+            <col width="47.5%">
+         </colgroup>
+         <tbody id="newdesc" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">New Descriptions (70)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">New Description Axiom in Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td>64</td>
+               <td colspan="2">5-HIAA measurement<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: 5-HIAA measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>16</td>
+               <td colspan="2">CC16 measurement<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: CC16 measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>53</td>
+               <td colspan="2">CCL5 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. <br><i>New Terms: CCL5 measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>52</td>
+               <td colspan="2">CCL5 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. <br><i>New Terms: CCL5 measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>63</td>
+               <td colspan="2">HVA measurement<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: HVA measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>54</td>
+               <td colspan="2">IGFBP-1 measurement<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: IGFBP-1 measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>19</td>
+               <td colspan="2">Illumina Genome Analyzer II standard manufacturer's protocol<span class="subclass"> SubClassOf </span>nucleic acid sequencing protocol. <br><i>New Terms: Illumina Genome Analyzer II standard manufacturer's protocol</i></td>
+            </tr>
+            <tr class="addition">
+               <td>20</td>
+               <td colspan="2">Illumina Genome Analyzer IIx standard manufacturer's protocol<span class="subclass"> SubClassOf </span>nucleic acid sequencing protocol. <br><i>New Terms: Illumina Genome Analyzer IIx standard manufacturer's protocol</i></td>
+            </tr>
+            <tr class="addition">
+               <td>18</td>
+               <td colspan="2">Illumina Genome Analyzer standard manufacturer's protocol<span class="subclass"> SubClassOf </span>nucleic acid sequencing protocol. <br><i>New Terms: Illumina Genome Analyzer standard manufacturer's protocol</i></td>
+            </tr>
+            <tr class="addition">
+               <td>21</td>
+               <td colspan="2">Illumina HiSeq 1000 standard manufacturer's protocol<span class="subclass"> SubClassOf </span>nucleic acid sequencing protocol. <br><i>New Terms: Illumina HiSeq 1000 standard manufacturer's protocol</i></td>
+            </tr>
+            <tr class="addition">
+               <td>22</td>
+               <td colspan="2">Illumina HiSeq 2000 standard manufacturer's protocol<span class="subclass"> SubClassOf </span>nucleic acid sequencing protocol. <br><i>New Terms: Illumina HiSeq 2000 standard manufacturer's protocol</i></td>
+            </tr>
+            <tr class="addition">
+               <td>23</td>
+               <td colspan="2">Illumina MiSeq standard manufacturer's protocol<span class="subclass"> SubClassOf </span>nucleic acid sequencing protocol. <br><i>New Terms: Illumina MiSeq standard manufacturer's protocol</i></td>
+            </tr>
+            <tr class="addition">
+               <td>65</td>
+               <td colspan="2">MHPG measurement<span class="subclass"> SubClassOf </span>nervous system measurement. <br><i>New Terms: MHPG measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>30</td>
+               <td colspan="2">P wave duration<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: P wave duration</i></td>
+            </tr>
+            <tr class="addition">
+               <td>31</td>
+               <td colspan="2">PR segment<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: PR segment</i></td>
+            </tr>
+            <tr class="addition">
+               <td>57</td>
+               <td colspan="2">RNAlater specimen<span class="subclass"> SubClassOf </span>specimen. <br><i>New Terms: RNAlater specimen</i></td>
+            </tr>
+            <tr class="addition">
+               <td>32</td>
+               <td colspan="2">abdomenal wall<span class="subclass"> SubClassOf </span>abdomen. <br><i>New Terms: abdomenal wall</i></td>
+            </tr>
+            <tr class="addition">
+               <td>70</td>
+               <td colspan="2">agar stab specimen<span class="subclass"> SubClassOf </span>specimen with known storage state. <br><i>New Terms: agar stab specimen</i></td>
+            </tr>
+            <tr class="addition">
+               <td>60</td>
+               <td colspan="2">albumin:globulin ratio measurement<span class="subclass"> SubClassOf </span>hematological measurement. <br><i>New Terms: albumin:globulin ratio measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>66</td>
+               <td colspan="2">amino acid measurement<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: amino acid measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>39</td>
+               <td colspan="2">antennal disc<span class="subclass"> SubClassOf </span>embryonic structure. <br><i>New Terms: antennal disc</i></td>
+            </tr>
+            <tr class="addition">
+               <td>37</td>
+               <td colspan="2">anther<span class="subclass"> SubClassOf </span>stamen. <br><i>New Terms: anther</i></td>
+            </tr>
+            <tr class="addition">
+               <td>55</td>
+               <td colspan="2">antioxidant measurement<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: antioxidant measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>44</td>
+               <td colspan="2">arm span<span class="subclass"> SubClassOf </span>body weights<br><span class="keyword"> and </span>measures. <br><i>New Terms: arm span</i></td>
+            </tr>
+            <tr class="addition">
+               <td>58</td>
+               <td colspan="2">arylesterase enzyme measurement<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: arylesterase enzyme measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>26</td>
+               <td colspan="2">basophil count<span class="subclass"> SubClassOf </span>hematological measurement. <br><i>New Terms: basophil count</i></td>
+            </tr>
+            <tr class="addition">
+               <td>1</td>
+               <td colspan="2">blood serum<span class="subclass"> SubClassOf </span>blood component. <br><i>New Terms: blood serum</i></td>
+            </tr>
+            <tr class="addition">
+               <td>42</td>
+               <td colspan="2">body composition measurement<span class="subclass"> SubClassOf </span>body weights<br><span class="keyword"> and </span>measures. <br><i>New Terms: body composition measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>33</td>
+               <td colspan="2">bronchiole<span class="subclass"> SubClassOf </span>lung structure. <br><i>New Terms: bronchiole</i></td>
+            </tr>
+            <tr class="addition">
+               <td>11</td>
+               <td colspan="2">bursa of Fabricius<span class="subclass"> SubClassOf </span>haemopoietic system. <br><i>New Terms: bursa of Fabricius</i></td>
+            </tr>
+            <tr class="addition">
+               <td>59</td>
+               <td colspan="2">cancer biomarker measurement<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: cancer biomarker measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>2</td>
+               <td colspan="2">cell culture<span class="subclass"> SubClassOf </span>material entity. <br><i>New Terms: cell culture</i></td>
+            </tr>
+            <tr class="addition">
+               <td>3</td>
+               <td colspan="2">cell suspension culture<span class="subclass"> SubClassOf </span>cell culture. <br><i>New Terms: cell suspension culture, cell culture</i></td>
+            </tr>
+            <tr class="addition">
+               <td>4</td>
+               <td colspan="2">cell suspension culture<span class="subclass"> SubClassOf </span>growth condition. <br><i>New Terms: cell suspension culture</i></td>
+            </tr>
+            <tr class="addition">
+               <td>43</td>
+               <td colspan="2">collective leaf structure<span class="subclass"> SubClassOf </span>plant component. <br><i>New Terms: collective leaf structure</i></td>
+            </tr>
+            <tr class="addition">
+               <td>34</td>
+               <td colspan="2">cortical collecting duct<span class="subclass"> SubClassOf </span>kidney. <br><i>New Terms: cortical collecting duct</i></td>
+            </tr>
+            <tr class="addition">
+               <td>5</td>
+               <td colspan="2">culture condition:dark-grown cell<span class="subclass"> SubClassOf </span>growth condition. <br><i>New Terms: culture condition:dark-grown cell</i></td>
+            </tr>
+            <tr class="addition">
+               <td>14</td>
+               <td colspan="2">culture supernatant<span class="subclass"> SubClassOf </span>cell culture. <br><i>New Terms: culture supernatant, cell culture</i></td>
+            </tr>
+            <tr class="addition">
+               <td>45</td>
+               <td colspan="2">energy expenditure<span class="subclass"> SubClassOf </span>biological process. <br><i>New Terms: energy expenditure</i></td>
+            </tr>
+            <tr class="addition">
+               <td>28</td>
+               <td colspan="2">entorhinal cortical volume<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: entorhinal cortical volume</i></td>
+            </tr>
+            <tr class="addition">
+               <td>40</td>
+               <td colspan="2">eye disc<span class="subclass"> SubClassOf </span>embryonic structure. <br><i>New Terms: eye disc</i></td>
+            </tr>
+            <tr class="addition">
+               <td>46</td>
+               <td colspan="2">fatty acid measurement<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: fatty acid measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>38</td>
+               <td colspan="2">filament<span class="subclass"> SubClassOf </span>stamen. <br><i>New Terms: filament</i></td>
+            </tr>
+            <tr class="addition">
+               <td>36</td>
+               <td colspan="2">flag leaf<span class="subclass"> SubClassOf </span>leaf. <br><i>New Terms: flag leaf</i></td>
+            </tr>
+            <tr class="addition">
+               <td>47</td>
+               <td colspan="2">folic acid measurement<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: folic acid measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>56</td>
+               <td colspan="2">freeze dried specimen<span class="subclass"> SubClassOf </span>specimen. <br><i>New Terms: freeze dried specimen</i></td>
+            </tr>
+            <tr class="addition">
+               <td>69</td>
+               <td colspan="2">fresh specimen<span class="subclass"> SubClassOf </span>specimen with known storage state. <br><i>New Terms: fresh specimen</i></td>
+            </tr>
+            <tr class="addition">
+               <td>67</td>
+               <td colspan="2">frozen specimen<span class="subclass"> SubClassOf </span>specimen with known storage state. <br><i>New Terms: frozen specimen</i></td>
+            </tr>
+            <tr class="addition">
+               <td>48</td>
+               <td colspan="2">gestational age<span class="subclass"> SubClassOf </span>age. <br><i>New Terms: gestational age</i></td>
+            </tr>
+            <tr class="addition">
+               <td>49</td>
+               <td colspan="2">head circumference<span class="subclass"> SubClassOf </span>body weights<br><span class="keyword"> and </span>measures. <br><i>New Terms: head circumference</i></td>
+            </tr>
+            <tr class="addition">
+               <td>61</td>
+               <td colspan="2">hepatitis C induced liver cirrhosis<span class="subclass"> SubClassOf </span>liver disease. <br><i>New Terms: hepatitis C induced liver cirrhosis</i></td>
+            </tr>
+            <tr class="addition">
+               <td>29</td>
+               <td colspan="2">hip circumference<span class="subclass"> SubClassOf </span>body weights<br><span class="keyword"> and </span>measures. <br><i>New Terms: hip circumference</i></td>
+            </tr>
+            <tr class="addition">
+               <td>15</td>
+               <td colspan="2">juvenile leaf<span class="subclass"> SubClassOf </span>leaf. <br><i>New Terms: juvenile leaf</i></td>
+            </tr>
+            <tr class="addition">
+               <td>9</td>
+               <td colspan="2">left ventricle<span class="subclass"> SubClassOf </span>heart component. <br><i>New Terms: left ventricle</i></td>
+            </tr>
+            <tr class="addition">
+               <td>41</td>
+               <td colspan="2">lipid<br><span class="keyword"> or </span>lipoprotein measurement<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: lipid or lipoprotein measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>13</td>
+               <td colspan="2">logarithmic phase culture<span class="subclass"> SubClassOf </span>experimental cell. <br><i>New Terms: logarithmic phase culture</i></td>
+            </tr>
+            <tr class="addition">
+               <td>7</td>
+               <td colspan="2">melanoma cell line<span class="subclass"> SubClassOf </span>cancer cell line. <br><i>New Terms: melanoma cell line</i></td>
+            </tr>
+            <tr class="addition">
+               <td>50</td>
+               <td colspan="2">metabolic rate measurement<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: metabolic rate measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>27</td>
+               <td colspan="2">monocyte count<span class="subclass"> SubClassOf </span>hematological measurement. <br><i>New Terms: monocyte count</i></td>
+            </tr>
+            <tr class="addition">
+               <td>68</td>
+               <td colspan="2">paraffin specimen<span class="subclass"> SubClassOf </span>specimen with known storage state. <br><i>New Terms: paraffin specimen</i></td>
+            </tr>
+            <tr class="addition">
+               <td>6</td>
+               <td colspan="2">renal cell carcinoma cell line<span class="subclass"> SubClassOf </span>cancer cell line. <br><i>New Terms: renal cell carcinoma cell line</i></td>
+            </tr>
+            <tr class="addition">
+               <td>10</td>
+               <td colspan="2">right ventricle<span class="subclass"> SubClassOf </span>heart component. <br><i>New Terms: right ventricle</i></td>
+            </tr>
+            <tr class="addition">
+               <td>8</td>
+               <td colspan="2">saliva<span class="subclass"> SubClassOf </span>animal fluid. <br><i>New Terms: saliva</i></td>
+            </tr>
+            <tr class="addition">
+               <td>12</td>
+               <td colspan="2">stationary phase culture<span class="subclass"> SubClassOf </span>experimental cell. <br><i>New Terms: stationary phase culture</i></td>
+            </tr>
+            <tr class="addition">
+               <td>35</td>
+               <td colspan="2">stele<span class="subclass"> SubClassOf </span>plant component. <br><i>New Terms: stele</i></td>
+            </tr>
+            <tr class="addition">
+               <td>17</td>
+               <td colspan="2">surfactant protein D measurement<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: surfactant protein D measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>24</td>
+               <td colspan="2">testicular carcinoma<span class="subclass"> SubClassOf </span>carcinoma. <br><i>New Terms: testicular carcinoma</i></td>
+            </tr>
+            <tr class="addition">
+               <td>62</td>
+               <td colspan="2">thyroxine measurement<span class="subclass"> SubClassOf </span>hormone measurement. <br><i>New Terms: thyroxine measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>51</td>
+               <td colspan="2">urinary metabolite measurement<span class="subclass"> SubClassOf </span>metabolite measurement. <br><i>New Terms: urinary metabolite measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>25</td>
+               <td colspan="2">whole-brain volume<span class="subclass"> SubClassOf </span>measurement. <br><i>New Terms: whole-brain volume</i></td>
+            </tr>
+         </tbody>
+         <tbody id="add" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Pure Additions with Shared Terms (10)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">Addition to Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td>73</td>
+               <td colspan="2">IMR-90<span class="subclass"> SubClassOf </span>Homo sapiens cell line. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>72</td>
+               <td colspan="2">IMR-90<span class="subclass"> SubClassOf </span>fibroblast derived cell line. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>74</td>
+               <td colspan="2">NIH3T3<span class="subclass"> SubClassOf </span>fibroblast derived cell line. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>75</td>
+               <td colspan="2">NIH3T3<span class="subclass"> SubClassOf </span>mouse cell line. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>71</td>
+               <td colspan="2">colorectal adenocarcinoma<span class="subclass"> SubClassOf </span>digestive system disease. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>80</td>
+               <td colspan="2">hip bone size<span class="subclass"> SubClassOf </span>bone measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>79</td>
+               <td colspan="2">hip geometry<span class="subclass"> SubClassOf </span>bone measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>78</td>
+               <td colspan="2">mean platelet volume<span class="subclass"> SubClassOf </span>platelet measurement. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>76</td>
+               <td colspan="2">ovarian neoplasm<span class="subclass"> SubClassOf </span>reproductive system disease. <br></td>
+            </tr>
+            <tr class="addition">
+               <td>77</td>
+               <td colspan="2">ovarian neoplasm<span class="subclass"> SubClassOf </span>urogenital neoplasm. <br></td>
+            </tr>
+         </tbody>
+         <tbody id="addnt" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3"><a name="add"></a><h4 style="display: inline-block;">Pure Additions with New Terms (15)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="addition" colspan="2">Addition to Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td>88</td>
+               <td colspan="2">CCL2 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. <br><i>New Terms: CCL5 measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>90</td>
+               <td colspan="2">CCL4 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. <br><i>New Terms: CCL5 measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>85</td>
+               <td colspan="2">IGF-1 measurement<span class="subclass"> SubClassOf </span>cancer biomarker measurement. <br><i>New Terms: cancer biomarker measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>84</td>
+               <td colspan="2">IGFBP-3 measurement<span class="subclass"> SubClassOf </span>cancer biomarker measurement. <br><i>New Terms: cancer biomarker measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>82</td>
+               <td colspan="2">infant head circumference<span class="subclass"> SubClassOf </span>head circumference. <br><i>New Terms: head circumference</i></td>
+            </tr>
+            <tr class="addition">
+               <td>91</td>
+               <td colspan="2">interleukin 1 receptor antagonist measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. <br><i>New Terms: CCL5 measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>89</td>
+               <td colspan="2">interleukin 10 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. <br><i>New Terms: CCL5 measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>83</td>
+               <td colspan="2">interleukin 18 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. <br><i>New Terms: CCL5 measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>94</td>
+               <td colspan="2">interleukin-1 beta measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. <br><i>New Terms: CCL5 measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>92</td>
+               <td colspan="2">interleukin-6 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. <br><i>New Terms: CCL5 measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>93</td>
+               <td colspan="2">interleukin-8 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. <br><i>New Terms: CCL5 measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>81</td>
+               <td colspan="2">lipid measurement<span class="subclass"> SubClassOf </span>lipid<br><span class="keyword"> or </span>lipoprotein measurement. <br><i>New Terms: lipid or lipoprotein measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>87</td>
+               <td colspan="2">lipoprotein measurement<span class="subclass"> SubClassOf </span>lipid<br><span class="keyword"> or </span>lipoprotein measurement. <br><i>New Terms: lipid or lipoprotein measurement</i></td>
+            </tr>
+            <tr class="addition">
+               <td>95</td>
+               <td colspan="2">root stele<span class="subclass"> SubClassOf </span>stele. <br><i>New Terms: stele</i></td>
+            </tr>
+            <tr class="addition">
+               <td>86</td>
+               <td colspan="2">tumor necrosis factor-alpha measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. <br><i>New Terms: CCL5 measurement</i></td>
+            </tr>
+         </tbody>
+         <tbody id="retdesc" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Retired Descriptions (15)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal" colspan="2">Retired Description Axiom in Ontology 1</th>
+            </tr>
+            <tr class="removal">
+               <td>96</td>
+               <td colspan="2">blood serum<span class="subclass"> SubClassOf </span>blood component.<br><i>Retired Terms: blood serum</i></td>
+            </tr>
+            <tr class="removal">
+               <td>106</td>
+               <td colspan="2">bursa of Fabricius<span class="subclass"> SubClassOf </span>haemopoietic system.<br><i>Retired Terms: bursa of Fabricius</i></td>
+            </tr>
+            <tr class="removal">
+               <td>97</td>
+               <td colspan="2">cell culture<span class="subclass"> SubClassOf </span>material entity.<br><i>Retired Terms: cell culture</i></td>
+            </tr>
+            <tr class="removal">
+               <td>98</td>
+               <td colspan="2">cell suspension culture<span class="subclass"> SubClassOf </span>cell culture.<br><i>Retired Terms: cell suspension culture, cell culture</i></td>
+            </tr>
+            <tr class="removal">
+               <td>99</td>
+               <td colspan="2">cell suspension culture<span class="subclass"> SubClassOf </span>growth condition.<br><i>Retired Terms: cell suspension culture</i></td>
+            </tr>
+            <tr class="removal">
+               <td>100</td>
+               <td colspan="2">culture condition:dark-grown cell<span class="subclass"> SubClassOf </span>growth condition.<br><i>Retired Terms: culture condition:dark-grown cell</i></td>
+            </tr>
+            <tr class="removal">
+               <td>109</td>
+               <td colspan="2">culture supernatant<span class="subclass"> SubClassOf </span>cell culture.<br><i>Retired Terms: culture supernatant, cell culture</i></td>
+            </tr>
+            <tr class="removal">
+               <td>110</td>
+               <td colspan="2">juvenile leaf<span class="subclass"> SubClassOf </span>leaf.<br><i>Retired Terms: juvenile leaf</i></td>
+            </tr>
+            <tr class="removal">
+               <td>104</td>
+               <td colspan="2">left ventricle<span class="subclass"> SubClassOf </span>heart component.<br><i>Retired Terms: left ventricle</i></td>
+            </tr>
+            <tr class="removal">
+               <td>108</td>
+               <td colspan="2">logarithmic phase culture<span class="subclass"> SubClassOf </span>experimental cell.<br><i>Retired Terms: logarithmic phase culture</i></td>
+            </tr>
+            <tr class="removal">
+               <td>102</td>
+               <td colspan="2">melanoma cell line<span class="subclass"> SubClassOf </span>cancer cell line.<br><i>Retired Terms: melanoma cell line</i></td>
+            </tr>
+            <tr class="removal">
+               <td>101</td>
+               <td colspan="2">renal cell carcinoma cell line<span class="subclass"> SubClassOf </span>cancer cell line.<br><i>Retired Terms: renal cell carcinoma cell line</i></td>
+            </tr>
+            <tr class="removal">
+               <td>105</td>
+               <td colspan="2">right ventricle<span class="subclass"> SubClassOf </span>heart component.<br><i>Retired Terms: right ventricle</i></td>
+            </tr>
+            <tr class="removal">
+               <td>103</td>
+               <td colspan="2">saliva<span class="subclass"> SubClassOf </span>animal fluid.<br><i>Retired Terms: saliva</i></td>
+            </tr>
+            <tr class="removal">
+               <td>107</td>
+               <td colspan="2">stationary phase culture<span class="subclass"> SubClassOf </span>experimental cell.<br><i>Retired Terms: stationary phase culture</i></td>
+            </tr>
+         </tbody>
+         <tbody id="rst" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Prospective Novel Redundant (32)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal">Axiom in Ontology 1</th>
+               <th class="normalrem">Justifications in Ontology 2</th>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">130</td>
+               <td rowspan="1">CCL2 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; CCL2 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">129</td>
+               <td rowspan="1">CCL2 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; CCL2 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">134</td>
+               <td rowspan="1">CCL4 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; CCL4 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">133</td>
+               <td rowspan="1">CCL4 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; CCL4 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="2">112</td>
+               <td rowspan="2">IMR-90<span class="subclass"> SubClassOf </span>cell line. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; Homo sapiens cell line<span class="subclass"> SubClassOf </span>cell line. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; IMR-90<span class="subclass"> SubClassOf </span>Homo sapiens cell line. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td><i>(1)</i>&nbsp; IMR-90<span class="subclass"> SubClassOf </span>fibroblast derived cell line. 
+                  							
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; fibroblast derived cell line<span class="subclass"> SubClassOf </span>cell line. 
+                  							
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="2">113</td>
+               <td rowspan="2">NIH3T3<span class="subclass"> SubClassOf </span>cell line. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; fibroblast derived cell line<span class="subclass"> SubClassOf </span>cell line. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; NIH3T3<span class="subclass"> SubClassOf </span>fibroblast derived cell line. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td><i>(1)</i>&nbsp; mouse cell line<span class="subclass"> SubClassOf </span>cell line. 
+                  							
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; NIH3T3<span class="subclass"> SubClassOf </span>mouse cell line. 
+                  							
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">111</td>
+               <td rowspan="1">colon mucinous adenocarcinoma<span class="subclass"> SubClassOf </span>digestive system disease. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; colorectal adenocarcinoma<span class="subclass"> SubClassOf </span>digestive system disease. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; colon mucinous adenocarcinoma<span class="subclass"> SubClassOf </span>colorectal adenocarcinoma. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">122</td>
+               <td rowspan="1">infant head circumference<span class="subclass"> SubClassOf </span>body weights<br><span class="keyword"> and </span>measures. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; head circumference<span class="subclass"> SubClassOf </span>body weights<br><span class="keyword"> and </span>measures. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; infant head circumference<span class="subclass"> SubClassOf </span>head circumference. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">136</td>
+               <td rowspan="1">interleukin 1 receptor antagonist measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; interleukin 1 receptor antagonist measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">135</td>
+               <td rowspan="1">interleukin 1 receptor antagonist measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; interleukin 1 receptor antagonist measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">132</td>
+               <td rowspan="1">interleukin 10 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; interleukin 10 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">131</td>
+               <td rowspan="1">interleukin 10 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; interleukin 10 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">124</td>
+               <td rowspan="1">interleukin 18 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; interleukin 18 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">123</td>
+               <td rowspan="1">interleukin 18 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; interleukin 18 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">142</td>
+               <td rowspan="1">interleukin-1 beta measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; interleukin-1 beta measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">141</td>
+               <td rowspan="1">interleukin-1 beta measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; interleukin-1 beta measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">138</td>
+               <td rowspan="1">interleukin-6 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; interleukin-6 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">137</td>
+               <td rowspan="1">interleukin-6 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; interleukin-6 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">140</td>
+               <td rowspan="1">interleukin-8 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; interleukin-8 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">139</td>
+               <td rowspan="1">interleukin-8 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; interleukin-8 measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">121</td>
+               <td rowspan="1">lipid measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; lipid<br><span class="keyword"> or </span>lipoprotein measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; lipid measurement<span class="subclass"> SubClassOf </span>lipid<br><span class="keyword"> or </span>lipoprotein measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">128</td>
+               <td rowspan="1">lipoprotein measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; lipid<br><span class="keyword"> or </span>lipoprotein measurement<span class="subclass"> SubClassOf </span>measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; lipoprotein measurement<span class="subclass"> SubClassOf </span>lipid<br><span class="keyword"> or </span>lipoprotein measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">125</td>
+               <td rowspan="1">mean platelet volume<span class="subclass"> SubClassOf </span>hematological measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; platelet measurement<span class="subclass"> SubClassOf </span>hematological measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; mean platelet volume<span class="subclass"> SubClassOf </span>platelet measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">114</td>
+               <td rowspan="1">ovarian adenoma benign<span class="subclass"> SubClassOf </span>reproductive system disease. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; ovarian adenoma benign<span class="subclass"> SubClassOf </span>ovarian neoplasm. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; ovarian neoplasm<span class="subclass"> SubClassOf </span>reproductive system disease. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">115</td>
+               <td rowspan="1">ovarian adenoma benign<span class="subclass"> SubClassOf </span>urogenital neoplasm. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; ovarian adenoma benign<span class="subclass"> SubClassOf </span>ovarian neoplasm. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; ovarian neoplasm<span class="subclass"> SubClassOf </span>urogenital neoplasm. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">120</td>
+               <td rowspan="1">ovarian neoplasm<span class="subclass"> SubClassOf </span>neoplasm. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; urogenital neoplasm<span class="subclass"> SubClassOf </span>neoplasm. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; ovarian neoplasm<span class="subclass"> SubClassOf </span>urogenital neoplasm. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">118</td>
+               <td rowspan="1">ovarian serous adenocarcinoma<span class="subclass"> SubClassOf </span>reproductive system disease. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; ovarian neoplasm<span class="subclass"> SubClassOf </span>reproductive system disease. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; ovarian serous adenocarcinoma<span class="subclass"> SubClassOf </span>ovarian neoplasm. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">119</td>
+               <td rowspan="1">ovarian serous adenocarcinoma<span class="subclass"> SubClassOf </span>urogenital neoplasm. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; ovarian serous adenocarcinoma<span class="subclass"> SubClassOf </span>ovarian neoplasm. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; ovarian neoplasm<span class="subclass"> SubClassOf </span>urogenital neoplasm. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">116</td>
+               <td rowspan="1">serous cystadenofibroma<span class="subclass"> SubClassOf </span>reproductive system disease. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; serous cystadenofibroma<span class="subclass"> SubClassOf </span>ovarian neoplasm. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; ovarian neoplasm<span class="subclass"> SubClassOf </span>reproductive system disease. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">117</td>
+               <td rowspan="1">serous cystadenofibroma<span class="subclass"> SubClassOf </span>urogenital neoplasm. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; serous cystadenofibroma<span class="subclass"> SubClassOf </span>ovarian neoplasm. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Shared axiom between Ontology 1 and 2');"><sup>[s]</sup></div><br><i>(2)</i>&nbsp; ovarian neoplasm<span class="subclass"> SubClassOf </span>urogenital neoplasm. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">127</td>
+               <td rowspan="1">tumor necrosis factor-alpha measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; tumor necrosis factor-alpha measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>cytokine measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">126</td>
+               <td rowspan="1">tumor necrosis factor-alpha measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; tumor necrosis factor-alpha measurement<span class="subclass"> SubClassOf </span>CCL5 measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br><i>(2)</i>&nbsp; CCL5 measurement<span class="subclass"> SubClassOf </span>inflammatory marker measurement. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div><br></td>
+            </tr>
+         </tbody>
+         <tr class="withoutstyle">
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      <div id="shared" style="display:none" class="footnote">Shared axiom between Ontology 1 and 2.</div>
+   </body>
+</html>
