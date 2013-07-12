@@ -3,6 +3,7 @@
 todo
 
 # Build #
+*.war
 *.xpr
 build/*
 bin*
