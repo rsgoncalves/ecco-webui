@@ -59,6 +59,7 @@ import uk.ac.manchester.cs.diff.output.xml.XMLReport;
 public class WebDiff extends HttpServlet {
 	private static final long serialVersionUID = -7457650911942029753L;
 	private OWLOntology ont1, ont2;
+	private String cdiff;
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -108,7 +109,7 @@ public class WebDiff extends HttpServlet {
 
 		if(ont1 != null && ont2 != null) {
 			// Get diff report 
-			XMLReport report = runner.computeDiff(ont1, ont2, "at", xsltPath);
+			XMLReport report = runner.computeDiff(ont1, ont2, cdiff, xsltPath, false);
 			request.getSession().setAttribute("xsltPath", xsltPath);
 			request.getSession().setAttribute("report", report);
 
@@ -185,6 +186,9 @@ public class WebDiff extends HttpServlet {
 						ont2uri = item.getString();
 						if(!ont2uri.equals(""))
 							ont2 = runner.loadOntology(2, ont2uri.trim(), false);
+					}
+					else if(name.equals("cdiff")) {
+						cdiff = item.getString();
 					}
 				} 
 				// Load from uploaded file

@@ -5,8 +5,15 @@
 <head>
 <title>ecco</title>
 <link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/reveal.css"/>
+<script type="text/javascript" src="js/jquery-1.4.4.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/jquery.checkboxtree.js"></script>
+<script type="text/javascript" src="js/jquery.reveal.js"></script>
+<script type="text/javascript" src="js/jscript.js"></script>
 <script type="text/javascript">
-	function JumpToIt(frm) {
+	function jumpToIt(frm) {
 	    var newPage = frm.url.options[frm.url.selectedIndex].value;
     	if (newPage != "None") {
 	        location.href=newPage;
@@ -21,40 +28,46 @@
 		<form action="diff" method="post" enctype="multipart/form-data">
 			<div class="box">
 				Try out some pre-computed examples:
-				<form>
-					<select name="url">
-						<option value="examples/ncit_05.07/index_labels.html">NCI Thesaurus 05.07</option>
-						<option value="examples/ncit_06.04/index_labels.html">NCI Thesaurus 06.04</option>
-						<option value="examples/ncit_07.12/index_labels.html">NCI Thesaurus 07.12</option>
-						<option value="examples/ncit_12.03/index_labels.html">NCI Thesaurus 12.03</option>
-						<option value="examples/ncit_12.07/index_labels.html">NCI Thesaurus 12.07</option>
-						<option value="examples/ncit_13.01/index_labels.html">NCI Thesaurus 13.01</option>
-						<option value="examples/ncit_13.04/index_labels.html">NCI Thesaurus 13.04</option>
-						<option value="examples/artificial/index_labels.html">Artificial</option>
-						<option value="examples/tdiff/index_labels.html">Totally different</option>
-					</select> 
-					<input type=button value="Go!" onClick="JumpToIt(this.form)">
-				</form>
-				<br/>
+				<select name="url">
+					<option value="examples/ncit_05.07/index_labels.html">NCI Thesaurus 05.07</option>
+					<option value="examples/ncit_06.04/index_labels.html">NCI Thesaurus 06.04</option>
+					<option value="examples/ncit_07.12/index_labels.html">NCI Thesaurus 07.12</option>
+					<option value="examples/ncit_12.03/index_labels.html">NCI Thesaurus 12.03</option>
+					<option value="examples/ncit_12.07/index_labels.html">NCI Thesaurus 12.07</option>
+					<option value="examples/ncit_13.01/index_labels.html">NCI Thesaurus 13.01</option>
+					<option value="examples/ncit_13.04/index_labels.html">NCI Thesaurus 13.04</option>
+					<option value="examples/artificial/index_labels.html">Artificial</option>
+					<option value="examples/tdiff/index_labels.html">Totally different</option>
+				</select> 
+				<input type=button value="Go!" onClick="jumpToIt(this.form)"><br/>
 				<p>
 					Browse for ontology <b>files</b>, or enter a <b>URL</b> for
 					each ontology into the text areas:<br />
 				</p>
 				<h3>Ontology 1</h3>
 				<label> 
-					<textarea rows="5" cols="65" name="o1"></textarea>
+					<textarea rows="5" cols="65" name="o1" style="resize:vertical"></textarea>
 				</label> 
 				<label> <br/> 
 					<input type="file" name="o1file">
 				</label>
 				<h3>Ontology 2</h3>
 				<label> 
-					<textarea rows="5" cols="65" name="o2"></textarea>
+					<textarea rows="5" cols="65" name="o2" style="resize:vertical"></textarea>
 				</label>
 				<label><br/>
 					<input type="file" name="o2file">
 				</label>
 				<br/>
+				<p>Concept changes:
+				<input type="radio" name="cdiff" value="at" checked><a onmouseout="tooltip.hide();" 
+					onmouseover="tooltip.show('Computes entailment differences between atomic concepts');">atomic</a> 
+				<input type="radio" name="cdiff" value="sub"><a onmouseout="tooltip.hide();" 
+					onmouseover="tooltip.show('Computes entailment differences between subconcepts asserted in either ontology');">subconcepts</a> 
+				<input type="radio" name="cdiff" value="gr"><a onmouseout="tooltip.hide();" 
+					onmouseover="tooltip.show('Computes entailment differences between concepts formed using ALC constructors over asserted subconcepts');">extended grammar</a>
+				<br/>
+				</p>
 				<p><input type="submit" value="Execute Diff"></p>
 			</div>
 		</form>
