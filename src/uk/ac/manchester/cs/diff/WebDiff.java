@@ -43,7 +43,7 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import uk.ac.manchester.cs.diff.output.XMLReport;
+import uk.ac.manchester.cs.diff.output.xml.XMLReport;
 
 /**
  * @author Rafael S. Goncalves <br/>
@@ -97,51 +97,43 @@ public class WebDiff extends HttpServlet {
 	private void getDiff(HttpServletRequest request, HttpServletResponse response) 
 			throws IOException, ServletException, TransformerException, OWLOntologyCreationException, FileUploadException {
 		PrintWriter pw = response.getWriter();
-		String xsltPath = "/usr/share/tomcat7/webapps/diff/xslt_server.xsl";	// Office Dell
-//		String xsltPath = "/usr/local/apache-tomcat-7.0.37/webapps/diff/xslt_server.xsl"; // Mac Pro
-//		String xsltPath = "/Users/rafa/Documents/PhD/workspace/ecco-webui/WebContent/xslt_server.xsl"; // MacBook Pro
+//		String xsltPath = "/usr/share/tomcat7/webapps/diff/xslt_server.xsl";	// Office Dell
+		String xsltPath = "/Users/rafa/Documents/PhD/workspace/ecco-webui/WebContent/xslt_full_server.xsl"; // MacBook Pro
 		String styledXml = "";
 		
-//		if(request.getSession().getAttribute("report") != null) {
-//			XMLReport report = (XMLReport) request.getSession().getAttribute("report");
-//			String currentId = (String) request.getSession().getAttribute("curuuid");
-//			Document doc = (Document) request.getSession().getAttribute(currentId);
-//			styledXml = report.getReportAsHTML(doc, xsltPath);
-//		}
-//		else {
+		EccoRunner runner = new EccoRunner(true, false, true, false, 10, false);
 		
-			EccoRunner runner = new EccoRunner(true, false, true, false, false);
-			// Load ontologies
-			loadOntologies(pw, request, response, runner);
+		// Load ontologies
+		loadOntologies(pw, request, response, runner);
 
-			if(ont1 != null && ont2 != null) {
-				// Get diff report 
-				XMLReport report = runner.computeDiff(ont1, ont2, false, false, false, xsltPath);
-				request.getSession().setAttribute("xsltPath", xsltPath);
-				request.getSession().setAttribute("report", report);
+		if(ont1 != null && ont2 != null) {
+			// Get diff report 
+			XMLReport report = runner.computeDiff(ont1, ont2, "at", xsltPath);
+			request.getSession().setAttribute("xsltPath", xsltPath);
+			request.getSession().setAttribute("report", report);
 
-				// Store name-based XML document in session attribute
-				Document doc = report.getXMLDocumentReport();
-				Element root = doc.getElementById("root");
-				String uuid = root.getAttribute("uuid");
-				request.getSession().setAttribute(uuid, doc);
+			// Store name-based XML document in session attribute
+			Document doc = report.getXMLDocumentUsingTermNames();
+			Element root = doc.getElementById("root");
+			String uuid = root.getAttribute("uuid");
+			request.getSession().setAttribute(uuid, doc);
 
-				// Store gensym-based XML document in session attribute
-				Document genSymDoc = report.getXMLDocumentReportUsingGenSyms();
-				Element gs_root = genSymDoc.getElementById("root");
-				String gs_uuid = gs_root.getAttribute("uuid");
-				request.getSession().setAttribute(gs_uuid, genSymDoc);
+			// Store gensym-based XML document in session attribute
+			Document genSymDoc = report.getXMLDocumentUsingGenSyms();
+			Element gs_root = genSymDoc.getElementById("root");
+			String gs_uuid = gs_root.getAttribute("uuid");
+			request.getSession().setAttribute(gs_uuid, genSymDoc);
 
-				// Store label-based XML document in session attribute
-				Document labelDoc = report.getXMLDocumentReportUsingLabels();
-				Element lb_root = labelDoc.getElementById("root");
-				String lb_uuid = lb_root.getAttribute("uuid");		
-				request.getSession().setAttribute(lb_uuid, labelDoc);
+			// Store label-based XML document in session attribute
+			Document labelDoc = report.getXMLDocumentUsingLabels();
+			Element lb_root = labelDoc.getElementById("root");
+			String lb_uuid = lb_root.getAttribute("uuid");		
+			request.getSession().setAttribute(lb_uuid, labelDoc);
 
-				styledXml = report.getReportAsHTML(labelDoc, xsltPath);
-				request.getSession().setAttribute("curuuid", lb_uuid);
-			}
-//		}
+			styledXml = report.getReportAsHTML(labelDoc, xsltPath);
+			request.getSession().setAttribute("curuuid", lb_uuid);
+		}
+
 		response.setContentType("text/html");
 		pw.println(styledXml);
 		pw.flush();
@@ -212,3 +204,13 @@ public class WebDiff extends HttpServlet {
 		}
 	}
 }
+
+
+// Before initialising EccoRuner:
+//if(request.getSession().getAttribute("report") != null) {
+//XMLReport report = (XMLReport) request.getSession().getAttribute("report");
+//String currentId = (String) request.getSession().getAttribute("curuuid");
+//Document doc = (Document) request.getSession().getAttribute(currentId);
+//styledXml = report.getReportAsHTML(doc, xsltPath);
+//}
+//else { initialise Ecco and execute diff }

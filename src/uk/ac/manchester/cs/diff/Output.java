@@ -33,7 +33,8 @@ import javax.xml.transform.TransformerException;
 
 import org.w3c.dom.Document;
 
-import uk.ac.manchester.cs.diff.output.XMLReport;
+import uk.ac.manchester.cs.diff.output.xml.XMLUnifiedReport;
+
 
 /**
  * @author Rafael S. Goncalves <br/>
@@ -87,7 +88,7 @@ public class Output extends HttpServlet {
 		HttpSession session = request.getSession();
 		PrintWriter pw = response.getWriter();
 		String xsltPath = (String) session.getAttribute("xsltPath");
-		XMLReport report = (XMLReport) session.getAttribute("report");
+		XMLUnifiedReport report = (XMLUnifiedReport) session.getAttribute("report");
 		
 		String htmlOutput = "";
 		if(report != null && request.getParameter("uuid") != null) {
