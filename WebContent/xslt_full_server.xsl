@@ -16,6 +16,11 @@ General Public License for more details.
 You should have received a copy of the GNU Lesser General Public License along with ecco.
 If not, see http://www.gnu.org/licenses/
 -->
+<!DOCTYPE xsl:stylesheet [
+        <!ENTITY nbsp "&#160;">
+        <!ENTITY uarr "&#8593;">
+        <!ENTITY darr "&#8595;">
+        ]>
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ecco="http://owl.cs.manchester.ac.uk/diff">
 	<xsl:output method="html" encoding="UTF-8"/>
 	<xsl:strip-space elements="*"/>
@@ -509,9 +514,9 @@ If not, see http://www.gnu.org/licenses/
 					<th class="normaladd">Weaker Axiom in Ontology 1</th>
 					<th class="addition">Strengthened Axiom in Ontology 2</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes ↓</th>
+						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &darr;</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes ↑</th>
+						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes &uarr;</th>
 				</tr>
 				<xsl:apply-templates mode="TwoColumnEffectualAddition"/>
 			</tbody>
@@ -531,9 +536,9 @@ If not, see http://www.gnu.org/licenses/
 					<th class="normaladd">Weaker Axiom in Ontology 1</th>
 					<th class="addition">Strengthened Axiom in Ontology 2</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes ↓</th>
+						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &darr;</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes ↑</th>
+						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes &uarr;</th>
 				</tr>
 				<xsl:apply-templates mode="TwoColumnEffectualAddition"/>
 			</tbody>
@@ -553,9 +558,9 @@ If not, see http://www.gnu.org/licenses/
 					<th class="normaladd">Source Definition in Ontology 1</th>
 					<th class="addition">Target Definition in Ontology 2</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes ↓</th>
+						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &darr;</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes ↑</th>
+						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes &uarr;</th>
 				</tr>
 				<xsl:apply-templates mode="TwoColumnEffectualAddition"/>
 			</tbody>
@@ -575,9 +580,9 @@ If not, see http://www.gnu.org/licenses/
 					<th class="normaladd">Source Definition in Ontology 1</th>
 					<th class="addition">Target Definition in Ontology 2</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes ↓</th>
+						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &darr;</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes ↑</th>
+						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes &uarr;</th>
 				</tr>
 				<xsl:apply-templates mode="TwoColumnEffectualAddition"/>
 			</tbody>
@@ -596,9 +601,9 @@ If not, see http://www.gnu.org/licenses/
 					<th class="addition">ID</th>
 					<th class="addition" colspan="2">New Description Axiom in Ontology 2</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes ↓</th>
+						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &darr;</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes ↑</th>
+						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes &uarr;</th>
 				</tr>
 				<xsl:apply-templates mode="OneColumnEffectualAddition"/>
 			</tbody>
@@ -617,9 +622,9 @@ If not, see http://www.gnu.org/licenses/
 					<th class="addition">ID</th>
 					<th class="addition" colspan="2">Addition to Ontology 2</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes ↓</th>
+						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &darr;</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes ↑</th>
+						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes &uarr;</th>
 				</tr>
 				<xsl:apply-templates mode="OneColumnEffectualAddition"/>
 			</tbody>
@@ -638,9 +643,9 @@ If not, see http://www.gnu.org/licenses/
 					<th class="addition">ID</th>
 					<th class="addition" colspan="2">Addition to Ontology 2</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes ↓</th>
+						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &darr;</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes ↑</th>
+						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes &uarr;</th>
 				</tr>
 				<xsl:apply-templates mode="OneColumnEffectualAddition"/>
 			</tbody>
@@ -663,9 +668,9 @@ If not, see http://www.gnu.org/licenses/
 					<th class="removal">Stronger Axiom in Ontology 1</th>
 					<th class="normalrem">Weakened Axiom in Ontology 2</th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes ↑</th>
+						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes &uarr;</th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes ↓</th>
+						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &darr;</th>
 				</tr>
 				<xsl:apply-templates mode="TwoColumnEffectualRemoval"/>
 			</tbody>
@@ -685,9 +690,9 @@ If not, see http://www.gnu.org/licenses/
 					<th class="removal">Stronger Axiom in Ontology 1</th>
 					<th class="normalrem">Weakened Axiom in Ontology 2</th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes ↑</th>
+						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes &uarr;</th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes ↓</th>
+						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &darr;</th>
 				</tr>
 				<xsl:apply-templates mode="TwoColumnEffectualRemoval"/>
 			</tbody>
@@ -707,9 +712,9 @@ If not, see http://www.gnu.org/licenses/
 					<th class="removal">Target Definition in Ontology 1</th>
 					<th class="normalrem">Source Definition in Ontology 2</th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes ↑</th>
+						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes &uarr;</th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes ↓</th>
+						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &darr;</th>
 				</tr>
 				<xsl:apply-templates mode="TwoColumnEffectualRemoval"/>
 			</tbody>
@@ -729,9 +734,9 @@ If not, see http://www.gnu.org/licenses/
 					<th class="removal">Target Definition in Ontology 1</th>
 					<th class="normalrem">Source Definition in Ontology 2</th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes ↑</th>
+						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes &uarr;</th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes ↓</th>
+						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &darr;</th>
 				</tr>
 				<xsl:apply-templates mode="TwoColumnEffectualRemoval"/>
 			</tbody>
@@ -750,9 +755,9 @@ If not, see http://www.gnu.org/licenses/
 					<th class="removal">ID</th>
 					<th class="removal" colspan="2">Retired Description Axiom in Ontology 1</th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes ↑</th>
+						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes &uarr;</th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes ↓</th>
+						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &darr;</th>
 				</tr>
 				<xsl:apply-templates mode="OneColumnEffectualRemoval"/>
 			</tbody>
@@ -771,9 +776,9 @@ If not, see http://www.gnu.org/licenses/
 					<th class="removal">ID</th>
 					<th class="removal" colspan="2">Removal from Ontology 1</th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes ↑</th>
+						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes &uarr;</th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes ↓</th>
+						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &darr;</th>
 				</tr>
 				<xsl:apply-templates mode="OneColumnEffectualRemoval"/>
 			</tbody>
@@ -792,9 +797,9 @@ If not, see http://www.gnu.org/licenses/
 					<th class="removal">ID</th>
 					<th class="removal" colspan="2">Removal from Ontology 1</th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes ↑</th>
+						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes &uarr;</th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes ↓</th>
+						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &darr;</th>
 				</tr>
 				<xsl:apply-templates mode="OneColumnEffectualRemoval"/>
 			</tbody>
