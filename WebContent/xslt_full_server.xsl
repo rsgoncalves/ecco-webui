@@ -1426,7 +1426,7 @@ If not, see http://www.gnu.org/licenses/
 				</xsl:if>
 			</xsl:matching-substring>
 			<xsl:non-matching-substring>
-				<xsl:value-of select="."/>
+				 <xsl:value-of select="."/>
 			</xsl:non-matching-substring>
 		</xsl:analyze-string>
 	</xsl:template>
