@@ -18,6 +18,7 @@ If not, see http://www.gnu.org/licenses/
 -->
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ecco="http://owl.cs.manchester.ac.uk/diff">
 	<xsl:output method="html" encoding="UTF-8"/>
+	<xsl:strip-space elements="*"/>
 	<xsl:template match="/">
 		<html>
 			<head>
@@ -57,7 +58,7 @@ If not, see http://www.gnu.org/licenses/
 					<input type="submit" name="gensyms" value="Use Term Names"/><xsl:text> </xsl:text>
 					<input type="submit" name="gensyms" value="Use GenSyms"/>
 				</form>
-				<table width="70%" style="table-layout:fixed;">
+				<table width="80%" style="table-layout:fixed;">
 					<tr>
 						<th class="topright">
 							<input type="checkbox" name="removals" onClick="toggleGroup('removals')"/><xsl:text>  </xsl:text>
@@ -76,7 +77,7 @@ If not, see http://www.gnu.org/licenses/
 									<input type="checkbox" name="effRemsTrigger" onClick="toggleChanges('effRems','effRemsTrigger')"/><xsl:text>  </xsl:text>
 									<h4 style="display:inline;">Effectual (<xsl:value-of select="/root/Removals/Effectual/@size"/>)</h4><xsl:text>  </xsl:text>
 									<img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();"
-										onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, and are not entailed by Ontology 2');"/>
+										onmouseover="tooltip.show('Asserted axioms in Ontology 1, not present nor entailed by Ontology 2');"/>
 								<ul>
 									<xsl:variable name="wkst"><xsl:value-of select="/root/Removals/Effectual/Weakening/@size"/></xsl:variable>
 									<xsl:variable name="wkrt"><xsl:value-of select="/root/Removals/Effectual/WeakeningWithRetiredTerms/@size"/></xsl:variable>
@@ -94,7 +95,7 @@ If not, see http://www.gnu.org/licenses/
 											<input type="checkbox" name="effRems" onClick="toggleDiv('weak','weakrt');"/><xsl:text>  </xsl:text>
 											<b>Weakenings (<xsl:value-of select="$weakenings"/>)</b><xsl:text>  </xsl:text>
 											<img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();"
-												onmouseover="tooltip.show('Axioms that are more constraining than existing axioms in Ontology 2');"/>
+												onmouseover="tooltip.show('Removed axioms that are more constraining than existing ones in Ontology 2');"/>
 											<ul style="display:none">
 												<xsl:if test="$wkst = 0"><li><img src="images/blank.png" alt=""></img>&#160;&#160;With Shared Terms (0)</li></xsl:if>
 												<xsl:if test="$wkst > 0">
@@ -158,7 +159,7 @@ If not, see http://www.gnu.org/licenses/
 											<input type="checkbox" name="effRems" onClick="toggleDiv('rem','remrt');"/><xsl:text>  </xsl:text>
 											<b>Pure Removals (<xsl:value-of select="$prem"/>)</b><xsl:text>  </xsl:text>
 											<img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();"
-												onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 2; typically related to hierachy changes');"/>
+												onmouseover="tooltip.show('Removed axioms with no identifiable relation with axioms in Ontology 2, typically related to hierachy changes');"/>
 											<ul style="display:none">
 												<xsl:if test="$premst = 0"><li><img src="images/blank.png" alt=""></img>&#160;&#160;With Shared Terms (0)</li></xsl:if>
 												<xsl:if test="$premst > 0">
@@ -187,17 +188,12 @@ If not, see http://www.gnu.org/licenses/
 									<input type="checkbox" name="ineffRemsTrigger" onClick="toggleChanges('ineffRems','ineffRemsTrigger')"/><xsl:text>  </xsl:text>
 									<h4 style="display:inline;">Ineffectual (<xsl:value-of select="/root/Removals/Ineffectual/@size"/>)</h4><xsl:text>  </xsl:text>
 									<img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();"
-										onmouseover="tooltip.show('Axioms that are in Ontology 1, not in Ontology 2, but are entailed by Ontology 2, i.e., that have been removed but are still entailed');"
-									/>
+										onmouseover="tooltip.show('Asserted axioms in Ontology 1, that are not asserted but entailed by Ontology 2; they were removed but are still entailed');"/>
 								<ul>
 									<xsl:variable name="rreshuf"><xsl:value-of select="/root/Removals/Ineffectual/RemovedProspectiveRedundancy/RemovedReshuffleProspectiveRedundancy/@size"/></xsl:variable>
-									<xsl:variable name="rnov">
-										<xsl:value-of select="/root/Removals/Ineffectual/RemovedProspectiveRedundancy/RemovedNewProspectiveRedundancy/RemovedNovelProspectiveRedundancy/@size"/>
+									<xsl:variable name="rprospnewred">
+										<xsl:value-of select="/root/Removals/Ineffectual/RemovedProspectiveRedundancy/RemovedNewProspectiveRedundancy/@size"/>
 									</xsl:variable>
-									<xsl:variable name="rpsnov">
-										<xsl:value-of select="/root/Removals/Ineffectual/RemovedProspectiveRedundancy/RemovedNewProspectiveRedundancy/RemovedPseudoNovelProspectiveRedundancy/@size"/>
-									</xsl:variable>
-									<xsl:variable name="rprospnewred"><xsl:value-of select="$rpsnov + $rnov"></xsl:value-of></xsl:variable>
 									<xsl:variable name="rprospred"><xsl:value-of select="$rreshuf + $rprospnewred"/></xsl:variable>
 									<xsl:variable name="rcrewrite"><xsl:value-of select="/root/Removals/Ineffectual/RemovedRewrite/RemovedCompleteRewrite/@size"/></xsl:variable>
 									<xsl:variable name="rprewrite"><xsl:value-of select="/root/Removals/Ineffectual/RemovedRewrite/RemovedPartialRewrite/@size"/></xsl:variable>
@@ -210,7 +206,7 @@ If not, see http://www.gnu.org/licenses/
 											<xsl:text>  </xsl:text>
 											<b>Prospective Redundancy (<xsl:value-of select="$rprospred"/>)</b><xsl:text>  </xsl:text>
 											<img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();"
-												onmouseover="tooltip.show('Axioms in Ontology 1 for which there are more constraining related axioms in Ontology 2');"/> 
+												onmouseover="tooltip.show('Removed axioms that would be redundant in Ontology 2 if not removed. These potentially have more constraining related axioms in Ontology 2');"/> 
 											<ul style="display:none">
 												<xsl:if test="$rreshuf = 0"><li><img src="images/blank.png" alt=""></img>&#160;&#160;Reshuffle (0)</li></xsl:if>
 												<xsl:if test="$rreshuf > 0">
@@ -218,32 +214,18 @@ If not, see http://www.gnu.org/licenses/
 														<img src="images/blank.png" alt=""></img><xsl:text>  </xsl:text>
 														<input type="checkbox" name="ineffRems" onClick="toggleDiv('ravred');"/>
 														<xsl:text>  </xsl:text><a href="#ravred">Reshuffle (<xsl:value-of select="$rreshuf"/>)</a>
+														<img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();"
+															onmouseover="tooltip.show('Removed axioms which are entailed by Ontology 2 due to apparent reshuffling of axioms or terms');"/>
 													</li>
 												</xsl:if>
-												<xsl:if test="$rprospnewred = 0"><li><img src="images/blank.png" alt=""></img>&#160;&#160;Prospective Redundancy (0)</li></xsl:if>
+												<xsl:if test="$rprospnewred = 0"><li><img src="images/blank.png" alt=""></img>&#160;&#160;New (0)</li></xsl:if>
 												<xsl:if test="$rprospnewred > 0">
 													<li><xsl:text>  </xsl:text>
 														<input type="checkbox" name="ineffRems" onClick="toggleDiv('rst','rpsnovred');"/>
 														<xsl:text>  </xsl:text>
-														<b>Retired Prospective Redundancy (<xsl:value-of select="$rprospnewred"/>)</b><b id="t1"/><xsl:text>  </xsl:text>
-														<ul style="display:none">
-															<xsl:if test="$rnov = 0"><li><img src="images/blank.png" alt=""></img>&#160;&#160;Novel (0)</li></xsl:if>
-															<xsl:if test="$rnov > 0">
-																<li id="rsttrig">
-																	<img src="images/blank.png" alt=""></img><xsl:text>  </xsl:text>
-																	<input type="checkbox" name="ineffRems" onClick="toggleDiv('rst');"/>
-																	<xsl:text>  </xsl:text><a href="#rst">Novel (<xsl:value-of select="$rnov"/>)</a>
-																</li>
-															</xsl:if>
-															<xsl:if test="$rpsnov = 0"><li><img src="images/blank.png" alt=""></img>&#160;&#160;Pseudo Novel (0)</li></xsl:if>
-															<xsl:if test="$rpsnov > 0">
-																<li id="rpsnovredtrig">
-																	<img src="images/blank.png" alt=""></img><xsl:text>  </xsl:text>
-																	<input type="checkbox" name="ineffRems" onClick="toggleDiv('rpsnovred');"/>
-																	<xsl:text>  </xsl:text><a href="#rpsnovred">Pseudo Novel (<xsl:value-of select="$rpsnov"/>)</a>
-																</li>
-															</xsl:if>
-														</ul>
+														<a href="#rst">New (<xsl:value-of select="$rprospnewred"/>)</a><b id="t1"/><xsl:text>  </xsl:text>
+														<img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();"
+															onmouseover="tooltip.show('Removed axioms for which there are more constraining related axioms in Ontology 2');"/>
 													</li>
 												</xsl:if>
 											</ul>
@@ -298,7 +280,7 @@ If not, see http://www.gnu.org/licenses/
 									<input type="checkbox" name="effAddsTrigger" onClick="toggleChanges('effAdds','effAddsTrigger')"/><xsl:text>  </xsl:text>
 									<h4 style="display:inline;">Effectual (<xsl:value-of select="/root/Additions/Effectual/@size"/>)</h4><xsl:text>  </xsl:text>
 									<img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();"
-										onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, and are not entailed by Ontology 1');"/> 
+										onmouseover="tooltip.show('Asserted axioms in Ontology 2, not present nor entailed by Ontology 1');"/> 
 								<xsl:variable name="stst"><xsl:value-of select="/root/Additions/Effectual/Strengthening/@size"/></xsl:variable>
 								<xsl:variable name="stnt"><xsl:value-of select="/root/Additions/Effectual/StrengtheningWithNewTerms/@size"/></xsl:variable>
 								<xsl:variable name="strengthenings"><xsl:value-of select="$stst + $stnt"/></xsl:variable>
@@ -380,7 +362,7 @@ If not, see http://www.gnu.org/licenses/
 											<input type="checkbox" name="effAdds" onClick="toggleDiv('add','addnt');"/><xsl:text>  </xsl:text>
 											<b>Pure Additions (<xsl:value-of select="$padd"/>)</b><xsl:text>  </xsl:text>
 											<img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();"
-												onmouseover="tooltip.show('Axioms with no co-relation with axioms in Ontology 1; typically related to hierachy changes');"/> 
+												onmouseover="tooltip.show('Added axioms with no identifiable relation with axioms in Ontology 1, typically related to hierachy changes');"/> 
 											<ul style="display:none">
 												<xsl:if test="$paddst = 0"><li><img src="images/blank.png" alt=""></img>&#160;&#160;With Shared Terms (0)</li></xsl:if>
 												<xsl:if test="$paddst > 0">
@@ -407,19 +389,15 @@ If not, see http://www.gnu.org/licenses/
 									<input type="checkbox" name="ineffAddsTrigger" onClick="toggleChanges('ineffAdds','ineffAddsTrigger')"/><xsl:text>  </xsl:text>
 									<h4 style="display:inline;">Ineffectual (<xsl:value-of select="/root/Additions/Ineffectual/@size"/>)</h4><xsl:text>  </xsl:text>
 									<img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();"
-										onmouseover="tooltip.show('Axioms that are in Ontology 2, not in Ontology 1, but are entailed by Ontology 1, i.e., that have been added but were already entailed');"
+										onmouseover="tooltip.show('Asserted axioms in Ontology 2, that are not asserted but entailed by Ontology 1; they were added but were already entailed');"
 									/> 
 								<ul>
-									<xsl:variable name="aprospnovred">
-										<xsl:value-of select="/root/Additions/Ineffectual/AddedProspectiveRedundancy/AddedNewProspectiveRedundancy/AddedNovelProspectiveRedundancy/@size"/>
-									</xsl:variable>
-									<xsl:variable name="aprosppseudonovred">
-										<xsl:value-of select="/root/Additions/Ineffectual/AddedProspectiveRedundancy/AddedNewProspectiveRedundancy/AddedPseudoNovelProspectiveRedundancy/@size"/>
-									</xsl:variable>
 									<xsl:variable name="aprospresred">
 										<xsl:value-of select="/root/Additions/Ineffectual/AddedProspectiveRedundancy/AddedReshuffleProspectiveRedundancy/@size"/>
 									</xsl:variable>
-									<xsl:variable name="aprospnewred"><xsl:value-of select="$aprospnovred + $aprosppseudonovred"/></xsl:variable>
+									<xsl:variable name="aprospnewred">
+										<xsl:value-of select="/root/Additions/Ineffectual/AddedProspectiveRedundancy/AddedNewProspectiveRedundancy/@size"/>
+									</xsl:variable>
 									<xsl:variable name="addedprospred"><xsl:value-of select="$aprospnewred + $aprospresred"/></xsl:variable>
 									<xsl:variable name="addedrewrite"><xsl:value-of select="/root/Additions/Ineffectual/AddedRewrite/AddedCompleteRewrite/@size"/></xsl:variable>
 									<xsl:variable name="addedprewrite"><xsl:value-of select="/root/Additions/Ineffectual/AddedRewrite/AddedPartialRewrite/@size"/></xsl:variable>
@@ -432,7 +410,7 @@ If not, see http://www.gnu.org/licenses/
 											<xsl:text>  </xsl:text>
 											<b>Retrospective Redundancy (<xsl:value-of select="$addedprospred"/>)</b><xsl:text>  </xsl:text>
 											<img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();"
-												onmouseover="tooltip.show('Axioms in Ontology 2 for which there are more constraining related axioms in Ontology 1');"/> 
+												onmouseover="tooltip.show('Added axioms that would have been redundant in Ontology 1. These potentially have more constraining related axioms in Ontology 1');"/> 
 											<ul style="display:none">
 												<xsl:if test="$aprospresred = 0"><li><img src="images/blank.png" alt=""></img>&#160;&#160;Reshuffle (0)</li></xsl:if>
 												<xsl:if test="$aprospresred > 0">
@@ -440,32 +418,18 @@ If not, see http://www.gnu.org/licenses/
 														<img src="images/blank.png" alt=""></img><xsl:text>  </xsl:text>
 														<input type="checkbox" name="ineffAdds" onClick="toggleDiv('aavred');"/>
 														<xsl:text>  </xsl:text><a href="#aavred">Reshuffle (<xsl:value-of select="$aprospresred"/>)</a>
+														<img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();"
+															onmouseover="tooltip.show('Added axioms which were entailed by Ontology 1 due to apparent reshuffling of axioms or terms');"/>
 													</li>
 												</xsl:if>
-												<xsl:if test="$aprospnewred = 0"><li><img src="images/blank.png" alt=""></img>&#160;&#160;New Retrospective Redundancy (0)</li></xsl:if>
+												<xsl:if test="$aprospnewred = 0"><li><img src="images/blank.png" alt=""></img>&#160;&#160;New (0)</li></xsl:if>
 												<xsl:if test="$aprospnewred > 0">
 													<li><xsl:text>  </xsl:text>
 														<input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak','apseudopred');"/>
 														<xsl:text>  </xsl:text>
-														<b>New Retrospective Redundancy (<xsl:value-of select="$aprospnewred"/>)</b><xsl:text>  </xsl:text>
-														<ul style="display:none">
-															<xsl:if test="$aprospnovred = 0"><li><img src="images/blank.png" alt=""></img>&#160;&#160;Novel (0)</li></xsl:if>
-															<xsl:if test="$aprospnovred > 0">
-																<li id="aweaktrig">
-																	<img src="images/blank.png" alt=""></img><xsl:text>  </xsl:text>
-																	<input type="checkbox" name="ineffAdds" onClick="toggleDiv('aweak');"/>
-																	<xsl:text>  </xsl:text><a href="#aweak">Novel (<xsl:value-of select="$aprospnovred"/>)</a>
-																</li>
-															</xsl:if>
-															<xsl:if test="$aprosppseudonovred = 0"><li><img src="images/blank.png" alt=""></img>&#160;&#160;Pseudo Novel (0)</li></xsl:if>
-															<xsl:if test="$aprosppseudonovred > 0">
-																<li id="apseudopredtrig">
-																	<img src="images/blank.png" alt=""></img><xsl:text>  </xsl:text>
-																	<input type="checkbox" name="ineffAdds" onClick="toggleDiv('apseudopred');"/>
-																	<xsl:text>  </xsl:text><a href="#apseudopred">Pseudo Novel (<xsl:value-of select="$aprosppseudonovred"/>)</a>
-																</li>
-															</xsl:if>
-														</ul>
+														<a href="#aweak">New (<xsl:value-of select="$aprospnewred"/>)</a><xsl:text>  </xsl:text>
+														<img src="images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();"
+															onmouseover="tooltip.show('Added axioms for which there are more constraining related axioms in Ontology 1');"/>
 													</li>
 												</xsl:if>
 											</ul>
@@ -530,7 +494,8 @@ If not, see http://www.gnu.org/licenses/
 	</xsl:template>
 
 
-	<!--  *****  EFFECTUAL ADDITIONS  *****  -->
+	<!--                     EFFECTUAL ADDITIONS                     -->
+
 
 	<!-- Strengthenings w/ Shared Terms-->
 	<xsl:template match="Strengthening">
@@ -549,6 +514,7 @@ If not, see http://www.gnu.org/licenses/
 		</xsl:if>
 	</xsl:template>
 
+
 	<!-- Strengthenings w/ New Terms -->
 	<xsl:template match="StrengtheningWithNewTerms">
 		<xsl:if test="child::node()">
@@ -565,6 +531,7 @@ If not, see http://www.gnu.org/licenses/
 			</tbody>
 		</xsl:if>
 	</xsl:template>
+
 
 	<!-- Modified Definitions w/ Shared Terms-->
 	<xsl:template match="NewModifiedDefinition">
@@ -583,6 +550,7 @@ If not, see http://www.gnu.org/licenses/
 		</xsl:if>
 	</xsl:template>
 	
+	
 	<!-- Modified Definitions w/ New Terms-->
 	<xsl:template match="NewModifiedDefinitionWithNewTerms">
 		<xsl:if test="child::node()">
@@ -600,6 +568,7 @@ If not, see http://www.gnu.org/licenses/
 		</xsl:if>
 	</xsl:template>
 
+
 	<!-- New Descriptions -->
 	<xsl:template match="NewDescription">
 		<xsl:if test="child::node()">
@@ -616,6 +585,7 @@ If not, see http://www.gnu.org/licenses/
 		</xsl:if>
 	</xsl:template>
 
+
 	<!-- Pure Additions w/ Shared Terms -->
 	<xsl:template match="PureAddition">
 		<xsl:if test="child::node()">
@@ -631,6 +601,7 @@ If not, see http://www.gnu.org/licenses/
 			</tbody>
 		</xsl:if>
 	</xsl:template>
+
 
 	<!-- Pure Additions w/ New Terms -->
 	<xsl:template match="PureAdditionWithNewTerms">
@@ -649,7 +620,8 @@ If not, see http://www.gnu.org/licenses/
 	</xsl:template>
 
 
-	<!--  *****  EFFECTUAL REMOVALS  *****  -->
+	<!--                     EFFECTUAL REMOVALS                     -->
+	
 	
 	<!-- Weakenings w/ Shared Terms -->
 	<xsl:template match="Weakening">
@@ -668,6 +640,7 @@ If not, see http://www.gnu.org/licenses/
 		</xsl:if>
 	</xsl:template>
 
+
 	<!-- Weakenings w/ Retired Terms -->
 	<xsl:template match="WeakeningWithRetiredTerms">
 		<xsl:if test="child::node()">
@@ -684,6 +657,7 @@ If not, see http://www.gnu.org/licenses/
 			</tbody>
 		</xsl:if>
 	</xsl:template>
+
 
 	<!-- Modified Definitions w/ Shared Terms -->
 	<xsl:template match="RetiredModifiedDefinition">
@@ -702,6 +676,7 @@ If not, see http://www.gnu.org/licenses/
 		</xsl:if>
 	</xsl:template>
 
+
 	<!-- Modified Definitions w/ Retired Terms -->
 	<xsl:template match="RetiredModifiedDefinitionWithRetiredTerms">
 		<xsl:if test="child::node()">
@@ -719,6 +694,7 @@ If not, see http://www.gnu.org/licenses/
 		</xsl:if>
 	</xsl:template>
 	
+	
 	<!-- Retired Descriptions -->
 	<xsl:template match="RetiredDescription">
 		<xsl:if test="child::node()">
@@ -735,6 +711,7 @@ If not, see http://www.gnu.org/licenses/
 		</xsl:if>
 	</xsl:template>
 
+
 	<!-- Pure Removal w/ Shared Terms -->
 	<xsl:template match="PureRemoval">
 		<xsl:if test="child::node()">
@@ -750,6 +727,7 @@ If not, see http://www.gnu.org/licenses/
 			</tbody>
 		</xsl:if>
 	</xsl:template>
+
 
 	<!-- Pure Removal w/ Retired Terms -->
 	<xsl:template match="PureRemovalWithRetiredTerms">
@@ -768,7 +746,8 @@ If not, see http://www.gnu.org/licenses/
 	</xsl:template>
 
 
-	<!--  *****  INEFFECTUAL ADDITIONS  *****  -->
+	<!--                     INEFFECTUAL ADDITIONS                     -->
+	
 	
 	<!--  Redundancy  -->
 	<xsl:template match="AddedRedundancy">
@@ -787,6 +766,7 @@ If not, see http://www.gnu.org/licenses/
 		</xsl:if>
 	</xsl:template>
 	
+	
 	<!-- Complete Rewrite -->
 	<xsl:template match="AddedCompleteRewrite">
 		<xsl:if test="child::node()">
@@ -803,6 +783,7 @@ If not, see http://www.gnu.org/licenses/
 			</tbody>
 		</xsl:if>
 	</xsl:template>
+	
 	
 	<!-- Partial Rewrite -->
 	<xsl:template match="AddedPartialRewrite">
@@ -821,6 +802,7 @@ If not, see http://www.gnu.org/licenses/
 		</xsl:if>
 	</xsl:template>
 	
+	
 	<!-- Reshuffle Redundancy 	-->
 	<xsl:template match="AddedReshuffleProspectiveRedundancy">
 		<xsl:if test="child::node()">
@@ -838,6 +820,25 @@ If not, see http://www.gnu.org/licenses/
 		</xsl:if>
 	</xsl:template>
 	
+	
+	<!-- New Redundancy 	-->
+	<xsl:template match="AddedNewProspectiveRedundancy">
+		<xsl:if test="child::node()">
+			<tbody id="aweak" style="display:none">
+				<tr class="withoutstyle">
+					<td colspan="3"><h4 style="display: inline-block;">Retrospective New Redundant (<xsl:value-of select="count(./*)"/>)</h4> [<a href="#">back to top</a>]</td>
+				</tr>
+				<tr>
+					<th class="addition">ID</th>
+					<th class="normaladd">Justifications in Ontology 1</th>
+					<th class="addition">Axiom in Ontology 2</th>
+				</tr>
+				<xsl:apply-templates mode="IneffectualAdditionTemplate"/>
+			</tbody>
+		</xsl:if>
+	</xsl:template>
+	
+	
 	<!-- Novel Redundancy 	-->
 	<xsl:template match="AddedNovelProspectiveRedundancy">
 		<xsl:if test="child::node()">
@@ -854,6 +855,7 @@ If not, see http://www.gnu.org/licenses/
 			</tbody>
 		</xsl:if>
 	</xsl:template>
+	
 	
 	<!-- Pseudo Novel Redundancy 	-->
 	<xsl:template match="AddedPseudoNovelProspectiveRedundancy">
@@ -873,7 +875,8 @@ If not, see http://www.gnu.org/licenses/
 	</xsl:template>
 	
 	
-	<!--  *****  INEFFECTUAL REMOVALS  *****  -->
+	<!--                     INEFFECTUAL REMOVALS                     -->
+	
 	
 	<!-- Redundancy	-->
 	<xsl:template match="RemovedRedundancy">
@@ -892,6 +895,7 @@ If not, see http://www.gnu.org/licenses/
 		</xsl:if>
 	</xsl:template>
 	
+	
 	<!-- Complete Rewrite -->
 	<xsl:template match="RemovedCompleteRewrite">
 		<xsl:if test="child::node()">
@@ -908,6 +912,7 @@ If not, see http://www.gnu.org/licenses/
 			</tbody>
 		</xsl:if>
 	</xsl:template>
+	
 	
 	<!-- Partial Rewrite -->
 	<xsl:template match="RemovedPartialRewrite">
@@ -926,6 +931,7 @@ If not, see http://www.gnu.org/licenses/
 		</xsl:if>
 	</xsl:template>
 	
+	
 	<!-- Reshuffle Redundancy  -->
 	<xsl:template match="RemovedReshuffleProspectiveRedundancy">
 		<xsl:if test="child::node()">
@@ -942,6 +948,25 @@ If not, see http://www.gnu.org/licenses/
 			</tbody>
 		</xsl:if>
 	</xsl:template>
+	
+	
+	<!-- New Redundancy  -->
+	<xsl:template match="RemovedNewProspectiveRedundancy">
+		<xsl:if test="child::node()">
+			<tbody id="rst" style="display:none">
+				<tr class="withoutstyle">
+					<td colspan="3"><h4 style="display: inline-block;">Prospective New Redundant (<xsl:value-of select="count(./*)"/>)</h4> [<a href="#">back to top</a>]</td>
+				</tr>
+				<tr>
+					<th class="removal">ID</th>
+					<th class="removal">Axiom in Ontology 1</th>
+					<th class="normalrem">Justifications in Ontology 2</th>
+				</tr>
+				<xsl:apply-templates mode="IneffectualRemovalTemplate"/>
+			</tbody>
+		</xsl:if>
+	</xsl:template>
+	
 	
 	<!-- Novel Redundancy  -->
 	<xsl:template match="RemovedNovelProspectiveRedundancy">
@@ -960,6 +985,7 @@ If not, see http://www.gnu.org/licenses/
 		</xsl:if>
 	</xsl:template>
 	
+	
 	<!-- Pseudo Novel Redundancy  -->
 	<xsl:template match="RemovedPseudoNovelProspectiveRedundancy">
 		<xsl:if test="child::node()">
@@ -976,6 +1002,9 @@ If not, see http://www.gnu.org/licenses/
 			</tbody>
 		</xsl:if>
 	</xsl:template>
+
+
+	<!--                     CHANGE TEMPLATES                     -->
 
 
 	<!-- Ineffectual Addition Template -->
@@ -1188,6 +1217,7 @@ If not, see http://www.gnu.org/licenses/
 		</tr>
 	</xsl:template>
 	
+	
 	<!-- 2-Column Effectual Addition -->
 	<xsl:template match="Change" mode="TwoColumnEffectualAddition">
 		<tr class="addition">
@@ -1195,18 +1225,14 @@ If not, see http://www.gnu.org/licenses/
 			<td>
 				<xsl:variable name="myAxiom">
 					<xsl:call-template name="colorMyAxiom">
-						<xsl:with-param name="axiom">
-							<xsl:value-of select="Source/Axiom"/>
-						</xsl:with-param>
+						<xsl:with-param name="axiom"><xsl:value-of select="Source/Axiom"/></xsl:with-param>
 					</xsl:call-template>
 				</xsl:variable>
 				<xsl:copy-of select="$myAxiom"/>. </td>
 			<td>
 				<xsl:variable name="myAxiom">
 					<xsl:call-template name="colorMyAxiom">
-						<xsl:with-param name="axiom">
-							<xsl:value-of select="Axiom"/>
-						</xsl:with-param>
+						<xsl:with-param name="axiom"><xsl:value-of select="Axiom"/></xsl:with-param>
 					</xsl:call-template>
 				</xsl:variable>
 				<xsl:copy-of select="$myAxiom"/>.<br/>
@@ -1216,6 +1242,7 @@ If not, see http://www.gnu.org/licenses/
 			</td>
 		</tr>
 	</xsl:template>
+	
 	
 	<!-- 1-Column Effectual Removal -->
 	<xsl:template match="Change" mode="OneColumnEffectualRemoval">
@@ -1236,6 +1263,7 @@ If not, see http://www.gnu.org/licenses/
 			</td>
 		</tr>
 	</xsl:template>
+	
 	
 	<!-- 2-Column Effectual Removal -->
 	<xsl:template match="Change" mode="TwoColumnEffectualRemoval">
@@ -1267,6 +1295,7 @@ If not, see http://www.gnu.org/licenses/
 		</tr>
 	</xsl:template>
 
+
 	<!-- Find and Color -->
 	<xsl:template name="colorMyAxiom">
 		<xsl:param name="axiom"/>
@@ -1286,7 +1315,6 @@ If not, see http://www.gnu.org/licenses/
 					</span>
 				</xsl:if>
 				<xsl:if test="not(string-length(regex-group(3)) = 0)">
-					<br/>
 					<span class="keyword">
 						<xsl:value-of select="regex-group(3)"/>
 					</span>
