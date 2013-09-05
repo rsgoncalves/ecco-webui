@@ -133,8 +133,9 @@ public class WebDiff extends HttpServlet {
 			styledXml = report.getReportAsHTML(labelDoc, xsltPath);
 			request.getSession().setAttribute("curuuid", lb_uuid);
 		}
-
-		response.setContentType("text/html");
+		
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html;charset=UTF-8");
 		pw.println(styledXml);
 		pw.flush();
 		pw.close();
