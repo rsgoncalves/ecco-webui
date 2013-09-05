@@ -514,9 +514,9 @@ If not, see http://www.gnu.org/licenses/
 					<th class="normaladd">Weaker Axiom in Ontology 1</th>
 					<th class="addition">Strengthened Axiom in Ontology 2</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &darr;</th>
+						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes <xsl:text>&darr;</xsl:text></th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes &uarr;</th>
+						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes <b>&uarr;</b></th>
 				</tr>
 				<xsl:apply-templates mode="TwoColumnEffectualAddition"/>
 			</tbody>
