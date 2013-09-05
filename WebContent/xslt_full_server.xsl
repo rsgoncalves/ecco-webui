@@ -509,7 +509,7 @@ If not, see http://www.gnu.org/licenses/
 					<th class="normaladd">Weaker Axiom in Ontology 1</th>
 					<th class="addition">Strengthened Axiom in Ontology 2</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes <xsl:text>&#8595;</xsl:text></th>
+						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &#8595;</th>
 					<th class="addition" onmouseout="tooltip.hide();"
 						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes <xsl:text>&#8593;</xsl:text></th>
 				</tr>
@@ -531,7 +531,7 @@ If not, see http://www.gnu.org/licenses/
 					<th class="normaladd">Weaker Axiom in Ontology 1</th>
 					<th class="addition">Strengthened Axiom in Ontology 2</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes <xsl:text>&#8595;</xsl:text></th>
+						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &#8595;</th>
 					<th class="addition" onmouseout="tooltip.hide();"
 						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes <xsl:text>&#8593;</xsl:text></th>
 				</tr>
@@ -553,7 +553,7 @@ If not, see http://www.gnu.org/licenses/
 					<th class="normaladd">Source Definition in Ontology 1</th>
 					<th class="addition">Target Definition in Ontology 2</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes <xsl:text>&#8595;</xsl:text></th>
+						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &#8595;</th>
 					<th class="addition" onmouseout="tooltip.hide();"
 						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes <xsl:text>&#8593;</xsl:text></th>
 				</tr>
@@ -575,7 +575,7 @@ If not, see http://www.gnu.org/licenses/
 					<th class="normaladd">Source Definition in Ontology 1</th>
 					<th class="addition">Target Definition in Ontology 2</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes <xsl:text>&#8595;</xsl:text></th>
+						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &#8595;</th>
 					<th class="addition" onmouseout="tooltip.hide();"
 						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes <xsl:text>&#8593;</xsl:text></th>
 				</tr>
@@ -596,7 +596,7 @@ If not, see http://www.gnu.org/licenses/
 					<th class="addition">ID</th>
 					<th class="addition" colspan="2">New Description Axiom in Ontology 2</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes <xsl:text>&#8595;</xsl:text></th>
+						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &#8595;</th>
 					<th class="addition" onmouseout="tooltip.hide();"
 						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes <xsl:text>&#8593;</xsl:text></th>
 				</tr>
@@ -617,7 +617,7 @@ If not, see http://www.gnu.org/licenses/
 					<th class="addition">ID</th>
 					<th class="addition" colspan="2">Addition to Ontology 2</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes <xsl:text>&#8595;</xsl:text></th>
+						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &#8595;</th>
 					<th class="addition" onmouseout="tooltip.hide();"
 						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes <xsl:text>&#8593;</xsl:text></th>
 				</tr>
@@ -638,7 +638,7 @@ If not, see http://www.gnu.org/licenses/
 					<th class="addition">ID</th>
 					<th class="addition" colspan="2">Addition to Ontology 2</th>
 					<th class="addition" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes <xsl:text>&#8595;</xsl:text></th>
+						onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &#8595;</th>
 					<th class="addition" onmouseout="tooltip.hide();"
 						onmouseover="tooltip.show('Classes that have gained subclasses');">Classes <xsl:text>&#8593;</xsl:text></th>
 				</tr>
@@ -665,7 +665,7 @@ If not, see http://www.gnu.org/licenses/
 					<th class="removal" onmouseout="tooltip.hide();"
 						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes <xsl:text>&#8593;</xsl:text></th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes <xsl:text>&#8595;</xsl:text></th>
+						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &#8595;</th>
 				</tr>
 				<xsl:apply-templates mode="TwoColumnEffectualRemoval"/>
 			</tbody>
@@ -687,7 +687,7 @@ If not, see http://www.gnu.org/licenses/
 					<th class="removal" onmouseout="tooltip.hide();"
 						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes <xsl:text>&#8593;</xsl:text></th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes <xsl:text>&#8595;</xsl:text></th>
+						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &#8595;</th>
 				</tr>
 				<xsl:apply-templates mode="TwoColumnEffectualRemoval"/>
 			</tbody>
@@ -709,7 +709,7 @@ If not, see http://www.gnu.org/licenses/
 					<th class="removal" onmouseout="tooltip.hide();"
 						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes <xsl:text>&#8593;</xsl:text></th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes <xsl:text>&#8595;</xsl:text></th>
+						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &#8595;</th>
 				</tr>
 				<xsl:apply-templates mode="TwoColumnEffectualRemoval"/>
 			</tbody>
@@ -731,7 +731,7 @@ If not, see http://www.gnu.org/licenses/
 					<th class="removal" onmouseout="tooltip.hide();"
 						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes <xsl:text>&#8593;</xsl:text></th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes <xsl:text>&#8595;</xsl:text></th>
+						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &#8595;</th>
 				</tr>
 				<xsl:apply-templates mode="TwoColumnEffectualRemoval"/>
 			</tbody>
@@ -752,7 +752,7 @@ If not, see http://www.gnu.org/licenses/
 					<th class="removal" onmouseout="tooltip.hide();"
 						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes <xsl:text>&#8593;</xsl:text></th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes <xsl:text>&#8595;</xsl:text></th>
+						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &#8595;</th>
 				</tr>
 				<xsl:apply-templates mode="OneColumnEffectualRemoval"/>
 			</tbody>
@@ -773,7 +773,7 @@ If not, see http://www.gnu.org/licenses/
 					<th class="removal" onmouseout="tooltip.hide();"
 						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes <xsl:text>&#8593;</xsl:text></th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes <xsl:text>&#8595;</xsl:text></th>
+						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &#8595;</th>
 				</tr>
 				<xsl:apply-templates mode="OneColumnEffectualRemoval"/>
 			</tbody>
@@ -794,7 +794,7 @@ If not, see http://www.gnu.org/licenses/
 					<th class="removal" onmouseout="tooltip.hide();"
 						onmouseover="tooltip.show('Classes that have lost superclasses');">Classes <xsl:text>&#8593;</xsl:text></th>
 					<th class="removal" onmouseout="tooltip.hide();"
-						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes <xsl:text>&#8595;</xsl:text></th>
+						onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &#8595;</th>
 				</tr>
 				<xsl:apply-templates mode="OneColumnEffectualRemoval"/>
 			</tbody>
