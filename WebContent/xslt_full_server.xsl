@@ -1371,8 +1371,7 @@ If not, see http://www.gnu.org/licenses/
 		<xsl:param name="wits"/>
 		<xsl:text>'&lt;pre&gt;</xsl:text>
 			<xsl:for-each select="$wits/Axiom">
-				<xsl:value-of select="."/>
-				<xsl:text>.\n</xsl:text>
+				<xsl:value-of select="."/><xsl:text>.\n</xsl:text>
 			</xsl:for-each>
 		<xsl:text>&lt;/pre&gt;'</xsl:text>
 	</xsl:template>
