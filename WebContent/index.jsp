@@ -27,7 +27,7 @@
 		<h1><i>ecco</i> a diff tool for OWL ontologies</h1>
 		<form action="diff" method="post" enctype="multipart/form-data">
 			<div class="box">
-				Try out some pre-computed examples:
+				<!-- Try out some pre-computed examples:
 				<select name="url">
 					<option value="examples/ncit_05.07/index_labels.html">NCI Thesaurus 05.07</option>
 					<option value="examples/ncit_06.04/index_labels.html">NCI Thesaurus 06.04</option>
@@ -39,7 +39,7 @@
 					<option value="examples/artificial/index_labels.html">Artificial</option>
 					<option value="examples/tdiff/index_labels.html">Totally different</option>
 				</select> 
-				<input type=button value="Go!" onClick="jumpToIt(this.form)"><br/>
+				<input type=button value="Go!" onClick="jumpToIt(this.form)"><br/> -->
 				<p>
 					Browse for ontology <b>files</b>, or enter a <b>URL</b> for
 					each ontology into the text areas:<br />
@@ -59,16 +59,16 @@
 					<input type="file" name="o2file">
 				</label>
 				<br/>
-				<p>Concept changes:
+				<p><b>Concept changes:</b>
 				<input type="radio" name="cdiff" value="at" checked><a onmouseout="tooltip.hide();" 
-					onmouseover="tooltip.show('Computes entailment differences between atomic concepts');">atomic</a> 
+					onmouseover="tooltip.show('Computes which atomic concepts gained or lost atomic super/sub-concepts');">atomic</a> 
 				<input type="radio" name="cdiff" value="sub"><a onmouseout="tooltip.hide();" 
-					onmouseover="tooltip.show('Computes entailment differences between subconcepts asserted in either ontology');">subconcepts</a> 
+					onmouseover="tooltip.show('Computes which atomic concepts gained or lost super/sub-concepts asserted in either ontology');">subconcepts</a> 
 				<input type="radio" name="cdiff" value="gr"><a onmouseout="tooltip.hide();" 
-					onmouseover="tooltip.show('Computes entailment differences between concepts formed using ALC constructors over asserted subconcepts');">extended grammar</a>
+					onmouseover="tooltip.show('Computes which atomic concepts gained or lost super/sub-concepts formed using ALC constructors over asserted concepts');">extended grammar</a>
 				<br/>
 				</p>
-				<p><input type="submit" value="Execute Diff"></p>
+				<p><input type="submit" value="Compute diff"></p>
 			</div>
 		</form>
 	</div>
