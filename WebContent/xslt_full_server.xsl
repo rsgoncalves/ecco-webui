@@ -1371,7 +1371,15 @@ If not, see http://www.gnu.org/licenses/
 		<xsl:param name="wits"/>
 		<xsl:text>'&lt;pre&gt;</xsl:text>
 			<xsl:for-each select="$wits/Axiom">
-				<xsl:value-of select="."/><xsl:text>.\n</xsl:text>
+				<xsl:variable name="myAxiom">
+					<xsl:call-template name="colorMyAxiom">
+						<xsl:with-param name="axiom">
+							<xsl:value-of select="."/>
+						</xsl:with-param>
+					</xsl:call-template>
+				</xsl:variable>
+				<xsl:copy-of select="$myAxiom"/><xsl:text>.\n</xsl:text>
+				<!--<xsl:value-of select="."/><xsl:text>.\n</xsl:text>-->
 			</xsl:for-each>
 		<xsl:text>&lt;/pre&gt;'</xsl:text>
 	</xsl:template>
@@ -1426,7 +1434,7 @@ If not, see http://www.gnu.org/licenses/
 				</xsl:if>
 			</xsl:matching-substring>
 			<xsl:non-matching-substring>
-				 <xsl:value-of select="."/>
+				<xsl:value-of select="."/>
 			</xsl:non-matching-substring>
 		</xsl:analyze-string>
 	</xsl:template>

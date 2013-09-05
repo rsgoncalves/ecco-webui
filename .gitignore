@@ -1,6 +1,8 @@
 # Test files #
 *.txt
 todo
+*.html
+*.xml
 
 # Build #
 *.war
