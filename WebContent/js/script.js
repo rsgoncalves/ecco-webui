@@ -18,12 +18,14 @@
 ******************************************************************************/
 
 // Array of categories
-var allDivs = new Array("st", "stnt", "add", "addnt", "newdesc", "stequiv", "stequivnt", "arewrite", "aprw", "ared", "areshuf", "aprospnewred", 
-"weak", "weakrt", "rem", "remrt", "retdesc", "wkequiv", "wkequivrt", "rrewrite", "rprw", "rred", "rreshuf", "rprospnewred");
+var allDivs = new Array("st", "stnt", "add", "addnt", "newdesc", "stequiv", "stequivnt", "aweak", "arewrite",
+"aprw", "ared", "aavred", "apseudopred", "weak", "weakrt", "rem", "remrt", "retdesc", "wkequiv", "wkequivrt",
+"rst", "rrewrite", "rprw", "rred", "ravred", "rpsnovred");
+
 var effAds = new Array("st", "stnt", "add", "addnt", "newdesc", "stequiv", "stequivnt");
-var inefAds = new Array("arewrite", "aprw", "ared", "areshuf", "aprospnewred");
+var inefAds = new Array("aweak", "arewrite", "aprw", "ared", "aavred", "apseudopred");
 var effRems = new Array("weak", "weakrt", "rem", "remrt", "retdesc", "wkequiv", "wkequivrt");
-var inefRems = new Array("rrewrite", "rprw", "rred", "rreshuf", "rprospnewred");
+var inefRems = new Array("rst", "rrewrite", "rprw", "rred", "ravred", "rpsnovred");
 
 var allTriggers = new Array('additions', 'effAddsTrigger', 'effAdds', 'ineffAddsTrigger',
 'ineffAdds', 'removals', 'effRemsTrigger', 'effRems', 'ineffRemsTrigger', 'ineffRems');
