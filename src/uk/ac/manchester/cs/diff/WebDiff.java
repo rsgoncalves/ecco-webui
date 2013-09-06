@@ -43,6 +43,8 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+import uk.ac.manchester.cs.diff.axiom.changeset.AxiomChangeSet;
+import uk.ac.manchester.cs.diff.axiom.changeset.StructuralChangeSet;
 import uk.ac.manchester.cs.diff.output.xml.XMLReport;
 
 /**
@@ -99,10 +101,9 @@ public class WebDiff extends HttpServlet {
 			throws IOException, ServletException, TransformerException, OWLOntologyCreationException, FileUploadException {
 		PrintWriter pw = response.getWriter();
 		String xsltPath = "https://raw.github.com/rsgoncalves/ecco-webui/master/WebContent/xslt_full_server.xsl";
-//		String xsltPath = "/Users/rafa/Documents/PhD/workspace/ecco-webui/WebContent/xslt_full_server.xsl"; // MBP
 		String styledXml = "";
 		
-		EccoRunner runner = new EccoRunner(true, false, true, false, 10, false);
+		EccoRunner runner = new EccoRunner(true, false, true, false, 5, false);
 		
 		// Load ontologies
 		loadOntologies(pw, request, response, runner);
@@ -110,29 +111,36 @@ public class WebDiff extends HttpServlet {
 		if(ont1 != null && ont2 != null) {
 			// Get diff report 
 			XMLReport report = runner.computeDiff(ont1, ont2, cdiff, xsltPath, false);
-			request.getSession().setAttribute("xsltPath", xsltPath);
-			request.getSession().setAttribute("report", report);
+			AxiomChangeSet changeSet = report.getChangeSet();
+			if(changeSet instanceof StructuralChangeSet) {
+				styledXml = "One of the given ontologies is inconsistent. In such cases we can only detect structural differences.<br/>" +
+						"There will be a separate transform for this specific change set soon...";
+			}
+			else {
+				request.getSession().setAttribute("xsltPath", xsltPath);
+				request.getSession().setAttribute("report", report);
 
-			// Store name-based XML document in session attribute
-			Document doc = report.getXMLDocumentUsingTermNames();
-			Element root = doc.getElementById("root");
-			String uuid = root.getAttribute("uuid");
-			request.getSession().setAttribute(uuid, doc);
+				// Store name-based XML document in session attribute
+				Document doc = report.getXMLDocumentUsingTermNames();
+				Element root = doc.getElementById("root");
+				String uuid = root.getAttribute("uuid");
+				request.getSession().setAttribute(uuid, doc);
 
-			// Store gensym-based XML document in session attribute
-			Document genSymDoc = report.getXMLDocumentUsingGenSyms();
-			Element gs_root = genSymDoc.getElementById("root");
-			String gs_uuid = gs_root.getAttribute("uuid");
-			request.getSession().setAttribute(gs_uuid, genSymDoc);
+				// Store gensym-based XML document in session attribute
+				Document genSymDoc = report.getXMLDocumentUsingGenSyms();
+				Element gs_root = genSymDoc.getElementById("root");
+				String gs_uuid = gs_root.getAttribute("uuid");
+				request.getSession().setAttribute(gs_uuid, genSymDoc);
 
-			// Store label-based XML document in session attribute
-			Document labelDoc = report.getXMLDocumentUsingLabels();
-			Element lb_root = labelDoc.getElementById("root");
-			String lb_uuid = lb_root.getAttribute("uuid");		
-			request.getSession().setAttribute(lb_uuid, labelDoc);
+				// Store label-based XML document in session attribute
+				Document labelDoc = report.getXMLDocumentUsingLabels();
+				Element lb_root = labelDoc.getElementById("root");
+				String lb_uuid = lb_root.getAttribute("uuid");		
+				request.getSession().setAttribute(lb_uuid, labelDoc);
 
-			styledXml = report.getReportAsHTML(labelDoc, xsltPath);
-			request.getSession().setAttribute("curuuid", lb_uuid);
+				styledXml = report.getReportAsHTML(labelDoc, xsltPath);
+				request.getSession().setAttribute("curuuid", lb_uuid);
+			}
 		}
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
