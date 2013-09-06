@@ -195,9 +195,8 @@ public class WebDiff extends HttpServlet {
 						if(!ont2uri.equals(""))
 							ont2 = runner.loadOntology(2, ont2uri.trim(), false);
 					}
-					else if(name.equals("cdiff")) {
+					else if(name.equals("cdiff"))
 						cdiff = item.getString();
-					}
 				} 
 				// Load from uploaded file
 				else {
