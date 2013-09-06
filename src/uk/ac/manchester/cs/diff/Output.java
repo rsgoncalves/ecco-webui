@@ -129,7 +129,8 @@ public class Output extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
-		response.setContentType("text/html");
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html;charset=UTF-8");
 		pw.println(htmlOutput);
 		pw.flush();
 		pw.close();

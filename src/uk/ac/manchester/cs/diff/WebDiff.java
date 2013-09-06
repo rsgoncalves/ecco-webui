@@ -98,7 +98,8 @@ public class WebDiff extends HttpServlet {
 	private void getDiff(HttpServletRequest request, HttpServletResponse response) 
 			throws IOException, ServletException, TransformerException, OWLOntologyCreationException, FileUploadException {
 		PrintWriter pw = response.getWriter();
-		String xsltPath = "https://raw.github.com/rsgoncalves/ecco-webui/master/WebContent/xslt_full_server.xsl";
+//		String xsltPath = "https://raw.github.com/rsgoncalves/ecco-webui/master/WebContent/xslt_full_server.xsl";
+		String xsltPath = "/Users/rafa/Documents/PhD/workspace/ecco-webui/WebContent/xslt_full_server.xsl";
 		String styledXml = "";
 		
 		EccoRunner runner = new EccoRunner(true, false, true, false, 10, false);
@@ -133,7 +134,6 @@ public class WebDiff extends HttpServlet {
 			styledXml = report.getReportAsHTML(labelDoc, xsltPath);
 			request.getSession().setAttribute("curuuid", lb_uuid);
 		}
-		
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
 		pw.println(styledXml);
