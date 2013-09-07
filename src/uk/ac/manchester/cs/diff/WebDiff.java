@@ -115,6 +115,7 @@ public class WebDiff extends HttpServlet {
 			if(changeSet instanceof StructuralChangeSet) {
 				styledXml = "One of the given ontologies is inconsistent. In such cases we can only detect structural differences.<br/>" +
 						"There will be a separate transform for this specific change set soon...";
+				// TODO new xslt for structural change set *only*
 			}
 			else {
 				request.getSession().setAttribute("xsltPath", xsltPath);

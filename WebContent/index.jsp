@@ -4,6 +4,9 @@
 <html>
 <head>
 <title>ecco</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/reveal.css"/>
 <script type="text/javascript" src="js/jquery-1.4.4.js"></script>
@@ -13,11 +16,16 @@
 <script type="text/javascript" src="js/jquery.reveal.js"></script>
 <script type="text/javascript" src="js/jscript.js"></script>
 <script type="text/javascript">
+ 	window.onunload=function(){
+		document.getElementById('loader').style.display='none';
+		document.getElementById('compute').value='compute diff';
+		document.getElementById('compute').disabled=false;
+	};
 	function jumpToIt(frm) {
-	    var newPage = frm.url.options[frm.url.selectedIndex].value;
-    	if (newPage != "None") {
-	        location.href=newPage;
-	    }
+		var newPage = frm.url.options[frm.url.selectedIndex].value;
+		if (newPage != "None") {
+			location.href = newPage;
+		}
 	}
 </script>
 </head>
@@ -25,7 +33,7 @@
 	<div class="content">
 		<h1>&nbsp;</h1>
 		<h1><i>ecco</i> a diff tool for OWL ontologies</h1>
-		<form action="diff" method="post" enctype="multipart/form-data">
+		<form action="diff" method="post" enctype="multipart/form-data" id="diffargs">
 			<div class="box">
 				<!-- Try out some pre-computed examples:
 				<select name="url">
@@ -58,17 +66,21 @@
 				<label><br/>
 					<input type="file" name="o2file">
 				</label>
-				<br/>
-				<p><b>Concept changes:</b>
+				<br/><br/>
+				<h4>Mechanism for detecting affected classes (hover for description):</h4>
 				<input type="radio" name="cdiff" value="at" checked><a onmouseout="tooltip.hide();" 
-					onmouseover="tooltip.show('Computes which atomic concepts gained or lost atomic super/sub-concepts');">atomic</a> 
+					onmouseover="tooltip.show('Computes which atomic classes gained or lost atomic super/sub-classes, by comparing inferred class hierarchies. Feasible for small to large size input over the Web (computation time: fast)');">atomic</a> 
 				<input type="radio" name="cdiff" value="sub"><a onmouseout="tooltip.hide();" 
-					onmouseover="tooltip.show('Computes which atomic concepts gained or lost super/sub-concepts asserted in either ontology');">subconcepts</a> 
+					onmouseover="tooltip.show('Computes which atomic classes gained or lost super/sub-class expressions asserted in either ontology. Feasible for small to medium size input over the Web (computation time: medium)');">subconcepts</a>
+				<input type="radio" name="cdiff" value="cvs"><a onmouseout="tooltip.hide();" 
+					onmouseover="tooltip.show('Computes which atomic classes gained or lost super/sub-class expressions formed using some ALC constructors over *atomic classes*. Feasible for small input over the Web (computation time: slow)');">contentcvs grammar</a> 
 				<input type="radio" name="cdiff" value="gr"><a onmouseout="tooltip.hide();" 
-					onmouseover="tooltip.show('Computes which atomic concepts gained or lost super/sub-concepts formed using ALC constructors over asserted concepts');">extended grammar</a>
+					onmouseover="tooltip.show('Computes which atomic classes gained or lost super/sub-class expressions formed using ALC constructors over *asserted class expressions*. Feasible for small input over the Web (computation time: slower than contentcvs)');">extended grammar</a>
 				<br/>
-				</p>
-				<p><input type="submit" value="Compute diff"></p>
+				<br/>
+				<p><input type="submit" value="compute diff" id="compute" style="width:120px;"
+					onclick="document.getElementById('loader').style.display='block';this.value='computing...';this.disabled=true;this.form.submit();">
+				<img id="loader" src="images/loader1.gif" style="display: none;"/></p>
 			</div>
 		</form>
 	</div>

@@ -17,22 +17,6 @@
 * If not, see http://www.gnu.org/licenses/.
 ******************************************************************************/
 
-// Array of categories
-var allDivs = new Array("st", "stnt", "add", "addnt", "newdesc", "stequiv", "stequivnt", "aweak", "arewrite",
-"aprw", "ared", "aavred", "apseudopred", "weak", "weakrt", "rem", "remrt", "retdesc", "wkequiv", "wkequivrt",
-"rst", "rrewrite", "rprw", "rred", "ravred", "rpsnovred");
-
-var effAds = new Array("st", "stnt", "add", "addnt", "newdesc", "stequiv", "stequivnt");
-var inefAds = new Array("aweak", "arewrite", "aprw", "ared", "aavred", "apseudopred");
-var effRems = new Array("weak", "weakrt", "rem", "remrt", "retdesc", "wkequiv", "wkequivrt");
-var inefRems = new Array("rst", "rrewrite", "rprw", "rred", "ravred", "rpsnovred");
-
-var allTriggers = new Array('additions', 'effAddsTrigger', 'effAdds', 'ineffAddsTrigger',
-'ineffAdds', 'removals', 'effRemsTrigger', 'effRems', 'ineffRemsTrigger', 'ineffRems');
-
-var links = document.getElementsByTagName("a");
-
-
 // Change show/hide state
 function toggleDiv() {
     for (var i = 0; i < arguments.length; i++) {
@@ -386,3 +370,19 @@ var tooltip = function () {
     };
 }
 ();
+
+
+//Array of categories
+var allDivs = new Array("st", "stnt", "add", "addnt", "newdesc", "stequiv", "stequivnt", "aweak", "arewrite",
+"aprw", "ared", "aavred", "apseudopred", "weak", "weakrt", "rem", "remrt", "retdesc", "wkequiv", "wkequivrt",
+"rst", "rrewrite", "rprw", "rred", "ravred", "rpsnovred");
+
+var effAds = new Array("st", "stnt", "add", "addnt", "newdesc", "stequiv", "stequivnt");
+var inefAds = new Array("aweak", "arewrite", "aprw", "ared", "aavred", "apseudopred");
+var effRems = new Array("weak", "weakrt", "rem", "remrt", "retdesc", "wkequiv", "wkequivrt");
+var inefRems = new Array("rst", "rrewrite", "rprw", "rred", "ravred", "rpsnovred");
+
+var allTriggers = new Array('additions', 'effAddsTrigger', 'effAdds', 'ineffAddsTrigger',
+'ineffAdds', 'removals', 'effRemsTrigger', 'effRems', 'ineffRemsTrigger', 'ineffRems');
+
+var links = document.getElementsByTagName("a");
