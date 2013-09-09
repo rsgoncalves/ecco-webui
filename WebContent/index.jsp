@@ -9,6 +9,7 @@
 <meta http-equiv="Expires" content="0" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/reveal.css"/>
+<link rel="icon" type="image/png" href="images/favicon.png"/>
 <script type="text/javascript" src="js/jquery-1.4.4.js"></script>
 <script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
