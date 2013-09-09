@@ -1,6 +1,6 @@
-<%@ page import="org.semanticweb.owlapi.util.VersionInfo"%>
-<%@ page import="uk.ac.manchester.cs.diff.WebDiff"%>
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ page import="org.semanticweb.owlapi.util.VersionInfo" %>
+<%@ page import="uk.ac.manchester.cs.diff.WebDiff" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
 <title>ecco</title>
@@ -16,17 +16,19 @@
 <script type="text/javascript" src="js/jquery.reveal.js"></script>
 <script type="text/javascript" src="js/jscript.js"></script>
 <script type="text/javascript">
- 	window.onunload=function(){
+ 	window.onunload=function() {
 		document.getElementById('loader').style.display='none';
 		document.getElementById('compute').value='compute diff';
 		document.getElementById('compute').disabled=false;
 	};
 	function jumpToIt(frm) {
 		var newPage = frm.url.options[frm.url.selectedIndex].value;
-		if (newPage != "None") {
+		if(newPage != "None")
 			location.href = newPage;
-		}
 	}
+	/* function submit(ele) {
+		ele.form.submit();
+	} */
 </script>
 </head>
 <body>
