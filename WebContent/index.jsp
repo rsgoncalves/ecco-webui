@@ -45,6 +45,9 @@
 					<option value="examples/toy_gr/index_labels.html">Toy ontologies [Gr]</option>
 					<option value="examples/ncit_13.05_at/index_labels.html">NCI Thesaurus 13.05 [At]</option>
 					<option value="examples/ncit_13.05_sub/index_labels.html">NCI Thesaurus 13.05 [Sub]</option>
+					<option value="examples/toy2_at/index_labels.html">Toy ontologies 2 [At]</option>
+					<option value="examples/toy2_sub/index_labels.html">Toy ontologies 2 [Sub]</option>
+					<option value="examples/toy2_gr/index_labels.html">Toy ontologies 2 [Gr]</option>
 					<!--
 					<option value="examples/ncit_13.01/index_labels.html">NCI Thesaurus 13.01</option>
 					<option value="examples/ncit_13.04/index_labels.html">NCI Thesaurus 13.04</option>

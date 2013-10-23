@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="root" uuid="bb9a7ed1-e183-4421-b2f9-43ca529adc10-lbl">
+   <Additions id="adds" size="11">
+      <Effectual id="effadds" size="6">
+         <Strengthening id="st" size="1">
+            <Change id="1">
+               <Axiom>D SubClassOf F and (s some A)</Axiom>
+               <ConceptChanges size="2">
+                  <DirectChanges size="2">
+                     <Specialisation>
+                        <Concept>D</Concept>
+                        <WitnessAxioms>
+                           <Axiom>D SubClassOf r some Thing</Axiom>
+                           <Axiom>D SubClassOf s some B</Axiom>
+                           <Axiom>D SubClassOf s some (r some F)</Axiom>
+                           <Axiom>D SubClassOf s some C</Axiom>
+                           <Axiom>D SubClassOf s some A</Axiom>
+                           <Axiom>D SubClassOf s some 
+((B or C))</Axiom>
+                           <Axiom>D SubClassOf s some 
+((B or (r some C)))</Axiom>
+                           <Axiom>D SubClassOf s some K</Axiom>
+                           <Axiom>D SubClassOf F and (s some A)</Axiom>
+                           <Axiom>D SubClassOf p some Thing</Axiom>
+                           <Axiom>D SubClassOf (B or (r some C))</Axiom>
+                           <Axiom>D SubClassOf F and (p some Thing)</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>E</Concept>
+                        <WitnessAxioms>
+                           <Axiom>E SubClassOf F and (s some A)</Axiom>
+                           <Axiom>E SubClassOf s some K</Axiom>
+                           <Axiom>E SubClassOf s some C</Axiom>
+                           <Axiom>E SubClassOf s some 
+((B or C))</Axiom>
+                           <Axiom>E SubClassOf s some 
+((B or (r some C)))</Axiom>
+                           <Axiom>E SubClassOf r some Thing</Axiom>
+                           <Axiom>E SubClassOf (B or (r some C))</Axiom>
+                           <Axiom>E SubClassOf s some A</Axiom>
+                           <Axiom>E SubClassOf s some (r some F)</Axiom>
+                           <Axiom>E SubClassOf F and (p some Thing)</Axiom>
+                           <Axiom>E SubClassOf s some B</Axiom>
+                           <Axiom>E SubClassOf p some Thing</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                  </DirectChanges>
+                  <IndirectChanges size="0"/>
+               </ConceptChanges>
+               <Source>
+                  <Axiom>D SubClassOf F</Axiom>
+               </Source>
+            </Change>
+         </Strengthening>
+         <StrengtheningWithNewTerms id="stnt" size="1">
+            <Change id="2">
+               <Axiom>D SubClassOf F and (p some Thing)</Axiom>
+               <ConceptChanges size="2">
+                  <DirectChanges size="2">
+                     <Specialisation>
+                        <Concept>D</Concept>
+                        <WitnessAxioms>
+                           <Axiom>D SubClassOf r some Thing</Axiom>
+                           <Axiom>D SubClassOf s some B</Axiom>
+                           <Axiom>D SubClassOf s some (r some F)</Axiom>
+                           <Axiom>D SubClassOf s some C</Axiom>
+                           <Axiom>D SubClassOf s some A</Axiom>
+                           <Axiom>D SubClassOf s some 
+((B or C))</Axiom>
+                           <Axiom>D SubClassOf s some 
+((B or (r some C)))</Axiom>
+                           <Axiom>D SubClassOf s some K</Axiom>
+                           <Axiom>D SubClassOf F and (s some A)</Axiom>
+                           <Axiom>D SubClassOf p some Thing</Axiom>
+                           <Axiom>D SubClassOf (B or (r some C))</Axiom>
+                           <Axiom>D SubClassOf F and (p some Thing)</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>E</Concept>
+                        <WitnessAxioms>
+                           <Axiom>E SubClassOf F and (s some A)</Axiom>
+                           <Axiom>E SubClassOf s some K</Axiom>
+                           <Axiom>E SubClassOf s some C</Axiom>
+                           <Axiom>E SubClassOf s some 
+((B or C))</Axiom>
+                           <Axiom>E SubClassOf s some 
+((B or (r some C)))</Axiom>
+                           <Axiom>E SubClassOf r some Thing</Axiom>
+                           <Axiom>E SubClassOf (B or (r some C))</Axiom>
+                           <Axiom>E SubClassOf s some A</Axiom>
+                           <Axiom>E SubClassOf s some (r some F)</Axiom>
+                           <Axiom>E SubClassOf F and (p some Thing)</Axiom>
+                           <Axiom>E SubClassOf s some B</Axiom>
+                           <Axiom>E SubClassOf p some Thing</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                  </DirectChanges>
+                  <IndirectChanges size="0"/>
+               </ConceptChanges>
+               <Source>
+                  <Axiom>D SubClassOf F</Axiom>
+               </Source>
+               <New_Terms>p</New_Terms>
+            </Change>
+         </StrengtheningWithNewTerms>
+         <NewDescription id="newdesc" size="1">
+            <Change id="3">
+               <Axiom>K SubClassOf r some F</Axiom>
+               <ConceptChanges size="5">
+                  <DirectChanges size="3">
+                     <Specialisation>
+                        <Concept>K</Concept>
+                        <WitnessAxioms>
+                           <Axiom>K SubClassOf r some F</Axiom>
+                           <Axiom>K SubClassOf r some 
+(G and I)</Axiom>
+                           <Axiom>K SubClassOf r some G</Axiom>
+                           <Axiom>K SubClassOf r some (s some H)</Axiom>
+                           <Axiom>K SubClassOf r some 
+(H and (s some H))</Axiom>
+                           <Axiom>K SubClassOf r some I</Axiom>
+                           <Axiom>K SubClassOf r some 
+((E or G))</Axiom>
+                           <Axiom>K SubClassOf r some Thing</Axiom>
+                           <Axiom>K SubClassOf r some H</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>D</Concept>
+                        <WitnessAxioms>
+                           <Axiom>D SubClassOf r some Thing</Axiom>
+                           <Axiom>D SubClassOf s some B</Axiom>
+                           <Axiom>D SubClassOf s some (r some F)</Axiom>
+                           <Axiom>D SubClassOf s some C</Axiom>
+                           <Axiom>D SubClassOf s some A</Axiom>
+                           <Axiom>D SubClassOf s some 
+((B or C))</Axiom>
+                           <Axiom>D SubClassOf s some 
+((B or (r some C)))</Axiom>
+                           <Axiom>D SubClassOf s some K</Axiom>
+                           <Axiom>D SubClassOf F and (s some A)</Axiom>
+                           <Axiom>D SubClassOf p some Thing</Axiom>
+                           <Axiom>D SubClassOf (B or (r some C))</Axiom>
+                           <Axiom>D SubClassOf F and (p some Thing)</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>E</Concept>
+                        <WitnessAxioms>
+                           <Axiom>E SubClassOf F and (s some A)</Axiom>
+                           <Axiom>E SubClassOf s some K</Axiom>
+                           <Axiom>E SubClassOf s some C</Axiom>
+                           <Axiom>E SubClassOf s some 
+((B or C))</Axiom>
+                           <Axiom>E SubClassOf s some 
+((B or (r some C)))</Axiom>
+                           <Axiom>E SubClassOf r some Thing</Axiom>
+                           <Axiom>E SubClassOf (B or (r some C))</Axiom>
+                           <Axiom>E SubClassOf s some A</Axiom>
+                           <Axiom>E SubClassOf s some (r some F)</Axiom>
+                           <Axiom>E SubClassOf F and (p some Thing)</Axiom>
+                           <Axiom>E SubClassOf s some B</Axiom>
+                           <Axiom>E SubClassOf p some Thing</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                  </DirectChanges>
+                  <IndirectChanges size="2">
+                     <Specialisation>
+                        <Concept>B</Concept>
+                        <WitnessAxioms>
+                           <Axiom>B SubClassOf r some F</Axiom>
+                           <Axiom>B SubClassOf r some G</Axiom>
+                           <Axiom>B SubClassOf r some (s some H)</Axiom>
+                           <Axiom>B SubClassOf r some 
+(G and I)</Axiom>
+                           <Axiom>B SubClassOf r some H</Axiom>
+                           <Axiom>B SubClassOf r some I</Axiom>
+                           <Axiom>B SubClassOf r some 
+(H and (s some H))</Axiom>
+                           <Axiom>B SubClassOf r some Thing</Axiom>
+                           <Axiom>B SubClassOf r some 
+((E or G))</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>A</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A SubClassOf (B or (r some C))</Axiom>
+                           <Axiom>A SubClassOf r some 
+((E or G))</Axiom>
+                           <Axiom>A SubClassOf r some G</Axiom>
+                           <Axiom>A SubClassOf r some (s some H)</Axiom>
+                           <Axiom>A SubClassOf r some F</Axiom>
+                           <Axiom>A SubClassOf r some Thing</Axiom>
+                           <Axiom>A SubClassOf r some H</Axiom>
+                           <Axiom>A SubClassOf r some I</Axiom>
+                           <Axiom>A SubClassOf r some 
+(G and I)</Axiom>
+                           <Axiom>A SubClassOf K</Axiom>
+                           <Axiom>A SubClassOf r some 
+(H and (s some H))</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                  </IndirectChanges>
+               </ConceptChanges>
+               <New_Terms>K, r</New_Terms>
+            </Change>
+         </NewDescription>
+         <PureAddition id="padd" size="1">
+            <Change id="4">
+               <Axiom>A SubClassOf B</Axiom>
+               <ConceptChanges size="5">
+                  <DirectChanges size="4">
+                     <Specialisation>
+                        <Concept>D</Concept>
+                        <WitnessAxioms>
+                           <Axiom>D SubClassOf r some Thing</Axiom>
+                           <Axiom>D SubClassOf s some B</Axiom>
+                           <Axiom>D SubClassOf s some (r some F)</Axiom>
+                           <Axiom>D SubClassOf s some C</Axiom>
+                           <Axiom>D SubClassOf s some A</Axiom>
+                           <Axiom>D SubClassOf s some 
+((B or C))</Axiom>
+                           <Axiom>D SubClassOf s some 
+((B or (r some C)))</Axiom>
+                           <Axiom>D SubClassOf s some K</Axiom>
+                           <Axiom>D SubClassOf F and (s some A)</Axiom>
+                           <Axiom>D SubClassOf p some Thing</Axiom>
+                           <Axiom>D SubClassOf (B or (r some C))</Axiom>
+                           <Axiom>D SubClassOf F and (p some Thing)</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>A</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A SubClassOf B</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>E</Concept>
+                        <WitnessAxioms>
+                           <Axiom>E SubClassOf F and (s some A)</Axiom>
+                           <Axiom>E SubClassOf s some K</Axiom>
+                           <Axiom>E SubClassOf s some C</Axiom>
+                           <Axiom>E SubClassOf s some 
+((B or C))</Axiom>
+                           <Axiom>E SubClassOf s some 
+((B or (r some C)))</Axiom>
+                           <Axiom>E SubClassOf r some Thing</Axiom>
+                           <Axiom>E SubClassOf (B or (r some C))</Axiom>
+                           <Axiom>E SubClassOf s some A</Axiom>
+                           <Axiom>E SubClassOf s some (r some F)</Axiom>
+                           <Axiom>E SubClassOf F and (p some Thing)</Axiom>
+                           <Axiom>E SubClassOf s some B</Axiom>
+                           <Axiom>E SubClassOf p some Thing</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>B</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A SubClassOf B</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </DirectChanges>
+                  <IndirectChanges size="1">
+                     <Specialisation>
+                        <Concept>A</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A SubClassOf (B or (r some C))</Axiom>
+                           <Axiom>A SubClassOf r some 
+((E or G))</Axiom>
+                           <Axiom>A SubClassOf r some G</Axiom>
+                           <Axiom>A SubClassOf r some (s some H)</Axiom>
+                           <Axiom>A SubClassOf r some F</Axiom>
+                           <Axiom>A SubClassOf r some Thing</Axiom>
+                           <Axiom>A SubClassOf r some H</Axiom>
+                           <Axiom>A SubClassOf r some I</Axiom>
+                           <Axiom>A SubClassOf r some 
+(G and I)</Axiom>
+                           <Axiom>A SubClassOf K</Axiom>
+                           <Axiom>A SubClassOf r some 
+(H and (s some H))</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                  </IndirectChanges>
+               </ConceptChanges>
+            </Change>
+         </PureAddition>
+         <PureAdditionWithNewTerms id="paddnt" size="2">
+            <Change id="5">
+               <Axiom>B SubClassOf K</Axiom>
+               <ConceptChanges size="6">
+                  <DirectChanges size="4">
+                     <Specialisation>
+                        <Concept>B</Concept>
+                        <WitnessAxioms>
+                           <Axiom>B SubClassOf K</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>D</Concept>
+                        <WitnessAxioms>
+                           <Axiom>D SubClassOf r some Thing</Axiom>
+                           <Axiom>D SubClassOf s some B</Axiom>
+                           <Axiom>D SubClassOf s some (r some F)</Axiom>
+                           <Axiom>D SubClassOf s some C</Axiom>
+                           <Axiom>D SubClassOf s some A</Axiom>
+                           <Axiom>D SubClassOf s some 
+((B or C))</Axiom>
+                           <Axiom>D SubClassOf s some 
+((B or (r some C)))</Axiom>
+                           <Axiom>D SubClassOf s some K</Axiom>
+                           <Axiom>D SubClassOf F and (s some A)</Axiom>
+                           <Axiom>D SubClassOf p some Thing</Axiom>
+                           <Axiom>D SubClassOf (B or (r some C))</Axiom>
+                           <Axiom>D SubClassOf F and (p some Thing)</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>E</Concept>
+                        <WitnessAxioms>
+                           <Axiom>E SubClassOf F and (s some A)</Axiom>
+                           <Axiom>E SubClassOf s some K</Axiom>
+                           <Axiom>E SubClassOf s some C</Axiom>
+                           <Axiom>E SubClassOf s some 
+((B or C))</Axiom>
+                           <Axiom>E SubClassOf s some 
+((B or (r some C)))</Axiom>
+                           <Axiom>E SubClassOf r some Thing</Axiom>
+                           <Axiom>E SubClassOf (B or (r some C))</Axiom>
+                           <Axiom>E SubClassOf s some A</Axiom>
+                           <Axiom>E SubClassOf s some (r some F)</Axiom>
+                           <Axiom>E SubClassOf F and (p some Thing)</Axiom>
+                           <Axiom>E SubClassOf s some B</Axiom>
+                           <Axiom>E SubClassOf p some Thing</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>K</Concept>
+                        <WitnessAxioms>
+                           <Axiom>B SubClassOf K</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </DirectChanges>
+                  <IndirectChanges size="2">
+                     <Specialisation>
+                        <Concept>B</Concept>
+                        <WitnessAxioms>
+                           <Axiom>B SubClassOf r some F</Axiom>
+                           <Axiom>B SubClassOf r some G</Axiom>
+                           <Axiom>B SubClassOf r some (s some H)</Axiom>
+                           <Axiom>B SubClassOf r some 
+(G and I)</Axiom>
+                           <Axiom>B SubClassOf r some H</Axiom>
+                           <Axiom>B SubClassOf r some I</Axiom>
+                           <Axiom>B SubClassOf r some 
+(H and (s some H))</Axiom>
+                           <Axiom>B SubClassOf r some Thing</Axiom>
+                           <Axiom>B SubClassOf r some 
+((E or G))</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>A</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A SubClassOf (B or (r some C))</Axiom>
+                           <Axiom>A SubClassOf r some 
+((E or G))</Axiom>
+                           <Axiom>A SubClassOf r some G</Axiom>
+                           <Axiom>A SubClassOf r some (s some H)</Axiom>
+                           <Axiom>A SubClassOf r some F</Axiom>
+                           <Axiom>A SubClassOf r some Thing</Axiom>
+                           <Axiom>A SubClassOf r some H</Axiom>
+                           <Axiom>A SubClassOf r some I</Axiom>
+                           <Axiom>A SubClassOf r some 
+(G and I)</Axiom>
+                           <Axiom>A SubClassOf K</Axiom>
+                           <Axiom>A SubClassOf r some 
+(H and (s some H))</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                  </IndirectChanges>
+               </ConceptChanges>
+               <New_Terms>K</New_Terms>
+            </Change>
+            <Change id="6">
+               <Axiom>E SubClassOf (B or (r some C))</Axiom>
+               <ConceptChanges size="2">
+                  <DirectChanges size="2">
+                     <Specialisation>
+                        <Concept>D</Concept>
+                        <WitnessAxioms>
+                           <Axiom>D SubClassOf r some Thing</Axiom>
+                           <Axiom>D SubClassOf s some B</Axiom>
+                           <Axiom>D SubClassOf s some (r some F)</Axiom>
+                           <Axiom>D SubClassOf s some C</Axiom>
+                           <Axiom>D SubClassOf s some A</Axiom>
+                           <Axiom>D SubClassOf s some 
+((B or C))</Axiom>
+                           <Axiom>D SubClassOf s some 
+((B or (r some C)))</Axiom>
+                           <Axiom>D SubClassOf s some K</Axiom>
+                           <Axiom>D SubClassOf F and (s some A)</Axiom>
+                           <Axiom>D SubClassOf p some Thing</Axiom>
+                           <Axiom>D SubClassOf (B or (r some C))</Axiom>
+                           <Axiom>D SubClassOf F and (p some Thing)</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>E</Concept>
+                        <WitnessAxioms>
+                           <Axiom>E SubClassOf F and (s some A)</Axiom>
+                           <Axiom>E SubClassOf s some K</Axiom>
+                           <Axiom>E SubClassOf s some C</Axiom>
+                           <Axiom>E SubClassOf s some 
+((B or C))</Axiom>
+                           <Axiom>E SubClassOf s some 
+((B or (r some C)))</Axiom>
+                           <Axiom>E SubClassOf r some Thing</Axiom>
+                           <Axiom>E SubClassOf (B or (r some C))</Axiom>
+                           <Axiom>E SubClassOf s some A</Axiom>
+                           <Axiom>E SubClassOf s some (r some F)</Axiom>
+                           <Axiom>E SubClassOf F and (p some Thing)</Axiom>
+                           <Axiom>E SubClassOf s some B</Axiom>
+                           <Axiom>E SubClassOf p some Thing</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                  </DirectChanges>
+                  <IndirectChanges size="0"/>
+               </ConceptChanges>
+               <New_Terms>r</New_Terms>
+            </Change>
+         </PureAdditionWithNewTerms>
+         <NewModifiedDefinition id="stequiv" size="0"/>
+         <NewModifiedDefinitionWithNewTerms id="stequivnt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffadds" size="5">
+         <AddedRedundancy id="ared" size="0"/>
+         <AddedRewrite id="arws" size="1">
+            <AddedCompleteRewrite id="arw" size="1">
+               <Change id="7">
+                  <Axiom>F SubClassOf G and I</Axiom>
+                  <Source>
+                     <Axiom ineffectual="true">F SubClassOf I</Axiom>
+                     <Axiom ineffectual="true">F SubClassOf G</Axiom>
+                  </Source>
+               </Change>
+            </AddedCompleteRewrite>
+            <AddedPartialRewrite id="aprw" size="0"/>
+         </AddedRewrite>
+         <AddedProspectiveRedundancy id="apred" size="5">
+            <AddedReshuffleProspectiveRedundancy id="aavred" size="4">
+               <Change id="8">
+                  <Axiom>A SubClassOf (B or C)</Axiom>
+                  <Source>
+                     <Axiom ineffectual="true">A SubClassOf C</Axiom>
+                  </Source>
+               </Change>
+               <Change id="9">
+                  <Axiom>D SubClassOf (E or G)</Axiom>
+                  <Source>
+                     <Axiom ineffectual="true">D SubClassOf F</Axiom>
+                     <Axiom ineffectual="true">F SubClassOf G</Axiom>
+                  </Source>
+                  <Source>
+                     <Axiom ineffectual="true">D EquivalentTo E</Axiom>
+                  </Source>
+               </Change>
+               <Change id="10">
+                  <Axiom>D SubClassOf E</Axiom>
+                  <Source>
+                     <Axiom ineffectual="true">D EquivalentTo E</Axiom>
+                  </Source>
+               </Change>
+               <Change id="11">
+                  <Axiom>E SubClassOf D</Axiom>
+                  <Source>
+                     <Axiom ineffectual="true">D EquivalentTo E</Axiom>
+                  </Source>
+               </Change>
+            </AddedReshuffleProspectiveRedundancy>
+            <AddedNewProspectiveRedundancy id="anpred" size="2">
+               <Change id="9">
+                  <Axiom>D SubClassOf (E or G)</Axiom>
+                  <Source>
+                     <Axiom ineffectual="true">D SubClassOf F</Axiom>
+                     <Axiom effectual="true">F SubClassOf G and I and J</Axiom>
+                  </Source>
+               </Change>
+               <Change id="7">
+                  <Axiom>F SubClassOf G and I</Axiom>
+                  <Source>
+                     <Axiom effectual="true">F SubClassOf G and I and J</Axiom>
+                  </Source>
+               </Change>
+            </AddedNewProspectiveRedundancy>
+         </AddedProspectiveRedundancy>
+      </Ineffectual>
+   </Additions>
+   <Removals id="rems" size="6">
+      <Effectual id="effrems" size="1">
+         <Weakening id="wk" size="0"/>
+         <WeakeningWithRetiredTerms id="wkrt" size="1">
+            <Change id="12">
+               <Axiom>F SubClassOf G and I and J</Axiom>
+               <ConceptChanges size="5">
+                  <DirectChanges size="2">
+                     <Specialisation>
+                        <Concept>F</Concept>
+                        <WitnessAxioms>
+                           <Axiom>F SubClassOf G and I and J</Axiom>
+                           <Axiom>F SubClassOf J</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>J</Concept>
+                        <WitnessAxioms>
+                           <Axiom>F SubClassOf J</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </DirectChanges>
+                  <IndirectChanges size="3">
+                     <Specialisation>
+                        <Concept>D</Concept>
+                        <WitnessAxioms>
+                           <Axiom>D SubClassOf J</Axiom>
+                           <Axiom>D SubClassOf G and I and J</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>E</Concept>
+                        <WitnessAxioms>
+                           <Axiom>E SubClassOf G and I and J</Axiom>
+                           <Axiom>E SubClassOf J</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>J</Concept>
+                        <WitnessAxioms>
+                           <Axiom>D SubClassOf J</Axiom>
+                           <Axiom>F and (p some Thing) SubClassOf J</Axiom>
+                           <Axiom>E SubClassOf J</Axiom>
+                           <Axiom>F and (s some A) SubClassOf J</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </IndirectChanges>
+               </ConceptChanges>
+               <Source>
+                  <Axiom>F SubClassOf G and I</Axiom>
+               </Source>
+               <Retired_Terms>J</Retired_Terms>
+            </Change>
+         </WeakeningWithRetiredTerms>
+         <RetiredDescription id="retdesc" size="0"/>
+         <PureRemoval id="prem" size="0"/>
+         <PureRemovalWithRetiredTerms id="premrt" size="0"/>
+         <RetiredModifiedDefinition id="wkequiv" size="0"/>
+         <RetiredModifiedDefinitionWithRetiredTerms id="wkequivrt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffrems" size="5">
+         <RemovedRedundancy id="rred" size="0"/>
+         <RemovedRewrite id="rrws" size="1">
+            <RemovedCompleteRewrite id="rrw" size="1">
+               <Change id="13">
+                  <Axiom>D EquivalentTo E</Axiom>
+                  <Source>
+                     <Axiom ineffectual="true">D SubClassOf E</Axiom>
+                     <Axiom ineffectual="true">E SubClassOf D</Axiom>
+                  </Source>
+               </Change>
+            </RemovedCompleteRewrite>
+            <RemovedPartialRewrite id="rprw" size="0"/>
+         </RemovedRewrite>
+         <RemovedProspectiveRedundancy id="rpred" size="4">
+            <RemovedReshuffleProspectiveRedundancy id="ravred" size="3">
+               <Change id="14">
+                  <Axiom>A SubClassOf C</Axiom>
+                  <Source>
+                     <Axiom shared="true">B SubClassOf C</Axiom>
+                     <Axiom ineffectual="true">A SubClassOf (B or C)</Axiom>
+                  </Source>
+               </Change>
+               <Change id="15">
+                  <Axiom>F SubClassOf G</Axiom>
+                  <Source>
+                     <Axiom ineffectual="true">F SubClassOf G and I</Axiom>
+                  </Source>
+               </Change>
+               <Change id="16">
+                  <Axiom>F SubClassOf I</Axiom>
+                  <Source>
+                     <Axiom ineffectual="true">F SubClassOf G and I</Axiom>
+                  </Source>
+               </Change>
+            </RemovedReshuffleProspectiveRedundancy>
+            <RemovedNewProspectiveRedundancy id="rnpred" size="2">
+               <Change id="14">
+                  <Axiom>A SubClassOf C</Axiom>
+                  <Source>
+                     <Axiom effectual="true">A SubClassOf B</Axiom>
+                     <Axiom shared="true">B SubClassOf C</Axiom>
+                  </Source>
+               </Change>
+               <Change id="17">
+                  <Axiom>D SubClassOf F</Axiom>
+                  <Source>
+                     <Axiom effectual="true">D SubClassOf F and (s some A)</Axiom>
+                  </Source>
+                  <Source>
+                     <Axiom effectual="true">D SubClassOf F and (p some Thing)</Axiom>
+                  </Source>
+               </Change>
+            </RemovedNewProspectiveRedundancy>
+         </RemovedProspectiveRedundancy>
+      </Ineffectual>
+   </Removals>
+</root>
