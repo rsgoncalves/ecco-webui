@@ -38,19 +38,21 @@
 		<h1><i>ecco</i> a diff tool for OWL ontologies</h1>
 		<form action="diff" method="post" enctype="multipart/form-data" id="diffargs">
 			<div class="box">
-				<!-- Try out some pre-computed examples:
+				Try out some pre-computed examples:
 				<select name="url">
-					<option value="examples/ncit_05.07/index_labels.html">NCI Thesaurus 05.07</option>
-					<option value="examples/ncit_06.04/index_labels.html">NCI Thesaurus 06.04</option>
-					<option value="examples/ncit_07.12/index_labels.html">NCI Thesaurus 07.12</option>
-					<option value="examples/ncit_12.03/index_labels.html">NCI Thesaurus 12.03</option>
-					<option value="examples/ncit_12.07/index_labels.html">NCI Thesaurus 12.07</option>
+					<option value="examples/toy_at/index_labels.html">Toy ontologies [At]</option>
+					<option value="examples/toy_sub/index_labels.html">Toy ontologies [Sub]</option>
+					<option value="examples/toy_gr/index_labels.html">Toy ontologies [Gr]</option>
+					<option value="examples/ncit_13.05_at/index_labels.html">NCI Thesaurus 13.05 [At]</option>
+					<option value="examples/ncit_13.05_sub/index_labels.html">NCI Thesaurus 13.05 [Sub]</option>
+					<!--
 					<option value="examples/ncit_13.01/index_labels.html">NCI Thesaurus 13.01</option>
 					<option value="examples/ncit_13.04/index_labels.html">NCI Thesaurus 13.04</option>
 					<option value="examples/artificial/index_labels.html">Artificial</option>
 					<option value="examples/tdiff/index_labels.html">Totally different</option>
+					-->
 				</select> 
-				<input type=button value="Go!" onClick="jumpToIt(this.form)"><br/> -->
+				<input type=button value="Go!" onClick="jumpToIt(this.form)"><br/>
 				<p>
 					Browse for ontology <b>files</b>, or enter a <b>URL</b> for
 					each ontology into the text areas:<br />

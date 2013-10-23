@@ -101,6 +101,7 @@ public class WebDiff extends HttpServlet {
 			throws IOException, ServletException, TransformerException, OWLOntologyCreationException, FileUploadException {
 		PrintWriter pw = response.getWriter();
 		String xsltPath = "https://raw.github.com/rsgoncalves/ecco-webui/master/WebContent/xslt_full_server.xsl";
+//		String xsltPath = "/Users/rafa/Documents/PhD/workspace/ecco-webui/WebContent/xslt_full_server.xsl"; // MBP
 		String styledXml = "";
 		
 		EccoRunner runner = new EccoRunner(true, false, true, false, 5, false);
