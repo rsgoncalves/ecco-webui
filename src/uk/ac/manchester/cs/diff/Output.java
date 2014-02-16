@@ -3,7 +3,7 @@
  * 
  * ecco is distributed under the terms of the GNU Lesser General Public License (LGPL), Version 3.0.
  * 
- * Copyright 2011-2013, The University of Manchester
+ * Copyright 2011-2014, The University of Manchester
  * 
  * ecco is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser
  * General Public License as published by the Free Software Foundation, either version 3 of the 
@@ -57,7 +57,9 @@ public class Output extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			getOutput(request, response);
-		} catch (TransformerException | ServletException e) {
+		} catch(TransformerException e) {
+			e.printStackTrace();
+		} catch(ServletException e) {
 			e.printStackTrace();
 		}
 	}
@@ -69,7 +71,9 @@ public class Output extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			getOutput(request, response);
-		} catch (TransformerException | ServletException e) {
+		} catch(TransformerException e) {
+			e.printStackTrace();
+		} catch(ServletException e) {
 			e.printStackTrace();
 		}
 	}
@@ -84,7 +88,8 @@ public class Output extends HttpServlet {
 	 * @throws TransformerException
 	 * @throws EccoException 
 	 */
-	private void getOutput(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, TransformerException {
+	private void getOutput(HttpServletRequest request, HttpServletResponse response) throws IOException, 
+		ServletException, TransformerException {
 		HttpSession session = request.getSession();
 		PrintWriter pw = response.getWriter();
 		String xsltPath = (String) session.getAttribute("xsltPath");

@@ -1,6 +1,11 @@
 # Test files #
 *.txt
+*_bak
 todo
+setenv*
+fpp*
+depl*
+WebContent/examples/*
 
 # Build #
 *.war

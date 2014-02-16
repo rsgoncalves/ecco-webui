@@ -3,7 +3,7 @@
  * 
  * ecco is distributed under the terms of the GNU Lesser General Public License (LGPL), Version 3.0.
  * 
- * Copyright 2011-2013, The University of Manchester
+ * Copyright 2011-2014, The University of Manchester
  * 
  * ecco is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser
  * General Public License as published by the Free Software Foundation, either version 3 of the 
@@ -69,7 +69,11 @@ public class WebDiff extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			getDiff(request, response);
-		} catch (TransformerException | FileUploadException | OWLOntologyCreationException e) {
+		} catch (TransformerException e) {
+			e.printStackTrace();
+		} catch (FileUploadException e) {
+			e.printStackTrace();
+		} catch (OWLOntologyCreationException e) {
 			e.printStackTrace();
 		}
 	}
@@ -81,7 +85,11 @@ public class WebDiff extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			getDiff(request, response);
-		} catch (TransformerException | OWLOntologyCreationException | FileUploadException e) {
+		} catch (TransformerException e) {
+			e.printStackTrace();
+		} catch (FileUploadException e) {
+			e.printStackTrace();
+		} catch (OWLOntologyCreationException e) {
 			e.printStackTrace();
 		}
 	}
@@ -116,7 +124,7 @@ public class WebDiff extends HttpServlet {
 			if(changeSet instanceof StructuralChangeSet) {
 				styledXml = "One of the given ontologies is inconsistent. In such cases we can only detect structural differences.<br/>" +
 						"There will be a separate transform for this specific change set soon...";
-				// TODO new xslt for structural change set *only*
+				// TODO: New xslt for structural change set *only*
 			}
 			else {
 				request.getSession().setAttribute("xsltPath", xsltPath);

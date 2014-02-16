@@ -301,7 +301,8 @@ form.inl {
 
 .hotspot {
 /*    color:#900; */ 
-    padding-bottom:1px; 
+    padding-bottom:1px;
+    padding-right:1px; 
     cursor:pointer
 }
 

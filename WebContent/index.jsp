@@ -35,27 +35,26 @@
 <body>
 	<div class="content">
 		<h1>&nbsp;</h1>
-		<h1><i>ecco</i> a diff tool for OWL ontologies</h1>
+		<h1><i>ecco</i>: a diff tool for OWL ontologies</h1>
 		<form action="diff" method="post" enctype="multipart/form-data" id="diffargs">
 			<div class="box">
 				Try out some pre-computed examples:
 				<select name="url">
-					<option value="examples/toy_at/index_labels.html">Toy ontologies [At]</option>
-					<option value="examples/toy_sub/index_labels.html">Toy ontologies [Sub]</option>
-					<option value="examples/toy_gr/index_labels.html">Toy ontologies [Gr]</option>
+					<option value="examples/align_at/index_labels.html">Example 1 [At]</option>
+					<option value="examples/align_sub/index_labels.html">Example 1 [Sub]</option>
+					<option value="examples/align_gr/index_labels.html">Example 1 [Gr]</option>
+					<option value="examples/axiomdiff_at/index_labels.html">Example 2 [At]</option>
+					<option value="examples/axiomdiff_sub/index_labels.html">Example 2 [Sub]</option>
+					<option value="examples/axiomdiff_gr/index_labels.html">Example 2 [Gr]</option>
+					<option value="examples/conceptdiff_at/index_labels.html">Example 3 [At]</option>
+					<option value="examples/conceptdiff_sub/index_labels.html">Example 3 [Sub]</option>
+					<option value="examples/conceptdiff_gr/index_labels.html">Example 3 [Gr]</option>
 					<option value="examples/ncit_06.09_at/index_labels.html">NCI Thesaurus 06.09 [At]</option>
 					<option value="examples/ncit_06.09_sub/index_labels.html">NCI Thesaurus 06.09 [Sub]</option>
-					<!--
-					<option value="examples/ncit_13.05_at/index_labels.html">NCI Thesaurus 13.05 [At]</option>
-					<option value="examples/ncit_13.05_sub/index_labels.html">NCI Thesaurus 13.05 [Sub]</option>
-					<option value="examples/toy2_at/index_labels.html">Toy ontologies 2 [At]</option>
-					<option value="examples/toy2_sub/index_labels.html">Toy ontologies 2 [Sub]</option>
-					<option value="examples/toy2_gr/index_labels.html">Toy ontologies 2 [Gr]</option>
-					<option value="examples/ncit_13.01/index_labels.html">NCI Thesaurus 13.01</option>
-					<option value="examples/ncit_13.04/index_labels.html">NCI Thesaurus 13.04</option>
-					<option value="examples/artificial/index_labels.html">Artificial</option>
-					<option value="examples/tdiff/index_labels.html">Totally different</option>
-					-->
+					<option value="examples/ncit_13.12_at/index_labels.html">NCI Thesaurus 13.12 [At]</option>
+					<option value="examples/ncit_13.12_sub/index_labels.html">NCI Thesaurus 13.12 [Sub]</option>
+					<option value="examples/ncit_14.01_at/index_labels.html">NCI Thesaurus 14.01 [At]</option>
+					<option value="examples/ncit_14.01_sub/index_labels.html">NCI Thesaurus 14.01 [Sub]</option>
 				</select> 
 				<input type=button value="Go!" onClick="jumpToIt(this.form)"><br/>
 				<p>
@@ -100,13 +99,13 @@
 			Imported ontologies must have an accessible IRI, e.g., if an imported ontology is in the local file<br/>
 			system, it should have an IRI such as: "file:/users/me/ontologies/importedOntology.owl".<br/><br/>
 			Get the latest desktop version of <i>ecco</i> from <a href="https://github.com/rsgoncalves/ecco" target="_blank">here</a>. 
-			Code for this web app is hosted <a href="https://github.com/rsgoncalves/ecco-webui" target="_blank">here</a>.
+			The code for this frontend is hosted <a href="https://github.com/rsgoncalves/ecco-webui" target="_blank">here</a>.
 		</small>
 		<p>
-			<small>Powered by <a href="http://owlapi.sourceforge.net/" target="_blank">The OWL API</a> 
+			<small>Powered by the <a href="http://owlapi.sourceforge.net/" target="_blank">OWL API</a> 
 			<%
 				String version = VersionInfo.getVersionInfo().getVersion().trim();
-				out.print("v" + version);
+				out.print("v" + version.substring(0,version.indexOf("-")) + ".");
 			%>
 			</small>
 		</p>
