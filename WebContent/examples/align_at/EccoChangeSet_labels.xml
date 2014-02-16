@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="root" uuid="1966b135-9d20-4449-83b7-3e20edcff87b-lbl">
+   <Additions id="adds" size="3">
+      <Effectual id="effadds" size="2">
+         <Strengthening id="st" size="1">
+            <Change id="1">
+               <Axiom>B SubClassOf C and F</Axiom>
+               <ConceptChanges size="6">
+                  <DirectChanges size="2">
+                     <Specialisation>
+                        <Concept>B</Concept>
+                        <WitnessAxioms>
+                           <Axiom>B SubClassOf F</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>F</Concept>
+                        <WitnessAxioms>
+                           <Axiom>B SubClassOf F</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </DirectChanges>
+                  <IndirectChanges size="4">
+                     <Specialisation>
+                        <Concept>A</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A SubClassOf G</Axiom>
+                           <Axiom>A SubClassOf F</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>B</Concept>
+                        <WitnessAxioms>
+                           <Axiom>B SubClassOf G</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>F</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A SubClassOf F</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                     <Generalisation>
+                        <Concept>G</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A SubClassOf G</Axiom>
+                           <Axiom>B SubClassOf G</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </IndirectChanges>
+               </ConceptChanges>
+               <Source>
+                  <Axiom>B SubClassOf C</Axiom>
+               </Source>
+            </Change>
+         </Strengthening>
+         <StrengtheningWithNewTerms id="stnt" size="1">
+            <Change id="2">
+               <Axiom>F SubClassOf G and (r some Y)</Axiom>
+               <ConceptChanges size="5">
+                  <DirectChanges size="2">
+                     <Specialisation>
+                        <Concept>F</Concept>
+                        <WitnessAxioms>
+                           <Axiom>F SubClassOf G</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>G</Concept>
+                        <WitnessAxioms>
+                           <Axiom>F SubClassOf G</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </DirectChanges>
+                  <IndirectChanges size="3">
+                     <Specialisation>
+                        <Concept>A</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A SubClassOf G</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>B</Concept>
+                        <WitnessAxioms>
+                           <Axiom>B SubClassOf G</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>G</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A SubClassOf G</Axiom>
+                           <Axiom>B SubClassOf G</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </IndirectChanges>
+               </ConceptChanges>
+               <Source>
+                  <Axiom>F SubClassOf r some Y</Axiom>
+               </Source>
+               <New_Terms>G</New_Terms>
+            </Change>
+         </StrengtheningWithNewTerms>
+         <NewDescription id="newdesc" size="0"/>
+         <PureAddition id="padd" size="0"/>
+         <PureAdditionWithNewTerms id="paddnt" size="0"/>
+         <NewModifiedDefinition id="stequiv" size="0"/>
+         <NewModifiedDefinitionWithNewTerms id="stequivnt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffadds" size="1">
+         <AddedRedundancy id="ared" size="0"/>
+         <AddedRewrite id="arws" size="0">
+            <AddedCompleteRewrite id="arw" size="0"/>
+            <AddedPartialRewrite id="aprw" size="0"/>
+         </AddedRewrite>
+         <AddedProspectiveRedundancy id="apred" size="1">
+            <AddedReshuffleProspectiveRedundancy id="aavred" size="0"/>
+            <AddedNewProspectiveRedundancy id="anpred" size="1">
+               <Change id="3">
+                  <Axiom>X SubClassOf D</Axiom>
+                  <Source>
+                     <Axiom effectual="true">X SubClassOf D and E</Axiom>
+                  </Source>
+               </Change>
+            </AddedNewProspectiveRedundancy>
+         </AddedProspectiveRedundancy>
+      </Ineffectual>
+   </Additions>
+   <Removals id="rems" size="4">
+      <Effectual id="effrems" size="2">
+         <Weakening id="wk" size="1">
+            <Change id="4">
+               <Axiom>X SubClassOf D and E</Axiom>
+               <ConceptChanges size="2">
+                  <DirectChanges size="2">
+                     <Specialisation>
+                        <Concept>X</Concept>
+                        <WitnessAxioms>
+                           <Axiom>X SubClassOf E</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>E</Concept>
+                        <WitnessAxioms>
+                           <Axiom>X SubClassOf E</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </DirectChanges>
+                  <IndirectChanges size="0"/>
+               </ConceptChanges>
+               <Source>
+                  <Axiom>X SubClassOf D</Axiom>
+               </Source>
+            </Change>
+         </Weakening>
+         <WeakeningWithRetiredTerms id="wkrt" size="0"/>
+         <RetiredDescription id="retdesc" size="0"/>
+         <PureRemoval id="prem" size="1">
+            <Change id="5">
+               <Axiom>r some X SubClassOf r some Y</Axiom>
+               <ConceptChanges size="0">
+                  <DirectChanges size="0"/>
+                  <IndirectChanges size="0"/>
+               </ConceptChanges>
+            </Change>
+         </PureRemoval>
+         <PureRemovalWithRetiredTerms id="premrt" size="0"/>
+         <RetiredModifiedDefinition id="wkequiv" size="0"/>
+         <RetiredModifiedDefinitionWithRetiredTerms id="wkequivrt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffrems" size="2">
+         <RemovedRedundancy id="rred" size="0"/>
+         <RemovedRewrite id="rrws" size="0">
+            <RemovedCompleteRewrite id="rrw" size="0"/>
+            <RemovedPartialRewrite id="rprw" size="0"/>
+         </RemovedRewrite>
+         <RemovedProspectiveRedundancy id="rpred" size="2">
+            <RemovedReshuffleProspectiveRedundancy id="ravred" size="0"/>
+            <RemovedNewProspectiveRedundancy id="rnpred" size="2">
+               <Change id="6">
+                  <Axiom>B SubClassOf C</Axiom>
+                  <Source>
+                     <Axiom effectual="true">B SubClassOf C and F</Axiom>
+                  </Source>
+               </Change>
+               <Change id="7">
+                  <Axiom>F SubClassOf r some Y</Axiom>
+                  <Source>
+                     <Axiom effectual="true">F SubClassOf G and (r some Y)</Axiom>
+                  </Source>
+               </Change>
+            </RemovedNewProspectiveRedundancy>
+         </RemovedProspectiveRedundancy>
+      </Ineffectual>
+   </Removals>
+</root>

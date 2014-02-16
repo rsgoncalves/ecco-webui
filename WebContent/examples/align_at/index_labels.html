@@ -1,0 +1,285 @@
+<html xmlns:ecco="http://owl.cs.manchester.ac.uk/diff">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>ecco</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="../../css/style.css">
+      <link rel="stylesheet" href="../../css/reveal.css">
+      <link rel="icon" type="image/png" href="../../images/favicon.png"><script type="text/javascript" src="../../js/jquery-1.4.4.js"></script><script type="text/javascript" src="../../js/jquery-ui-1.8.12.custom.min.js"></script><script type="text/javascript" src="../../js/script.js"></script><script type="text/javascript" src="../../js/jquery.checkboxtree.js"></script><script type="text/javascript" src="../../js/jquery.reveal.js"></script><script type="text/javascript" src="../../js/jscript_paths.js"></script></head>
+   <body>
+      <h1><br></h1><br>
+      				[<a href="../../index.jsp">Back Home</a>]
+      				
+      <form action="getXml" method="post" class="inl">
+         						[<a id="top3" target="_blank" href="EccoChangeSet_labels.xml">Source XML</a>]
+         					
+      </form><br><br><br><h2 style="display:inline;">Change Summary</h2>&nbsp;
+      				[<a id="top1" href="javascript:;" onClick="showAll();$('#tree1').checkboxTree('expandAll');$('#tree2').checkboxTree('expandAll')">Show All</a> | 
+      				<a id="top2" href="javascript:;" onClick="hideAll();$('#tree1').checkboxTree('collapseAll');$('#tree2').checkboxTree('collapseAll');">Hide All</a>] 
+      				[<a id="genViewPerml" href="#" onclick="setPermalink();">Generate View Permalink</a>]
+      				
+      <div id="view-plink-modal" class="reveal-modal">
+         <h3>view-permalink</h3><textarea id="view-plink" rows="3" cols="60" readonly="true" style="resize: none;"></textarea><br>
+         					[<a href="javascript:;" onclick="select_all('view-plink');">Select all</a>]
+         					<a class="close-reveal-modal">x</a></div><br><br><form action="output" method="post" name="GenSymTrigger"><input type="hidden" name="uuid" value="1966b135-9d20-4449-83b7-3e20edcff87b-lbl"><input type="button" name="gensyms" onClick="parent.location='index_labels.html'" value="Use Labels"> <input type="button" name="gensyms" onClick="parent.location='index_names.html'" value="Use Term Names"> <input type="button" name="gensyms" onClick="parent.location='index_gensyms.html'" value="Use GenSyms"></form>
+      <table width="80%" style="table-layout:fixed;">
+         <tr>
+            <th class="topright"><input type="checkbox" name="removals" onClick="toggleGroup('removals')">  
+               <h3 style="display:inline;">Removals (4)</h3>
+            </th>
+            <th class="topleft"><input type="checkbox" name="additions" onClick="toggleGroup('additions')">  
+               <h3 style="display:inline;">Additions (3)</h3>
+            </th>
+         </tr>
+         <tr>
+            <td class="topright">
+               <ul id="tree1">
+                  <li>  <input type="checkbox" name="effRemsTrigger" onClick="toggleChanges('effRems','effRemsTrigger')">  
+                     <h4 style="display:inline;">Effectual (2)</h4>  <img src="../../images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Asserted axioms in Ontology 1, not present nor entailed by Ontology 2');"><ul>
+                        <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('weak','weakrt');">  <b>Weakenings (1)</b>  <img src="../../images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Removed axioms that are more constraining than existing ones in Ontology 2');"><ul style="display:none">
+                              <li id="weaktrig"><img src="../../images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('weak');">  <a href="#weak">With Shared Terms (1)</a></li>
+                              <li><img src="../../images/blank.png" alt="">&nbsp;&nbsp;With Retired Terms (0)
+                              </li>
+                           </ul>
+                        </li>
+                        <li><img src="../../images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li><img src="../../images/blank.png" alt="">&nbsp;&nbsp;Retired Descriptions (0)
+                        </li>
+                        <li>  <input type="checkbox" name="effRems" onClick="toggleDiv('rem','remrt');">  <b>Pure Removals (1)</b>  <img src="../../images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Removed axioms with no identifiable relation with axioms in Ontology 2, typically related to hierachy changes');"><ul style="display:none">
+                              <li id="remtrig"><img src="../../images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('rem');">  <a href="#rem">With Shared Terms (1)</a></li>
+                              <li><img src="../../images/blank.png" alt="">&nbsp;&nbsp;With Retired Terms (0)
+                              </li>
+                           </ul>
+                        </li><br></ul>
+                  </li><br><li>  <input type="checkbox" name="ineffRemsTrigger" onClick="toggleChanges('ineffRems','ineffRemsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (2)</h4>  <img src="../../images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Asserted axioms in Ontology 1, that are not asserted but entailed by Ontology 2; they were removed but are still entailed');"><ul>
+                        <li>  <input type="checkbox" name="ineffRems" onClick="toggleDiv('ravred','rnpred');">  <b>Prospective Redundancy (2)</b>  <img src="../../images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Removed axioms that would be redundant in Ontology 2 if not removed. These potentially have more constraining related axioms in Ontology 2');"><ul style="display:none">
+                              <li><img src="../../images/blank.png" alt="">&nbsp;&nbsp;Reshuffle (0)
+                              </li>
+                              <li id="rnpredtrig"><img src="../../images/blank.png" alt="">  <input type="checkbox" name="ineffRems" onClick="toggleDiv('rnpred');">  <a href="#rnpred">New (2)</a><b id="t1"></b>  <img src="../../images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Removed axioms for which there are more constraining related axioms in Ontology 2');"></li>
+                           </ul>
+                        </li>
+                        <li><img src="../../images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="../../images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+            <td class="topleft" style="vertical-align:top">
+               <ul id="tree2">
+                  <li>  <input type="checkbox" name="effAddsTrigger" onClick="toggleChanges('effAdds','effAddsTrigger')">  
+                     <h4 style="display:inline;">Effectual (2)</h4>  <img src="../../images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Asserted axioms in Ontology 2, not present nor entailed by Ontology 1');"><ul>
+                        <li>  <input type="checkbox" name="effAdds" onClick="toggleDiv('st','stnt');">  <b>Strengthenings (2)</b>  <img src="../../images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Axioms that are more constraining than existing axioms in Ontology 1');"><ul style="display:none">
+                              <li id="sttrig"><img src="../../images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('st');">  <a href="#st">With Shared Terms (1)</a></li>
+                              <li id="stnttrig"><img src="../../images/blank.png" alt="">  <input type="checkbox" name="effAdds" onClick="toggleDiv('stnt');">  <a href="#stnt">With New Terms (1)</a></li>
+                           </ul>
+                        </li>
+                        <li><img src="../../images/blank.png" alt="">&nbsp;&nbsp;Modified Definitions (0)
+                        </li>
+                        <li><img src="../../images/blank.png" alt="">&nbsp;&nbsp;New Descriptions (0)
+                        </li>
+                        <li><img src="../../images/blank.png" alt="">&nbsp;&nbsp;Pure Additions (0)
+                        </li>
+                     </ul>
+                  </li><br><li>  <input type="checkbox" name="ineffAddsTrigger" onClick="toggleChanges('ineffAdds','ineffAddsTrigger')">  
+                     <h4 style="display:inline;">Ineffectual (1)</h4>  <img src="../../images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Asserted axioms in Ontology 2, that are not asserted but entailed by Ontology 1; they were added but were already entailed');"><ul>
+                        <li>  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('aavred','anpred');">  <b>Retrospective Redundancy (1)</b>  <img src="../../images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Added axioms that would have been redundant in Ontology 1. These potentially have more constraining related axioms in Ontology 1');"><ul style="display:none">
+                              <li><img src="../../images/blank.png" alt="">&nbsp;&nbsp;Reshuffle (0)
+                              </li>
+                              <li id="anpredtrig"><img src="../../images/blank.png" alt="">  <input type="checkbox" name="ineffAdds" onClick="toggleDiv('anpred');">  <a href="#anpred">New (1)</a>  <img src="../../images/info_bubble.png" alt="" align="right" width="14" height="14" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Added axioms for which there are more constraining related axioms in Ontology 1');"></li>
+                           </ul>
+                        </li>
+                        <li><img src="../../images/blank.png" alt="">&nbsp;&nbsp;Rewritten (0)
+                        </li>
+                        <li><img src="../../images/blank.png" alt="">&nbsp;&nbsp;Redundant (0)
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </td>
+         </tr>
+         <tr>
+            <td class="topright">[<a href="javascript:void(0);" id="tree1-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree1-collapseAll">Collapse All</a>]
+            </td>
+            <td class="topleft">[<a href="javascript:void(0);" id="tree2-expandAll">Expand All</a> | <a href="javascript:void(0);" id="tree2-collapseAll">Collapse All</a>]
+            </td>
+         </tr>
+      </table>
+      <table width="100%" style="table-layout:fixed;">
+         <colgroup>
+            <col width="4%">
+            <col width="35%">
+            <col width="35%">
+            <col width="13%">
+            <col width="13%">
+         </colgroup>
+         <tbody id="st" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Strengthenings with Shared Terms (1)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="normaladd">Weaker Axiom in Ontology 1</th>
+               <th class="addition">Strengthened Axiom in Ontology 2</th>
+               <th class="addition" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &darr;</th>
+               <th class="addition" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Classes that have gained subclasses');">Classes &uarr;</th>
+            </tr>
+            <tr class="addition">
+               <td>1</td>
+               <td>B<span class="subclass"> SubClassOf </span>C. 
+               </td>
+               <td>B<span class="subclass"> SubClassOf </span>C<span class="keyword"> and </span>F.<br></td>
+               <td>
+                  <div style="display:inline;word-break:break-all;" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('<pre&gt;B SubClassOf F.\n</pre&gt;');">B.
+                     			
+                  </div>
+               </td>
+               <td>
+                  <div style="display:inline;word-break:break-all;" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('<pre&gt;B SubClassOf F.\n</pre&gt;');">F.
+                     			
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+         <tbody id="stnt" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3"><a name="st"></a><h4 style="display: inline-block;">Strengthenings with New Terms (1)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="normaladd">Weaker Axiom in Ontology 1</th>
+               <th class="addition">Strengthened Axiom in Ontology 2</th>
+               <th class="addition" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Classes that have gained superclasses');">Classes &darr;</th>
+               <th class="addition" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Classes that have gained subclasses');">Classes &uarr;</th>
+            </tr>
+            <tr class="addition">
+               <td>2</td>
+               <td>F<span class="subclass"> SubClassOf </span>r<span class="some"> some </span>Y. 
+               </td>
+               <td>F<span class="subclass"> SubClassOf </span>G<span class="keyword"> and </span>(r<span class="some"> some </span>Y).<br><i>New Terms: G</i></td>
+               <td>
+                  <div style="display:inline;word-break:break-all;" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('<pre&gt;F SubClassOf G.\n</pre&gt;');">F.
+                     			
+                  </div>
+               </td>
+               <td>
+                  <div style="display:inline;word-break:break-all;" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('<pre&gt;F SubClassOf G.\n</pre&gt;');">G.
+                     			
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+         <tbody id="anpred" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Retrospective New Redundant (1)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="addition">ID</th>
+               <th class="normaladd">Justifications in Ontology 1</th>
+               <th class="addition">Axiom in Ontology 2</th>
+            </tr>
+            <tr class="addition">
+               <td rowspan="1">3</td>
+               <td><i>(1)</i>&nbsp; X<span class="subclass"> SubClassOf </span>D<span class="keyword"> and </span>E. 
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div>
+               </td>
+               <td rowspan="1">X<span class="subclass"> SubClassOf </span>D. 
+               </td>
+            </tr>
+         </tbody>
+         <tbody id="weak" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3"><a name="weakening"></a><h4 style="display: inline-block;">Weakenings with Shared Terms (1)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal">Stronger Axiom in Ontology 1</th>
+               <th class="normalrem">Weakened Axiom in Ontology 2</th>
+               <th class="removal" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Classes that have lost superclasses');">Classes &uarr;</th>
+               <th class="removal" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &darr;</th>
+            </tr>
+            <tr class="removal">
+               <td>4</td>
+               <td>X<span class="subclass"> SubClassOf </span>D<span class="keyword"> and </span>E. 
+                  			
+               </td>
+               <td>X<span class="subclass"> SubClassOf </span>D.<br></td>
+               <td>
+                  <div style="display:inline;word-break:break-all;" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('<pre&gt;X SubClassOf E.\n</pre&gt;');">X.
+                     			
+                  </div>
+               </td>
+               <td>
+                  <div style="display:inline;word-break:break-all;" class="hotspot" onmouseout="tooltip.hide();" onmouseover="tooltip.show('<pre&gt;X SubClassOf E.\n</pre&gt;');">E.
+                     			
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+         <tbody id="rem" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Pure Removals with Shared Terms (1)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal" colspan="2">Removal from Ontology 1</th>
+               <th class="removal" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Classes that have lost superclasses');">Classes &uarr;</th>
+               <th class="removal" onmouseout="tooltip.hide();" onmouseover="tooltip.show('Classes that have lost subclasses');">Classes &darr;</th>
+            </tr>
+            <tr class="removal">
+               <td>5</td>
+               <td colspan="2">r<span class="some"> some </span>X<span class="subclass"> SubClassOf </span>r<span class="some"> some </span>Y.<br></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </tbody>
+         <tbody id="rnpred" style="display:none">
+            <tr class="withoutstyle">
+               <td colspan="3">
+                  <h4 style="display: inline-block;">Prospective New Redundant (2)</h4> [<a href="#">back to top</a>]
+               </td>
+            </tr>
+            <tr>
+               <th class="removal">ID</th>
+               <th class="removal">Axiom in Ontology 1</th>
+               <th class="normalrem">Justifications in Ontology 2</th>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">6</td>
+               <td rowspan="1">B<span class="subclass"> SubClassOf </span>C. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; B<span class="subclass"> SubClassOf </span>C<span class="keyword"> and </span>F. 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div>
+               </td>
+            </tr>
+            <tr class="removal">
+               <td rowspan="1">7</td>
+               <td rowspan="1">F<span class="subclass"> SubClassOf </span>r<span class="some"> some </span>Y. 
+                  			
+               </td>
+               <td><i>(1)</i>&nbsp; F<span class="subclass"> SubClassOf </span>G<span class="keyword"> and </span>(r<span class="some"> some </span>Y). 
+                  						
+                  <div style="display:inline;color:#323232" class="hotspot" onmouseover="tooltip.show('Effectual change between Ontology 1 and 2');" onmouseout="tooltip.hide();"><sup>[e]</sup></div>
+               </td>
+            </tr>
+         </tbody>
+         <tr class="withoutstyle">
+            <td>&nbsp;</td>
+         </tr>
+      </table>
+      <div id="shared" style="display:none" class="footnote">Shared axiom between Ontology 1 and 2.</div>
+   </body>
+</html>

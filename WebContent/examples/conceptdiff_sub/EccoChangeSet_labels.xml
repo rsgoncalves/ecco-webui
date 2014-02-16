@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="root" uuid="13d39c3b-27a2-457e-bd15-588dc51e7353-lbl">
+   <Additions id="adds" size="3">
+      <Effectual id="effadds" size="3">
+         <Strengthening id="st" size="1">
+            <Change id="1">
+               <Axiom>B SubClassOf C and D</Axiom>
+               <ConceptChanges size="5">
+                  <DirectChanges size="2">
+                     <Specialisation>
+                        <Concept>B</Concept>
+                        <WitnessAxioms>
+                           <Axiom>B SubClassOf D</Axiom>
+                           <Axiom>B SubClassOf C and D</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>D</Concept>
+                        <WitnessAxioms>
+                           <Axiom>B SubClassOf D</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </DirectChanges>
+                  <IndirectChanges size="3">
+                     <Specialisation>
+                        <Concept>B</Concept>
+                        <WitnessAxioms>
+                           <Axiom>B SubClassOf r some E</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>A</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A SubClassOf C and D</Axiom>
+                           <Axiom>A SubClassOf r some E</Axiom>
+                           <Axiom>A SubClassOf D</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>D</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A SubClassOf D</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </IndirectChanges>
+               </ConceptChanges>
+               <Source>
+                  <Axiom>B SubClassOf C</Axiom>
+               </Source>
+            </Change>
+         </Strengthening>
+         <StrengtheningWithNewTerms id="stnt" size="1">
+            <Change id="2">
+               <Axiom>E SubClassOf s only 
+(F and G)</Axiom>
+               <ConceptChanges size="1">
+                  <DirectChanges size="1">
+                     <Specialisation>
+                        <Concept>E</Concept>
+                        <WitnessAxioms>
+                           <Axiom>E SubClassOf s only 
+(F and G)</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                  </DirectChanges>
+                  <IndirectChanges size="0"/>
+               </ConceptChanges>
+               <Source>
+                  <Axiom>E SubClassOf s only G</Axiom>
+               </Source>
+               <New_Terms>F</New_Terms>
+            </Change>
+         </StrengtheningWithNewTerms>
+         <NewDescription id="newdesc" size="0"/>
+         <PureAddition id="padd" size="0"/>
+         <PureAdditionWithNewTerms id="paddnt" size="1">
+            <Change id="3">
+               <Axiom>t only H SubClassOf I</Axiom>
+               <ConceptChanges size="1">
+                  <DirectChanges size="1">
+                     <Generalisation>
+                        <Concept>I</Concept>
+                        <WitnessAxioms>
+                           <Axiom>t only H SubClassOf I</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </DirectChanges>
+                  <IndirectChanges size="0"/>
+               </ConceptChanges>
+               <New_Terms>H, t</New_Terms>
+            </Change>
+         </PureAdditionWithNewTerms>
+         <NewModifiedDefinition id="stequiv" size="0"/>
+         <NewModifiedDefinitionWithNewTerms id="stequivnt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffadds" size="0">
+         <AddedRedundancy id="ared" size="0"/>
+         <AddedRewrite id="arws" size="0">
+            <AddedCompleteRewrite id="arw" size="0"/>
+            <AddedPartialRewrite id="aprw" size="0"/>
+         </AddedRewrite>
+         <AddedProspectiveRedundancy id="apred" size="0">
+            <AddedReshuffleProspectiveRedundancy id="aavred" size="0"/>
+            <AddedNewProspectiveRedundancy id="anpred" size="0"/>
+         </AddedProspectiveRedundancy>
+      </Ineffectual>
+   </Additions>
+   <Removals id="rems" size="2">
+      <Effectual id="effrems" size="0">
+         <Weakening id="wk" size="0"/>
+         <WeakeningWithRetiredTerms id="wkrt" size="0"/>
+         <RetiredDescription id="retdesc" size="0"/>
+         <PureRemoval id="prem" size="0"/>
+         <PureRemovalWithRetiredTerms id="premrt" size="0"/>
+         <RetiredModifiedDefinition id="wkequiv" size="0"/>
+         <RetiredModifiedDefinitionWithRetiredTerms id="wkequivrt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffrems" size="2">
+         <RemovedRedundancy id="rred" size="0"/>
+         <RemovedRewrite id="rrws" size="0">
+            <RemovedCompleteRewrite id="rrw" size="0"/>
+            <RemovedPartialRewrite id="rprw" size="0"/>
+         </RemovedRewrite>
+         <RemovedProspectiveRedundancy id="rpred" size="2">
+            <RemovedReshuffleProspectiveRedundancy id="ravred" size="0"/>
+            <RemovedNewProspectiveRedundancy id="rnpred" size="2">
+               <Change id="4">
+                  <Axiom>B SubClassOf C</Axiom>
+                  <Source>
+                     <Axiom effectual="true">B SubClassOf C and D</Axiom>
+                  </Source>
+               </Change>
+               <Change id="5">
+                  <Axiom>E SubClassOf s only G</Axiom>
+                  <Source>
+                     <Axiom effectual="true">E SubClassOf s only 
+(F and G)</Axiom>
+                  </Source>
+               </Change>
+            </RemovedNewProspectiveRedundancy>
+         </RemovedProspectiveRedundancy>
+      </Ineffectual>
+   </Removals>
+</root>

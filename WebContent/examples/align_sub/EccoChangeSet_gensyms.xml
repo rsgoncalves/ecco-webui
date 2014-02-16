@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root id="root" uuid="a6ea12e6-a8fd-4a6f-9df4-136e1f4fe4a5-gs">
+   <Additions id="adds" size="3">
+      <Effectual id="effadds" size="2">
+         <Strengthening id="st" size="1">
+            <Change id="1">
+               <Axiom>A9 SubClassOf A7 and A4</Axiom>
+               <ConceptChanges size="6">
+                  <DirectChanges size="2">
+                     <Specialisation>
+                        <Concept>A9</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A9 SubClassOf A7 and A4</Axiom>
+                           <Axiom>A9 SubClassOf A4</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>A4</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A9 SubClassOf A4</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </DirectChanges>
+                  <IndirectChanges size="4">
+                     <Specialisation>
+                        <Concept>A9</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A9 SubClassOf A3 and (prop1 some A1)</Axiom>
+                           <Axiom>A9 SubClassOf A3</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>A8</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A8 SubClassOf A3</Axiom>
+                           <Axiom>A8 SubClassOf A3 and (prop1 some A1)</Axiom>
+                           <Axiom>A8 SubClassOf A7 and A4</Axiom>
+                           <Axiom>A8 SubClassOf A4</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>A4</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A8 SubClassOf A4</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                     <Generalisation>
+                        <Concept>A3</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A8 SubClassOf A3</Axiom>
+                           <Axiom>A9 SubClassOf A3</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </IndirectChanges>
+               </ConceptChanges>
+               <Source>
+                  <Axiom>A9 SubClassOf A7</Axiom>
+               </Source>
+            </Change>
+         </Strengthening>
+         <StrengtheningWithNewTerms id="stnt" size="1">
+            <Change id="2">
+               <Axiom>A4 SubClassOf A3 and (prop1 some A1)</Axiom>
+               <ConceptChanges size="5">
+                  <DirectChanges size="2">
+                     <Specialisation>
+                        <Concept>A4</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A4 SubClassOf A3</Axiom>
+                           <Axiom>A4 SubClassOf A3 and (prop1 some A1)</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>A3</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A4 SubClassOf A3</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </DirectChanges>
+                  <IndirectChanges size="3">
+                     <Specialisation>
+                        <Concept>A9</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A9 SubClassOf A3 and (prop1 some A1)</Axiom>
+                           <Axiom>A9 SubClassOf A3</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Specialisation>
+                        <Concept>A8</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A8 SubClassOf A3</Axiom>
+                           <Axiom>A8 SubClassOf A3 and (prop1 some A1)</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>A3</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A8 SubClassOf A3</Axiom>
+                           <Axiom>A9 SubClassOf A3</Axiom>
+                           <Axiom>A7 and A4 SubClassOf A3</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </IndirectChanges>
+               </ConceptChanges>
+               <Source>
+                  <Axiom>A4 SubClassOf prop1 some A1</Axiom>
+               </Source>
+               <New_Terms>A3</New_Terms>
+            </Change>
+         </StrengtheningWithNewTerms>
+         <NewDescription id="newdesc" size="0"/>
+         <PureAddition id="padd" size="0"/>
+         <PureAdditionWithNewTerms id="paddnt" size="0"/>
+         <NewModifiedDefinition id="stequiv" size="0"/>
+         <NewModifiedDefinitionWithNewTerms id="stequivnt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffadds" size="1">
+         <AddedRedundancy id="ared" size="0"/>
+         <AddedRewrite id="arws" size="0">
+            <AddedCompleteRewrite id="arw" size="0"/>
+            <AddedPartialRewrite id="aprw" size="0"/>
+         </AddedRewrite>
+         <AddedProspectiveRedundancy id="apred" size="1">
+            <AddedReshuffleProspectiveRedundancy id="aavred" size="0"/>
+            <AddedNewProspectiveRedundancy id="anpred" size="1">
+               <Change id="3">
+                  <Axiom>A2 SubClassOf A6</Axiom>
+                  <Source>
+                     <Axiom effectual="true">A2 SubClassOf A6 and A5</Axiom>
+                  </Source>
+               </Change>
+            </AddedNewProspectiveRedundancy>
+         </AddedProspectiveRedundancy>
+      </Ineffectual>
+   </Additions>
+   <Removals id="rems" size="4">
+      <Effectual id="effrems" size="2">
+         <Weakening id="wk" size="1">
+            <Change id="4">
+               <Axiom>A2 SubClassOf A6 and A5</Axiom>
+               <ConceptChanges size="2">
+                  <DirectChanges size="2">
+                     <Specialisation>
+                        <Concept>A2</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A2 SubClassOf A5</Axiom>
+                           <Axiom>A2 SubClassOf A6 and A5</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                     <Generalisation>
+                        <Concept>A5</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A2 SubClassOf A5</Axiom>
+                        </WitnessAxioms>
+                     </Generalisation>
+                  </DirectChanges>
+                  <IndirectChanges size="0"/>
+               </ConceptChanges>
+               <Source>
+                  <Axiom>A2 SubClassOf A6</Axiom>
+               </Source>
+            </Change>
+         </Weakening>
+         <WeakeningWithRetiredTerms id="wkrt" size="0"/>
+         <RetiredDescription id="retdesc" size="0"/>
+         <PureRemoval id="prem" size="1">
+            <Change id="5">
+               <Axiom>prop1 some A2 SubClassOf prop1 some A1</Axiom>
+               <ConceptChanges size="1">
+                  <DirectChanges size="1">
+                     <Specialisation>
+                        <Concept>A7</Concept>
+                        <WitnessAxioms>
+                           <Axiom>A7 SubClassOf prop1 some A1</Axiom>
+                        </WitnessAxioms>
+                     </Specialisation>
+                  </DirectChanges>
+                  <IndirectChanges size="0"/>
+               </ConceptChanges>
+            </Change>
+         </PureRemoval>
+         <PureRemovalWithRetiredTerms id="premrt" size="0"/>
+         <RetiredModifiedDefinition id="wkequiv" size="0"/>
+         <RetiredModifiedDefinitionWithRetiredTerms id="wkequivrt" size="0"/>
+      </Effectual>
+      <Ineffectual id="ineffrems" size="2">
+         <RemovedRedundancy id="rred" size="0"/>
+         <RemovedRewrite id="rrws" size="0">
+            <RemovedCompleteRewrite id="rrw" size="0"/>
+            <RemovedPartialRewrite id="rprw" size="0"/>
+         </RemovedRewrite>
+         <RemovedProspectiveRedundancy id="rpred" size="2">
+            <RemovedReshuffleProspectiveRedundancy id="ravred" size="0"/>
+            <RemovedNewProspectiveRedundancy id="rnpred" size="2">
+               <Change id="7">
+                  <Axiom>A4 SubClassOf prop1 some A1</Axiom>
+                  <Source>
+                     <Axiom effectual="true">A4 SubClassOf A3 and (prop1 some A1)</Axiom>
+                  </Source>
+               </Change>
+               <Change id="6">
+                  <Axiom>A9 SubClassOf A7</Axiom>
+                  <Source>
+                     <Axiom effectual="true">A9 SubClassOf A7 and A4</Axiom>
+                  </Source>
+               </Change>
+            </RemovedNewProspectiveRedundancy>
+         </RemovedProspectiveRedundancy>
+      </Ineffectual>
+   </Removals>
+</root>
