@@ -3,7 +3,9 @@
 
 #### a Web front end for the *ecco* diff ####
 
-This is a simple JSP-based frontend for the *ecco* diff tool; it accepts ontology input either from the local file system (via the *Browse* buttons) or from remote URIs. An instance of this app is deployed [here](http://owl.cs.manchester.ac.uk/diff) (alternatively [here](http://rpc440.cs.man.ac.uk:8080/diff)).
+This is a simple JSP-based frontend for the *ecco* diff tool; it accepts ontology input either from the local file system (via the *Browse* buttons) or from remote URIs. 
+
+An instance of this app is deployed [here](http://owl.cs.manchester.ac.uk/diff) (alternatively [here](http://rpc440.cs.man.ac.uk:8080/diff)).
 
 For more information about the tool check the [*ecco* repository](https://github.com/rsgoncalves/ecco).
 
