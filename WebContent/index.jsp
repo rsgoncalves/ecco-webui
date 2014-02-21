@@ -27,9 +27,6 @@
 		if(newPage != "None")
 			location.href = newPage;
 	}
-	/* function submit(ele) {
-		ele.form.submit();
-	} */
 </script>
 </head>
 <body>
@@ -76,6 +73,8 @@
 					<input type="file" name="o2file">
 				</label>
 				<br/><br/>
+				<h4 style="display:inline">Load imported ontologies: </h4><input type="radio" name="processImports" value="True" checked>yes <input type="radio" name="processImports" value="False">no
+				<br/>
 				<h4>Mechanism for detecting affected classes (hover for description):</h4>
 				<input type="radio" name="cdiff" value="at" checked><a onmouseout="tooltip.hide();" 
 					onmouseover="tooltip.show('Computes which atomic classes gained or lost atomic super/sub-classes, by comparing inferred class hierarchies. Feasible for small to large size input over the Web (computation time: fast)');">atomic</a> 

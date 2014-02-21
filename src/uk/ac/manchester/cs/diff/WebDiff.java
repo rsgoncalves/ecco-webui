@@ -115,7 +115,7 @@ public class WebDiff extends HttpServlet {
 		EccoRunner runner = new EccoRunner(true, false, true, false, 5, false);
 		
 		// Load ontologies
-		loadOntologies(pw, request, response, runner);
+		parseRequest(pw, request, response, runner);
 
 		if(ont1 != null && ont2 != null) {
 			// Get diff report 
@@ -171,7 +171,7 @@ public class WebDiff extends HttpServlet {
 	 * @throws OWLOntologyCreationException
 	 */
 	@SuppressWarnings("unchecked")
-	private void loadOntologies(PrintWriter pw, HttpServletRequest request, HttpServletResponse response, EccoRunner runner) 
+	private void parseRequest(PrintWriter pw, HttpServletRequest request, HttpServletResponse response, EccoRunner runner) 
 			throws IOException, FileUploadException, OWLOntologyCreationException {
 		FileItemFactory factory = new DiskFileItemFactory(); 		// Create a factory for disk-based file items
 		ServletFileUpload upload = new ServletFileUpload(factory);	// Create a new file upload handler
@@ -190,6 +190,7 @@ public class WebDiff extends HttpServlet {
 		if(items != null) {
 			// Process the uploaded items
 			Iterator<FileItem> iter = items.iterator();
+			
 			while (iter.hasNext()) {
 				FileItem item = (FileItem) iter.next();
 				String name = item.getFieldName();
@@ -207,6 +208,8 @@ public class WebDiff extends HttpServlet {
 					}
 					else if(name.equals("cdiff"))
 						cdiff = item.getString();
+					else if(name.equals("processImports"))
+						runner.setProcessImports(Boolean.parseBoolean(item.getString()));
 				} 
 				// Load from uploaded file
 				else {
