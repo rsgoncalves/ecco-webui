@@ -2,7 +2,6 @@
 *.txt
 *_bak
 todo
-setenv*
 fpp*
 depl*
 
