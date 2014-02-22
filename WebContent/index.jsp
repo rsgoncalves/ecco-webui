@@ -48,31 +48,33 @@
 					<option value="examples/conceptdiff_gr/index_labels.html">Example 3 [Gr]</option>
 					<option value="examples/ncit_06.09_at/index_labels.html">NCI Thesaurus 06.09 [At]</option>
 					<option value="examples/ncit_06.09_sub/index_labels.html">NCI Thesaurus 06.09 [Sub]</option>
+					<option value="examples/ncit_10.10_at/index_labels.html">NCI Thesaurus 10.10 [At] - HermiT Perf. Boost</option>
 					<option value="examples/ncit_13.12_at/index_labels.html">NCI Thesaurus 13.12 [At]</option>
 					<option value="examples/ncit_13.12_sub/index_labels.html">NCI Thesaurus 13.12 [Sub]</option>
 					<option value="examples/ncit_14.01_at/index_labels.html">NCI Thesaurus 14.01 [At]</option>
 					<option value="examples/ncit_14.01_sub/index_labels.html">NCI Thesaurus 14.01 [Sub]</option>
 				</select> 
-				<input type=button value="Go!" onClick="jumpToIt(this.form)"><br/>
+				<input type=button value="Go" onClick="jumpToIt(this.form)"><br/>
 				<p>
-					Browse for ontology <b>files</b>, or enter a <b>URL</b> for
-					each ontology into the text areas:<br />
+					Submit ontology <b>files</b>, or paste a <b>URL</b> or the <b>file contents</b> of
+					each ontology below:<br/><br/>
 				</p>
 				<h3>Ontology 1</h3>
 				<label> 
-					<textarea rows="5" cols="65" name="o1" style="resize:vertical"></textarea>
+					<textarea rows="3" cols="78" name="o1" style="resize:vertical"></textarea>
 				</label> 
 				<label> <br/> 
 					<input type="file" name="o1file">
 				</label>
+				<br/><br/>
 				<h3>Ontology 2</h3>
 				<label> 
-					<textarea rows="5" cols="65" name="o2" style="resize:vertical"></textarea>
+					<textarea rows="3" cols="78" name="o2" style="resize:vertical"></textarea>
 				</label>
 				<label><br/>
 					<input type="file" name="o2file">
 				</label>
-				<br/><br/>
+				<br/><br/><br/>
 				<h4 style="display:inline">Load imported ontologies: </h4><input type="radio" name="processImports" value="True" checked>yes <input type="radio" name="processImports" value="False">no
 				<br/>
 				<h4>Mechanism for detecting affected classes (hover for description):</h4>
@@ -94,9 +96,7 @@
 	</div>
 	<div class="box">
 		<small>
-			<i>ecco</i> accepts ontologies in RDF/XML, OWL/XML, Functional, Manchester, OBO, or KRSS syntaxes.<br/><br/>
-			Imported ontologies must have an accessible IRI, e.g., if an imported ontology is in the local file<br/>
-			system, it should have an IRI such as: "file:/users/me/ontologies/importedOntology.owl".<br/><br/>
+			<i>ecco</i> accepts ontologies in RDF/XML, OWL/XML, Functional, Manchester, OBO, or KRSS syntaxes. Imported<br/>ontologies must have an accessible IRI, e.g., if an imported ontology is in the local file system, it should have<br/>an IRI such as: "file:/users/me/ontologies/importedOntology.owl".<br/><br/>
 			Get the latest desktop version of <i>ecco</i> from <a href="https://github.com/rsgoncalves/ecco" target="_blank">here</a>. 
 			The code for this frontend is hosted <a href="https://github.com/rsgoncalves/ecco-webui" target="_blank">here</a>.
 		</small>
