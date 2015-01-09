@@ -104,7 +104,7 @@
 			<small>Powered by the <a href="http://owlapi.sourceforge.net/" target="_blank">OWL API</a> 
 			<%
 				String version = VersionInfo.getVersionInfo().getVersion().trim();
-				out.print("v" + version.substring(0,version.indexOf("-")) + ".");
+				out.print("v" + version + ".");
 			%>
 			</small>
 		</p>

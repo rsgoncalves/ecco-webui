@@ -109,7 +109,6 @@ public class WebDiff extends HttpServlet {
 			throws IOException, ServletException, TransformerException, OWLOntologyCreationException, FileUploadException {
 		PrintWriter pw = response.getWriter();
 		String xsltPath = "https://raw.github.com/rsgoncalves/ecco-webui/master/WebContent/xslt_full_server.xsl";
-//		String xsltPath = "/Users/rafa/Documents/PhD/workspace/ecco-webui/WebContent/xslt_full_server.xsl"; // MBP
 		String styledXml = "";
 		
 		EccoRunner runner = new EccoRunner(true, false, true, false, 5, false);
@@ -170,7 +169,6 @@ public class WebDiff extends HttpServlet {
 	 * @throws FileUploadException
 	 * @throws OWLOntologyCreationException
 	 */
-	@SuppressWarnings("unchecked")
 	private void parseRequest(PrintWriter pw, HttpServletRequest request, HttpServletResponse response, EccoRunner runner) 
 			throws IOException, FileUploadException, OWLOntologyCreationException {
 		FileItemFactory factory = new DiskFileItemFactory(); 		// Create a factory for disk-based file items
