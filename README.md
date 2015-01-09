@@ -5,15 +5,11 @@
 
 This is a simple JSP-based frontend for the *ecco* diff tool; it accepts ontology input either from the local file system (via the *Browse* buttons) or from remote URIs. 
 
-An instance of this app is deployed [here](http://owl.cs.manchester.ac.uk/diff) (alternatively [here](http://rpc440.cs.man.ac.uk:8080/diff)).
+An instance of this app is deployed [here](http://ecco-rsgtools.rhcloud.com/).
 
 For more information about the tool check the [*ecco* repository](https://github.com/rsgoncalves/ecco).
 
 
 deployment
 --------------------
-Note that the application has only been tested with **Apache Tomcat v7**, using **Java 1.6 (and above)**. 
-
-In order to execute properly, *ecco-webui* needs the appropriate native library of FaCT++ for the operating system the Web server is running on. This library, denoted *FaCT++ version 1.6.2; precompiled [OS] binaries* should be obtained from [here](https://code.google.com/p/factplusplus/downloads/list). Afterwards, the *single* appropriate file (in Windows a **.dll**, in Linux a **.so**, or in Mac OS X a **.jnlib** file) should be moved into the **_WebContent/WEB-INF/lib_** folder.
-
-Additionally, you need to point Tomcat to where the FaCT++ library is located. For this purpose, it suffices to copy the included file **setenv.sh** for UNIX-based systems or **setenv.bat** for Windows into your *Tomcat/bin* folder. Then you should edit the filepath within **setenv** appropriately; currently it is set to */path/to/tomcat/webapps/fpp1.6.2/* for demonstration purposes. This same file can be used to set the maximum Java heap space allowed, by default it is set to 8GB.
+The application has been tested with **Apache Tomcat v7 and v8**, using **Java 1.7** and **1.8**. 
